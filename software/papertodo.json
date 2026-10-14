@@ -4,8 +4,22 @@
   "id": "papertodo",
   "name": "PaperTodo",
   "homepage": "https://github.com/snownico0722/PaperTodo",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "snownico0722/PaperTodo",
+          "tagPrefix": "v",
+          "assetPattern": "PaperTodo-v{version}-win-x64-self-contained.exe"
+        }
+      }
+    }
+  ],
   "summary": "待办与便签工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/snownico0722/PaperTodo/5f7550db71a124edf140d0567d74841d5a30a91d/website/assets/favicon.ico",
@@ -14,7 +28,7 @@
   },
   "description": "PaperTodo 用于待办与便签。",
   "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从托盘创建待办纸张或便签纸张，输入事项或笔记。完成事项后勾选，按需要调整窗口与收纳位置，定期备份数据。",
-  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "faq": "此处是带运行库的 Windows x64 正式安装器。个人可免费使用；机构部署、修改和再分发须遵守项目 LICENSE.md 的具体条款。",
   "documentationUrl": "https://github.com/snownico0722/PaperTodo/blob/main/README.md",
   "category": "productivity",
   "screenshots": []

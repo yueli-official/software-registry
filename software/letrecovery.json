@@ -4,8 +4,22 @@
   "id": "letrecovery",
   "name": "LetRecovery",
   "homepage": "https://github.com/NORMAL-EX/LetRecovery",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "NORMAL-EX/LetRecovery",
+          "tagPrefix": "",
+          "assetPattern": "LetRecovery-Setup-x64.exe"
+        }
+      }
+    }
+  ],
   "summary": "系统安装工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/NORMAL-EX/LetRecovery/a3bf576a2264ebf1ceaa82ee0b14708ec9a7250b/PE%E7%AB%AF/assets/icon.ico",

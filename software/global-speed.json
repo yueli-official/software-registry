@@ -4,8 +4,50 @@
   "id": "global-speed",
   "name": "Global Speed",
   "homepage": "https://chrome.google.com/webstore/detail/global-speed-youtube-netf/jpbjcnkcffbooppibceonlgknpkniiff?hl=en",
-  "kind": "reference",
-  "packages": [],
+  "kind": "chrome-extension",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "polywock/globalSpeed",
+          "tagPrefix": "v",
+          "assetPattern": "global-speed-chromium.zip"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "polywock/globalSpeed",
+          "tagPrefix": "v",
+          "assetPattern": "global-speed-chromium.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "polywock/globalSpeed",
+          "tagPrefix": "v",
+          "assetPattern": "global-speed-chromium.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
   "summary": "浏览器视频速度控制工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/polywock/globalSpeed/8e37a47597b702142cd4a5ff8e8c3f12511c8feb/static/images/128.png",
@@ -13,8 +55,8 @@
     "mime": "image/png"
   },
   "description": "Global Speed 用于浏览器视频速度控制。",
-  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装扩展，打开音视频页面并设置播放速度。根据需要配置快捷键，异常时恢复默认速度。",
-  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "usageInstructions": "1. 下载官方 Chromium 扩展 ZIP 并解压到固定目录。\n2. 打开 Chromium 浏览器扩展管理页面，启用开发者模式，选择“加载已解压的扩展程序”并选中解压目录。\n3. 按官方说明配置功能与网站权限；目录须保留，普通用户也可选择官方扩展商店安装。",
+  "faq": "这里提供官方 Chromium 扩展发行包，Windows、macOS 和 Linux 使用相同原包。它不是系统安装程序；手动加载需启用浏览器开发者模式。",
   "documentationUrl": "https://github.com/polywock/globalSpeed/blob/master/README.md",
   "category": "browser",
   "screenshots": []

@@ -4,8 +4,22 @@
   "id": "gleanx",
   "name": "Gleanx",
   "homepage": "https://github.com/dcxa521gi/Gleanx",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dcxa521gi/Gleanx",
+          "tagPrefix": "Gleanxv",
+          "assetPattern": "Gleanx-Setup-{version}.exe"
+        }
+      }
+    }
+  ],
   "summary": "剪贴板与活动记录工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/dcxa521gi/Gleanx/cb93d5b2c9e8924213b3db253450aa58d0860c87/.github/readme/icon.png",

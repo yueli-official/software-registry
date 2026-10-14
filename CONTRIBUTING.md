@@ -4,6 +4,8 @@ Add or edit `software/<id>.json` for external software; keep the filename and st
 
 Provide the official homepage, public release source, precise asset-selection rules and evidence of platform/architecture identity. Use public HTTPS URLs. A GitHub locator identifies the software's public upstream repository. Installation scripts, private feeds, consumer settings and credentials do not belong in a manifest.
 
+List software with a genuinely free usable edition. A paid license with a temporary trial does not qualify. A product offering optional paid services or features can qualify when the selected edition is free. A reference is pending package integration, not a completed downloadable entry; source archives, store pages and project homepages are not installable release assets.
+
 Maintain the summary, description, usage instructions and FAQ alongside source rules. Select a category from `categories.json`; edit that file when a new general category is needed. An official documentation link is optional. Keep guidance useful across consumers and versions, without a particular site's package availability, private image references or deployment instructions.
 
 Retain the complete icon and screenshot definitions. Use original public URLs and SHA256, or a hashed inline SVG for an icon; an archive icon also names its exact archive entry. Label generated name marks accurately. Each screenshot includes a caption, source page, permission evidence, provenance and confirmed review. Empty `screenshots` explicitly removes previous screenshots on synchronization. Consumers reuse unchanged media by original hash and own upload/reference lifecycles.

@@ -4,8 +4,50 @@
   "id": "screenshot",
   "name": "Screenshot",
   "homepage": "https://github.com/jiuwanzi-hui/Screenshot/releases/latest",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jiuwanzi-hui/Screenshot",
+          "tagPrefix": "v",
+          "assetPattern": "SnapCut-Setup-{version}-win-x64.exe"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jiuwanzi-hui/Screenshot",
+          "tagPrefix": "v",
+          "assetPattern": "SnapCut-Setup-{version}-mac-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jiuwanzi-hui/Screenshot",
+          "tagPrefix": "v",
+          "assetPattern": "SnapCut-Setup-{version}-mac-x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
   "summary": "截图与 OCR工具。",
   "description": "Screenshot 用于截图与 OCR。",
   "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 启动软件并选择截图区域，按需要标注或执行 OCR。检查结果后复制或保存。",

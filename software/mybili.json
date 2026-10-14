@@ -4,17 +4,31 @@
   "id": "mybili",
   "name": "MyBili",
   "homepage": "https://github.com/qianxuntudou-ops/MyTVB",
-  "kind": "reference",
-  "packages": [],
-  "summary": "视频客户端工具。",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "qianxuntudou-ops/MyTVB",
+          "tagPrefix": "v",
+          "assetPattern": "MyTVB-v{version}-release.apk"
+        }
+      }
+    }
+  ],
+  "summary": "面向 Android TV、手机和平板的第三方 Bilibili 客户端。",
   "icon": {
     "url": "https://raw.githubusercontent.com/qianxuntudou-ops/MyTVB/cc0dadab9c5068858c01a7968dc1e320fd1bf416/app/src/main/res/mipmap-nodpi/ic_launcher.png",
     "sha256": "46c8ac51ef3dd74cc0a594738b7b34720f677247131b615f0ac73c23159a8fb5",
     "mime": "image/png"
   },
-  "description": "MyBili 用于视频客户端。",
-  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 在 Android TV 安装官方原版客户端，按需完成扫码登录。用遥控器浏览分区并选择视频，按需要调整播放和弹幕设置。",
-  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "description": "MyTVB 支持视频、直播、弹幕、评论和扫码登录，适配 Android TV 遥控器与手机、平板触屏操作。",
+  "usageInstructions": "1. 下载正式 release APK，在 Android 6.0 或更高版本设备安装；不要将 debug 包作为正式版。\n2. 按屏幕提示扫码登录，浏览分区或搜索视频。电视使用方向键与确定键操作，手机和平板使用触屏。\n3. 在设置中调整画质、弹幕和界面缩放。项目禁止用于牟利，请遵守官方使用声明。",
+  "faq": "支持 Android TV、手机、平板和车机触屏。最低系统要求为 Android 6.0；账号权限和内容可用性由官方服务决定。正式发行选择 release APK。",
   "documentationUrl": "https://github.com/qianxuntudou-ops/MyTVB/blob/main/README.md",
   "category": "media",
   "screenshots": []

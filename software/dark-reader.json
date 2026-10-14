@@ -4,8 +4,50 @@
   "id": "dark-reader",
   "name": "Dark Reader",
   "homepage": "https://darkreader.org/",
-  "kind": "reference",
-  "packages": [],
+  "kind": "chrome-extension",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darkreader/darkreader",
+          "tagPrefix": "v",
+          "assetPattern": "darkreader-chrome-mv3.zip"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darkreader/darkreader",
+          "tagPrefix": "v",
+          "assetPattern": "darkreader-chrome-mv3.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darkreader/darkreader",
+          "tagPrefix": "v",
+          "assetPattern": "darkreader-chrome-mv3.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
   "summary": "浏览器深色模式扩展工具。",
   "icon": {
     "url": "https://darkreader.org/images/icon-256.png",
@@ -13,8 +55,8 @@
     "mime": "image/png"
   },
   "description": "Dark Reader 用于浏览器深色模式扩展。",
-  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装扩展，在目标网站启用深色模式。调整亮度和对比度，显示异常的网站可加入排除列表。",
-  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "usageInstructions": "1. 下载官方 Chromium 扩展 ZIP 并解压到固定目录。\n2. 打开 Chromium 浏览器扩展管理页面，启用开发者模式，选择“加载已解压的扩展程序”并选中解压目录。\n3. 按官方说明配置功能与网站权限；目录须保留，普通用户也可选择官方扩展商店安装。",
+  "faq": "这里提供官方 Chromium 扩展发行包，Windows、macOS 和 Linux 使用相同原包。它不是系统安装程序；手动加载需启用浏览器开发者模式。",
   "documentationUrl": "https://github.com/darkreader/darkreader/blob/main/README.md",
   "category": "browser",
   "screenshots": []

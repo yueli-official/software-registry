@@ -4,8 +4,22 @@
   "id": "keka",
   "name": "Keka",
   "homepage": "https://www.keka.io",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aonez/Keka",
+          "tagPrefix": "v",
+          "assetPattern": "Keka-{version}.dmg"
+        }
+      }
+    }
+  ],
   "summary": "压缩解压工具。",
   "icon": {
     "url": "https://www.keka.io/favicon.ico",

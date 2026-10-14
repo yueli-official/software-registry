@@ -4,8 +4,22 @@
   "id": "witchdrawer",
   "name": "WitchDrawer",
   "homepage": "https://github.com/witchscottishfoldcat/WitchDrawer",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "witchscottishfoldcat/WitchDrawer",
+          "tagPrefix": "v",
+          "assetPattern": "WitchDrawer-Setup-v{version}-x64.exe"
+        }
+      }
+    }
+  ],
   "summary": "桌面整理工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/witchscottishfoldcat/WitchDrawer/90a09d9841c26eb2b82d89123b40fcf4f5c9600d/src/WitchDrawer.App/Assets/app.png",

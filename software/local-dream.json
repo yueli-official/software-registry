@@ -4,8 +4,22 @@
   "id": "local-dream",
   "name": "Local Dream",
   "homepage": "https://play.google.com/store/apps/details?id=io.github.xororz.localdream",
-  "kind": "reference",
-  "packages": [],
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xororz/local-dream",
+          "tagPrefix": "v",
+          "assetPattern": "LocalDream_armv8a_{version}.apk"
+        }
+      }
+    }
+  ],
   "summary": "安卓本地 AI 绘图工具。",
   "icon": {
     "url": "https://raw.githubusercontent.com/xororz/local-dream/18be9aa6e8365d6efb9601acf7c13f7147214aa7/assets/icon.png",
@@ -13,7 +27,7 @@
     "mime": "image/png"
   },
   "description": "Local Dream 用于安卓本地 AI 绘图。",
-  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装后下载适配手机的模型，按官方说明检查运行条件。输入提示词，先生成低负载测试图再调整参数。",
+  "usageInstructions": "1. 在支持 ARM64 的 Android 设备安装官方 APK。\n2. 按官方说明取得兼容模型并放入应用要求的位置。选择模型、输入提示词后在设备上生成图片；性能和可用模型取决于设备硬件。",
   "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
   "documentationUrl": "https://github.com/xororz/local-dream/blob/master/README.md",
   "category": "ai",
