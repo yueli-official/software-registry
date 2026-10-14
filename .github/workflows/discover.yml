@@ -1,5 +1,7 @@
 name: Discover release
 on:
+  schedule:
+    - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       software:
@@ -14,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      SOFTWARE_ID: ${{ inputs.software }}
+      SOFTWARE_ID: ${{ inputs.software || 'aria2' }}
     steps:
       - uses: actions/checkout@v4
         with:

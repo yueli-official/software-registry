@@ -51,6 +51,19 @@ def release(data=b'original package'):
 
 
 class RegistryTests(unittest.TestCase):
+    def test_release_date_is_official_optional_and_validated(self):
+        value = release()
+        reader = FixtureReader({'repos/example/sample/releases/latest': value})
+        self.assertNotIn('upstreamPublishedAt', create_plan(manifest(), reader))
+        value['published_at'] = '2025-01-02T03:04:05Z'
+        reader = FixtureReader({'repos/example/sample/releases/latest': value})
+        plan = create_plan(manifest(), reader)
+        self.assertEqual(plan['upstreamPublishedAt'], value['published_at'])
+        for bad in ('today', '2025-99-02T03:04:05Z', '2099-01-02T03:04:05Z'):
+            changed = copy.deepcopy(plan); changed['upstreamPublishedAt'] = bad
+            changed['planDigest'] = fingerprint({k: v for k, v in changed.items() if k != 'planDigest'})
+            with self.subTest(date=bad), self.assertRaises(RegistryError): validate_plan(changed)
+
     def test_current_catalog_and_schema_copy(self):
         root = Path(__file__).resolve().parents[1]
         self.assertTrue(load_catalog(root / 'software'))

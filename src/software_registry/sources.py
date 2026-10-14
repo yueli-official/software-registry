@@ -118,7 +118,7 @@ def resolve_scoop(entry, reader):
         # Failure to establish size is never interpreted as under the limit.
         artifact['sizeBytes'] = reader.size(url)
         artifact['sizeCheck'] = 'head' if artifact['sizeBytes'] is not None else 'unknown'
-    return {'version': version, 'authority': 'scoop-manifest', 'revision': revision,
+    return ({'upstreamPublishedAt': release['published_at']} if parsed.hostname == 'github.com' and match and release.get('published_at') else {}) | {'version': version, 'authority': 'scoop-manifest', 'revision': revision,
             'evidenceUrl': manifest_url, 'homepage': manifest.get('homepage'),
             'license': manifest.get('license'), 'artifacts': [artifact]}
 
@@ -180,6 +180,7 @@ def resolve_github(entry, reader):
     require(not options.get('versionFromPrimary') or version in matches[0]['name'],
             'source.version', 'The official attachment must explicitly name the complete primary build version')
     return {'version': version, 'authority': 'github-date-build' if options.get('tagVersionFormat') == 'date-build' else 'github-tag' if tag_template else 'github-latest',
+            **({'upstreamPublishedAt': release['published_at']} if release.get('published_at') else {}),
             'upstreamTag': tag,
             'evidenceUrl': release['html_url'], 'upstreamReleaseId': release['id'],
             'artifacts': [github_asset(matches[0], entry['slot'])]}

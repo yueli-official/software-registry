@@ -1,4 +1,5 @@
 """Freeze source evidence, then verify original bytes before consumer handoff."""
+from datetime import datetime, timezone
 import copy
 import hashlib
 import json
@@ -24,11 +25,11 @@ def create_plan(manifest, reader=None):
     plan = {'schemaVersion': 1, 'softwareId': manifest['id'], 'manifestDigest': fingerprint(manifest),
             'version': resolved['version'], 'evidenceUrl': resolved['evidenceUrl'],
             'artifacts': resolved['artifacts'], 'verified': False}
-    for key in ('authority', 'upstreamTag', 'upstreamReleaseId'):
+    for key in ('authority', 'upstreamTag', 'upstreamReleaseId', 'upstreamPublishedAt'):
         if key in resolved:
             plan[key] = resolved[key]
     plan['planDigest'] = fingerprint(plan)
-    return plan
+    return validate_plan(plan)
 
 
 def validate_plan(plan):
@@ -37,6 +38,14 @@ def validate_plan(plan):
     require(fingerprint(value) == expected, 'plan.digest', 'Plan changed since it was frozen')
     require(re.fullmatch(r'[a-f0-9]{64}', plan['manifestDigest']), 'plan.manifest', 'Invalid manifest digest')
     require(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', plan['softwareId']), 'plan.identity', 'Invalid software identifier')
+    if 'upstreamPublishedAt' in plan:
+        value = plan['upstreamPublishedAt']
+        require(isinstance(value, str) and re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})', value), 'plan.date', 'Expected an official RFC3339 publication date')
+        try:
+            date = datetime.fromisoformat(value.replace('Z', '+00:00'))
+            require(date <= datetime.now(timezone.utc), 'plan.date', 'Official publication date is in the future')
+        except ValueError:
+            require(False, 'plan.date', 'Invalid official publication date')
     public_url(plan['evidenceUrl'])
     require(plan['artifacts'], 'plan.empty', 'Plan has no packages')
     slots = []
