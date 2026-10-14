@@ -12,6 +12,8 @@ def main():
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('validate')
     commands.add_parser('list')
+    batch = commands.add_parser('plan-all')
+    batch.add_argument('--output-directory', type=Path, required=True)
     plan = commands.add_parser('plan'); plan.add_argument('id'); plan.add_argument('--output', type=Path, required=True)
     verify = commands.add_parser('verify'); verify.add_argument('--plan', type=Path, required=True)
     verify.add_argument('--state-directory', type=Path, required=True); verify.add_argument('--output', type=Path, required=True)
@@ -31,6 +33,12 @@ def main():
                 print(json.dumps({'valid': True, 'softwareCount': len(catalog)})); return 0
             if args.command == 'list':
                 print(json.dumps(sorted(catalog))); return 0
+            if args.command == 'plan-all':
+                from .batch import discover_catalog
+                result = discover_catalog(catalog, args.output_directory)
+                from collections import Counter
+                print(json.dumps({'softwareCount': len(catalog), 'outcomes': Counter(r['status'] for r in result['software'])}))
+                return 0
             require(args.id in catalog, 'catalog.identity', 'Unknown software identifier')
             result = create_plan(catalog[args.id])
         args.output.parent.mkdir(parents=True, exist_ok=True)

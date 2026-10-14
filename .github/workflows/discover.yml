@@ -5,18 +5,19 @@ on:
   workflow_dispatch:
     inputs:
       software:
-        description: Software identifier
+        description: Software identifier, or all
         type: string
         required: true
+        default: all
 permissions:
   contents: read
 jobs:
   discover:
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 60
     env:
-      SOFTWARE_ID: ${{ inputs.software || 'aria2' }}
+      SOFTWARE_ID: ${{ inputs.software || 'all' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,13 +33,15 @@ jobs:
           python - <<'PY'
           import os, re, subprocess
           software = os.environ['SOFTWARE_ID']
+          if software == 'all':
+              raise SystemExit(subprocess.call(['software-registry', '--catalog', 'software', 'plan-all', '--output-directory', 'release-plan']))
           if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', software):
               raise SystemExit('Invalid software identifier')
-          raise SystemExit(subprocess.call(['software-registry', '--catalog', 'software', 'plan', software, '--output', 'release-plan.json']))
+          raise SystemExit(subprocess.call(['software-registry', '--catalog', 'software', 'plan', software, '--output', 'release-plan/release-plan.json']))
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: release-plan
-          path: release-plan.json
+          path: release-plan/
           if-no-files-found: error
           retention-days: 14
