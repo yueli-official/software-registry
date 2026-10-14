@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "image-toolbox",
+  "name": "Image Toolbox",
+  "homepage": "https://github.com/T8RIN/ImageToolbox",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "T8RIN/ImageToolbox",
+          "assetPattern": "image-toolbox-*-foss-arm64-v8a.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "图片处理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/T8RIN/ImageToolbox/6b67f44adfb8daf9427ea4ae909d609fdc10138a/core/resources/src/main/ic_launcher-playstore.png",
+    "sha256": "95c9eefe45d9f61723040d416cfd6686a1306fbfc563813483bff88d38419420",
+    "mime": "image/png"
+  },
+  "description": "Image Toolbox 用于图片处理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 选择图片并进入需要的压缩、裁剪或转换工具。调整参数后预览，另存输出图片以保留原图。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/T8RIN/ImageToolbox/blob/master/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

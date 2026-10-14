@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fclones",
+  "name": "fclones",
+  "homepage": "https://github.com/pkolaczk/fclones",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fclones",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pkolaczk/fclones",
+          "assetPattern": "fclones-{version}-linux-glibc-x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pkolaczk/fclones",
+          "assetPattern": "fclones-{version}-linux-musl-i686.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "按文件内容查找重复文件，输出可核对的分组。",
+  "description": "fclones 是独立的重复文件查找工具，可扫描、分组和按自己的策略处理相同内容的文件。适合整理重复下载和资料目录；当前条目为 CLI 原版，图形前端属于其他发行渠道。\n\n### 源码与许可\n当前条目提供 0.35.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/pkolaczk/fclones/tree/a74f90d293e05856d19a4c0ac2b29b46ef16cf23) · [许可原文](https://github.com/pkolaczk/fclones/blob/a74f90d293e05856d19a4c0ac2b29b46ef16cf23/LICENSE)。",
+  "usageInstructions": "1. 解压官方 Windows/Linux 包，将 fclones 加入 PATH。\n2. 运行 fclones --help。\n3. 用 fclones group 在独立测试目录查找重复文件并保存报告。\n4. 检查分组、路径与需要保留的副本。\n5. 准备备份后再按官方 remove/link 用法处理，不将扫描报告直接视为删除批准。",
+  "faq": "有图形界面吗？当前条目提供完整命令行软件，不把其核心库或另一个 GUI 仓库混在一起。\n有 Mac 原版吗？本次官方 Release 没有独立 Mac 成品，其他安装方式见官方文档。",
+  "documentationUrl": "https://github.com/pkolaczk/fclones/blob/a74f90d293e05856d19a4c0ac2b29b46ef16cf23/fclones/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">fc</text></svg>",
+    "sha256": "7862cb4237823fbb45fc3a0b432630a0de95241dcbb4a53f8f9b3ba8d39ed5b7",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名fc，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

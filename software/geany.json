@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "geany",
+  "name": "Geany",
+  "homepage": "https://github.com/geany/geany",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "geany/geany",
+          "assetPattern": "geany-2.1_setup.exe",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "geany/geany",
+          "assetPattern": "geany-2.1_osx.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "geany/geany",
+          "assetPattern": "geany-2.1_osx_arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "轻量图形代码编辑器，支持语法高亮与项目构建配置。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/geany/geany/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/icons/scalable/geany.svg",
+    "sha256": "0ab38a4c312cc0fe259aa3ce8b362dde4f1517a6385f0608e2f67866f775d140",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/icons/scalable/geany.svg"
+  },
+  "description": "Geany 是轻量代码编辑器，提供语法高亮、符号列表、搜索与可配置构建命令。适合脚本和小型项目编辑；运行或编译代码仍需对应工具链。当前条目官方 tag 为 2.1.0，原成品文件名和软件界面使用 2.1。\n\n### 源码与许可\n当前条目提供 2.1.0 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/geany/geany/tree/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace) · [许可原文](https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/COPYING)。\n\n界面图来自[官方随附资料](https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/doc/images/main_window.png)；原作者及许可通知见[固定版许可](https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/COPYING)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 安装官方安装器；Mac 打开对应 CPU 的 DMG。\n2. 打开一份自己的测试代码文件并确认文件类型。\n3. 使用符号列表、搜索与基本编辑功能。\n4. 如需运行或编译，安装对应语言工具链并配置构建命令。\n5. 保存文件后在自己的测试环境检查运行结果。",
+  "faq": "自带所有编译器吗？编辑器和语言工具链是不同软件。\n为什么文件名是 2.1？官方 tag 使用 2.1.0，本版成品沿用 2.1 命名，Windows 原包已与固定 Scoop 摘要一致核对。",
+  "documentationUrl": "https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/README",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/geany/geany/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/doc/images/main_window.png",
+      "sha256": "5fd981b1e64ea3e7fa82e73376067ab263e0e3c09d95c13494f33fba68213e73",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/doc/images/main_window.png",
+      "caption": "Geany 官方代码编辑示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/doc/images/main_window.png；原许可 https://github.com/geany/geany/blob/cb5ff3cf0b63971010e60ea2feedd1a0181c1ace/COPYING",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

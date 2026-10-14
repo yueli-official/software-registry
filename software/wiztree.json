@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "wiztree",
+  "name": "WizTree",
+  "homepage": "https://www.diskanalyzer.com/download",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "wiztree",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "wiztree",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "快速查看磁盘占用，找出大文件和目录。",
+  "icon": {
+    "url": "https://www.diskanalyzer.com/apple-touch-icon.png",
+    "sha256": "83197f2b0cdb4197f8229ceaf088e8240ffc7194d5e7ae9c8d6eb36a4a96fdb9",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方首页引用的本产品图标，仅用于识别与介绍本产品，保留原比例与归属，不冒称开源美术或官方背书。出处 https://www.diskanalyzer.com/"
+  },
+  "description": "WizTree 是磁盘空间分析工具，可通过文件列表和矩形树图查看占用，定位较大的文件与目录。个人使用免费，商业使用需按官方许可购买；当前官网另提供 WizTreeMac，请按自己的系统选择。",
+  "usageInstructions": "1. Windows 用户在下载页取得官方便携 ZIP，解压后启动 WizTree64.exe（64位）或 WizTree.exe（32位）。Mac 版本请从官网取得，并核对相应许可和系统要求。\n2. 选择测试磁盘或目录并扫描，在目录列表和矩形树图中查看占用，再定位需要处理的文件。\n3. 清理前确认文件用途并备份，不直接删除不了解的系统或程序文件。",
+  "faq": "个人使用免费吗？官方免费版本仅限个人使用，商业使用条件见官方许可。\nWindows ARM 上可用吗？官方说明通过 Prism 兼容运行，不代表原包是原生 ARM64。\n需要安装吗？当前条目 Windows 包为官方便携版，完整解压后启动对应程序即可。",
+  "documentationUrl": "https://www.diskanalyzer.com/download",
+  "category": "system",
+  "screenshots": []
+}

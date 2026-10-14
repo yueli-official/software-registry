@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fossify-phone",
+  "name": "Fossify Phone",
+  "homepage": "https://github.com/FossifyOrg/Phone",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FossifyOrg/Phone",
+          "assetPattern": "phone-22-foss-release.apk",
+          "tagPrefix": "",
+          "tagTemplate": "1.11.1"
+        }
+      }
+    }
+  ],
+  "summary": "简洁的 Android 拨号、联系人与通话记录管理。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/FossifyOrg/Phone/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/graphics/icon.webp",
+    "sha256": "69a05226db9660c662f50d5f8d82b07d27a489941950aa18800df868234f8c23",
+    "mime": "image/webp",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/graphics/icon.webp"
+  },
+  "description": "Fossify Phone 是 Android 电话客户端，提供拨号、联系人访问和通话记录管理，可调整界面外观。实际通话仍使用设备的电话功能与运营商服务。\n\n### 源码与许可\n当前条目提供 1.11.1 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/FossifyOrg/Phone/tree/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e) · [许可原文](https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png)；原作者及许可通知见[固定版许可](https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK。\n2. 按系统提示设置默认电话应用并授予所需权限。\n3. 查看联系人或使用拨号盘输入测试号码。\n4. 完成一次自己可接听的测试通话，核对声音及通话记录。\n5. 按需要调整外观和相关设置。",
+  "faq": "能免费拨打所有号码吗？通话费用和网络条件由运营商决定。\n能用于所有 Android 设备吗？需设备电话功能与系统兼容。",
+  "documentationUrl": "https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/README.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/FossifyOrg/Phone/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "sha256": "da64ae69f47ad04e0ba9af042f8851b79e0b5892faa3518226d0e86c01c9b514",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "caption": "Fossify Phone 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png；原许可 https://github.com/FossifyOrg/Phone/blob/7de52a31a4d3cfc53e6cbc298a17ffca4e69141e/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

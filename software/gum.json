@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gum",
+  "name": "Gum",
+  "homepage": "https://github.com/charmbracelet/gum",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "charm-gum",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_Windows_i386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_Darwin_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_Darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "charmbracelet/gum",
+          "assetPattern": "gum_{version}_i386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "为命令行脚本添加选择菜单、输入框和确认提示。",
+  "description": "Gum 是独立的交互式命令行工具，通过子命令为 Shell 脚本提供选择列表、文本输入、确认、进度和样式输出。无需编写 Go 程序即可组合日常工作流，适合开发者和需要自动化操作的用户。\n\n### 源码与许可\n当前条目提供 2.0.2 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/charmbracelet/gum/tree/879f048103adf0214b85943b52d8d65b08d772c5) · [许可和通知](https://github.com/charmbracelet/gum/blob/879f048103adf0214b85943b52d8d65b08d772c5/LICENSE)。",
+  "usageInstructions": "1. Windows 解压 ZIP；macOS 解压 tar.gz；Debian/Ubuntu 安装 DEB。\n2. 把 gum 程序目录加入 PATH，在终端运行 gum --help。\n3. 运行 gum choose \"开发\" \"测试\" \"发布\"，体验选项菜单。\n4. 用 gum input 和 gum confirm 为自己的脚本添加输入与确认。\n5. 按官方示例读取标准输出、处理退出码，再与实际命令组合。",
+  "faq": "Scoop 应安装什么？本产品的 Scoop 名称是 charm-gum，gum 清单对应另一个产品。\n它会自动执行选中的工作吗？它提供交互输入，实际执行步骤由你的脚本决定。",
+  "documentationUrl": "https://github.com/charmbracelet/gum",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#ad3978\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">Gum</text></svg>",
+    "sha256": "89a7ed5c22734d5418f02cb88e574a7f1a95019f5a5eabd65535a1f2654f9cb9",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名Gum，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

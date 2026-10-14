@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "acode",
+  "name": "Acode",
+  "homepage": "https://acode.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Acode-Foundation/Acode",
+          "assetPattern": "app-fdroid.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Android 代码编辑器，编辑 HTML、CSS 和 JavaScript，并预览网页。",
+  "description": "Acode 是 Android 上的代码编辑器，可创建和编辑 HTML、CSS、JavaScript 等源文件，预览网页，适合手机上学习前端和修改小项目。提供多语言编辑与插件扩展；编辑一种语言不代表原包内置对应编译器或运行环境。当前条目固定提供官方 1.13.5 的 F-Droid 变体 app-fdroid.apk，保留原字节，不混用标准变体。\n\n主项目 MIT，Foxdebug(Ajit Kumar) 原署名和组件许可保留。对应精确版本源码：https://github.com/Acode-Foundation/Acode/tree/v1.13.5 ，原许可材料见 acode-1.13.5-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 app-fdroid.apk，Android 按提示允许本次安装来源。\n2. 打开 Acode，创建或选择一个自己的项目目录，按系统文件选择器授予所需目录访问权限。\n3. 新建 index.html，输入 <!doctype html><html><body><h1>Hello Acode</h1></body></html> 并保存。\n4. 使用网页预览入口打开这个文件，确认能看到 Hello Acode；修改标题文字、保存并重新预览。\n5. 再新建 CSS 或 JavaScript 文件并在 HTML 中引用，检查路径是否正确。其他语言的编译、插件或终端运行环境按相应官方文档另行配置。",
+  "faq": "能编辑 Python 或 Java 吗？可编辑源文件，但编辑不等于原包自带这些语言的编译器或执行环境。\n网页预览为空怎么办？确认文件已保存、选中的是正确 HTML 文件，并检查引用路径。\n为什么选 F-Droid 包？本批固定官方 app-fdroid.apk，其大小、哈希和版本与对应原附件一致，不把两种变体合并。",
+  "documentationUrl": "https://github.com/Acode-Foundation/Acode/blob/v1.13.5/readme.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Acode</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Code Editor</text></svg>",
+    "sha256": "f705ddae1480ab0c44d7f353370d6e3457ea2fe7a9f3ad69064aefab110fe831",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

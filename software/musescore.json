@@ -1,0 +1,80 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "musescore",
+  "name": "MuseScore Studio",
+  "homepage": "https://musescore.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "musescore",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "musescore/MuseScore",
+          "assetPattern": "MuseScore-Studio-{version}-aarch64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version3}",
+          "versionFromPrimary": true
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "musescore/MuseScore",
+          "assetPattern": "MuseScore-Studio-{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version3}",
+          "versionFromPrimary": true
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "musescore/MuseScore",
+          "assetPattern": "MuseScore-Studio-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version3}",
+          "versionFromPrimary": true
+        }
+      }
+    }
+  ],
+  "summary": "创作、编辑、播放和导出乐谱的开源制谱软件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/musescore/MuseScore/v4.7.5/share/icons/AppIcon/MS4_AppIcon_256x256.png",
+    "sha256": "f464a59cc537e55a78a251777091ef21b6552126a8feec30df4c240028958c2f",
+    "mime": "image/png"
+  },
+  "description": "MuseScore Studio：创作、编辑、播放和导出乐谱的开源制谱软件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 创建乐谱，选择乐器、拍号与调号。进入音符输入模式录入旋律，播放检查后保存工程，再按需要导出 PDF 或音频。\n\n### 其他平台安装\n- Linux arm64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://musescore.org/en/handbook",
+  "category": "media",
+  "screenshots": []
+}

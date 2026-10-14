@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "r-studio",
+  "name": "R-Studio",
+  "homepage": "https://www.r-studio.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "数据恢复工具。",
+  "icon": {
+    "url": "https://www.r-studio.com/images/rtt.png",
+    "sha256": "3acafad2e7f5a849d6662a0ade12fe0d3b4b40482368129e45d720d7dde8b87a",
+    "mime": "image/png"
+  },
+  "description": "R-Studio 用于数据恢复。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择需要恢复的磁盘并扫描，预览可恢复文件。输出保存到其他磁盘，避免向原盘继续写入。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "system",
+  "screenshots": []
+}

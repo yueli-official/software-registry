@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notepads",
+  "name": "Notepads",
+  "homepage": "https://github.com/0x7c13/Notepads",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "0x7c13/Notepads",
+          "assetPattern": "Notepads_{version}_x86_x64_arm64.msixbundle",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "轻巧的Windows多标签文本编辑器，支持Markdown预览和文件差异查看。",
+  "description": "Notepads 是采用 Fluent 风格的 Windows 文本编辑器，支持多标签编辑、Markdown实时预览、并排差异查看和会话快照，适合笔记、文本与小型配置文件。它是独立项目，不是Windows内置记事本。\n\n此条目提供官方1.5.6.0 MSIXbundle原包，内含真实x86、x64和ARM64应用，由Windows安装器选择架构。原包签名已由Windows验证为Valid。它需要Windows应用安装器及包声明的微软.NET Native、VCLibs等依赖；遇到依赖提示时可使用官方Microsoft Store入口安装。UWP权限及大文件能力受官方说明限制，适合小型文本文件。主项目采用MIT许可，Copyright 2019–2024 Jackie (Jiaqi) Liu；对应源码：https://github.com/0x7c13/Notepads/tree/v1.5.6.0 ，夸克目录中的notepads-1.5.6.0-LICENSES.zip保留原许可材料。",
+  "usageInstructions": "1. 在Windows下载完整MSIXbundle，用Windows应用安装器打开并按提示安装，系统会选择x86、x64或ARM64应用。遇到微软运行依赖提示时，可通过官方README中的Microsoft Store入口安装，由系统处理依赖。\n2. 从开始菜单启动Notepads，按Ctrl+N或Ctrl+T新建标签，输入一小段测试文本并保存为自己的文件。\n3. 新建一个.md文件，写入标题与列表，按Alt+P切换Markdown预览分栏。\n4. 用Ctrl+Tab切换标签，按Alt+D体验差异查看；先使用测试文件，确认保存位置与编码。\n5. 按需要设置主题和编辑选项。它的UWP权限不适合直接编辑Windows系统目录中的文件，大型日志建议使用适合大文件的编辑器。",
+  "faq": "可以直接解压EXE运行吗？当前条目提供官方UWP应用包，应通过Windows应用安装器或官方商店安装，不能只取出一个EXE。\n支持什么CPU？同一官方原包包含x86、x64和ARM64主应用，Windows会自动选择。\n能编辑系统目录或大型日志吗？官方README明确UWP权限与大文件限制，本软件主要面向小型文本和笔记。",
+  "documentationUrl": "https://github.com/0x7c13/Notepads/blob/v1.5.6.0/README.md",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Notepads</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Text Editor</text></svg>",
+    "sha256": "cc26c96f404d16104eb142790e41621f90ad5a2a78b55f848d2e88669c06b7ad",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

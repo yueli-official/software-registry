@@ -1,0 +1,75 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "obs-studio",
+  "name": "OBS Studio",
+  "homepage": "https://obsproject.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "obs-studio",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "obsproject/obs-studio",
+          "assetPattern": "OBS-Studio-{version}-macOS-Apple.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "obsproject/obs-studio",
+          "assetPattern": "OBS-Studio-{version}-macOS-Intel.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "obsproject/obs-studio",
+          "assetPattern": "OBS-Studio-{version}-Ubuntu-24.04-x86_64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用于视频录制与直播的开源软件。",
+  "description": "OBS Studio：用于视频录制与直播的开源软件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 运行自动配置向导，新建场景并添加显示器、窗口或摄像头来源。检查音频电平，先录制一段测试，再配置推流。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n\n### 其他平台安装\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "capture",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/obsproject/obs-studio/ef5814431c6af9061874470201d0b799bc84602b/frontend/cmake/linux/icons/obs-logo-512.png",
+    "sha256": "043b35b8ebb6238d0dd9171c5437635f6266825ce028d2f79363f705cf7d6be5"
+  },
+  "screenshots": []
+}

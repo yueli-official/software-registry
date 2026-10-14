@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bat",
+  "name": "bat",
+  "homepage": "https://github.com/sharkdp/bat",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bat",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bat",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bat",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/bat",
+          "assetPattern": "bat-v0.26.1-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/bat",
+          "assetPattern": "bat-v0.26.1-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/bat",
+          "assetPattern": "bat-v0.26.1-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/bat",
+          "assetPattern": "bat-v0.26.1-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/bat",
+          "assetPattern": "bat-v0.26.1-i686-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端查看文本和代码，显示语法高亮与行号。",
+  "description": "bat 是开源终端文本查看工具，提供语法高亮、行号和 Git 修改标记，可用于快速检查代码、配置文件与日志。它是可直接使用的命令行软件，需要在终端操作。\n\n此条目提供未修改的官方 0.26.1 原包，主程序可按 MIT 或 Apache License 2.0 选择许可，Copyright 2018–2023 bat-developers；独立组件保留各自原许可。对应源码：https://github.com/sharkdp/bat/tree/v0.26.1 。夸克目录中的 bat-0.26.1-LICENSES.zip 保留原许可与通知。",
+  "usageInstructions": "1. Windows 按CPU选择原ZIP并解压；Mac、Linux按CPU选择原tar.gz并解压。找到其中bat或bat.exe，Mac/Linux按系统要求赋予执行权限。本批Linux为GNU构建，系统运行库要求按官方README确认。\n2. 在终端切换到程序目录，先运行 bat --version；Windows PowerShell 使用 .\\bat.exe --version。准备自己的一份 sample.txt 测试文件。\n3. 执行 bat --paging=never sample.txt 查看文本，Windows可使用 .\\bat.exe --paging=never sample.txt。试着换一份自己的代码文件，查看行号与语法高亮。\n4. 用 bat --help 查看样式、分页和输出选项。这里只读取文件；后续按官方说明配置终端主题或自己的命令路径。",
+  "faq": "这是代码编辑器吗？主要用于在终端查看文本，不代替编辑器。\n没有图形窗口是否正常？正常，它是命令行工具。\n为什么进入分页界面？默认行为取决于终端和设置，首次测试可使用 --paging=never。\nLinux依赖什么？本批GNU原包按官方README满足运行库要求，不能把它标成所有发行版都无需依赖。",
+  "documentationUrl": "https://github.com/sharkdp/bat/blob/v0.26.1/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#f0effa\"/><text x=\"128\" y=\"139\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"76\" fill=\"#574888\">bat</text><text x=\"128\" y=\"183\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" fill=\"#574888\">text viewer</text></svg>",
+    "sha256": "9a516eb6f343cfb7f020e20e56842cdf1d8dfb48ae6d747b31108c4b3fc01d69",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；未找到可直接审校采用的官方独立产品图标，不以作者头像或GitHub图标替代。"
+  },
+  "screenshots": []
+}

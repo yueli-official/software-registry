@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kando",
+  "name": "Kando",
+  "homepage": "https://kando.menu",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "kando",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kando-menu/kando",
+          "assetPattern": "Kando-win32-arm64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kando-menu/kando",
+          "assetPattern": "Kando-darwin-x64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kando-menu/kando",
+          "assetPattern": "Kando-darwin-arm64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kando-menu/kando",
+          "assetPattern": "kando_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kando-menu/kando",
+          "assetPattern": "kando_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过鼠标手势和圆形菜单快速启动应用、执行快捷操作。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/kando-menu/kando/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/assets/icons/icon.png",
+    "sha256": "f6b8a3904f193b3bac6a8684eb2c2b19d6591edf70c6c9be78d812717e9e0363",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "Simon Schneegans、Bingies24 制作，CC-BY-4.0；原产品图标仅转换为WebP用于展示。授权范围：https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/assets/icons/REUSE.toml"
+  },
+  "description": "Kando 是跨平台圆形快捷菜单工具，可把应用、文件、快捷键和常用动作组织为分层菜单，通过鼠标手势快速选择。支持自定义外观与菜单，适合减少重复操作；不同桌面环境的集成条件以官方文档为准。\n\n### 源码与许可\n当前条目提供 3.0.0 官方原包。主项目许可：MIT；组件保留各自许可。[固定版本源码](https://github.com/kando-menu/kando/tree/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6) · [许可资料](https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/LICENSE.md)。\n\n图标：Simon Schneegans、Bingies24 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · [原图](https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/assets/icons/icon.png)，此条目仅转换图片格式。",
+  "usageInstructions": "1. Windows 解压对应架构 ZIP 并运行 Kando；macOS 解压 ZIP 后将应用放入应用程序目录；Debian/Ubuntu 系安装对应架构 DEB。\n2. 启动后在设置中查看并调整呼出菜单的快捷键。\n3. 按呼出快捷键，移动鼠标选择菜单项目，先试用默认示例菜单。\n4. 在菜单编辑器中添加自己的应用、文件或快捷键动作，测试后再替换常用工作流程。\n5. macOS 或 Linux 若出现权限、快捷键或桌面环境提示，按官方平台配置说明处理。",
+  "faq": "Linux 的所有桌面环境都一样吗？快捷键和窗口集成受桌面环境影响，请查看对应平台的配置说明。\n需要一直用默认菜单吗？可以在编辑器中自行组织菜单及子菜单。",
+  "documentationUrl": "https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/README.md",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/kando-menu/kando/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/appstream/screenshots/screenshot01.png",
+      "sha256": "5b773f03967627db22e93171ba0587e48d6fb09bedba4c5087a9d1044fdec914",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/appstream/screenshots/screenshot01.png",
+      "caption": "Kando 官方圆形菜单操作示意",
+      "licenseEvidence": "Simon Schneegans 官方截图，CC0-1.0；固定范围说明 https://github.com/kando-menu/kando/blob/a4ca8f5a001cdc9d7e1f4e14a2606663fb89b9b6/appstream/REUSE.toml",
+      "provenance": "已查看官方原图、产品身份与实际界面；固定Git Blob和SHA256，保留来源与归属；展示示例界面，不声称为维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

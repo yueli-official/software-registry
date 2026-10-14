@@ -1,0 +1,52 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ollama",
+  "name": "Ollama",
+  "homepage": "https://ollama.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ollama/ollama",
+          "assetPattern": "ollama-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v0.40.0"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ollama/ollama",
+          "assetPattern": "Ollama-darwin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在本机运行开放模型，提供命令行聊天和本地模型 API。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ollama/ollama/0d0720e51fb2fd9aa58781c3d720c06d720c2e7b/docs/images/logo.png",
+    "sha256": "656dedf1acfdc29cda6efd4f4d09173c671b260aae0f92a1f9e40b30a44f22c7",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定v0.40.0官方文档产品logo PNG，已实际预览；保存MIT版权声明并检查docs上级许可无独立美术例外，仅用作产品识别。"
+  },
+  "description": "Ollama 可下载并运行开放语言模型，通过命令行进行对话，也可让应用连接本地服务。模型文件独立下载，资源需求取决于模型和上下文。当前条目 0.40.0 原包提供 macOS 应用及 Windows ARM64 命令行版；常规 Windows x64、Linux 完整包超过当前条目单包 300 MB 上限，请从官方发行页获取。Ollama 软件采用 MIT 许可，模型各有自身许可。",
+  "usageInstructions": "1. macOS 14+ 下载 ZIP，解压得到 Ollama.app 并移至应用程序；启动后按提示安装命令行入口。Apple Silicon 可使用 CPU/GPU，Intel Mac 使用 CPU。\n2. Windows ARM64 下载对应完整 ZIP，解压全部文件到工具目录，在终端运行 ollama serve 启动本地服务。此包不能当作普通 x64 Windows 的原生包。\n3. 打开另一个终端，按官方快速上手运行 ollama run gemma4:e2b；首次会另行下载模型，需准备足够硬盘空间和内存。\n4. 模型载入后输入问题开始对话，输入 /bye 退出聊天。需要接入其他应用时参考官方文档的本地 API 说明。\n5. 本地模型与云模型不同：本地运行使用本机资源，云模型需登录及相应服务权限。不要把安装包大小当成模型大小。",
+  "faq": "### 为什么没有普通 Windows x64 和 Linux 包？\n该版本完整包超过此条目每包300 MB的上限。当前条目没有拆分或重新打包，可从官方Release页获取；ROCm/Jetpack等附加包不能替代完整安装包。\n\n### 安装包里有没有模型？\n没有。模型首次运行时单独下载，可能需要数GB乃至更多空间与内存。请按硬件和模型说明选择。\n\n### macOS 的架构与要求？\n需要macOS 14或更新版本，通用App支持Intel和Apple Silicon。Intel使用CPU，M系列可使用CPU/GPU。\n\n### 模型能随意再分发吗？\nOllama程序采用MIT，模型权利取决于各自许可；软件许可不自动覆盖模型。\n\n### 原版许可在哪里？\nhttps://github.com/ollama/ollama/blob/0d0720e51fb2fd9aa58781c3d720c06d720c2e7b/LICENSE",
+  "documentationUrl": "https://docs.ollama.com/quickstart",
+  "category": "ai",
+  "screenshots": []
+}

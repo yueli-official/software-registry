@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "xhs-downloader",
+  "name": "XHS-Downloader",
+  "homepage": "https://github.com/JoeanAmier/XHS-Downloader",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "JoeanAmier/XHS-Downloader",
+          "assetPattern": "XHS-Downloader_*_Windows_X64.zip",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "JoeanAmier/XHS-Downloader",
+          "assetPattern": "XHS-Downloader_V{version}_macOS_ARM64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "JoeanAmier/XHS-Downloader",
+          "assetPattern": "XHS-Downloader_V{version}_macOS_X64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/JoeanAmier/XHS-Downloader/3261312721f0b37c705ba6515885bc7f34349f2f/static/XHS-Downloader.png",
+    "sha256": "883f70671597fa0e31910fc5841c136656998fd1ab0559831353245db80cc5bc",
+    "mime": "image/png"
+  },
+  "description": "XHS-Downloader 用于下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按软件说明启动程序并输入你有权保存的作品链接。配置保存目录，检查输出内容；不要分享账号 Cookie。\n\n### 其他平台安装\n- macOS arm64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- macOS amd64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "files",
+  "screenshots": []
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "vivid",
+  "name": "vivid",
+  "homepage": "https://github.com/sharkdp/vivid",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "vivid",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "vivid",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/vivid",
+          "assetPattern": "vivid-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/vivid",
+          "assetPattern": "vivid-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/vivid",
+          "assetPattern": "vivid-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/vivid",
+          "assetPattern": "vivid-v{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/vivid",
+          "assetPattern": "vivid-v{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "为兼容LS_COLORS的文件列表工具生成可定制的配色。",
+  "description": "vivid根据主题与文件类型配置生成LS_COLORS字符串，可供ls、tree、fd等兼容工具使用。主题与文件扩展名规则分开配置，方便切换色彩。它本身是配色生成器，不会替换系统文件管理器。\n\n当前条目固定官方稳定版0.11.1原包。主项目许可MIT OR Apache-2.0，各组件保留自身许可。固定源码：https://github.com/sharkdp/vivid/tree/367d242252d07b306a354813767ee05946b3a55e 。许可资料：https://github.com/sharkdp/vivid/blob/367d242252d07b306a354813767ee05946b3a55e/LICENSE-APACHE；https://github.com/sharkdp/vivid/blob/367d242252d07b306a354813767ee05946b3a55e/LICENSE-MIT 。",
+  "usageInstructions": "1. 解压原包，把vivid加入PATH。\n2. 运行 vivid generate molokai，查看生成的配色字符串。\n3. Bash或Zsh中可按文档把命令结果赋给LS_COLORS；PowerShell中可用 $env:LS_COLORS=(vivid generate molokai)。\n4. 使用支持LS_COLORS的工具查看文件列表，再按文档选择或定制其他主题。",
+  "faq": "能给所有Windows目录列表上色吗？只有读取LS_COLORS的工具会使用该配置，PowerShell默认Get-ChildItem不因此自动改变。\n这是图形主题工具吗？这是终端配色工具。",
+  "documentationUrl": "https://github.com/sharkdp/vivid/blob/367d242252d07b306a354813767ee05946b3a55e/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">vivid</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">终端配色</text></svg>",
+    "sha256": "283b198ac7582869230dab9f51dbd7840ede97b50a738a5aa1e507ccb29ecfb2",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

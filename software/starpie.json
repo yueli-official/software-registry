@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "starpie",
+  "name": "StarPie",
+  "homepage": "https://github.com/Star-Pie/StarPie",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Star-Pie/StarPie",
+          "assetPattern": "StarPie-*-Standalone-win-x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "鼠标轮盘与手势工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Star-Pie/StarPie/de9dca9f318daf64f51484fbc1e87505c6562844/assets/app_icon.ico",
+    "sha256": "cc2801c1701c11a192851e4e7338f835cfee1f4efcea3008b1ff41bdb9c5f7b2",
+    "mime": "image/x-icon"
+  },
+  "description": "StarPie 用于鼠标轮盘与手势。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 运行后在设置中配置轮盘与手势对应的动作。先测试一个常用动作，再按需要添加其他动作。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "productivity",
+  "screenshots": []
+}

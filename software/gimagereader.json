@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gimagereader",
+  "name": "gImageReader",
+  "homepage": "https://github.com/manisandro/gImageReader",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "manisandro/gImageReader",
+          "assetPattern": "gImageReader_{version}_qt6_x86_64_portable.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "manisandro/gImageReader",
+          "assetPattern": "gImageReader_{version}_qt6_i686_portable.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把图片和扫描PDF识别为文字，支持选区识别与校对。",
+  "description": "gImageReader 是基于 Tesseract 的开源文字识别软件，可导入图片、PDF和扫描内容，自动或手动选择识别区域，在原图旁校对识别文字，也能生成hOCR及可搜索PDF。适合整理扫描资料和提取图片文字。\n\n此条目提供未修改的官方3.4.3 Windows原包。主程序为GPL 3.0或以后版本，Copyright 2013–2025 Sandro Mani；Tesseract及语言数据等组件保留各自许可。对应源码：https://github.com/manisandro/gImageReader/tree/v3.4.3 。原许可和通知收录于夸克目录中的gImageReader-3.4.3-LICENSES.zip。",
+  "usageInstructions": "1. Windows按CPU选择官方qt6便携ZIP，完整解压后打开gimagereader-qt6.exe。本批提供Windows 64位和32位原包；Linux按官方README选择发行版仓库、官方PPA或Flatpak。\n2. 导入一张清晰、方向正确的测试图片或一份自己的扫描PDF，先校正旋转和倾斜。\n3. 按文字选择识别语言。中文需安装简体中文chi_sim或繁体中文chi_tra的Tesseract语言数据；查看原包share/tessdata/README.txt及官方说明，不要把只有英文数据的安装状态当成中文已就绪。\n4. 选择一小块文字区域开始识别，在右侧对照原图校对数字、标点和换行，再复制或保存为新的文本文件。需要可搜索PDF时按官方文档切换hOCR输出并导出，重新打开检查效果。",
+  "faq": "中文识别为空或错误很多？先确认对应中文语言数据已安装且选择正确，使用清晰扫描并校正方向。\n能识别扫描PDF吗？可以导入PDF页面并做OCR，结果仍需人工校对。\n支持Mac吗？当前正式发行页没有Mac完整安装包，本批不标注Mac下载。\nLinux为什么没有此条目原包？官方README提供各发行版及Flatpak渠道，当前GitHub正式成品附件为Windows，源码tar.xz不算Linux安装包。",
+  "documentationUrl": "https://github.com/manisandro/gImageReader/wiki",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eaf0fa\"/><text x=\"128\" y=\"133\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"58\" fill=\"#365991\">OCR</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"24\" fill=\"#5373a5\">gImageReader</text></svg>",
+    "sha256": "7f08d5e6a2a0619300ce1b76bd668d10d546bd981be429155e61b30100dec8c5",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；已检查官方data/icons/gimagereader.svg，其RDF未声明图片许可，未将主程序GPL自动用于该图形。"
+  },
+  "screenshots": []
+}

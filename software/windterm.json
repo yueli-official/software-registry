@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windterm",
+  "name": "WindTerm",
+  "homepage": "https://github.com/kingToolbox/WindTerm",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windterm",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kingToolbox/WindTerm",
+          "assetPattern": "WindTerm_{version}_Windows_Portable_x86_32.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kingToolbox/WindTerm",
+          "assetPattern": "WindTerm_{version}_Mac_Portable_x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kingToolbox/WindTerm",
+          "assetPattern": "WindTerm_{version}_Linux_Portable_x86_64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用图形界面管理 SSH、串口与远程文件会话。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/kingToolbox/WindTerm/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/WindTerm_icon_1024x1024.png",
+    "sha256": "16958bcb5ffb5133ab0da88884f0145a360b550aac9ff08c42eaa445513749ef",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/WindTerm_icon_1024x1024.png"
+  },
+  "description": "WindTerm 是跨平台 SSH、Telnet、串口、Shell 和 SFTP 客户端，提供会话管理、分屏、终端补全和文件传输等功能。官方声明商用与非商用均可免费使用；项目只公开部分源码，不把成品描述为完整开源软件。\n\n### 源码与许可\n当前条目提供 2.7.0 官方原包。主项目许可：官方成品免费使用声明；公开部分源码 Apache-2.0，非完整开源；独立组件遵循各自许可。[固定版本源码](https://github.com/kingToolbox/WindTerm/tree/a8336c1d1e3dd1a981500dae8ef9eb42066de95f) · [许可原文](https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/README.md)。\n\n界面图来自[官方随附资料](https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/screenshots/WindTerm.png)；原作者及许可通知见[固定版许可](https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/README.md)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows/Linux 解压官方便携 ZIP；Mac 打开官方 Intel DMG。\n2. 启动后按需要新建 SSH 或本机 Shell 会话。\n3. 输入自己的目标地址与认证信息，连接前核对服务器身份。\n4. 使用标签页或分屏管理会话，按需打开 SFTP 文件管理。\n5. 保存并备份需要的配置，私密认证信息按自己的设备管理要求处理。",
+  "faq": "完全开源吗？官方明确为部分开源；已公开源码除第三方目录外按 Apache-2.0 发布。\n可以商用吗？固定版本官方 README 声明商用与非商用完全免费。\n有原生 Apple Silicon 包吗？当前条目官方 Mac 主程序为 Intel amd64，需核对运行兼容性。",
+  "documentationUrl": "https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/README.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/kingToolbox/WindTerm/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/screenshots/WindTerm.png",
+      "sha256": "0290f26ddf89ca8be99b8ffbdbde8b088233a4c71373b2be0e3ed835a8bd23ac",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/screenshots/WindTerm.png",
+      "caption": "WindTerm 官方多会话终端与文件传输示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/images/screenshots/WindTerm.png；原许可 https://github.com/kingToolbox/WindTerm/blob/a8336c1d1e3dd1a981500dae8ef9eb42066de95f/README.md",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

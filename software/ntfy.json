@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ntfy",
+  "name": "ntfy",
+  "homepage": "https://github.com/binwiederhier/ntfy",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "binwiederhier/ntfy",
+          "assetPattern": "ntfy_{version}_windows_amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "binwiederhier/ntfy",
+          "assetPattern": "ntfy_{version}_darwin_all.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "binwiederhier/ntfy",
+          "assetPattern": "ntfy_{version}_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "binwiederhier/ntfy",
+          "assetPattern": "ntfy_{version}_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用 HTTP 接口发布消息，并在客户端订阅通知。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/binwiederhier/ntfy/f18d1137c63a26e85b91ce639e7bc72bb9a82736/web/public/static/images/ntfy.png",
+    "sha256": "b71cd4a8825067e4f0ddc3f3084473b424c3406da345f1a893586a728916ec08",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/web/public/static/images/ntfy.png"
+  },
+  "description": "ntfy 是独立的消息通知服务与命令行工具，可向主题发布消息，并通过浏览器或对应客户端订阅。适合个人自动化、任务完成提醒和自托管通知服务，认证、主题访问和网络条件需按自己的部署配置。\n\n### 源码与许可\n当前条目提供 2.29.0 官方原包。主项目许可：Apache-2.0 / GPL-2.0 双许可，组件按各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/binwiederhier/ntfy/tree/f18d1137c63a26e85b91ce639e7bc72bb9a82736) · [许可原文](https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/.github/images/screenshot-web-detail.png)；原作者及许可通知见[固定版许可](https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压 Windows/Mac 官方包，或在 Debian/Ubuntu 安装对应 DEB。\n2. 运行 ntfy --help，选择使用已有服务还是按官方指南自托管。\n3. 在自己的服务配置独立测试主题，并在客户端订阅。\n4. 按官方语法发送一条不含敏感内容的测试消息。\n5. 核对接收后再配置认证、主题权限和自动化；正式服务按官方部署指南设置。",
+  "faq": "是完整服务器程序吗？当前条目提供含服务端与 CLI 的官方原版，不是 SDK。\n安卓客户端算另一款吗？客户端属于同一产品，后续补源不重复计算软件数。",
+  "documentationUrl": "https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/README.md",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/binwiederhier/ntfy/f18d1137c63a26e85b91ce639e7bc72bb9a82736/.github/images/screenshot-web-detail.png",
+      "sha256": "da6ef8aefea161f4dd3729e174a6b128aed9fbcdc34e9103a4728b954914174e",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/.github/images/screenshot-web-detail.png",
+      "caption": "ntfy 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/.github/images/screenshot-web-detail.png；原许可 https://github.com/binwiederhier/ntfy/blob/f18d1137c63a26e85b91ce639e7bc72bb9a82736/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

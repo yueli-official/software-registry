@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "privacy-eraser",
+  "name": "Privacy Eraser",
+  "homepage": "https://www.cybertronsoft.com/products/privacy-eraser/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "隐私清理工具。",
+  "icon": {
+    "url": "https://www.cybertronsoft.com/favicon.ico",
+    "sha256": "77923d0e0ab3063d9e93585b6e5861977dfce1ac7a970cdfdf96428d52769a33",
+    "mime": "image/x-icon"
+  },
+  "description": "Privacy Eraser 用于隐私清理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择需要检查的历史记录与临时文件，先扫描预览。取消要保留的内容，再执行清理。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "security",
+  "screenshots": []
+}

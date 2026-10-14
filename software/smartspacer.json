@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "smartspacer",
+  "name": "Smartspacer",
+  "homepage": "https://github.com/KieronQuinn/Smartspacer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "KieronQuinn/Smartspacer",
+          "assetPattern": "Smartspacer-v1.11.4.apk",
+          "tagPrefix": "",
+          "tagTemplate": "1.11.4"
+        }
+      }
+    }
+  ],
+  "summary": "用动态小组件组织 Android 桌面的提示与快捷信息。",
+  "icon": {
+    "url": "https://i.imgur.com/CfHF7Dkl.png",
+    "sha256": "90b82f5e1f80b37d243b15e2eefe4fcd7a7e90cf7478bb3153b4975f1ad6cb7d",
+    "mime": "image/jpeg",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/README.md"
+  },
+  "description": "Smartspacer 是可定制 Android 小组件工具，通过目标、信息项和插件组织桌面信息。普通小组件可配合支持的启动器；替换 Pixel 或系统 At a Glance 的增强模式有额外兼容与 Shizuku 条件。\n\n### 源码与许可\n当前条目提供 1.11.4 官方原包。主项目许可：GPL-3.0（SDK 独立为 Apache-2.0）；独立组件遵循各自许可。[固定版本源码](https://github.com/KieronQuinn/Smartspacer/tree/d90a1f1aa285b9731c058a92f6a743d27acd91fb) · [许可原文](https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/README.md)；原作者及许可通知见[固定版许可](https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK。\n2. 从普通桌面小组件模式开始，添加 Smartspacer 小组件。\n3. 在应用内添加一个自己需要的目标或信息项。\n4. 查看桌面显示，并调整布局与显示条件。\n5. 需要系统增强模式或插件时，按官方设备兼容说明配置 Shizuku 和权限。",
+  "faq": "所有功能都免 Root 且不用额外配置吗？普通小组件与系统增强模式条件不同，增强功能通常需要 Shizuku。\n国内应用都有插件吗？取决于现有插件和应用支持，不保证全部兼容。",
+  "documentationUrl": "https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/README.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://i.imgur.com/g026zJ5.jpeg",
+      "sha256": "b742a01d687a4ea40803c94297260035a2d1e89d996aa3408fc566c665e4eb1c",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/README.md",
+      "caption": "Smartspacer 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/README.md；原许可 https://github.com/KieronQuinn/Smartspacer/blob/d90a1f1aa285b9731c058a92f6a743d27acd91fb/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

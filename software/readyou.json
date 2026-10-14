@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "readyou",
+  "name": "Read You",
+  "homepage": "https://github.com/ReadYouApp/ReadYou",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ReadYouApp/ReadYou",
+          "assetPattern": "ReadYou-{version}-*-signed.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "支持中文的 Android RSS 阅读器，提供订阅整理、OPML导入导出、全文解析与朗读。",
+  "description": "Read You 是采用 Material You 界面的 Android RSS 阅读器，可以把常看的资讯与博客汇集到订阅列表，支持OPML导入导出、新文章通知、正文解析、多账户和朗读。既可使用本地订阅，也可接入已支持的Fever、Google Reader及FreshRSS接口。\n\n此条目提供官方0.16.2签名完整APK，约11MB，原包未重新打包或签名，包含四种真实ABI库。项目根许可为GPL-3.0，对应源码：https://github.com/ReadYouApp/ReadYou/tree/0.16.2 ，原许可材料见readyou-0.16.2-LICENSES.zip。",
+  "usageInstructions": "1. 在Android手机下载并打开官方0.16.2 APK，按系统提示允许当前安装来源，完成安装。已有订阅时先导出OPML或备份数据。\n2. 首次进入先使用本地订阅账户，在添加订阅入口粘贴一个博客或资讯站公开提供的RSS地址，确认并刷新。\n3. 打开一篇文章，切换正文阅读，按需要使用全文解析或朗读；若网站限制抓取，可回到原文。\n4. 在订阅管理中给不同主题分组，或导入自己已有的OPML文件；完成后导出一份OPML作为订阅清单备份。\n5. 已有FreshRSS等账户时再配置对应受支持的接口。需要新文章通知时按系统提示开放通知权限。",
+  "faq": "必须注册云账户吗？可以先用本地RSS订阅，云账户按需配置。\n为什么F-Droid版不能直接覆盖升级？官方说明两种分发的签名不同，切换渠道前应备份数据，不能通过当前条目APK保证直接覆盖。\n支持Feedly或Inoreader吗？该版本README仍把它们列为待完成，不当作已实现功能宣传。\n支持中文吗？官方提供简体中文README和中文界面资料。",
+  "documentationUrl": "https://github.com/ReadYouApp/ReadYou/blob/0.16.2/README-zh-CN.md",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Read You</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">RSS Reader</text></svg>",
+    "sha256": "bc0494fbd012dab53c7501bcead0c5d695b248668cd1fcef9ef6f9d115f557f5",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

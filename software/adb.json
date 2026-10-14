@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "adb",
+  "name": "Android SDK Platform-Tools",
+  "homepage": "https://developer.android.com/studio/releases/platform-tools",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "adb",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "通过 adb 与 fastboot 调试和管理 Android 设备。",
+  "icon": {
+    "url": "https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/android/images/favicon.svg",
+    "sha256": "c75789b5ce4f06180cd8bb9985af8a483d4dabc0e56b7339adf8d1e424f2b0a5",
+    "mime": "image/svg+xml"
+  },
+  "description": "Android SDK Platform-Tools：通过 adb 与 fastboot 调试和管理 Android 设备。\n\n使用 adb 通常需要在设备开启 USB 调试并确认授权。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在 Android 手机开启 USB 调试，连接电脑并确认授权。在工具目录运行 adb devices 检查设备，使用 adb help 查看可用命令。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://developer.android.com/tools/adb",
+  "category": "mobile",
+  "screenshots": []
+}

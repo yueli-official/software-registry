@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gh-dash",
+  "name": "gh-dash",
+  "homepage": "https://github.com/dlvhdr/gh-dash",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_windows-amd64.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_windows-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_windows-386.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_darwin-amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_darwin-arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_linux-amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_linux-arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dlvhdr/gh-dash",
+          "assetPattern": "gh-dash_v{version}_linux-386",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端浏览 GitHub Pull Request 和 Issue 仪表盘。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dlvhdr/gh-dash/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/public/favicon.png",
+    "sha256": "42d4d02e60d51e8e7125ec8fb0308b8d5b1409a1f7d40a99179f779b0ad74d7c",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/public/favicon.png"
+  },
+  "description": "gh-dash 是独立的 GitHub 终端仪表盘，可配置筛选区块与快捷操作，适合关注自己的代码评审和问题列表，需配合 GitHub CLI 认证。\n\n### 源码与许可\n当前条目提供 4.26.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/dlvhdr/gh-dash/tree/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0) · [许可原文](https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/LICENSE.txt)。\n\n界面图来自[官方随附资料](https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/src/assets/help.png)；原作者及许可通知见[固定版许可](https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/LICENSE.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 gh-dash 加入 PATH，运行 gh-dash --help 查看本版用法。\n3. 安装并登录 gh 后，按官方扩展或独立程序方式配置 gh-dash；先查看自己的 PR/Issue，核对账号与仓库，再配置快捷命令。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "需要 GitHub CLI 吗？官方安装和认证流程依赖 gh。\n会自动替我合并吗？修改远端状态的动作取决于自己选择的操作。",
+  "documentationUrl": "https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/dlvhdr/gh-dash/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/src/assets/help.png",
+      "sha256": "7536f8f0ce22dabe209a5121ed4a51d5f3fa224ddc3bb5fc55e9fa39b495b388",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/src/assets/help.png",
+      "caption": "gh-dash 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/docs/src/assets/help.png；原许可 https://github.com/dlvhdr/gh-dash/blob/c6dfbc17edfdbf1060fc06efe6aabb34f6a725f0/LICENSE.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

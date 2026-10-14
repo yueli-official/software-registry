@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "yazi",
+  "name": "yazi",
+  "homepage": "https://github.com/sxyazi/yazi",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "yazi",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "yazi",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sxyazi/yazi",
+          "assetPattern": "yazi-x86_64-apple-darwin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sxyazi/yazi",
+          "assetPattern": "yazi-aarch64-apple-darwin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sxyazi/yazi",
+          "assetPattern": "yazi-x86_64-unknown-linux-musl.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sxyazi/yazi",
+          "assetPattern": "yazi-aarch64-unknown-linux-musl.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sxyazi/yazi",
+          "assetPattern": "yazi-i686-unknown-linux-gnu.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "终端文件管理器，支持多标签、文件预览、批量操作与插件。",
+  "description": "Yazi 是用 Rust 编写的终端文件管理器，支持多标签、跨目录选择、批量重命名、文件预览与 Lua 插件。适合习惯终端和键盘操作的用户。图片显示取决于终端支持的协议，视频、PDF 等预览及搜索集成可能需要额外工具，原包不等于包含全部可选依赖。项目处于持续开发阶段，升级配置时请查看对应版本说明。\n\n当前条目提供 26.9.1 官方 Windows、macOS 和 Linux 原包。主项目 MIT，组件保留各自许可；固定源码：https://github.com/sxyazi/yazi/tree/v26.9.1 ，原许可资料见 yazi-26.9.1-LICENSES.zip。",
+  "usageInstructions": "1. 按系统和 CPU 下载对应官方原包并解压，保留 yazi 与 ya 两个程序及随附文件。\n2. 将解压目录加入自己的 PATH；Mac/Linux 如程序没有执行权限，按系统方式赋予执行权限。\n3. 打开终端进入一个自己的普通文件夹，运行 yazi；Windows 未加入 PATH 时在解压目录运行 .\\yazi.exe。\n4. 先浏览文件与预览区域，通过界面按键帮助了解移动、选择和打开操作，再在测试文件夹尝试复制或重命名。\n5. 图片、视频和 PDF 预览按官方文档配置终端与可选依赖；不支持图像协议的终端不能保证显示图片。",
+  "faq": "它是普通图形窗口软件吗？主要在终端内操作，需要终端环境。\n为什么图片预览不显示？取决于终端图像协议及对应预览依赖，查看官方 Image Preview 说明。\nya 是另一款软件吗？它是 Yazi 原包随附的辅助程序，属于同一产品。",
+  "documentationUrl": "https://github.com/sxyazi/yazi/blob/v26.9.1/README.md",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">yazi</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Manager</text></svg>",
+    "sha256": "82cc2c9066e5de103cfe86861b2a9a8ae151e07aafe013e483e2ca9a4f9c531a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

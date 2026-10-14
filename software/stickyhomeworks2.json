@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "stickyhomeworks2",
+  "name": "StickyHomeworks2",
+  "homepage": "https://sh2.课是乐队.icu/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "StickyHomeworks2/StickyHomeworks2",
+          "assetPattern": "StickyHomeworks2.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "桌面作业便签工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/StickyHomeworks2/StickyHomeworks2/59d5e2bfae564a3b70b0a11a7e7b11974f93b8f0/StickyHomeworks2/Assets/AppLogo.ico",
+    "sha256": "3199981f50467df6bf4d07db5672fa7d58ce4ec3428167e862d7110721db62be",
+    "mime": "image/x-icon"
+  },
+  "description": "StickyHomeworks2 用于桌面作业便签。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 启动后创建作业或待办便签，填写内容与时间。调整便签位置并测试提醒，再根据需要加入自启动。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "office",
+  "screenshots": []
+}

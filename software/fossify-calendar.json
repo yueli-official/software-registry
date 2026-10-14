@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fossify-calendar",
+  "name": "Fossify Calendar",
+  "homepage": "https://github.com/FossifyOrg/Calendar",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FossifyOrg/Calendar",
+          "assetPattern": "calendar-22-foss-release.apk",
+          "tagPrefix": "",
+          "tagTemplate": "1.11.0"
+        }
+      }
+    }
+  ],
+  "summary": "安排日程、重复事件和提醒，查看多种日历视图。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/FossifyOrg/Calendar/c6fd00cab877d1c943781a2ff0342cbccbccc232/graphics/icon.webp",
+    "sha256": "9ad732bb4b0ebf47fb381f7d6d172d455f3565de3c660d29639650876a9f1dc2",
+    "mime": "image/webp",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；固定版文档授权及原署名见 https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/graphics/icon.webp"
+  },
+  "description": "Fossify Calendar 是 Android 开源日历，提供日、周、月和事件列表等视图，支持重复事件、提醒、小组件和导入导出。适合管理个人日程；联网同步依赖设备日历账户及对应服务配置，不等于内置独立云同步服务。\n\n### 源码与许可\n当前条目提供 1.11.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/FossifyOrg/Calendar/tree/c6fd00cab877d1c943781a2ff0342cbccbccc232) · [许可和通知](https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/README.md)，原作者及配图资料和许可原文见[许可原文](https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. 在 Android 安装官方 APK，授予所需的日历与通知权限。\n2. 选择日历或本地存储，新增一个测试事件并设置提醒。\n3. 切换月视图、周视图和事件列表，检查时间及显示内容。\n4. 按需要配置重复规则、节假日和桌面小组件。\n5. 如需同步，先配置系统支持的日历账户，检查事件是否双向同步，并保留导出备份。",
+  "faq": "有广告吗？官方项目定位为无广告的开源日历。\n可以自动连接所有云日历吗？需要对应账户和系统同步配置，具体能力看官方说明。",
+  "documentationUrl": "https://github.com/FossifyOrg/Calendar",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/FossifyOrg/Calendar/c6fd00cab877d1c943781a2ff0342cbccbccc232/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "sha256": "f08f814ba72d525b704550790242139963684036ca84cc3e27700d4e3a84f62e",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "caption": "Fossify Calendar 官方月视图与日程示例",
+      "licenseEvidence": "固定官方文档随附功能图；官方随附文档图片，原作者归属、源码和许可原文见 https://github.com/FossifyOrg/Calendar/blob/c6fd00cab877d1c943781a2ff0342cbccbccc232/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

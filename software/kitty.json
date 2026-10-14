@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kitty",
+  "name": "kitty",
+  "homepage": "https://github.com/kovidgoyal/kitty",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kovidgoyal/kitty",
+          "assetPattern": "kitty-{version}.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kovidgoyal/kitty",
+          "assetPattern": "kitty-{version}-x86_64.txz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kovidgoyal/kitty",
+          "assetPattern": "kitty-{version}-arm64.txz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在 Mac 与 Linux 使用支持分屏的 GPU 终端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/kovidgoyal/kitty/b2cb871254fbdac19a085188813c8dfb258b95cd/logo/kitty-128.png",
+    "sha256": "758a660e336b0f5437b5d41773a86ab38322e2c795b14a535149dec7513ea128",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/logo/kitty-128.png"
+  },
+  "description": "kitty 是独立的 GPU 终端应用，提供分屏、快捷键及终端工作流能力。当前条目为 kovidgoyal 的 kitty，不是 Windows 的 PuTTY 分支 KiTTY。\n\n### 源码与许可\n当前条目提供 0.49.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/kovidgoyal/kitty/tree/b2cb871254fbdac19a085188813c8dfb258b95cd) · [许可原文](https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/docs/screenshots/splits.png)；原作者及许可通知见[固定版许可](https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 打开自己的默认 Shell，运行熟悉的只读命令，检查字体、输入与分屏；逐项调整个人配置并保留备份。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "有 Windows 原版吗？本项目当前条目核验的是 Mac 与 Linux 原版，未把同名 Windows KiTTY 混入。\n包含远程服务器吗？不包含，远程连接使用自己的工具与账号。",
+  "documentationUrl": "https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/README.asciidoc",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/kovidgoyal/kitty/b2cb871254fbdac19a085188813c8dfb258b95cd/docs/screenshots/splits.png",
+      "sha256": "a55e04d3c7d80fbb8b2e827cf772b650953b516024824fd0507aa8f37d8bd564",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/docs/screenshots/splits.png",
+      "caption": "kitty 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/docs/screenshots/splits.png；原许可 https://github.com/kovidgoyal/kitty/blob/b2cb871254fbdac19a085188813c8dfb258b95cd/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

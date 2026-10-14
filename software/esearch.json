@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "esearch",
+  "name": "eSearch",
+  "homepage": "https://esearch-app.netlify.app/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "esearch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xushengfeng/eSearch",
+          "assetPattern": "eSearch-{version}-darwin-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xushengfeng/eSearch",
+          "assetPattern": "eSearch-{version}-darwin-x64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xushengfeng/eSearch",
+          "assetPattern": "eSearch-{version}-linux-arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "截图与 OCR工具。",
+  "icon": {
+    "url": "https://esearch-app.netlify.app/assets/icon-B3NfVrNO.svg",
+    "sha256": "6d0fdcf6619f99b6bdba5f49bd46aabfb93c33986d5dea55b56947045c08fe7b",
+    "mime": "image/svg+xml"
+  },
+  "description": "eSearch 用于截图与 OCR。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 选择截图区域并确认截图。按需要执行文字识别、标注或搜索，检查结果后复制或保存。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "capture",
+  "screenshots": []
+}

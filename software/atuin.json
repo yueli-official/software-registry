@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "atuin",
+  "name": "Atuin",
+  "homepage": "https://github.com/atuinsh/atuin",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "atuin",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "atuinsh/atuin",
+          "assetPattern": "atuin-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "atuinsh/atuin",
+          "assetPattern": "atuin-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "atuinsh/atuin",
+          "assetPattern": "atuin-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "atuinsh/atuin",
+          "assetPattern": "atuin-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "搜索 Shell 历史，并按需同步自己的命令记录。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/atuinsh/atuin/78366dca8c4941731e06a2f81c0980cc2ccc3836/docs/root-files/atuin-logo-horizontal.png",
+    "sha256": "df97d001c91dae636383a60b7c2d5308056ac8314168778821f2147094efc999",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/atuinsh/atuin/blob/78366dca8c4941731e06a2f81c0980cc2ccc3836/docs/root-files/atuin-logo-horizontal.png"
+  },
+  "description": "Atuin 是独立的 Shell 历史管理工具，通过本地数据库、交互搜索和上下文信息改善历史查询，并提供可选同步。适合长期使用命令行的用户；Shell 集成和同步服务需按自己的环境配置。\n\n### 源码与许可\n当前条目提供 18.23.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/atuinsh/atuin/tree/78366dca8c4941731e06a2f81c0980cc2ccc3836) · [许可原文](https://github.com/atuinsh/atuin/blob/78366dca8c4941731e06a2f81c0980cc2ccc3836/LICENSE)。",
+  "usageInstructions": "1. 解压对应平台官方包，将 atuin 加入 PATH。\n2. 运行 atuin --help，并按官方指南配置当前 Shell 的初始化代码。\n3. 按需要运行 atuin import 导入支持的已有历史。\n4. 使用交互历史搜索查找之前执行过的命令。\n5. 如需同步，按官方账号或自托管说明配置；无需同步时保持本地使用。",
+  "faq": "必须注册账号吗？本地使用不必启用云同步。\nWindows 和所有 Shell 都支持同样功能吗？具体 Shell 集成以官方当前说明为准。",
+  "documentationUrl": "https://github.com/atuinsh/atuin/blob/78366dca8c4941731e06a2f81c0980cc2ccc3836/README.md",
+  "category": "developer",
+  "screenshots": []
+}

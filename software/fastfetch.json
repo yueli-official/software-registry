@@ -1,0 +1,131 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fastfetch",
+  "name": "Fastfetch",
+  "homepage": "https://github.com/fastfetch-cli/fastfetch",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fastfetch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fastfetch",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fastfetch-cli/fastfetch",
+          "assetPattern": "fastfetch-macos-amd64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fastfetch-cli/fastfetch",
+          "assetPattern": "fastfetch-macos-aarch64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fastfetch-cli/fastfetch",
+          "assetPattern": "fastfetch-linux-amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fastfetch-cli/fastfetch",
+          "assetPattern": "fastfetch-linux-aarch64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fastfetch-cli/fastfetch",
+          "assetPattern": "fastfetch-linux-i686.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端快速查看系统、硬件及桌面环境信息。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.69.0/src/common/windows/logo.ico",
+    "sha256": "f1efd3625cdda506a2d8312ca3dbed65680c414599c6d09990671bb3f9734ac4",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "已实际预览精确 2.69.0 官方 Windows logo.ico：FASTFETCH 终端框及火箭，与官方 SVG 同一产品图案；项目 MIT 作者 Linus Dierheimer/Carter Li，Windows 产品资源无独立许可例外，保留署名。发行器 SVG 检查不接受文件开头合法注释，改用原版 ICO，不改源图标字节，只由图片服务转 WebP。"
+  },
+  "description": "Fastfetch 是命令行系统信息工具，可显示操作系统、CPU、GPU、内存、磁盘、终端与桌面环境，并通过 JSONC 配置调整显示模块和样式。适合整理设备配置、排查环境或分享系统信息；它不是硬件跑分或持续监控面板。此条目提供官方稳定版原包，采用 MIT 许可，保留 Linus Dierheimer、Carter Li 及各第三方原通知。对应 2.69.0 源码和发行：https://github.com/fastfetch-cli/fastfetch/tree/2.69.0 。随附的 Fastfetch-2.69.0-LICENSES.zip 保存主许可与 yyjson、sixel、AMD 接口头文件等原声明；widecharwidth 上游配置声明为公共领域。官方图标和界面图来源归项目原作者，此条目仅转换为 WebP。",
+  "usageInstructions": "1. Windows 解压与你电脑相符的 x64 或 ARM64 原包，在解压目录打开终端，执行 .\\fastfetch.exe；这是终端程序，双击后窗口可能很快关闭。macOS 解压对应 Intel 或 Apple Silicon ZIP，在包内 usr/bin 目录的终端执行 ./fastfetch；可将该程序放入自己的 PATH 目录。Linux Debian/Ubuntu 按实际架构安装 .deb，并按安装器提示满足依赖。\n2. 在终端运行 fastfetch 查看当前系统信息，执行 fastfetch --help 查看参数。部分硬件或环境模块依赖系统提供的信息，不能读取时不会保证有结果。\n3. 需要自定义时运行 fastfetch --gen-config 生成 JSONC 配置，再按官方配置文档调整模块；先保留原配置副本。分享输出前查看是否包含自己的用户名、设备名或网络信息。",
+  "faq": "这是图形界面程序吗？它在终端输出信息，此条目图为官方公开终端示例。\n能用它测试电脑性能吗？它主要读取系统信息，不代替跑分、稳定性测试或温度监控工具。\n为什么某些模块为空或不准确？结果取决于操作系统、驱动、桌面环境和可读取的数据，按官方文档核对对应模块。\nFastfetch 和 flashfetch 是两个独立软件吗？本包附带的 flashfetch 是同项目工具，当前条目按 Fastfetch 一款软件统计。",
+  "documentationUrl": "https://github.com/fastfetch-cli/fastfetch/wiki",
+  "category": "system",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.69.0/screenshots/example1.png",
+      "sha256": "2dabdb62c87f7455296797245193254bc1373e98457a1215fdea4f09f1f2b134",
+      "mime": "image/png",
+      "caption": "官方系统信息输出示例（Fedora Asahi / Apple M1 Pro）",
+      "sourcePage": "https://github.com/fastfetch-cli/fastfetch/blob/2.69.0/screenshots/example1.png",
+      "licenseEvidence": "精确 2.69.0 官方 screenshots/example1.png 与主 MIT 及作者 Carter Li 核实；目录无独立图片许可例外。只展示官方公开终端文字与系统标识，无凭据或第三方照片，保留原作者与来源。",
+      "provenance": "已实际预览：Fedora Asahi 在 M1 Pro 上运行的历史公开终端输出，非维护者实测，不冒充当前 Windows 界面；只转换 WebP。",
+      "reviewed": true
+    }
+  ]
+}

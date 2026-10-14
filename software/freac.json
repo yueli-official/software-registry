@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "freac",
+  "name": "fre:ac",
+  "homepage": "https://www.freac.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "freac",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "freac",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "enzo1982/freac",
+          "assetPattern": "freac-1.1.7-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "enzo1982/freac",
+          "assetPattern": "freac-1.1.7-macos11.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "enzo1982/freac",
+          "assetPattern": "freac-1.1.7-linux-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "enzo1982/freac",
+          "assetPattern": "freac-1.1.7-linux-i686.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "enzo1982/freac",
+          "assetPattern": "freac-1.1.7-linux-aarch64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持MP3、FLAC、AAC、Opus等格式的音频转换与CD抓轨工具，可编辑标签。",
+  "description": "fre:ac 是免费的开源音频转换器，支持多种常用音频格式、批量转换、音频CD抓轨、标签编辑及播放列表处理，界面提供多种语言。适合把音乐整理为常用播放格式，也能保存为无损格式。\n\n此条目提供未修改的官方1.1.7成品原包：Windows x64/32位/ARM64便携ZIP、macOS 11及以上的Intel与Apple Silicon通用DMG、Linux x64/32位/ARM64 AppImage，共7个槽位。各原包主程序架构已核实；旧macOS/PowerPC、Linux ARM32和FreeBSD用户可从官网选择对应原版，不把它们改标为此条目其他CPU包。主程序采用GPL-2.0-or-later，原署名Robert Kausch及各编解码组件原通知保留；对应源码：https://github.com/enzo1982/freac/tree/v1.1.7 ，原许可材料位于freac-1.1.7-LICENSES.zip。",
+  "usageInstructions": "1. Windows选择与CPU对应的ZIP，完整解压后运行freac.exe，保留编解码组件和资源。Mac需macOS 11及以上，打开通用DMG后把应用放入Applications；旧系统使用官网专用版本。Linux给对应AppImage添加执行权限后运行，例如chmod +x freac-1.1.7-linux-x86_64.AppImage。\n2. 首次转换先添加一两个自己的音频文件到任务列表，检查标题、艺术家等标签，按需要修正。\n3. 选择输出编码器和输出文件夹：日常兼容播放可选择MP3，无损保存可选择FLAC；在编码器设置中调整质量或码率。\n4. 点击开始转换/编码，等任务完成后，在输出文件夹播放结果，确认格式、音质和标签，再处理更多文件。\n5. 如需抓取CD，插入音频CD后添加轨道，检查曲目信息和输出设置再开始；转换前保留原文件。",
+  "faq": "能把有损文件转换成真正的无损音质吗？保存成FLAC不会恢复已损失的音频信息，应从原始无损文件或CD保存。\nMac是否要分Intel与Apple Silicon？当前条目选用官方macOS 11及以上通用DMG，主程序已核实含两种CPU。\n是否一定要编译依赖？下载当前条目成品包用于日常转换，不需要安装源码构建工具。\n旧Mac或Linux ARM32怎么下载？请使用官网列出的对应原版；此条目没有冒用其他CPU标签。",
+  "documentationUrl": "https://github.com/enzo1982/freac/blob/v1.1.7/Readme.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">fre:ac</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Audio Converter</text></svg>",
+    "sha256": "82a9d3afad26588544fab03715febfdd106eac95944991ada2af73238d385e31",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

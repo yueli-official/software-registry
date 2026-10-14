@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "duf",
+  "name": "duf",
+  "homepage": "https://github.com/muesli/duf",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "duf",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_windows_i386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_darwin_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "muesli/duf",
+          "assetPattern": "duf_{version}_linux_386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用清晰的终端表格查看磁盘容量和挂载点。",
+  "description": "duf 是跨平台磁盘容量查看工具，在终端按本地设备、网络设备和特殊设备显示使用情况。支持筛选、排序与 JSON 输出，适合快速确认分区剩余空间和挂载信息。\n\n### 源码与许可\n当前条目提供 0.9.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/muesli/duf/tree/b2f01a1ecbfd1af63015b83296c50a95260f97b1) · [许可和通知](https://github.com/muesli/duf/blob/b2f01a1ecbfd1af63015b83296c50a95260f97b1/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/muesli/duf/blob/b2f01a1ecbfd1af63015b83296c50a95260f97b1/README.md)，原作者及完整 MIT 授权见[许可原文](https://github.com/muesli/duf/blob/b2f01a1ecbfd1af63015b83296c50a95260f97b1/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. Windows 解压 ZIP；macOS 解压 tar.gz；Debian/Ubuntu 安装 DEB，把 duf 加入 PATH。\n2. 打开终端运行 duf，查看所有挂载设备。\n3. 根据挂载路径、总容量和剩余容量定位需要检查的分区。\n4. 运行 duf --help，按用途选择筛选和排序参数。\n5. 使用 duf --json 获取供其他工具处理的结构化结果。",
+  "faq": "会清理硬盘吗？它只展示容量信息，不提供自动清理功能。\n为何会显示网络设备？工具也展示已挂载的网络文件系统。",
+  "documentationUrl": "https://github.com/muesli/duf",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#207555\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">duf</text></svg>",
+    "sha256": "f914a9feb171a8e952a1cb8de778200540634873f2c4db76f64d231ba0f699fb",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名duf，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/muesli/duf/b2f01a1ecbfd1af63015b83296c50a95260f97b1/duf.png",
+      "sha256": "74d81f924ad13f16f3b23c29a4d504dd4db3cb475398594b3403c5c7345f6d3b",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/muesli/duf/blob/b2f01a1ecbfd1af63015b83296c50a95260f97b1/duf.png",
+      "caption": "duf 官方磁盘与挂载信息示例",
+      "licenseEvidence": "固定官方文档随附功能图；MIT文档使用依据、原作者署名与许可全文见 https://github.com/muesli/duf/blob/b2f01a1ecbfd1af63015b83296c50a95260f97b1/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "picview",
+  "name": "PicView",
+  "homepage": "https://picview.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "picview",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "picview",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Ruben2776/PicView",
+          "assetPattern": "PicView-{version}-macOS-x64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Ruben2776/PicView",
+          "assetPattern": "PicView-{version}-macOS-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持多种图片格式的看图工具，提供图库、图片信息、裁剪和批量调整尺寸。",
+  "description": "PicView 是可自定义界面的图片浏览器，支持常见图片、动画及多种专业图像格式，提供图片信息、图库、裁剪、格式转换和批量调整尺寸等功能。适合查看照片、设计素材和截图，可以按需要调整主题与快捷键。\n\n此条目提供未修改的官方5.1.4原包：Windows x64/ARM64完整便携ZIP，Mac Intel/Apple Silicon分别使用对应DMG；真实主程序架构逐包核实。该正式Release未提供Linux成品包，不以源码替代。主项目采用GPL-3.0-only，原署名Ruben Negendahl及附带通知保留；对应源码：https://github.com/Ruben2776/PicView/tree/5.1.4 ，原许可材料在picview-5.1.4-LICENSES.zip中。",
+  "usageInstructions": "1. Windows选择与CPU对应的ZIP，完整解压后运行PicView.exe，保留配置、运行库和资源。Mac选择Intel或Apple Silicon对应DMG，打开后将应用放入Applications再启动。\n2. 把一张图片或一个图片文件夹拖入窗口；也可使用打开文件菜单，Windows默认Ctrl+O打开文件选择器。\n3. 用左右方向键浏览同目录图片，缩放查看细节；按G打开图库，按I查看图片信息。\n4. 按F4进入设置，调整界面、语言和鼠标滚轮行为；快捷键以设置中的当前配置为准。\n5. 需要裁剪、转换或批量调整尺寸时，先用图片副本测试并检查输出目录，保留原图。官网提供完整功能和快捷键说明。",
+  "faq": "为什么Windows压缩包里有很多文件？便携包包含运行库与资源，完整解压即可使用，不能只移动EXE。\nMac该下载哪个包？Intel使用x64，Apple Silicon使用arm64，不能将两个包互换标注。\n是否有Linux安装包？当前条目固定5.1.4正式Release没有Linux成品附件。\n压缩归档里的图片也能看吗？官网说明支持归档内图片；7z/cb7格式需要安装7-Zip或WinRAR。",
+  "documentationUrl": "https://picview.org/",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">PicView</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Image Viewer</text></svg>",
+    "sha256": "06600de290971bb4f50e2b1403bcab256fe32b6ea820cb1f9f161a7686596427",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

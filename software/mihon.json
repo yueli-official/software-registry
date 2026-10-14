@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mihon",
+  "name": "Mihon",
+  "homepage": "https://github.com/mihonapp/mihon",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mihonapp/mihon",
+          "assetPattern": "mihon-arm64-v8a-v*.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "漫画阅读工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mihonapp/mihon/7aacaa349019ff42b8b05403d8beebe94c8f6dfc/.github/assets/logo.png",
+    "sha256": "1bb9bf5e165a7874343590b334ceaded6075f2d6501660c2b6f8483be43d4d22",
+    "mime": "image/png"
+  },
+  "description": "Mihon 用于漫画阅读。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装后按官方说明配置合法漫画来源，添加书目到书架。打开书目阅读，调整阅读方式和下载设置。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/mihonapp/mihon/blob/main/README.md",
+  "category": "reading",
+  "screenshots": []
+}

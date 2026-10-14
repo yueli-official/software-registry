@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "legado",
+  "name": "阅读（Legado）",
+  "homepage": "https://github.com/gedoor/legado",
+  "kind": "reference",
+  "packages": [],
+  "summary": "电子书阅读工具。",
+  "description": "阅读（Legado） 用于电子书阅读。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方说明配置合法书源或导入自己的电子书。打开书籍阅读，设置字体、排版和阅读进度。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/gedoor/legado/blob/main/README.md",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(197,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">阅读</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">阅读（Legado）</text></svg>",
+    "sha256": "2da2ab05983847e833cbb83718fe5bcd6f53dd122bf1f5c103a4c8d3dbbfea73",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

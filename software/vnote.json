@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "vnote",
+  "name": "VNote",
+  "homepage": "https://docs.vnote.fun",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "vnote",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "vnotex/vnote",
+          "assetPattern": "VNote-{version}-linux-x64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "vnotex/vnote",
+          "assetPattern": "VNote-{version}-mac-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "以笔记本整理 Markdown 笔记，结合编辑、预览和快捷导航。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/vnotex/vnote/4c8d8f1536479f342b84799467355b9f038fd6a4/pics/vnote.png",
+    "sha256": "005dca9a678700b2b1b9a0c006a1bd2904b7efa31d31d589b554c0a7eccf1d65",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本中的产品图标，实际原图与页面产品身份已预览核对；不修改产品标识、不暗示作者背书；图片原始归属及源码见 https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/pics/vnote.png，许可资料见 https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/COPYING.LESSER"
+  },
+  "description": "VNote 是基于 Qt 的开源笔记工具，围绕 Markdown 写作与笔记本管理提供编辑、预览、搜索和快捷导航。适合整理学习资料、技术文档和个人知识库，可在 Windows、macOS 和 Linux 使用。\n\n### 源码与许可\n当前条目提供 4.8.0 官方原包。主项目许可：LGPL-3.0；组件保留各自许可。[固定版本源码](https://github.com/vnotex/vnote/tree/4c8d8f1536479f342b84799467355b9f038fd6a4) · [许可资料](https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/COPYING.LESSER)。",
+  "usageInstructions": "1. Windows 解压原 ZIP 后运行 VNote；macOS 打开 DMG，将 VNote 拖到应用程序目录；Linux 为 AppImage 添加可执行权限后运行。\n2. 首次启动选择笔记存储目录，再创建笔记本和文件夹。\n3. 新建 Markdown 笔记，使用编辑区和预览区检查排版。\n4. 用搜索、快捷导航和标签整理内容；重要笔记目录另行备份。",
+  "faq": "macOS 包怎么选？当前条目原 DMG 是通用包，内含 Intel 和 Apple Silicon 原生程序。\n这是网盘同步服务吗？这是本地笔记软件，备份和多设备同步请按官方说明自行配置。",
+  "documentationUrl": "https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/README.md",
+  "category": "reading",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/vnotex/vnote/4c8d8f1536479f342b84799467355b9f038fd6a4/pics/main.webp",
+      "sha256": "2e574b9f6236b8c04e1edf0af998aaeb186b77fc37969525b84d64a136e0e799",
+      "mime": "image/webp",
+      "sourcePage": "https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/pics/main.webp",
+      "caption": "VNote 官方笔记本与主界面",
+      "licenseEvidence": "官方固定版本 README 随附的真实产品截图，保留原归属与固定源；主项目 LGPL-3.0，许可 https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/COPYING.LESSER；官方文档 https://github.com/vnotex/vnote/blob/4c8d8f1536479f342b84799467355b9f038fd6a4/README.md",
+      "provenance": "已查看官方原图、产品身份与实际界面；固定Git Blob和SHA256，保留来源与归属；展示示例界面，不声称为维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

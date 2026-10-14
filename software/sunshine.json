@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sunshine",
+  "name": "Sunshine",
+  "homepage": "https://github.com/LizardByte/Sunshine",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sunshine",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LizardByte/Sunshine",
+          "assetPattern": "Sunshine-Windows-ARM64-lite.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LizardByte/Sunshine",
+          "assetPattern": "Sunshine-macOS-x86_64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LizardByte/Sunshine",
+          "assetPattern": "Sunshine-macOS-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LizardByte/Sunshine",
+          "assetPattern": "sunshine_{version}-1+ubuntu24.04_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LizardByte/Sunshine",
+          "assetPattern": "sunshine_{version}-1+ubuntu24.04_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在自己的电脑运行串流服务，配合 Moonlight 远程游戏。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/LizardByte/Sunshine/63d35f702ee9e362e43263742981836ec0710384/src_assets/common/assets/web/public/images/logo-sunshine-45.png",
+    "sha256": "03c4d786461fb6e602817d6ef49664c77c2efb41b050dbf3b520744b96ae2a30",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/src_assets/common/assets/web/public/images/logo-sunshine-45.png"
+  },
+  "description": "Sunshine 是面向 Moonlight 的开源自托管串流服务，可将电脑画面与输入传输到支持的客户端。适合在自己的设备间远程使用桌面和游戏，画质、延迟和编码能力取决于硬件、网络及配置。\n\n### 源码与许可\n当前条目提供 2026.914.233613 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/LizardByte/Sunshine/tree/63d35f702ee9e362e43263742981836ec0710384) · [许可原文](https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/gh-pages-template/assets/img/screenshots/01-sunshine-welcome-page.png)；原作者及许可通知见[固定版许可](https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 解压官方 lite ZIP；Mac 打开对应 DMG；Ubuntu 24.04 安装匹配的 DEB。\n2. 按官方首次配置指南启动服务并建立本机管理账号。\n3. 配置要共享的桌面或应用，核对显示、编码及系统权限。\n4. 在另一台自己的设备安装 Moonlight，配对后先在局域网测试。\n5. 检查声音、输入和画质；跨网络使用按官方网络配置说明处理。",
+  "faq": "只有服务端就能远程玩吗？客户端通常使用 Moonlight。\nWindows 是安装器吗？当前条目采用官方 lite ZIP，按官方便携部署说明运行。",
+  "documentationUrl": "https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/README.md",
+  "category": "games",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/LizardByte/Sunshine/63d35f702ee9e362e43263742981836ec0710384/gh-pages-template/assets/img/screenshots/01-sunshine-welcome-page.png",
+      "sha256": "1d7434341dbef3723d029a4eb42c217641db79d8cfa7f698a156aa35a730e82b",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/gh-pages-template/assets/img/screenshots/01-sunshine-welcome-page.png",
+      "caption": "Sunshine 官方首次配置界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/gh-pages-template/assets/img/screenshots/01-sunshine-welcome-page.png；原许可 https://github.com/LizardByte/Sunshine/blob/63d35f702ee9e362e43263742981836ec0710384/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

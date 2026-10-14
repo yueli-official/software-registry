@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "beyond-compare",
+  "name": "Beyond Compare",
+  "homepage": "https://www.scootersoftware.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "文件比较工具。",
+  "icon": {
+    "url": "https://www.scootersoftware.com/favicon.ico",
+    "sha256": "9f0fc804feb15809cb37762a2af7f4d40bccc906fd05498d277ca2c54660d503",
+    "mime": "image/x-icon"
+  },
+  "description": "Beyond Compare 用于文件比较。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择左右两侧文件或目录，查看差异。先用副本测试合并或同步，确认方向与覆盖范围再执行。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "files",
+  "screenshots": []
+}

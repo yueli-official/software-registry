@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tasks",
+  "name": "Tasks.org",
+  "homepage": "https://tasks.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tasks/tasks",
+          "assetPattern": "tasks-fdroid-{version}.apk",
+          "tagPrefix": "",
+          "tagTemplate": "15.12"
+        }
+      }
+    }
+  ],
+  "summary": "管理待办、子任务、重复提醒和可同步的任务清单。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tasks/tasks/1211fc469459f632b7bf357f61bd9a7c3265bd95/graphics/icon.png",
+    "sha256": "65aa87ad0b9a459ad4cee67175927660d86140368893de432bb95f0cdd979b6a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；固定版文档授权及原署名见 https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/graphics/icon.png"
+  },
+  "description": "Tasks.org 是 Android 开源待办工具，支持任务列表、子任务、标签、提醒与重复任务。可按个人需求配置 CalDAV 等同步服务，适合管理工作事项和日常清单；具体同步渠道及付费服务按官方说明区分。\n\n### 源码与许可\n当前条目提供 15.12 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/tasks/tasks/tree/1211fc469459f632b7bf357f61bd9a7c3265bd95) · [许可和通知](https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/README.md)，原作者及配图资料和许可原文见[许可原文](https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. 在 Android 安装官方 GitHub 的 tasks-fdroid APK。\n2. 建立一个本地列表，新增测试任务并填写截止日期。\n3. 按系统提示配置通知权限，设置提醒并验证能否收到。\n4. 为任务加入子任务、标签或重复规则，再测试完成与撤销。\n5. 如需跨设备同步，按官方文档配置所选服务并核对同步结果。",
+  "faq": "这个 APK 就是 F-Droid 仓库签名吗？不是，官方 GitHub 的 fdroid 构建由作者签名；已核对其证书指纹与官方 README 一致。\n其他渠道能直接覆盖安装吗？不同签名渠道可能无法覆盖，迁移前按官方指南备份数据。\n包含桌面版吗？当前条目提供 Android 稳定版，桌面 alpha 不混作同一稳定发行。",
+  "documentationUrl": "https://tasks.org/docs/",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/tasks/tasks/1211fc469459f632b7bf357f61bd9a7c3265bd95/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpg",
+      "sha256": "3b203c62cab92e864390cae458b4e83ded5b782bf2b8ae06dbb4502a7719a010",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpg",
+      "caption": "Tasks.org 官方待办编辑与子任务示例",
+      "licenseEvidence": "固定官方文档随附功能图；官方随附文档图片，原作者归属、源码和许可原文见 https://github.com/tasks/tasks/blob/1211fc469459f632b7bf357f61bd9a7c3265bd95/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "csvlens",
+  "name": "csvlens",
+  "homepage": "https://github.com/YS-L/csvlens",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "csvlens",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YS-L/csvlens",
+          "assetPattern": "csvlens-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YS-L/csvlens",
+          "assetPattern": "csvlens-x86_64-apple-darwin.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YS-L/csvlens",
+          "assetPattern": "csvlens-aarch64-apple-darwin.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YS-L/csvlens",
+          "assetPattern": "csvlens-x86_64-unknown-linux-gnu.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YS-L/csvlens",
+          "assetPattern": "csvlens-aarch64-unknown-linux-gnu.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互浏览、搜索和排序 CSV 表格。",
+  "description": "csvlens 是独立的终端 CSV 浏览器，可逐行逐列查看表格并搜索、筛选或排序内容，适合快速检查导出的数据，不替代完整电子表格编辑器。\n\n### 源码与许可\n当前条目提供 0.15.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/YS-L/csvlens/tree/a5bd632d172f6601de94329c71d1770e1b447237) · [许可原文](https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/.github/demos/0.14.0-natural-sort.png)；原作者及许可通知见[固定版许可](https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压原版并将 csvlens 加入 PATH。\n2. 运行 csvlens --help 查看分隔符等选项。\n3. 用 csvlens sample.csv 打开自己的小型 CSV。\n4. 使用界面帮助进行搜索、列导航与排序。\n5. 遇到编码或分隔符问题时按官方选项指定，核对原始数据。",
+  "faq": "可以直接编辑并保存工作簿吗？主要浏览 CSV，不把它当成 Excel 编辑器。\n截图是什么版本？自然排序图为官方0.14.0功能示例，当前包为当前条目标明版本。",
+  "documentationUrl": "https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">csv</text></svg>",
+    "sha256": "ac8575367ee161143c8774f8a142d384dba785b0169ddaf256cdd0c7f3c67c3c",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名csv，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/YS-L/csvlens/a5bd632d172f6601de94329c71d1770e1b447237/.github/demos/0.14.0-natural-sort.png",
+      "sha256": "136142499a2083d20311877b8c270de77cf3e3ae317a6d8fc48d538b3235b9ae",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/.github/demos/0.14.0-natural-sort.png",
+      "caption": "csvlens 官方0.14.0自然排序示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/.github/demos/0.14.0-natural-sort.png；原许可 https://github.com/YS-L/csvlens/blob/a5bd632d172f6601de94329c71d1770e1b447237/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

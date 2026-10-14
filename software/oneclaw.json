@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "oneclaw",
+  "name": "OneClaw",
+  "homepage": "https://github.com/oneclaw/oneclaw",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oneclaw/oneclaw",
+          "assetPattern": "OneClaw-Setup-*-x64.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "AI 工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/oneclaw/oneclaw/873419d519d849142f7d3d51acdfb130bb094376/assets/icon.ico",
+    "sha256": "0df0b1ce64e75cf7736e91e880f6e6faaf31cf6525c32a278243a4e2507cdaad",
+    "mime": "image/x-icon"
+  },
+  "description": "OneClaw 用于AI 工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 首次启动选择模型服务商并配置 API Key，确认接口连接后开始对话。再根据需要启用工具或消息渠道，先用测试任务检查效果。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/oneclaw/oneclaw/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "transgui",
+  "name": "Transmission Remote GUI",
+  "homepage": "https://github.com/transmission-remote-gui/transgui",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "transgui",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "transmission-remote-gui/transgui",
+          "assetPattern": "transgui-{version}-i386-win32.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "transmission-remote-gui/transgui",
+          "assetPattern": "transgui-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "transmission-remote-gui/transgui",
+          "assetPattern": "transgui-{version}-x86_64-Linux.txz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "transmission-remote-gui/transgui",
+          "assetPattern": "transgui-{version}-i686-Linux.txz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过 RPC 管理另一台设备上的 Transmission 下载任务。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/transmission-remote-gui/transgui/3fb1d339f600d9d973aa9b923b548a369bd3adbf/transgui.png",
+    "sha256": "5f5ce3b4d63757d41227952972db2279aa74edb4ef5423f67ea0145037e188c0",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/transmission-remote-gui/transgui/blob/3fb1d339f600d9d973aa9b923b548a369bd3adbf/transgui.png"
+  },
+  "description": "Transmission Remote GUI 是 Transmission daemon 的桌面管理前端，通过 RPC 连接 NAS、服务器或另一台电脑上的 Transmission，查看任务进度、文件、节点与传输设置。它不自带 Transmission 服务端，适合已有 Transmission 用户远程管理下载。\n\n主体采用 GPL-2.0，随包组件按原 LGPL 等许可保留。固定版本源码：https://github.com/transmission-remote-gui/transgui/tree/3fb1d339f600d9d973aa9b923b548a369bd3adbf 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 按 x64 或 x86 选择原 ZIP，完整解压后运行 transgui.exe；macOS 打开官方 DMG；Linux 解压对应 x86_64 或 i686 的 TXZ 包，运行随包程序并按官方 README 安装依赖。\n2. 先在自己的 Transmission 服务端启用 RPC，并配置可访问地址、端口、身份验证及允许的客户端。\n3. 在 Remote GUI 新建连接，填写主机与 RPC 参数，连接成功后检查已有任务，再添加自己的 torrent 或 magnet 链接。\n4. 添加任务时保存目录指的是服务端路径；文件会保存在 NAS/服务器上，而非自动保存到当前电脑。",
+  "faq": "安装后可以直接 BT 下载吗？还需要运行中的 Transmission daemon。\n下载文件保存在本机吗？保存路径属于所连接的服务端。\n支持 Apple Silicon 原生吗？当前固定版官方 Mac 包为 Intel，未冒充 ARM 原生。",
+  "documentationUrl": "https://github.com/transmission-remote-gui/transgui/blob/3fb1d339f600d9d973aa9b923b548a369bd3adbf/README.md",
+  "category": "files",
+  "screenshots": []
+}

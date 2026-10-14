@@ -1,0 +1,11 @@
+/.task/
+/.state/
+/flightdeck/
+/dist/
+/build/
+*.egg-info/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*

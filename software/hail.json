@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hail",
+  "name": "Hail",
+  "homepage": "https://github.com/aistra0528/Hail",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aistra0528/Hail",
+          "assetPattern": "Hail-v{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v1.11.0"
+        }
+      }
+    }
+  ],
+  "summary": "按需冻结 Android 应用，管理暂时不用的软件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/aistra0528/Hail/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/fastlane/metadata/android/zh-CN/images/icon.png",
+    "sha256": "662ea5dd39eb9d3d450d8a0d68ff407d3fc247cd6ec6de574f80fff0022fa66e",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；固定版文档授权及原署名见 https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/fastlane/metadata/android/zh-CN/images/icon.png"
+  },
+  "description": "Hail（雹）是 Android 应用冻结工具，可通过停用、隐藏或暂停等方式管理暂时不使用的软件。支持 Shizuku、Root、Dhizuku 等不同工作模式，实际能力由设备和授权方式决定，不能保证每种冻结方式都停止后台运行。\n\n### 源码与许可\n当前条目提供 1.11.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/aistra0528/Hail/tree/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0) · [许可和通知](https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/README.md)，原作者及配图资料和许可原文见[许可原文](https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. 在 Android 安装官方 APK，首次使用先查看设置中的工作模式。\n2. 按官方中文说明选择并配置设备支持的授权方式；Android 11+ 可了解 Shizuku 无线调试方案。\n3. 先选一个可恢复的普通应用加入列表，测试冻结与解冻。\n4. 使用与冻结时相同的工作模式解冻，确认应用可正常打开。\n5. 核对不同模式的限制，熟悉恢复操作后再扩大管理范围；不要把截图中的系统组件当作推荐冻结清单。",
+  "faq": "必须 Root 吗？不是，Shizuku、设备所有者等模式也有对应支持条件。\n暂停等于完全停止后台吗？不同模式行为不同，Suspend 主要限制交互，不保证停止后台。\n图里的系统组件能直接冻结吗？截图仅展示应用列表，操作前应理解组件用途和恢复方式。",
+  "documentationUrl": "https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/README.zh_CN.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/aistra0528/Hail/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/fastlane/metadata/android/zh-CN/images/phoneScreenshots/2.png",
+      "sha256": "091a60d24eaafa658df6c882f1ef7a44c60270e017de96caa94702e506d3a60a",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/fastlane/metadata/android/zh-CN/images/phoneScreenshots/2.png",
+      "caption": "Hail 官方中文应用管理列表示例",
+      "licenseEvidence": "固定官方文档随附功能图；官方随附文档图片，原作者归属、源码和许可原文见 https://github.com/aistra0528/Hail/blob/8bd6f4db2156e0a73bc995740abfa637ec2c2ee0/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

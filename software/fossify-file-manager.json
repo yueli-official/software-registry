@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fossify-file-manager",
+  "name": "Fossify File Manager",
+  "homepage": "https://github.com/FossifyOrg/File-Manager",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FossifyOrg/File-Manager",
+          "assetPattern": "file-manager-13-foss-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "管理 Android 本地文件，支持搜索、压缩、存储分析和常用目录。",
+  "description": "Fossify File Manager 是 Android 本地文件管理器，可浏览与搜索目录、复制移动文件、压缩资料及分析存储占用。提供常用目录快捷入口、隐藏项保护、简单文本编辑和主题设置，没有广告。外部存储、USB 和系统目录的可访问范围受 Android 权限及设备条件限制；浏览文件不代表具有 root 权限。\n\n此条目提供官方 1.6.1 完整原 APK，包含四种已核实的原生 ABI，保留原签名和 GPL-3.0 及组件许可。对应源码：https://github.com/FossifyOrg/File-Manager/tree/1.6.1 ，原许可材料见 fossify-file-manager-1.6.1-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 file-manager APK，打开后按 Android 提示授予需要的目录或文件访问权限。\n2. 进入 Downloads 等自己的目录，创建一个测试文件夹，先复制一个普通测试文件进去。\n3. 使用搜索查找该文件，尝试重命名并核对扩展名；复制完成后打开目标文件确认内容。\n4. 选择测试文件夹，按需要创建压缩包并在另一个测试目录解压，确认文件齐全。\n5. 按需要设置常用目录和排序，查看存储分析；SD 卡或 USB 目录按系统文件选择器授予权限，删除文件前确认具体路径。",
+  "faq": "为什么不能打开某些系统目录？Android 会限制应用目录和系统文件，普通授权不能代替 root。\n压缩后是否删除原文件？按实际操作选项处理，首次使用先保留原文件并检查压缩包。\n需要网络账户吗？核心本地文件管理不要求云账户，分享或外部应用操作按对应服务处理。",
+  "documentationUrl": "https://github.com/FossifyOrg/File-Manager/blob/1.6.1/README.md",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"22\" fill=\"#376656\">Fossify File Manager</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Manager</text></svg>",
+    "sha256": "0e557c5f14be55741d599a5bfe232eec9bd11a57203a4151aa329f7683f700cf",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

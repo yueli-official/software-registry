@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "jan",
+  "name": "Jan",
+  "homepage": "https://jan.ai/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "jan",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "janhq/jan",
+          "assetPattern": "Jan_{version}_universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "janhq/jan",
+          "assetPattern": "Jan_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "本地 AI 对话工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/janhq/jan/98c3b84a5a218fafbe8428ce5c930566e5943475/docs/public/assets/images/homepage/icon.png",
+    "sha256": "ef73eb764c2aed81b56baa109f1a3d520de074a0112831bb8c8f7f90b0d69768",
+    "mime": "image/png"
+  },
+  "description": "Jan 用于本地 AI 对话。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开模型管理页面，下载适合电脑配置的模型。等待模型加载后新建对话；也可以按软件说明配置远程模型服务。\n\n### 其他平台安装\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "documentationUrl": "https://github.com/janhq/jan/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

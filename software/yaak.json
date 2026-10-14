@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "yaak",
+  "name": "Yaak",
+  "homepage": "https://yaak.app/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "yaak",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mountain-loop/yaak",
+          "assetPattern": "Yaak_{version}_arm64-setup.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mountain-loop/yaak",
+          "assetPattern": "Yaak_{version}_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mountain-loop/yaak",
+          "assetPattern": "Yaak_{version}_aarch64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mountain-loop/yaak",
+          "assetPattern": "yaak_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mountain-loop/yaak",
+          "assetPattern": "yaak_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "桌面 API 调试客户端，支持 REST、GraphQL、WebSocket 和 gRPC。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mountain-loop/yaak/646d9696494d33feaf4d72d3799c8ff668ed6cbe/crates-tauri/yaak-app-client/icons/release/icon.png",
+    "sha256": "d4887e0dc5263b45c01590b4af472c3df972efffd32576d1420151e0574c403d",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定版本 release 产品图标，已实际预览山羊轮廓及渐变底色；该目录未发现独立许可，保留 MIT 版权及来源，仅转换为 WebP。 固定来源：https://github.com/mountain-loop/yaak/blob/646d9696494d33feaf4d72d3799c8ff668ed6cbe/crates-tauri/yaak-app-client/icons/release/icon.png"
+  },
+  "description": "Yaak 是基于 Tauri 的桌面 API 客户端，可组织接口请求、配置环境变量，调试 REST、GraphQL、WebSocket、SSE 和 gRPC，并查看响应结果。适合后端开发、接口联调与个人 API 测试；部分协作和扩展能力按官方许可方案提供。\n\n主体采用 MIT License，版权 (c) 2024 Yaak，随包组件沿用各自许可。对应版本源码：https://github.com/mountain-loop/yaak/tree/646d9696494d33feaf4d72d3799c8ff668ed6cbe 。固定版本 release 产品图标，已实际预览山羊轮廓及渐变底色；该目录未发现独立许可，保留 MIT 版权及来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 下载对应 x64 或 ARM64 安装器；Mac 下载 Intel 或 Apple Silicon DMG 并将应用放入应用程序目录；Debian/Ubuntu 使用对应 DEB 安装。\n2. 打开软件，新建 HTTP 请求，输入自己的测试接口 URL，选择方法并填写所需参数、请求头或 JSON 请求体。\n3. 点击 Send 查看状态码、响应头与正文；按项目建立环境变量，避免把生产密钥写入公开导出的集合。\n4. WebSocket、GraphQL 或 gRPC 请求需使用对应协议并准备服务地址；付费功能以官方页面和应用提示为准。",
+  "faq": "这是服务端吗？不是，是向已有接口发送请求的客户端。\n只能用 HTTP 吗？还支持 GraphQL、WebSocket、SSE 与 gRPC。\n所有功能都免费吗？官方提供社区资助的许可证方案，协作及部分能力以官方说明为准。",
+  "documentationUrl": "https://github.com/mountain-loop/yaak/blob/646d9696494d33feaf4d72d3799c8ff668ed6cbe/README.md",
+  "category": "developer",
+  "screenshots": []
+}

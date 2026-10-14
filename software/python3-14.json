@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "python3-14",
+  "name": "Python 3.14",
+  "homepage": "https://www.python.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "python-release",
+        "options": {
+          "series": "3.14",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "Python 3.14 系列解释器、标准库与 Windows 安装程序。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.14.8/PC/icons/python.ico",
+    "sha256": "a8ed67b4413d98e61f95ad6d83ba3a71db7d70d0d608636002e99b1cd623addd",
+    "mime": "image/x-icon"
+  },
+  "description": "Python 3.14 系列解释器与标准库，可用于脚本、数据处理和应用开发。本条目固定跟踪 3.14.x 正式版。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 安装时按需要配置 PATH，在终端运行 python --version。可用 python -m venv .venv 创建项目环境，在环境中安装依赖并运行脚本。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://docs.python.org/3.14/",
+  "category": "developer",
+  "screenshots": []
+}

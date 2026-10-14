@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fscapture",
+  "name": "FastStone Capture",
+  "homepage": "https://www.faststone.org/FSCaptureDetail.htm",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fscapture",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "截取屏幕、滚动窗口并录制屏幕视频。",
+  "icon": {
+    "url": "https://www.faststone.org/favicon.ico",
+    "sha256": "9ff0eb168c0d5109760a2ef5cbe9f25664613295514a91c59cbd27958d088723",
+    "mime": "image/x-icon"
+  },
+  "description": "FastStone Capture：截取屏幕、滚动窗口并录制屏幕视频。\n\n官方原版提供 30 天试用，长期使用需购买许可证。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 启动浮动工具栏，选择窗口或区域截图。使用编辑器添加标注并保存；录屏前先检查区域、音频与输出目录。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "capture",
+  "screenshots": []
+}

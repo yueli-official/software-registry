@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "auto-dark-mode",
+  "name": "Auto Dark Mode",
+  "homepage": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "auto-dark-mode",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "auto-dark-mode",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "按时间、日出日落或环境光自动切换Windows深浅色主题。",
+  "description": "Auto Dark Mode为Windows提供自动主题切换，可分别控制系统和应用主题，联动壁纸、鼠标指针及强调色，也能延后切换以减少游戏期间的干扰。适合希望白天用浅色、晚上用深色又不想反复打开系统设置的用户。支持Windows 10 22H2及Windows 11。",
+  "usageInstructions": "1. 下载对应x64或ARM64的原版ZIP，完整解压到固定目录，不单独拖出某个EXE。\n2. 启动AutoDarkModeShell.exe打开配置界面。\n3. 选择定时切换，设置浅色和深色的开始时间；也可按需选择日出日落模式。\n4. 在系统区域设置中选择需要联动的系统和应用主题，先手动切换确认效果。\n5. 如需长期自动切换，在软件设置启用随系统启动；按需设置游戏期间延迟切换。",
+  "faq": "支持Windows 10吗？该固定版本要求Windows 10 22H2或Windows 11。\n必须允许位置访问吗？固定时间模式不依赖位置；日出日落模式需按软件提示配置位置。",
+  "documentationUrl": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/blob/bd09b4fe568eb783f79de799cde5d5237f789f50/.github/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Auto Dark Mode</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Theme Switch</text></svg>",
+    "sha256": "4de12db1a3ce57875f175b320d8e68c35f41b090ea94ebd69e4f4f94b06e40bb",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "waifux",
+  "name": "WaifuX",
+  "homepage": "https://jipika.github.io/WaifuX",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jipika/WaifuX",
+          "assetPattern": "WaifuX.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "macOS 壁纸与媒体聚合应用。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/jipika/WaifuX/2569a351683d1470652fb8b64525bb8d877971b7/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+    "sha256": "973f1903a27955e7640ea2fb753b667700a115c6610546ab6479d678fa8b03ea",
+    "mime": "image/png"
+  },
+  "description": "WaifuX 用于浏览和管理静态壁纸、动态壁纸及支持的媒体来源，支持本地壁纸导入和收藏。内容来源和兼容性以官方说明为准。",
+  "usageInstructions": "1. 下载官方 DMG，打开后将 WaifuX 拖入“应用程序”。\n2. 打开应用，按官方说明完成必要授权；本包支持 Intel 和 Apple Silicon。\n3. 先选择自己拥有权限的一张本地图片或视频作为壁纸，确认正常显示，再配置收藏和其他受支持来源。\n4. 第三方壁纸与资源分别遵循其来源许可。",
+  "faq": "需要 macOS；同一官方 DMG 支持 Intel 和 Apple Silicon。壁纸、在线资源和模型的许可分别遵循对应来源。源码及 GPL-3.0 许可可在官方同版本项目中查看。",
+  "documentationUrl": "https://github.com/jipika/WaifuX/blob/main/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

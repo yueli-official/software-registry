@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mattermost-desktop",
+  "name": "Mattermost Desktop",
+  "homepage": "https://github.com/mattermost/desktop",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mattermost/desktop",
+          "assetPattern": "mattermost-desktop-{version}-win-x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mattermost/desktop",
+          "assetPattern": "mattermost-desktop-{version}-win-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mattermost/desktop",
+          "assetPattern": "mattermost-desktop-{version}-mac-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mattermost/desktop",
+          "assetPattern": "mattermost-desktop_{version}-1_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mattermost/desktop",
+          "assetPattern": "mattermost-desktop_{version}-1_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在桌面连接自己的 Mattermost 团队服务。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mattermost/desktop/274602892a4391ac8c455cc09bdb52632ab282a9/src/assets/linux/app_icon.png",
+    "sha256": "9538f52ecdbce2fe5b87cabf0fb47d8dcc5b51180e420d89a62369d95985754e",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/mattermost/desktop/blob/274602892a4391ac8c455cc09bdb52632ab282a9/src/assets/linux/app_icon.png"
+  },
+  "description": "Mattermost Desktop 是独立的官方桌面客户端，提供团队消息、频道和通知入口，适合已有 Mattermost 工作区的用户；不包含服务端部署。\n\n### 源码与许可\n当前条目提供 6.3.0 官方原包。主项目许可：Apache-2.0，NOTICE 与组件归属保留；独立组件遵循各自许可。[固定版本源码](https://github.com/mattermost/desktop/tree/274602892a4391ac8c455cc09bdb52632ab282a9) · [许可原文](https://github.com/mattermost/desktop/blob/274602892a4391ac8c455cc09bdb52632ab282a9/LICENSE.txt)。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 输入自己团队提供的 Mattermost 地址，核对站点后登录自己的账号；测试频道浏览、消息与通知，再按团队要求配置其他工作区。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "能直接创建完整团队服务器吗？当前条目是桌面客户端，服务端需团队另行部署。\n所有服务器版本都兼容吗？按官方客户端与服务端兼容说明核对。",
+  "documentationUrl": "https://github.com/mattermost/desktop/blob/274602892a4391ac8c455cc09bdb52632ab282a9/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

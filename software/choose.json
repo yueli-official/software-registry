@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "choose",
+  "name": "choose",
+  "homepage": "https://github.com/theryangeary/choose",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "choose",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "theryangeary/choose",
+          "assetPattern": "choose-aarch64-apple-darwin",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "theryangeary/choose",
+          "assetPattern": "choose-x86_64-unknown-linux-gnu",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "theryangeary/choose",
+          "assetPattern": "choose-aarch64-unknown-linux-gnu",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "从文本输入中按列或区间选择需要的字段。",
+  "description": "choose 是独立的命令行文本选择工具，用较直观的字段选择方式处理分隔文本。适合快速整理命令输出，不能代替完整结构化数据解析。当前条目 Mac 官方原版为 ARM64。\n\n### 源码与许可\n当前条目提供 1.3.7 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/theryangeary/choose/tree/c0e9622436dfbeb5ae21438466b60c25692f808a) · [许可原文](https://github.com/theryangeary/choose/blob/c0e9622436dfbeb5ae21438466b60c25692f808a/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台原版，Windows 保留 EXE；Mac/Linux 给二进制执行权限并放入 PATH。\n2. 运行 choose --help 查看字段与分隔选项。\n3. 用一份自己的小型测试文本通过管道输入 choose。\n4. 按字段位置选取需要的内容并核对输出。\n5. 处理含引号或嵌套的 CSV/JSON 时使用适合的数据解析工具。",
+  "faq": "是图形界面应用吗？这是独立命令行程序。\n可以完整解析所有 CSV 吗？其主要用途是字段选择，复杂格式需专用解析器。",
+  "documentationUrl": "https://github.com/theryangeary/choose/blob/c0e9622436dfbeb5ae21438466b60c25692f808a/readme.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">ch</text></svg>",
+    "sha256": "96bb7102e243af10cafbd77106923fb3cf1876c2c371c1f9cf8bc23337b9b46f",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名ch，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

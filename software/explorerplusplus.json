@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "explorerplusplus",
+  "name": "Explorer++",
+  "homepage": "https://github.com/derceg/explorerplusplus",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derceg/explorerplusplus",
+          "assetPattern": "explorerpp_x64.zip",
+          "tagPrefix": "version-"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derceg/explorerplusplus",
+          "assetPattern": "explorerpp_x86.zip",
+          "tagPrefix": "version-",
+          "tagTemplate": "version-{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在 Windows 用多标签页浏览和管理文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/derceg/explorerplusplus/384c2f687fd55c1e71e9fcb272f9113de009a248/Explorer++/Explorer++/res/Explorer++.ico",
+    "sha256": "e74ab3b01cdfd306ffe9b7566530c7f59b720f6bff70a7b0f0614fb714a5dd83",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/derceg/explorerplusplus/blob/384c2f687fd55c1e71e9fcb272f9113de009a248/Explorer%2B%2B/Explorer%2B%2B/res/Explorer%2B%2B.ico"
+  },
+  "description": "Explorer++ 是轻量 Windows 文件管理器，支持多标签页、书签、文件操作和可定制界面。适合同时浏览多个目录，当前条目提供官方便携 ZIP，无需把它设置为系统默认文件管理器。\n\n### 源码与许可\n当前条目提供 1.4.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/derceg/explorerplusplus/tree/384c2f687fd55c1e71e9fcb272f9113de009a248) · [许可原文](https://github.com/derceg/explorerplusplus/blob/384c2f687fd55c1e71e9fcb272f9113de009a248/LICENSE)。",
+  "usageInstructions": "1. 按 Windows 64 位或 32 位选择官方 ZIP 并解压。\n2. 运行 Explorer++.exe，打开一个测试目录。\n3. 新建标签页，分别浏览源目录与目标目录。\n4. 先复制一个测试文件，核对位置与内容。\n5. 为常用目录加入书签，再按官方说明调整显示和快捷键。",
+  "faq": "有 Mac 或 Linux 成品吗？当前条目为官方 Windows 软件。\n必须替换系统资源管理器吗？可以直接便携运行，是否更改默认行为由自己选择。",
+  "documentationUrl": "https://github.com/derceg/explorerplusplus/blob/384c2f687fd55c1e71e9fcb272f9113de009a248/README.md",
+  "category": "files",
+  "screenshots": []
+}

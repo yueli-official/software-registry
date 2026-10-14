@@ -1,0 +1,523 @@
+{
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "homepage": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "package",
+        "reference",
+        "chrome-extension"
+      ]
+    },
+    "icon": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "pattern": "^https://[^\\s]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "mime": {
+          "enum": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml",
+            "image/x-icon"
+          ]
+        },
+        "inlineSvg": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200000
+        },
+        "archiveEntry": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceKind": {
+          "enum": [
+            "official",
+            "generated-name-mark"
+          ]
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64000
+        }
+      },
+      "required": [
+        "sha256"
+      ],
+      "oneOf": [
+        {
+          "required": [
+            "url"
+          ],
+          "not": {
+            "required": [
+              "inlineSvg"
+            ]
+          }
+        },
+        {
+          "required": [
+            "inlineSvg",
+            "mime"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "url"
+                ]
+              },
+              {
+                "required": [
+                  "archiveEntry"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "platform": {
+            "type": "string",
+            "enum": [
+              "windows",
+              "macos",
+              "linux",
+              "android",
+              "ios"
+            ]
+          },
+          "architecture": {
+            "type": "string",
+            "enum": [
+              "amd64",
+              "arm64",
+              "386",
+              "arm",
+              "universal"
+            ]
+          },
+          "channel": {
+            "enum": [
+              "stable",
+              "beta"
+            ]
+          },
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "github-release"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "repository": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+                      },
+                      "assetPattern": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "tagPrefix": {
+                        "type": "string"
+                      },
+                      "tagTemplate": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "tagSuffix": {
+                        "type": "string",
+                        "enum": [
+                          "-stable",
+                          "-F-DROID"
+                        ]
+                      },
+                      "tagVersionFormat": {
+                        "type": "string",
+                        "enum": [
+                          "date-build"
+                        ]
+                      },
+                      "versionFromPrimary": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "repository",
+                      "assetPattern"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "scoop"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "bucket": {
+                        "type": "string",
+                        "enum": [
+                          "main",
+                          "extras"
+                        ]
+                      },
+                      "app": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+                      },
+                      "architecture": {
+                        "type": "string",
+                        "enum": [
+                          "64bit",
+                          "32bit",
+                          "arm64",
+                          "universal"
+                        ]
+                      },
+                      "filenameTemplate": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "stripPackageRevision": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "bucket",
+                      "app",
+                      "architecture"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "python-release"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "series": {
+                        "type": "string",
+                        "pattern": "^[0-9]+\\.[0-9]+$"
+                      },
+                      "architecture": {
+                        "type": "string",
+                        "enum": [
+                          "64bit",
+                          "32bit",
+                          "arm64",
+                          "universal"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "series",
+                      "architecture"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "iterm-release"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {},
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "evermeet-release"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {},
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "official-checksum"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "urlTemplate": {
+                        "type": "string",
+                        "pattern": "^https://[^\\s]+$"
+                      },
+                      "checksumUrlTemplate": {
+                        "type": "string",
+                        "pattern": "^https://[^\\s]+$"
+                      },
+                      "evidenceUrl": {
+                        "type": "string",
+                        "pattern": "^https://[^\\s]+$"
+                      }
+                    },
+                    "required": [
+                      "urlTemplate",
+                      "checksumUrlTemplate",
+                      "evidenceUrl"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "driver": {
+                    "const": "ppsspp-release"
+                  },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "package": {
+                        "const": "android"
+                      }
+                    },
+                    "required": [
+                      "package"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "driver",
+                  "options"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "required": [
+          "platform",
+          "architecture",
+          "channel",
+          "source"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64000
+    },
+    "usageInstructions": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64000
+    },
+    "faq": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64000
+    },
+    "documentationUrl": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$"
+    },
+    "category": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+    },
+    "screenshots": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "pattern": "^https://[^\\s]+$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "mime": {
+            "enum": [
+              "image/png",
+              "image/jpeg",
+              "image/webp",
+              "image/svg+xml",
+              "image/x-icon"
+            ]
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64000
+          },
+          "sourcePage": {
+            "type": "string",
+            "pattern": "^https://[^\\s]+$"
+          },
+          "licenseEvidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64000
+          },
+          "provenance": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64000
+          },
+          "reviewed": {
+            "const": true
+          }
+        },
+        "required": [
+          "url",
+          "sha256",
+          "mime",
+          "caption",
+          "sourcePage",
+          "licenseEvidence",
+          "provenance",
+          "reviewed"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "homepage",
+    "kind",
+    "packages",
+    "summary",
+    "description",
+    "usageInstructions",
+    "faq",
+    "category",
+    "icon",
+    "screenshots"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Software catalog manifest",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "reference"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "packages": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "packages": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

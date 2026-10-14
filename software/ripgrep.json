@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ripgrep",
+  "name": "ripgrep",
+  "homepage": "https://github.com/BurntSushi/ripgrep",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "ripgrep",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-i686-pc-windows-msvc.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BurntSushi/ripgrep",
+          "assetPattern": "ripgrep-{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "递归搜索文件内容、支持正则和gitignore的快速命令行工具。",
+  "description": "ripgrep（rg）用于从目录和文件中查找文本或正则表达式，默认遵守gitignore并跳过隐藏文件与二进制文件，适合查代码、日志和配置。支持Windows、macOS及Linux，需在终端使用。采用MIT或UNLICENSE双许可，此条目保留完整官方原包与许可；对应15.2.0源码：https://github.com/BurntSushi/ripgrep/tree/15.2.0 。",
+  "usageInstructions": "1. Windows解压对应x64、ARM64或32位ZIP；macOS或Linux解压对应架构tar.gz，保留许可和说明文件，将rg程序目录加入PATH或用完整路径调用。\n2. 在自己的文本目录打开终端，执行rg \"关键词\"搜索当前目录，执行rg -n \"关键词\"显示匹配行号；带空格的关键词用引号包围。\n3. 只列出匹配文件可用rg -l \"关键词\"；将关键词作为普通文字而非正则时用rg -F \"关键词\"。先用rg --help查看参数，再根据需要调整隐藏文件及忽略规则。",
+  "faq": "为什么有些文件没有结果？默认忽略隐藏文件、二进制文件及gitignore命中的路径，可用官方文档说明的参数调整。\n搜索会修改原文件吗？普通搜索只读取匹配内容，不会替换或编辑文件。\n中文可以搜索吗？可搜索UTF-8等支持的文本，其他编码应查阅--encoding参数说明。",
+  "documentationUrl": "https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect width=\"256\" height=\"256\" rx=\"52\" fill=\"#163d45\"/><text x=\"128\" y=\"161\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"104\" fill=\"#ffffff\">rg</text></svg>",
+    "sha256": "f4714942b34682090390aa20302bcf7f8460bfc35ab7373c81378d540b79255d",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标。官方README及固定树未找到独立产品图标，使用已实际预览的rg文字标识，不采用账号头像。"
+  },
+  "screenshots": []
+}

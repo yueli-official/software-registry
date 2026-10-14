@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rawtherapee",
+  "name": "RawTherapee",
+  "homepage": "https://github.com/RawTherapee/RawTherapee",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rawtherapee",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "RawTherapee/RawTherapee",
+          "assetPattern": "RawTherapee_{version}_win64_arm64_release.exe",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "RawTherapee/RawTherapee",
+          "assetPattern": "RawTherapee_MacOS_26.0_Universal_{version}.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "RawTherapee/RawTherapee",
+          "assetPattern": "RawTherapee_{version}_x86_64_release.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "RawTherapee/RawTherapee",
+          "assetPattern": "RawTherapee_{version}_arm64_release.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "处理相机 RAW 照片，调整曝光、降噪并批量导出。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/RawTherapee/RawTherapee/1924179107995b01b73cdc7f4fe91e44fc8227a7/rtdata/images/rawtherapee.ico",
+    "sha256": "01f0610dbd8f202b260f43d065f6e89d36ff6c40cd53382d38394b0e335ed203",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方项目原版产品标识，逐图核对产品身份及资源目录，无另行授权标记时不宣称美术资源具有源码同等许可；仅用于本产品说明与辨识，保留原形、比例和色彩，不暗示作者背书。资源及作者记录：https://github.com/RawTherapee/RawTherapee/blob/1924179107995b01b73cdc7f4fe91e44fc8227a7/rtdata/images/rawtherapee.ico"
+  },
+  "description": "RawTherapee 是开源 RAW 显影工具，提供去马赛克、曝光、白平衡、细节和色彩调整及处理队列。适合精细处理摄影素材并输出 JPEG、TIFF 等格式；相机文件支持以官方文档和当前版本为准。\n\n### 源码与许可\n当前条目提供 5.13 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/RawTherapee/RawTherapee/tree/1924179107995b01b73cdc7f4fe91e44fc8227a7) · [许可原文](https://github.com/RawTherapee/RawTherapee/blob/1924179107995b01b73cdc7f4fe91e44fc8227a7/LICENSE)。",
+  "usageInstructions": "1. Windows 运行对应架构的安装程序；Linux 使用对应 AppImage；当前条目 Mac 通用 ZIP 标注 macOS 26.0，先核对系统要求再解压。\n2. 在文件浏览器找到照片目录，打开一张 RAW 文件。\n3. 调整曝光、白平衡、色彩与降噪，对比预览。\n4. 将照片加入处理队列，设置输出格式、质量及目标目录。\n5. 执行队列并检查输出，保留原片和处理参数以便后续调整。",
+  "faq": "Mac 包支持旧 macOS 吗？当前条目官方附件明确为 MacOS_26.0_Universal，不把它宣称为兼容所有旧系统。\n会覆盖原始 RAW 吗？通常通过参数和导出文件工作，仍应保留原片与备份。",
+  "documentationUrl": "https://github.com/RawTherapee/RawTherapee/blob/1924179107995b01b73cdc7f4fe91e44fc8227a7/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

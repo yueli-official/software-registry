@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "franz",
+  "name": "Franz",
+  "homepage": "https://github.com/meetfranz/franz",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "meetfranz/franz",
+          "assetPattern": "Franz-Setup-{version}.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "meetfranz/franz",
+          "assetPattern": "Franz-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "meetfranz/franz",
+          "assetPattern": "Franz-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "meetfranz/franz",
+          "assetPattern": "franz_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在一个桌面应用中管理多个消息服务入口。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/meetfranz/franz/e4dc2fea74c08c0cd391a976dec7af728e30c7c2/src/assets/images/logo.svg",
+    "sha256": "3365790ad8d44820195faf26817b32c2f89d9a95b9a5664ed7b6dd21bda41619",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/meetfranz/franz/blob/e4dc2fea74c08c0cd391a976dec7af728e30c7c2/src/assets/images/logo.svg"
+  },
+  "description": "Franz 是独立的消息服务聚合客户端，可将兼容服务组织到统一桌面界面。第三方服务、账号及部分软件功能按各自计划提供。\n\n### 源码与许可\n当前条目提供 5.11.0 官方原包。主项目许可：Apache-2.0，第三方服务素材另有归属；独立组件遵循各自许可。[固定版本源码](https://github.com/meetfranz/franz/tree/e4dc2fea74c08c0cd391a976dec7af728e30c7c2) · [许可原文](https://github.com/meetfranz/franz/blob/e4dc2fea74c08c0cd391a976dec7af728e30c7c2/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 先添加一个自己常用的兼容服务，在该服务官方登录页面使用自己的账号；验证通知与切换，再按需添加其他服务。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "所有功能都免费吗？服务和软件计划独立，功能条件按官方说明。\n能直接代替第三方服务账号吗？不能，需要自己的服务账号。",
+  "documentationUrl": "https://github.com/meetfranz/franz/blob/e4dc2fea74c08c0cd391a976dec7af728e30c7c2/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

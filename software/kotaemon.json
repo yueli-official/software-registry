@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kotaemon",
+  "name": "Kotaemon",
+  "homepage": "https://cinnamon.github.io/kotaemon/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "AI 文档问答工具。",
+  "icon": {
+    "url": "https://cinnamon.github.io/kotaemon/assets/images/favicon.png",
+    "sha256": "023854c43fc4b25b795ee4951c8019e3de0593ffeb6f918b5d1f2a9b47a57cfe",
+    "mime": "image/png"
+  },
+  "description": "Kotaemon 用于AI 文档问答。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方安装说明部署并配置模型服务，导入测试文档。等待索引完成后提问并核对引用。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/Cinnamon/kotaemon/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

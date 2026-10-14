@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "piliplus",
+  "name": "PiliPlus",
+  "homepage": "https://github.com/bggRGjQaUbCoE/PiliPlus",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bggRGjQaUbCoE/PiliPlus",
+          "assetPattern": "PiliPlus_windows_*_x64_setup.exe",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bggRGjQaUbCoE/PiliPlus",
+          "assetPattern": "PiliPlus_android_{version}-a30fcc310+5410_arm64-v8a.apk",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bggRGjQaUbCoE/PiliPlus",
+          "assetPattern": "PiliPlus_android_{version}-a30fcc310+5410_x86_64.apk",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bggRGjQaUbCoE/PiliPlus",
+          "assetPattern": "PiliPlus_linux_{version}+5410_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bggRGjQaUbCoE/PiliPlus",
+          "assetPattern": "PiliPlus_macos_{version}+5410.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "基于 Flutter 的第三方哔哩哔哩客户端，支持视频、弹幕和离线播放。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/7a4f442f450ff0698d0fbe5cecb9666cd1c12e3f/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png",
+    "sha256": "5b74654f7bcceef44381fd5de67c36ba1b09c54b7a55cb68c11229a576d74ba4",
+    "mime": "image/png"
+  },
+  "description": "PiliPlus 是使用 Flutter 开发的第三方哔哩哔哩客户端，可浏览与搜索视频、观看直播，并提供弹幕、收藏、离线缓存/播放及多账号等功能。账号与服务功能取决于上游平台和客户端适配情况。",
+  "usageInstructions": "1. 从下载区取得 Windows x64 原版安装程序，运行并按提示完成安装。\n2. 打开 PiliPlus，可先以游客模式浏览和搜索视频；需要收藏或账号功能时在软件内按提示登录。\n3. 进入视频页播放，在播放器或设置中调整弹幕和播放选项；需要离线播放时使用软件内的缓存功能。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Android amd64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "### 这是哔哩哔哩官方客户端吗？\n这是独立开发者维护的第三方开源客户端。\n\n### Android、Linux 或 macOS 到哪里下载？\n官方 Releases 提供对应平台附件；\n\n### 使用条件是什么？\n请遵守项目 README、GPL-3.0 许可及所使用服务的规则；作者说明项目用于学习和测试，并要求下载后24小时内删除。",
+  "documentationUrl": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/main/README.md",
+  "category": "media",
+  "screenshots": []
+}

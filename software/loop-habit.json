@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "loop-habit",
+  "name": "Loop Habit Tracker",
+  "homepage": "https://github.com/iSoron/uhabits",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iSoron/uhabits",
+          "assetPattern": "loop-{version}-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "习惯打卡工具，设置重复计划与提醒，查看坚持记录和统计。",
+  "description": "Loop Habit Tracker 是 Android 开源习惯记录工具，可设置每日或每周重复计划、提醒和桌面小组件，用图表查看打卡历史。无需在线账户即可使用，适合记录阅读、学习或日常事项。本批是官方正式 release APK，排除 debug 构建；真实最低 Android 9.0，包名 org.isoron.uhabits、版本2.3.1。\n\n此条目提供官方 2.3.1 原 APK；主项目 GPL-3.0，原署名及组件各自许可保留。对应精确版本源码：https://github.com/iSoron/uhabits/tree/v2.3.1 ，原许可材料见 loop-habit-2.3.1-LICENSES.zip。",
+  "usageInstructions": "1. 在 Android 9.0 或更高版本安装官方 release APK，打开 Loop Habit Tracker。\n2. 新建一个简单习惯，例如“阅读十分钟”，填写名称并选择每日或自己需要的重复频率。\n3. 返回列表，记录今天是否完成，再打开习惯详情查看历史与统计。\n4. 如需提醒，设置时间并按 Android 提示允许通知；如果提醒未出现，检查系统通知和应用后台设置。\n5. 按需要添加桌面小组件，换机前使用应用提供的导出或备份功能并保存到自己的文件目录。",
+  "faq": "要注册账户吗？官方说明不需要在线账户，核心记录可离线使用。\n漏打卡会清空全部记录吗？不会，官方评分考虑重复与遗漏，历史按应用实际记录保留。\n为什么旧手机装不了？本固定原 APK 实际最低系统要求为 Android 9.0。\n从 GitHub 安装会自动更新吗？官方说明直接下载 APK 不会自动更新，应从对应正式来源更新。",
+  "documentationUrl": "https://github.com/iSoron/uhabits/blob/v2.3.1/README.md",
+  "category": "productivity",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"22\" fill=\"#376656\">Loop Habit Tracker</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Habit Tracker</text></svg>",
+    "sha256": "eac413035c56938b4019f6e5d3b94ad0f8b1b02835456fe7108fc548c2604b45",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

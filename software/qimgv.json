@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qimgv",
+  "name": "qimgv",
+  "homepage": "https://github.com/easymodo/qimgv",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qimgv",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "简洁的图片浏览器，支持快速翻图、缩放、裁剪和调整尺寸。",
+  "description": "qimgv 是采用 Qt 的图片浏览器，界面简洁，支持文件夹内快速翻图、缩放、全屏、查看 EXIF、裁剪、旋转和调整尺寸。适合查看照片、截图与设计素材。\n\n此条目提供未修改的官方 1.0.2 Windows x64 便携 ZIP，采用 GPL-3.0-only；对应源码：https://github.com/easymodo/qimgv/tree/v1.0.2 。原许可材料在夸克目录 qimgv-1.0.2-LICENSES.zip 中保留。该正式版发布较早，请按实际功能选择。本包为图片版，不把可选 mpv 视频组件当成已提供功能。",
+  "usageInstructions": "1. 使用64位 Windows 下载 ZIP，完整解压到独立文件夹，运行 qimgv.exe，保留同目录的 DLL 和资源文件。\n2. 按 Ctrl+O 打开一张图片，用左右方向键或鼠标滚轮浏览同一目录的其他图片。\n3. 用 Ctrl+鼠标滚轮缩放，按1适应窗口、2适应宽度、3查看原始像素；按空格切换这些显示模式。\n4. 双击或按 F/F11 切换全屏，按 Esc 退出；按 I 查看 EXIF，按 P 打开设置。\n5. 如需裁剪或调整尺寸，先用图片副本测试：X 裁剪、R 调整尺寸，Ctrl+Shift+S 另存，保留原图。",
+  "faq": "为什么解压后不能只复制 EXE？主程序依赖同目录的运行库和资源，需保留完整解压目录。\n可以播放视频吗？项目有可选 mpv 支持，当前条目选用图片版原包，主要用于看图。\n提供 Mac 或 Linux 安装包吗？该正式 Release 没有对应成品附件；Linux 用户可查官方 README 的发行版安装与构建说明。",
+  "documentationUrl": "https://github.com/easymodo/qimgv/blob/v1.0.2/README.md",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#edf3f7\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"44\" fill=\"#68528b\">qimgv</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"23\" fill=\"#68528b\">Image Viewer</text></svg>",
+    "sha256": "e7f1d1f6d651c1f2077131be5d8521b5ee2a7ac603bd4707012d0d0151fb1809",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；当前尚未取得可可靠复用的官方图形资源依据，采用软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

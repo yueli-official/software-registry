@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "feeder",
+  "name": "Feeder",
+  "homepage": "https://github.com/spacecowboy/Feeder",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "spacecowboy/Feeder",
+          "assetPattern": "app-fdroid-release.apk",
+          "tagPrefix": "",
+          "tagTemplate": "2.23.2"
+        }
+      }
+    }
+  ],
+  "summary": "在手机订阅 RSS，集中阅读自己关注的更新。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/spacecowboy/Feeder/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "09e2d67fa22058f4141bcfd29dc63dd1f1460ed3d033058f2b539b743e2f574f",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "description": "Feeder 是独立的安卓 RSS 阅读器，可添加订阅源、管理文章阅读状态。当前条目为官方 F-Droid 发行，订阅内容仍由各网站提供。\n\n### 源码与许可\n当前条目提供 2.23.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/spacecowboy/Feeder/tree/41db0102630e6d13d11d722b78054f65feaa7584) · [许可原文](https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/phoneScreenshots/5_en-US_phone_portrait_light_settings.png)；原作者及许可通知见[固定版许可](https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载官方 APK，核对设备架构与已有安装渠道，按安卓提示安装。\n2. 先添加一个提供公开 RSS 的网站，刷新后检查文章与阅读状态，再导入自己的 OPML 订阅备份。\n3. 升级前保留重要资料，避免混用不同签名渠道。",
+  "faq": "能读取付费文章全文吗？订阅源提供多少内容由网站决定，不包含付费访问权限。\nPlay 版能直接覆盖吗？包名或签名可能不同，先核对渠道与导出资料。",
+  "documentationUrl": "https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/README.md",
+  "category": "reading",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/spacecowboy/Feeder/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/phoneScreenshots/5_en-US_phone_portrait_light_settings.png",
+      "sha256": "99f02c8aabdb00cd14b13773ce81f556c648142cc7738ada714264ca10e0a331",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/phoneScreenshots/5_en-US_phone_portrait_light_settings.png",
+      "caption": "Feeder 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/fastlane/metadata/android/en-US/images/phoneScreenshots/5_en-US_phone_portrait_light_settings.png；原许可 https://github.com/spacecowboy/Feeder/blob/41db0102630e6d13d11d722b78054f65feaa7584/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

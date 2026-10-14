@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mailspring",
+  "name": "Mailspring",
+  "homepage": "https://www.getmailspring.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mailspring",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Foundry376/Mailspring",
+          "assetPattern": "Mailspring.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Foundry376/Mailspring",
+          "assetPattern": "Mailspring-AppleSilicon.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Foundry376/Mailspring",
+          "assetPattern": "mailspring-{version}-amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Foundry376/Mailspring",
+          "assetPattern": "mailspring-{version}-arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "集中管理多个邮箱，支持统一收件箱、搜索和邮件撰写。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Foundry376/Mailspring/4ebb582fb8fb078ec6d9498766531b8154241e6e/app/build/resources/linux/icons/512.png",
+    "sha256": "3d75bfad7aa104cd936d21160a2fa592b0f8b3b784ffc83dc94b002e12575dcd",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览官方青绿色圆形信封产品图标，固定app/build/resources/linux/icons/512.png与1.26.0同资源Blob一致；核固定根GPL及资源子树无独立许可例外，保留Foundry 376, LLC和官方来源、原许可，仅转换为WebP。"
+  },
+  "description": "Mailspring 是桌面邮件客户端，可连接多个邮箱，在统一收件箱中阅读、搜索、归档和回复邮件，提供主题及中文界面。适合需要集中处理工作和个人邮件的用户；邮箱接入取决于服务商提供的协议、授权方式及网络条件。基础功能与Mailspring Pro订阅功能按官方说明区分。当前条目固定1.26.0完整原包，应用和同步引擎的原包声明采用GPL-3.0-or-later，Electron、PDF.js及字体等沿用随附各自许可；保留Foundry 376, LLC和原通知，并附同版LICENSES.zip。源码：https://github.com/Foundry376/Mailspring/tree/1.26.0 ，同步引擎源码：https://github.com/Foundry376/Mailspring-Sync 。产品图标来自官方资源，仅转换为WebP，保留项目来源和GPL许可。",
+  "usageInstructions": "1. Windows当前条目提供Scoop对应的官方nupkg（ZIP结构），用支持该格式的解压工具打开，进入lib/net45并运行Mailspring.exe，保留同目录resources及其他文件；需要安装向导可到官方下载安装器。macOS解压与Intel或Apple Silicon对应的ZIP，将Mailspring.app放到应用程序目录；Linux安装对应amd64或arm64的DEB，交由系统包管理器处理依赖。保留同版LICENSES.zip。\n2. 启动后按引导添加自己的邮箱，选择对应服务商或IMAP/SMTP入口。依据邮箱服务商官方设置启用所需协议，并使用其要求的OAuth、应用专用密码或授权码；不要把服务商设置或密码填到软件站。\n3. 等待首次同步，先搜索一封自己的邮件，打开阅读；新建一封测试邮件发给自己的地址，核对发件与收件。多邮箱添加完成后按账户或统一收件箱查看。\n4. 在偏好设置调整语言、主题、签名和快捷键。邮件追踪、联系资料等Pro能力按官方订阅说明使用；不能连接时先检查服务商授权、服务器设置、网络及官方排错文档。",
+  "faq": "QQ或网易邮箱能直接用登录密码吗？以邮箱服务商的客户端接入说明为准，可能需要开启IMAP/SMTP和独立授权码，不保证账号默认可接入。\n所有功能都免费吗？基础客户端与Pro订阅能力分开，具体额度和价格以官网为准。\nWindows有原生ARM64包吗？当前条目1.26.0主Windows包实际为x64，不能将ARM设备兼容文案当成原生ARM64证据。\nWindows为什么是nupkg？沿用Scoop主源的官方完整包，内部为ZIP结构；安装向导另见官方下载安装器。\n为什么官网和这里许可说明不同？当前条目以1.26.0固定源码及实际原包声明为准，第三方组件有各自随附许可。",
+  "documentationUrl": "https://www.getmailspring.com/docs/",
+  "category": "office",
+  "screenshots": []
+}

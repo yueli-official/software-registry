@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "appmanager",
+  "name": "App Manager",
+  "homepage": "https://github.com/MuntashirAkon/AppManager",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MuntashirAkon/AppManager",
+          "assetPattern": "AppManager_v{version}.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "开源 Android 应用管理工具，可查看应用组件、权限、签名与跟踪库，并备份 APK。",
+  "description": "App Manager 将 Android 应用信息、权限、组件、跟踪库检测和 APK 管理集中在一个工具中，适合了解手机上安装了什么、应用请求哪些权限，以及保存自己的安装包。普通查看功能可先使用无 Root 模式；冻结应用、权限修改与带数据备份等高级能力另有 Root 或 ADB 条件。\n\n此条目提供官方4.1.1完整APK，约28MB，包含arm64-v8a、armeabi-v7a、x86及x86_64原生库，保留原包字节。主项目GPL-3.0-or-later；对应源码：https://github.com/MuntashirAkon/AppManager/tree/v4.1.1 ，原许可及组件通知另见appmanager-4.1.1-LICENSES.zip。",
+  "usageInstructions": "1. 下载官方4.1.1 APK，在Android手机上打开文件，按系统提示允许当前安装来源，再完成安装；保留现有版本的数据和备份。\n2. 初次使用先选无Root模式，打开应用列表，搜索一款自己已安装的应用。\n3. 进入该应用的信息页，查看版本、签名、权限与组件；查看跟踪库检测结果时结合实际用途判断。\n4. 需要保存安装包时，使用应用提供的APK分享或备份功能，选择自己能找到的保存位置。\n5. 只在明确需要时按官方文档配置ADB或Root功能；基础查看不需要为此获取Root。",
+  "faq": "必须Root吗？基础应用信息、组件查看与APK管理可先用无Root模式；高级操作分别要求ADB或Root。\n备份APK是否包含全部应用数据？普通APK备份主要保存安装文件，带数据和规则的完整备份另有Root条件。\n支持哪些手机CPU？当前条目为包含四种真实ABI库的官方完整APK，不把拆分包或源码当作另一款软件。",
+  "documentationUrl": "https://muntashirakon.github.io/AppManager",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"20 20 68 68\"><!-- App Manager authors; GPL-3.0-or-later; exact official path, viewport padding adapted from Android vector --><g transform=\"translate(32.4 32.4) scale(0.4 0.4)\"><path d=\"m49.76,17.96c-0.2,1.58 -1.1,5.66 -1.63,8.13 -0.49,2.47 -1.67,5.9 -2.52,9.27 -0.81,3.32 -1.96,7.03 -3.46,11.12 -1.5,4.09 -3.22,8.3 -5.17,12.64 -1.94,4.29 -4.44,8.91 -7.47,13.85 -3,4.9 -6.3,9.62 -9.9,14.16 -1.62,2.03 -3.3,3.93 -5.04,5.71 -4.35,4.53 -7.42,7.31 -14.09,12.97 -2.41,2.57 5.25,-0.3 6.89,-1.08 3.79,-1.81 4.45,-2.22 7.7,-4.44 3,-2.31 5.81,-5.05 7.17,-6.35 1.5,-1.42 3.85,-4.09 7.05,-8.02 7.25,-3.61 23.1,-6.48 31.48,-6.24 13.43,0.34 18.96,3.34 23.12,11.46 0.93,2.11 2.06,4.52 3.08,6.75 1.05,2.23 2.31,4.27 3.77,6.14 1.5,1.9 2.9,2.86 4.19,2.86 1.26,0 2.98,-0.63 5.17,-1.88 2.19,-1.22 4.11,-2.57 5.77,-4.07 1.7,-1.46 2.17,-2.31 2.17,-3 0,-0.2 -0.06,-0.34 -0.18,-0.43 -0.08,-0.08 -0.22,-0.1 -0.43,-0.06 -0.16,0 -0.34,0.02 -0.55,0.06 -0.2,0.04 -0.05,-0.12 -0.29,-0.04 -0.2,0.04 -0.38,0.06 -0.55,0.06 -1.94,0 -4.44,-2.37 -7.47,-7.11 -3,-4.78 -6.18,-10.9 -9.54,-18.35 -3.32,-7.45 -6.64,-15.07 -9.97,-22.85 -3.28,-7.78 -7,-15.18 -10.41,-22.63 -3.4,-7.45 -6.22,-12.86 -8.45,-16.23 -1.91,-2.94 -6.26,-11.52 -8.04,-8.66 -0.93,6.82 -0.82,6.53 -2.38,16.27zM57.15,30.86c-0.19,0.31 3.59,6.93 9.66,20.78 6.08,13.85 9.11,21 9.11,21.45l-0.12,0.06c-0.12,0 -0.73,-0.1 -1.82,-0.3 -1.09,-0.24 -2.59,-0.49 -4.5,-0.73 -1.9,-0.24 -3.91,-0.36 -6.02,-0.36 -9.52,0 -19.14,2.37 -28.86,7.11 3.28,-4.46 6.28,-9.16 8.99,-14.1 2.75,-4.94 4.9,-9.34 6.44,-13.19 1.58,-3.85 2.9,-7.39 3.95,-10.63 1.09,-3.24 1.86,-5.73 2.31,-7.47 0.49,-1.74 0.89,-2.68 0.85,-2.61z\" fill=\"#dcaf74\"/></g></svg>",
+    "sha256": "a122a9873bac1d2e42d157f145c814d3a0af45d2a4ea0fc9a4e8bf2e7584fe16",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "App Manager官方固定4.1.1图标矢量，作者原path与色彩不变，Android XML转换为SVG并调整外边距；文件明确GPL-3.0-or-later OR CC-BY-SA-4.0，本次依GPL-3.0-or-later使用，原作者及许可保留于原许可附件。固定源：https://github.com/MuntashirAkon/AppManager/blob/69d09a2ab29527dfe46629bd6f5403d11d87090e/app/src/main/res/drawable/ic_launcher_foreground.xml"
+  },
+  "screenshots": []
+}

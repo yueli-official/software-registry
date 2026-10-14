@@ -1,0 +1,101 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "unigetui",
+  "name": "UniGetUI",
+  "homepage": "https://devolutions.net/unigetui/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "unigetui",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Devolutions/UniGetUI",
+          "assetPattern": "UniGetUI.linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Devolutions/UniGetUI",
+          "assetPattern": "UniGetUI.linux-x64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Devolutions/UniGetUI",
+          "assetPattern": "UniGetUI.macos-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Devolutions/UniGetUI",
+          "assetPattern": "UniGetUI.macos-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "软件包管理界面工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Devolutions/UniGetUI/b1eb136a7af34babc511576d47235489c62f6596/src/SharedAssets/icon.ico",
+    "sha256": "370537c5d72fc76148acca34cfe421a702e0c56c39f9cf6685e3d3225cade1c4",
+    "mime": "image/x-icon"
+  },
+  "description": "UniGetUI 用于软件包管理界面。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开软件并等待软件源加载。搜索软件、查看包来源后安装；在已安装与更新页面管理已有软件。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Devolutions/UniGetUI/ce0589d3b3e27e065e6d1520ceaba7c3558038f0/media/UniGetUI_1.png",
+      "sha256": "1bc0a60eb121d48f8b8b78fd8dcb7860b0a7dfe77790b1122394c622e9d22bb9",
+      "mime": "image/png",
+      "caption": "官方2026.1界面示例：跨软件源搜索并选择安装软件包",
+      "sourcePage": "https://github.com/Devolutions/UniGetUI/blob/ce0589d3b3e27e065e6d1520ceaba7c3558038f0/README.md",
+      "licenseEvidence": "官方README所用仓库界面图，固定提交下原图；根许可MIT：https://github.com/Devolutions/UniGetUI/blob/ce0589d3b3e27e065e6d1520ceaba7c3558038f0/LICENSE。已检查图片目录，无单独许可例外；保留来源并明确官方示例身份。",
+      "provenance": "已实际预览官方界面图，确认产品身份、界面功能及无私人凭据；未冒充维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

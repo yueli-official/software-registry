@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bandizip",
+  "name": "Bandizip",
+  "homepage": "https://en.bandisoft.com/bandizip/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "bandizip",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "支持 ZIP、7Z、RAR 等常见格式的文件压缩与解压工具。",
+  "description": "Bandizip 是一款 Windows 压缩与解压工具，支持 ZIP、7Z、RAR 等常见归档格式。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开压缩包选择解压目录，或添加文件新建压缩包。先查看压缩包内容，解压到独立目录再使用。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "utilities",
+  "icon": {
+    "url": "https://bandisoft.app/bandizip/BANDIZIP-PORTABLE.ZIP",
+    "sha256": "92e5f071a82f11d130815ea9180383aa1b0d394a0ee25e415d27d3c9ce962504",
+    "mime": "image/x-icon",
+    "archiveEntry": "icons/default/Bandizip.ico"
+  },
+  "screenshots": []
+}

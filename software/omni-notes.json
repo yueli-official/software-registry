@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "omni-notes",
+  "name": "Omni Notes",
+  "homepage": "https://github.com/federicoiosue/Omni-Notes",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "federicoiosue/Omni-Notes",
+          "assetPattern": "OmniNotes-playRelease-{version}.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "轻量 Android 笔记工具，支持待办列表、附件、分类标签和备份。",
+  "description": "Omni Notes 是 Android 开源笔记工具，可创建文字笔记和待办清单，添加图片、音频或文件附件，使用分类和标签整理，并搜索、归档或备份记录。本批提供官方6.3.1 playRelease成品 APK，真实包名 it.feio.android.omninotes、最低 Android 5.0。官方将同步与网页端列为后续方向，当前条目不把它们当作原包已包含的功能。\n\n此条目提供官方 6.3.1 原 APK；主项目 GPL-3.0，原署名及组件各自许可保留。对应精确版本源码：https://github.com/federicoiosue/Omni-Notes/tree/6.3.1 ，原许可材料见 omni-notes-6.3.1-LICENSES.zip。",
+  "usageInstructions": "1. 在 Android 5.0 或更高版本安装官方 APK，打开 Omni Notes。\n2. 创建一条测试笔记，输入标题和几行文字，返回列表确认内容已保存。\n3. 再建一条待办清单，增加两个测试项目并勾选其中一项，检查显示状态。\n4. 按需要添加分类、标签或一张自己的测试图片；附件访问权限按 Android 提示授予。\n5. 使用搜索找到刚才的标题，尝试归档测试笔记；在设置中了解导出与导入备份，先保存测试备份再迁移重要笔记。",
+  "faq": "可以添加图片或其他文件吗？官方说明支持媒体及通用文件附件，需具备相应访问权限。\n会自动同步到云端吗？本固定版本不承诺云同步，先使用官方支持的备份方式保存记录。\n这是 F-Droid 变体吗？当前条目固定的是官方 Release 中的 playRelease APK，不将不同包名的 FOSS 变体混用。",
+  "documentationUrl": "https://github.com/federicoiosue/Omni-Notes/blob/6.3.1/README.md",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Omni Notes</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Notes</text></svg>",
+    "sha256": "784b26279af616a5b322b9c758f61b81036390a87303ad36ae29f4d9463b2187",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

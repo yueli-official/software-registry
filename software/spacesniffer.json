@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "spacesniffer",
+  "name": "SpaceSniffer",
+  "homepage": "https://www.uderzo.it/main_products/space_sniffer/index.html",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "spacesniffer",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "用矩形树图直观查看磁盘文件和文件夹占用。",
+  "description": "SpaceSniffer：用矩形树图直观查看磁盘文件和文件夹占用。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 选择磁盘或目录进行扫描，观察矩形块的空间占用。双击进入目录定位大文件，删除前确认文件用途。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><image width=\"32\" height=\"32\" href=\"data:image/png;base64,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\"/></svg>",
+    "sha256": "07713be9be68628794ca740a36f52faa39b0e7ba63d01833b51a8a345bba3c92",
+    "mime": "image/svg+xml"
+  },
+  "screenshots": []
+}

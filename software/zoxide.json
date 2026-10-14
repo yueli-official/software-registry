@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "zoxide",
+  "name": "zoxide",
+  "homepage": "https://github.com/ajeetdsouza/zoxide",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "zoxide",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "zoxide",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ajeetdsouza/zoxide",
+          "assetPattern": "zoxide-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ajeetdsouza/zoxide",
+          "assetPattern": "zoxide-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ajeetdsouza/zoxide",
+          "assetPattern": "zoxide-{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ajeetdsouza/zoxide",
+          "assetPattern": "zoxide-{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ajeetdsouza/zoxide",
+          "assetPattern": "zoxide-{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "记住常用目录，用简短关键词快速跳转的终端工具。",
+  "description": "zoxide 根据目录访问记录帮助你在终端快速切换目录，支持 Bash、Zsh、PowerShell 等常用 Shell。完成 Shell 初始化后，可用 z 加目录关键词跳转；交互选择 zi 需要额外安装 fzf。它不是文件管理图形窗口，也不会在刚安装时预先知道你的常用目录。\n\n当前条目提供 0.10.0 官方 Windows、macOS 和 Linux 原包。主项目 MIT，组件保留各自许可；固定源码：https://github.com/ajeetdsouza/zoxide/tree/v0.10.0 ，原许可资料见 zoxide-0.10.0-LICENSES.zip。",
+  "usageInstructions": "1. 下载与你的系统及 CPU 对应的原包并解压，将 zoxide 所在目录加入 PATH；Mac/Linux 按需赋予执行权限。\n2. 打开终端，运行 zoxide --version 确认程序可找到。\n3. PowerShell 按官方说明执行 Invoke-Expression (& { (zoxide init powershell | Out-String) })；Bash 执行 eval \"$(zoxide init bash)\"。其他 Shell 使用官方 README 对应初始化命令。\n4. 初始化后先用 cd 进入几个自己的常用目录，再用 z 加目录名称关键词尝试跳转。\n5. 希望每次打开终端自动启用时，将对应初始化命令加入自己的 Shell 配置；交互选择 zi 需要另装 fzf。",
+  "faq": "安装后为什么没有 z 命令？需要先在当前 Shell 完成 zoxide 初始化。\n为什么找不到想去的目录？先实际访问目录建立记录，再用匹配名称查询。\n必须安装 fzf 吗？普通 z 跳转不需要，交互 zi 功能需要。",
+  "documentationUrl": "https://github.com/ajeetdsouza/zoxide/blob/v0.10.0/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">zoxide</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Directory Jump</text></svg>",
+    "sha256": "57de1bb716c2bc5c785649bfea6e7747725462d7b75daa613ca9aa529912ac80",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

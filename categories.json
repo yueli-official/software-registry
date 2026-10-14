@@ -1,0 +1,18 @@
+{
+  "media": "音视频工具",
+  "capture": "截图与录屏",
+  "utilities": "实用工具",
+  "developer": "开发工具",
+  "files": "文件传输与同步",
+  "mobile": "手机工具",
+  "ai": "AI 工具",
+  "office": "办公与文档",
+  "reading": "阅读与笔记",
+  "graphics": "图像与设计",
+  "productivity": "效率与自动化",
+  "system": "系统与硬件",
+  "security": "隐私与安全",
+  "games": "游戏工具",
+  "network": "网络与远程",
+  "browser": "浏览器扩展"
+}

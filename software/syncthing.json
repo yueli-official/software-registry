@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "syncthing",
+  "name": "Syncthing",
+  "homepage": "https://syncthing.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "syncthing",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "syncthing/syncthing",
+          "assetPattern": "syncthing-linux-386-v{version}.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "syncthing/syncthing",
+          "assetPattern": "syncthing_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "syncthing/syncthing",
+          "assetPattern": "syncthing_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "syncthing/syncthing",
+          "assetPattern": "syncthing-macos-universal-v{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在设备之间持续同步文件的开源工具。",
+  "description": "Syncthing：在设备之间持续同步文件的开源工具。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在两台设备启动 Syncthing，互相添加设备 ID 并确认。创建测试文件夹，选择共享设备，确认双方文件能够同步。\n\n### 其他平台安装\n- Linux 386：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://docs.syncthing.net/",
+  "category": "files",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/syncthing/syncthing/05b6704ef5080b8013c690b83b831d0dbedca5a0/assets/logo-512.png",
+    "sha256": "d0275a171c811209fa5d39b5ccdf7504fc356e40144cb98cb1d85e2acd4793e7"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "im-magic-partition-resizer",
+  "name": "IM-Magic Partition Resizer",
+  "homepage": "https://www.resize-c.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "磁盘分区工具。",
+  "icon": {
+    "url": "https://www.resize-c.com/img/resizer.ico",
+    "sha256": "1519dd434204dcb4b322161592b1a699e4f5685bb75b63566ec29a93b1e07271",
+    "mime": "image/x-icon"
+  },
+  "description": "IM-Magic Partition Resizer 用于磁盘分区。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 先备份数据，选择目标分区并预览调整方案。核对磁盘、容量和待执行操作后再应用。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "system",
+  "screenshots": []
+}

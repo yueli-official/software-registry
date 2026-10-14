@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gost",
+  "name": "gost",
+  "homepage": "https://github.com/go-gost/gost",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_windows_amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_windows_386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-gost/gost",
+          "assetPattern": "gost_{version}_linux_386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用配置建立多协议代理、转发和网络服务。",
+  "description": "GOST 是独立的网络服务程序，支持多种代理、转发和链路组合，适合有明确配置需求的用户；当前条目为官方3.x原版。\n\n### 源码与许可\n当前条目提供 3.3.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/go-gost/gost/tree/cb76f63754768c7b5d68895a0d51635b0141b80f) · [许可原文](https://github.com/go-gost/gost/blob/cb76f63754768c7b5d68895a0d51635b0141b80f/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 gost 加入 PATH，运行 gost --help 查看本版用法。\n3. 按固定版本中文文档创建最小测试配置，指定自己的监听与目标地址；先检查配置和本地连通，再配置认证、链路与正式服务管理。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "旧版配置可以直接使用吗？3.x 与旧版本存在差异，迁移需核对本版指南。\n包含免费线路吗？不提供线路、订阅或第三方账号。",
+  "documentationUrl": "https://github.com/go-gost/gost/blob/cb76f63754768c7b5d68895a0d51635b0141b80f/README.md",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">gost</text></svg>",
+    "sha256": "3e53f54de7684788cb2cea21d40f5f096d1443fad0821fd5e75f29a664e1bf7c",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名gost，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

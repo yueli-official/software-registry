@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notepad3",
+  "name": "Notepad3",
+  "homepage": "https://rizonesoft.com/downloads/notepad3/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notepad3",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notepad3",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "支持代码高亮、编码转换和正则查找替换的轻量文本编辑器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rizonesoft/Notepad3/651574da8bde68b98fa05d1aae85ef877062b023/res/Notepad3.ico",
+    "sha256": "63d66207fca61eef5c25092fd87870442c231485581e9680d6ba054dc206c6db",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "已实际预览官方绿色记事本res/Notepad3.ico内原256PNG，固定Blob与RELEASE_7.26.602.1一致；核应用BSD三条款及资源目录无独立许可例外，保留Rizonesoft/原作者和官方来源，只转换为WebP。"
+  },
+  "description": "Notepad3 是Windows文本编辑器，基于Scintilla，支持代码高亮、折叠、书签、编码与换行转换以及正则查找替换，适合修改配置、脚本和日常文字。当前条目提供7.26.602.1的x64和32位完整便携原包，解压即可运行。Notepad3及MiniPath采用随附BSD三条款声明，Scintilla、grepWin等组件保留各自许可；此条目保留原Docs和grepWin完整通知。Copyright 2008–2026 Rizonesoft，并保留Florian Balmer、Neil Hodgson及原作者署名；源码：https://github.com/rizonesoft/Notepad3/tree/RELEASE_7.26.602.1 。绿色记事本图标取自固定官方资源与同版标识，只转换为WebP，保留项目来源和原许可。",
+  "usageInstructions": "1. 按系统选择x64或32位Portable ZIP，解压完整目录，运行Notepad3.exe；保留Docs、grepWin及周边文件。便携包不需要此条目替换Windows记事本或导入注册表。\n2. 用文件菜单打开自己的TXT、JSON或脚本，先在副本上编辑，查看状态栏中的编码与换行格式。输入少量文字后另存为新文件，重新打开确认中文显示。\n3. 使用Ctrl+F查找普通关键词，再尝试替换；正则表达式与全文件替换先在副本中核对命中范围。按文件类型选择高亮方案，按需调整缩进、折叠或书签。\n4. 需要批量搜索文件时，按官方说明使用原包随附grepWin，并保留其GPL通知。关联文件类型或替换系统记事本属于额外系统配置，按官方文档自行决定。",
+  "faq": "只能编辑代码吗？也可以编辑普通文字和配置文件，高亮方案按文件类型选择。\n中文变成乱码怎么办？先核对原文件编码，使用副本测试编码选择与另存为；不要直接覆盖尚未正确解码的原文件。\n会自动替换Windows记事本吗？当前条目便携ZIP解压运行，此条目没有执行替换或注册表脚本。\n有macOS或Linux版吗？当前官方成品是Windows版本，当前条目不把源码或相似编辑器冒充其他平台包。",
+  "documentationUrl": "https://rizonesoft.com/knowledge-base/notepad3/",
+  "category": "developer",
+  "screenshots": []
+}

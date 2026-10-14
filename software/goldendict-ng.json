@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "goldendict-ng",
+  "name": "GoldenDict-ng",
+  "homepage": "https://xiaoyifang.github.io/goldendict-ng/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xiaoyifang/goldendict-ng",
+          "assetPattern": "GoldenDict-ng-{version}-Qt6.10.3-Windows.7z",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xiaoyifang/goldendict-ng",
+          "assetPattern": "GoldenDict-ng-{version}-Qt6.10.3-macOS-x86_64.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xiaoyifang/goldendict-ng",
+          "assetPattern": "GoldenDict-ng-{version}-Qt6.10.3-macOS-arm64.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "添加自己的词典，集中查词和全文检索。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xiaoyifang/goldendict-ng/c84e0113b84fc9ee6d5cfef8de646b0eb95d7707/icons/programicon.png",
+    "sha256": "d422888c2121ce7a1440304802d7c26c5b6d5864b8f875f01717795bc71a91b2",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确26.8.0 icons/programicon.png官方展开书本产品图，resources.qrc编译引用和about.ui产品展示均核对。原README许可覆盖project GPLv3+，精确tag完整树只有根LICENSE，无icons独立美术许可例外；保留项目作者/来源与对应源码，不因redist同尺寸就冒称相同字节，使用实际编译资源，仅WebP编码。"
+  },
+  "description": "GoldenDict-ng 是桌面词典查询工具，支持多种词典格式、全文检索、深色主题和 Anki 集成。它是 GoldenDict 的独立维护分支，使用 Qt6 和 WebEngine；软件本身不提供商业词典内容，需要添加自己有权使用的词典。\n\n项目采用 GPL 3 或后续版本，保留 GoldenDict 原作者 Konstantin Isakov 和 GoldenDict-ng 贡献者；CREDITS 原文明确其中部分是原项目历史贡献者，并非全部-ng作者。对应 26.8.0 源码：https://github.com/xiaoyifang/goldendict-ng/tree/v26.8.0 。三官方原包及依赖原字节保留，Windows 原 OpenCC copyright 中的 Apache 2 原文保留，不把依赖全部改成主GPL；同目录 GoldenDict-ng-26.8.0-LICENSES.zip 附原项目许可、README、贡献者与编译资源索引。官方产品PNG来自原programicon编译资源，词典配置截图来自官方文档，保留项目来源与主许可；此条目介绍由此条目编写，图片为官方示例。",
+  "usageInstructions": "1. Windows 需要 Windows 10 1809 或更新版本及 Microsoft Visual C++ 运行库，解压完整 7z 后运行 goldendict.exe，不只下载单独 EXE。macOS 需要 13 或更新版本，选择 Intel 或 Apple Silicon DMG，将应用放入应用程序目录。\n2. 准备自己有权使用的词典文件。在编辑 → 词典（Edit → Dictionaries）中打开来源 → 文件（Sources → Files），点击添加选择词典所在文件夹；需要扫描子文件夹时启用递归，再重新扫描。\n3. 回到主窗口输入一个词，查看命中条目；在词典列表检查是否已识别文件，词典较多时可建立分组。扫描和建索引可能需要一些时间；具体支持格式和在线来源设置见官方文档。",
+  "faq": "安装后为什么查不到词？软件是查询工具，需要先添加自己的词典；检查文件格式、目录和扫描结果。\n和原版 GoldenDict 是同一个页面吗？当前条目提供独立维护的 GoldenDict-ng，原版的软件版本和下载来源不同。\n有 Linux 安装包吗？本次官方稳定 Release 没有 Linux 成品附件，此条目不把源码或第三方 AppImage 当官方原包；Linux 用户可按官方文档使用发行版仓库或 Flatpak。\n词典必须联网吗？本地词典可离线查询，在线词典或网站功能需要网络。",
+  "documentationUrl": "https://xiaoyifang.github.io/goldendict-ng/manage_sources/",
+  "category": "reading",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/xiaoyifang/goldendict-ng/c84e0113b84fc9ee6d5cfef8de646b0eb95d7707/website/docs/img/dict_file_tab.webp",
+      "sha256": "0884c891cff17f357088310d218c373d848e712cbd914b7d6a824b77fde83945",
+      "mime": "image/webp",
+      "caption": "官方示例：添加本地词典目录",
+      "sourcePage": "https://github.com/xiaoyifang/goldendict-ng/blob/c84e0113b84fc9ee6d5cfef8de646b0eb95d7707/website/docs/img/dict_file_tab.webp",
+      "licenseEvidence": "精确26.8.0官方website/docs功能截图，由manage_sources.md直接引用，原项目GPL3-or-later、完整tag树无website独立图片许可例外，保留原项目/文档贡献者与source；无第三方影片、插画或词典全文。",
+      "provenance": "已实际预览词典目录配置窗口，官方公开/home/slbtty/Sync与/usr/share/stardict/dic示例路径，无凭据；官方Linux历史示例不冒充维护者当前Windows实测，仅WebP技术处理。",
+      "reviewed": true
+    }
+  ]
+}

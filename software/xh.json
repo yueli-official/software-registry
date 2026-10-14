@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "xh",
+  "name": "xh",
+  "homepage": "https://github.com/ducaale/xh",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "xh",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ducaale/xh",
+          "assetPattern": "xh-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ducaale/xh",
+          "assetPattern": "xh-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ducaale/xh",
+          "assetPattern": "xh-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ducaale/xh",
+          "assetPattern": "xh-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在命令行发送 HTTP 请求，查看格式化的响应。",
+  "description": "xh 是独立的 HTTP 命令行客户端，提供接近 HTTPie 的交互语法、JSON 请求和易读输出。适合调试自己使用或维护的 Web API，无需安装 Python 运行环境。\n\n### 源码与许可\n当前条目提供 0.26.2 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/ducaale/xh/tree/3255393e10e5d2ed4c49eb036c0c7679d4653796) · [许可原文](https://github.com/ducaale/xh/blob/3255393e10e5d2ed4c49eb036c0c7679d4653796/LICENSE)。",
+  "usageInstructions": "1. Windows 解压 ZIP；Mac/Linux 解压 tar.gz，将 xh 加入 PATH。\n2. 运行 xh --help 查看请求、认证和输出参数。\n3. 对自己的测试接口执行 xh https://example.com。\n4. 按官方语法添加请求头与 JSON 字段，检查状态码和响应内容。\n5. 批量或修改数据的请求先在测试环境验证。",
+  "faq": "可以代替浏览器吗？主要用于 HTTP 请求调试，没有浏览器网页界面。\n需要 Python 吗？官方成品是独立程序，无需另装 Python。",
+  "documentationUrl": "https://github.com/ducaale/xh/blob/3255393e10e5d2ed4c49eb036c0c7679d4653796/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#207555\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">xh</text></svg>",
+    "sha256": "8c26a05f340cd29655023f7fa89deb81056b2e7ea61e173d600501bb73c64a63",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。标记xh，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "habit-maker",
+  "name": "Habit Maker",
+  "homepage": "https://github.com/dessalines/habit-maker",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dessalines/habit-maker",
+          "assetPattern": "habit-maker-fdroid-*.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "习惯管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dessalines/habit-maker/6b3830d0a4dbcdbd977fcea6b74b9cd27fff59da/app/src/main/ic_launcher-playstore.png",
+    "sha256": "0c1e650a2bfe14c4553639ec0d5e05077811b81e3beded0a251630cd0921b242",
+    "mime": "image/png"
+  },
+  "description": "Habit Maker 用于习惯管理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 创建一个习惯，设置频率、目标与提醒。完成后记录打卡，检查统计并调整计划。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/dessalines/habit-maker/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

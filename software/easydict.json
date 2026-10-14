@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "easydict",
+  "name": "Easydict",
+  "homepage": "https://github.com/tisfeng/Easydict",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tisfeng/Easydict",
+          "assetPattern": "Easydict.dmg",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "翻译工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tisfeng/Easydict/cfda6e2f43741a3210a290e422846f1d83742d38/Easydict/App/Assets.xcassets/logo_old.imageset/Icon_512x512%403x.png",
+    "sha256": "98e1a41ccb4feb8dbf1e2e8025b2a4d694b96b01c30cc753aa73f2a724796460",
+    "mime": "image/png"
+  },
+  "description": "Easydict 用于翻译。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 将应用安装到 Applications 并启动，按需要配置翻译服务和权限。选中文字，用设置中的快捷键测试翻译，再调整语言与服务顺序。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/tisfeng/Easydict/blob/dev/README.md",
+  "category": "utilities",
+  "screenshots": []
+}

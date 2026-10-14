@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ffmpeg-batch-av-converter",
+  "name": "FFmpeg Batch AV Converter",
+  "homepage": "https://github.com/eibols/ffmpeg_batch",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ffmpeg-batch",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "音视频转换工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/eibols/ffmpeg_batch/e6a1de2ea124220861506f23d3303565ec6bc947/FFBatch/FFbatch_logo_oct-2019.ico",
+    "sha256": "17485ef06555f135abd211d8a24c54e36463a0adc04760341ecbb2babbfdc178",
+    "mime": "image/x-icon"
+  },
+  "description": "FFmpeg Batch AV Converter 用于音视频转换。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 添加要转换的音视频文件。选择输出目录和转换预设，先用一个文件测试，确认质量与体积后再批量处理。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "documentationUrl": "https://github.com/eibols/ffmpeg_batch/blob/master/README.md",
+  "category": "media",
+  "screenshots": []
+}

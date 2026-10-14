@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "binary-eye",
+  "name": "Binary Eye",
+  "homepage": "https://github.com/markusfisch/BinaryEye",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "markusfisch/BinaryEye",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "轻量二维码与条码扫描器，支持识别多种格式、生成条码和二维码。",
+  "description": "Binary Eye 是 Android 上的开源条码扫描器，没有广告。使用 ZXing-C++ 识别二维码及多种条码，支持竖屏、横屏和反色码，也可生成二维码和条码。适合快速读取产品编码、分享短文本或生成网址二维码；可识别和可生成的格式以官方列表为准。\n\n此条目提供官方 1.75.5 原 APK；主项目 MIT，组件保留各自许可。对应精确版本源码：https://github.com/markusfisch/BinaryEye/tree/1.75.5 ，原许可材料见 binary-eye-1.75.5-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 APK，打开 Binary Eye，在系统提示中允许相机用于扫码。\n2. 将摄像头对准自己准备的测试二维码，保持码完整进入取景区域，等待读取结果。\n3. 查看结果中的文本或链接，选择复制或其他需要的操作；读取链接后再决定是否打开。\n4. 在生成条码的入口选择 QR Code，输入一段测试文字，生成二维码并保存或分享。\n5. 用另一台设备扫描刚生成的码，核对内容；需要其他条码类型时先查看官方支持格式列表。",
+  "faq": "能扫哪些格式？支持 QR Code、EAN、UPC 等多种格式，读取和生成各有范围，见官方 README。\n相机画面黑屏怎么办？在 Android 应用权限里检查相机权限，再重新打开应用。\n扫描会自动替我打开链接吗？先查看读取结果，再选择相应操作；生成普通文本二维码也可以测试。",
+  "documentationUrl": "https://github.com/markusfisch/BinaryEye/blob/1.75.5/README.md",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Binary Eye</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Barcode Scanner</text></svg>",
+    "sha256": "2b3e254de6a8c07734b17c8bf3f9265cdd43bc9f46fafb9be5400188f9ff39a8",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

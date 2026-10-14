@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "adguardhome",
+  "name": "AdGuard Home",
+  "homepage": "https://github.com/AdguardTeam/AdGuardHome",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "adguardhome",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "adguardhome",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "adguardhome",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AdguardTeam/AdGuardHome",
+          "assetPattern": "AdGuardHome_darwin_amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AdguardTeam/AdGuardHome",
+          "assetPattern": "AdGuardHome_darwin_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AdguardTeam/AdGuardHome",
+          "assetPattern": "AdGuardHome_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AdguardTeam/AdGuardHome",
+          "assetPattern": "AdGuardHome_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AdguardTeam/AdGuardHome",
+          "assetPattern": "AdGuardHome_linux_386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "部署在自己的网络中的DNS过滤服务，集中管理设备请求。",
+  "description": "AdGuard Home通过DNS规则过滤广告与跟踪域名，提供网页管理界面、查询日志与设备设置，适合家庭网络集中管理。基于域名的过滤有边界，不能保证去除同域名承载的所有广告。它需要一台持续在线的主机和正确的网络配置。",
+  "usageInstructions": "1. 解压对应系统原包，进入AdGuardHome目录。\n2. 按官方系统指南以所需权限启动AdGuardHome；Windows为AdGuardHome.exe。\n3. 打开启动输出给出的管理地址，首次通常是 http://127.0.0.1:3000。\n4. 按向导设置管理账号、监听接口与上游DNS，确认53端口可用且不与其他DNS服务冲突。\n5. 先让一台设备把DNS指向该主机并测试查询；确认正常后再按官方指南配置路由器和常驻服务。",
+  "faq": "这是浏览器扩展吗？不是，主要是自己部署的DNS服务。\n可以拦截所有广告吗？同一域名承载内容和广告等场景存在DNS过滤限制。",
+  "documentationUrl": "https://adguard-dns.io/kb/adguard-home/getting-started/",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">AdGuard Home</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">DNS Filter</text></svg>",
+    "sha256": "a968103371eb4eb01a42c93f887d2500062711ffd862d11fac6edd0f73832711",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

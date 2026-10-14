@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qbittorrent",
+  "name": "qBittorrent",
+  "homepage": "https://www.qbittorrent.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qbittorrent",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "开源 BitTorrent 下载客户端，支持磁力链接、队列、限速和远程管理。",
+  "description": "qBittorrent 是一款开源 BitTorrent 客户端，支持磁力链接、下载队列、速度限制、RSS 与 Web UI 等功能。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 添加种子或磁力链接，选择保存目录与需要的文件。开始任务并检查进度，按网络状况设置限速；仅分发你有权分享的内容。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "files",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/qbittorrent/qBittorrent/d402f87ff9fa22b12e8020a0105b3da95bf0b56b/dist/unix/menuicons/192x192/apps/qbittorrent.png",
+    "sha256": "19f74839525b7848912ccfa653f9ede3f0d83ff9bff6dfc9685137e31912c5e8"
+  },
+  "screenshots": []
+}

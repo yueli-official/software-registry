@@ -1,0 +1,47 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "aegisub",
+  "name": "Aegisub",
+  "homepage": "https://www.aegisub.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "aegisub",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TypesettingTools/Aegisub",
+          "assetPattern": "Aegisub-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持字幕制作、时间轴调整和样式编辑的工具。",
+  "description": "Aegisub：支持字幕制作、时间轴调整和样式编辑的工具。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开视频和字幕文件，设置字幕文本及起止时间。预览校对后保存字幕，需要烧录到视频时另用转码工具。\n\n### 其他平台安装\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "media",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/TypesettingTools/Aegisub/ce97a367c611f2433d26ad4b37a7dc8f11d55bfe/docs/art-sources/aegisub-icon-mk2.png",
+    "sha256": "11d3fe8ad28987299535acefd50555f233ce10c9a81a5a60a64c44ccc1e11c92"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "netguard",
+  "name": "NetGuard",
+  "homepage": "https://github.com/M66B/NetGuard",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "M66B/NetGuard",
+          "assetPattern": "NetGuard-v{version}-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "无需 root 的 Android 防火墙，按应用控制 Wi-Fi 和移动网络访问。",
+  "description": "NetGuard 是 Android 开源应用联网控制工具，无需 root，可分别允许或禁止应用使用 Wi-Fi 和移动网络。它利用 Android 本地 VPN 接口管理流量，因此不能和其他基于 VPN 接口的应用同时运行。基础联网控制与 Pro 高级功能分开，下载官方原包不代表购买 Pro。\n\n此条目固定提供官方2.337 GitHub APK，真实包名 eu.faircode.netguard、最低系统要求 Android 6.0；不沿用旧版说明里的更低系统要求。原包包含四种已核实的原生 ABI，未修改或重新签名。主项目 GPL-3.0 及组件原署名和许可保留，对应源码：https://github.com/M66B/NetGuard/tree/2.337 ，原许可材料见 netguard-2.337-LICENSES.zip。",
+  "usageInstructions": "1. 在 Android 6.0 或更高版本安装官方 APK，打开 NetGuard。先了解当前是否已有其他占用 VPN 接口的应用。\n2. 在应用列表中找到一款自己准备测试联网行为的普通应用，使用右侧 Wi-Fi 或移动网络图标设置允许或阻止。\n3. 开启顶部防火墙开关，按 Android 提示确认本地 VPN 服务，再打开测试应用检查网络访问是否按规则变化。\n4. 测试后重新允许需要联网的应用，检查消息、邮箱等日常应用是否保持所需连接；按实际需求逐个调整。\n5. 使用设置选择默认放行或默认阻止模式；高级日志、逐地址规则和其他 Pro 功能按官方说明及授权操作。",
+  "faq": "需要 root 吗？官方核心功能无需 root，通过 Android VPN 服务实现。\n能同时开其他 VPN 应用吗？官方说明 Android 不允许这种 VPN 服务串联，需要根据用途切换。\n为什么旧手机装不了？本固定原 APK 实际最低系统要求为 Android 6.0。\n下载后包含全部 Pro 功能吗？不包含购买授权，部分高级功能需按官方方式授权。",
+  "documentationUrl": "https://github.com/M66B/NetGuard/blob/2.337/README.md",
+  "category": "security",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">NetGuard</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Firewall</text></svg>",
+    "sha256": "34765e3aa6913d7b9fb58b64c0c9b95df6945fb5c2820cc13c71d5324abd21de",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

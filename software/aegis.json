@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "aegis",
+  "name": "Aegis",
+  "homepage": "https://github.com/beemdevelopment/Aegis",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "beemdevelopment/Aegis",
+          "assetPattern": "aegis-v{version}.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Android 双重验证器，管理动态验证码，支持加密保管库与导出备份。",
+  "description": "Aegis 是 Android 上的开源双重验证器，支持 HOTP 和 TOTP，可扫描二维码、手动添加或从兼容验证器导入条目。条目可分组和搜索，保管库支持密码加密及符合设备条件的生物识别解锁，提供手动导出与自动备份。它生成验证码，不代替账户密码或服务端的双重验证设置。\n\n此条目提供官方 3.4.3 原 APK；主项目 GPL-3.0，组件保留各自许可。对应精确版本源码：https://github.com/beemdevelopment/Aegis/tree/v3.4.3 ，原许可材料见 aegis-3.4.3-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 APK；Android 按提示允许本次安装来源。打开 Aegis，按引导创建保管库并设置用于加密的密码。\n2. 在自己账户的安全设置里开启验证器方式的双重验证，在 Aegis 中选择添加条目并扫描服务显示的二维码，也可手动输入服务提供的密钥。\n3. 输入 Aegis 显示的验证码，在服务页面完成绑定；设置一个清楚的账户名称及分组。\n4. 从导出功能保存加密保管库文件，并保存账户提供的恢复码；加密导出使用保管库密码，换机导入时需要这个密码。\n5. 可在设置中选择自动备份目录，按官方说明保存到可访问的存储位置；生物识别解锁可用性由设备决定。",
+  "faq": "验证码不正确怎么办？核对账户条目、服务要求和手机时间，按服务的双重验证说明处理。\n有 Windows 或 iOS 版吗？官方 FAQ 表示没有其他平台移植计划，当前条目只提供 Android APK。\n导出为什么不再询问新密码？官方说明加密导出使用当前保管库密码，导入时需要它。\n会自动上传到云端吗？Aegis 不直接接入云服务；自动备份位置及另行同步按官方说明配置。",
+  "documentationUrl": "https://github.com/beemdevelopment/Aegis/blob/v3.4.3/FAQ.md",
+  "category": "security",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Aegis</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Authenticator</text></svg>",
+    "sha256": "d6c93143ca2c5bea65879b4b4586390c203d35508d37ea90bfd0612bc7d608aa",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

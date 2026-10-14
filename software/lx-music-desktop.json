@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lx-music-desktop",
+  "name": "洛雪音乐系列",
+  "homepage": "https://lyswhut.github.io/lx-music-doc/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lyswhut/lx-music-desktop",
+          "assetPattern": "lx-music-desktop-v*-x64-Setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lyswhut/lx-music-desktop",
+          "assetPattern": "lx-music-desktop-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lyswhut/lx-music-desktop",
+          "assetPattern": "lx-music-desktop-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lyswhut/lx-music-desktop",
+          "assetPattern": "lx-music-desktop_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lyswhut/lx-music-desktop",
+          "assetPattern": "lx-music-desktop_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "音乐播放器工具。",
+  "icon": {
+    "url": "https://lxmusic.toside.cn/img/favicon.ico",
+    "sha256": "ccbfcb21c00ebd299e5599792cd38b24c399e1ca8a6bc138de88802e5b2a7dd4",
+    "mime": "image/x-icon"
+  },
+  "description": "洛雪音乐系列 用于音乐播放器。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 启动播放器，按官方说明配置音乐来源。选择歌曲或导入歌单，调整播放设置；服务与音源的访问条件另行确认。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/lyswhut/lx-music-desktop/blob/master/README.md",
+  "category": "media",
+  "screenshots": []
+}

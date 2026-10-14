@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "k9s",
+  "name": "K9s",
+  "homepage": "https://github.com/derailed/k9s",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "k9s",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derailed/k9s",
+          "assetPattern": "k9s_Windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derailed/k9s",
+          "assetPattern": "k9s_Darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derailed/k9s",
+          "assetPattern": "k9s_Darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derailed/k9s",
+          "assetPattern": "k9s_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "derailed/k9s",
+          "assetPattern": "k9s_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互查看 Kubernetes 资源、日志与集群状态。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/derailed/k9s/558caafe7ba067467de46b320cc22ef11fef9c34/assets/k9s.png",
+    "sha256": "876bb59ca16926455c3190408f2980b30821afa9c5a914b4baa636de453c54c7",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/assets/k9s.png"
+  },
+  "description": "K9s 是独立的 Kubernetes 终端管理工具，可交互浏览资源、查看日志和执行相应管理操作。适合已有 Kubernetes 环境的开发与运维用户，权限由 kubeconfig 和集群授权决定。\n\n### 源码与许可\n当前条目提供 0.51.0 官方原包。主项目许可：Apache-2.0（部分附带材料按各自许可）；独立组件遵循各自许可。[固定版本源码](https://github.com/derailed/k9s/tree/558caafe7ba067467de46b320cc22ef11fef9c34) · [许可原文](https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/COPYING)。\n\n界面图来自[官方随附资料](https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/assets/screen_po.png)；原作者及许可通知见[固定版许可](https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/COPYING)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压官方 Windows/Mac 包；Debian/Ubuntu 安装 DEB，将 k9s 加入 PATH。\n2. 配置自己的 kubeconfig，先确认目标 context。\n3. 运行 k9s，查看底部帮助与资源列表。\n4. 选择测试环境的 Pod，查看描述与日志。\n5. 涉及修改或删除前核对 context、namespace 与集群权限。",
+  "faq": "能自动创建 Kubernetes 集群吗？主要管理已可访问的集群，不代替集群安装。\n配图是哪种环境？是官方早期 minikube 示例，展示资源列表，不是此条目生产集群。",
+  "documentationUrl": "https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/derailed/k9s/558caafe7ba067467de46b320cc22ef11fef9c34/assets/screen_po.png",
+      "sha256": "ca7db5d265effa61ee7d3e656f108f0edcbdcbc05e62ffabef598eace7628ab3",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/assets/screen_po.png",
+      "caption": "K9s 官方早期 minikube 资源列表示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/assets/screen_po.png；原许可 https://github.com/derailed/k9s/blob/558caafe7ba067467de46b320cc22ef11fef9c34/COPYING",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

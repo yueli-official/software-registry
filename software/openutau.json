@@ -1,0 +1,119 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "openutau",
+  "name": "OpenUtau",
+  "homepage": "https://github.com/openutau/OpenUtau",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "openutau",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "openutau",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "openutau",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "openutau/OpenUtau",
+          "assetPattern": "OpenUtau-osx-x64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "openutau/OpenUtau",
+          "assetPattern": "OpenUtau-osx-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "openutau/OpenUtau",
+          "assetPattern": "OpenUtau-linux-x64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "openutau/OpenUtau",
+          "assetPattern": "OpenUtau-linux-arm64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "面向 UTAU 社区的歌声合成编辑器，支持音符、歌词、颤音与多语言音素。",
+  "description": "OpenUtau 是歌声合成编辑器，支持音符与歌词编辑、音素选择、颤音、预览渲染和 UTAU 工程兼容，适合虚拟歌手调声与歌曲制作。支持中文界面和多种语言的音素处理。实际合成歌声需要另行安装兼容音库，编辑器发行不代表附送音库。不同音库、重采样器和插件分别遵守自身使用条件。\n\n此条目提供固定版本0.1.565官方 Windows、macOS 和 Linux 原包。主项目 MIT，组件保留各自许可；固定源码：https://github.com/openutau/OpenUtau/tree/0.1.565 ，原许可资料见 openutau-0.1.565-LICENSES.zip。",
+  "usageInstructions": "1. 按系统和 CPU 下载原包；Windows/Linux 解压保留完整目录并运行 OpenUtau，Mac 打开 DMG 后安装应用。\n2. 按官方 Install 文档安装一个自己取得的兼容音库，并按需要设置重采样器和音素器。\n3. 点击 New 新建工程，设置速度；建立轨道并选择已安装的歌手。\n4. 创建片段，双击打开音符编辑器，画几个音符并输入歌词，播放预览后调整音高和颤音。\n5. 保存为 .ustx 工程，再从导出音频菜单生成 WAV；先完成音库设置再判断无声问题。",
+  "faq": "下载编辑器就能发出任何歌手的声音吗？需要另装对应兼容音库，音库不是当前条目原包内容。\n能打开原 UTAU 工程吗？支持 .ust 等格式，部分功能兼容需按官方说明确认。\n需要修改系统区域才能输入中文吗？官方说明支持国际化与编码处理，不要求照搬传统 UTAU 的系统区域设置。",
+  "documentationUrl": "https://github.com/openutau/OpenUtau/wiki/Getting-Started",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">OpenUtau</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Singing Editor</text></svg>",
+    "sha256": "6f16a26fdca11a1518cb6d211dc7c6877753a14386062745dcf0f519d670cc71",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

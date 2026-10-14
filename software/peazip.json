@@ -1,0 +1,92 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "peazip",
+  "name": "PeaZip",
+  "homepage": "https://peazip.github.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "peazip",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "peazip/PeaZip",
+          "assetPattern": "peazip-{version}.DARWIN.x86_64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "peazip/PeaZip",
+          "assetPattern": "peazip-{version}.DARWIN.aarch64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "peazip/PeaZip",
+          "assetPattern": "peazip_{version}.LINUX.GTK2-1_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "peazip/PeaZip",
+          "assetPattern": "peazip_portable-{version}.LINUX.GTK2.aarch64.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持多种压缩格式、加密和分卷的开源压缩与文件管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/peazip/PeaZip/6487c72fe48e501b775cfd82611b4f2e3a3e62d0/peazip-sources/res/share/icons/peazip.png",
+    "sha256": "c6f90a87b96b1d4171041a93e62e2aef9b65fda22a7f84869a1376479d0f67b3",
+    "mime": "image/png",
+    "provenance": "官方PeaZip图标，固定官方源提交；实际预览绿色豆荚产品标识，根LGPL-3.0及资源目录核查。"
+  },
+  "description": "PeaZip 是开源压缩与文件管理软件，可创建、解压和浏览多种格式的压缩包，支持加密、分卷及文件搜索。适合日常解压下载文件、整理资料和打包备份。原版附带简体中文翻译，可在语言设置中选择。软件采用 LGPL-3.0，随包保留全部原许可和第三方组件说明。对应11.3.0源码：https://github.com/peazip/PeaZip/releases/tag/11.3.0 。",
+  "usageInstructions": "1. Windows 解压便携ZIP并运行 peazip.exe，保留res目录；macOS按Intel或Apple Silicon选择包，将PeaZip.app放到应用程序目录。Linux x64使用GTK2 Debian包，ARM64解压便携包并运行peazip，需要系统提供相应GTK2运行库。\n2. 在 Options / Settings 的语言选项中选择简体中文，或按官方帮助指定原包的zh-cn.txt。\n3. 将压缩包拖入窗口查看内容，选择解压并指定输出目录；要创建压缩包时，添加自己的文件，选择ZIP或7z格式及保存位置，再开始压缩。",
+  "faq": "能创建RAR吗？RAR通常用于读取和解压，创建压缩包请选择此条目说明中的ZIP、7z等格式；各格式功能以官方支持列表为准。\n便携版需要安装吗？Windows便携ZIP可直接解压使用，右键菜单集成需要另外按官方说明设置。\n其他系统和格式在哪里？官方还提供Windows32位、Qt6、RPM和BSD等构建；本轮提供五个常规桌面包，其他构建从官方Release取得。",
+  "documentationUrl": "https://peazip.github.io/peazip-help.html",
+  "category": "files",
+  "screenshots": []
+}

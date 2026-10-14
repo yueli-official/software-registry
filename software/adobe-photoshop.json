@@ -1,0 +1,22 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "adobe-photoshop",
+  "name": "Adobe Photoshop",
+  "homepage": "https://www.adobe.com/products/photoshop.html",
+  "kind": "reference",
+  "packages": [],
+  "summary": "图片编辑工具。",
+  "description": "Adobe Photoshop 用于图片编辑。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 登录有许可的 Adobe 账号并安装，打开自己的图片。使用图层编辑并保存工程，再导出副本。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(172,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">AP</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">Adobe Photoshop</text></svg>",
+    "sha256": "72f0e9f4089622d7c40f2909fe53c1a20597102968fe617ba6ce15f6051f19aa",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

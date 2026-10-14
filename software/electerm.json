@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "electerm",
+  "name": "Electerm",
+  "homepage": "https://github.com/electerm/electerm",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-win-x64-portable.tar.gz",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-win-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-mac-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "electerm/electerm",
+          "assetPattern": "electerm-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在桌面集中使用终端、SSH 和文件传输连接。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/electerm/electerm-resource/462411f30b92c2fe23ddd6ee0d1696c11828459e/harmony/electerm-logo-square-1024.png",
+    "sha256": "a1dcf2c590a03501369222e9ae09fab83d0d4390c66227b5d5040ce639144828",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/electerm/electerm-resource/blob/462411f30b92c2fe23ddd6ee0d1696c11828459e/harmony/electerm-logo-square-1024.png"
+  },
+  "description": "Electerm 是独立的终端与远程连接应用，可管理自己的本地终端、SSH 与相关文件传输会话，适合经常维护服务器的用户。\n\n### 源码与许可\n当前条目提供 5.5.76 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/electerm/electerm/tree/3c57163b19930e40a9cf4648b3473e230b7d52f0) · [许可原文](https://github.com/electerm/electerm/blob/3c57163b19930e40a9cf4648b3473e230b7d52f0/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 先创建一项测试连接，核对主机、端口、认证与服务器身份；运行熟悉的只读命令，再用测试文件验证传输路径，确认后整理书签。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "包含服务器账号吗？不包含，需要自己的服务器与认证。\nWindows 原包为什么是 tar.gz？当前条目提供官方完整压缩原包，主流解压工具解开后启动 electerm.exe。",
+  "documentationUrl": "https://github.com/electerm/electerm/blob/3c57163b19930e40a9cf4648b3473e230b7d52f0/README.md",
+  "category": "network",
+  "screenshots": []
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "treesheets",
+  "name": "TreeSheets",
+  "homepage": "https://github.com/aardappel/treesheets",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aardappel/treesheets",
+          "assetPattern": "TreeSheets-{version}-winx64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aardappel/treesheets",
+          "assetPattern": "TreeSheets-{version}-winarm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aardappel/treesheets",
+          "assetPattern": "TreeSheets-{version}-Darwin.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aardappel/treesheets",
+          "assetPattern": "treesheets_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aardappel/treesheets",
+          "assetPattern": "treesheets_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用可嵌套的表格整理笔记、清单和思维结构。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/aardappel/treesheets/0d6c0a39068dcf8ccf15b7f465796082fba187eb/TS/docs/images/treesheets_logo.png",
+    "sha256": "2738edadd18e8067cf3692018ed21e402050fb493e79bc7e0eac8e1c19958d7a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/TS/docs/images/treesheets_logo.png"
+  },
+  "description": "TreeSheets 是开源层级信息组织工具，可在单元格内继续嵌套网格，把表格、提纲和思维导图式组织结合起来。适合任务规划、资料分类与项目笔记，不以公式计算作为主要用途。\n\n### 源码与许可\n当前条目提供 2.4.0 官方原包。主项目许可：Zlib；独立组件遵循各自许可。[固定版本源码](https://github.com/aardappel/treesheets/tree/0d6c0a39068dcf8ccf15b7f465796082fba187eb) · [许可原文](https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/ZLIB_LICENSE.txt)。\n\n界面图来自[官方随附资料](https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/TS/docs/images/screenshots/screenshot_todo.png)；原作者及许可通知见[固定版许可](https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/ZLIB_LICENSE.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 解压 ZIP；Mac 打开通用 DMG；Debian/Ubuntu 安装对应 DEB。\n2. 打开程序，新建表格或查看随附示例。\n3. 在单元格输入主题，插入子网格组织细节。\n4. 按需要调整颜色、文字大小和层级，练习折叠与缩放。\n5. 保存 .cts 文档，再按官方说明导出需要的内容。",
+  "faq": "它和 Excel 一样吗？重点在层级信息组织，不能当作完整电子表格公式软件。\n官方示例图是此条目实测吗？不是，来自固定版本随附文档；示例的主题和界面外观可能与当前系统不同。",
+  "documentationUrl": "https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/README.md",
+  "category": "office",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/aardappel/treesheets/0d6c0a39068dcf8ccf15b7f465796082fba187eb/TS/docs/images/screenshots/screenshot_todo.png",
+      "sha256": "8a9f2c7ed2a44dadde76632d22a66a7cc89665fd666b483ec328c63d4de37445",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/TS/docs/images/screenshots/screenshot_todo.png",
+      "caption": "TreeSheets 官方嵌套网格与任务清单示例",
+      "licenseEvidence": "TreeSheets 官方随附示例；Copyright 2008 Wouter van Oortmerssen，保留原作者及 ZLIB_LICENSE.txt 原许可通知：https://github.com/aardappel/treesheets/blob/0d6c0a39068dcf8ccf15b7f465796082fba187eb/ZLIB_LICENSE.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

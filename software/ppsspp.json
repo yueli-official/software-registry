@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ppsspp",
+  "name": "PPSSPP",
+  "homepage": "https://github.com/hrydgard/ppsspp",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hrydgard/ppsspp",
+          "assetPattern": "PPSSPP-v{version}-Windows-x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hrydgard/ppsspp",
+          "assetPattern": "PPSSPP-v{version}-Windows-ARM64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hrydgard/ppsspp",
+          "assetPattern": "PPSSPPSDL-macOS-v{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hrydgard/ppsspp",
+          "assetPattern": "PPSSPP-v{version}-anylinux-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hrydgard/ppsspp",
+          "assetPattern": "PPSSPP-v{version}-anylinux-aarch64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "ppsspp-release",
+        "options": {
+          "package": "android"
+        }
+      }
+    }
+  ],
+  "summary": "在自己的设备上运行 PSP 游戏与测试程序。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/hrydgard/ppsspp/fa50bb1976065c4f8b1b47af227d367fe9771555/icons/hicolor/512x512/apps/ppsspp.png",
+    "sha256": "2154404e94f93eb30b11ce6e94e1214964f26f97e91d1ad56f95bdb84c1611d1",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/hrydgard/ppsspp/blob/fa50bb1976065c4f8b1b47af227d367fe9771555/icons/hicolor/512x512/apps/ppsspp.png"
+  },
+  "description": "PPSSPP 是独立的 PSP 模拟器，提供图形、输入和存档配置。所配置的软件包含官方 Windows、Mac、Linux 与官网 Android 原版；AndroidManifest 保留实际 v1.20.4 版本名。性能和兼容性取决于设备、设置与程序，不随包提供商业游戏。\n\n### 源码与许可\n当前条目提供 1.20.4 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/hrydgard/ppsspp/tree/fa50bb1976065c4f8b1b47af227d367fe9771555) · [许可原文](https://github.com/hrydgard/ppsspp/blob/fa50bb1976065c4f8b1b47af227d367fe9771555/LICENSE.TXT)。",
+  "usageInstructions": "1. 下载与设备匹配的原版，Windows/Mac 解压；Linux 使用 AppImage；Android 安装官方 APK。\n2. 先准备自己合法取得的兼容测试程序或游戏文件。\n3. 打开程序，配置输入和基础图形设置。\n4. 从默认或低负载设置开始测试，检查声音、按键与存档。\n5. 按需要调整性能选项，并备份自己的存档。",
+  "faq": "自带 PSP 游戏吗？不附带商业游戏。\n安卓包来自 GitHub 吗？官方 APK 位于 ppsspp.org 的确切版本目录，已核对官网链接及完整原包。",
+  "documentationUrl": "https://github.com/hrydgard/ppsspp/blob/fa50bb1976065c4f8b1b47af227d367fe9771555/README.md",
+  "category": "games",
+  "screenshots": []
+}

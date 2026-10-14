@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fiddler",
+  "name": "Fiddler Classic",
+  "homepage": "https://www.telerik.com/fiddler",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fiddler",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "捕获和检查 HTTP、HTTPS 请求以调试网络应用。",
+  "icon": {
+    "url": "https://www.telerik.com/favicon.ico?v=rebv1",
+    "sha256": "7b990b226fb3e8970b750dec91d4e8b9b59b2b7b069d0243d7bf70febe8ede53",
+    "mime": "image/x-icon"
+  },
+  "description": "Fiddler Classic：捕获和检查 HTTP、HTTPS 请求以调试网络应用。\n\n当前官方标注仅限非商业使用并处于维护模式；商业或专业用途请查看 Fiddler Everywhere 与官方许可。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开软件并确认代理捕获设置，使用浏览器访问测试页面后查看会话。HTTPS 解密需要单独安装并信任测试证书，用完关闭代理与捕获。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "developer",
+  "screenshots": []
+}

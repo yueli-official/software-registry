@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hydrogen",
+  "name": "Hydrogen",
+  "homepage": "https://github.com/hydrogen-music/hydrogen",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "hydrogen",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hydrogen-music/hydrogen",
+          "assetPattern": "Hydrogen-{version}.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hydrogen-music/hydrogen",
+          "assetPattern": "Hydrogen-{version}-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "使用鼓机和节奏编排制作自己的鼓点。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/hydrogen-music/hydrogen/712c25f5bd42942edcb927cd3668f21991efbee2/data/img/gray/h2-icon.svg",
+    "sha256": "621bc2ba731a6f96de18741f5fc7ecfcba09cb5792212aee32542e259ff08b19",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/hydrogen-music/hydrogen/blob/712c25f5bd42942edcb927cd3668f21991efbee2/data/img/gray/h2-icon.svg"
+  },
+  "description": "Hydrogen 是独立的鼓机与节奏编排软件，提供 Pattern 编辑、Song 编排、鼓组和混音功能，适合制作鼓点及伴奏节奏。当前条目 Mac 官方成品实际为 Intel。\n\n### 源码与许可\n当前条目提供 1.2.7 官方原包。主项目许可：GPL-2.0，鼓组等素材按其各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/hydrogen-music/hydrogen/tree/712c25f5bd42942edcb927cd3668f21991efbee2) · [许可原文](https://github.com/hydrogen-music/hydrogen/blob/712c25f5bd42942edcb927cd3668f21991efbee2/COPYING)。",
+  "usageInstructions": "1. Windows 安装官方安装器；Mac 打开 Intel DMG；Linux 使用 AppImage。\n2. 在音频设置选择设备并试播随附鼓组。\n3. 新建一个 Pattern，输入简单节拍并调整速度。\n4. 在 Song 视图排列自己的 Pattern，核对播放顺序。\n5. 保存工程并按官方导出方式输出音频。",
+  "faq": "能代替所有录音和编曲工作站吗？主要用于鼓机与节奏编排。\n所有鼓组可以无限制商用吗？鼓组和第三方素材按各自许可处理。",
+  "documentationUrl": "https://github.com/hydrogen-music/hydrogen/blob/712c25f5bd42942edcb927cd3668f21991efbee2/README.md",
+  "category": "media",
+  "screenshots": []
+}

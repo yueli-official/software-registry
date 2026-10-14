@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "chezmoi",
+  "name": "chezmoi",
+  "homepage": "https://www.chezmoi.io",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "chezmoi",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_windows_i386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "twpayne/chezmoi",
+          "assetPattern": "chezmoi_{version}_linux_i386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "管理个人配置文件，按不同电脑生成和同步配置。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/twpayne/chezmoi/24b71e4cf9d98cce0801cfc68e7553355efeaff7/assets/images/logo-256px-square.png",
+    "sha256": "a89cc4b5d27dedaa417675e5646cd339634339ddd97852c25f710cd35299c183",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；文档MIT授权及原署名见 https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/assets/images/logo-256px-square.png"
+  },
+  "description": "chezmoi 是跨平台个人配置文件管理工具，可把 dotfiles 纳入版本控制，并通过模板处理不同机器的差异。支持检查变更、应用配置及加密等能力，适合迁移终端环境或维护多台工作设备；不是整机备份软件。\n\n### 源码与许可\n当前条目提供 2.73.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/twpayne/chezmoi/tree/24b71e4cf9d98cce0801cfc68e7553355efeaff7) · [许可和通知](https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/README.md)，原作者及完整 MIT 授权见[许可原文](https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. Windows 解压 ZIP；macOS 解压 tar.gz；Debian/Ubuntu 安装 DEB，把 chezmoi 加入 PATH。\n2. 运行 chezmoi init 创建本机配置源目录。\n3. 用 chezmoi add 加入自己要管理的配置文件。\n4. 用 chezmoi edit 编辑，再运行 chezmoi diff 检查即将应用的变化。\n5. 确认后运行 chezmoi apply；多机同步按官方指南配置版本库与私密信息处理。",
+  "faq": "会自动同步所有文件吗？只处理你纳入管理的配置，跨机同步需要配置版本库。\n可以把密码直接放进公开仓库吗？请按官方私密信息与加密指南处理，公开版本库不适合直接保存秘密。",
+  "documentationUrl": "https://www.chezmoi.io/user-guide/quick-start/",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/twpayne/chezmoi/24b71e4cf9d98cce0801cfc68e7553355efeaff7/assets/images/chezmoi_flow.png",
+      "sha256": "bade9adcee8e8fe7e8874b3897dad89dbebfa2feb7d1b65ae414442b67a559bd",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/assets/images/chezmoi_flow.png",
+      "caption": "chezmoi 官方多机配置管理流程示意",
+      "licenseEvidence": "固定官方文档随附功能图；MIT文档使用依据、原作者署名与许可全文见 https://github.com/twpayne/chezmoi/blob/24b71e4cf9d98cce0801cfc68e7553355efeaff7/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

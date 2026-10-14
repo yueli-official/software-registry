@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qownnotes",
+  "name": "QOwnNotes",
+  "homepage": "https://www.qownnotes.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qownnotes",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pbek/QOwnNotes",
+          "assetPattern": "QOwnNotes.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pbek/QOwnNotes",
+          "assetPattern": "QOwnNotes-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "以本地 Markdown 文件记录笔记、整理待办和搜索内容。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/pbek/QOwnNotes/bb1b7523f584c44ddede52cafe5f9e4d9e5bf08e/icons/icon-800.png",
+    "sha256": "786d997d01f179c6802d7a48f15fa27f44683b767a7babbd057e52c0a254a86b",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览固定26.10.2官方蓝色云笔记PNG；同commit图标README指向canonical SVG生成，SVG标明GPL3和Alessandro Longo署名；保留原可编辑图源与独立许可，维护者仅转WebP。"
+  },
+  "description": "QOwnNotes 是开源 Markdown 笔记与待办工具，笔记以普通文本文件保存在自己选择的文件夹，可编辑、搜索和整理，并可配合 Nextcloud、ownCloud 或其他文件同步工具使用。适合希望自己掌握笔记文件的用户。\n\n此条目提供未修改的官方 26.10.2 成品包，主程序按上游 Debian copyright 声明采用 GPL 2.0，Copyright 2014–2026 Patrizio Bekerle。各内置组件保留各自原许可。对应源码与构建资料：https://github.com/pbek/QOwnNotes/tree/v26.10.2 。夸克目录中的 QOwnNotes-26.10.2-LICENSES.zip 提供原许可与通知资料。\n\n官方产品图标由 Alessandro Longo 制作，原 SVG 元数据标明 GPL 3.0，独立于主程序许可。此条目仅转换为 WebP，图标继续采用原许可；原可编辑图源：https://github.com/pbek/QOwnNotes/blob/bb1b7523f584c44ddede52cafe5f9e4d9e5bf08e/icons/icon.svg 。原图生成说明：https://github.com/pbek/QOwnNotes/blob/bb1b7523f584c44ddede52cafe5f9e4d9e5bf08e/icons/README.md 。不表示作者背书。",
+  "usageInstructions": "1. Windows 解压官方 ZIP 后打开 QOwnNotes.exe；Mac 打开 DMG，将应用复制到 Applications，本批原主程序同时支持 Intel 和 Apple Silicon；Linux x64 使用官方 AppImage，赋予执行权限后打开，所需系统依赖按官方安装文档处理。\n2. 首次启动先新建一个测试文件夹，选作笔记目录。创建一条测试笔记，输入标题、正文和一个 Markdown 待办项，查看编辑与预览效果。\n3. 再创建第二条笔记，用搜索框查找刚写的关键词；关闭并重新打开软件，确认笔记仍在。用文件管理器检查目录中的 Markdown 文件，重要资料定期备份。\n4. 需要多设备同步时另行配置 Nextcloud、ownCloud 或已有文件同步工具。先用测试笔记确认同步与冲突处理，不把尚未配置的同步当成自动云备份。",
+  "faq": "必须登录云账号吗？本地笔记可以直接使用；跨设备同步需要另行配置自己的同步工具或服务。\n笔记保存在哪？保存在你选择的笔记文件夹，通常为普通 Markdown 文本文件。\n支持 Mac 两种处理器吗？本批 DMG 的原主程序已核验为 Intel 与 Apple Silicon 通用。\n这是 Android 应用吗？本批发布的是桌面软件；相关移动客户端属于独立项目，不能用桌面包安装到手机。\n为什么 Linux AppImage 打不开？检查执行权限及系统依赖，按官方安装文档处理。",
+  "documentationUrl": "https://www.qownnotes.org/getting-started/concept.html",
+  "category": "reading",
+  "screenshots": []
+}

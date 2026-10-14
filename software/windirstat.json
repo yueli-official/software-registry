@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windirstat",
+  "name": "WinDirStat",
+  "homepage": "https://windirstat.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windirstat",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "磁盘分析工具。",
+  "icon": {
+    "url": "https://windirstat.net/favicon.ico",
+    "sha256": "9677bdf50b8a2f799e0b43570d2f4d257eef99ed73e1f333f5640a951edf295b",
+    "mime": "image/x-icon"
+  },
+  "description": "WinDirStat 用于磁盘分析。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 选择磁盘或目录并开始扫描。查看目录列表和矩形树图定位大文件；删除前确认用途，避免删除系统文件。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "system",
+  "screenshots": []
+}

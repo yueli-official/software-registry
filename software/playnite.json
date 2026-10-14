@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "playnite",
+  "name": "Playnite",
+  "homepage": "https://github.com/JosefNemec/Playnite",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "playnite",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "整合多个游戏平台与本地游戏，在统一界面管理和启动游戏。",
+  "description": "Playnite是开源游戏库管理器和启动器，可通过扩展整合Steam、Epic、GOG等平台，也支持手动添加本地游戏和模拟器。游戏库数据保存在本机，提供桌面与全屏界面，适合整理分散在多个启动器中的游戏。当前条目是完整Windows便携包，不附带游戏。",
+  "usageInstructions": "1. 在Windows 10或11下载原版7z，使用支持7z的解压工具完整解压到可写的固定目录。\n2. 启动Playnite.DesktopApp.exe；原程序需要.NET Framework 4.6.2或兼容更新版运行环境。\n3. 按首次设置选择需要的游戏库集成，仅在官方登录页面连接自己的平台账号。\n4. 也可先手动添加一个本地游戏，填写名称并选择启动程序。\n5. 完成导入后在游戏库筛选或搜索并启动游戏；主题和其他扩展按需从官方扩展入口添加。",
+  "faq": "需要购买游戏吗？本工具管理和启动已有游戏，不提供游戏授权或游戏文件。\n为什么标为Windows x86？原便携包主程序明确要求32位运行环境，通常可在64位Windows的兼容环境运行；不宣称原生ARM64。",
+  "documentationUrl": "https://github.com/JosefNemec/Playnite/blob/ecee01452a25db1fb2674a69f883d298d4c7be8a/README.md",
+  "category": "games",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Playnite</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Game Library</text></svg>",
+    "sha256": "bde3c79db42ebcc986c270134e5ebc357fe2c00affe5876b09b2b8aa9a346ce0",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

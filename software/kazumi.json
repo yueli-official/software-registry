@@ -1,0 +1,92 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kazumi",
+  "name": "Kazumi",
+  "homepage": "https://kazumi.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Predidit/Kazumi",
+          "assetPattern": "Kazumi_windows_*.zip",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Predidit/Kazumi",
+          "assetPattern": "Kazumi_macos_*.dmg",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Predidit/Kazumi",
+          "assetPattern": "Kazumi_android_{version}.apk",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Predidit/Kazumi",
+          "assetPattern": "Kazumi_linux_{version}_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Predidit/Kazumi",
+          "assetPattern": "Kazumi_linux_{version}_arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持自定义规则、弹幕和播放设置的跨平台番剧客户端。",
+  "description": "Kazumi 是基于自定义规则的开源番剧客户端，可搜索与播放规则提供的内容，支持弹幕、下载和实时超分辨率。播放体验取决于规则和网络条件，超分辨率需要适当的 GPU 性能。",
+  "usageInstructions": "1. 在下载区按系统选原版包：Windows 下载 ZIP 并解压运行 Kazumi；macOS 下载通用 DMG，打开后将 Kazumi 拖入“应用程序”，适用于 Intel 和 Apple Silicon。其他系统先在官方发行页确认对应安装包。\n2. 在规则管理中按官方文档检查或配置有权使用的内容来源，随后搜索条目、选择剧集并播放。\n3. 播放设置可调整弹幕和缓存；内存较少时启用低内存模式，超分辨率卡顿时降低档位或关闭。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "### 为什么超分辨率会卡顿？\n该功能依赖 GPU 性能，可降低档位或关闭。\n\n### 为什么播放占用较多内存？\n软件会缓存视频，可在播放设置启用低内存模式。",
+  "documentationUrl": "https://kazumi.app/docs/",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect width=\"512\" height=\"512\" rx=\"92\" fill=\"#7252b8\"/><text x=\"256\" y=\"305\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"185\" font-weight=\"700\" fill=\"white\">KZ</text><text x=\"256\" y=\"420\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"48\" fill=\"white\">Kazumi</text></svg>",
+    "sha256": "949e093c256036d14a48dfc1efb65802f1525ece5f15451d9361504cd63bd0f6",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；官方README美术资源说明限制原图标的复制、修改与分发。"
+  },
+  "screenshots": []
+}

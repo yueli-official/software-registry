@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qview",
+  "name": "qView",
+  "homepage": "https://interversehq.com/qview/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qview",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jurplel/qView",
+          "assetPattern": "qView-{version}-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jurplel/qView",
+          "assetPattern": "qView-{version}.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "简洁实用的图片查看器。",
+  "description": "qView：简洁实用的图片查看器。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开图片，使用方向键切换同目录图片，滚轮缩放。按需要设置默认图片查看器与快捷键。\n\n### 其他平台安装\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "graphics",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/jurplel/qView/c5eca1c7176549e0f0718d11201547ddcdb1f8c9/dist/linux/hicolor/256x256/apps/com.interversehq.qView.png",
+    "sha256": "f0070ad34b98b5778b3620ba333a2df621ac34bf468ab7f71bf180d062faade5"
+  },
+  "screenshots": []
+}

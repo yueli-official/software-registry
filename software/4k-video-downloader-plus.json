@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "4k-video-downloader-plus",
+  "name": "4K Video Downloader Plus",
+  "homepage": "https://www.4kdownload.com/products/videodownloader-42",
+  "kind": "reference",
+  "packages": [],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://static.4kdownload.com/_next/static/media/videodownloaderplus.7e9aea94.svg",
+    "sha256": "b9a55b78106e5f7602a09bd0a4470d2eb6d3786d99a861c42e6794a43f893174",
+    "mime": "image/svg+xml"
+  },
+  "description": "4K Video Downloader Plus 用于下载工具。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 粘贴有权保存的音视频地址，选择可用格式、质量和保存目录。开始下载后检查输出文件。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "files",
+  "screenshots": []
+}

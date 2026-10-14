@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "carnac",
+  "name": "Carnac",
+  "homepage": "https://github.com/Code52/carnac",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "carnac",
+          "architecture": "universal"
+        }
+      }
+    }
+  ],
+  "summary": "在屏幕上显示键盘按键与组合键，方便录屏、教学和软件操作演示。",
+  "description": "Carnac 是 Windows 按键显示工具，会把键盘输入和快捷键组合显示在屏幕上，适合录制软件教程、直播演示或讲解操作。它是独立工具，不需要作为录屏软件的插件安装。\n\n此条目提供官方2.3.13完整应用包，来自Scoop选用的原始NuGet包，保留lib/net45内应用及依赖。主程序已核实为AnyCPU托管程序，支持32/64位Windows，需要.NET Framework 4.5.2。该正式版发布较早，可先用普通文本测试显示效果。主项目采用Microsoft Public License（MS-PL），原许可和通知保留在carnac-2.3.13-LICENSES.zip；固定版本源码：https://github.com/Code52/carnac/tree/2.3.13 。",
+  "usageInstructions": "1. 下载原始carnac-2.3.13-full.nupkg。它是ZIP结构的完整应用包，用7-Zip打开，完整提取lib/net45目录中的文件，保留DLL、Keymaps等配套资源。\n2. Windows须具备.NET Framework 4.5.2或兼容的较新版本，进入提取目录运行Carnac.exe。\n3. 打开记事本，输入普通文字，再按Ctrl+C等组合键，确认屏幕上的按键提示能够显示。\n4. 根据演示需要在应用设置中调整提示的位置和显示方式，再开始录屏。\n5. 输入不想展示的内容前，按Ctrl+Alt+P进入静默模式；再次按同一组合键恢复显示。结束演示后退出Carnac。",
+  "faq": "为什么下载的是nupkg？这是Scoop选用的官方完整应用包，可用7-Zip读取其中的lib/net45应用，不是源码或增量补丁。\n为什么不能只复制EXE？应用依赖同目录的DLL及资源，需要保留完整应用目录。\n能临时停止显示吗？Ctrl+Alt+P可以切换静默模式，快捷键来自固定版本官方README。",
+  "documentationUrl": "https://github.com/Code52/carnac/blob/2.3.13/README.md",
+  "category": "capture",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Carnac</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Keyboard Display</text></svg>",
+    "sha256": "7bc9cc812c8753eefa1d87bbaf53c568e29163a3cda64f335037f7ca09836997",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

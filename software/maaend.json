@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "maaend",
+  "name": "MAAEnd",
+  "homepage": "https://maaend.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MaaEnd/MaaEnd",
+          "assetPattern": "MaaEnd-win-x86_64-v*.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MaaEnd/MaaEnd",
+          "assetPattern": "MaaEnd-android-arm64-v8a-v{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MaaEnd/MaaEnd",
+          "assetPattern": "MaaEnd-android-x86_64-v{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MaaEnd/MaaEnd",
+          "assetPattern": "MaaEnd-macos-aarch64-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "游戏自动化工具。",
+  "icon": {
+    "url": "https://maaend.com/favicon.ico?favicon.9cd763cd.ico",
+    "sha256": "7ecfe45d7debb8719940edf3191aa976c96f8b03c9000385147dfcf4032b36d4",
+    "mime": "image/x-icon"
+  },
+  "description": "MAAEnd 用于游戏自动化。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按官方文档连接支持的游戏环境或设备。选择任务并确认分辨率等要求，先测试单个任务；遵守游戏规则。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Android amd64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/MaaEnd/MaaEnd/blob/v2/README.md",
+  "category": "games",
+  "screenshots": []
+}

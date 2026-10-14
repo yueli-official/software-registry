@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "restic",
+  "name": "Restic",
+  "homepage": "https://restic.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "restic",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "restic",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "restic/restic",
+          "assetPattern": "restic_{version}_darwin_amd64.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "restic/restic",
+          "assetPattern": "restic_{version}_darwin_arm64.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "restic/restic",
+          "assetPattern": "restic_{version}_linux_amd64.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "restic/restic",
+          "assetPattern": "restic_{version}_linux_arm64.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "restic/restic",
+          "assetPattern": "restic_{version}_linux_386.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "加密备份文件，保存快照并恢复到指定目录。",
+  "description": "Restic 是开源命令行备份工具，支持加密、去重、快照和恢复，可将资料备份到本地磁盘、SFTP 或支持的云存储。适合愿意使用命令行、希望自行管理备份位置的用户。\n\n此条目提供未修改的官方 0.19.1 原包，主程序采用 BSD 2-Clause，Copyright 2014 Alexander Neumann；独立组件保留各自许可。对应源码：https://github.com/restic/restic/tree/v0.19.1 。夸克目录提供 Restic-0.19.1-LICENSES.zip 保存原许可通知。",
+  "usageInstructions": "1. Windows 按系统选择 x64 或32位原ZIP，解压后在终端使用其中 restic 可执行文件；Mac、Linux 按CPU选择原bz2，用支持bzip2的工具解压，赋予执行权限，并将文件放到自己可访问的位置。下列 restic 指可执行文件的实际路径，不要求修改全局系统设置。\n2. 先建立仅放测试文件的 sample 文件夹，以及一个空的独立 test-backup 目录。在终端执行 restic -r test-backup init，设置并妥善保存仓库密码；丢失密码无法恢复数据。\n3. 执行 restic -r test-backup backup sample 保存一次测试快照，再执行 restic -r test-backup snapshots 查看。\n4. 执行 restic -r test-backup restore latest --target test-restore，将快照恢复到新的测试目录，打开恢复文件确认内容正确。\n5. 熟悉后再选择实际备份位置；同盘备份不能覆盖磁盘损坏风险。按官方文档配置外部磁盘或远程存储，定期进行恢复测试。",
+  "faq": "有图形界面吗？本批是官方命令行工具，需要在终端使用。\n压缩包bz2怎么打开？使用支持bzip2的主流解压工具，解压得到对应平台可执行文件，不需要安装源码。\n忘记密码能找回备份吗？无法绕过加密恢复，必须妥善保存仓库密码。\n安装后会自动备份吗？不会；需要你选择备份仓库、文件和执行方式。本批不替你创建系统计划任务。",
+  "documentationUrl": "https://restic.readthedocs.io/en/latest/",
+  "category": "utilities",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eaf4fa\"/><text x=\"128\" y=\"139\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"57\" fill=\"#24526e\">Restic</text><text x=\"128\" y=\"181\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" fill=\"#5c788a\">backup</text></svg>",
+    "sha256": "329d931113f1120a7904673cd0e4a8c46d518e9cf645aac56f7dfc6b2636a3f3",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；未仿造官方logo。官方图形单独使用依据未确认，因此采用允许的名称标识。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "v2ray",
+  "name": "V2Ray",
+  "homepage": "https://github.com/v2fly/v2ray-core",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "v2ray",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-windows-32.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-windows-arm64-v8a.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-macos-64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-macos-arm64-v8a.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-linux-64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-linux-arm64-v8a.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "v2fly/v2ray-core",
+          "assetPattern": "v2ray-linux-32.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "按配置运行多协议网络代理和路由服务。",
+  "description": "V2Ray 是 V2Fly 社区维护的独立网络服务程序，通过自己的配置运行代理与路由。当前条目提供可执行的核心程序，包含独立运行入口，未混入其他图形客户端。\n\n### 源码与许可\n当前条目提供 5.53.0 官方原包。主项目许可：MIT，规则数据和组件按各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/v2fly/v2ray-core/tree/b53bebbb859f2970e99432d53047a1bb8620e987) · [许可原文](https://github.com/v2fly/v2ray-core/blob/b53bebbb859f2970e99432d53047a1bb8620e987/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 v2ray 加入 PATH，运行 v2ray --help 查看本版用法。\n3. 解压后保留同目录的规则数据；按官方5.x文档准备自己的配置，先执行本版配置检查，再测试监听、路由和停止流程，之后接入服务管理。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "这里是图形客户端吗？这是完整命令行服务程序，图形客户端属于其他产品。\n包含订阅和线路吗？不包含，需要自己配置服务与网络条件。",
+  "documentationUrl": "https://github.com/v2fly/v2ray-core/blob/b53bebbb859f2970e99432d53047a1bb8620e987/README.md",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">V2Ray</text></svg>",
+    "sha256": "990b6ac0392e3128cea6d1769889b0cdffa2b8d53ad49d7f735466bdcaa173d9",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名V2Ray，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

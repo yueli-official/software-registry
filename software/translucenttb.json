@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "translucenttb",
+  "name": "TranslucentTB",
+  "homepage": "https://github.com/TranslucentTB/TranslucentTB",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "translucenttb",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "translucenttb",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "调整Windows任务栏透明度、颜色及窗口状态对应的外观。",
+  "description": "TranslucentTB 是 Windows 任务栏外观工具，可设置颜色、透明度和亚克力效果，并根据最大化窗口、开始菜单、搜索或任务视图的状态切换外观。\n\n此条目提供官方 2026.2 x64和ARM64便携原包。官方说明此便携版本只用于Windows11；Windows10用户应查看官方商店等对应渠道。主项目采用 GPL-3.0-only，原许可与组件通知保留；对应源码：https://github.com/TranslucentTB/TranslucentTB/tree/2026.2 ，原许可材料位于夸克目录 translucenttb-2026.2-LICENSES.zip 。",
+  "usageInstructions": "1. 确认使用Windows11，并按CPU下载x64或ARM64便携ZIP；完整解压后运行TranslucentTB.exe。\n2. 在系统托盘找到TranslucentTB图标，右键打开菜单，先设置桌面状态的任务栏外观，例如透明（Clear）或亚克力（Acrylic）。\n3. 按需要调整颜色与透明度，再测试打开或最大化窗口、开始菜单时的动态外观。不同Windows版本支持的效果有差异。\n4. 如果同时使用其他任务栏工具，逐项检查效果是否冲突。退出TranslucentTB可停止应用它的外观设置。\n5. 确认效果合适后再设置开机运行；便携版可按官方说明给主程序创建启动快捷方式。",
+  "faq": "Windows10能运行当前条目便携包吗？官方明确此便携版本只用于Windows11；Windows10请查看官方适用渠道。\n会更改桌面壁纸吗？主要调整任务栏外观。\n为什么选了Blur却没效果？官方说明模糊效果受Windows版本限制，Windows11较新版可选择适用的其他效果。",
+  "documentationUrl": "https://github.com/TranslucentTB/TranslucentTB/blob/2026.2/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">TranslucentTB</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Taskbar Style</text></svg>",
+    "sha256": "f0e4f2447778bcbef149524b99d1f6b998c3c5f0f53d5c81aa32d865aeb062ef",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

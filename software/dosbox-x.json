@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dosbox-x",
+  "name": "DOSBox-X",
+  "homepage": "https://github.com/joncampbell123/dosbox-x",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dosbox-x",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "joncampbell123/dosbox-x",
+          "assetPattern": "dosbox-x-vsbuild-arm64-{version}-portable.zip",
+          "tagPrefix": "dosbox-x-v",
+          "tagTemplate": "dosbox-x-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "joncampbell123/dosbox-x",
+          "assetPattern": "dosbox-x-vsbuild-win32-{version}-portable.zip",
+          "tagPrefix": "dosbox-x-v",
+          "tagTemplate": "dosbox-x-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "joncampbell123/dosbox-x",
+          "assetPattern": "dosbox-x-macosx-x86_64-{version}.zip",
+          "tagPrefix": "dosbox-x-v",
+          "tagTemplate": "dosbox-x-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "joncampbell123/dosbox-x",
+          "assetPattern": "dosbox-x-macosx-arm64-{version}.zip",
+          "tagPrefix": "dosbox-x-v",
+          "tagTemplate": "dosbox-x-v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "配置较完整的 DOS 模拟环境，运行与调试旧程序。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/joncampbell123/dosbox-x/b6abbd5980a885f5f310a4088c59a8688d1b116c/dosbox224x224.png",
+    "sha256": "668d1a8e8cacb456026bbad94ba26239029caa3efe5bc43cd29fa2d4a62dae2c",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/joncampbell123/dosbox-x/blob/b6abbd5980a885f5f310a4088c59a8688d1b116c/dosbox224x224.png"
+  },
+  "description": "DOSBox-X 是独立的 DOS 模拟器，提供丰富的兼容、显示、输入与配置选项，适合运行和测试自己的旧程序。当前条目 Windows 原包包含 SDL 变体，实际检查采用 SDL2 主程序；Mac 分 Intel 与 ARM64 原版。\n\n### 源码与许可\n当前条目提供 2026.10.01 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/joncampbell123/dosbox-x/tree/b6abbd5980a885f5f310a4088c59a8688d1b116c) · [许可原文](https://github.com/joncampbell123/dosbox-x/blob/b6abbd5980a885f5f310a4088c59a8688d1b116c/COPYING)。",
+  "usageInstructions": "1. Windows/Mac 解压对应原版包。\n2. Windows 按包内说明选择对应 CPU 的 SDL2 主程序。\n3. 建立独立测试目录，并按官方指南挂载。\n4. 启动自己的 DOS 测试程序，核对声音、显示和输入。\n5. 根据需要保存独立配置，避免把不了解的兼容设置直接套用到所有程序。",
+  "faq": "官方 GitHub 有 Linux 成品吗？本次稳定 Release 没有 Linux 原版成品，其他安装方式见官方指南。\n随包提供商业 DOS 游戏吗？不提供。",
+  "documentationUrl": "https://github.com/joncampbell123/dosbox-x/blob/b6abbd5980a885f5f310a4088c59a8688d1b116c/README.md",
+  "category": "games",
+  "screenshots": []
+}

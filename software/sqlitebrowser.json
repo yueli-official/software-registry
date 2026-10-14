@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sqlitebrowser",
+  "name": "DB Browser for SQLite",
+  "homepage": "https://sqlitebrowser.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sqlitebrowser",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sqlitebrowser/sqlitebrowser",
+          "assetPattern": "DB.Browser.for.SQLite-v{version}-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sqlitebrowser/sqlitebrowser",
+          "assetPattern": "DB.Browser.for.SQLite-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sqlitebrowser/sqlitebrowser",
+          "assetPattern": "DB.Browser.for.SQLite-v{version}-x86.64-v2.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "可视化查看、编辑 SQLite 数据库，支持表结构管理、SQL 查询和 CSV 导入导出。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/sqlitebrowser/sqlitebrowser/5d84f53f85570a31767548cded89c96de6ff70ae/images/logo.png",
+    "sha256": "c20dd600382bcd5ae4c56e6ae802b93996e16e0d1c9b0a064901497c4e189a8b",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览固定v3.13.1官方透明数据库圆柱PNG；原SVG显式CC BY4.0及GPL3+字段、官方PNG导出历史和相同GitBlob均已核。保留John T. Haller/项目贡献者署名、源与许可链接；网站仅转换WebP，不表示官方背书。"
+  },
+  "description": "DB Browser for SQLite 适合查看应用生成的 SQLite 文件、整理小型数据和学习 SQL。你可以用表格界面浏览记录，也可以执行 SQL、管理表结构、导入或导出 CSV。它是数据库编辑工具；直接修改正在运行的应用所使用的数据库可能影响该应用，请先关闭对应应用并复制数据库，在副本上操作。\n\n此条目提供未修改的官方 3.13.1 原包，主程序采用 MPL 2.0 或 GPL 3.0 及以后版本，内置组件保留各自许可。对应源码与构建资料：https://github.com/sqlitebrowser/sqlitebrowser/tree/v3.13.1 。夸克目录中的 DB-Browser-for-SQLite-3.13.1-LICENSES.zip 保留原包许可、组件版权与源码来源。SQLCipher 组件的原 BSD-style 许可及 ZETETIC LLC 版权声明一并保留，SQLite 原代码属于公共领域。\n\n产品图标由 John T. Haller 与项目贡献者提供，原 SVG 声明 CC BY 4.0 并保留 GPL3+ 字段。此条目使用官方图形，仅转换为网站 WebP 格式，不表示官方背书。图标来源：https://github.com/sqlitebrowser/sqlitebrowser/blob/5d84f53f85570a31767548cded89c96de6ff70ae/images/logo.svg ；许可：https://creativecommons.org/licenses/by/4.0/ 。",
+  "usageInstructions": "1. Windows：选择与电脑架构对应的 x64 或 ARM64 ZIP，将整个压缩包解到固定目录，运行 DB Browser for SQLite.exe。保留全部 DLL、子目录、translations 和 licenses。\n2. macOS：打开 DMG，将 DB Browser for SQLite.app 拖到应用程序目录后启动。该原版包的主程序同时包含 Intel 和 Apple Silicon 架构。\n3. Linux：下载 x86.64-v2 AppImage，给予执行权限后启动。需要满足该 AppImage 的运行条件及 x86-64-v2 CPU 要求；其他架构不要使用此包。发行版软件仓库也可提供 sqlitebrowser，仓库版本以其实际版本为准。\n4. 首次试用点击 New Database（新建数据库），把演示文件保存为 demo.sqlite；也可用 Open Database 打开你自己数据库的副本。\n5. 切换 Execute SQL 页签，粘贴演示 SQL：CREATE TABLE demo (id INTEGER PRIMARY KEY, title TEXT); INSERT INTO demo (title) VALUES ('中文示例'); SELECT id, title FROM demo;。运行后应看到一行 id=1、title=中文示例。\n6. 切换 Browse Data 页签，选择 demo 表，检查新增记录；可以在表格中编辑 title。\n7. 确认修改后点击 Write Changes 保存。先在演示数据库上练习；不要将演示建表语句直接用于工作数据库。\n8. 需要交换数据时，通过 File 菜单的 Import/Export 功能导入或导出 CSV；核对表名、表头、分隔符和编码后再确认。",
+  "faq": "修改后为什么没有保存？ 记录修改后需要点击 Write Changes。离开数据库时留意保存提示，先在副本上确认更改符合预期。\n能打开所有应用数据库吗？ 工具面向 SQLite 数据库。其他数据库格式、损坏文件，以及未提供正确密钥或加密参数的加密数据库不能保证打开；不要只根据 .db 后缀判断格式。\n是否需要数据库服务器？ 处理本地 SQLite 文件不需要单独部署数据库服务器。远程服务及加密数据库功能另按其实际配置和官方说明使用。",
+  "documentationUrl": "https://github.com/sqlitebrowser/sqlitebrowser/wiki",
+  "category": "developer",
+  "screenshots": []
+}

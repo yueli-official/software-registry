@@ -1,0 +1,136 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "koodo-reader",
+  "name": "Koodo Reader",
+  "homepage": "https://koodoreader.com/zh",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "koodo-reader",
+          "architecture": "64bit",
+          "filenameTemplate": "Koodo-Reader-{version}-x64.exe"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "koodo-reader",
+          "architecture": "32bit",
+          "filenameTemplate": "Koodo-Reader-{version}-ia32.exe"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "koodo-reader",
+          "architecture": "arm64",
+          "filenameTemplate": "Koodo-Reader-{version}-arm64.exe"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koodo-reader/koodo-reader",
+          "assetPattern": "Koodo-Reader-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koodo-reader/koodo-reader",
+          "assetPattern": "Koodo-Reader-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koodo-reader/koodo-reader",
+          "assetPattern": "Koodo-Reader-{version}-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koodo-reader/koodo-reader",
+          "assetPattern": "Koodo-Reader-{version}-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koodo-reader/koodo-reader",
+          "assetPattern": "Koodo-Reader-{version}-arm64.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持EPUB、PDF、TXT及书签笔记的跨平台电子书阅读器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/koodo-reader/koodo-reader/1fd0cc7f151916447d396e0c8a2c036180992cab/assets/icons/256x256.png",
+    "sha256": "a53395d66e284a7658bfbdf8a307530111ed696aad9aa99e76872d5fbb5c8864",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览官方产品资源assets/icons/256x256.png，不是头像或广告；固定提交与摘要，版本原LICENSE和当前根许可文本一致，资源目录无独立许可例外。保留官方项目来源与根AGPL-3.0，仅转换为WebP。"
+  },
+  "description": "Koodo Reader 可导入电子书，在本地书库中阅读、搜索和整理图书，支持书签、笔记、高亮及字体和主题设置。提供中文界面与官方中文资料，适合阅读自己取得的EPUB、PDF、TXT等文件。云同步、插件及其他服务按官方文档和对应服务要求配置。当前条目保留Scoop对应2.4.3完整官方原包；Android原文件名虽写arm64，实际包含ARM64、ARMv7、x86和x86_64原生库，据实标为通用架构。采用AGPL-3.0，随附同版原LICENSE文本；源码：https://github.com/koodo-reader/koodo-reader/tree/v2.4.3 。图标来自官方assets/icons/256x256.png，使用根AGPL许可，保留项目来源，此条目只转换为WebP。",
+  "usageInstructions": "1. Windows安装对应x64、32位或ARM64原版EXE；macOS打开对应Intel或Apple Silicon的DMG并将应用放到应用程序目录；Linux安装对应架构DEB；Android取得原APK并按系统提示允许安装该来源。保留同版LICENSES.zip，软件包未重新打包或签名。\n2. 启动后在导入入口选择自己拥有的电子书，先用一个EPUB或TXT文件试读；在书库点击书籍进入阅读，用目录或搜索定位内容。\n3. 在阅读设置调整字号、行距和明暗主题，按需添加书签、选中文字做笔记或高亮。重要书库先备份；跨设备同步、词典和插件按官方中文资料配置，不将收费服务当成原包已包含。",
+  "faq": "可以打开受DRM保护的书吗？不能保证，先确认图书格式和保护方式，使用自己有权阅读的文件。\n当前条目安卓包适合什么架构？实际原包含arm64-v8a、armeabi-v7a、x86、x86_64，标为通用；系统版本等要求仍由安装包和官方资料决定。\n为什么使用2.4.3？官方中文下载页列2.4.3为稳定版、2.4.6为开发版；此条目全部平台固定稳定版，不混入开发包。\n书库会自动上传吗？本地阅读与用户自行配置的云同步分别处理，启用同步或第三方插件前阅读官方说明。",
+  "documentationUrl": "https://github.com/koodo-reader/koodo-reader/blob/v2.4.3/README_cn.md",
+  "category": "reading",
+  "screenshots": []
+}

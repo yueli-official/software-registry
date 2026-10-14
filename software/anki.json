@@ -1,0 +1,127 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "anki",
+  "name": "Anki",
+  "homepage": "https://apps.ankiweb.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "anki",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "anki",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ankitects/anki",
+          "assetPattern": "anki-{version}-mac-intel.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ankitects/anki",
+          "assetPattern": "anki-{version}-mac-apple.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ankitects/anki",
+          "assetPattern": "anki-{version}-linux-x86_64.tar.zst",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ankitects/anki",
+          "assetPattern": "anki-{version}-linux-aarch64.tar.zst",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "制作记忆卡片，按掌握程度安排复习。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ankitects/anki/29bb700b951e3f0c0cb69b77c0180fc1fe33e6ba/qt/installer/app/resources/anki.png",
+    "sha256": "97ad2134ef1a7686789c7becd8bd05dd8693cf0d3127951ca6ba7b29a80b402a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确26.09.3安装资源176px蓝星产品图标；Alex Fraser原LICENSE明确图标AGPL3及限定指代授权。维护者指代官方Anki并保留官网链接与维护者自编内容说明；不裁剪改色或增删图案，只等比例显示及WebP技术编码。"
+  },
+  "description": "Anki 桌面版用间隔重复帮助学习单词、知识点和考试资料，支持自制卡片、多媒体内容与复习统计。可以先离线制作卡片，再按需要使用 AnkiWeb 同步。此条目提供官方桌面原包，AnkiMobile 和 AnkiDroid 是独立产品。\n\nAnki 采用 AGPL 3 或后续版本，部分贡献采用 BSD 3，完整许可和作者见对应 26.09.3 源码 https://github.com/ankitects/anki/tree/26.09.3 。原包内 Python、Qt 和其他依赖的许可文件原样保留；同目录 Anki-26.09.3-LICENSES.zip 附项目原许可、贡献者、依赖许可报告、文档许可和 GNU AGPL 原文。产品图标作者 Alex Fraser，按原 LICENSE 中的限定指代授权使用，保留官方链接 https://apps.ankiweb.net/ 与图案外观。截图来自官方 Anki 文档贡献者，采用 CC BY-SA 4.0，原图及许可见对应源码 docs-site 目录；统计截图为历史示例。",
+  "usageInstructions": "1. Windows x64 需要 Windows 10 1703 或更新版本，ARM64 需要 Windows 11；运行对应 MSI 安装。macOS 需要 13 或更新版本，打开 Intel 或 Apple Silicon DMG，将 Anki 拖到应用程序目录。Linux x64 需要 glibc 2.35+，ARM64 需要 glibc 2.39+，先按官方文档安装系统库与 zstd，解压原 .tar.zst 后进入实际解压目录，运行 sudo ./install.sh，再启动 anki。\n2. 打开后新建一个学习牌组，点击添加，选择基本卡片；正面输入问题，背面输入答案，保存后返回该牌组开始学习。先用自己熟悉的单词或知识点做几张卡片。\n3. 回想答案后点击显示答案，再按实际记忆情况选择评分，让程序安排后续复习。需要跨设备时注册自己的 AnkiWeb 账户并使用同步；只在电脑本地学习无需账户。",
+  "faq": "桌面版需要付费吗？Anki 桌面版免费；iOS 的 AnkiMobile 独立收费，Android 的 AnkiDroid 是另一个开源项目。\n必须联网吗？本地制卡和复习可以离线；下载、同步或部分扩展需要联网。\n能用来学中文或外语吗？可用自己的文本、图片和音频制作卡片，具体学习效果取决于内容和复习习惯。\nLinux 包为什么不是 ZIP？官方发行使用 tar.zst，安装 zstd 并按照官方解压和安装步骤操作。",
+  "documentationUrl": "https://docs.ankiweb.net/manual/getting-started",
+  "category": "reading",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/ankitects/anki/29bb700b951e3f0c0cb69b77c0180fc1fe33e6ba/docs-site/media/add_screen.png",
+      "sha256": "26b7ac57674a795ade30b3376a6e05bfc6ad2a4466060b0e59a5ae33da5fa9e5",
+      "mime": "image/png",
+      "caption": "官方示例：制作正反面记忆卡片",
+      "sourcePage": "https://github.com/ankitects/anki/blob/29bb700b951e3f0c0cb69b77c0180fc1fe33e6ba/docs-site/media/add_screen.png",
+      "licenseEvidence": "精确26.09.3官方docs-site文档截图，原root/LICENSE和docs-site/LICENSE明确CC BY-SA 4.0；保留Anki文档贡献者、原图来源与许可，文档资源树无独立media许可例外。",
+      "provenance": "已实际预览制卡编辑器，空正反面字段，无私密内容或第三方照片；仅WebP技术编码。",
+      "reviewed": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ankitects/anki/29bb700b951e3f0c0cb69b77c0180fc1fe33e6ba/docs-site/media/Statistics.png",
+      "sha256": "e25dd7c5968c35c5d30083aab7a3c8d9323aaaf4a327f6c6c7b80a0de45f2077",
+      "mime": "image/png",
+      "caption": "官方历史示例：复习计划与学习统计",
+      "sourcePage": "https://github.com/ankitects/anki/blob/29bb700b951e3f0c0cb69b77c0180fc1fe33e6ba/docs-site/media/Statistics.png",
+      "licenseEvidence": "精确26.09.3官方docs-site文档截图，原root/LICENSE和docs-site/LICENSE明确CC BY-SA 4.0；保留Anki文档贡献者、原图来源与许可，文档资源树无独立media许可例外。",
+      "provenance": "已实际预览统计界面，画面2023，为官方历史示例，不冒充维护者当前版本实测；仅WebP技术编码。",
+      "reviewed": true
+    }
+  ]
+}

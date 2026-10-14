@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "diskgenius",
+  "name": "DiskGenius",
+  "homepage": "https://www.diskgenius.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "diskgenius",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "管理磁盘分区、恢复文件并执行备份与还原。",
+  "icon": {
+    "url": "https://www.diskgenius.com/favicon.ico",
+    "sha256": "f234dbd7e0329a44b3e03b64fe146c05274b29c125ecef5e006f548a7908f073",
+    "mime": "image/x-icon"
+  },
+  "description": "DiskGenius：管理磁盘分区、恢复文件并执行备份与还原。\n\n磁盘写入操作前请备份重要数据。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 选择目标磁盘并核对容量与分区。先备份数据，再按需要使用分区管理或恢复功能；恢复文件保存到其他磁盘。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "screenshots": []
+}

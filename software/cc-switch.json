@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "cc-switch",
+  "name": "CC Switch",
+  "homepage": "https://ccswitch.io",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "cc-switch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "farion1231/cc-switch",
+          "assetPattern": "CC-Switch-v{version}-Windows-arm64-Portable.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "farion1231/cc-switch",
+          "assetPattern": "CC-Switch-v{version}-macOS.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "farion1231/cc-switch",
+          "assetPattern": "CC-Switch-v{version}-Linux-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "farion1231/cc-switch",
+          "assetPattern": "CC-Switch-v{version}-Linux-arm64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "为多种 AI 编程工具集中管理模型供应商、配置、MCP 和提示词。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/farion1231/cc-switch/a29a4f3868e9c6ffc2212957cfa66a718642e344/src-tauri/icons/icon.png",
+    "sha256": "04225b1b9c54569ec1ec850ad9f1c9f33ca4f286dab001a3392c0460deb342e5",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定v4.0.4官方Tauri应用图标，PNG已预览核对；保存根MIT版权与许可，检查路径无独立许可例外，不采用供应商第三方图标，仅作软件身份识别。"
+  },
+  "description": "CC Switch 是跨平台的 AI 编程工具配置管理器，可集中添加与切换模型供应商，管理 MCP、Skills、提示词和会话。4.0.4 正式版重新设计界面，并提供直连、路由与聚合模式，以及请求用量统计。它管理本机工具配置，不包含模型或服务额度，也不要求购买软件订阅。原版采用 MIT 许可。",
+  "usageInstructions": "1. Windows 10+ 按处理器下载便携 ZIP，解压后运行 cc-switch.exe；macOS 12+ 解压通用 ZIP，将 CC Switch.app 拖入应用程序。Linux 下载对应架构的 AppImage，添加执行权限后运行，系统需 glibc 2.35+ 与 WebKitGTK 4.1。\n2. 启动后选择已安装的受管应用，在供应商面板点击 +，选择适用预设或自定义，填写对应端点及 API Key 并保存。\n3. 点击供应商的启用或添加按钮，根据受管工具的方式使配置生效；需要重启的工具请关闭后重新启动。\n4. 在工具中进行一次简单请求，确认配置可用。更多 MCP、提示词、Skills 和路由设置按官方手册逐项配置。\n5. 修改现有复杂配置前备份工具配置及 ~/.cc-switch/ 数据；服务凭据与费用由你选用的供应商管理。",
+  "faq": "### 软件里包含模型或额度吗？\n不包含。CC Switch 管理配置，需要对应工具及所选择服务的凭据；模型服务费用与本软件无关。\n\n### 切换后为什么没变化？\n某些受管应用需要重新打开终端或重启客户端才重新读取配置。先核对当前供应商和受管工具，再按官方手册确认生效方式。\n\n### Intel Mac 和 Apple Silicon 怎么选？\n当前条目 macOS 包为原生通用应用，同时包含 x86_64 与 arm64。最低需要 macOS 12。\n\n### Linux 上打不开怎么办？\nAppImage 仍需要 glibc 2.35+ 与 WebKitGTK 4.1；较旧系统不符合要求。可查看官方安装手册中的 DEB/RPM 及依赖说明。\n\n### 原版许可在哪里？\nMIT 版权及许可全文见 https://github.com/farion1231/cc-switch/blob/a29a4f3868e9c6ffc2212957cfa66a718642e344/LICENSE 。",
+  "documentationUrl": "https://github.com/farion1231/cc-switch/blob/a29a4f3868e9c6ffc2212957cfa66a718642e344/docs/user-manual/zh/README.md",
+  "category": "ai",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/farion1231/cc-switch/a29a4f3868e9c6ffc2212957cfa66a718642e344/assets/release-notes/v4.0.0/main-zh.png",
+      "sha256": "c6603433c2cd9a9431813427a7a2faf84fa3d30ef68952cbe3dfc4732eb95205",
+      "mime": "image/png",
+      "caption": "官方4.0界面：集中管理供应商与直连、路由、聚合模式",
+      "sourcePage": "https://github.com/farion1231/cc-switch/releases/tag/v4.0.4",
+      "licenseEvidence": "固定提交官方仓库关联文档截图，根MIT LICENSE： https://github.com/farion1231/cc-switch/blob/a29a4f3868e9c6ffc2212957cfa66a718642e344/LICENSE 。检查资源所在路径无独立许可例外，保留版权与来源；不将软件许可扩大到图中第三方商标。",
+      "provenance": "从官方项目固定提交获取真实功能示意，已实际预览；不使用月刊热链，不伪造维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

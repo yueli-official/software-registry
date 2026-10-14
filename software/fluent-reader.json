@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fluent-reader",
+  "name": "Fluent Reader",
+  "homepage": "https://hyliu.me/fluent-reader/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fluent-reader",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yang991178/fluent-reader",
+          "assetPattern": "Fluent.Reader.{version}.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yang991178/fluent-reader",
+          "assetPattern": "Fluent.Reader.{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "RSS 阅读工具。",
+  "icon": {
+    "url": "https://hyliu.me/fluent-reader/imgs/icon.png",
+    "sha256": "4173bb0ec7cacff2f74e2179b1b97eff401cd6c75cb0e8b0094c9cc6e56207ac",
+    "mime": "image/png"
+  },
+  "description": "Fluent Reader 用于RSS 阅读。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开订阅设置，添加 RSS 地址或导入 OPML。刷新订阅并阅读文章，再按需要设置分类与阅读视图。\n\n### 其他平台安装\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "reading",
+  "screenshots": []
+}

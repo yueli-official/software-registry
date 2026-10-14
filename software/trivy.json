@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "trivy",
+  "name": "Trivy",
+  "homepage": "https://github.com/aquasecurity/trivy",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "trivy",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aquasecurity/trivy",
+          "assetPattern": "trivy_{version}_macOS-64bit.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aquasecurity/trivy",
+          "assetPattern": "trivy_{version}_macOS-ARM64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aquasecurity/trivy",
+          "assetPattern": "trivy_{version}_Linux-64bit.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aquasecurity/trivy",
+          "assetPattern": "trivy_{version}_Linux-ARM64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "aquasecurity/trivy",
+          "assetPattern": "trivy_{version}_Linux-32bit.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "检查镜像、文件系统与配置中的漏洞和风险项。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/aquasecurity/trivy/591e9799316a602e703f0b484f6c6d7b234ec8f3/docs/imgs/logo.png",
+    "sha256": "5b3b03c4c426b5da2966ec86f4536a6c3e67719832a678a501f74c242586ce58",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/aquasecurity/trivy/blob/591e9799316a602e703f0b484f6c6d7b234ec8f3/docs/imgs/logo.png"
+  },
+  "description": "Trivy 是独立的扫描工具，可检查容器镜像、文件系统、依赖及基础设施配置中的已知漏洞和相关问题。适合开发与运维流程，数据库更新、误报和实际影响仍需结合项目分析。\n\n### 源码与许可\n当前条目提供 0.75.0 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/aquasecurity/trivy/tree/591e9799316a602e703f0b484f6c6d7b234ec8f3) · [许可原文](https://github.com/aquasecurity/trivy/blob/591e9799316a602e703f0b484f6c6d7b234ec8f3/LICENSE)。",
+  "usageInstructions": "1. Windows/Mac 解压官方包；Debian/Ubuntu 安装 DEB，将 trivy 加入 PATH。\n2. 运行 trivy --help，按官方说明准备数据库与网络访问。\n3. 用 trivy fs 扫描一个自己的测试目录，或用 trivy image 检查测试镜像。\n4. 查看组件、版本、严重程度和修复信息。\n5. 确认影响后更新依赖或配置，再检查结果；CI 集成按官方指南配置。",
+  "faq": "能自动修好所有漏洞吗？主要提供检测信息，修复需要结合实际项目。\n必须联网吗？数据库准备与更新通常需要网络，离线使用按官方说明配置。",
+  "documentationUrl": "https://github.com/aquasecurity/trivy/blob/591e9799316a602e703f0b484f6c6d7b234ec8f3/README.md",
+  "category": "developer",
+  "screenshots": []
+}

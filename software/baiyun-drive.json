@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "baiyun-drive",
+  "name": "白云盘",
+  "homepage": "https://github.com/bilibilibaiyun/baiyun-drive",
+  "kind": "reference",
+  "packages": [],
+  "summary": "自托管网盘工具。",
+  "description": "白云盘 用于自托管网盘。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方部署文档配置服务和数据目录，启动后完成账号设置。上传测试文件检查下载和权限，再开始保存真实数据。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/bilibilibaiyun/baiyun-drive/blob/master/README.md",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(16,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">白云</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">白云盘</text></svg>",
+    "sha256": "cc8e3b6e8683cff09ee62f92460f55aca351afab01b60f04e64d01f961031239",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

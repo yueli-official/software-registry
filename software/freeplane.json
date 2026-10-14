@@ -1,0 +1,100 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "freeplane",
+  "name": "Freeplane",
+  "homepage": "https://www.freeplane.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "freeplane",
+          "architecture": "universal"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "freeplane/freeplane",
+          "assetPattern": "Freeplane-{version}-intel.dmg",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "freeplane/freeplane",
+          "assetPattern": "Freeplane-{version}-apple.dmg",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "freeplane/freeplane",
+          "assetPattern": "freeplane_{version}.upstream-1_all.deb",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用思维导图和大纲整理计划与知识。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/freeplane/freeplane/3a76de18523993a55bf885190438bffef38662a5/freeplane/src/editor/resources/images/Freeplane_frame_icon_512x512.png",
+    "sha256": "4c5a88128b56555fcc93eaf544a6c4e41dad00834fa423490b51284aa19b2927",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确1.13.3官方512px多色旋片围蓝色球的Freeplane产品资源；项目GPL2-or-later原版权及资源license核对，图片目录无独立例外，字体/主题及codeexplorer子图集不混同。保留作者和源码，仅WebP技术编码，不用作者头像或占位图。"
+  },
+  "description": "Freeplane 是开源思维导图工具，可以建立主题与分支、编辑节点、添加备注和链接，在导图与大纲视图中整理工作计划、学习笔记和知识结构。此条目提供完整官方原包，Windows 和 Linux 的 Java 通用包需要已有适合系统的 Java 运行环境。\n\n项目采用 GPL 2 或后续版本，保留 Freeplane/FreeMind 作者和贡献者，原版权包括 Joerg Mueller、Daniel Polansky、Christian Foltin、Dimitry Polivaev。对应 1.13.3 源码：https://github.com/freeplane/freeplane/tree/release-1.13.3 。原包及依赖许可保持，Gentium 字体为 SIL OFL 1.1、listcontrols 字体由 Daniel Bruce 制作并采用 CC BY-SA 4.0，主题及日历等组件保留各自原文，不统一改成主GPL。随附 Freeplane-1.13.3-LICENSES.zip 保存主许可、原版权来源和相关独立通知；Mac 原运行环境的法律文件也在原包保留。产品图标和两张文档功能图保留项目来源，截图是官方历史示例，此条目介绍由此条目编写。",
+  "usageInstructions": "1. Windows 解压完整 ZIP，安装适合自己系统的 Java 8 或 11–23，进入解压目录运行 freeplane.bat。Linux Debian/Ubuntu 安装原 .deb，并按包管理器提示满足 Java 依赖；此包为 Java 通用程序。macOS 选择 Intel 或 Apple Silicon DMG，将 Freeplane 应用放入应用程序目录后启动。\n2. 新建思维导图，将中心主题改为自己的计划或学习主题；选中节点后通过菜单添加子节点，给各分支添加具体事项。使用节点备注补充说明，需要时附上相关链接。\n3. 折叠或展开分支检查结构，在思维图和大纲视图中查看内容，保存为 Freeplane 导图文件。分享给他人时按需要使用导出功能，原导图文件继续保留用于编辑。",
+  "faq": "Windows 的通用包需要 Java 吗？需要。它包含完整编译后的 Freeplane 程序，启动脚本使用本机 Java；请安装适合系统的运行环境。\nMac 包怎么选择？Intel Mac 选 Intel DMG，Apple Silicon 选 Apple DMG；两包的实际主程序架构已分别核对。\n通用包是源码吗？不是。它包含实际 GUI 和启动器的 Java 字节码，原生启动器不代表整个 Java 程序的 CPU 限制。\n截图与现在的主题一样吗？图片为项目官方历史文档示例，当前主题可能不同，主要展示工作区与导图/大纲的组织方式。",
+  "documentationUrl": "https://docs.freeplane.org/",
+  "category": "office",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/freeplane/freeplane/3a76de18523993a55bf885190438bffef38662a5/freeplane/doc/Images/other/workspace/Freeplane%20workspace.png",
+      "sha256": "17dc320808145e5802660edc05b8aed313146176c7f892a23b6268a313d6cc89",
+      "mime": "image/png",
+      "caption": "官方历史示例：思维导图工作区",
+      "sourcePage": "https://github.com/freeplane/freeplane/blob/3a76de18523993a55bf885190438bffef38662a5/freeplane/doc/Images/other/workspace/Freeplane%20workspace.png",
+      "licenseEvidence": "精确1.13.3原项目doc/Images官方功能图及对应UserGuide，项目原GPL2-or-later/版权与doc目录无独立图片许可例外；保留Freeplane项目/文档贡献者与对应源码，字体和主题通知另保留，不将字体文件重新授权。",
+      "provenance": "已实际预览：真实工作区与默认中心主题，无个人素材照片；官方历史文档示例，不冒充维护者当前版本实测，只转WebP。",
+      "reviewed": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/freeplane/freeplane/3a76de18523993a55bf885190438bffef38662a5/freeplane/doc/Images/doc/mapView%20v%20outlineView.png",
+      "sha256": "044053c2412055db5c7fe97f571bbe4b8b7acf19b8c53c6cff536b1bc11e6d04",
+      "mime": "image/png",
+      "caption": "官方示例：思维图与大纲对比",
+      "sourcePage": "https://github.com/freeplane/freeplane/blob/3a76de18523993a55bf885190438bffef38662a5/freeplane/doc/Images/doc/mapView%20v%20outlineView.png",
+      "licenseEvidence": "精确1.13.3原项目doc/Images官方功能图及对应UserGuide，项目原GPL2-or-later/版权与doc目录无独立图片许可例外；保留Freeplane项目/文档贡献者与对应源码，字体和主题通知另保留，不将字体文件重新授权。",
+      "provenance": "已实际预览：动物分类的简短文字示例与对应大纲，无第三方照片或私人资料；官方历史文档示例，不冒充维护者当前版本实测，只转WebP。",
+      "reviewed": true
+    }
+  ]
+}

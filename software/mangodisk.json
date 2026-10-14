@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mangodisk",
+  "name": "MangoDisk",
+  "homepage": "https://mangodisk.app/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "harry0703/MangoDisk",
+          "assetPattern": "MangoDisk-*-windows-portable.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "harry0703/MangoDisk",
+          "assetPattern": "MangoDisk-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "harry0703/MangoDisk",
+          "assetPattern": "MangoDisk-{version}-linux-x64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "harry0703/MangoDisk",
+          "assetPattern": "MangoDisk-{version}-macos.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "磁盘清理与卸载工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/harry0703/MangoDisk/88d15ff66482884e7a9338425f317af7931cff1a/src-tauri/icons/windows/icon.ico",
+    "sha256": "4d7a0f166bf4a606c72a4fbf8910ad20bd5b988f461563cd2651e5b71423aa26",
+    "mime": "image/x-icon"
+  },
+  "description": "MangoDisk 用于磁盘清理与卸载。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 选择需要分析的磁盘或目录，扫描后查看占用情况。清理前逐项确认文件用途。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "system",
+  "screenshots": []
+}

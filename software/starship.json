@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "starship",
+  "name": "Starship",
+  "homepage": "https://starship.rs",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "starship",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "starship",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "starship",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "starship/starship",
+          "assetPattern": "starship-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "starship/starship",
+          "assetPattern": "starship-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "starship/starship",
+          "assetPattern": "starship-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "starship/starship",
+          "assetPattern": "starship-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "starship/starship",
+          "assetPattern": "starship-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨 Shell 的可配置终端提示符，显示目录、Git 状态与开发环境信息。",
+  "description": "Starship 为常用 Shell 提供统一且可配置的终端提示符，可按当前目录显示 Git 状态和语言环境等模块。安装二进制后还需要初始化对应 Shell；图标字符需要在终端中安装并启用 Nerd Font。它改变提示符显示，不是新的 Shell 或终端模拟器。\n\n当前条目提供 1.26.0 官方 Windows、macOS 和 Linux 原包。主项目 ISC，组件保留各自许可；固定源码：https://github.com/starship/starship/tree/v1.26.0 ，原许可资料见 starship-1.26.0-LICENSES.zip。",
+  "usageInstructions": "1. 按系统和 CPU 下载官方原包并解压，将 starship 程序目录加入 PATH；Mac/Linux 按需赋予执行权限。\n2. 在自己的终端安装并启用 Nerd Font，再运行 starship --version 确认程序可用。\n3. PowerShell 在自己的配置文件末尾加入 Invoke-Expression (&starship init powershell)；Bash 在 ~/.bashrc 末尾加入 eval \"$(starship init bash)\"。其他 Shell 按官方对应说明配置。\n4. 重开终端，进入自己的普通目录或 Git 项目，查看提示符的目录与仓库状态模块。\n5. 想调整颜色和模块时，按官方配置说明维护自己的 starship.toml；Windows Cmd 需要额外 Clink，不能直接套用 PowerShell 初始化。",
+  "faq": "这是终端软件吗？它是终端内 Shell 的提示符工具，需要已有 Shell。\n为什么有方块乱码？核对终端是否启用了合适的 Nerd Font。\n为什么解压后提示符没变化？需要初始化相应 Shell 并重新打开终端。",
+  "documentationUrl": "https://github.com/starship/starship/blob/v1.26.0/docs/zh-CN/guide/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Starship</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Shell Prompt</text></svg>",
+    "sha256": "e5d7b272738bf5adf02f7a22ba8c87c300a9d666bc8625e40c0afdfcaa417555",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

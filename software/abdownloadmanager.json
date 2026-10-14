@@ -1,0 +1,132 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "abdownloadmanager",
+  "name": "AB Download Manager",
+  "homepage": "https://abdownloadmanager.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_windows_x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_mac_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_mac_arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_linux_x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "amir1376/ab-download-manager",
+          "assetPattern": "ABDownloadManager_{version}_android_universal.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨平台下载管理器，支持任务队列、定时下载和浏览器集成。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/amir1376/ab-download-manager/afc57634b3c121c6415213242b2b600cccc6fd6e/desktop/app/icons/icon.png",
+    "sha256": "32466045dce58f31293c21f2eb8e0e7956b12bf5916a66b250edc11c86583bb8",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定版本 desktop/app/icons/icon.png 产品图标，已实际预览向下箭头及蓝紫色图形；核对项目 Apache-2.0 与资源目录，保留出处，仅转换为 WebP。 固定来源：https://github.com/amir1376/ab-download-manager/blob/afc57634b3c121c6415213242b2b600cccc6fd6e/desktop/app/icons/icon.png"
+  },
+  "description": "AB Download Manager 可添加与管理下载任务，提供队列、计划任务、暂停续传及浏览器扩展集成，并能按文件类别整理列表。支持桌面与 Android；下载速度与能否续传取决于网络及原服务器的支持，不保证所有链接都能加速。\n\n主体采用 Apache-2.0，随包运行时和组件沿用各自许可，保持完整官方原包。对应版本源码：https://github.com/amir1376/ab-download-manager/tree/afc57634b3c121c6415213242b2b600cccc6fd6e 。固定版本 desktop/app/icons/icon.png 产品图标，已实际预览向下箭头及蓝紫色图形；核对项目 Apache-2.0 与资源目录，保留出处，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 完整解压原 ZIP 后运行 ABDownloadManager.exe；Mac 打开对应 DMG 并复制应用；Linux 解压 tar.gz 后运行随包启动器；Android 安装官方通用 APK。保留完整运行环境与许可。\n2. 点击 Add URL，粘贴自己可访问的文件直链，确认保存目录和文件名，再开始下载。先用小文件确认网络与保存权限。\n3. 在任务列表暂停或继续下载，按需要把任务放入队列并设置开始时间；断点续传需要服务器支持 Range。\n4. 需要接管浏览器下载时，从官方说明安装对应浏览器扩展并连接本机应用；带登录或临时签名的链接仍受原服务限制。",
+  "faq": "能保证下载提速吗？不能，速度受原服务器、网络和连接设置影响。\n为什么有些链接不能续传？原服务器可能不支持 Range 或链接已失效。\nAndroid 包需要选架构吗？此条目提供官方通用 APK，已检查包内多架构 ABI。",
+  "documentationUrl": "https://github.com/amir1376/ab-download-manager/blob/afc57634b3c121c6415213242b2b600cccc6fd6e/README.md",
+  "category": "files",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/amir1376/ab-download-manager/afc57634b3c121c6415213242b2b600cccc6fd6e/assets/screenshots/app-home_light.png",
+      "sha256": "ab90c39b86d65aef0cd249ddb79f90f3a921b74248a22a1dca966a344bcabbc8",
+      "mime": "image/png",
+      "caption": "官方界面示例：按类别管理下载任务、队列与进度",
+      "sourcePage": "https://github.com/amir1376/ab-download-manager/blob/afc57634b3c121c6415213242b2b600cccc6fd6e/assets/screenshots/app-home_light.png",
+      "licenseEvidence": "官方版本 assets/screenshots 示例，根 LICENSE 为 Apache-2.0，资源目录未发现独立许可；正文保留项目与原图出处。",
+      "provenance": "已实际预览官方任务管理示例，无登录密钥或个人联系资料，不作为维护者下载任务实测。",
+      "reviewed": true
+    }
+  ]
+}

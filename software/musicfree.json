@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "musicfree",
+  "name": "MusicFree",
+  "homepage": "https://musicfree.catcat.work",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "maotoumao/MusicFree",
+          "assetPattern": "app-arm64-v8a-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "音乐播放器工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/maotoumao/MusicFree/d118b18b3d0c904400f7eea7bf99c0ceec6c1aee/src/assets/imgs/logo.png",
+    "sha256": "4461c2b20ab214e3752df62aa20706a3ef71598d0c8876d4e0ba08f3f9c4c12a",
+    "mime": "image/png"
+  },
+  "description": "MusicFree 用于音乐播放器。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 启动后按官方说明配置音乐插件或来源。选择可播放的内容，创建歌单并测试播放。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/maotoumao/MusicFree/blob/master/readme.md",
+  "category": "media",
+  "screenshots": []
+}

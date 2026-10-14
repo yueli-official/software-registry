@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ruff",
+  "name": "Ruff",
+  "homepage": "https://github.com/astral-sh/ruff",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "ruff",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "ruff",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "ruff",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "astral-sh/ruff",
+          "assetPattern": "ruff-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "astral-sh/ruff",
+          "assetPattern": "ruff-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "astral-sh/ruff",
+          "assetPattern": "ruff-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "astral-sh/ruff",
+          "assetPattern": "ruff-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "astral-sh/ruff",
+          "assetPattern": "ruff-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "快速检查Python代码规范并统一格式，支持pyproject.toml配置。",
+  "description": "Ruff将Python代码检查与格式化整合为独立命令行工具，支持在pyproject.toml设置规则，适合项目统一风格与CI检查。当前条目是已编译原包，无需安装Rust才能运行。",
+  "usageInstructions": "1. 解压对应系统原包，将ruff程序加入PATH。\n2. 在Python项目目录运行 ruff check . 查看代码问题。\n3. 用 ruff format --check . 检查格式；需要实际整理时再运行 ruff format .。\n4. 在pyproject.toml的tool.ruff配置里选择项目规则和目标Python版本。\n5. 对可自动修复的检查项可按需运行 ruff check --fix .，随后审查修改。",
+  "faq": "检查和格式化是同一个命令吗？分别使用ruff check和ruff format。\n能接入编辑器吗？官方提供VS Code等编辑器集成，当前条目只分发独立工具。",
+  "documentationUrl": "https://github.com/astral-sh/ruff/blob/3265ed1f944c98bb4c04d632fbefb1257cdb583d/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Ruff</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Python Linter</text></svg>",
+    "sha256": "b1469ac3e11f84392f25786a7a0d9418ecbd5d58ac58fcbe709ca6644b7c3751",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "canta",
+  "name": "Canta",
+  "homepage": "https://github.com/samolego/Canta",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "samolego/Canta",
+          "assetPattern": "androidApp-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v4.0.0"
+        }
+      }
+    }
+  ],
+  "summary": "配合 Shizuku 查看与卸载 Android 应用。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/samolego/Canta/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/icon.png",
+    "sha256": "0422ab768ab9530a2dffbc428f9df6ea4ef834668712293753586d5c990080d3",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/icon.png"
+  },
+  "description": "Canta 是 Android 应用管理工具，配合 Shizuku 查看软件并执行卸载操作。适合了解设备应用依赖的用户；项目列表中的建议标签不能保证每台设备都适合移除。当前条目实际包名 io.github.samolego.canta。\n\n### 源码与许可\n当前条目提供 4.0.0 官方原包。主项目许可：LGPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/samolego/Canta/tree/1146ce28b4ec7605d50bca23585044528b253085) · [许可原文](https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/phoneScreenshots/screenshot-main.png)；原作者及许可通知见[固定版许可](https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK，并按 Shizuku 官方说明启动服务。\n2. 打开 Canta，按需要授权 Shizuku。\n3. 搜索一个自己安装、可重新取得的测试应用并查看详情。\n4. 确认用途后尝试卸载，核对设备行为与恢复路径。\n5. 处理预装应用前确认厂商依赖，避免一次性批量移除不了解的系统组件。",
+  "faq": "必须 Root 吗？通常通过 Shizuku 的支持方式操作，具体取决于系统。\nRecommended 就保证可以删吗？不能，需结合设备和应用依赖判断。",
+  "documentationUrl": "https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/README.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/samolego/Canta/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/phoneScreenshots/screenshot-main.png",
+      "sha256": "8fc611a35a9101eaf4acc9bfc9e42efed24fffdf46c412249cf9ef2fec911493",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/phoneScreenshots/screenshot-main.png",
+      "caption": "Canta 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/metadata/en-US/images/phoneScreenshots/screenshot-main.png；原许可 https://github.com/samolego/Canta/blob/1146ce28b4ec7605d50bca23585044528b253085/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

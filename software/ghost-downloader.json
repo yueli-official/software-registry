@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ghost-downloader",
+  "name": "Ghost Downloader",
+  "homepage": "https://gd.xychr.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-*-Windows-x86_64-Setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-v{version}-Android-arm64-v8a.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-v{version}-Linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-v{version}-Linux-x86_64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-v{version}-macOS-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "XiaoYouChR/Ghost-Downloader-3",
+          "assetPattern": "Ghost-Downloader-v{version}-macOS-x86_64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://gd.xychr.com/apple-touch-icon.png",
+    "sha256": "8d0d1176b6821f9608fb81f792399970fb0f0f75395e498f1ecac73497f7aa50",
+    "mime": "image/png"
+  },
+  "description": "Ghost Downloader 用于下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 新建下载任务，粘贴链接并设置目录。开始后在任务列表查看进度与失败原因。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "files",
+  "screenshots": []
+}

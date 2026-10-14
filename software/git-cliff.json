@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "git-cliff",
+  "name": "git-cliff",
+  "homepage": "https://github.com/orhun/git-cliff",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "git-cliff",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-i686-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "orhun/git-cliff",
+          "assetPattern": "git-cliff-{version}-i686-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "从 Git 提交记录生成可配置的更新日志。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/orhun/git-cliff/5d996de8220d26c0cb8ff329d31791570cab262f/website/static/favicon/android-chrome-512x512.png",
+    "sha256": "4d56570de94624c0b1e5609952997fe509deb1fd4806a337e85ccd29d7b026fd",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/orhun/git-cliff/blob/5d996de8220d26c0cb8ff329d31791570cab262f/website/static/favicon/android-chrome-512x512.png"
+  },
+  "description": "git-cliff 是独立的 changelog 生成工具，支持提交筛选、分组和模板，适合整理版本变更说明。\n\n### 源码与许可\n当前条目提供 2.14.2 官方原包。主项目许可：MIT / Apache-2.0 双许可；独立组件遵循各自许可。[固定版本源码](https://github.com/orhun/git-cliff/tree/5d996de8220d26c0cb8ff329d31791570cab262f) · [许可原文](https://github.com/orhun/git-cliff/blob/5d996de8220d26c0cb8ff329d31791570cab262f/LICENSE-APACHE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 git-cliff 加入 PATH，运行 git-cliff --help 查看本版用法。\n3. 在自己的测试仓库按官方指南配置 cliff.toml，将生成内容写到新文件；人工核对提交范围、分类和遗漏后再使用。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "只有 Rust 代码库吗？当前条目提供可直接运行的 CLI 原版。\n生成结果无需编辑吗？提交信息质量影响结果，发布前仍需核对。",
+  "documentationUrl": "https://github.com/orhun/git-cliff/blob/5d996de8220d26c0cb8ff329d31791570cab262f/README.md",
+  "category": "developer",
+  "screenshots": []
+}

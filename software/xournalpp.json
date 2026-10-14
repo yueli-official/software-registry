@@ -1,0 +1,127 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "xournalpp",
+  "name": "Xournal++",
+  "homepage": "https://xournalpp.github.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "xournalpp",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "xournalpp",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xournalpp/xournalpp",
+          "assetPattern": "xournalpp-{version}-macOS-X64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xournalpp/xournalpp",
+          "assetPattern": "xournalpp-{version}-macOS-ARM64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xournalpp/xournalpp",
+          "assetPattern": "xournalpp-{version}-Ubuntu-noble-x86_64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xournalpp/xournalpp",
+          "assetPattern": "xournalpp-{version}-Ubuntu-noble-aarch64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "手写笔记、绘图与 PDF 批注。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xournalpp/xournalpp/938bdb8de4d32f38f48dd7f6544886722157a848/ui/pixmaps/com.github.xournalpp.xournalpp.png",
+    "sha256": "6792ab1a5e0f6638f39a9bd7197b6706a37436eb3c92a3a0301307cdd530d7df",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确1.3.8纸张x和橙铅笔官方产品PNG；copyright.txt明确2020 Luya Tshimbalanga、CC BY-SA4，独立于主GPL2。只转换WebP，公开说明保留作者、原图/许可链接和编码变更，不冒用通用占位或作者头像。"
+  },
+  "description": "Xournal++ 是手写笔记和 PDF 批注工具，可以用鼠标、手写笔或绘图板记录笔记，添加文字、形状和标注，并按页面与图层整理内容。适合学习笔记、阅读批注、草图和白板记录。此条目提供完整官方原包，图片为官方历史功能示例。\n\n主程序由 Xournal++/Xournal 团队与贡献者开发，采用 GPL 2 或后续版本；对应 1.3.8 源码和构建资料：https://github.com/xournalpp/xournalpp/tree/v1.3.8 。原程序包保持原字节。产品主图标版权 2020 Luya Tshimbalanga，许可 CC BY-SA 4.0（https://creativecommons.org/licenses/by-sa/4.0/）；此条目仅转换 WebP 编码，保留作者、许可和图片来源。界面工具图标另含 GPL3、ISC 和 CC BY-SA4，不统一改成主GPL2。官方历史截图及作者来源保留，此条目中文说明由此条目编写。\n\n同目录 Xournal++-1.3.8-LICENSES.zip 保留项目原 GPL、完整 copyright.txt 独立资源通知、原 Debian 版权、已核实 GTK/GLib/libsndfile/PortAudio 原通知与源码索引。动态运行库和字体等依各自原许可，源码与构建输入可从官方项目资料查阅；不声明原 Windows/Mac 包内都附齐外部许可文本。",
+  "usageInstructions": "1. Windows 解压匹配系统的 AMD64 或 ARM64 官方便携包，进入 bin 目录运行 xournalpp.exe；Mac 选择 Intel 或 Apple Silicon DMG，将 Xournal++.app 放入应用程序目录。Ubuntu 24.04（noble）及相应兼容系统选择 x64 或 ARM64 原 .deb，通过包管理器安装并满足系统依赖。\n2. 新建笔记，选择笔或文字工具，在页面写下一段测试内容；调整颜色、粗细，使用橡皮、选择和形状工具整理笔记。需要分开管理时使用图层，并检查图层可见性。\n3. 批注自己的 PDF 时，通过菜单打开 PDF，使用荧光笔、笔和文字工具添加注释。保存为可继续编辑的 .xopp 笔记，保留原 PDF；需要分享阅读时另导出 PDF，检查导出结果后再发送。",
+  "faq": "一定要手写板吗？不需要，鼠标和文字工具也可使用；手写笔与绘图板能提供更方便的输入。\n保存笔记和导出 PDF 有什么区别？.xopp 用于继续编辑笔记，导出的 PDF 用于阅读和分享；建议同时保留笔记文件与原 PDF。\nLinux 包适合所有发行版吗？本次官方原包面向 Ubuntu noble，相应系统依赖按包管理器处理，不把它当成无依赖通用 AppImage。\n公式工具需要额外配置吗？LaTeX 等扩展功能需要相应环境，普通手写和 PDF 标注可先使用。\n截图是当前系统主题吗？图片是官方历史示例，用于说明手写笔记和图层功能，当前外观可能不同。",
+  "documentationUrl": "https://github.com/xournalpp/xournalpp/wiki/User-Manual",
+  "category": "office",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/xournalpp/xournalpp/938bdb8de4d32f38f48dd7f6544886722157a848/readme/main.png",
+      "sha256": "4a615c71e2dd63175a8f62107563ebc3f99125103d22f248626a809f8ad87ec4",
+      "mime": "image/png",
+      "caption": "官方历史示例：手写笔记与页面管理",
+      "sourcePage": "https://github.com/xournalpp/xournalpp/blob/938bdb8de4d32f38f48dd7f6544886722157a848/readme/main.png",
+      "licenseEvidence": "精确版本README/readme官方项目截图；原项目GPL2-or-later和完整copyright.txt保留，界面资源另含GPL3/ISC/CCBYSA4，不把独立图标重新授权为主GPL。公开产品图标另明确Luya作者及CCBYSA4。",
+      "provenance": "实际预览：手写物理公式和简单图示、页面缩略图，无个人照片或凭据；官方历史功能示例，不冒充维护者当前版本实测，只转换WebP。",
+      "reviewed": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xournalpp/xournalpp/938bdb8de4d32f38f48dd7f6544886722157a848/readme/layer.png",
+      "sha256": "8f7f71c0f82cba3b731d7b7026bc17b75a1d84fdc6e4aca1b306e21fd82c1006",
+      "mime": "image/png",
+      "caption": "官方历史示例：图层管理",
+      "sourcePage": "https://github.com/xournalpp/xournalpp/blob/938bdb8de4d32f38f48dd7f6544886722157a848/readme/layer.png",
+      "licenseEvidence": "精确版本README/readme官方项目截图；原项目GPL2-or-later和完整copyright.txt保留，界面资源另含GPL3/ISC/CCBYSA4，不把独立图标重新授权为主GPL。公开产品图标另明确Luya作者及CCBYSA4。",
+      "provenance": "实际预览：手写数字1/2/3、图层可见性勾选与菜单，无私人素材；官方历史功能示例，不冒充维护者当前版本实测，只转换WebP。",
+      "reviewed": true
+    }
+  ]
+}

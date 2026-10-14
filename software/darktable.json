@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "darktable",
+  "name": "darktable",
+  "homepage": "https://github.com/darktable-org/darktable",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "darktable",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darktable-org/darktable",
+          "assetPattern": "darktable-{version}-woa64.exe",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darktable-org/darktable",
+          "assetPattern": "darktable-{version}-arm64.dmg",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darktable-org/darktable",
+          "assetPattern": "Darktable-{version}-x86_64.AppImage",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "darktable-org/darktable",
+          "assetPattern": "Darktable-{version}-aarch64.AppImage",
+          "tagPrefix": "release-",
+          "tagTemplate": "release-{version}"
+        }
+      }
+    }
+  ],
+  "summary": "以非破坏性流程管理 RAW 照片，调整色彩并导出。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/darktable-org/darktable/20891f6c6fa7be995e5bf9dff9d1ee5062051773/data/pixmaps/256x256/darktable.png",
+    "sha256": "eb32e16477010280d8cdddd880e50c76fcd0dac877264e1744a9269d8f3f0db3",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方项目原版产品标识，逐图核对产品身份及资源目录，无另行授权标记时不宣称美术资源具有源码同等许可；仅用于本产品说明与辨识，保留原形、比例和色彩，不暗示作者背书。资源及作者记录：https://github.com/darktable-org/darktable/blob/20891f6c6fa7be995e5bf9dff9d1ee5062051773/data/pixmaps/256x256/darktable.png"
+  },
+  "description": "darktable 是开源摄影工作流软件，结合照片管理和 RAW 显影，支持曝光、白平衡、色彩与局部调整。编辑通过参数记录，适合整理拍摄素材和批量处理照片；相机 RAW 支持以当前官方列表为准。\n\n### 源码与许可\n当前条目提供 5.6.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/darktable-org/darktable/tree/20891f6c6fa7be995e5bf9dff9d1ee5062051773) · [许可原文](https://github.com/darktable-org/darktable/blob/20891f6c6fa7be995e5bf9dff9d1ee5062051773/LICENSE)。",
+  "usageInstructions": "1. Windows 运行对应 CPU 安装程序；Mac 当前条目仅提供 Apple Silicon ARM64 DMG；Linux 使用 AppImage。\n2. 在 lighttable 导入一个照片目录，先保留原始文件。\n3. 打开照片进入 darkroom，调整曝光、白平衡与色彩。\n4. 返回照片列表，选择要导出的作品并设置格式、尺寸和目标目录。\n5. 检查输出照片；迁移或更新前保留数据库、参数文件及原片备份。",
+  "faq": "包含 Intel Mac 包吗？当前官方版本附件只有 ARM64 Mac 成品，当前条目不标成 Intel 原生版。\n所有相机 RAW 都支持吗？以官方相机和格式兼容信息为准。",
+  "documentationUrl": "https://github.com/darktable-org/darktable/blob/20891f6c6fa7be995e5bf9dff9d1ee5062051773/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

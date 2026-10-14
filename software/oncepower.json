@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "oncepower",
+  "name": "OncePower",
+  "homepage": "https://github.com/ilgnefz/once_power",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ilgnefz/once_power",
+          "assetPattern": "OncePower-*-Windows-x64-Portable.zip",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "批量文件处理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ilgnefz/once_power/f0679492c107ed7fbbb10cde3a082ecd690d28f6/assets/images/logo.png",
+    "sha256": "402909934d62b150bcf0633fba223c703803eedf01bb222a09a9738c6bb1e700",
+    "mime": "image/png"
+  },
+  "description": "OncePower 用于批量文件处理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 添加文件或文件夹，选择批量处理规则。先预览结果并用副本测试，再执行批量操作。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "files",
+  "screenshots": []
+}

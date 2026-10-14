@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "cemu",
+  "name": "Cemu",
+  "homepage": "https://github.com/cemu-project/Cemu",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cemu-project/Cemu",
+          "assetPattern": "cemu-{version}-windows-x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cemu-project/Cemu",
+          "assetPattern": "cemu-{version}-macos-12-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cemu-project/Cemu",
+          "assetPattern": "Cemu-{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在电脑运行 Wii U 程序，并配置输入与图形选项。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cemu-project/Cemu/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98/src/resource/logo_icon.png",
+    "sha256": "6458a99b8bd54e44857efa0f82bfd6035e7e072e7e080e3330e4e2cfe89cbd33",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/cemu-project/Cemu/blob/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98/src/resource/logo_icon.png"
+  },
+  "description": "Cemu 是独立的 Wii U 模拟器，可配置图形、控制器与自己的游戏数据。适合兼容程序运行与模拟测试；需要自己准备合法取得的数据，不随包提供商业游戏。当前条目 Mac 成品实际为 Intel。\n\n### 源码与许可\n当前条目提供 2.6 官方原包。主项目许可：MPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/cemu-project/Cemu/tree/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98) · [许可原文](https://github.com/cemu-project/Cemu/blob/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98/LICENSE.txt)。",
+  "usageInstructions": "1. Windows 解压官方 ZIP；Mac 打开 Intel DMG；Linux 使用 AppImage。\n2. 按官方入门指南配置数据位置和控制器。\n3. 打开自己的兼容测试程序或合法游戏数据。\n4. 先用基础设置核对显示、输入和声音。\n5. 按官方兼容说明调整选项，并备份自己的存档。",
+  "faq": "提供商业游戏和系统数据下载吗？当前条目只提供模拟器官方程序。\n能保证所有 Wii U 游戏流畅运行吗？兼容与性能取决于程序和设备。",
+  "documentationUrl": "https://github.com/cemu-project/Cemu/blob/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98/README.md",
+  "category": "games",
+  "screenshots": []
+}

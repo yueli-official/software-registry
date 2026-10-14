@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "activitywatch",
+  "name": "ActivityWatch",
+  "homepage": "https://activitywatch.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "activitywatch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ActivityWatch/activitywatch",
+          "assetPattern": "activitywatch-v{version}-macos-x86_64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ActivityWatch/activitywatch",
+          "assetPattern": "activitywatch-v{version}-macos-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ActivityWatch/activitywatch",
+          "assetPattern": "activitywatch-v{version}-linux-x86_64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "自动记录应用和窗口使用时间，在本地仪表盘查看时间分配。",
+  "description": "ActivityWatch 通过本地监测组件统计应用、窗口和离开电脑的时间，在本地网页仪表盘查看使用情况与分类。适合了解工作与学习时段如何分配。记录可包含应用名和窗口标题，数据由本地服务管理。当前条目选择0.14.0默认 classic aw-qt 发行，未混用官方仍标为实验性的 Tauri 前端。\n\n当前条目提供官方 Windows、Intel/Apple Silicon Mac 和 Linux 原 ZIP。主项目 MPL-2.0，打包组件保留各自许可；固定源码：https://github.com/ActivityWatch/activitywatch/tree/v0.14.0 ，原许可资料见 activitywatch-0.14.0-LICENSES.zip。",
+  "usageInstructions": "1. 下载对应系统和 CPU 的完整 ZIP 并解压，保留整个目录与随附组件。\n2. 运行目录中的 aw-qt（Windows 为 aw-qt.exe），它会启动托盘入口、本地服务与默认监测组件。\n3. 在浏览器打开 http://localhost:5600，等积累几分钟记录后查看 Activity 页面。\n4. 根据自己的应用用途调整活动分类，查看时间分布；若没有数据，先确认托盘进程和本地服务仍在运行。\n5. 需要开机启动时使用本版托盘的 Start at login 设置；只使用同一种前端，避免两个实例争用5600端口。",
+  "faq": "数据是否默认上传到云端？默认使用本地服务和数据存储。\n下载包为什么有多个程序？包含前端、服务器和监测组件，保留完整目录。\n能同时开启 classic 和 Tauri 吗？两者默认使用同一端口，当前条目提供默认classic版；官方Tauri版仍为实验性。",
+  "documentationUrl": "https://docs.activitywatch.net/en/latest/getting-started.html",
+  "category": "productivity",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">ActivityWatch</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Time Tracker</text></svg>",
+    "sha256": "028e8f0bf41624c980b3b1e85efdabda39823897f446fa2ca5f10ae7ce0f2e11",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

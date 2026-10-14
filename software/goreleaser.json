@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "goreleaser",
+  "name": "GoReleaser",
+  "homepage": "https://github.com/goreleaser/goreleaser",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Windows_x86_64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Windows_i386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Darwin_all.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Linux_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "goreleaser/goreleaser",
+          "assetPattern": "goreleaser_Linux_i386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "自动构建、打包和整理项目发行产物。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/goreleaser/goreleaser/1942d44355492f44cd3774c57bd3c27fe544dfe9/www/static/android-chrome-512x512.png",
+    "sha256": "134c4282abc6c8740505ba6962708e5deb427e03ecd709f238dc6eceea278590",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 Go gopher 原作者 Renee French；Go 官方图像许可 CC BY 4.0（https://go.dev/blog/gopher）。GoReleaser 官方衍生标识保留原样与项目贡献者归属。 原资源：https://github.com/goreleaser/goreleaser/blob/1942d44355492f44cd3774c57bd3c27fe544dfe9/www/static/android-chrome-512x512.png"
+  },
+  "description": "GoReleaser 是独立的发布自动化工具，可按配置生成归档、包和更新说明；当前条目提供开源版 CLI，不混入商业 Pro 包。\n\n### 源码与许可\n当前条目提供 2.18.3 官方原包。主项目许可：MIT，Pro 产品另有条款；独立组件遵循各自许可。[固定版本源码](https://github.com/goreleaser/goreleaser/tree/1942d44355492f44cd3774c57bd3c27fe544dfe9) · [许可原文](https://github.com/goreleaser/goreleaser/blob/1942d44355492f44cd3774c57bd3c27fe544dfe9/LICENSE.md)。\n\n图标中的 Go gopher 原作者为 Renee French，原图按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；来源与许可见 [Go 官方说明](https://go.dev/blog/gopher)。此条目保留 GoReleaser 官方衍生图标，仅转换格式，不暗示作者背书。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 goreleaser 加入 PATH，运行 goreleaser --help 查看本版用法。\n3. 在自己的测试项目按官方指南准备 .goreleaser.yaml，先执行本版支持的配置检查和 snapshot 构建；核对生成产物后，正式发布按自己的账号及发布授权配置。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "是 Go SDK 吗？这是完整的构建发行工具，项目编译器和依赖另行准备。\n试运行会发布远端吗？先使用官方本地 snapshot 流程，正式发布需自己配置。",
+  "documentationUrl": "https://github.com/goreleaser/goreleaser/blob/1942d44355492f44cd3774c57bd3c27fe544dfe9/README.md",
+  "category": "developer",
+  "screenshots": []
+}

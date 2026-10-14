@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ditto",
+  "name": "Ditto",
+  "homepage": "https://ditto-cp.sourceforge.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ditto",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "记录、搜索和重复粘贴剪贴板历史的Windows工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/sabrogden/Ditto/a80fd3536bc407cac8cce43b5682022282ace983/res/Martin_Icon.png",
+    "sha256": "baeb9b4846f704bed456355d588243ef0ced992384dfacfab43323dbb693c90f",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览官方产品资源res/Martin_Icon.png，不是头像或广告；固定提交与摘要，版本原LICENSE和当前根许可文本一致，资源目录无独立许可例外。保留官方项目来源与根GPL-3.0，仅转换为WebP。"
+  },
+  "description": "Ditto 可保存复制过的文字、图片等剪贴板内容，搜索历史条目并再次粘贴，适合整理资料、写文档和重复输入文本。支持分组、快捷键和常用条目管理，记录主要保存在本地。采用GPL-3.0；此条目保留完整官方便携ZIP，并在同版夸克目录附原LICENSE。对应3.25.113.0源码：https://github.com/sabrogden/Ditto/tree/3.25.113.0 。产品标识取自官方res/Martin_Icon.png，保留原项目与根GPL许可，此条目只转换为WebP。",
+  "usageInstructions": "1. Windows x64解压完整DittoPortable ZIP，进入Ditto目录运行Ditto.exe；保留程序周边文件及同版LICENSES.zip。\n2. 复制一段自己的文字，点击系统托盘中的Ditto图标打开历史窗口；也可使用默认Ctrl加反引号键（键盘上通常与波浪号同键）。输入关键词查找记录。\n3. 切回需要粘贴的应用，再打开Ditto选择对应条目并双击或按Enter粘贴。通过托盘菜单的选项配置快捷键、历史保存数量和排除应用；网络同步功能按官方Wiki单独配置。",
+  "faq": "一定要联网吗？本地记录和检索不要求云端账号，网络复制功能需自行配置。\n为什么快捷键没反应？检查快捷键冲突、Ditto是否正在运行，先用托盘图标打开窗口。\n怎么避免记录敏感内容？按官方Wiki配置排除应用、保存规则和历史清理，使用自己的密码管理器时检查实际行为。\n便携版能只复制单个EXE吗？建议保留完整解压目录，避免缺失运行库、语言资源或配置。",
+  "documentationUrl": "https://github.com/sabrogden/Ditto/wiki",
+  "category": "productivity",
+  "screenshots": []
+}

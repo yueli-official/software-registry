@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rustdesk",
+  "name": "RustDesk",
+  "homepage": "https://rustdesk.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rustdesk",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rustdesk/rustdesk",
+          "assetPattern": "rustdesk-{version}-aarch64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rustdesk/rustdesk",
+          "assetPattern": "rustdesk-{version}-x86_64-sciter.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rustdesk/rustdesk",
+          "assetPattern": "rustdesk-{version}-aarch64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rustdesk/rustdesk",
+          "assetPattern": "rustdesk-{version}-universal-signed.apk",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rustdesk/rustdesk",
+          "assetPattern": "rustdesk-{version}-x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "远程桌面工具。",
+  "icon": {
+    "url": "https://rustdesk.com/_astro/apple-touch-icon.DNoXgPv7.png",
+    "sha256": "8d2523dcc7e61bcd2b39d2e17579c0a75e34b5972c30b8cb125f0015945403c7",
+    "mime": "image/png"
+  },
+  "description": "RustDesk 用于远程桌面。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 在两台设备上运行 RustDesk。查看被控端 ID，输入到控制端并发起连接，由被控端确认；无人值守访问需单独配置安全密码。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- Android universal：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "network",
+  "screenshots": []
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bsod-pomodoro",
+  "name": "BSOD Pomodoro",
+  "homepage": "https://github.com/HuaJi2077/bsod-pomodoro",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HuaJi2077/bsod-pomodoro",
+          "assetPattern": "BSOD-Pomodoro-Desktop-*.zip",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "番茄钟工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/HuaJi2077/bsod-pomodoro/e6fd19ef8d9c3ba51e9ab56b4f95f35d16003f46/icon/logo.ico",
+    "sha256": "69c1620f963ffc12a577b6a2fffe53a0abacb83f443fb6d1b5be8981849e0d42",
+    "mime": "image/x-icon"
+  },
+  "description": "BSOD Pomodoro 用于番茄钟。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 解压后打开程序，配置工作与休息时长。先用短计时测试提醒，再启用需要的专注效果。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/HuaJi2077/bsod-pomodoro/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

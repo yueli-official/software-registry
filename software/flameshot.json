@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flameshot",
+  "name": "Flameshot",
+  "homepage": "https://flameshot.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "flameshot",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "flameshot-org/flameshot",
+          "assetPattern": "Flameshot-*-macos-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "flameshot-org/flameshot",
+          "assetPattern": "flameshot-v*-artifact-ubuntu-24.04-amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "flameshot-org/flameshot",
+          "assetPattern": "flameshot-v*-artifact-ubuntu-24.04-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "截图、标注和复制图片，快速分享屏幕内容。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/flameshot-org/flameshot/e408812d77ff1835957f85796c4cf737466bd69d/data/img/app/flameshot.png",
+    "sha256": "4ffbff082997e897dfb2d92fa7eaab00629f7106f8601d08a6f9f785d6d81954",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览固定v14.0.0官方紫底火焰PNG；原包copyright明确产品图标独立Free Art License1.3/2017 lupoDharkael，固定源码另有图标许可全文GitBlob，保留署名、原图及许可链接，网站WebP仍使用同一许可。"
+  },
+  "description": "Flameshot 是开源截图与标注工具，支持框选屏幕区域，添加箭头、文字和形状，并将图片保存或复制到剪贴板。适合写教程、交流问题和整理工作记录。\n\n此条目保留未修改的官方 14.0.0 成品包，主程序采用 GPL 3.0 及以后版本；各内置组件和素材保留各自许可，不统一重新授权。对应源码与构建资料：https://github.com/flameshot-org/flameshot/tree/v14.0.0 。Linux 原包文件名中的构建标识及平台要求保留；夸克目录中的 Flameshot-14.0.0-LICENSES.zip 提供原许可与组件通知。\n\n产品图标：2017 lupoDharkael，采用 Free Art License 1.3。此条目仅转换为 WebP，图标继续遵守同一许可；不表示作者背书。原图：https://github.com/flameshot-org/flameshot/blob/e408812d77ff1835957f85796c4cf737466bd69d/data/img/app/flameshot.png ；许可全文：https://github.com/flameshot-org/flameshot/blob/e408812d77ff1835957f85796c4cf737466bd69d/data/img/app/flameshotLogoLicense.txt 。",
+  "usageInstructions": "1. Windows 解压官方 ZIP，打开其中 bin/flameshot.exe；Mac 本批已核验的是 Apple Silicon ARM64 DMG，安装后按系统要求授予屏幕录制权限；Linux 本批是 Ubuntu 24.04 原 ZIP，先解压，再通过系统包管理器安装其中相应架构 DEB 并满足依赖。\n2. 首次使用先打开一页不含隐私的测试内容，从托盘菜单开始截图；Linux 可运行 flameshot gui 打开交互截图。拖动鼠标框选一个区域。\n3. 在工具栏添加一个箭头或矩形，试写一段标注文字，再用复制按钮将结果粘贴到自己的文档，或用保存按钮存到本地。\n4. 在设置中按习惯调整颜色、线宽与快捷键。重要原图另存备份；发送截图前检查是否带有个人信息。",
+  "faq": "Mac 支持 Intel 吗？本批已核验的原主程序为 Apple Silicon ARM64，Intel 用户请查看官方发行说明，不使用 ARM64 包。\nLinux 包适用于所有发行版吗？本批原 DEB 面向 Ubuntu 24.04，其他系统按官方文档选择安装方式和依赖。\n为什么截图没有出现？先确认系统允许屏幕录制；Linux 的桌面环境和 Wayland 权限流程可能不同，按官方说明排查。\n必须上传截图才能使用吗？可以仅保存到本地或复制到剪贴板。",
+  "documentationUrl": "https://github.com/flameshot-org/flameshot/tree/v14.0.0#usage",
+  "category": "capture",
+  "screenshots": []
+}

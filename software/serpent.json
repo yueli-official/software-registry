@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "serpent",
+  "name": "Serpent",
+  "homepage": "https://serpent.dolag.work/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dolag233/Serpent",
+          "assetPattern": "Serpent-win-x86-64-{version}-setup.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v0.2.9"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dolag233/Serpent",
+          "assetPattern": "Serpent-darwin-arm64-{version}-package.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "面向设计与游戏美术的开源素材管理工具，支持标签、预览和资源库同步。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dolag233/Serpent/f58701a6c06a41c075ef8fe8c6f48b7a6305f498/assets/icons/app.png",
+    "sha256": "3fe0200649509fcc1add01aea6e5231cdc8794ee2034806b2f373e854e322fed",
+    "mime": "image/png"
+  },
+  "description": "Serpent 可管理图片、视频、音频、3D 模型与文本素材，通过标签、评分、描述、文件夹及合集整理资源。支持多标签工作区、搜索过滤、Eagle/Billfish 资源库转换、WebDAV 同步，以及插件、脚本和 MCP 扩展；AI 分析需要单独配置服务。0.2.9 新增 FLV 播放、动画 GIF 播放控制和侧栏文件夹搜索。",
+  "usageInstructions": "1. 选择对应系统：Windows x64 下载 setup.zip，解压后运行内含安装程序；Mac Apple Silicon 下载 arm64 DMG，打开后将 Serpent 拖到“应用程序”。本版没有 Intel Mac 成品附件。\n2. 首次启动选择“创建资源库”，为素材库选择保存位置；以后从主菜单→资源库打开已有库。\n3. 拖入文件或文件夹，或使用“导入文件/导入文件夹”；素材会复制到库内。需要引用原目录时使用“导入链接文件夹”。\n4. 在右侧检查器添加标签、评分和描述，用合集归类；在顶部搜索或过滤，双击素材预览，Esc 返回。\n5. 需要跨设备同步时按官方文档配置 WebDAV；AI 功能在设置中配置自己的服务。升级或执行“从硬盘删除”前先备份资源库。",
+  "faq": "### Intel Mac 可以用这个包吗？\n0.2.9 只发布了 macOS arm64 成品包，适用于 Apple Silicon，不能标成通用包。\n\n### 导入会移动原文件吗？\n普通导入将文件复制到资源库；链接文件夹引用原目录。删除操作请留意“移入回收站”和“从硬盘删除”的区别。\n\n### 是否必须配置 AI 或云同步？\n基础整理和浏览可在本地使用；AI 服务与 WebDAV 均需自行配置。\n\n### 更新会删除素材库吗？\n资源库与应用安装目录独立，升级前仍建议备份数据库和素材。",
+  "documentationUrl": "https://serpent.dolag.work/docs/user-guide/",
+  "category": "graphics",
+  "screenshots": []
+}

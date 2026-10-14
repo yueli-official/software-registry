@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notepadnext",
+  "name": "Notepad Next",
+  "homepage": "https://github.com/dail8859/NotepadNext",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notepadnext",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dail8859/NotepadNext",
+          "assetPattern": "NotepadNext-v{version}-win64-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dail8859/NotepadNext",
+          "assetPattern": "NotepadNext-v{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dail8859/NotepadNext",
+          "assetPattern": "NotepadNext-v{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dail8859/NotepadNext",
+          "assetPattern": "NotepadNext-v{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持代码高亮、多窗格、查找替换的跨平台文本编辑器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dail8859/NotepadNext/adfd1280146b917560e1dd98c93e5bd3a31222f2/src/icons/NotepadNext.png",
+    "sha256": "fe1b19f1e2b080f0b8ea1819bb00d547507187b4cbada65741cfdae91347931e",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览白色文档与绿色加号官方产品标識，固定src/icons/NotepadNext.png与v0.15同Blob；核根GPL及产品资源无独立例外，保留Justin Dailey/原作者。界面15个Silk工具栏图标已单独按Mark James CC BY2.5署名，不以根GPL覆盖；维护者只转换为WebP。"
+  },
+  "description": "Notepad Next 是独立的跨平台文本编辑器，借鉴Notepad++的使用方式，提供语法高亮、多个编辑窗格、搜索和替换，适合试用不同的桌面代码编辑工具。当前条目固定0.15完整Windows x64/ARM64、Mac Intel/Apple Silicon和Linux x64原包。项目仍在开发，官方提示存在未完成实现，重要文件应先备份并在副本上试用。主程序采用GPL-3.0，保留Justin Dailey和原作者署名；Qt、Scintilla、Lexilla、Lua等组件沿用各自许可，此条目保留完整官方原包和同版原LICENSES.zip。源码：https://github.com/dail8859/NotepadNext/tree/v0.15 。官方产品图标和公开代码编辑示例来自固定资源，此条目仅转换为WebP；已核实Silk工具栏图标由Mark James提供，采用CC BY 2.5，原来源：http://www.famfamfam.com/lab/icons/silk/ ，官方作者资源：https://github.com/markjames/famfamfam-silk-icons ，许可：https://creativecommons.org/licenses/by/2.5/ 。",
+  "usageInstructions": "1. Windows按x64或ARM64选择完整ZIP，解压后运行NotepadNext.exe；Mac打开对应Intel或Apple Silicon的DMG，把NotepadNext.app放入应用程序目录；Linux x64下载完整AppImage，按系统要求赋予执行权限，并依官方说明处理AppImage运行依赖。保留同版LICENSES.zip及原程序周边文件。\n2. 先复制一个自己的TXT、JSON或脚本文件，用文件菜单打开副本，尝试编辑少量文字并另存为新文件，重新打开确认编码与内容。\n3. 使用查找入口搜索普通关键词，再按需要尝试正则或替换；通过窗口和标签操作打开多个文件，试用分窗格阅读同一项目的不同文件。\n4. 按官方README和设置调整语言、编码、缩进及快捷键。它仍有尚未完成的实现，先在副本验证自己的操作流程，不把未保存内容或关键工作直接交给试验性功能。",
+  "faq": "它与Notepad++是同一软件吗？不是，是独立的跨平台实现，功能与插件兼容性不能按Notepad++直接推断。\n只有Windows版吗？当前条目同一0.15有Windows x64/ARM64、Mac Intel/Apple Silicon和Linux x64五个原包。\n可以直接用于重要工作吗？官方README提示仍存在bug和未完成实现，先备份并在副本测试需要的功能。\n图标都采用GPL吗？主项目和原工具栏素材分别处理，已核实Silk图标采用Mark James的CC BY2.5许可，保留原署名和通知。",
+  "documentationUrl": "https://github.com/dail8859/NotepadNext#installation",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/dail8859/NotepadNext/adfd1280146b917560e1dd98c93e5bd3a31222f2/doc/screenshot.png",
+      "sha256": "7e04d411a3a0493bef5e8b2cebfcf78282c0845754cd8d215f6862ff2579f8d3",
+      "mime": "image/png",
+      "caption": "官方功能示例：多窗格代码编辑与搜索",
+      "sourcePage": "https://github.com/dail8859/NotepadNext/blob/adfd1280146b917560e1dd98c93e5bd3a31222f2/doc/screenshot.png",
+      "licenseEvidence": "固定官方doc/screenshot.png实际展示项目自己的公开C++文件和搜索，核根GPL-3.0与doc无独立许可例外；保留Justin Dailey和项目来源。工具栏中的15个原Silk图标GitBlob精确匹配Mark James官方原资源，独立CC BY2.5，保留http://www.famfamfam.com/lab/icons/silk/及https://github.com/markjames/famfamfam-silk-icons ，许可https://creativecommons.org/licenses/by/2.5/ 。不声明所有图标为GPL。",
+      "provenance": "已实际预览官方历史功能示例，非维护者实测截图；仅PNG转换为WebP，不保证与当前主题每项外观一致。",
+      "reviewed": true
+    }
+  ]
+}

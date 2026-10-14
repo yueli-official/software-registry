@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "chrono",
+  "name": "Chrono",
+  "homepage": "https://github.com/vicolo-dev/chrono",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "vicolo-dev/chrono",
+          "assetPattern": "chrono-v*-arm64-v8a.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓时钟与计时工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/vicolo-dev/chrono/9e30f243271a27e79573e2b2d3da10159419eb8e/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "300d37b6db5c9ab7aa8045a93f4ce45b3313d0d4aedf848f21cb083151fa8a00",
+    "mime": "image/png"
+  },
+  "description": "Chrono 用于安卓时钟与计时。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 打开软件选择时钟、倒计时或计时功能，设置时间与提醒。先用短计时确认通知和铃声。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/vicolo-dev/chrono/blob/master/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

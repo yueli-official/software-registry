@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mineru",
+  "name": "MinerU",
+  "homepage": "https://opendatalab.github.io/MinerU/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "文档解析工具。",
+  "icon": {
+    "url": "https://opendatalab.github.io/MinerU/images/logo.png",
+    "sha256": "0d7b2a19d64a5eb6baa2a3e8449f735c67e3d1e8bc0bc39deb19b2ecca7a4448",
+    "mime": "image/png"
+  },
+  "description": "MinerU 用于文档解析。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方说明配置环境和模型，导入测试 PDF 或图片文档。查看解析文本、表格和版面结果，再导出需要的格式。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/opendatalab/MinerU/blob/master/README.md",
+  "category": "ai",
+  "screenshots": []
+}

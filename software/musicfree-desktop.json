@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "musicfree-desktop",
+  "name": "MusicFree 桌面版",
+  "homepage": "https://github.com/maotoumao/MusicFreeDesktop",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "maotoumao/MusicFreeDesktop",
+          "assetPattern": "MusicFree-{version}-win32-x64-portable.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "maotoumao/MusicFreeDesktop",
+          "assetPattern": "MusicFree-{version}-darwin-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "maotoumao/MusicFreeDesktop",
+          "assetPattern": "MusicFree-{version}-darwin-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "maotoumao/MusicFreeDesktop",
+          "assetPattern": "MusicFree-{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过插件扩展音乐搜索与播放，管理本地歌曲和歌单。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/maotoumao/MusicFreeDesktop/12b9acc606c3de8247886944b6808ca6a74e45a0/res/logo.png",
+    "sha256": "4461c2b20ab214e3752df62aa20706a3ef71598d0c8876d4e0ba08f3f9c4c12a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本中的产品图标，实际原图与页面产品身份已预览核对；不修改产品标识、不暗示作者背书；图片原始归属及源码见 https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/res/logo.png，许可资料见 https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/LICENSE"
+  },
+  "description": "MusicFree 桌面版是可通过插件扩展的开源音乐播放器，支持本地音乐、歌单和界面主题。软件本身不内置音乐平台音源；联网搜索、播放和歌单导入取决于用户配置的插件与其服务条件。\n\n### 源码与许可\n当前条目提供 0.0.8 官方原包。主项目许可：AGPL-3.0；组件保留各自许可。[固定版本源码](https://github.com/maotoumao/MusicFreeDesktop/tree/12b9acc606c3de8247886944b6808ca6a74e45a0) · [许可资料](https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/LICENSE)。\n\n作者在官方说明中要求保留代码出处，并提示不用于商业用途；当前条目仅指向官方原包，使用约定请见[官方说明](https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/README.md)。",
+  "usageInstructions": "1. Windows 原便携包包含两层 ZIP，先解压外层，再解压其中同名 ZIP 并运行 MusicFree；macOS 打开对应处理器的 DMG；Linux 在 Debian/Ubuntu 系安装 DEB。\n2. 先添加本地音乐，检查播放与音量是否正常。\n3. 如需联网功能，在插件管理中按官方说明配置可信插件。\n4. 搜索或导入自己有权使用的音乐，创建歌单并调整播放器设置。\n5. 主题包和插件有各自的说明与兼容条件，更新前保留自己的配置。",
+  "faq": "软件自带所有平台音乐吗？没有内置音源，在线功能由用户配置的插件提供。\n这是安卓版吗？这是独立的桌面产品，安卓版已有单独软件页面。\n为什么 Windows 要解压两次？官方便携原包自身含一个同名 ZIP，当前条目保留其原始结构。",
+  "documentationUrl": "https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/README.md",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/maotoumao/MusicFreeDesktop/12b9acc606c3de8247886944b6808ca6a74e45a0/.imgs/screenshot.png",
+      "sha256": "731b0d005f6ab0771c7cbaa13f8d0ddd24123e6b6c3da9785b90ba8249ce8c59",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/.imgs/screenshot.png",
+      "caption": "MusicFree 桌面版官方歌单与播放界面",
+      "licenseEvidence": "官方固定版本 README 随附的真实产品截图，保留原归属与固定源；主项目 AGPL-3.0，许可 https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/LICENSE；官方文档 https://github.com/maotoumao/MusicFreeDesktop/blob/12b9acc606c3de8247886944b6808ca6a74e45a0/README.md",
+      "provenance": "已查看官方原图、产品身份与实际界面；固定Git Blob和SHA256，保留来源与归属；展示示例界面，不声称为维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

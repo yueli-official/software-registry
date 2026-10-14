@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "grex",
+  "name": "grex",
+  "homepage": "https://github.com/pemistahl/grex",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "grex",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pemistahl/grex",
+          "assetPattern": "grex-v{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pemistahl/grex",
+          "assetPattern": "grex-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pemistahl/grex",
+          "assetPattern": "grex-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pemistahl/grex",
+          "assetPattern": "grex-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pemistahl/grex",
+          "assetPattern": "grex-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "从示例文本生成可检查的正则表达式。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/pemistahl/grex/db9275ace11ad455700656c6186e0d69f6107870/logo.png",
+    "sha256": "6b38c4e923adb9a848d97aac337c3077dbbfc98e7ba64a67a3517b1c2304362f",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/pemistahl/grex/blob/db9275ace11ad455700656c6186e0d69f6107870/logo.png"
+  },
+  "description": "grex 是独立的正则表达式生成工具，根据输入示例归纳匹配表达式。适合制作和调整文本匹配规则；生成结果仍需结合正例、反例与目标正则引擎验证。\n\n### 源码与许可\n当前条目提供 1.4.6 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/pemistahl/grex/tree/db9275ace11ad455700656c6186e0d69f6107870) · [许可原文](https://github.com/pemistahl/grex/blob/db9275ace11ad455700656c6186e0d69f6107870/LICENSE)。",
+  "usageInstructions": "1. 解压平台官方原包，将 grex 加入 PATH。\n2. 运行 grex --help 查看输入与转换选项。\n3. 输入少量自己的样本字符串生成表达式。\n4. 在实际使用的正则引擎中加入正例与反例进行测试。\n5. 根据需要调整字符类和数量规则后再用于批量数据。",
+  "faq": "少量样本能证明所有匹配都正确吗？不能，必须检查不应匹配的反例。\n这是完整应用还是只有代码库？当前条目提供独立命令行原版，不把库或 SDK 当软件包。",
+  "documentationUrl": "https://github.com/pemistahl/grex/blob/db9275ace11ad455700656c6186e0d69f6107870/README.md",
+  "category": "developer",
+  "screenshots": []
+}

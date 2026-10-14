@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "orcaslicer",
+  "name": "OrcaSlicer",
+  "homepage": "https://github.com/OrcaSlicer/OrcaSlicer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "orcaslicer",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OrcaSlicer/OrcaSlicer",
+          "assetPattern": "OrcaSlicer_Windows_V{version}_arm64_portable.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OrcaSlicer/OrcaSlicer",
+          "assetPattern": "OrcaSlicer_Mac_universal_V{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OrcaSlicer/OrcaSlicer",
+          "assetPattern": "OrcaSlicer_Linux_AppImage_Ubuntu2404_V{version}.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OrcaSlicer/OrcaSlicer",
+          "assetPattern": "OrcaSlicer_Linux_AppImage_Ubuntu2404_aarch64_V{version}.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "为 3D 打印模型切片，校准耗材并预览打印路径。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/OrcaSlicer/OrcaSlicer/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/OrcaSlicer.png",
+    "sha256": "fcf2f11a86488d753e452fa5a9800c4551909bf4fb12765fa74fe3f7b6438308",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方项目原版产品标识，逐图核对产品身份及资源目录，无另行授权标记时不宣称美术资源具有源码同等许可；仅用于本产品说明与辨识，保留原形、比例和色彩，不暗示作者背书。资源及作者记录：https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/OrcaSlicer.png"
+  },
+  "description": "OrcaSlicer 是开源 3D 打印切片工具，提供打印机与耗材配置、支撑生成、切片预览及流量等校准功能。适合准备 FDM 打印任务；打印机连接、云服务和网络插件依具体设备及官方说明而定。\n\n### 源码与许可\n当前条目提供 2.4.2 官方原包。主项目许可：AGPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/OrcaSlicer/OrcaSlicer/tree/8500fcdccaa10b5099ac20d252af3a7c560046f1) · [许可原文](https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/LICENSE.txt)。\n\n校准图为[OrcaSlicer 官方项目资料](https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/flow_rate_calibration_coarse_result_CN.png)中的流量校准打印结果示例，仅做图片格式转换。",
+  "usageInstructions": "1. Windows 解压便携 ZIP；Mac 打开 DMG；Linux 选择对应 CPU 的 Ubuntu 24.04 AppImage。\n2. 首次启动选择自己的打印机型号、喷嘴和耗材配置。\n3. 导入 STL 或 3MF 模型，调整方向、层高、填充和支撑。\n4. 切片后检查逐层预览、预计耗材和打印时间。\n5. 确认打印机配置与实机一致，再导出 G-code；需要校准时按官方流程逐项测试。",
+  "faq": "能直接用于任何打印机吗？必须选择匹配的设备及固件配置。\nLinux 包适用什么环境？当前条目为官方 Ubuntu 24.04 AppImage，其他发行版需核对兼容条件。",
+  "documentationUrl": "https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/README.md",
+  "category": "graphics",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/OrcaSlicer/OrcaSlicer/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/flow_rate_calibration_coarse_result_CN.png",
+      "sha256": "c6de233199262908be1925ba4dff84e20b0e1788099242c6734699a8fd9f5aa8",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/flow_rate_calibration_coarse_result_CN.png",
+      "caption": "OrcaSlicer 官方流量校准打印结果示例",
+      "licenseEvidence": "官方固定版校准资料图，保留项目贡献者署名与原资源；不作为维护者实测或完整主界面截图。来源 https://github.com/OrcaSlicer/OrcaSlicer/blob/8500fcdccaa10b5099ac20d252af3a7c560046f1/resources/images/flow_rate_calibration_coarse_result_CN.png",
+      "provenance": "已实际预览原图、功能内容和固定源；保留原图用途与署名，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "res-downloader",
+  "name": "res-downloader",
+  "homepage": "https://github.com/putyy/res-downloader",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "putyy/res-downloader",
+          "assetPattern": "res-downloader_*_win_amd64.exe",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "putyy/res-downloader",
+          "assetPattern": "res-downloader_{version}_linux_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "putyy/res-downloader",
+          "assetPattern": "res-downloader_{version}_linux_arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "putyy/res-downloader",
+          "assetPattern": "res-downloader_{version}_mac.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/putyy/res-downloader/f8ac4d9c85baf28322106e40ea3fdea9867e2f74/build/windows/icon.ico",
+    "sha256": "7e1f88405f32d842117b3703ca759530481175820bbebbb7207456fb3e447012",
+    "mime": "image/x-icon"
+  },
+  "description": "res-downloader 用于下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 打开软件并按说明配置资源捕获。访问你有权保存的内容，在资源列表确认文件后下载。\n\n### 其他平台安装\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "files",
+  "screenshots": []
+}

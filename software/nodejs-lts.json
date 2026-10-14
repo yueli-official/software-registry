@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nodejs-lts",
+  "name": "Node.js LTS",
+  "homepage": "https://nodejs.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "nodejs-lts",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "用于运行 JavaScript 的长期支持版运行时。",
+  "icon": {
+    "url": "https://nodejs.org/static/images/favicons/favicon.png",
+    "sha256": "3113d214c0396e4783a0baf0afa3b33317bfa075775efa39f6b708d41acb25f3",
+    "mime": "image/png"
+  },
+  "description": "Node.js LTS：用于运行 JavaScript 的长期支持版运行时。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 安装后在终端运行 node --version 和 npm --version。进入项目目录，按项目文档安装依赖并运行脚本。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://nodejs.org/docs/latest-v24.x/api/",
+  "category": "developer",
+  "screenshots": []
+}

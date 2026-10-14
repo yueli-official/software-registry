@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "itsycal",
+  "name": "Itsycal",
+  "homepage": "https://github.com/sfsam/Itsycal",
+  "kind": "reference",
+  "packages": [],
+  "summary": "Mac 日历工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/sfsam/Itsycal/1fe955feca047318f7681dabdfed63d3260c0460/Itsycal/Images.xcassets/AppIcon.appiconset/AppIcon256.png",
+    "sha256": "a3e1444a4a5f883a0160351472a8fd2be6c2113f8e2a8a060d85eb94eaa1501f",
+    "mime": "image/png"
+  },
+  "description": "Itsycal 用于Mac 日历。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 运行后点击菜单栏日期查看日历，按需配置日期格式和显示选项。日程权限按系统提示授予。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/sfsam/Itsycal/blob/master/README.txt",
+  "category": "productivity",
+  "screenshots": []
+}

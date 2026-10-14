@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "maccy",
+  "name": "Maccy",
+  "homepage": "https://maccy.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "p0deje/Maccy",
+          "assetPattern": "Maccy.app.zip",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "Mac 剪贴板工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/p0deje/Maccy/b2a7c413f7ecb6f2e5930dad1519e7b495177fab/Maccy/Assets.xcassets/AppIcon.appiconset/AppIcon%20%28Big%20Sur%29-512w.png",
+    "sha256": "d0f4fe98b34f46135631bf1f53817fd21566e3fef179b558dcc44dffb4cc1832",
+    "mime": "image/png"
+  },
+  "description": "Maccy 用于Mac 剪贴板。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 解压并将应用移入 Applications，运行后复制一段测试文本。打开剪贴板历史选择记录，按需要设置快捷键、忽略应用和保留数量。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/p0deje/Maccy/blob/master/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

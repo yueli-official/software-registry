@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "altsnap",
+  "name": "AltSnap",
+  "homepage": "https://github.com/RamonUnch/AltSnap",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "altsnap",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "altsnap",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "RamonUnch/AltSnap",
+          "assetPattern": "AltSnap{version}bin_ARM64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "按住Alt即可拖动和缩放窗口，减少寻找标题栏与窗口边缘的操作。",
+  "description": "AltSnap 是 AltDrag 的持续维护分支，让 Windows 用户通过 Alt 键和鼠标在窗口内部完成移动、缩放等操作，提供吸附、快捷键及排除规则等选项，适合多窗口工作。\n\n此条目提供官方 1.68 Windows x64、32位和ARM64便携原包，三款主程序架构均已核实。主项目采用 GPL-3.0-or-later，原作者及修改者署名保留；对应源码：https://github.com/RamonUnch/AltSnap/tree/1.68 ，原许可材料位于夸克目录 altsnap-1.68-LICENSES.zip 。",
+  "usageInstructions": "1. 按Windows的CPU选择x64、32位或ARM64 ZIP，完整解压到独立文件夹，运行AltSnap.exe并保留同目录文件。\n2. 程序运行后在系统托盘出现图标。打开配置，确认启用的触发键和鼠标操作。\n3. 先打开记事本等普通窗口测试：按住Alt并在窗口内部按住鼠标左键拖动，观察窗口移动。\n4. 再试配置中的窗口缩放和吸附操作；根据常用软件调整触发键、鼠标动作和排除列表，避免快捷键冲突。\n5. 不需要时通过托盘菜单暂停或退出。确认自己的配置合适后，再按需要设置开机启动。",
+  "faq": "需要安装吗？此条目选择官方便携ZIP，完整解压后运行即可。\n会和绘图或游戏快捷键冲突吗？可能，应在配置中修改触发键或加入排除规则。\n这是原版AltDrag吗？它是AltDrag的独立维护分支AltSnap，配置与功能可能不同，优先查看AltSnap说明。",
+  "documentationUrl": "https://github.com/RamonUnch/AltSnap/wiki",
+  "category": "productivity",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">AltSnap</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Window Control</text></svg>",
+    "sha256": "10bf12ab43bcb868e727dc82ae5d2529c0768c562ca31167110581412ac26a22",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

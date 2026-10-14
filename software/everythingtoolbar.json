@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "everythingtoolbar",
+  "name": "EverythingToolbar",
+  "homepage": "https://github.com/srwi/EverythingToolbar",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "everythingtoolbar",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "everythingtoolbar",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "把Everything文件搜索接入Windows任务栏，支持筛选、快捷键与预览联动。",
+  "description": "EverythingToolbar 为 Everything 提供任务栏搜索入口，可快速搜索文件和文件夹，按类型筛选，切换大小写、路径及正则匹配选项，并通过快捷键访问结果。支持Windows10和Windows11，部分任务栏集成模式按系统版本提供。\n\n它需要已安装并运行的 Everything 1.4.1或更新版本（不支持Lite版），以及.NET Desktop Runtime8.0等官方要求的运行环境。此条目提供未修改的官方3.5.0 x64与ARM64安装包，真实主启动程序及匹配的托管应用均已核实。项目采用MIT许可，Copyright 2023 Stephan Rumswinkel；对应源码：https://github.com/srwi/EverythingToolbar/tree/3.5.0 ，原许可材料位于夸克目录 everythingtoolbar-3.5.0-LICENSES.zip 。",
+  "usageInstructions": "1. 先安装并运行完整版Everything1.4.1或更新版本，等待首次索引；Lite版不适用。按官方要求安装兼容的.NET Desktop Runtime8.0。\n2. 按WindowsCPU选择x64或ARM64官方安装包，运行安装器并完成安装。\n3. 在Windows开始菜单启动EverythingToolbar，按设置助手选择任务栏搜索框或任务栏图标；搜索框集成适用于Windows11，具体模式见官方中文说明。\n4. 输入一个自己已知的文件名，选择搜索结果并打开；用Ctrl+Enter打开所在文件夹。\n5. 按需要设置筛选器、匹配方式和快捷键。联动QuickLook等预览工具需要另外安装对应软件，不属于本安装包的内置功能。",
+  "faq": "安装后为什么没有结果？先检查Everything是否运行并已建立索引，再核对.NET运行环境和Everything实例设置。\n它会重新扫描所有文件吗？搜索由Everything提供，本程序主要负责任务栏入口和交互。\n一定要改造Windows任务栏吗？可以使用官方支持的任务栏图标或搜索入口，按当前系统选择模式。",
+  "documentationUrl": "https://github.com/srwi/EverythingToolbar/blob/3.5.0/README.zh-CN.md",
+  "category": "productivity",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"22\" fill=\"#376656\">EverythingToolbar</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Taskbar Search</text></svg>",
+    "sha256": "1c6dc1ecd54f2263f599e84f9f83bc4a3a87258a7cf9a1db0cc5ae11bcb810a1",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

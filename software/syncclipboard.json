@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "syncclipboard",
+  "name": "SyncClipboard",
+  "homepage": "https://github.com/Jeric-X/SyncClipboard",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Jeric-X/SyncClipboard",
+          "assetPattern": "SyncClipboard_win_x64_portable.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Jeric-X/SyncClipboard",
+          "assetPattern": "SyncClipboard_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Jeric-X/SyncClipboard",
+          "assetPattern": "SyncClipboard_linux_x64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Jeric-X/SyncClipboard",
+          "assetPattern": "SyncClipboard_macos_arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Jeric-X/SyncClipboard",
+          "assetPattern": "SyncClipboard_macos_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "剪贴板同步工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Jeric-X/SyncClipboard/30cabae2f0e819e5ddf167169e42af147a58d682/src/SyncClipboard.WinUI3/Assets/icon.ico",
+    "sha256": "a28ef0172916da2e8b4b81f586450009b1b79086759040214b2b32ae06fc6318",
+    "mime": "image/x-icon"
+  },
+  "description": "SyncClipboard 用于剪贴板同步。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 在需要同步的设备安装客户端，按官方文档配置服务器或 WebDAV。先复制测试文本确认同步，再开启需要的文件同步选项。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/Jeric-X/SyncClipboard/blob/master/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

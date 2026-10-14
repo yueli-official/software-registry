@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "level",
+  "name": "Level",
+  "homepage": "https://github.com/woheller69/Level",
+  "kind": "reference",
+  "packages": [],
+  "summary": "安卓水平仪与直尺工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/woheller69/Level/71fc6f0c4720e43bf44b31a801b04119134c6ad3/ic_launcher_foreground.svg",
+    "sha256": "b7fce9d7115226807c20243223b0ffa78ae2d6a163d20f667437130e756db007",
+    "mime": "image/svg+xml"
+  },
+  "description": "Level 用于安卓水平仪与直尺。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 将手机放在稳定表面，按软件说明校准水平仪。使用已知水平面检查读数，再进行测量。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/woheller69/Level/blob/master/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

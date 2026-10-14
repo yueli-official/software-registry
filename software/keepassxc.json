@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "keepassxc",
+  "name": "KeePassXC",
+  "homepage": "https://keepassxc.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "keepassxc",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "keepassxreboot/keepassxc",
+          "assetPattern": "KeePassXC-{version}-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "keepassxreboot/keepassxc",
+          "assetPattern": "KeePassXC-{version}-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "keepassxreboot/keepassxc",
+          "assetPattern": "KeePassXC-{version}-x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用于管理密码数据库的开源密码管理器。",
+  "description": "KeePassXC：用于管理密码数据库的开源密码管理器。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 创建密码数据库并设置主密码，添加登录条目后保存。先测试打开与复制密码，再备份数据库；主密码丢失无法代为恢复。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://keepassxc.org/docs/",
+  "category": "security",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/9e0f57a4a4c6c629fa6d0a593acb7d089b1d95cd/share/branding/png/keepassxc-512x512.png",
+    "sha256": "2d88c2fe69595e23d10d1362063ab636711a4c412771a378c4042179872efed9"
+  },
+  "screenshots": []
+}

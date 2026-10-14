@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "naps2",
+  "name": "NAPS2",
+  "homepage": "https://www.naps2.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "naps2",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyanfish/naps2",
+          "assetPattern": "naps2-*-win-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyanfish/naps2",
+          "assetPattern": "naps2-*-mac-x64.pkg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyanfish/naps2",
+          "assetPattern": "naps2-*-mac-arm64.pkg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyanfish/naps2",
+          "assetPattern": "naps2-*-linux-x64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyanfish/naps2",
+          "assetPattern": "naps2-*-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "扫描纸质文档、整理页面，生成可搜索的 PDF。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cyanfish/naps2/cbc02f6ca066f26fb07839a6e6babf1f9c7b34c3/NAPS2.Lib/Icons/scanner-128.png",
+    "sha256": "9ba55ccd393451c765f251a4d6814a29673611ce3a88f84f8219a22d54624e18",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览固定v8.4.1官方透明scanner-128产品PNG，原About显示同一资源并署名FatCow；保存FatCow原通知CC BY3.0 US及版权，单独保留署名、来源与许可链接，网站仅转换WebP。未用程序GPL代替图形许可。"
+  },
+  "description": "NAPS2 是开源文档扫描与页面整理工具，可连接扫描仪，导入已有 PDF 或图片，调整页面顺序、旋转和裁剪，再保存为 PDF 或图片。适合整理合同、票据和讲义；下载所需 OCR 语言数据后，可为扫描页添加可搜索的文字。\n\n此条目提供未修改的官方 8.4.1 原包，主程序采用 GPL 2.0 或以后版本，版权归 NAPS2 Contributors；内置组件各自保留原许可，不统一重新授权。对应源码与构建资料：https://github.com/cyanfish/naps2/tree/v8.4.1 。夸克目录中的 NAPS2-8.4.1-LICENSES.zip 保留原许可、组件通知与源码来源。\n\n产品扫描仪图标来自官方项目，原界面署名 FatCow。图形署名：FatCow Web Hosting / Marcis Gasuns，Copyright 2009–2014 FatCow Web Hosting；许可为 CC BY 3.0 US：https://creativecommons.org/licenses/by/3.0/us/ 。原素材页面：https://www.fatcow.com/free-icons ；此条目只转换为 WebP，不表示作者背书。",
+  "usageInstructions": "1. Windows x64 解压原 ZIP，打开 App/NAPS2.exe；Windows ARM64 使用相应 EXE 安装包。本版本按官方要求使用 Windows 10/11。Mac 根据 Intel 或 Apple Silicon 选择相应 PKG 安装；Linux 使用对应架构 DEB，在兼容的 Debian/Ubuntu 系统中通过软件包管理器安装并满足依赖。\n2. 先用不含隐私的一页文档测试。连接扫描仪后点击“扫描”，建立配置，选择设备、纸张大小和分辨率。Windows 找不到设备时检查厂商驱动，并按官方说明选择 WIA、TWAIN 或网络 ESCL。没有扫描仪也可先导入已有 PDF 或图片。\n3. 扫描或导入后，检查页面方向，按需要旋转、裁剪并拖动调整顺序。点击“保存 PDF”，另存为一个测试文件，打开确认页数和内容正确。\n4. 需要文字搜索时打开 OCR 设置，首次联网下载中文等所需语言，启用生成可搜索 PDF 后重新保存。用 PDF 阅读器试搜一段文字，重要内容人工校对；原扫描件另留备份。",
+  "faq": "必须有扫描仪吗？扫描纸张需要兼容设备；也可以导入已有 PDF 或图片进行整理和 OCR。\n为什么扫描仪不显示？检查连接和厂商驱动，并按平台文档选择扫描后端；网络设备还需检查网络和 ESCL 支持。\nOCR 中文需要联网吗？首次需要下载相应语言数据，识别效果受扫描清晰度和语言选择影响。\nWindows 7 可以使用这个版本吗？官方当前版要求 Windows 10/11；旧系统按官方文档选择兼容历史版本，此条目本批不将 8.4.1 标作 Windows 7 兼容。\nSDK 是另一个软件吗？SDK 面向开发者，不作为此条目另一款独立产品计数。",
+  "documentationUrl": "https://www.naps2.com/support",
+  "category": "office",
+  "screenshots": []
+}

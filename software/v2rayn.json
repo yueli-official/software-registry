@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "v2rayn",
+  "name": "v2rayN",
+  "homepage": "https://github.com/2dust/v2rayN",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "v2rayn",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "2dust/v2rayN",
+          "assetPattern": "v2rayN-windows-arm64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "2dust/v2rayN",
+          "assetPattern": "v2rayN-macos-64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "2dust/v2rayN",
+          "assetPattern": "v2rayN-macos-arm64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "2dust/v2rayN",
+          "assetPattern": "v2rayN-linux-64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "2dust/v2rayN",
+          "assetPattern": "v2rayN-linux-arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "管理代理配置、订阅和路由的开源跨平台桌面客户端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/2dust/v2rayN/5ea8ae6420a4d89ff2945c35f4b87c6c1c307a6b/v2rayN/v2rayN.Desktop/Assets/NotifyIcon1.ico",
+    "sha256": "1c41e4e4df0c16f0536005eb7f9f9f3806a999e70b70a3b79c0378cb7ff5132f",
+    "mime": "image/x-icon",
+    "provenance": "固定官方仓库实际产品图标，已预览；v2rayN蓝色V图标，GPL-3.0根许可及目录核查。"
+  },
+  "description": "v2rayN 是开源桌面代理客户端，可管理自己的服务器配置、订阅及路由，支持Xray、sing-box等核心。提供中文界面和官方中文使用资料，适合需要管理多组网络配置的用户。软件本身不提供节点或订阅服务，需要使用自己合法取得的配置。采用GPL-3.0，原包、第三方许可和对应版本源码保持公开；对应7.25.4发行：https://github.com/2dust/v2rayN/releases/tag/7.25.4 。",
+  "usageInstructions": "1. Windows 10或更新：按x64或ARM64解压完整ZIP，运行v2rayN.exe。macOS 13.6或更新：解压对应架构ZIP，打开终端进入该目录，运行 chmod +x v2rayN，再以普通用户运行 ./v2rayN；保持目录内的库、资源和核心文件。Linux Debian 12 / Ubuntu 22.04或更新：下载对应Debian包，在下载目录运行 sudo apt install ./实际下载文件名.deb，再启动客户端。\n2. 导入自己已有的服务器分享配置，或在订阅设置中加入自己的订阅地址并更新。\n3. 选择要使用的配置，按官方文档设置系统代理和路由，检查连接状态；如使用TUN等功能，先核对核心和相应权限要求。",
+  "faq": "软件包含可用节点吗？客户端不提供节点或订阅，需要自己配置服务。\n还需要单独安装.NET 8吗？当前Windows稳定版为自包含构建，其他系统和构建的依赖仍以官方说明为准。\nWindows desktop包是什么？官方同时提供不同GUI构建；此条目Windows主源优先Scoop Extras所选WPF版，不将不同GUI当成两款软件。其他32位、LoongArch、RISC-V及RPM构建从官方Release取得。",
+  "documentationUrl": "https://github.com/2dust/v2rayN/wiki",
+  "category": "network",
+  "screenshots": []
+}

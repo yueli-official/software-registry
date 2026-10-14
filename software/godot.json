@@ -1,0 +1,96 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "godot",
+  "name": "Godot Engine",
+  "homepage": "https://godotengine.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "godot",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "godotengine/godot",
+          "assetPattern": "Godot_v{version}-stable_windows_arm64.exe.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}-stable",
+          "tagSuffix": "-stable"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "godotengine/godot",
+          "assetPattern": "Godot_v{version}-stable_macos.universal.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}-stable",
+          "tagSuffix": "-stable"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "godotengine/godot",
+          "assetPattern": "Godot_v{version}-stable_linux.x86_64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}-stable",
+          "tagSuffix": "-stable"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "godotengine/godot",
+          "assetPattern": "Godot_v{version}-stable_linux.arm64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}-stable",
+          "tagSuffix": "-stable"
+        }
+      }
+    }
+  ],
+  "summary": "免费开源的2D、3D游戏编辑器，支持场景、脚本与跨平台导出。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/godotengine/godot/e7b12e749220a75ef87e800e080bd2732ad46854/misc/logo/icon.png",
+    "sha256": "4c7157447b020ecb1a0cb755fe0569620247bf5def9f7c4409f063ac479509a9",
+    "mime": "image/png",
+    "provenance": "官方产品图标，固定提交。Godot品牌标识CC BY4.0另见misc/logo/LICENSE.txt，其余项目图标核对根许可及目录；实际预览后才发行。"
+  },
+  "description": "Godot Engine 是集场景编辑、动画、脚本和调试于一体的 2D/3D 游戏引擎。标准版可以使用 GDScript 制作项目，不需要另外安装 .NET SDK。官方提供本地化编辑器和中文文档；引擎采用 MIT 许可，制作和发布游戏无需向引擎支付版税。此条目本轮提供标准版编辑器，.NET版和导出模板请按需求从官方取得。\n\n产品标识：Godot Engine Logo，Andrea Calabrò ©2017，CC BY 4.0；官方原图未修改，来源与许可：https://github.com/godotengine/godot/blob/e7b12e749220a75ef87e800e080bd2732ad46854/misc/logo/LICENSE.txt 。",
+  "usageInstructions": "1. 下载系统和架构对应的标准版原包。Windows/Linux解压启动编辑器，macOS解压后把Godot.app放入应用程序目录。\n2. 在项目管理器中创建项目，选择项目目录；需要中文时在编辑器设置中选择中文界面语言。旧硬件可先选择兼容渲染器。\n3. 创建场景，加入节点并保存，为节点添加GDScript脚本，运行当前场景或项目。要发布游戏时按官方文档安装对应版本的导出模板。",
+  "faq": "是否需要.NET？此条目是标准版，使用GDScript不需要.NET；C#工作流请使用官方.NET版并准备匹配SDK。\n能直接导出吗？导出通常需要安装对应版本的导出模板，编辑器包不等于模板包。\n移动编辑器与桌面一样吗？当前标准Android编辑器原包超过此条目300MB镜像上限，请从官方获取；其他32位、VR和Web编辑器构建见官方发行页。\n中文文档可能随翻译分支更新，涉及API细节请同时核对实际编辑器版本的英文文档和内置类参考。",
+  "documentationUrl": "https://docs.godotengine.org/zh-cn/stable/",
+  "category": "games",
+  "screenshots": []
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "4k-image-compressor",
+  "name": "4K Image Compressor",
+  "homepage": "https://www.4kdownload.com/products/imagecompressor",
+  "kind": "reference",
+  "packages": [],
+  "summary": "图片压缩工具。",
+  "icon": {
+    "url": "https://static.4kdownload.com/_next/static/media/imagecompressor.6de57bd0.svg",
+    "sha256": "04d1e0e141b36b05f6c1d13cfab655f3f5ef13acfb18d0b069a8fa18f9b15ed7",
+    "mime": "image/svg+xml"
+  },
+  "description": "4K Image Compressor 用于图片压缩。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 添加图片，选择压缩参数与输出目录。先处理一个副本检查画质，再批量压缩。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "graphics",
+  "screenshots": []
+}

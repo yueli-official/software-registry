@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sharex",
+  "name": "ShareX",
+  "homepage": "https://getsharex.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sharex",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "集屏幕截图、录制和文件分享于一体的效率工具。",
+  "description": "ShareX：集屏幕截图、录制和文件分享于一体的效率工具。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 运行后选择区域截图或屏幕录制，检查捕获结果。按需要设置快捷键和保存目录；使用上传功能前先确认目标服务。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "capture",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ShareX/ShareX/73967140f4fd64ca4b93203ae8ad5ac05ade9aaf/ShareX.HelpersLib/Resources/ShareX_Logo.png",
+    "sha256": "59ab47af2f7c733c3eb9e865491aa833839c33046bc2dc8c79ee7388e4e87820"
+  },
+  "screenshots": []
+}

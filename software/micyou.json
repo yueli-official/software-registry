@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "micyou",
+  "name": "MicYou",
+  "homepage": "https://micyou.top",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MicYou-Dev/MicYou",
+          "assetPattern": "MicYou-Win-*-installer.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MicYou-Dev/MicYou",
+          "assetPattern": "MicYou-Android-{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MicYou-Dev/MicYou",
+          "assetPattern": "MicYou-Linux-{version}.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MicYou-Dev/MicYou",
+          "assetPattern": "MicYou-macOS-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "手机麦克风共享工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/MicYou-Dev/MicYou/6a34e09797c29f8263747c78fe11a71597852117/tauri-app/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "sha256": "b1652f6a137c42b9e728fd87f327bd79bd8fc3bf0b5842d2beb90ebc74c3604e",
+    "mime": "image/png"
+  },
+  "description": "MicYou 用于手机麦克风共享。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 在电脑和 Android 手机分别安装对应客户端，确认麦克风权限。按官方文档配置 USB 或网络连接，在电脑中选择 MicYou 的音频输入并测试。\n\n### 其他平台安装\n- Android universal：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/MicYou-Dev/MicYou/blob/master/README.md",
+  "category": "media",
+  "screenshots": []
+}

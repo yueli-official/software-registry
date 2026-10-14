@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "papertodo",
+  "name": "PaperTodo",
+  "homepage": "https://github.com/snownico0722/PaperTodo",
+  "kind": "reference",
+  "packages": [],
+  "summary": "待办与便签工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/snownico0722/PaperTodo/5f7550db71a124edf140d0567d74841d5a30a91d/website/assets/favicon.ico",
+    "sha256": "6f1a602997cad614d01b43779b0a0d626f3b4aaf28b16374e077ccefe9e60cc8",
+    "mime": "image/x-icon"
+  },
+  "description": "PaperTodo 用于待办与便签。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从托盘创建待办纸张或便签纸张，输入事项或笔记。完成事项后勾选，按需要调整窗口与收纳位置，定期备份数据。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/snownico0722/PaperTodo/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

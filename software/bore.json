@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bore",
+  "name": "bore",
+  "homepage": "https://github.com/ekzhang/bore",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-x86_64-pc-windows-msvc.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-i686-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ekzhang/bore",
+          "assetPattern": "bore-v{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用轻量客户端和服务端建立 TCP 端口隧道。",
+  "description": "bore 是独立的 TCP 隧道工具，可将自己的本地端口通过指定服务端访问，适合调试和临时服务连接。\n\n### 源码与许可\n当前条目提供 0.6.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/ekzhang/bore/tree/8e059cdaf993d25d92080a2b28a71949a4545d03) · [许可原文](https://github.com/ekzhang/bore/blob/8e059cdaf993d25d92080a2b28a71949a4545d03/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 bore 加入 PATH，运行 bore --help 查看本版用法。\n3. 在自己的测试环境按官方 server/client 用法配置入口与认证，选择一项不含敏感数据的测试服务；核对转发端口和关闭流程后再扩大使用范围。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "包含图形界面吗？当前条目提供独立命令行客户端与服务端。\n所有转发流量都自动加密吗？认证与业务传输的保护不同，按官方协议说明配置自己的业务连接。",
+  "documentationUrl": "https://github.com/ekzhang/bore/blob/8e059cdaf993d25d92080a2b28a71949a4545d03/README.md",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">bore</text></svg>",
+    "sha256": "61ce50600f42f92a3670f002c37ff5750eaa115a16905e6b7be592920e0adfa9",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名bore，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "zeal",
+  "name": "Zeal",
+  "homepage": "https://zealdocs.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "zeal",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zealdocs/zeal",
+          "assetPattern": "zeal-{version}-portable-windows-arm64.7z",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zealdocs/zeal",
+          "assetPattern": "Zeal-{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "可离线搜索 API 文档的桌面浏览器，兼容 Dash docset。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/zealdocs/zeal/7a881b69219c6f1ad44d1389a06ac56ad376e762/assets/freedesktop/256-apps-zeal.png",
+    "sha256": "54e27e9e74b1884199ea43106c5c71fc98d10c89d6493b608d9cca582771e148",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方 Zeal 图标版权 Oleg Shparber（https://zealdocs.org），按该版本 REUSE.toml 明确的 CC BY 4.0 使用，仅转换为 WebP；许可 https://creativecommons.org/licenses/by/4.0/ 。 固定来源：https://github.com/zealdocs/zeal/blob/7a881b69219c6f1ad44d1389a06ac56ad376e762/assets/freedesktop/256-apps-zeal.png"
+  },
+  "description": "Zeal 是面向开发者的离线文档浏览器。先下载需要的 docset 后，即可在本地快速搜索语言与框架的 API 参考；支持用文档名限定搜索范围，也支持从命令行打开查询。它是完整桌面应用，不是开发组件。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/zealdocs/zeal/tree/7a881b69219c6f1ad44d1389a06ac56ad376e762 。官方 Zeal 图标版权 Oleg Shparber（https://zealdocs.org），按该版本 REUSE.toml 明确的 CC BY 4.0 使用，仅转换为 WebP；许可 https://creativecommons.org/licenses/by/4.0/ 。",
+  "usageInstructions": "1. Windows 按 x64 或 ARM64 选择原 7z，使用支持 7z 的压缩工具完整解压并运行 zeal.exe；Windows 需 10 1809 或更新版本。Linux 下载 x86_64 AppImage，赋予可执行权限后启动。\n2. 在“File→Docset Library”选择所需文档并点击 Download；首次下载文档需要联网。\n3. 下载完成后，在搜索框输入关键词；例如 cpp:vector 只查询 C++ 文档，python,django:string 查询两个文档集。\n4. 离线时仍可浏览已下载文档；文档集的更新与软件更新分别管理。",
+  "faq": "离线可用吗？已下载的文档可离线使用，首次下载与更新需要网络。\n安装包自带所有文档吗？没有，需要在 Docset Library 选择下载。\n有 macOS 包吗？当前项目不提供 macOS 成品，可参考其灵感来源 Dash。",
+  "documentationUrl": "https://github.com/zealdocs/zeal/blob/7a881b69219c6f1ad44d1389a06ac56ad376e762/README.md",
+  "category": "developer",
+  "screenshots": []
+}

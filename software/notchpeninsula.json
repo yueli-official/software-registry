@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notchpeninsula",
+  "name": "NotchPeninsula",
+  "homepage": "https://nps.georgewu.top",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GEORGEWWWU/NotchPeninsula",
+          "assetPattern": "NotchPeninsula.v.{version}.exe",
+          "tagPrefix": "NPS-v"
+        }
+      }
+    }
+  ],
+  "summary": "桌面美化工具。",
+  "icon": {
+    "url": "https://nps.georgewu.top/logo.ico",
+    "sha256": "c166fbd38b56b6d908bed663cca0d8d33ccd52a78c759b20860266c9ace2a213",
+    "mime": "image/x-icon"
+  },
+  "description": "NotchPeninsula 用于桌面美化。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 运行后在桌面顶部查看组件，通过托盘或右键设置显示内容、主题与位置。播放测试媒体，按需要调整通知和自动隐藏。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/GEORGEWWWU/NotchPeninsula/blob/main/README.md",
+  "category": "utilities",
+  "screenshots": []
+}

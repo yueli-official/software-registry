@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "quickpic-gallery",
+  "name": "QuickPic Gallery",
+  "homepage": "https://github.com/WSTxda/QP-Gallery-Releases",
+  "kind": "reference",
+  "packages": [],
+  "summary": "图片相册工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/WSTxda/QP-Gallery-Releases/cbeb6ba41682708fae475a07ed950628b6fcc9f8/Images/Banner.svg",
+    "sha256": "381054738fea52ca881681fa63513ced540a047175a570713e3eb8b40703af6f",
+    "mime": "image/svg+xml"
+  },
+  "description": "QuickPic Gallery 用于图片相册。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 授予必要相册权限，浏览本地图片并设置目录显示。移动或删除操作先确认目标，重要图片先备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/WSTxda/QP-Gallery-Releases/blob/master/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

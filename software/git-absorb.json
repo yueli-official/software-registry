@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "git-absorb",
+  "name": "git-absorb",
+  "homepage": "https://github.com/tummychow/git-absorb",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "git-absorb",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tummychow/git-absorb",
+          "assetPattern": "git-absorb-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tummychow/git-absorb",
+          "assetPattern": "git-absorb-{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "将暂存区修改匹配到相关 Git 提交，辅助整理历史。",
+  "description": "git-absorb 是独立的 Git 工作流工具，可根据变更内容寻找相关提交并创建 fixup 修改，适合维护尚未共享的本地提交。\n\n### 源码与许可\n当前条目提供 0.9.0 官方原包。主项目许可：BSD-3-Clause；独立组件遵循各自许可。[固定版本源码](https://github.com/tummychow/git-absorb/tree/debdcd28d9db2ac6b36205bda307b6693a6a91e7) · [许可原文](https://github.com/tummychow/git-absorb/blob/debdcd28d9db2ac6b36205bda307b6693a6a91e7/LICENSE.md)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 git-absorb 加入 PATH，运行 git-absorb --help 查看本版用法。\n3. 先在独立测试仓库准备确认过的暂存变更，按官方 dry-run 用法预览，再决定是否创建 fixup；后续 rebase 按自己的历史管理规则操作。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "会修改提交历史吗？相关 fixup/rebase 工作流涉及历史管理，先在测试分支理解行为。\nMac 有 ARM64 官方包吗？本次 Release 的 Mac 成品为 Intel。",
+  "documentationUrl": "https://github.com/tummychow/git-absorb/blob/debdcd28d9db2ac6b36205bda307b6693a6a91e7/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">abs</text></svg>",
+    "sha256": "024b93f2f16388be05da460855218ac8b7032001a0a3cf95398834653565a684",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名abs，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

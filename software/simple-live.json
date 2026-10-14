@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "simple-live",
+  "name": "Simple Live",
+  "homepage": "https://github.com/xiaoyaocz/dart_simple_live",
+  "kind": "reference",
+  "packages": [],
+  "summary": "直播客户端工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xiaoyaocz/dart_simple_live/ba828e6783b176ea5709fcd09f0eb01dfaceeb51/simple_live_app/macos/Runner/Assets.xcassets/AppIcon.appiconset/icon-512.png",
+    "sha256": "d3a125d2d0bb235a2436c1d0f4de750041499cc69264ceee827092f6e2bd4378",
+    "mime": "image/png"
+  },
+  "description": "Simple Live 用于直播客户端。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按软件说明配置有权访问的直播来源，选择内容播放。检查网络与播放器设置，按需设置收藏。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/xiaoyaocz/dart_simple_live/blob/master/README.md",
+  "category": "media",
+  "screenshots": []
+}

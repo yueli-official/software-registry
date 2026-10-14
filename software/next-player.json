@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "next-player",
+  "name": "Next Player",
+  "homepage": "https://github.com/anilbeesetti/nextplayer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anilbeesetti/nextplayer",
+          "assetPattern": "nextplayer-v0.18.0-universal.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v0.18.0"
+        }
+      }
+    }
+  ],
+  "summary": "在安卓手机播放本地视频，调整字幕与播放界面。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/anilbeesetti/nextplayer/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "17353f1740f451928801e6cef2e02df0bdba58f3800bc058e59aff023819ff7f",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "description": "Next Player 是独立的安卓视频播放器，提供本地媒体播放及相应字幕和外观设置。当前条目为官方稳定通用 APK。\n\n### 源码与许可\n当前条目提供 0.18.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/anilbeesetti/nextplayer/tree/70f775318e3d20731617d548b8a1686780c9073a) · [许可原文](https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/phoneScreenshots/8.png)；原作者及许可通知见[固定版许可](https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载官方 APK，核对设备架构与已有安装渠道，按安卓提示安装。\n2. 授权必要的媒体访问权限，打开一段自己可使用的视频，检查声音、字幕和进度；按设备表现调整外观与播放选项。\n3. 升级前保留重要资料，避免混用不同签名渠道。",
+  "faq": "包含影视资源吗？不包含，媒体需自己取得并有权使用。\n所有编码都能硬解吗？支持程度取决于媒体格式、应用与设备。",
+  "documentationUrl": "https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/README.md",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/anilbeesetti/nextplayer/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/phoneScreenshots/8.png",
+      "sha256": "96c0a8862b5d36000eb32caed2196fc96e13367adf624f79b005044dc78fa877",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/phoneScreenshots/8.png",
+      "caption": "Next Player 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/fastlane/metadata/android/en-US/images/phoneScreenshots/8.png；原许可 https://github.com/anilbeesetti/nextplayer/blob/70f775318e3d20731617d548b8a1686780c9073a/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

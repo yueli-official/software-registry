@@ -1,0 +1,52 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "aves",
+  "name": "Aves",
+  "homepage": "https://github.com/deckerst/aves",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deckerst/aves",
+          "assetPattern": "app-libre-arm64-v8a-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v1.15.5"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deckerst/aves",
+          "assetPattern": "app-libre-x86_64-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v1.15.5"
+        }
+      }
+    }
+  ],
+  "summary": "浏览手机本地照片，查看相册、地图与拍摄信息。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/deckerst/aves/9aca923330317552d40118713c4d50fed0493836/aves_logo.svg",
+    "sha256": "d0f98c5a7c48d5377ef980894a2987e4ef2196560541c196b858a6b272f1cc48",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/deckerst/aves/blob/9aca923330317552d40118713c4d50fed0493836/aves_logo.svg"
+  },
+  "description": "Aves 是独立的安卓图库应用，可整理本地照片并浏览拍摄元数据。当前条目为官方 Libre 发行；没有 Google Play 服务依赖，部分服务能力与 Play 版不同。\n\n### 源码与许可\n当前条目提供 1.15.5 官方原包。主项目许可：BSD-3-Clause；独立组件遵循各自许可。[固定版本源码](https://github.com/deckerst/aves/tree/9aca923330317552d40118713c4d50fed0493836) · [许可原文](https://github.com/deckerst/aves/blob/9aca923330317552d40118713c4d50fed0493836/LICENSE)。",
+  "usageInstructions": "1. 下载官方 APK，核对设备架构与已有安装渠道，按安卓提示安装。\n2. 授权需要的照片访问范围，先打开一个测试相册，检查排序、元数据与地图显示；删除、移动前保留原件备份。\n3. 升级前保留重要资料，避免混用不同签名渠道。",
+  "faq": "为什么装不上已有 Aves？Libre 与其他渠道的包名或签名可能不同，应核对渠道并备份后迁移。\n照片自动上传吗？当前条目不提供云存储，功能条件以官方说明为准。",
+  "documentationUrl": "https://github.com/deckerst/aves/blob/9aca923330317552d40118713c4d50fed0493836/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "meetily",
+  "name": "Meetily",
+  "homepage": "https://meetily.ai",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Zackriya-Solutions/meetily",
+          "assetPattern": "meetily_*_x64-setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Zackriya-Solutions/meetily",
+          "assetPattern": "meetily_{version}_aarch64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "AI 会议转录工具。",
+  "icon": {
+    "url": "https://meetily.ai/icon_512x512@2x.png",
+    "sha256": "d5ae1713ff5763cf1afe4f086314d83ff15ec2aa917012da8c6ac5668f199897",
+    "mime": "image/png"
+  },
+  "description": "Meetily 用于AI 会议转录。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按首次启动提示配置模型或服务，确认麦克风权限。录制一段测试音频并查看转录效果，获得参与者同意后再用于会议。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "ai",
+  "screenshots": []
+}

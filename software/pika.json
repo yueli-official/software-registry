@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pika",
+  "name": "Pika",
+  "homepage": "https://superhighfives.com/pika",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "superhighfives/pika",
+          "assetPattern": "Pika-*.dmg",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "屏幕取色工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/superhighfives/pika/69105c04008966c2ac2622eca54a90c95d500f70/Pika/Assets/Assets.xcassets/AppIcon.appiconset/512x512.png",
+    "sha256": "9ea88369cc6cd44bfced5ddf17ab43ff7cc38564f036ec0caa1da6c0a9b0618c",
+    "mime": "image/png"
+  },
+  "description": "Pika 用于屏幕取色。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装并运行，按软件提示授予取色所需权限。打开取色工具选择屏幕上的颜色，再复制需要的颜色格式。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/superhighfives/pika/blob/main/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

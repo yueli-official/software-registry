@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fluor",
+  "name": "Fluor",
+  "homepage": "https://fluorapp.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Pyroh/Fluor",
+          "assetPattern": "Fluor.*.dmg",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "Mac 键盘增强工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Pyroh/Fluor/6b5fcd11324dfe99ef0fb20d4015625a0e96f283/Fluor/Assets.xcassets/AppIcon.appiconset/512.png",
+    "sha256": "e2f093177ee0a43df82447fd3af91fd0bc42a99cdfd78b4ce7115311068bbbae",
+    "mime": "image/png"
+  },
+  "description": "Fluor 用于Mac 键盘增强。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装并运行后，通过菜单栏设置应用与功能键行为。在目标应用中测试 F 键模式，再调整规则或默认行为。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/Pyroh/Fluor/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

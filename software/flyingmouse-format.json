@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flyingmouse-format",
+  "name": "FlyingMouse Format",
+  "homepage": "https://github.com/LaoFeng-mouse/flyingmouse-format",
+  "kind": "reference",
+  "packages": [],
+  "summary": "格式转换工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/LaoFeng-mouse/flyingmouse-format/a7b9b15d32db80cecedae00e89289088656fb1ae/build/icon.png",
+    "sha256": "b9bee85155ba22ca95560f4512c13c66fdf9515a9d474d55a48ada83cb17cf6e",
+    "mime": "image/png"
+  },
+  "description": "FlyingMouse Format 用于格式转换。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 添加文件，选择目标格式和输出目录。先转换一个副本并检查结果，再处理其他文件。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/LaoFeng-mouse/flyingmouse-format/blob/main/README.md",
+  "category": "utilities",
+  "screenshots": []
+}

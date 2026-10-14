@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pocketbase",
+  "name": "PocketBase",
+  "homepage": "https://github.com/pocketbase/pocketbase",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "pocketbase",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "pocketbase",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pocketbase/pocketbase",
+          "assetPattern": "pocketbase_{version}_darwin_amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pocketbase/pocketbase",
+          "assetPattern": "pocketbase_{version}_darwin_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pocketbase/pocketbase",
+          "assetPattern": "pocketbase_{version}_linux_amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pocketbase/pocketbase",
+          "assetPattern": "pocketbase_{version}_linux_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "包含数据库、用户与文件管理和API的独立后端程序。",
+  "description": "PocketBase将SQLite数据库、用户认证、文件存储、实时订阅和管理面板组合为一个独立服务。适合原型和小型应用后端。当前条目提供预编译完整程序，不把客户端SDK算软件。固定Scoop版本0.40.4；仍处于1.0以前，升级前需核对变更与备份数据。",
+  "usageInstructions": "1. 下载原ZIP并完整解压，在该目录打开终端。\n2. 执行 pocketbase serve，按终端提示打开本地管理面板地址。\n3. 按首次启动提示创建管理员，进入面板创建一个Collection并设置字段。\n4. 添加测试记录，通过面板提供的API说明连接自己的应用。\n5. 设置Collection访问规则后再开放给客户端；保存并备份程序旁的pb_data数据目录。",
+  "faq": "只需要安装Go才能运行吗？当前条目已编译程序不需要Go编译环境。\n数据保存在什么地方？默认保存在启动目录的pb_data。\n能把客户端SDK当服务器吗？不能，当前条目提供的是完整后端服务。",
+  "documentationUrl": "https://github.com/pocketbase/pocketbase/blob/5cec579da984436a258602a46a96302fbd31f77c/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">PocketBase</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">App Backend</text></svg>",
+    "sha256": "b2f2ffb779153101e8f79ac384b651197c54ac1bb948810808af2546f27bba1c",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

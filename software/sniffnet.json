@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sniffnet",
+  "name": "Sniffnet",
+  "homepage": "https://github.com/GyulyVGC/sniffnet",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sniffnet",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_Windows_arm64.msi",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_Windows_x86.msi",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_macOS_Intel.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_macOS_AppleSilicon.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_LinuxDEB_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_LinuxDEB_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GyulyVGC/sniffnet",
+          "assetPattern": "Sniffnet_LinuxDEB_i386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过图形界面观察网络流量、主机和服务占用。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/logos/raw/icon.png",
+    "sha256": "92fa9d959c5eef1456579d2f5d7c6bea210a4a5c80e55832b4afb21958772016",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/logos/raw/icon.png"
+  },
+  "description": "Sniffnet 是开源网络流量监控工具，可按网卡查看流量变化、网络主机、服务和相关统计。适合分析本机网络使用情况；可观察范围取决于网卡、抓包权限和平台条件。\n\n### 源码与许可\n当前条目提供 1.5.1 官方原包。主项目许可：MIT / Apache-2.0，组件分别遵循各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/GyulyVGC/sniffnet/tree/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c) · [许可原文](https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/LICENSE-APACHE)。\n\n界面图来自[官方随附资料](https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/repository/pages/overview.png)；原作者及许可通知见[固定版许可](https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/LICENSE-APACHE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 安装对应 CPU 的 MSI；Mac 打开对应 DMG；Debian/Ubuntu 安装 DEB。\n2. 按官方安装指南配置系统需要的抓包组件，Windows 的 Npcap 遵循其自己的安装与许可条件。\n3. 启动后选择需要观察的网卡并开始监控。\n4. 查看流量曲线、主机和服务列表，按需调整过滤条件。\n5. 保存需要的统计结果；无数据时先检查网卡选择及权限。",
+  "faq": "能看到所有家庭设备的流量吗？取决于网络拓扑及捕获范围，不能保证普通网卡看到所有设备。\n程序和抓包驱动是一回事吗？不是，平台抓包组件有各自条件。",
+  "documentationUrl": "https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/README.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/repository/pages/overview.png",
+      "sha256": "05a4ba3acad951529fc8df6faa45ba083d7a2fcaf6e2541f36a1c76618474827",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/repository/pages/overview.png",
+      "caption": "Sniffnet 官方网络流量概览示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/resources/repository/pages/overview.png；原许可 https://github.com/GyulyVGC/sniffnet/blob/1575c1d71ea720058aca36e8b460d7b8dc3c8d1c/LICENSE-APACHE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

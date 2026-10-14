@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "topgrade",
+  "name": "Topgrade",
+  "homepage": "https://github.com/topgrade-rs/topgrade",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "topgrade",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "topgrade-rs/topgrade",
+          "assetPattern": "topgrade-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "topgrade-rs/topgrade",
+          "assetPattern": "topgrade-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "topgrade-rs/topgrade",
+          "assetPattern": "topgrade_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "topgrade-rs/topgrade",
+          "assetPattern": "topgrade_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "统一调用电脑上的更新工具，检查多种软件更新。",
+  "description": "Topgrade 是独立的更新协调命令行工具，可识别并调用系统包管理器、开发工具及其他已配置的更新渠道。适合维护多种命令行环境，实际支持项、权限及更新行为由本机配置决定。\n\n### 源码与许可\n当前条目提供 17.12.3 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/topgrade-rs/topgrade/tree/710856320124b85228e42846d133b3fd1a3ab5ae) · [许可原文](https://github.com/topgrade-rs/topgrade/blob/710856320124b85228e42846d133b3fd1a3ab5ae/LICENSE)。",
+  "usageInstructions": "1. Windows/Mac 解压官方包；Debian/Ubuntu 安装 DEB，将 topgrade 加入 PATH。\n2. 运行 topgrade --help 查看选项和配置方法。\n3. 先阅读官方 dry-run 参数，用 topgrade --dry-run 查看准备调用的更新步骤。\n4. 核对本机软件渠道和所需权限，排除不希望自动更新的项目。\n5. 确认配置后再运行更新，并查看各步骤结果。",
+  "faq": "会自动支持所有软件吗？只处理官方支持且本机已配置的更新渠道。\n更新一定成功吗？仍依赖网络、上游服务、权限与各更新工具。",
+  "documentationUrl": "https://github.com/topgrade-rs/topgrade/blob/710856320124b85228e42846d133b3fd1a3ab5ae/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#653bc4\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">TG</text></svg>",
+    "sha256": "344fcaa69232a010c81e9adc7f4c5d4c1a1961425cbadac2b73d2ef9410f7f75",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。标记TG，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

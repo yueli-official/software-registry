@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lmms",
+  "name": "LMMS",
+  "homepage": "https://github.com/LMMS/lmms",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lmms",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LMMS/lmms",
+          "assetPattern": "lmms-{version}-win32.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LMMS/lmms",
+          "assetPattern": "lmms-{version}-mac10.14.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LMMS/lmms",
+          "assetPattern": "lmms-{version}-linux-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用音序器、乐器和混音器制作自己的音乐。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/LMMS/lmms/94363be152f526edba4e884264d891f1361cf54b/cmake/linux/icons/scalable/apps/lmms.svg",
+    "sha256": "ff5df23029227b4386187277abbac45485acf705c1f60bdcb3e5d33b453f94de",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/LMMS/lmms/blob/94363be152f526edba4e884264d891f1361cf54b/cmake/linux/icons/scalable/apps/lmms.svg"
+  },
+  "description": "LMMS 是独立的音乐制作软件，提供音序器、乐器、效果器与混音工具，适合学习编曲和制作自己的电子音乐。当前条目采用官方 1.2.2 正式版，Mac 原版为 Intel 架构，较新开发版不冒称稳定版。\n\n### 源码与许可\n当前条目提供 1.2.2 官方原包。主项目许可：GPL-2.0，独立乐器和素材分别遵循原许可；独立组件遵循各自许可。[固定版本源码](https://github.com/LMMS/lmms/tree/94363be152f526edba4e884264d891f1361cf54b) · [许可原文](https://github.com/LMMS/lmms/blob/94363be152f526edba4e884264d891f1361cf54b/LICENSE.txt)。",
+  "usageInstructions": "1. Windows 安装对应官方安装器；Mac 打开 Intel DMG；Linux 使用 AppImage。\n2. 首次启动选择可用音频输出，调整缓冲设置。\n3. 新建一个测试工程，放入一个乐器并输入简单音符。\n4. 播放并核对音量，尝试节奏或混音器设置。\n5. 保存工程并导出自己的短音频检查播放效果。",
+  "faq": "自带所有商业插件吗？只提供项目随附内容和实际支持的插件方式。\nMac Apple Silicon 有原生包吗？当前条目官方稳定包实际为 Intel，运行兼容需自行核对。",
+  "documentationUrl": "https://github.com/LMMS/lmms/blob/94363be152f526edba4e884264d891f1361cf54b/README.md",
+  "category": "media",
+  "screenshots": []
+}

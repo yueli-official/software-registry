@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "quicklook",
+  "name": "QuickLook",
+  "homepage": "https://github.com/QL-Win/QuickLook",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "quicklook",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "在 Windows 中按空格快速预览文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/QL-Win/QuickLook/4.5.0/QuickLook/Resources/app.ico",
+    "sha256": "32147b66b2f19bfacf81a1b01c1aee75f623992c622b7178662491db268f0ea3",
+    "mime": "image/x-icon"
+  },
+  "description": "QuickLook：在 Windows 中按空格快速预览文件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 运行后在 Windows 文件管理器选中文件，按空格预览，再按空格关闭。需要支持更多格式时按官方说明安装对应插件。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "productivity",
+  "screenshots": []
+}

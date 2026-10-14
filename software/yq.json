@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "yq",
+  "name": "yq",
+  "homepage": "https://mikefarah.gitbook.io/yq",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "yq",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_windows_386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mikefarah/yq",
+          "assetPattern": "yq_linux_386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在命令行查询、转换和修改 YAML、JSON 等数据。",
+  "description": "当前条目是 Mike Farah 维护的 Go 版 yq，可用接近 jq 的表达式读取和编辑 YAML，并处理 JSON、XML、INI、CSV 等格式。它是独立可执行程序，适合配置文件处理和自动化脚本，不是同名 Python 包。\n\n### 源码与许可\n当前条目提供 4.54.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/mikefarah/yq/tree/504fc38780cc46be8444ea1b72fb55919fc0bfb0) · [许可和通知](https://github.com/mikefarah/yq/blob/504fc38780cc46be8444ea1b72fb55919fc0bfb0/LICENSE)。",
+  "usageInstructions": "1. Windows x64 下载的是官方 EXE，ARM64/32 位解压 ZIP；macOS/Linux 解压 tar.gz。\n2. 将实际程序目录加入 PATH；Windows 原文件名不同可在终端使用原文件名调用。\n3. 运行 yq --version 和 yq --help，确认工具与版本。\n4. 先在副本上用 yq \".name\" file.yaml 读取字段，再按官方语法设置转换参数。\n5. 使用 -i 原地修改前先保存原配置，检查输出与目标格式。",
+  "faq": "和其他 yq 一样吗？当前条目明确对应 mikefarah/yq，其他同名实现的语法可能不同。\n需要安装 Go 吗？使用官方已编译程序无需另装 Go。",
+  "documentationUrl": "https://mikefarah.gitbook.io/yq",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#2463a5\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">yq</text></svg>",
+    "sha256": "82a9bb36b7156aa142b67dd7a0a35c29452109bb9f2be4a45bbf20c69911452f",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名yq，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

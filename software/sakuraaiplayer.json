@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sakuraaiplayer",
+  "name": "SakuraAIPlayer",
+  "homepage": "https://store.steampowered.com/app/3999870/SakuraAIPlayer/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "视频播放器工具。",
+  "icon": {
+    "url": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3999870/7f90d83566c95a5577f95bff13f9db7989a2a926.jpg",
+    "sha256": "6ebc1151c28ea4b9f8d6957153b5e6df6c30eb3db53e4859bf984df423bcf425",
+    "mime": "image/jpeg"
+  },
+  "description": "SakuraAIPlayer 用于视频播放器。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 打开视频，按软件说明配置支持的模型或媒体功能。先用短片测试，再调整播放器与处理参数。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "media",
+  "screenshots": []
+}

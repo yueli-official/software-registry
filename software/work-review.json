@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "work-review",
+  "name": "Work Review",
+  "homepage": "https://aiqst.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wm94i/Work-Review",
+          "assetPattern": "Work_Review_*_x64-setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wm94i/Work-Review",
+          "assetPattern": "Work_Review_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wm94i/Work-Review",
+          "assetPattern": "Work_Review_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wm94i/Work-Review",
+          "assetPattern": "Work_Review_{version}_aarch64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wm94i/Work-Review",
+          "assetPattern": "Work_Review_{version}_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "活动记录工具。",
+  "icon": {
+    "url": "https://aiqst.com/meta/favicon.svg?v=wr1",
+    "sha256": "4ee1aa05ecb4eecff9c831bba7ca3f4cdfa5d18f95044dda4992995c11834fb4",
+    "mime": "image/svg+xml"
+  },
+  "description": "Work Review 用于活动记录。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 在设置中选择需要记录的应用和网页范围，先运行一段测试任务。打开时间线检查记录，使用基础模板生成日报；AI 模式需另行配置服务。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/wm94i/Work-Review/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

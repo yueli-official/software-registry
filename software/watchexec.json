@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "watchexec",
+  "name": "Watchexec",
+  "homepage": "https://github.com/watchexec/watchexec",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "watchexec",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-x86_64-apple-darwin.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-aarch64-apple-darwin.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-x86_64-unknown-linux-gnu.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-aarch64-unknown-linux-gnu.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "watchexec/watchexec",
+          "assetPattern": "watchexec-{version}-i686-unknown-linux-musl.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "监听文件变化，自动运行自己的开发命令。",
+  "description": "Watchexec 是独立的文件变化监听工具，可在文件变动时运行指定命令，适合本地构建、预览和开发任务。实际运行行为由自己设置的命令决定。\n\n### 源码与许可\n当前条目提供 2.8.0 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/watchexec/watchexec/tree/07e2b99e833da655571fc4001ae47b03f44742c7) · [许可原文](https://github.com/watchexec/watchexec/blob/07e2b99e833da655571fc4001ae47b03f44742c7/LICENSE)。",
+  "usageInstructions": "1. Windows/Mac 解压官方包；Debian/Ubuntu 安装对应 DEB，将 watchexec 加入 PATH。\n2. 运行 watchexec --help 查看过滤、延迟和重启选项。\n3. 在自己的独立测试目录配置一个只打印提示的命令。\n4. 修改测试文件，核对监听与命令输出。\n5. 确认监控范围后再接入构建或开发服务，忽略持续变化的输出目录。",
+  "faq": "能自动决定应该执行什么吗？运行命令需要自己配置。\n输出目录反复触发怎么办？按官方过滤选项排除构建产物。",
+  "documentationUrl": "https://github.com/watchexec/watchexec/blob/07e2b99e833da655571fc4001ae47b03f44742c7/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#895c35\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">wx</text></svg>",
+    "sha256": "6c9c6b99e46b8bba7546ba440413a38db489d023df38bb1d8b783154f31281c4",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名wx，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

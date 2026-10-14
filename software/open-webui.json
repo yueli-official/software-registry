@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "open-webui",
+  "name": "Open WebUI",
+  "homepage": "https://openwebui.com",
+  "kind": "reference",
+  "packages": [],
+  "summary": "AI 对话界面工具。",
+  "icon": {
+    "url": "https://openwebui.com/favicon.png",
+    "sha256": "5698a3e39513e7b6304ec96c309373ab3af0f70fe794293461de395a94deaa65",
+    "mime": "image/png"
+  },
+  "description": "Open WebUI 用于AI 对话界面。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方部署步骤启动服务，连接本地或远程模型。创建账号并发送测试对话，再配置需要的功能。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/open-webui/open-webui/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

@@ -1,0 +1,131 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "siyuan",
+  "name": "思源笔记",
+  "homepage": "https://b3log.org/siyuan/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "siyuan-note",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}-win-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}-mac.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}-linux.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "siyuan-note/siyuan",
+          "assetPattern": "siyuan-{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "本地优先、支持双向链接和内容块的开源知识管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/siyuan-note/siyuan/fb3355f07d22bff36f1d785999fd5ded6a90d468/app/appx/assets/Square44x44Logo.targetsize-256_altform-unplated.png",
+    "sha256": "b8cff37e727379ab2c6db5466d24906610b4a5a67d6cfd34d6bed06ba699a5a0",
+    "mime": "image/png",
+    "provenance": "固定官方Appx产品图标，已实际预览；根AGPL-3.0，不使用账号头像。图片目录未发现独立图标许可例外。"
+  },
+  "description": "思源笔记是本地优先的个人知识管理软件，提供中文界面，支持Markdown输入、内容块引用、双向链接、关系图和数据库视图。适合整理学习资料、工作笔记和个人知识库。大部分功能免费，云同步等会员功能以官方价格和说明为准。采用AGPL-3.0，外观资源有独立MIT许可，此条目保留官方原包与全部第三方许可；对应3.8.6源码与发行：https://github.com/siyuan-note/siyuan/releases/tag/v3.8.6 。",
+  "usageInstructions": "1. Windows按x64或ARM64运行对应安装器。macOS从对应Intel或Apple Silicon的DMG安装SiYuan.app。Linux按amd64或arm64安装Debian包。Android当前条目APK仅适用于ARM64设备，按系统提示安装，其他设备优先查看官方应用市场版本。\n2. 初次打开后选择自己的工作空间，阅读内置用户指南；新建笔记本和文档，输入正文，使用斜线菜单插入内容块。\n3. 用内容块引用和双向链接连接相关笔记，按需要查看关系图或建立数据库。先熟悉备份与数据历史功能；跨设备同步按官方支持的方式配置，不将工作空间直接交给未经确认的同步盘。",
+  "faq": "不购买会员也能用吗？大部分本地功能免费，会员和同步相关权益以官方说明为准。\n不同平台版本能共用数据吗？请按官方同步和数据管理说明配置，直接用第三方同步盘操作正在使用的工作空间可能引起冲突。\n安卓包是通用的吗？此条目核对本版APK的原生库只有arm64-v8a，因此准确标为ARM64。\n截图是否是本次实测？页面使用官方功能示例，不宣称此条目实机测试结果。",
+  "documentationUrl": "https://github.com/siyuan-note/siyuan/blob/master/README.zh-CN.md",
+  "category": "office",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/siyuan-note/siyuan/fb3355f07d22bff36f1d785999fd5ded6a90d468/screenshots/feature0.png",
+      "sha256": "6b3fec56c891954fef5bd63af06d0fb81c07490bd7c65cb02ba7fe69406c1328",
+      "mime": "image/png",
+      "caption": "官方功能示例：笔记内容、双向链接关系图与移动端界面",
+      "sourcePage": "https://github.com/siyuan-note/siyuan/blob/fb3355f07d22bff36f1d785999fd5ded6a90d468/README.md",
+      "licenseEvidence": "官方README引用screenshots/feature0.png，截图目录无独立许可例外。根AGPL-3.0：https://github.com/siyuan-note/siyuan/blob/fb3355f07d22bff36f1d785999fd5ded6a90d468/LICENSE ；外观资源独立MIT：https://github.com/siyuan-note/siyuan/blob/fb3355f07d22bff36f1d785999fd5ded6a90d468/app/appearance/LICENSE 。保留原图、项目来源与对应许可，不主张图中第三方标识权利。",
+      "provenance": "已经实际预览，官方指南示例，不含认证资料；未采用包含商业图书封面的feature5-1.png。非维护者实测或当前具体版本外观保证。",
+      "reviewed": true
+    }
+  ]
+}

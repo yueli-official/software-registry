@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bypass",
+  "name": "Bypass",
+  "homepage": "https://www.bypass.cn/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "出行工具工具。",
+  "icon": {
+    "url": "https://static.bypass.cn/0419/favicon.ico",
+    "sha256": "22a773d38b94cb8c06ab2976d9cb443498cec0c017840f41f699401323519e36",
+    "mime": "image/x-icon"
+  },
+  "description": "Bypass 用于出行工具。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方说明设置出行查询条件，查看查询结果和提醒。账号、购票与身份信息只在可信的官方流程中处理。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "utilities",
+  "screenshots": []
+}

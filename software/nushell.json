@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nushell",
+  "name": "Nushell",
+  "homepage": "https://github.com/nushell/nushell",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "nu",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "nu",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nushell/nushell",
+          "assetPattern": "nu-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nushell/nushell",
+          "assetPattern": "nu-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nushell/nushell",
+          "assetPattern": "nu-{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nushell/nushell",
+          "assetPattern": "nu-{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "以表格和结构化管道处理文件、进程与JSON的现代Shell。",
+  "description": "Nushell通过结构化数据管道连接命令，可按字段筛选、排序和转换结果。适合终端中整理目录或JSON等数据，与传统Shell的语法不同，迁移脚本时需按Nu语法调整。",
+  "usageInstructions": "1. 解压完整原包并把nu程序加入PATH，保留随附插件。\n2. 运行 nu 进入Nushell，执行 ls 查看表格化目录。\n3. 执行 ls | sort-by size 查看按占用排序的结果。\n4. 使用 ls | where size > 10kb 筛选较大的文件。\n5. 使用 help 查询命令，config nu 管理个人配置；插件按官方指南注册，不执行Scoop安装hook。",
+  "faq": "能直接运行原来的Bash脚本吗？外部程序可调用，但Nu语言与Bash不同。\n包里的插件是否是额外产品？不是，属于同一个Nushell发行。",
+  "documentationUrl": "https://github.com/nushell/nushell/blob/b632ef0994e07b5176ec45171e8cee2c127c5563/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Nushell</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Structured Shell</text></svg>",
+    "sha256": "172c96c26908b4392f6515209f783728285d5f038294c50f7a0e1f9c581a4c12",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hugo",
+  "name": "Hugo",
+  "homepage": "https://github.com/gohugoio/hugo",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "hugo",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gohugoio/hugo",
+          "assetPattern": "hugo_{version}_windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gohugoio/hugo",
+          "assetPattern": "hugo_{version}_darwin-universal.pkg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gohugoio/hugo",
+          "assetPattern": "hugo_{version}_linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gohugoio/hugo",
+          "assetPattern": "hugo_{version}_linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "从 Markdown 内容生成可部署的静态网站。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/gohugoio/hugo/3fff6fb5c267dacb26280c78dbe8c344054249c8/docs/assets/images/logos/logo-512x512.png",
+    "sha256": "4fe514a2668e29cf743815d1b51b71860476909222519cd294e2f0fbcf398bed",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/gohugoio/hugo/blob/3fff6fb5c267dacb26280c78dbe8c344054249c8/docs/assets/images/logos/logo-512x512.png"
+  },
+  "description": "Hugo 是独立的静态站点生成器，可结合内容、模板和主题构建网站。当前条目提供官方常规版本，不将扩展版与源码重复计为软件。\n\n### 源码与许可\n当前条目提供 0.167.0 官方原包。主项目许可：Apache-2.0，独立组件另有许可；独立组件遵循各自许可。[固定版本源码](https://github.com/gohugoio/hugo/tree/3fff6fb5c267dacb26280c78dbe8c344054249c8) · [许可原文](https://github.com/gohugoio/hugo/blob/3fff6fb5c267dacb26280c78dbe8c344054249c8/LICENSE)。",
+  "usageInstructions": "1. 下载官方原包，解压到自己的工具目录。\n2. 在自己的测试目录按官方指南建立最小站点并添加内容，先用本地预览检查效果；构建后检查输出目录，再配置自己的托管环境。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "附带网站托管吗？不包含，部署目标需自己配置。\n包含所有扩展特性吗？当前条目为常规版本，Sass 等扩展需求按官方版本说明选择。",
+  "documentationUrl": "https://github.com/gohugoio/hugo/blob/3fff6fb5c267dacb26280c78dbe8c344054249c8/README.md",
+  "category": "developer",
+  "screenshots": []
+}

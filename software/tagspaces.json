@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tagspaces",
+  "name": "TagSpaces",
+  "homepage": "https://www.tagspaces.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "tagspaces",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-win-arm64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-mac-x64-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-mac-arm64-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-linux-amd64-{version}.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-linux-arm64-{version}.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tagspaces/tagspaces",
+          "assetPattern": "tagspaces-android-{version}.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用标签整理本地文件，预览文档并编辑笔记。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tagspaces/tagspaces/0dba10aad0c51d0015d5f22ac1c35be9e88bf506/assets/icon.png",
+    "sha256": "55f07e4ad456d6ffec2faf09c93196ff2d3afd6320abd57e03db1fd14bc9bd33",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确v6.14.1官方灰色标签及青橙紫色块产品PNG；官方LICENSING.md单列商标，不将标识重新授权为AGPL，仅识别原版产品，不暗示官方背书。"
+  },
+  "description": "TagSpaces 可为本地文件添加标签，按文件名和标签查找内容，并预览文档、编辑 Markdown 笔记。适合整理学习资料、项目文件和个人文档。核心文件管理功能可离线使用。\n\n此条目桌面下载提供未修改的官方 Lite 原包；开源核心采用 AGPL v3，作者为 TagSpaces GmbH。对应源码与构建资料：https://github.com/tagspaces/tagspaces/tree/v6.14.1 。Pro 功能与扩展另有专有许可，不能统一当作 AGPL；安卓官方原包包含专有扩展，因此安卓下载仅保留官方来源，不提供此条目夸克镜像。产品图标为官方商标，仅用于识别该软件，不表示官方背书。此条目中文说明由此条目编写。\n\n桌面夸克目录中的 TagSpaces-6.14.1-LICENSES.zip 保留原 AGPL、官方许可边界说明、第三方通知与原包内许可文本；原软件包保持原字节，各依赖保留自身许可。",
+  "usageInstructions": "1. Windows 选择 x64 或 ARM64 官方 ZIP，解压到独立目录并运行 TagSpaces.exe；Mac 选择 Intel 或 Apple Silicon DMG，将应用拖到应用程序目录；Linux 选择匹配架构的官方 DEB，通过系统包管理器安装。安卓使用下载页的官方来源取得原 APK，并按系统提示安装。\n2. 首次使用先准备一个测试文件夹，在软件中添加本地位置并打开它；选择自己的测试文档，添加一个容易识别的标签，再按标签搜索确认结果。\n3. 标签可以写入文件名，也可通过 sidecar 元数据保存。先检查所选方式是否会改名，避免直接操作正在被其他程序使用的项目文件；移动文件时同时保留相应元数据。\n4. 用 Markdown 编辑器创建测试笔记，保存后重新打开检查内容。重要文件另外备份；不要把标签工具当作备份或云同步服务。",
+  "faq": "需要注册账号吗？本地核心文件管理可离线使用，不依赖云账号。\n会修改文件名吗？取决于标签保存方式，文件名标签可能改名；先在测试目录确认，再处理正式资料。\nLite 和 Pro 一样吗？不是，Pro 组件和扩展有独立专有许可，部分功能需要额外授权。\n安卓为什么没有夸克下载？当前官方 APK 含专有扩展，此条目保留官方原来源，不将其当作可自由镜像的纯开源包。",
+  "documentationUrl": "https://docs.tagspaces.org/",
+  "category": "utilities",
+  "screenshots": []
+}

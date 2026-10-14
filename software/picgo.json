@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "picgo",
+  "name": "PicGo",
+  "homepage": "https://picgo.app/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "picgo",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Molunerfinn/PicGo",
+          "assetPattern": "PicGo-{version}-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Molunerfinn/PicGo",
+          "assetPattern": "PicGo-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Molunerfinn/PicGo",
+          "assetPattern": "PicGo-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Molunerfinn/PicGo",
+          "assetPattern": "PicGo-{version}-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Molunerfinn/PicGo",
+          "assetPattern": "PicGo-{version}-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "将本地或剪贴板图片上传到图床，并复制可用于文档的链接。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Molunerfinn/PicGo/b6ad09936b42f98f7b7677899ef6a455c091c5dd/build/icons/256x256.png",
+    "sha256": "b4f2f4aefc23c54f6c1d75d79c0724f2eb3c0774c0cba8059379595bc39cbdfc",
+    "mime": "image/png",
+    "provenance": "固定官方仓库产品图标；实际预览确认蓝色分层图片上传标识；MIT根许可。"
+  },
+  "description": "PicGo 是开源图片上传与管理工具，可通过拖拽、剪贴板及快捷键上传图片，并复制URL、Markdown等格式的链接。适合写博客、笔记和开发文档；官方提供中文使用资料，支持国内常用云存储及插件扩展。使用自己的图床时需要先配置服务和权限，云服务费用由对应服务决定。采用MIT许可，原包和第三方许可保持不变。对应3.0.3源码与发行：https://github.com/Molunerfinn/PicGo/releases/tag/v3.0.3 。",
+  "usageInstructions": "1. Windows选择x64或ARM64原安装器并运行；macOS选择Intel或Apple Silicon的DMG，将PicGo拖到应用程序目录。Linux用对应Debian包安装。\n2. 打开主窗口，在图床设置中选择自己使用的服务，按该服务官方说明填写仓库、存储桶或授权资料，再设为默认图床。不要将密钥写进公开文档。\n3. 将图片拖到上传区或使用剪贴板上传，确认成功后将复制的链接粘贴到笔记或Markdown文档。插件功能按官方插件说明另行配置。",
+  "faq": "安装后就能上传吗？需要选择可用的图床并完成其授权或账户配置；具体要求以所选服务为准。\n软件免费就意味着图床免费吗？PicGo是开源工具，云存储和图床的价格、容量与访问限制由各自服务提供。\n其他格式在哪里？官方另有Windows32位、Linux AppImage与Snap等构建，本轮提供主流64位桌面包；其他构建从官方Release取得。",
+  "documentationUrl": "https://docs.picgo.app/zh/gui/guide/getting-started",
+  "category": "productivity",
+  "screenshots": []
+}

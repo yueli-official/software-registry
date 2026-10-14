@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "geekuninstaller",
+  "name": "Geek Uninstaller",
+  "homepage": "https://geekuninstaller.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "geekuninstaller",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "卸载 Windows 应用并扫描残留文件与注册表项。",
+  "icon": {
+    "url": "https://geekuninstaller.com/favicon.ico",
+    "sha256": "e8538a89bc946f660c44eddb071ed079646c0551b595226db8a367d1b5e5266d",
+    "mime": "image/x-icon"
+  },
+  "description": "Geek Uninstaller：卸载 Windows 应用并扫描残留文件与注册表项。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在列表选择软件并启动卸载，卸载结束后扫描残留。确认路径和文件用途后再清理，重要配置先备份。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "screenshots": []
+}

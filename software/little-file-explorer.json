@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "little-file-explorer",
+  "name": "Little File Explorer",
+  "homepage": "https://martinmimigames.github.io/projects/little-file-explorer/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "martinmimigames/little-file-explorer",
+          "assetPattern": "little.file.explorer.*.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓文件管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/martinmimigames/little-file-explorer/58dd6e4883b5717a48244613a52960afc9954b69/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "be4b31ea767a2f34f5f3d8aa393fc499557ea707ce5d184e0ffb6f820d12b781",
+    "mime": "image/png"
+  },
+  "description": "Little File Explorer 用于安卓文件管理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按需授予文件访问权限，浏览目录并打开文件。复制或移动操作先用测试文件检查目标路径。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/martinmimigames/little-file-explorer/blob/main/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

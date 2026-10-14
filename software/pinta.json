@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pinta",
+  "name": "Pinta",
+  "homepage": "https://github.com/PintaProject/Pinta",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "pinta",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PintaProject/Pinta",
+          "assetPattern": "Pinta-arm64.exe",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PintaProject/Pinta",
+          "assetPattern": "Pinta-macos-x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PintaProject/Pinta",
+          "assetPattern": "Pinta-macos-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用轻量图像编辑器绘画、调整照片和管理图层。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/PintaProject/Pinta/b3df1e579f6b3dd23193d2f6877deced20d8063b/Pinta.Resources/icons/hicolor/scalable/apps/com.github.PintaProject.Pinta.svg",
+    "sha256": "28d7336c1a94f0255a2739715217c72535d597f8755daf64fb65c4cde12b4f8a",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/PintaProject/Pinta/blob/b3df1e579f6b3dd23193d2f6877deced20d8063b/Pinta.Resources/icons/hicolor/scalable/apps/com.github.PintaProject.Pinta.svg"
+  },
+  "description": "Pinta 是独立的图像编辑应用，提供绘画工具、图层和常用图像调整功能，适合轻量日常编辑。当前条目提供官方 Windows 与 Mac 原版。\n\n### 源码与许可\n当前条目提供 3.1.2 官方原包。主项目许可：MIT 与随附 Paint.NET 来源许可；独立组件遵循各自许可。[固定版本源码](https://github.com/PintaProject/Pinta/tree/b3df1e579f6b3dd23193d2f6877deced20d8063b) · [许可原文](https://github.com/PintaProject/Pinta/blob/b3df1e579f6b3dd23193d2f6877deced20d8063b/license-mit.txt)。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 打开一份自己可使用的图像副本，试用画笔、图层与调整功能；保留可编辑项目，再导出所需格式检查效果。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "能无损覆盖原照片吗？建议在副本工作并保留原件，导出格式可能影响图层或质量。\n包含 Linux 原包吗？当前条目只列核验附件，Linux 其他安装渠道见官方说明。",
+  "documentationUrl": "https://github.com/PintaProject/Pinta/blob/b3df1e579f6b3dd23193d2f6877deced20d8063b/readme.md",
+  "category": "graphics",
+  "screenshots": []
+}

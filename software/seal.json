@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "seal",
+  "name": "Seal",
+  "homepage": "https://github.com/JunkFood02/Seal",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "JunkFood02/Seal",
+          "assetPattern": "Seal-*-arm64-v8a-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/JunkFood02/Seal/7677f61a20fda4210e84215fef9e9b51d25daa47/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "sha256": "0033ce6337d2491cd84b122311bf30e9645e6db0e6988efd9fa697b981f03076",
+    "mime": "image/png"
+  },
+  "description": "Seal 用于安卓下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 粘贴你有权保存的音视频地址，选择音频或视频格式并开始任务。在任务列表查看进度，完成后检查保存的文件。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/JunkFood02/Seal/blob/main/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

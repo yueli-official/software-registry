@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "xiadown",
+  "name": "XiaDown",
+  "homepage": "https://xiadown.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "arnoldhao/xiadown",
+          "assetPattern": "xiadown-windows-x64-*-installer.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "arnoldhao/xiadown",
+          "assetPattern": "xiadown-macos-arm64-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "arnoldhao/xiadown",
+          "assetPattern": "xiadown-macos-x64-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://xiadown.app/appicon.png",
+    "sha256": "c8c2cb0ee25ab27830ae0b9ea9ad754e40a5730fc81d5c1e34522be7953c0c2a",
+    "mime": "image/png"
+  },
+  "description": "XiaDown 用于下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按首次启动引导设置语言、网络和运行依赖。添加有权保存的媒体地址或 RSS 订阅，选择保存目录并检查完成的文件。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/arnoldhao/xiadown/blob/main/README.md",
+  "category": "files",
+  "screenshots": []
+}

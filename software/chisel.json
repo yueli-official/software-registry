@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "chisel",
+  "name": "chisel",
+  "homepage": "https://github.com/jpillora/chisel",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "chisel",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_windows_386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_darwin_amd64.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_darwin_arm64.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jpillora/chisel",
+          "assetPattern": "chisel_{version}_linux_386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过 HTTP 传输建立可认证的 TCP/UDP 隧道。",
+  "description": "Chisel 是独立的网络隧道工具，同一个程序支持客户端和服务端，可配置端口转发与反向连接，适合自己的开发和远程访问环境。\n\n### 源码与许可\n当前条目提供 1.12.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/jpillora/chisel/tree/fe4f4fe7e6a849b4aa6d1b8ee47037e16033f42a) · [许可原文](https://github.com/jpillora/chisel/blob/fe4f4fe7e6a849b4aa6d1b8ee47037e16033f42a/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 chisel 加入 PATH，运行 chisel --help 查看本版用法。\n3. 先在测试环境按官方 server/client 参数配置监听、认证和转发规则，验证一个测试端口；确认服务端身份与访问范围后再接入实际连接。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "Mac 文件为什么是 gz？原版是单个程序的 gzip 压缩包，解压后赋予执行权限并命名为 chisel。\n会自动准备远端吗？服务端和网络入口需自己部署。",
+  "documentationUrl": "https://github.com/jpillora/chisel/blob/fe4f4fe7e6a849b4aa6d1b8ee47037e16033f42a/README.md",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">chisel</text></svg>",
+    "sha256": "7b2eb0cdb9d4cc01db18919c57ce7b98ff653346fb2c7aa4f8c239ef3724c1ce",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名chisel，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

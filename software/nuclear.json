@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nuclear",
+  "name": "Nuclear",
+  "homepage": "https://github.com/nukeop/nuclear",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "nuclear",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nukeop/nuclear",
+          "assetPattern": "Nuclear_{version}_x64.app.tar.gz",
+          "tagPrefix": "player@",
+          "tagTemplate": "player@{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nukeop/nuclear",
+          "assetPattern": "Nuclear_{version}_aarch64.app.tar.gz",
+          "tagPrefix": "player@",
+          "tagTemplate": "player@{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nukeop/nuclear",
+          "assetPattern": "Nuclear_{version}_amd64.deb",
+          "tagPrefix": "player@",
+          "tagTemplate": "player@{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过插件搜索音乐、整理歌单的跨平台桌面播放器。",
+  "description": "Nuclear是跨平台音乐播放器，提供音乐搜索、收藏、歌单、歌词与多主题界面。当前版本采用Tauri，音乐来源、元数据和部分功能通过插件提供，内置插件商店供用户选择。不同插件和内容服务的可用性可能不同。\n\n当前条目固定player@1.50.0官方桌面发行，主项目许可为AGPL-3.0；各组件与插件保留自身许可。\n固定版本源码：https://github.com/nukeop/nuclear/tree/5f3b29784a1a22324aac324a14782d61328f468a 。许可资料：https://github.com/nukeop/nuclear/blob/5f3b29784a1a22324aac324a14782d61328f468a/LICENSE 。",
+  "usageInstructions": "1. Windows运行官方x64安装器，需可用的Microsoft Edge WebView2运行环境；macOS按Intel或Apple Silicon选择官方app.tar.gz，解压后把Nuclear.app放入应用程序目录；Linux使用amd64 DEB并通过发行版的软件安装工具处理依赖。\n2. 启动后打开插件商店，选择需要的音乐来源与元数据插件。\n3. 搜索歌手、专辑或曲目，选择可用来源播放，再把曲目加入自己的歌单。\n4. 在设置中调整主题和播放选项；插件连接失败时检查插件说明及相应服务是否可用。",
+  "faq": "是否内置所有音乐？音乐和元数据由所选插件及相关服务提供，安装程序本身不包含曲库。\n有没有Linux ARM64原包？本次固定官方发行没有对应成品，当前条目不虚构该下载。\nMac下载为什么是tar.gz？这是官方完整应用压缩包，解压后取得Nuclear.app。",
+  "documentationUrl": "https://github.com/nukeop/nuclear/blob/5f3b29784a1a22324aac324a14782d61328f468a/README.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Nuclear</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">音乐播放</text></svg>",
+    "sha256": "ac7668a6a95e4bc8e20bc3e576674b2273d3ab7f104d95c8fcf1f82be49162ac",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

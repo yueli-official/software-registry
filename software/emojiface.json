@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "emojiface",
+  "name": "EmojiFace",
+  "homepage": "https://github.com/Steve-Mr/EmojiFace",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Steve-Mr/EmojiFace",
+          "assetPattern": "facemoji-default-universal.apk",
+          "tagPrefix": "release-",
+          "tagVersionFormat": "date-build"
+        }
+      }
+    }
+  ],
+  "summary": "离线识别人脸并用表情或模糊遮挡的 Android 工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Steve-Mr/EmojiFace/9bee5cba384299456512590c6ad4e24ef79392b2/web/public/icon.png",
+    "sha256": "bbdf7138f3e9a276f90054159c6cf61c39cf7cb364b34681597118dcdd852452",
+    "mime": "image/png"
+  },
+  "description": "EmojiFace（FaceMoji）可在设备上离线识别图片人脸，使用表情、模糊或像素化效果遮挡，也能手动添加、调整和删除遮挡区域。",
+  "usageInstructions": "1. 下载 default-universal APK，在 Android 上按系统提示允许本次安装；此版本默认保留应用图标。\n2. 打开应用选择一张图片，或从相册通过“分享”发送到 FaceMoji。\n3. 选择表情或模糊效果，逐个核对检测结果，手动补上漏检的人脸并调整遮挡位置。\n4. 预览确认后导出新图片，保留原图；识别可能漏检，不要只依赖自动遮挡结果。",
+  "faq": "处理在本地离线完成。此条目展示版本 2026.7.14.1 对应官方日期构建 release-2026-07-14-01，不是 Android 内部 versionName；较新的预发布版本未冒充稳定版。官方同版本源码：https://github.com/Steve-Mr/EmojiFace/tree/release-2026-07-14-01；GPL-3.0 许可：https://github.com/Steve-Mr/EmojiFace/blob/release-2026-07-14-01/LICENSE。",
+  "documentationUrl": "https://github.com/Steve-Mr/EmojiFace/blob/dev/README.md",
+  "category": "security",
+  "screenshots": []
+}

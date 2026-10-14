@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "orbitstart",
+  "name": "OrbitStart",
+  "homepage": "https://github.com/xuxinxi14/OrbitStart",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "xuxinxi14/OrbitStart",
+          "assetPattern": "OrbitStart_*_x64-setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "启动与搜索工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xuxinxi14/OrbitStart/5cea025c21f19d436e8503ff6c2a443dea84a3d5/src-tauri/icons/icon.ico",
+    "sha256": "ac7bb86ce7c6b0b2f8b10a0a6e9a7bafba7a35ffd893c7b24c3ae77fcd735f85",
+    "mime": "image/x-icon"
+  },
+  "description": "OrbitStart 用于启动与搜索。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 将应用、文件夹或网址加入分组，点击资源测试打开。按需要建立工作区并设置启动顺序，先用简单任务检查。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/xuxinxi14/OrbitStart/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

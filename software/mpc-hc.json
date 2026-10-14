@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mpc-hc",
+  "name": "MPC-HC",
+  "homepage": "https://github.com/clsid2/mpc-hc",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mpc-hc-fork",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clsid2/mpc-hc",
+          "assetPattern": "MPC-HC.{version}.x86.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "轻量 Windows 音视频播放器，支持字幕、播放进度与快捷键。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/clsid2/mpc-hc/7bcb746166de30297222a3f5f6d49d747dd7dd51/src/mpc-hc/res/icon.ico",
+    "sha256": "0a8fc163a11c8a8e71cec6ee9abfa6eb7940df12ae42b7faf3259a77e79227d8",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/clsid2/mpc-hc/blob/7bcb746166de30297222a3f5f6d49d747dd7dd51/src/mpc-hc/res/icon.ico"
+  },
+  "description": "MPC-HC（Media Player Classic - Home Cinema）是 Windows 音视频播放器。此处使用 clsid2 维护的持续更新版本，集成 LAV Filters，支持现代视频格式、字幕渲染、播放速度调整和播放位置记忆，可切换明暗主题。适合播放本地视频和音频。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/clsid2/mpc-hc/tree/7bcb746166de30297222a3f5f6d49d747dd7dd51 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. 64 位 Windows 选择 x64 ZIP，32 位系统选择 x86 ZIP；完整解压后分别运行 mpc-hc64.exe 或 mpc-hc.exe，保留随附过滤器与许可。\n2. 将视频拖入窗口或通过“文件→打开文件”选择媒体；空格暂停/继续，拖动进度条定位。\n3. 字幕可通过菜单加载；在“选项→字幕”调整显示，在“选项→播放器→历史”启用播放位置记忆。\n4. 明暗主题、快捷键和播放速度可在播放器选项及播放菜单设置。HDR 播放还取决于显示设备及所选视频渲染器。",
+  "faq": "与已停止维护的旧 MPC-HC 有什么关系？此条目使用 clsid2 维护的官方分支。\n这是 PotPlayer 吗？不是，两者是独立播放器。\n有 macOS 或 Linux 版吗？这个项目的成品是 Windows 应用。",
+  "documentationUrl": "https://github.com/clsid2/mpc-hc/blob/7bcb746166de30297222a3f5f6d49d747dd7dd51/README.md",
+  "category": "media",
+  "screenshots": []
+}

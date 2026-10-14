@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "screentogif",
+  "name": "ScreenToGif",
+  "homepage": "https://www.screentogif.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "screentogif",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "录制屏幕、摄像头或画板，并编辑导出 GIF 与视频。",
+  "description": "ScreenToGif 是一款开源 Windows 录制与动画编辑工具，可录制屏幕区域、摄像头和画板，并在内置编辑器中调整画面、添加文字和导出 GIF、APNG、视频或图像。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开录像机并调整录制区域，开始录制后停止。在编辑器中裁剪帧、调整时长，再另存为 GIF 或视频。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "capture",
+  "icon": {
+    "url": "https://nickemanarin.github.io/ScreenToGif-Website/logos/ms-icon-144x144.png",
+    "sha256": "f3b8c4a0ef857669d78a7ba153f71661ad036ff98a59b60a8613d7a05c644025"
+  },
+  "screenshots": []
+}

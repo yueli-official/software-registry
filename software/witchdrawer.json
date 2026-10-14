@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "witchdrawer",
+  "name": "WitchDrawer",
+  "homepage": "https://github.com/witchscottishfoldcat/WitchDrawer",
+  "kind": "reference",
+  "packages": [],
+  "summary": "桌面整理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/witchscottishfoldcat/WitchDrawer/90a09d9841c26eb2b82d89123b40fcf4f5c9600d/src/WitchDrawer.App/Assets/app.png",
+    "sha256": "d2273c897b595f6886832aa55779a3ea92b7155e525cfb76520ee89c5ef5a2ce",
+    "mime": "image/png"
+  },
+  "description": "WitchDrawer 用于桌面整理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 先创建映射收纳盒，将测试文件或目录拖入并检查打开。映射盒保留原文件位置；普通盒会移动文件，使用前确认并备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/witchscottishfoldcat/WitchDrawer/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

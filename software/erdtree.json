@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "erdtree",
+  "name": "erdtree",
+  "homepage": "https://github.com/solidiquis/erdtree",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "erdtree",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "solidiquis/erdtree",
+          "assetPattern": "erd-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "solidiquis/erdtree",
+          "assetPattern": "erd-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "solidiquis/erdtree",
+          "assetPattern": "erd-v{version}-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "solidiquis/erdtree",
+          "assetPattern": "erd-v{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用目录树同时查看文件属性、大小和磁盘占用。",
+  "description": "erdtree 的命令为 erd，将目录结构、文件元数据和占用信息整合在终端中，适合快速了解项目与磁盘目录。图标显示取决于终端字体。\n\n### 源码与许可\n当前条目提供 3.1.2 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/solidiquis/erdtree/tree/2b1db8bcc843c3fa8b634df86f94716c75ca470a) · [许可原文](https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/assets/top_showcase.png)；原作者及许可通知见[固定版许可](https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台原版，将 erd 加入 PATH。\n2. 运行 erd --help。\n3. 在自己的小目录运行 erd，查看层级与大小。\n4. 按需限制深度、过滤文件或查看隐藏项。\n5. 大目录扫描前确认范围，图标异常时准备兼容字体。",
+  "faq": "会自动清理文件吗？目录查看不等同清理，文件处理需自己决定。\n为什么命令不是 erdtree？项目名 erdtree，原版程序名为 erd。",
+  "documentationUrl": "https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">erd</text></svg>",
+    "sha256": "64d145410e7839bb93552c5eb5f117d7e7dd873f76bfc608afbe1565e3323bd4",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名erd，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/solidiquis/erdtree/2b1db8bcc843c3fa8b634df86f94716c75ca470a/assets/top_showcase.png",
+      "sha256": "9197fc169b28f7b112c5c12efcd1b790a8f0728a795fa1f30fb30e61c4e09902",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/assets/top_showcase.png",
+      "caption": "erdtree 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/assets/top_showcase.png；原许可 https://github.com/solidiquis/erdtree/blob/2b1db8bcc843c3fa8b634df86f94716c75ca470a/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

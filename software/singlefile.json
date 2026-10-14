@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "singlefile",
+  "name": "SingleFile",
+  "homepage": "https://getsinglefile.com",
+  "kind": "reference",
+  "packages": [],
+  "summary": "网页保存扩展工具。",
+  "icon": {
+    "url": "https://www.getsinglefile.com/resources/logo.svg",
+    "sha256": "08547dc99934ab52dd1f03abe52c6627262a908cb8360dbc7726e9b36f704972",
+    "mime": "image/svg+xml"
+  },
+  "description": "SingleFile 用于网页保存扩展。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从官方商店安装扩展，打开要保存的网页。点击扩展保存单个 HTML 文件，离线打开检查内容。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/gildas-lormeau/SingleFile/blob/master/README.MD",
+  "category": "browser",
+  "screenshots": []
+}

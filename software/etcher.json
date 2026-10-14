@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "etcher",
+  "name": "balenaEtcher",
+  "homepage": "https://github.com/balena-io/etcher",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "etcher",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "balena-io/etcher",
+          "assetPattern": "balenaEtcher-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "balena-io/etcher",
+          "assetPattern": "balenaEtcher-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "balena-io/etcher",
+          "assetPattern": "balena-etcher_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把系统镜像写入 USB 设备或存储卡，并校验结果。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/balena-io/etcher/bfcfafd32e3628fccf924c8d17fcdb56e4ade989/assets/iconset/512x512.png",
+    "sha256": "51b1bdad07a22707c64ff6ec2f4c8dedb7d962327e895a427e158cbccd3f9248",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/balena-io/etcher/blob/bfcfafd32e3628fccf924c8d17fcdb56e4ade989/assets/iconset/512x512.png"
+  },
+  "description": "balenaEtcher 是独立的启动介质制作工具，提供选择镜像、选择目标设备和写入校验流程，适合准备自己的系统安装介质。\n\n### 源码与许可\n当前条目提供 2.1.7 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/balena-io/etcher/tree/bfcfafd32e3628fccf924c8d17fcdb56e4ade989) · [许可原文](https://github.com/balena-io/etcher/blob/bfcfafd32e3628fccf924c8d17fcdb56e4ade989/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 准备可信系统镜像与可清空的 USB/存储卡，选中镜像后逐项核对目标设备；确认原资料已备份再执行写入，等待校验完成后按系统方式弹出设备。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "会保留目标盘已有数据吗？写入镜像会覆盖目标设备，操作前核对设备并备份。\n会自动下载所有系统吗？系统镜像需自己取得。",
+  "documentationUrl": "https://github.com/balena-io/etcher/blob/bfcfafd32e3628fccf924c8d17fcdb56e4ade989/README.md",
+  "category": "system",
+  "screenshots": []
+}

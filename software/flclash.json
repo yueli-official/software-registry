@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flclash",
+  "name": "FlClash",
+  "homepage": "https://github.com/chen08209/FlClash",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "flclash",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-macos-amd64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-macos-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-android-arm64-v8a.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "chen08209/FlClash",
+          "assetPattern": "FlClash-{version}-android-x86_64.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "中文跨平台代理客户端，支持配置导入、规则和连接查看。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/chen08209/FlClash/68c71b8ef9b7486a224972eb371ff153c6b2de0f/assets/images/icon.png",
+    "sha256": "b6045af66e2e765643a50ac4871d388a9004e90dea93046696ac742ff8bf2e23",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/chen08209/FlClash/blob/68c71b8ef9b7486a224972eb371ff153c6b2de0f/assets/images/icon.png"
+  },
+  "description": "FlClash 是基于 Clash.Meta/mihomo 的多平台代理客户端，提供订阅与本地配置导入、代理组、规则模式、连接和日志查看，以及系统代理与 TUN 功能。Material 风格界面可适应手机与桌面，支持本地或 WebDAV 备份。软件本身不提供代理服务器或订阅服务。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/chen08209/FlClash/tree/68c71b8ef9b7486a224972eb371ff153c6b2de0f 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. 按系统及架构下载原包：Windows 完整解压 ZIP 后运行 FlClash.exe；macOS 打开 DMG 并移入应用程序目录；Debian/Ubuntu 用软件包管理器安装 DEB；Android 安装适合设备 ABI 的原 APK。\n2. 打开 Profiles/配置页面，导入自己已有的订阅链接或本地配置，选择启用的配置。\n3. 在代理组中选择所需节点，按需求启用系统代理；通过连接、日志和延迟测试核对自己的配置。TUN 模式按系统提示授予必要权限。\n4. Windows 需 Windows 10 或更新版本，macOS 需 macOS 12 或更新版本；Linux 托盘依赖按官方 README 安装。升级或卸载前退出程序及其服务。",
+  "faq": "下载就能使用代理吗？还需要自己提供服务器或订阅配置。\nAndroid 如何选包？一般新手机选 arm64-v8a；x86_64 包主要用于对应设备或模拟器。\n截图是此条目实测吗？是官方 README 的示例设计图，不代表此条目提供服务器。",
+  "documentationUrl": "https://github.com/chen08209/FlClash/blob/68c71b8ef9b7486a224972eb371ff153c6b2de0f/README.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/chen08209/FlClash/68c71b8ef9b7486a224972eb371ff153c6b2de0f/snapshots/preview.png",
+      "sha256": "a27857c88b5a22deccf728bf4e30cc063ff201131b04e6fd4d3a66e7666ac2cf",
+      "mime": "image/png",
+      "caption": "官方示例：桌面与手机的仪表盘、代理模式和连接概览",
+      "sourcePage": "https://github.com/chen08209/FlClash/blob/68c71b8ef9b7486a224972eb371ff153c6b2de0f/snapshots/preview.png",
+      "licenseEvidence": "固定版本 README 引用 snapshots/preview.png；同版根 LICENSE 为 GPL-3.0，snapshots 未发现独立许可例外，保留项目及原始示例出处。",
+      "provenance": "已实际预览官方桌面/手机演示图；203.0.113.42 为文档保留地址，未包含凭据、订阅或用户私密消息；官方示例不冒充维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

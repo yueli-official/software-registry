@@ -1,0 +1,117 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "subtitle-edit",
+  "name": "Subtitle Edit",
+  "homepage": "https://www.nikse.dk/subtitleedit/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "subtitleedit",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "subtitleedit",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SubtitleEdit/subtitleedit",
+          "assetPattern": "SubtitleEdit-macOS-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SubtitleEdit/subtitleedit",
+          "assetPattern": "SubtitleEdit-macOS-ARM64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SubtitleEdit/subtitleedit",
+          "assetPattern": "SubtitleEdit-Linux-x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SubtitleEdit/subtitleedit",
+          "assetPattern": "SubtitleEdit-Linux-ARM64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "编辑字幕文字和时间轴，支持格式转换、同步及错误检查。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/SubtitleEdit/subtitleedit/4803b486a031fb448fbc694b98967ec14940fbc4/installer/flatpak/icons/dk.nikse.subtitleedit-128.png",
+    "sha256": "a9b10b39b837d9ba267c1d1548284af976742ac2727884e8a2f225393adfb86b",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方产品资源installer/flatpak/icons/dk.nikse.subtitleedit-128.png实际预览并核根MIT及installer/MIT声明、图标子目录无独立例外；保留Nikolaj Olsson及原许可。维护者只转换为WebP。"
+  },
+  "description": "Subtitle Edit 5 是跨平台字幕编辑器，可修改字幕文本和时码、转换常见格式、调整整体延迟和检查常见错误，适合制作及整理自己视频的字幕。当前条目固定5.2.0六个Windows、macOS、Linux原版GUI包，主体按精确版本源码和原包随附MIT声明分发，保留Copyright 2026 Nikolaj Olsson；第三方运行库和音视频组件沿用各自通知，不将其全部称为MIT。源码：https://github.com/SubtitleEdit/subtitleedit/tree/v5.2.0 。产品标识和字幕列表示例来自固定官方资源与文档，保留项目来源及MIT许可，此条目仅转换为WebP。",
+  "usageInstructions": "1. Windows 10 22H2或更新系统选择x64/ARM64完整ZIP，解压后运行SubtitleEdit.exe；macOS选择Intel或Apple Silicon DMG并将Subtitle Edit.app拖到应用程序目录。Linux解压对应x64或ARM64 tar.gz后运行SubtitleEdit，视频预览按官方文档安装mpv及ffmpeg；当前条目原生包并非捆绑全部Linux系统依赖的Flatpak。\n2. 用文件菜单打开自己制作的SRT或其他字幕文件，在列表选中一行，修改文本、开始和结束时间，先另存为副本。配合自己的视频预览字幕是否同步。\n3. 整段字幕统一提前或延后时使用整体时间调整；在错误检查和格式转换前查看改动，保存后用播放器核对几处对话与时码。\n4. 本地手工编辑不要求在线翻译账号；OCR、语音识别、AI及在线翻译的模型、依赖或服务密钥按官方文档另行配置，不保证原包包含模型或服务额度。",
+  "faq": "这是旧Windows版本吗？当前条目为5.2.0跨平台GUI，不混用4.x的说明或同Release中的SeConv命令行工具。\nLinux视频不能播放怎么办？当前条目原生tar.gz按官方文档配置mpv、ffmpeg及系统依赖；官方Flatpak是另一种包，不把两者安装要求混写。\n会自动翻译或识别所有字幕吗？这些是可选功能，需要相应模型、组件或服务配置，基本编辑可先手工完成。\n为什么许可与Scoop清单不同？固定5.2.0源码LICENSE与实际原包为MIT，页面按该版本原声明填写，第三方组件另有随附条款。",
+  "documentationUrl": "https://subtitleedit.github.io/subtitleedit/",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/SubtitleEdit/subtitleedit/4803b486a031fb448fbc694b98967ec14940fbc4/docs/screenshots/main-subtitle-grid.png",
+      "sha256": "4e2500cacd56dff6942e0a345238108180926c44a18b13496ea074690fc585ef",
+      "mime": "image/png",
+      "caption": "官方文档示例：字幕时码、文本列表与行操作菜单",
+      "sourcePage": "https://github.com/SubtitleEdit/subtitleedit/blob/4803b486a031fb448fbc694b98967ec14940fbc4/docs/screenshots/main-subtitle-grid.png",
+      "licenseEvidence": "官方docs/screenshots功能图，根MIT、固定docs/screenshots/README资源说明已核；仅通用短示例文本与行菜单，不含影视画面、私人消息或第三方插画。保留Copyright 2026 Nikolaj Olsson与MIT及官方来源：https://github.com/SubtitleEdit/subtitleedit/blob/4803b486a031fb448fbc694b98967ec14940fbc4/LICENSE 。",
+      "provenance": "实际预览官方文档功能示例，非维护者实测截图，不宣称与当前系统主题或所有版本外观一致。",
+      "reviewed": true
+    }
+  ]
+}

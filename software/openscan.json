@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "openscan",
+  "name": "OpenScan",
+  "homepage": "https://github.com/Ethereal-Developers/OpenScan",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ethereal-developers/OpenScan",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "把纸质文件、笔记和名片扫描为 PDF 或 JPG，方便整理与分享。",
+  "description": "OpenScan 是 Android 开源文档扫描工具，可拍摄纸质文件、笔记、名片和照片，裁切页面并以 PDF 或 JPG 导出。适合保存收据、整理课堂笔记和分享纸质资料。本批提供官方完整通用 APK；扫描输出是页面图像，不把官方未声明的 OCR 文字识别或云同步作为默认功能。\n\n此条目提供官方 3.0.0 原 APK；主项目 BSD-3-Clause，组件保留各自许可。对应精确版本源码：https://github.com/Ethereal-Developers/OpenScan/tree/v3.0.0 ，原许可材料见 openscan-3.0.0-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 APK，打开 OpenScan，按系统提示允许相机权限。\n2. 把一张测试纸放在明亮平整的位置，创建扫描并拍摄，确保整页进入画面。\n3. 在裁切界面调整页面边界，查看预览；如果模糊或缺角，重新拍摄。\n4. 需要多页文档时继续添加页面并检查顺序，给文档取一个便于查找的名字。\n5. 导出 PDF 或 JPG 并保存到自己的文件目录，再重新打开确认页面完整；通过 Android 分享入口发送到自己选择的应用。",
+  "faq": "能导出什么格式？官方 README 说明支持 PDF 和 JPG。\n是否自动变成可编辑文字？扫描主要保存页面图像，当前条目不承诺 OCR 识别。\n找不到文件怎么办？检查导出时选择的位置或分享目标，重新导出一份测试文件。",
+  "documentationUrl": "https://github.com/Ethereal-Developers/OpenScan/blob/v3.0.0/README.md",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">OpenScan</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Document Scanner</text></svg>",
+    "sha256": "3cb24d9f5ee0d27f579419a425151d590a6c84c5b0f80a96afdef49e5ea828ff",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

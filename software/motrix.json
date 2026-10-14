@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "motrix",
+  "name": "Motrix",
+  "homepage": "https://motrix.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "motrix",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "agalwood/Motrix",
+          "assetPattern": "Motrix_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "agalwood/Motrix",
+          "assetPattern": "Motrix-{version}-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "agalwood/Motrix",
+          "assetPattern": "Motrix_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨平台下载管理工具。",
+  "icon": {
+    "url": "https://motrix.app/apple-touch-icon.png",
+    "sha256": "fe788eda65d7599149b8266649c33983fa4cd55ef602a92b1bbf71cc32e2e610",
+    "mime": "image/png"
+  },
+  "description": "Motrix 用于跨平台下载管理。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 点击新建任务，粘贴 HTTP、磁力链接或选择种子文件。选择保存目录并开始下载，再在任务列表查看进度。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "documentationUrl": "https://github.com/agalwood/Motrix/blob/main/README.md",
+  "category": "files",
+  "screenshots": []
+}

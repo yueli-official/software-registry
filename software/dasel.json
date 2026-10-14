@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dasel",
+  "name": "dasel",
+  "homepage": "https://github.com/TomWright/dasel",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dasel",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_windows_386.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_darwin_amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_darwin_arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_linux_amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_linux_arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TomWright/dasel",
+          "assetPattern": "dasel_linux_386",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "使用统一选择语法查询和转换 JSON、YAML、TOML 等数据。",
+  "description": "dasel 是独立的结构化数据命令行工具，支持多种数据格式的查询和转换，适合整理配置、提取字段与自动化处理。当前3.x语法应以本版本说明为准。\n\n### 源码与许可\n当前条目提供 3.11.2 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/TomWright/dasel/tree/008b0ed9cae7d5d5b0c72e23c84836c5b2f0338b) · [许可原文](https://github.com/TomWright/dasel/blob/008b0ed9cae7d5d5b0c72e23c84836c5b2f0338b/LICENSE)。",
+  "usageInstructions": "1. 下载平台原版，将 dasel 加入 PATH。\n2. 运行 dasel --help 查看3.x语法。\n3. 在测试目录复制一份 JSON 或 YAML 配置。\n4. 按固定版本示例查询字段或转换格式，输出到新文件。\n5. 核对数据类型与注释保留情况，再决定是否替换配置。",
+  "faq": "旧版脚本能直接用吗？主版本变化可能调整语法，迁移前核对本版指南。\n所有注释都能保留吗？转换行为依格式而定，不把转换视为无损文本编辑。",
+  "documentationUrl": "https://github.com/TomWright/dasel/blob/008b0ed9cae7d5d5b0c72e23c84836c5b2f0338b/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">das</text></svg>",
+    "sha256": "2afb49d019a090efcf6cc06560be9c7730a782d5d8b9548bff5727103780fc13",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名das，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

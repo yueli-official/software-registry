@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mgba",
+  "name": "mGBA",
+  "homepage": "https://github.com/mgba-emu/mgba",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgba-emu/mgba",
+          "assetPattern": "mGBA-{version}-win64.7z",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgba-emu/mgba",
+          "assetPattern": "mGBA-{version}-win32.7z",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgba-emu/mgba",
+          "assetPattern": "mGBA-{version}-macos.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgba-emu/mgba",
+          "assetPattern": "mGBA-{version}-appimage-x64.appimage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgba-emu/mgba",
+          "assetPattern": "mGBA-{version}-appimage-arm64.appimage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "模拟 Game Boy 系列环境，运行自己的兼容程序。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mgba-emu/mgba/26b7884bc25a5933960f3cdcd98bac1ae14d42e2/res/mgba-512.png",
+    "sha256": "7d88ac8bd2519deaaf9668beda2335c691e87ff922e5c57adaf39a724d38999f",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/mgba-emu/mgba/blob/26b7884bc25a5933960f3cdcd98bac1ae14d42e2/res/mgba-512.png"
+  },
+  "description": "mGBA 是独立的 Game Boy、Game Boy Color 与 Game Boy Advance 模拟器，提供输入、存档和调试功能。适合运行自己的兼容程序与合法取得的游戏数据，不附带商业游戏。\n\n### 源码与许可\n当前条目提供 0.10.5 官方原包。主项目许可：MPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/mgba-emu/mgba/tree/26b7884bc25a5933960f3cdcd98bac1ae14d42e2) · [许可原文](https://github.com/mgba-emu/mgba/blob/26b7884bc25a5933960f3cdcd98bac1ae14d42e2/LICENSE)。",
+  "usageInstructions": "1. Windows 解压对应 7z；Mac 打开通用 DMG；Linux 使用对应 CPU 的 AppImage。\n2. 配置键盘或控制器按键。\n3. 打开自己的兼容测试程序。\n4. 检查画面、声音和存档行为，再按需要调整设置。\n5. 备份自己的存档，调试功能按官方文档使用。",
+  "faq": "能运行所有现代主机游戏吗？主要面向上述 Game Boy 系列。\n包中包含游戏吗？这里只分发官方模拟器程序。",
+  "documentationUrl": "https://github.com/mgba-emu/mgba/blob/26b7884bc25a5933960f3cdcd98bac1ae14d42e2/README.md",
+  "category": "games",
+  "screenshots": []
+}

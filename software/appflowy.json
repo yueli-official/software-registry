@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "appflowy",
+  "name": "AppFlowy",
+  "homepage": "https://appflowy.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "appflowy",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AppFlowy-IO/AppFlowy",
+          "assetPattern": "AppFlowy-{version}-android.apk",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AppFlowy-IO/AppFlowy",
+          "assetPattern": "AppFlowy-{version}-linux-x86_64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "AppFlowy-IO/AppFlowy",
+          "assetPattern": "AppFlowy-{version}-macos-universal.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "笔记与协作工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/AppFlowy-IO/AppFlowy/5cf3a365dec0d59f64bad1ee4bb1050471a39b93/frontend/appflowy_flutter/android/app/src/main/ic_launcher-playstore.png",
+    "sha256": "d16f62dec1fe892b11c5d027706cec7e34d2b13b06d17c5ac82dbcc3e8e24928",
+    "mime": "image/png"
+  },
+  "description": "AppFlowy 用于笔记与协作。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 启动后按软件提示创建本地工作区或登录账号。新建文档或表格，输入内容并测试保存，再根据需要配置同步。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "office",
+  "screenshots": []
+}

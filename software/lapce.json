@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lapce",
+  "name": "Lapce",
+  "homepage": "https://github.com/lapce/lapce",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lapce",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lapce/lapce",
+          "assetPattern": "Lapce-macos.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lapce/lapce",
+          "assetPattern": "lapce.debian.bookworm.amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lapce/lapce",
+          "assetPattern": "lapce.debian.bookworm.arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "编辑代码，使用插件、语言服务和终端工作。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/lapce/lapce/b012cef466741528f338879fa708355217fc40bd/extra/images/logo.png",
+    "sha256": "b715c6d069e7cb9fd76ebe398c0251de9f218a44876c75015b9e969c9e70ba23",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/extra/images/logo.png"
+  },
+  "description": "Lapce 是以 Rust 构建的开源代码编辑器，支持多文件编辑、语言服务、插件和集成终端，提供模态编辑等设置。适合开发者日常阅读与修改项目，语言工具及插件的具体能力依配置而定。\n\n### 源码与许可\n当前条目提供 0.4.6 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/lapce/lapce/tree/b012cef466741528f338879fa708355217fc40bd) · [许可原文](https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/extra/images/screenshot.png)；原作者及许可通知见[固定版许可](https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 解压官方便携 ZIP；Mac 打开通用 DMG；Debian 12 安装对应 DEB。\n2. 启动后打开一个测试项目文件夹。\n3. 编辑并保存文件，核对语法显示和导航功能。\n4. 按官方说明安装需要的语言插件和语言服务。\n5. 在集成终端执行项目命令，远程功能需另外配置目标环境。",
+  "faq": "安装后所有语言都有补全吗？需要相应语言插件和服务。\nLinux 包适合什么环境？当前条目选择官方 Debian Bookworm 成品，其他系统先核对依赖。",
+  "documentationUrl": "https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/lapce/lapce/b012cef466741528f338879fa708355217fc40bd/extra/images/screenshot.png",
+      "sha256": "3f24dee4f2ba0b9cad957739f4f4a0e5825a75519c2c5e1c55f146b3436c45ed",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/extra/images/screenshot.png",
+      "caption": "Lapce 官方代码编辑与补全示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/extra/images/screenshot.png；原许可 https://github.com/lapce/lapce/blob/b012cef466741528f338879fa708355217fc40bd/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

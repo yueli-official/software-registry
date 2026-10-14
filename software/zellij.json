@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "zellij",
+  "name": "Zellij",
+  "homepage": "https://github.com/zellij-org/zellij",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "zellij",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zellij-org/zellij",
+          "assetPattern": "zellij-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zellij-org/zellij",
+          "assetPattern": "zellij-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zellij-org/zellij",
+          "assetPattern": "zellij-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zellij-org/zellij",
+          "assetPattern": "zellij-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端管理分屏、标签页和可恢复的工作会话。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/zellij-org/zellij/efd8fd5a89a20c07a111d248ad7fce53848d2c18/assets/logo128.ico",
+    "sha256": "d73d1bffded8351ffcad29fbeefd92e1618520f77e12ed4a003c2f6647bb8689",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/zellij-org/zellij/blob/efd8fd5a89a20c07a111d248ad7fce53848d2c18/assets/logo128.ico"
+  },
+  "description": "Zellij 是独立的终端工作区工具，支持窗格分割、标签页、布局和会话管理，适合同时运行多个命令及维护开发工作区。具体平台能力与插件支持按官方说明核对。\n\n### 源码与许可\n当前条目提供 0.45.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/zellij-org/zellij/tree/efd8fd5a89a20c07a111d248ad7fce53848d2c18) · [许可原文](https://github.com/zellij-org/zellij/blob/efd8fd5a89a20c07a111d248ad7fce53848d2c18/LICENSE.md)。",
+  "usageInstructions": "1. 解压对应系统与 CPU 的官方包，把 zellij 程序加入 PATH。\n2. 在终端运行 zellij，打开一个工作会话。\n3. 按底部快捷键提示新建窗格和标签页。\n4. 为常用任务保存布局，按官方指南练习断开与重新连接会话。\n5. 操作前确认当前会话与正在运行的任务，避免意外关闭进程。",
+  "faq": "必须安装某个 Shell 吗？在系统支持的终端环境运行，Shell 和终端兼容性按官方文档核对。\n包含 Windows 吗？当前条目提供官方 Windows x64 成品，功能差异以官方说明为准。",
+  "documentationUrl": "https://github.com/zellij-org/zellij/blob/efd8fd5a89a20c07a111d248ad7fce53848d2c18/README.md",
+  "category": "developer",
+  "screenshots": []
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nanobot",
+  "name": "Nanobot",
+  "homepage": "https://nanobot.wiki",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HKUDS/nanobot",
+          "assetPattern": "nanobot-tui-win32-x64.exe.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HKUDS/nanobot",
+          "assetPattern": "nanobot-tui-darwin-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HKUDS/nanobot",
+          "assetPattern": "nanobot-tui-darwin-x64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HKUDS/nanobot",
+          "assetPattern": "nanobot-tui-linux-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HKUDS/nanobot",
+          "assetPattern": "nanobot-tui-linux-x64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "自托管 AI 助手工具。",
+  "icon": {
+    "url": "https://nanobot.wiki/assets/nanobot_apple_touch.png?v=20260406d",
+    "sha256": "10b67385e369e657fa74c7f4a1dc6fdf54cdc6b4fdf9629309d6e8e289d27a31",
+    "mime": "image/png"
+  },
+  "description": "Nanobot 用于自托管 AI 助手。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 解压后按官方说明配置模型服务和 API Key，在终端启动 TUI。先发送一条测试对话，再按需要连接消息渠道和工具。\n\n### 其他平台安装\n- macOS arm64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- macOS amd64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- Linux arm64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- Linux amd64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/HKUDS/nanobot/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

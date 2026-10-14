@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dosbox-staging",
+  "name": "DOSBox Staging",
+  "homepage": "https://github.com/dosbox-staging/dosbox-staging",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dosbox-staging",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dosbox-staging/dosbox-staging",
+          "assetPattern": "dosbox-staging-macOS-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dosbox-staging/dosbox-staging",
+          "assetPattern": "dosbox-staging-linux-x86_64-v{version}.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在现代电脑模拟 DOS 环境，运行自己的旧程序。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dosbox-staging/dosbox-staging/7b40053b7ac580843d0461eba8c36a47a990e66c/extras/icons/png/icon_512.png",
+    "sha256": "7c44f64bf5c121558b43a7c01ec3a70f850b58914ef542d4225104eea7ef9240",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/dosbox-staging/dosbox-staging/blob/7b40053b7ac580843d0461eba8c36a47a990e66c/extras/icons/png/icon_512.png"
+  },
+  "description": "DOSBox Staging 是持续维护的独立 DOS 模拟器，可配置显示、声音和输入，适合运行自己的 DOS 程序与兼容游戏。挂载路径和配置需按自己的文件位置设置，不附带商业游戏。\n\n### 源码与许可\n当前条目提供 0.83.0 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/dosbox-staging/dosbox-staging/tree/7b40053b7ac580843d0461eba8c36a47a990e66c) · [许可原文](https://github.com/dosbox-staging/dosbox-staging/blob/7b40053b7ac580843d0461eba8c36a47a990e66c/LICENSE)。",
+  "usageInstructions": "1. Windows 解压官方 ZIP；Mac 打开通用 DMG；Linux 解压原包。\n2. 建立一个只含测试 DOS 程序的独立目录。\n3. 按官方指南挂载该测试目录并切换到对应盘符。\n4. 启动测试程序，检查输入、显示和声音。\n5. 按需要保存自己的配置并备份测试文件。",
+  "faq": "必须挂载整个系统盘吗？无需这样做，可只挂载自己的测试目录。\n与 DOSBox-X 是同一产品别名吗？是不同维护项目，各有自己的发行与配置。",
+  "documentationUrl": "https://github.com/dosbox-staging/dosbox-staging/blob/7b40053b7ac580843d0461eba8c36a47a990e66c/README.md",
+  "category": "games",
+  "screenshots": []
+}

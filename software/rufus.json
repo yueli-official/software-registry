@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rufus",
+  "name": "Rufus",
+  "homepage": "https://rufus.ie/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rufus",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "格式化并制作可启动 USB 安装盘。",
+  "description": "Rufus：格式化并制作可启动 USB 安装盘。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 备份 U 盘中的数据，选择目标 U 盘和系统镜像。根据启动方式检查分区设置后开始写入；此操作会清空目标盘。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/pbatard/rufus/875f221d5b4fa2c43cad1b85ae975d106964949f/res/icons/rufus-512.png",
+    "sha256": "c532b3826ce5d7cd16fe3167b1ed129bd62e24b4513be63c1019c4286a2e58c7"
+  },
+  "screenshots": []
+}

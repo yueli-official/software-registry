@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kvaesitso",
+  "name": "Kvaesitso",
+  "homepage": "https://github.com/MM2-0/Kvaesitso",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MM2-0/Kvaesitso",
+          "assetPattern": "de.mm20.launcher2.release-v1.41.0.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v1.41.0"
+        }
+      }
+    }
+  ],
+  "summary": "以搜索为中心的 Android 启动器，整理应用与桌面小组件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/MM2-0/Kvaesitso/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "88ca215b7e65f23ea54e3504b1a67b9ef4f328647e002e87bf49b5e015c836ae",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "description": "Kvaesitso 是独立的 Android 启动器，围绕搜索、应用访问和可配置小组件组织桌面。适合希望通过搜索快速打开应用的用户。当前条目为正式 release 包，包名 de.mm20.launcher2.release。\n\n### 源码与许可\n当前条目提供 1.41.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/MM2-0/Kvaesitso/tree/328073f38f8472118a377f69cce34a2c86372ab9) · [许可原文](https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/LICENSE.txt)。\n\n界面图来自[官方随附资料](https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot01.jpg)；原作者及许可通知见[固定版许可](https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/LICENSE.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 release APK。\n2. 先打开应用体验搜索和应用列表。\n3. 需要替换桌面时，在 Android 设置中选择默认启动器。\n4. 搜索并打开一个已安装应用，按需要添加小组件。\n5. 调整搜索来源、外观和桌面布局；保留原启动器便于切换。",
+  "faq": "一定要立刻设为默认桌面吗？可先试用再切换。\n手势和最近任务一定相同吗？系统与厂商实现影响兼容性，以官方说明为准。",
+  "documentationUrl": "https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/readme.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/MM2-0/Kvaesitso/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot01.jpg",
+      "sha256": "7edd58961fbcc4bd859087faaf404d651fa5ae35d3767d96146c7c0a046b1874",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot01.jpg",
+      "caption": "Kvaesitso 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot01.jpg；原许可 https://github.com/MM2-0/Kvaesitso/blob/328073f38f8472118a377f69cce34a2c86372ab9/LICENSE.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "whisperdesktop",
+  "name": "Whisper Desktop",
+  "homepage": "https://github.com/Const-me/Whisper",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Const-me/Whisper",
+          "assetPattern": "WhisperDesktop.zip",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "在 Windows 本地把音频转为文字。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Const-me/Whisper/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/Examples/WhisperDesktop/sunflower.ico",
+    "sha256": "a1a6790c46e621def5373ca68ec67f6aada4b74eb3bdca18b6e84410f26f9a8c",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/Examples/WhisperDesktop/sunflower.ico"
+  },
+  "description": "Whisper Desktop 是独立的 Windows 语音识别桌面应用，使用本地模型处理音频。小体积程序包不包含模型；模型另行下载，可能超过 1GB。\n\n### 源码与许可\n当前条目提供 1.12.0 官方原包。主项目许可：MPL-2.0，模型与其他组件遵循各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/Const-me/Whisper/tree/c5515ace19066e938854b4b99e0c2e9bbc2eeb65) · [许可原文](https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/gui-transcribe.png)；原作者及许可通知见[固定版许可](https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载官方原包，解压到自己的工具目录。\n2. 解压原包并启动 WhisperDesktop.exe，按官方说明取得兼容模型；先用短测试音频检查语言、输出格式与结果，再处理自己的音频。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "只下载程序就能识别吗？还需模型、可用存储和符合要求的硬件。\n硬件要求是什么？官方要求 64 位 Windows、Direct3D 11 GPU，以及支持 AVX1/F16C 的 CPU；具体兼容性见固定版本说明。",
+  "documentationUrl": "https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/Readme.md",
+  "category": "ai",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Const-me/Whisper/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/gui-transcribe.png",
+      "sha256": "c1d2ff076a823dee577e42100246c0a015d4765a9ad55b1fd1528b3cadbcef19",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/gui-transcribe.png",
+      "caption": "Whisper Desktop 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/gui-transcribe.png；原许可 https://github.com/Const-me/Whisper/blob/c5515ace19066e938854b4b99e0c2e9bbc2eeb65/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

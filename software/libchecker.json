@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "libchecker",
+  "name": "LibChecker",
+  "homepage": "https://github.com/LibChecker/LibChecker",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibChecker/LibChecker",
+          "assetPattern": "LibChecker-{version}.*-foss-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "查看 Android 应用使用的库、组件和架构，帮助了解已安装应用。",
+  "description": "LibChecker 用于查看 Android 应用的库、原生 ABI 架构和组件信息，可根据规则识别常见第三方库并统计引用。适合开发者排查应用组成，也适合普通用户了解安装包；识别结果取决于实际包信息及规则，不作为完整安全审计。本批提供官方 FOSS 变体，固定版本支持 Android 7.0 至 16。\n\n此条目提供官方 2.5.4 原 APK；主项目 Apache-2.0，组件保留各自许可。对应精确版本源码：https://github.com/LibChecker/LibChecker/tree/2.5.4 ，原许可材料见 libchecker-2.5.4-LICENSES.zip。\n\n本固定 Release 标记为2.5.4，原 APK 完整 versionName 为2.5.4.5696014，后七位对应已固定源码提交的短摘要；原包和下载版本未变。",
+  "usageInstructions": "1. 下载并安装官方 FOSS APK，Android 按提示允许本次安装来源。\n2. 打开 LibChecker，等待已安装应用列表载入；按照系统提示给予查看应用信息所需的权限。\n3. 先选择 LibChecker 自身或一个你熟悉的应用，查看版本、原生库、架构及组件页。\n4. 对照条目中的识别信息查看应用使用的库；需要了解标签含义时打开官方文档。\n5. 按需要使用统计、排序或快照功能对比应用变化；FOSS 与市场变体不要当成同一安装包混用。",
+  "faq": "为什么有些库不能识别？识别需要对应规则，包内未知或混淆库可能没有名称标签。\n能因此判断应用绝对安全吗？不能，库与组件清单仅供了解和排查。\n为什么写 FOSS？当前条目原包是官方 FOSS 变体，不是 market 包。",
+  "documentationUrl": "https://github.com/LibChecker/LibChecker-Docs",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">LibChecker</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">App Inspector</text></svg>",
+    "sha256": "b6565de863b3f0d66e9df445ef0419ee4e7bfb38b7370d0bd79c24d3e728b242",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

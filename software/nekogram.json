@@ -1,0 +1,38 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nekogram",
+  "name": "Nekogram",
+  "homepage": "https://github.com/Nekogram/Nekogram",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Nekogram/Nekogram",
+          "assetPattern": "Nekogram-12.10.6-7112-universal.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v12.10.6"
+        }
+      }
+    }
+  ],
+  "summary": "用安卓客户端连接自己的 Telegram 账号。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Nekogram/Nekogram/577d3924c703fc70c1f72f84f62c2a07c0a5cd8f/TMessagesProj/src/main/ic_launcher-playstore.png",
+    "sha256": "1064912e43e452fd299734bc21dfd7e5b16bfec67d683b80a1c9bf16ec7f57b2",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Nekogram/Nekogram/blob/577d3924c703fc70c1f72f84f62c2a07c0a5cd8f/TMessagesProj/src/main/ic_launcher-playstore.png"
+  },
+  "description": "Nekogram 是独立的 Telegram 第三方客户端，提供客户端体验与相关设置。当前条目提供官方稳定通用 APK，账号及网络访问条件由 Telegram 服务决定。\n\n### 源码与许可\n当前条目提供 12.10.6 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/Nekogram/Nekogram/tree/577d3924c703fc70c1f72f84f62c2a07c0a5cd8f) · [许可原文](https://github.com/Nekogram/Nekogram/blob/577d3924c703fc70c1f72f84f62c2a07c0a5cd8f/LICENSE)。",
+  "usageInstructions": "1. 下载官方 APK，核对设备架构与已有安装渠道，按安卓提示安装。\n2. 按官方要求准备可用网络和自己的 Telegram 账号，核对客户端来源后登录；检查语言、通知与隐私设置，再使用自己的聊天资料。\n3. 升级前保留重要资料，避免混用不同签名渠道。",
+  "faq": "包含免费账号或网络代理吗？不包含，需自己的账号及可访问服务的网络。\n是否为 Telegram 官方客户端？这是第三方客户端，许可和功能按本项目说明。",
+  "documentationUrl": "https://github.com/Nekogram/Nekogram/blob/577d3924c703fc70c1f72f84f62c2a07c0a5cd8f/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

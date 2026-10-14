@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "keka",
+  "name": "Keka",
+  "homepage": "https://www.keka.io",
+  "kind": "reference",
+  "packages": [],
+  "summary": "压缩解压工具。",
+  "icon": {
+    "url": "https://www.keka.io/favicon.ico",
+    "sha256": "c91403d2ade9322f0933d7db777a2fef9b54fec35f03103066dc5388da972b59",
+    "mime": "image/x-icon"
+  },
+  "description": "Keka 用于压缩解压。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择压缩格式，将文件拖入软件创建压缩包；打开压缩包可解压到指定目录。设置密码后妥善保管。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/aonez/Keka/blob/master/README.md",
+  "category": "files",
+  "screenshots": []
+}

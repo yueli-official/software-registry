@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "wps-office",
+  "name": "WPS Office",
+  "homepage": "https://www.wps.cn/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "办公套件工具。",
+  "icon": {
+    "url": "https://www.wps.cn/favicon.ico",
+    "sha256": "4fb684e63524072d2ce344fd56ecbdd8f402d669dc71e92d6389221473c32afa",
+    "mime": "image/x-icon"
+  },
+  "description": "WPS Office 用于办公套件。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 打开自己的文档、表格或演示文件，先另存副本再编辑。使用云同步前按官方说明配置账号和保存位置。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "office",
+  "screenshots": []
+}

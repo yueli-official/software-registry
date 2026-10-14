@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "espanso",
+  "name": "Espanso",
+  "homepage": "https://espanso.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "espanso",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "espanso/espanso",
+          "assetPattern": "espanso-debian-wayland-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "espanso/espanso",
+          "assetPattern": "Espanso-Mac-Universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "文本自动补全工具。",
+  "icon": {
+    "url": "https://espanso.org/img/favicon.ico",
+    "sha256": "5f8c41061815bd26fd4f19f87791844f245b5096ed66382cbb83aa76d765c918",
+    "mime": "image/x-icon"
+  },
+  "description": "Espanso 用于文本自动补全。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 启动 Espanso，打开用户配置中的匹配文件。添加触发词与替换文本，保存后在文本输入框测试；修改规则前可先备份配置。\n\n### 其他平台安装\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "productivity",
+  "screenshots": []
+}

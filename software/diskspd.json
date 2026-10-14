@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "diskspd",
+  "name": "DiskSpd",
+  "homepage": "https://github.com/microsoft/diskspd",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "diskspd",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "microsoft/diskspd",
+          "assetPattern": "DiskSpd.ZIP",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用命令行测试自己的存储设备与文件性能。",
+  "description": "DiskSpd 是独立的 Windows 存储性能测试工具，可按明确参数测试延迟与吞吐量。当前条目使用同一官方多架构 ZIP，分别列出实际存在的 x64 与 ARM64 主程序。\n\n### 源码与许可\n当前条目提供 2.3 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/microsoft/diskspd/tree/5e7025bfc9d1364f185d4c30963d7ac79195435e) · [许可原文](https://github.com/microsoft/diskspd/blob/5e7025bfc9d1364f185d4c30963d7ac79195435e/LICENSE)。",
+  "usageInstructions": "1. 下载官方原包，解压到自己的工具目录。\n2. 解压后进入与系统架构相符的目录，先阅读参数帮助；仅对专门准备的测试文件执行短时测试，检查目标路径和空间，不对重要资料或生产磁盘盲目施压。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "有 32 位主程序吗？当前条目核验的当前官方 ZIP 仅含 x64 与 ARM64，没有虚列 32 位。\n为什么两个架构下载文件相同？官方把两个架构完整程序放在同一原包中，解压后选择相应目录。",
+  "documentationUrl": "https://github.com/microsoft/diskspd/blob/5e7025bfc9d1364f185d4c30963d7ac79195435e/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"50\" font-weight=\"700\" fill=\"white\">DiskSpd</text></svg>",
+    "sha256": "ef2fb6748a8b26a6502aab8c7516cafd5a565a8376302455ebf9ed9d41771c9c",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名DiskSpd，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

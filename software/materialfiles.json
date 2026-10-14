@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "materialfiles",
+  "name": "Material Files",
+  "homepage": "https://github.com/zhanghai/MaterialFiles",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zhanghai/MaterialFiles",
+          "assetPattern": "app-release-universal.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "轻量开源的 Android 文件管理器，支持压缩文件、NAS访问和可定制主题。",
+  "description": "Material Files 提供清晰的文件列表、路径导航、压缩文件查看与解压，并可访问FTP、SFTP、SMB和WebDAV服务器。适合管理手机的下载、文档及局域网文件；普通文件操作无需Root，系统目录另有权限要求。官方说明支持Android5.0及以上，并提供中文资料。\n\n此条目提供官方1.7.5完整Android APK，保留原始字节。主许可GPL-3.0-or-later，原署名与组件通知保留；对应源码：https://github.com/zhanghai/MaterialFiles/tree/v1.7.5 ，原许可材料见materialfiles-1.7.5-LICENSES.zip。",
+  "usageInstructions": "1. 在Android5.0或更新系统打开下载的官方完整APK，按提示允许当前安装来源并安装。\n2. 首次进入按系统提示授予所需文件访问权限，打开下载文件夹，选择一份自己的文档查看。\n3. 新建一个测试文件夹，将一份可复制的文件复制进去，检查文件名、大小和保存位置。\n4. 打开一个自己的ZIP压缩包，查看内部文件，再按需要解压到测试目录。\n5. 有NAS时在存储入口添加SMB、SFTP或WebDAV服务器，填写自己的地址与账户；没有NAS也可只管理本地文件。",
+  "faq": "必须Root吗？本地普通文件管理不用Root，Root仅用于已授权的系统文件访问。\n能替换系统文件选择器吗？官方明确表示依赖DocumentsUI，不应把它当作系统DocumentsUI的替代品。\n为什么无法访问某些目录？受Android存储权限和系统目录限制，以系统授权结果为准。",
+  "documentationUrl": "https://github.com/zhanghai/MaterialFiles/blob/v1.7.5/README_zh-CN.md",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Material Files</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Manager</text></svg>",
+    "sha256": "b9beb79141320a01f27eebd201417da6a571bcb4c90ed0c81ff595571dda9f7a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

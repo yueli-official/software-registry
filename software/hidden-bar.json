@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hidden-bar",
+  "name": "Hidden Bar",
+  "homepage": "https://d.foundation/opensource",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dwarvesf/hidden",
+          "assetPattern": "Hidden-Bar-v*-macos.zip",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Mac 菜单栏整理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dwarvesf/hidden/47937b9d8aede0325ca87a7880af13433e7c5cf8/hidden/Assets.xcassets/AppIcon.appiconset/icon_512%402x.png",
+    "sha256": "c36fdbd1b620b671c9800e1b12dd78fa1edc9210bf3d00fe3bfa84e6b4d66cb2",
+    "mime": "image/png"
+  },
+  "description": "Hidden Bar 用于Mac 菜单栏整理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 解压并运行，将需要隐藏的菜单栏图标按官方说明放入隐藏区域。点击展开或收起，再设置自动隐藏与自启动。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/dwarvesf/hidden/blob/develop/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "openmtp",
+  "name": "OpenMTP",
+  "homepage": "https://github.com/ganeshrvel/openmtp",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ganeshrvel/openmtp",
+          "assetPattern": "openmtp-{version}-mac-x64.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ganeshrvel/openmtp",
+          "assetPattern": "openmtp-{version}-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在 Mac 与 Android 之间用 USB 传输文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ganeshrvel/openmtp/b465eb5c4b2a3c2408b580607a55719e4f5f4104/build/icon.png",
+    "sha256": "e180019366879d6d4dd05a76b50c2b84549a84f18d8ae4c2b71e98d651311d0a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/build/icon.png"
+  },
+  "description": "OpenMTP 是 macOS 上的开源 MTP 文件传输工具，通过双栏文件界面在 Mac 与 Android 设备之间浏览和复制文件。适合传输照片、视频和文档，实际连接表现由设备、USB 模式及系统兼容性决定。\n\n### 源码与许可\n当前条目提供 3.3.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/ganeshrvel/openmtp/tree/b465eb5c4b2a3c2408b580607a55719e4f5f4104) · [许可原文](https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/blobs/images/file-explorer-bluebg.jpg)；原作者及许可通知见[固定版许可](https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 按 Intel 或 Apple Silicon 处理器选择官方 DMG，将应用安装到 Mac。\n2. 用支持数据传输的 USB 线连接 Android，并解锁手机。\n3. 在 Android USB 选项中选择文件传输/MTP。\n4. 打开 OpenMTP，核对电脑与手机两栏中的目标目录。\n5. 先复制一个测试文件并检查内容，再传输较大文件。",
+  "faq": "Windows 也能安装吗？当前条目提供官方 macOS 应用。\n手机没出现怎么办？核对数据线、手机解锁状态及 MTP 模式，并避免其他 MTP 程序同时占用连接。",
+  "documentationUrl": "https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/README.md",
+  "category": "files",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/ganeshrvel/openmtp/b465eb5c4b2a3c2408b580607a55719e4f5f4104/blobs/images/file-explorer-bluebg.jpg",
+      "sha256": "3884d4e54bb49a767e3a2930ee513d2ab9e079ad105381e8fe0a938b6e5a2793",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/blobs/images/file-explorer-bluebg.jpg",
+      "caption": "OpenMTP 官方 Mac 与 Android 双栏文件传输示例",
+      "licenseEvidence": "OpenMTP 官方随附文档图片；Copyright Ganesh Rathinavel，固定版 MIT 文档许可及署名见 https://github.com/ganeshrvel/openmtp/blob/b465eb5c4b2a3c2408b580607a55719e4f5f4104/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

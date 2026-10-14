@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fd",
+  "name": "fd",
+  "homepage": "https://github.com/sharkdp/fd",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fd",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fd",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fd",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/fd",
+          "assetPattern": "fd-v10.5.0-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/fd",
+          "assetPattern": "fd-v10.5.0-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/fd",
+          "assetPattern": "fd-v10.5.0-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/fd",
+          "assetPattern": "fd-v10.5.0-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/fd",
+          "assetPattern": "fd-v10.5.0-i686-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端按名称、扩展名等条件快速查找文件。",
+  "description": "fd 是开源命令行文件查找工具，支持按名称、扩展名和类型等条件搜索，并能结合自己的终端工作流程使用。适合在代码项目、文档目录和资料文件夹中快速定位文件。\n\n此条目提供未修改的官方 10.5.0 原包，主程序可按 MIT 或 Apache License 2.0 选择许可，Copyright 2017–present The fd developers；独立组件保留各自原许可。对应源码：https://github.com/sharkdp/fd/tree/v10.5.0 。夸克目录中的 fd-10.5.0-LICENSES.zip 保留原许可与通知。",
+  "usageInstructions": "1. Windows 按CPU选择原ZIP并解压；Mac、Linux按CPU选择原tar.gz并解压，找到fd或fd.exe。Mac/Linux按系统要求赋予执行权限；本批Linux为GNU构建，运行库要求按官方README确认。\n2. 打开终端，在程序目录先运行 fd --version；Windows PowerShell 使用 .\\fd.exe --version。新建只放测试文件的 test-docs 文件夹，放入 hello.txt 和一份自己的测试PDF。\n3. 执行 fd -e txt . test-docs 查看其中的文本文件，Windows可使用 .\\fd.exe -e txt . test-docs。再用 fd -F hello test-docs 按名称查找。\n4. 用 fd --help 查看隐藏文件、忽略规则和类型筛选。首次练习只进行查找，不添加批量执行或删除操作。",
+  "faq": "名称搜索支持什么？默认支持正则表达式，使用 -F 可按普通文本进行匹配。\n为什么没找到隐藏文件？默认搜索行为包含隐藏与忽略规则，按官方帮助调整。\n和文件管理器一样吗？它是终端查找工具，主要输出匹配路径。\n安装后会自动扫描磁盘吗？不会，需要你指定搜索命令及目录。",
+  "documentationUrl": "https://github.com/sharkdp/fd/blob/v10.5.0/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#e9f5ef\"/><text x=\"128\" y=\"139\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"76\" fill=\"#245a48\">fd</text><text x=\"128\" y=\"183\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"20\" fill=\"#245a48\">file search</text></svg>",
+    "sha256": "795c01f2163cb3aefe16ad0b7a6d23c8e0e7f27b9d57d931e5e01a0bf7ffcce9",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；未找到可直接审校采用的官方独立产品图标，不以作者头像或GitHub图标替代。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "letos",
+  "name": "Letos",
+  "homepage": "https://github.com/pawelsalawa/letos",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pawelsalawa/letos",
+          "assetPattern": "letos-{version}-windows-x64.zip",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pawelsalawa/letos",
+          "assetPattern": "letos-{version}-windows-arm64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pawelsalawa/letos",
+          "assetPattern": "letos-{version}-macos-universal.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pawelsalawa/letos",
+          "assetPattern": "Letos-{version}-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pawelsalawa/letos",
+          "assetPattern": "Letos-{version}-aarch64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用图形界面管理 SQLite 数据库、表结构与 SQL。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/pawelsalawa/letos/484bd8b02b29324caf468d6baec7643f098f8174/Letos/docs/sqlitestudio_logo.png",
+    "sha256": "cfe65d0ded963167c302db401fd41cb7022e023a1e5ed3fe7a4b414420061210",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/pawelsalawa/letos/blob/484bd8b02b29324caf468d6baec7643f098f8174/Letos/docs/sqlitestudio_logo.png"
+  },
+  "description": "Letos 是原 SQLiteStudio 项目更名后的独立 SQLite 管理工具，提供数据库浏览、SQL 编辑与数据操作；与 SQLite 官方项目无隶属关系。\n\n### 源码与许可\n当前条目提供 4.0.3 官方原包。主项目许可：GPL-3.0 加 OpenSSL 链接例外；原版所含 Icons8 图标有单独许可；独立组件遵循各自许可。[固定版本源码](https://github.com/pawelsalawa/letos/tree/484bd8b02b29324caf468d6baec7643f098f8174) · [许可原文](https://github.com/pawelsalawa/letos/blob/484bd8b02b29324caf468d6baec7643f098f8174/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 先备份自己的 SQLite 文件，再打开测试数据库，浏览表结构并执行只读查询；用副本测试编辑、导入与导出。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "会部署数据库服务器吗？SQLite 主要使用本地数据库文件，本工具负责管理。\n为什么不是 SQLiteStudio？上游已将项目更名为 Letos，属于同一软件，不重复列为两款。",
+  "documentationUrl": "https://github.com/pawelsalawa/letos/blob/484bd8b02b29324caf468d6baec7643f098f8174/README.md",
+  "category": "developer",
+  "screenshots": []
+}

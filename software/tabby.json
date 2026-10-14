@@ -1,0 +1,117 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tabby",
+  "name": "Tabby",
+  "homepage": "https://tabby.sh/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "tabby",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Eugeny/tabby",
+          "assetPattern": "tabby-{version}-setup-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Eugeny/tabby",
+          "assetPattern": "tabby-{version}-macos-x86_64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Eugeny/tabby",
+          "assetPattern": "tabby-{version}-macos-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Eugeny/tabby",
+          "assetPattern": "tabby-{version}-linux-x64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Eugeny/tabby",
+          "assetPattern": "tabby-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持分屏、SSH和串口连接的开源跨平台终端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Eugeny/tabby/467ce8ebfa467fb88cf6d154c9a5891e3d3647f0/build/icons/256x256.png",
+    "sha256": "d7e85e3bad6a5cfeb9f01416d5dbdc489d2baded0a8faa21a56825a316679491",
+    "mime": "image/png",
+    "provenance": "固定官方仓库实际产品图标，已经实际预览。MIT根许可，青色终端箭头标识。"
+  },
+  "description": "Tabby 是跨平台终端应用，可管理本地终端、SSH、Telnet与串口会话，支持标签页、分屏、主题和快捷键。适合开发、服务器连接及设备调试，官方提供中文使用资料。Tabby原名Terminus，软件本身不会提供远程服务器账号或替代操作系统的Shell。采用MIT许可，原版包与第三方许可保持不变；对应1.0.238源码与发行：https://github.com/Eugeny/tabby/releases/tag/v1.0.238 。",
+  "usageInstructions": "1. Windows选择x64或ARM64安装器并按提示安装。macOS解压对应Intel或Apple Silicon的ZIP，将Tabby.app放到应用程序目录。Linux选择与系统架构对应的Debian包并由系统软件包工具安装依赖。\n2. 打开应用，在配置中选择系统已有的PowerShell、命令提示符或其他Shell，创建本地终端标签页；使用WSL需要先在Windows中安装WSL。\n3. 连接自己的服务器时，在SSH配置中填写主机、端口、用户与认证方式；串口连接需选择实际设备和波特率。可用标签页和分屏同时查看多个会话。",
+  "faq": "安装Tabby就有SSH服务器吗？它是客户端，远端账号、服务器和网络连接需要自己准备。\n和Windows Terminal有什么区别？Tabby还提供跨平台桌面应用及SSH、串口配置；Windows Terminal主要承载Windows本地命令行环境。\n其他包在哪里？官方还提供Windows便携包、Linux RPM/AppImage和ARMv7构建；此条目先提供主流x64与ARM64成品，同一产品只计一款。",
+  "documentationUrl": "https://github.com/Eugeny/tabby/blob/master/README.zh-CN.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Eugeny/tabby/467ce8ebfa467fb88cf6d154c9a5891e3d3647f0/docs/readme-terminal.png",
+      "sha256": "6f383c1d1f4acee75c7ef5a82959fa721ca3b19262f319567f3eed7f28d4f8aa",
+      "mime": "image/png",
+      "caption": "官方分屏终端示例（早期版本，原名Terminus）：同时编辑文件和查看进程",
+      "sourcePage": "https://github.com/Eugeny/tabby/blob/467ce8ebfa467fb88cf6d154c9a5891e3d3647f0/README.md",
+      "licenseEvidence": "官方README引用docs/readme-terminal.png；根MIT许可 https://github.com/Eugeny/tabby/blob/467ce8ebfa467fb88cf6d154c9a5891e3d3647f0/LICENSE 。核查docs目录无独立许可例外，保留项目版权和图片来源。",
+      "provenance": "已实际预览：官方旧版分屏例图，公开示例用户名，不含认证资料；明确版本关系，非维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

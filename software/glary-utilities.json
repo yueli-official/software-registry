@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "glary-utilities",
+  "name": "Glary Utilities",
+  "homepage": "https://www.glarysoft.com/glary-utilities/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "glary-utilities",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "系统优化工具。",
+  "icon": {
+    "url": "https://www.glarysoft.com/favicon.ico",
+    "sha256": "ea7303ddd13e7bde681f0046f051cce60def5e0d6e76c4c5512506775ce63ba1",
+    "mime": "image/x-icon"
+  },
+  "description": "Glary Utilities 用于系统优化。",
+  "usageInstructions": "1. 下载区选择原版 Windows 包，安装或解压。\n2. 打开软件，选择需要的清理或管理模块。先查看扫描结果并备份重要设置，逐项确认后执行，不要直接勾选所有修复项。",
+  "faq": "保留官方包与许可。免费、试用及专业功能以官方当前授权条件为准，商业授权请咨询软件官方。",
+  "category": "system",
+  "screenshots": []
+}

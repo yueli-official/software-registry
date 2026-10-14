@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sms",
+  "name": "短信清理器",
+  "homepage": "https://github.com/davidche1116/Sms",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "davidche1116/Sms",
+          "assetPattern": "sms-*-android.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "安卓短信管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/davidche1116/Sms/6ed8e9536bd7960a977b7b031e972b93e8cdf5be/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "fa177fd19994fc2ac464c759fea652ec4090892a05b00e0e4f139d7d7bb5d060",
+    "mime": "image/png"
+  },
+  "description": "短信清理器 用于安卓短信管理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 授予必要短信权限，查看分类与匹配结果。先备份短信并逐项确认，再清理不需要的消息。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/davidche1116/Sms/blob/main/README.md",
+  "category": "system",
+  "screenshots": []
+}

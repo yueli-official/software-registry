@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "droid-ify",
+  "name": "Droid-ify",
+  "homepage": "https://github.com/Droid-ify/client",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Droid-ify/client",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v0.7.8"
+        }
+      }
+    }
+  ],
+  "summary": "浏览 F-Droid 软件仓库，安装与更新开源 Android 应用。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Droid-ify/client/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/icon.png",
+    "sha256": "e9141c4f98d2ac54ef166a0b7ac1293847f366eb43022e38b9954c32da7a6ded",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/icon.png"
+  },
+  "description": "Droid-ify 是独立的 F-Droid 仓库客户端，可浏览软件、管理仓库及检查更新。提供多种安装方式，应用索引、可用版本和签名来自所选仓库。\n\n### 源码与许可\n当前条目提供 0.7.8 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/Droid-ify/client/tree/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a) · [许可原文](https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/phoneScreenshots/1.png)；原作者及许可通知见[固定版许可](https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK 并打开应用。\n2. 同步默认仓库索引，等待应用列表加载。\n3. 搜索一个需要的应用，查看说明、版本和来源仓库。\n4. 允许当前客户端安装来源，按系统步骤确认安装。\n5. 在更新页管理应用；需要 Shizuku 或 Root 安装方式时再按官方说明配置。",
+  "faq": "必须 Root 吗？普通系统安装方式不要求 Root。\n同名应用可以跨仓库覆盖吗？不同签名的构建通常不能直接覆盖，更新前核对来源。",
+  "documentationUrl": "https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/README.md",
+  "category": "mobile",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Droid-ify/client/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/phoneScreenshots/1.png",
+      "sha256": "7dc30d8e53f40be32ab8f731d8adf41f0ae72bd126a20aba13688d56e84cb4c1",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/phoneScreenshots/1.png",
+      "caption": "Droid-ify 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/metadata/en-US/images/phoneScreenshots/1.png；原许可 https://github.com/Droid-ify/client/blob/ff1453ed957f3b2382abce9a7eb9a9db8def3a3a/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

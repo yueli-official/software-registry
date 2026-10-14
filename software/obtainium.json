@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "obtainium",
+  "name": "Obtainium",
+  "homepage": "https://obtainium.imranr.dev",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ImranR98/Obtainium",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "从应用官方发布页获取 Android 更新，集中管理版本检查与安装。",
+  "description": "Obtainium 可从 GitHub、GitLab、F-Droid 等发布来源追踪 Android 应用，发现更新后通知用户并取得 APK。适合集中管理从官方发布页安装的应用；支持的来源和细节选项见官方 Wiki，提供简体中文文档。此条目提供标准版完整通用 APK，保留原签名，不是 F-Droid 变体或仅 ARM64 的包。\n\n此条目提供官方 1.6.17 原 APK；主项目 GPL-3.0，组件保留各自许可。对应精确版本源码：https://github.com/ImranR98/Obtainium/tree/v1.6.17 ，原许可材料见 obtainium-1.6.17-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 app-release.apk，首次打开按 Android 提示允许本次安装来源。\n2. 在添加应用的入口粘贴一个你已经核实的应用官方发布地址，例如 Aegis 的 GitHub 项目地址。\n3. 让 Obtainium 获取版本和 APK 列表；如有多种架构或版本，按自己手机和官方说明设置文件筛选，再确认添加。\n4. 在应用详情检查来源、检测到的版本及安装状态，选择下载或更新，按 Android 安装提示完成操作。\n5. 按需要设置检查频率及通知；网络无法访问上游时检查该来源连接，网页解析变化按 Wiki 调整配置。迁移前保留应用列表与相关配置。",
+  "faq": "能更新所有应用吗？取决于支持来源、成品 APK 和可解析版本；部分来源只支持追踪。\n为什么检测到更新却安装不了？核对应用包名、签名兼容性、文件筛选及 Android 安装来源权限，按官方说明处理。\n它是不是应用商店？它从你配置的来源取更新，官方应用地址需要自行确认。\n这个包支持哪些架构？完整原 APK 包含 ARM64、ARMv7 和 x86_64 原生库，已检查实际 ELF；不声称支持未打包的 x86。",
+  "documentationUrl": "https://wiki.obtainium.imranr.dev/",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Obtainium</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">App Updates</text></svg>",
+    "sha256": "52e0d3f0bdea2854f12727bc6507c47b5b76a9fece6f9bb8dd1c8bb866121e07",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

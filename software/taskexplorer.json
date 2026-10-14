@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "taskexplorer",
+  "name": "TaskExplorer",
+  "homepage": "https://github.com/DavidXanatos/TaskExplorer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DavidXanatos/TaskExplorer",
+          "assetPattern": "TaskExplorer-v{version}.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DavidXanatos/TaskExplorer",
+          "assetPattern": "TaskExplorer_linux_x86_64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DavidXanatos/TaskExplorer",
+          "assetPattern": "TaskExplorer_linux_aarch64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "图形化进程与系统监控工具，集中查看线程、内存、模块、文件和网络连接。",
+  "description": "TaskExplorer 提供进程列表与详细信息面板，可查看CPU、内存、网络和磁盘活动，以及线程、打开的文件、模块和连接，适合定位占用资源的应用或分析运行中的程序。Windows和Linux共用界面，部分系统功能按各自平台提供；查看其他用户进程或高级系统信息可能需要额外权限。\n\n此条目提供官方2.0.0完整成品：Windows x64安装EXE和Linux x64/ARM64原ZIP，分别约18MB、34MB、32MB。Linux原ZIP内包含原始完整便携压缩包，未重新打包；真实主程序已核实。主项目GPL-3.0，原组件与署名保留；对应源码：https://github.com/DavidXanatos/TaskExplorer/tree/v2.0.0 ，原许可材料见taskexplorer-2.0.0-LICENSES.zip。",
+  "usageInstructions": "1. Windows下载官方EXE安装包，运行安装向导并完成安装。Linux选择对应CPU的ZIP，先解压ZIP，再解压其中的tar.gz；保留整个TaskExplorer目录和配套库，进入目录运行./TaskExplorer。\n2. Linux要求glibc2.35或更新版本，以及X11或XWayland会话；官方便携包带必要Qt等配套库，按完整目录运行。\n3. 首次先以普通权限打开，选择自己正在使用的一个应用进程，查看CPU、内存和网络变化。\n4. 选择该进程的线程、模块、文件句柄或连接面板，查看具体资源；需要独立窗口时双击进程打开详细信息。\n5. 用自己的测试应用对照操作前后的资源变化；需要查看其他用户进程时，再按系统规则使用相应权限。",
+  "faq": "是另一份System Informer安装包吗？这是独立的Qt界面与项目，Windows使用相应底层库，Linux有原生后端；当前条目提供TaskExplorer完整应用。\nWindows ARM64是原生GUI吗？当前条目Windows安装包的真实主程序是x64，附带ARM64驱动不等于ARM64主程序；不据此增加虚假的平台槽位。\nLinux必须配置LD_LIBRARY_PATH吗？官方完整便携目录已按应用相对位置找库，按目录完整解压运行。\n为什么两种系统面板不同？Windows和Linux提供的系统能力不同，应用按平台展示可用面板。",
+  "documentationUrl": "https://github.com/DavidXanatos/TaskExplorer/blob/v2.0.0/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">TaskExplorer</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">System Monitor</text></svg>",
+    "sha256": "10c09556a33990ab0b356fd23dc0a79681f39c1869eebcda61ba6ca196c35309",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

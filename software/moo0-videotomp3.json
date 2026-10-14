@@ -1,0 +1,22 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "moo0-videotomp3",
+  "name": "Moo0 VideoToMp3",
+  "homepage": "https://www.moo0.com/software/VideoToAudio/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "音视频转换工具。",
+  "description": "Moo0 VideoToMp3 用于音视频转换。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择输出格式与保存目录，添加有权处理的视频。转换后检查音频，保留原视频。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(98,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">MV</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">Moo0 VideoToMp3</text></svg>",
+    "sha256": "a209744c4ee5c75a49e54e4f856c7bc94c439e797f9a4eea9d6a9486a8b1a213",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

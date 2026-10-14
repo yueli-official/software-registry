@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "frp",
+  "name": "frp",
+  "homepage": "https://github.com/fatedier/frp",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "frp",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fatedier/frp",
+          "assetPattern": "frp_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fatedier/frp",
+          "assetPattern": "frp_{version}_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fatedier/frp",
+          "assetPattern": "frp_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fatedier/frp",
+          "assetPattern": "frp_{version}_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fatedier/frp",
+          "assetPattern": "frp_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过客户端和服务端将本地服务转发到可访问的服务器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/fatedier/frp/d20a232996007dfe6ab425abc0a39a3ae9a0889b/web/frpc/src/assets/icons/logo.svg",
+    "sha256": "3aca3a40ff66dd216a4bee1d9bf71d6e44f93fc95236dc4ca7323fee14b32cb8",
+    "mime": "image/svg+xml",
+    "provenance": "官方产品图标，固定提交。Godot品牌标识CC BY4.0另见misc/logo/LICENSE.txt，其余项目图标核对根许可及目录；实际预览后才发行。"
+  },
+  "description": "frp 是开源反向代理工具，可将位于内网的服务通过自有服务器提供访问，支持 TCP、UDP、HTTP 和 HTTPS 等方式。适合远程开发、测试服务和家庭设备访问，需要准备服务端和客户端，不是开箱即用的云服务。项目提供中文文档，采用 Apache-2.0 许可。",
+  "usageInstructions": "1. 下载对应系统和架构的原包，解压后保留 frpc、frps、示例配置及许可文件。Windows 使用 exe，macOS/Linux 使用对应可执行文件。\n2. 在可访问的服务器配置 frps.toml 的 bindPort 和认证参数，运行 frps -c frps.toml；本地配置 frpc.toml 的 serverAddr、serverPort、认证参数和目标服务端口。\n3. 在本地运行 frpc -c frpc.toml，核对连接日志，再从远端测试自己配置的服务入口。具体配置以官方中文示例为准。",
+  "faq": "是否需要服务器？通常需要一台可访问的服务器运行 frps，并开放配置中的端口。\n是否有桌面GUI？核心是命令行程序，可按官方说明配置管理界面。\n其他架构在哪里？官方还提供 ARM32、LoongArch、RISC-V、MIPS 和其他系统构建，此条目本轮提供主流64位桌面包，其他构建请到官方Release取得。",
+  "documentationUrl": "https://github.com/fatedier/frp/blob/d20a232996007dfe6ab425abc0a39a3ae9a0889b/README_zh.md",
+  "category": "network",
+  "screenshots": []
+}

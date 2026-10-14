@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "listen1",
+  "name": "Listen1 Desktop",
+  "homepage": "https://github.com/listen1/listen1_desktop",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "listen1desktop",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "listen1/listen1_desktop",
+          "assetPattern": "listen1_{version}_win.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "listen1/listen1_desktop",
+          "assetPattern": "listen1_{version}_win.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "listen1/listen1_desktop",
+          "assetPattern": "listen1_{version}_mac_universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "listen1/listen1_desktop",
+          "assetPattern": "listen1_{version}_mac_universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "listen1/listen1_desktop",
+          "assetPattern": "listen1_{version}_linux_x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "聚合多个音乐平台的搜索与播放，集中管理收藏和歌单。",
+  "description": "Listen1 Desktop 面向中文音乐使用场景，可在网易云音乐、QQ音乐、酷狗、酷我、bilibili、咪咕等平台中搜索歌曲并管理歌单。播放结果取决于平台接口与歌曲可用状态，不保证所有曲目可播。",
+  "usageInstructions": "1. 下载当前条目原安装包；Windows安装器含x64、ARM64和32位程序，Mac使用通用DMG，Linux解压完整目录。\n2. 运行Listen1，在左侧选择音乐平台或使用搜索输入歌名与歌手。\n3. 点开搜索结果播放；通过收藏按钮加入已有或新建歌单。\n4. 使用歌单入口整理常听歌曲；遇到无法播放的曲目，可换用其他平台结果。",
+  "faq": "为什么有些歌曲不能播放？平台接口、版权和资源状态会影响可用性。\nWindows三个CPU下载为什么相同？官方安装器内含三个CPU版本，此条目保留同一个原文件。\n这包含浏览器扩展吗？当前条目只提供桌面播放器，扩展不作为额外软件计数。",
+  "documentationUrl": "https://github.com/listen1/listen1_desktop/blob/bbc38654bd593d4ae70143230ea7814b34d09128/README.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Listen1 Desktop</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Music Player</text></svg>",
+    "sha256": "0d2ce6b67c6faa3666565edcec5f78e0f8eb49001064472d4eba99a29ba54b8a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

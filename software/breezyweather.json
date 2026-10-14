@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "breezyweather",
+  "name": "Breezy Weather",
+  "homepage": "https://github.com/breezy-weather/breezy-weather",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "breezy-weather/breezy-weather",
+          "assetPattern": "breezy-weather-v{version}_standard.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "开源天气应用，展示逐日与逐小时预报，并支持多种天气数据源和小组件。",
+  "description": "Breezy Weather 提供天气预报、实时观测和天气图表，可按数据源能力显示空气质量、预警等信息。适合查看本地及关注城市的天气；不同地区的数据覆盖、精度和功能由所选数据源决定，不承诺所有城市都有全部指标。此条目采用官方推荐的standard完整包，包含四种真实ABI库；架构专用包与freenet变体不另计软件。\n\n此条目提供官方6.2.2完整Android APK，保留原始字节。主许可LGPL-3.0-only，原署名与组件通知保留；对应源码：https://github.com/breezy-weather/breezy-weather/tree/v6.2.2 ，原许可材料见breezyweather-6.2.2-LICENSES.zip。",
+  "usageInstructions": "1. 下载官方standard完整APK并在Android手机安装。\n2. 首次使用添加自己的城市，选择手动搜索，或按需要授予定位权限；不用定位也可管理手动城市。\n3. 打开城市天气页，查看当前天气、逐小时与逐日预报。\n4. 在数据源设置中检查该城市的可用来源，按需要配置提供方要求的条件；缺少某项指标时查看来源支持范围。\n5. 如需桌面天气，在系统桌面的小组件入口添加Breezy Weather组件，再选择已保存城市。更新频率与后台运行按应用设置及系统限制调整。",
+  "faq": "standard和freenet是什么区别？standard是官方推荐的完整开源版本；freenet只包含自由网络服务来源，此条目提供standard。\n所有城市都有空气质量或降水预警吗？这些能力依赖数据源及地区覆盖。\n一定要持续定位吗？可以手动添加城市，是否开放定位由用户选择。",
+  "documentationUrl": "https://github.com/breezy-weather/breezy-weather/blob/v6.2.2/INSTALL.md",
+  "category": "mobile",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Breezy Weather</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Weather</text></svg>",
+    "sha256": "e8b3ba175dad3960563033373c24a192b85a79ba648e602e57560c07cd35f949",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

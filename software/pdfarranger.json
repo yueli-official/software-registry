@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pdfarranger",
+  "name": "PDF Arranger",
+  "homepage": "https://github.com/pdfarranger/pdfarranger",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "pdfarranger",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "合并、拆分和重新排列 PDF 页面，调整方向与裁剪。",
+  "description": "PDF Arranger 是开源 PDF 页面整理工具，可通过缩略图拖动调整顺序，合并或拆分文件，旋转和裁剪页面。适合整理扫描件、讲义和待发送的文档。\n\n此条目保留未修改的官方 1.14.0 Windows 便携原包。主程序采用 GPL 3.0 或以后版本，原源码署名 Konstantinos Poulios、Jerome Robert；内置组件保留各自许可，cx_Freeze 的 MIT 通知不替代主程序 GPL。对应源码：https://github.com/pdfarranger/pdfarranger/tree/1.14.0 。夸克目录中的 PDF-Arranger-1.14.0-LICENSES.zip 提供原许可、通知和源码资料。",
+  "usageInstructions": "1. Windows 64位解压官方便携ZIP，打开文件夹中的 pdfarranger.exe。本批提供的是完整Windows原包；Linux用户按官方README选择发行版软件包或Flatpak等安装方式。\n2. 先复制一份自己的测试PDF，再导入软件。检查缩略图页数，拖动其中一页到新位置，选中一页尝试旋转。\n3. 如需合并，再导入第二份测试PDF，将页面拖到合适位置；如需拆分，选中要保留的页面并按官方手册导出所选页面。\n4. 将结果另存为新的PDF，重新打开确认页数、顺序和方向正确。裁剪或删除前保留原文件，重要文档另做备份。",
+  "faq": "能修改PDF里的文字吗？主要用于页面排列、合并拆分、旋转与裁剪，不是完整文字排版编辑器。\n是否自动覆盖原文件？操作后请另存新文件，并检查结果；重要原件另行保留。\n支持Mac吗？本批没有把Windows包标成Mac安装包，其他平台按官方文档确认安装方式。\nLinux下载包在哪？上游README提供发行版、Flatpak等渠道，本批GitHub原成品下载槽位为Windows x64。",
+  "documentationUrl": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#f0effa\"/><text x=\"128\" y=\"120\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"65\" fill=\"#574888\">PDF</text><text x=\"128\" y=\"170\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"34\" fill=\"#746799\">Arranger</text></svg>",
+    "sha256": "f3b1aff9e09cb9fc908324d8f3a5ca1d4f74137a4520ae1001211b321110c686",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；官方图形的单独使用依据未确认，未仿造或复用该图形。"
+  },
+  "screenshots": []
+}

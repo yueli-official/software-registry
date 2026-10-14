@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "jless",
+  "name": "jless",
+  "homepage": "https://github.com/PaulJuliusMartinez/jless",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PaulJuliusMartinez/jless",
+          "assetPattern": "jless-v{version}-x86_64-apple-darwin.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PaulJuliusMartinez/jless",
+          "assetPattern": "jless-v{version}-aarch64-apple-darwin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PaulJuliusMartinez/jless",
+          "assetPattern": "jless-v{version}-x86_64-unknown-linux-gnu.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互浏览、搜索与折叠 JSON 内容。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/PaulJuliusMartinez/jless/21dd6100edb47145bb9570931bec29697bcd0d9b/logo/mascot.svg",
+    "sha256": "a38776471834dc0ef665a03e53c9395e367cc38693729d8926230f23debd29a6",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 jless README 明确吉祥物 Jules 作者 annatgraphics；保留署名及原资源。 原资源：https://github.com/PaulJuliusMartinez/jless/blob/21dd6100edb47145bb9570931bec29697bcd0d9b/logo/mascot.svg"
+  },
+  "description": "jless 是独立的终端 JSON 查看器，提供层级折叠、搜索和键盘导航，适合阅读接口输出与数据文件。当前条目提供官方 Mac 与 Linux 成品，不虚构 Windows 原版。\n\n### 源码与许可\n当前条目提供 0.9.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/PaulJuliusMartinez/jless/tree/21dd6100edb47145bb9570931bec29697bcd0d9b) · [许可原文](https://github.com/PaulJuliusMartinez/jless/blob/21dd6100edb47145bb9570931bec29697bcd0d9b/LICENSE)。\n\n图标为 Jules 水母吉祥物，作者 [annatgraphics](https://www.fiverr.com/annatgraphics)，来源为官方随附资源，保留原署名。",
+  "usageInstructions": "1. 解压官方 Mac/Linux 包，将 jless 加入 PATH。\n2. 运行 jless --help 查看操作方式。\n3. 用 jless data.json 打开自己的测试 JSON。\n4. 使用键盘展开与折叠节点，搜索需要的键或值。\n5. 使用应用帮助查看复制、导航和退出按键。",
+  "faq": "会直接修改 JSON 文件吗？主要用来交互阅读数据。\n为什么没有 Windows 下载？本次官方稳定 Release 没有 Windows 成品。",
+  "documentationUrl": "https://github.com/PaulJuliusMartinez/jless/blob/21dd6100edb47145bb9570931bec29697bcd0d9b/README.md",
+  "category": "developer",
+  "screenshots": []
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "twinkle-tray",
+  "name": "Twinkle Tray",
+  "homepage": "https://github.com/xanderfrangos/twinkle-tray",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "twinkle-tray",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "在Windows托盘统一调节多台显示器亮度，支持定时和快捷键。",
+  "description": "Twinkle Tray为Windows 10和11提供外接显示器亮度控制，通过DDC/CI和WMI检测兼容设备，在托盘面板中分别调节或联动多台屏幕。还支持按时间调整亮度、快捷键、空闲调光及部分DDC/CI参数。适合多显示器办公，但可用功能取决于显示器和连接方式。",
+  "usageInstructions": "1. 在Windows 10或11下载原版EXE并按向导安装，安装后查看系统托盘。\n2. 在显示器自身菜单中开启DDC/CI，再点击Twinkle Tray托盘图标。\n3. 拖动对应显示器滑块调整亮度，确认每块屏幕均有响应。\n4. 在设置中按需启用亮度联动、定时调整和快捷键。\n5. 如果某个屏幕未显示，检查线缆、扩展坞及显示器DDC/CI支持，再参考官方排查说明。",
+  "faq": "所有显示器都支持吗？不保证；需要显示器支持DDC/CI或WMI，部分扩展坞与VGA/DVI连接可能不兼容。\n能同步多屏亮度吗？可以按需开启联动并调节范围，但各屏幕的实际亮度仍可能不同。",
+  "documentationUrl": "https://github.com/xanderfrangos/twinkle-tray/blob/0ffa0ac5aa5af31affee69dd18796d6897646a07/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Twinkle Tray</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Display Brightness</text></svg>",
+    "sha256": "dc8c09bb9a7331269dd0e9f8553a5bf82fefcaf9c388a61cb76811b900275b02",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

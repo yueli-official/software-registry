@@ -1,0 +1,22 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "revo-registry-cleaner",
+  "name": "Revo Registry Cleaner",
+  "homepage": "https://www.revouninstaller.com/products/revo-registry-cleaner-free/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "注册表清理工具。",
+  "description": "Revo Registry Cleaner 用于注册表清理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 先创建备份或恢复点，扫描后查看注册表项及说明。逐项确认再清理，出现问题按官方方法恢复。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(204,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">RR</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">Revo Registry Cleane</text><text x=\"256\" y=\"417\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">r</text></svg>",
+    "sha256": "612613e3fb90914cd89baa366229cda4e9cad69d1f1c44b6508c0f8530e32dee",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

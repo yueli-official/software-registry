@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bleachbit",
+  "name": "BleachBit",
+  "homepage": "https://www.bleachbit.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "bleachbit",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "official-checksum",
+        "options": {
+          "urlTemplate": "https://download.bleachbit.org/BleachBit-{version}-x86_64.AppImage",
+          "checksumUrlTemplate": "https://download.bleachbit.org/bleachbit-{version}-sha256sum.txt",
+          "evidenceUrl": "https://www.bleachbit.org/download/linux"
+        }
+      }
+    }
+  ],
+  "summary": "清理应用缓存、临时文件和浏览记录，支持先预览再清理。",
+  "description": "BleachBit 是开源系统清理工具，可按应用和清理项目选择缓存、临时文件及浏览记录，先查看预计处理的文件，再执行清理。适合定期整理电脑上的无用数据。\n\n此条目提供未修改的官方 6.0.4 Windows 便携包和 Linux x86_64 AppImage。Windows 主程序实际为32位；Linux AppImage 使用 Python 启动程序与64位 GTK 库，需要系统 Python 3 和 PyGObject。主项目采用 GPL-3.0-or-later，Copyright 2008–2026 Andrew Ziem。对应源码：https://github.com/bleachbit/bleachbit/tree/v6.0.4 ，原许可材料在夸克目录 bleachbit-6.0.4-LICENSES.zip 中保留。",
+  "usageInstructions": "1. Windows 下载便携 ZIP，完整解压到独立文件夹，运行 bleachbit.exe。Linux 下载 x86_64 AppImage，赋予执行权限后运行；系统须提供 Python 3、PyGObject（发行版通常为 python3-gi），具体依赖见官方 Linux 安装说明。\n2. 首次打开先检查偏好设置，在左侧选择实际使用的应用，从少量缓存项目开始。\n3. 点击“预览（Preview）”，阅读预计删除的文件列表和大小，取消不需要处理的项目。\n4. 确认列表后再点击“清理（Clean/Delete）”。清理会删除所选文件，浏览器记录、登录状态等项目按自己的需要选择。\n5. 清理后重新打开对应应用，确认正常使用。不要把个人文档、下载原件或仍需保留的数据加入清理范围。",
+  "faq": "必须以管理员权限运行吗？一般应用缓存可先使用普通权限；系统范围项目依系统权限而定。\n预览会删除文件吗？预览用于查看待处理内容，确认后才执行清理。\n为什么 Linux 包仍需要 Python？官方 AppImage 使用 Python 启动程序，包内的64位 GTK 库不等于内置完整 Python 运行环境。",
+  "documentationUrl": "https://docs.bleachbit.org/",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#edf3f7\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"44\" fill=\"#365d79\">BleachBit</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"23\" fill=\"#365d79\">System Cleaner</text></svg>",
+    "sha256": "d689a81ee7ed18fbde9738a43cad628031084addf6436864151bb2ee48cbef2d",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；当前尚未取得可可靠复用的官方图形资源依据，采用软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

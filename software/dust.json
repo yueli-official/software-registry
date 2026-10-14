@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dust",
+  "name": "dust",
+  "homepage": "https://github.com/bootandy/dust",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dust",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dust",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dust",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bootandy/dust",
+          "assetPattern": "dust-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bootandy/dust",
+          "assetPattern": "dust-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bootandy/dust",
+          "assetPattern": "dust-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bootandy/dust",
+          "assetPattern": "dust-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bootandy/dust",
+          "assetPattern": "dust-v{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用目录树和条形图查看磁盘占用，快速定位大文件和文件夹。",
+  "description": "dust 是命令行磁盘占用分析工具，在终端用目录树、大小和条形图展示文件夹占用，可限制层级、显示数量或只查看文件。适合整理项目目录、下载文件夹和定位大文件。扫描结果受文件读取权限影响；它负责分析展示，不会自动删除或清理文件。\n\n当前条目提供 1.2.6 官方 Windows、macOS 和 Linux 原包。Windows MSVC 版本可能需要 Microsoft Visual C++ 运行库。主项目 Apache-2.0，组件保留各自许可；固定源码：https://github.com/bootandy/dust/tree/v1.2.6 ，原许可资料见 dust-1.2.6-LICENSES.zip。",
+  "usageInstructions": "1. 按系统与 CPU 下载原包并解压，将 dust 程序目录加入 PATH；Mac/Linux 按需赋予执行权限。\n2. 打开终端进入自己有读取权限的文件夹，运行 dust；Windows 未加入 PATH 时使用解压目录中的 .\\dust.exe。\n3. 使用 dust -n 10 查看主要占用项，使用 dust -d 2 限制展示层级。\n4. 用 dust -F 查看文件项，或者给命令传入一个具体目录路径；包含空格的路径用引号包裹。\n5. 根据结果自己决定如何整理文件，更多筛选参数运行 dust --help 查看。",
+  "faq": "会自动清理磁盘吗？不会，它展示占用情况。\n为什么某些目录没有完整结果？可能没有读取权限，或扫描期间文件发生变化。\nWindows 提示缺 VCRUNTIME140.dll 怎么办？官方说明 MSVC 版本需要相应 Microsoft Visual C++ 运行库。",
+  "documentationUrl": "https://github.com/bootandy/dust/blob/v1.2.6/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">dust</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Disk Usage</text></svg>",
+    "sha256": "f140e4886fc89a8562984296b6e0e1c5ec143e56c139ba44077b2156664adc3a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

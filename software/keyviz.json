@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "keyviz",
+  "name": "Keyviz",
+  "homepage": "https://github.com/mulaRahul/keyviz",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "keyviz",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mulaRahul/keyviz",
+          "tagPrefix": "v",
+          "assetPattern": "keyviz_{version}_macos.dmg"
+        }
+      }
+    }
+  ],
+  "summary": "实时显示键盘按键和鼠标操作，适合录屏教学、直播与演示。",
+  "description": "Keyviz将键盘按键、快捷键组合和鼠标操作显示在屏幕上，支持调整显示位置、颜色、大小、动画和按键过滤。适合录制教程、演示软件操作或向观众说明正在使用的快捷键。",
+  "usageInstructions": "1. Windows下载原版MSI并按向导安装；若提示缺少运行组件，按官方要求补Microsoft Edge WebView2或Visual C++运行库。\n2. Apple Silicon Mac打开原版DMG，将应用复制到应用程序目录。\n3. Mac按提示在系统设置的隐私与安全性中允许输入监控和辅助功能权限。\n4. 打开软件设置，调整按键显示位置、大小及颜色，按几组快捷键确认显示效果。\n5. 录屏或演示前设置按键过滤；输入密码等私密内容前暂停显示。",
+  "faq": "Mac没有显示按键怎么办？确认输入监控和辅助功能权限已开启，再重新打开应用。\n有Linux安装包吗？这个固定Release没有Linux成品，当前条目不将源码编译说明当安装包。",
+  "documentationUrl": "https://github.com/mulaRahul/keyviz/blob/8225e4157ed170a56d37366be24573f614b9ce06/README.md",
+  "category": "capture",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Keyviz</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Show Keystrokes</text></svg>",
+    "sha256": "2c4bc5fd0eed66f2459307b407450a05dc5ce1b13dc1573dd08272418c1ea7fc",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

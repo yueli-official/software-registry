@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "vesktop",
+  "name": "Vesktop",
+  "homepage": "https://github.com/Vencord/Vesktop",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "vesktop",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Vencord/Vesktop",
+          "assetPattern": "Vesktop-{version}-arm64-win.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Vencord/Vesktop",
+          "assetPattern": "Vesktop-{version}-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Vencord/Vesktop",
+          "assetPattern": "vesktop_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Vencord/Vesktop",
+          "assetPattern": "vesktop_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在桌面使用面向 Discord 的第三方客户端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Vencord/Vesktop/ceabe1b860bca785e31e047606dc6df131562d85/build/icon.svg",
+    "sha256": "7d0f9dbdb3c86f800577d7fb26a22defeb7025d10c405f634d3c2b939a75be7f",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Vencord/Vesktop/blob/ceabe1b860bca785e31e047606dc6df131562d85/build/icon.svg"
+  },
+  "description": "Vesktop 是独立的第三方 Discord 桌面客户端，提供桌面集成与相应设置。Discord 服务、账号与网络条件由服务提供方决定。\n\n### 源码与许可\n当前条目提供 1.6.7 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/Vencord/Vesktop/tree/ceabe1b860bca785e31e047606dc6df131562d85) · [许可原文](https://github.com/Vencord/Vesktop/blob/ceabe1b860bca785e31e047606dc6df131562d85/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 先确认自己的网络可访问 Discord，用自己的账号登录；检查音频、通知与设置，再加入自己有权访问的服务器。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "是 Discord 官方客户端吗？不是，当前条目为 Vesktop 项目的官方发行。\n包含账号或代理吗？不包含，需自己的账号与可用网络。",
+  "documentationUrl": "https://github.com/Vencord/Vesktop/blob/ceabe1b860bca785e31e047606dc6df131562d85/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

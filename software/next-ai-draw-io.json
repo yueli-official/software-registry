@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "next-ai-draw-io",
+  "name": "Next AI Draw.io",
+  "homepage": "https://next-ai-drawio.jiang.jp/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DayuanJiang/next-ai-draw-io",
+          "assetPattern": "Next.AI.Draw.io.Setup.*.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DayuanJiang/next-ai-draw-io",
+          "assetPattern": "next-ai-draw-io_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DayuanJiang/next-ai-draw-io",
+          "assetPattern": "next-ai-draw-io_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "AI 绘图与流程图工具。",
+  "icon": {
+    "url": "https://next-ai-drawio.jiang.jp/favicon.ico?favicon.0ts99pc6dd1w7.ico",
+    "sha256": "66897e99ddcacfff7e2d4e474665df3eaf5324280516c986f5f21b909f289826",
+    "mime": "image/x-icon"
+  },
+  "description": "Next AI Draw.io 用于AI 绘图与流程图。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按软件提示配置模型服务，输入图表需求并生成草稿。在画布中检查和修改节点，再保存或导出。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "ai",
+  "screenshots": []
+}

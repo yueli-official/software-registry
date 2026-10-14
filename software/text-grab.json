@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "text-grab",
+  "name": "Text Grab",
+  "homepage": "https://github.com/TheJoeFin/Text-Grab",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "text-grab",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "text-grab",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "将屏幕、图片和PDF中的文字识别为可编辑文本，支持本地处理和整理。",
+  "description": "Text Grab是Windows文字提取工具，提供全屏框选、浮动识别框、文本整理和常用文字查询。Windows OCR在本机处理，适合从截图、视频画面和无法直接复制的界面取得文字，再整理到文档或表格。Windows AI识别需要Copilot+电脑及微软商店版，当前条目独立原包不承诺该功能。",
+  "usageInstructions": "1. 在Windows 10或更新系统上下载对应x64或ARM64的原版EXE，保存到固定目录后启动。\n2. 打开Full-Screen模式，框选需要识别的屏幕区域；识别结果可复制到剪贴板。\n3. 需要调整或整理时使用Grab Frame和Edit Text模式，校对文字后再粘贴到文档。\n4. 中文识别取决于Windows已安装的OCR语言；在系统设置添加对应语言后重新选择。\n5. 如需全局快捷键，在软件设置启用后台进程并设置快捷键。",
+  "faq": "识别需要联网吗？Windows OCR在本机运行；语言组件首次安装可能需要联网。\n为什么中文识别不正确？确认系统安装了对应OCR语言，再提高截图清晰度并校对结果。",
+  "documentationUrl": "https://github.com/TheJoeFin/Text-Grab/blob/00b11ea75025f3516d169d719c64e98c09e5aba3/README.md",
+  "category": "capture",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Text Grab</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Screen OCR</text></svg>",
+    "sha256": "7fb3b68880f33b19bb6b6e8babe0267523b80887d6c1003792c586e457675824",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

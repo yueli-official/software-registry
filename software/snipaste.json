@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "snipaste",
+  "name": "Snipaste",
+  "homepage": "https://www.snipaste.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "截图工具。",
+  "icon": {
+    "url": "https://www.snipaste.com/favicon.ico",
+    "sha256": "70f0547ab529a96db1495b18ef14acc28ed4ae71b0de1970d59db9e5028ff5f8",
+    "mime": "image/x-icon"
+  },
+  "description": "Snipaste 用于截图。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从官网安装原版，默认按 F1 选择截图区域并完成截图；按 F3 将剪贴板图片贴到屏幕。可在设置中调整快捷键。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://docs.snipaste.com/",
+  "category": "capture",
+  "screenshots": []
+}

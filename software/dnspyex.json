@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dnspyex",
+  "name": "dnSpyEx",
+  "homepage": "https://github.com/dnSpyEx/dnSpy",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dnspyex",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dnSpyEx/dnSpy",
+          "assetPattern": "dnSpy-net-win32.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "查看、编辑和调试 .NET 程序集的桌面工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dnSpyEx/dnSpy/e2bada24b1c63683f41bdc0ae2b0119c686ce88a/dnSpy/dnSpy/Images/dnSpy.ico",
+    "sha256": "f337fdb9e5a3c504912814353dff03f2e7bc9cd3a38180d27e43eeede85cca83",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/dnSpyEx/dnSpy/blob/e2bada24b1c63683f41bdc0ae2b0119c686ce88a/dnSpy/dnSpy/Images/dnSpy.ico"
+  },
+  "description": "dnSpyEx 是原 dnSpy 项目的持续维护分支，提供 .NET 程序集浏览、反编译、代码编辑和调试，支持 .NET Framework、.NET 与相关 Unity 程序集。适合排查自己开发或有权分析的程序；具备完整桌面界面，不是单独的开发库。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/dnSpyEx/dnSpy/tree/e2bada24b1c63683f41bdc0ae2b0119c686ce88a 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 下载 win64 或 win32 原 ZIP，完整解压并运行 dnSpy.exe，保留随附 .NET 运行环境、调试组件与许可。\n2. 将自己的 .NET EXE 或 DLL 拖入程序集浏览器，按命名空间找到类和方法，查看反编译结果。\n3. 需要调试时用调试菜单启动或附加到自己有权操作的目标进程，设置断点并查看变量。\n4. 修改代码或保存模块前备份原文件；原签名、依赖及运行环境可能影响修改后的程序。",
+  "faq": "这是原始 dnSpy 仓库吗？是独立维护的 dnSpyEx 延续分支。\n能分析所有本机程序吗？主要面向 .NET 程序集，原生 C/C++ 不是同一用途。\n修改会自动保存吗？需要显式保存模块，先备份自己的原文件。",
+  "documentationUrl": "https://github.com/dnSpyEx/dnSpy/blob/e2bada24b1c63683f41bdc0ae2b0119c686ce88a/README.md",
+  "category": "developer",
+  "screenshots": []
+}

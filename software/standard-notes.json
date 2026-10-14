@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "standard-notes",
+  "name": "Standard Notes",
+  "homepage": "https://github.com/standardnotes/app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-win-x64.exe",
+          "tagPrefix": "@standardnotes/desktop@"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-win-ia32.exe",
+          "tagPrefix": "@standardnotes/desktop@",
+          "tagTemplate": "@standardnotes/desktop@{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-mac-x64.dmg",
+          "tagPrefix": "@standardnotes/desktop@",
+          "tagTemplate": "@standardnotes/desktop@{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-mac-arm64.dmg",
+          "tagPrefix": "@standardnotes/desktop@",
+          "tagTemplate": "@standardnotes/desktop@{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-linux-amd64.deb",
+          "tagPrefix": "@standardnotes/desktop@",
+          "tagTemplate": "@standardnotes/desktop@{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "standardnotes/app",
+          "assetPattern": "standard-notes-{version}-linux-arm64.deb",
+          "tagPrefix": "@standardnotes/desktop@",
+          "tagTemplate": "@standardnotes/desktop@{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用简洁的桌面界面记录笔记，并按需同步。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/standardnotes/app/51b198b9e212f75ef8e7f23683d12d1d1b3de0d0/packages/desktop/app/icon/Icon-512x512.png",
+    "sha256": "e61d2ea951779692dfaa515bd13fefe7faa1be2a23ffde147c29aad24cf4f070",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/standardnotes/app/blob/51b198b9e212f75ef8e7f23683d12d1d1b3de0d0/packages/desktop/app/icon/Icon-512x512.png"
+  },
+  "description": "Standard Notes 是独立的笔记应用，提供基础笔记与按账号计划启用的扩展功能。当前条目为官方桌面版，未把浏览器扩展、移动组件或源码包算成独立软件。\n\n### 源码与许可\n当前条目提供 3.202.7 官方原包。主项目许可：AGPL-3.0，扩展组件按各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/standardnotes/app/tree/51b198b9e212f75ef8e7f23683d12d1d1b3de0d0) · [许可原文](https://github.com/standardnotes/app/blob/51b198b9e212f75ef8e7f23683d12d1d1b3de0d0/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 先创建测试笔记并检查编辑、搜索与导出；需要同步时配置自己的账号，并按官方恢复说明保管恢复资料，再导入实际笔记。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "是否包含所有付费编辑器？功能由官方计划与启用的组件决定。\n版本为什么有 @ 标签？官方使用桌面命名空间标签，当前条目展示真实桌面版本。",
+  "documentationUrl": "https://github.com/standardnotes/app/blob/51b198b9e212f75ef8e7f23683d12d1d1b3de0d0/README.md",
+  "category": "reading",
+  "screenshots": []
+}

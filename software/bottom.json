@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bottom",
+  "name": "bottom",
+  "homepage": "https://github.com/ClementTsang/bottom",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bottom",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bottom",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bottom",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ClementTsang/bottom",
+          "assetPattern": "bottom_x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ClementTsang/bottom",
+          "assetPattern": "bottom_aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ClementTsang/bottom",
+          "assetPattern": "bottom_x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ClementTsang/bottom",
+          "assetPattern": "bottom_aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ClementTsang/bottom",
+          "assetPattern": "bottom_i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "终端系统监控工具，展示 CPU、内存、网络与进程信息。",
+  "description": "bottom（命令 btm）是跨平台终端系统监控工具，可查看 CPU、内存、网络、磁盘与进程信息，支持搜索、排序、布局和主题配置。温度、电池等信息取决于系统及硬件支持。它需要在终端中运行，不是独立桌面窗口。官方提供 Windows ARM64 原包，但 README 将该平台列为非正式支持，功能与稳定性需按官方支持说明判断。\n\n当前条目提供 0.14.9 官方 Windows、macOS 和 Linux 原包。主项目 MIT，组件保留各自许可；固定源码：https://github.com/ClementTsang/bottom/tree/0.14.9 ，原许可资料见 bottom-0.14.9-LICENSES.zip。",
+  "usageInstructions": "1. 按系统及 CPU 下载原包并解压，程序名是 btm 或 btm.exe，将所在目录加入 PATH；Mac/Linux 按需赋予执行权限。\n2. 打开终端运行 btm；Windows 未加入 PATH 时在解压目录运行 .\\btm.exe。\n3. 查看 CPU、内存和进程区域；终端过小时先扩大窗口，便于显示完整布局。\n4. 官方说明运行时按 ? 查看快捷键帮助；命令行参数可用 btm --help 查看。\n5. 初次使用先观察与搜索进程，温度或电池栏目不出现时按官方支持说明核对系统和硬件。",
+  "faq": "为什么运行 bottom 命令找不到程序？产品名是 bottom，可执行命令是 btm。\n每个平台都有全部监控信息吗？部分传感器与指标取决于平台、硬件和权限。\nWindows ARM64 属于正式支持吗？有官方成品附件，但本版 README 列为非正式支持。",
+  "documentationUrl": "https://github.com/ClementTsang/bottom/blob/0.14.9/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">bottom</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">System Monitor</text></svg>",
+    "sha256": "9bcae44ff6f541632460b0ced411c15a938d9b29642f2274ea947636ece2fb5c",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

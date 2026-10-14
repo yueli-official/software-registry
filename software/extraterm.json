@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "extraterm",
+  "name": "Extraterm",
+  "homepage": "https://github.com/sedwards2009/extraterm",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "extraterm",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sedwards2009/extraterm",
+          "assetPattern": "extratermqt_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在图形终端中整理命令输出与交互工作流。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/sedwards2009/extraterm/e856a100c0b1653c7fef081fd50dbdcf8c3141db/main/resources/logo/extraterm_small_logo_256x256.png",
+    "sha256": "582f504d30cc8b1974a050b0cd1acb9814080ec92693a72ad3751b5346352d75",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 官方 README 明确 Extraterm 标识作者 Gabriel Harel，保留署名。 原资源：https://github.com/sedwards2009/extraterm/blob/e856a100c0b1653c7fef081fd50dbdcf8c3141db/main/resources/logo/extraterm_small_logo_256x256.png"
+  },
+  "description": "Extraterm 是独立的桌面终端应用，提供终端界面与输出处理能力，适合日常命令行工作。当前条目为当前官方完整应用原版。\n\n### 源码与许可\n当前条目提供 0.82.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/sedwards2009/extraterm/tree/e856a100c0b1653c7fef081fd50dbdcf8c3141db) · [许可原文](https://github.com/sedwards2009/extraterm/blob/e856a100c0b1653c7fef081fd50dbdcf8c3141db/LICENSE.txt)。\n\nExtraterm 标识由 [Gabriel Harel](https://github.com/g-harel) 设计，出处见[官方 README](https://github.com/sedwards2009/extraterm/blob/e856a100c0b1653c7fef081fd50dbdcf8c3141db/README.md)，保留原归属。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 打开自己的 Shell，运行熟悉的只读命令，检查输出显示、选择与复制；按官方功能说明验证扩展和设置。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "包含系统 Shell 吗？运行环境依系统和自己的配置。\n旧版插件包也是软件包吗？不是，当前条目只提供完整主应用，扩展组件不单独计数。",
+  "documentationUrl": "https://github.com/sedwards2009/extraterm/blob/e856a100c0b1653c7fef081fd50dbdcf8c3141db/README.md",
+  "category": "developer",
+  "screenshots": []
+}

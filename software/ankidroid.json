@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ankidroid",
+  "name": "AnkiDroid",
+  "homepage": "https://github.com/ankidroid/Anki-Android",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ankidroid/Anki-Android",
+          "assetPattern": "AnkiDroid-{version}-full-universal.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Android 间隔重复记忆卡片应用，支持图文音频、学习统计和AnkiWeb同步。",
+  "description": "AnkiDroid 是Android上的独立记忆卡片客户端，用间隔重复安排复习，适合背单词、整理知识点和复习考试材料。支持图文音频卡片、学习统计、朗读及可选AnkiWeb同步。它是单独维护的Android应用，不把桌面Anki安装包换名或不同CPU版本重复上架。\n\n此条目提供官方2.25.1完整Android APK，保留原始字节。主许可GPL-3.0-or-later，原署名与组件通知保留；对应源码：https://github.com/ankidroid/Anki-Android/tree/v2.25.1 ，原许可材料见ankidroid-2.25.1-LICENSES.zip。",
+  "usageInstructions": "1. 下载官方full-universal完整APK，在Android手机安装；已有牌组时先导出或备份，保留原数据。\n2. 首次进入创建一个学习牌组，添加一张基础卡片，正面写一个问题，背面写对应答案。\n3. 打开牌组开始学习，先回忆答案，再显示答案并按自己的记忆程度选择复习评分。\n4. 再添加几张卡片，第二天按应用安排复习，逐步建立自己的学习节奏。\n5. 有现成.apkg牌组时可导入；需要多设备同步时登录自己的AnkiWeb账户，先备份并确认同步方向。图片和音频媒体也应随牌组保存。",
+  "faq": "必须登录吗？本地创建和学习牌组可先不使用AnkiWeb，云同步按需开启。\n和桌面Anki有什么关系？AnkiDroid是Android客户端，可配合Anki生态使用，当前条目只提供官方Android完整包。\n为什么只提供universal？官方完整包包含四种已核实ABI，可覆盖相应设备，不把parallel测试实例或构建映射当作其他软件。",
+  "documentationUrl": "https://docs.ankidroid.org/",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">AnkiDroid</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Flashcards</text></svg>",
+    "sha256": "f8c10c70e56bca68cd8bbfa36e68c589d1db75e1e2043fcd6f7b954aad069857",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

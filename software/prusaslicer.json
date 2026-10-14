@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "prusaslicer",
+  "name": "PrusaSlicer",
+  "homepage": "https://github.com/prusa3d/PrusaSlicer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "prusaslicer",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "prusa3d/PrusaSlicer",
+          "assetPattern": "PrusaSlicer-{version}.dmg",
+          "tagPrefix": "version_",
+          "tagTemplate": "version_{version}"
+        }
+      }
+    }
+  ],
+  "summary": "配置 3D 打印参数，生成支撑并预览切片结果。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/prusa3d/PrusaSlicer/b028299c770b8380ee81c921a2867d522f288123/resources/icons/PrusaSlicer_192px_transparent.png",
+    "sha256": "bd42f7bcaf69ca29718fdb7871ea3fd325dc672a26e9165ad561869eb2a83ef6",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方项目原版产品标识，逐图核对产品身份及资源目录，无另行授权标记时不宣称美术资源具有源码同等许可；仅用于本产品说明与辨识，保留原形、比例和色彩，不暗示作者背书。资源及作者记录：https://github.com/prusa3d/PrusaSlicer/blob/b028299c770b8380ee81c921a2867d522f288123/resources/icons/PrusaSlicer_192px_transparent.png"
+  },
+  "description": "PrusaSlicer 是开源 3D 打印切片工具，支持模型布局、打印与耗材配置、支撑及逐层预览。适合为匹配的打印机准备打印任务；设备配置、打印流程和材料参数应结合实际打印机核对。\n\n### 源码与许可\n当前条目提供 2.9.6 官方原包。主项目许可：AGPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/prusa3d/PrusaSlicer/tree/b028299c770b8380ee81c921a2867d522f288123) · [许可原文](https://github.com/prusa3d/PrusaSlicer/blob/b028299c770b8380ee81c921a2867d522f288123/LICENSE)。",
+  "usageInstructions": "1. Windows 解压官方便携 ZIP；Mac 打开通用 DMG。\n2. 运行配置向导，选择自己的打印机与耗材。\n3. 导入 STL 或 3MF，调整摆放、层高、支撑和填充。\n4. 完成切片后逐层检查预览及预计用料。\n5. 确认设备和喷嘴配置后导出打印文件；保留项目与自定义配置。",
+  "faq": "为什么没有 Linux 下载项？该版本 GitHub 成品列表只有 Windows 和 Mac；Linux 按官方其他安装渠道选择，不虚构 Release 附件。\n只能配 Prusa 打印机吗？也有其他设备配置，须核对具体型号。",
+  "documentationUrl": "https://github.com/prusa3d/PrusaSlicer/blob/b028299c770b8380ee81c921a2867d522f288123/README.md",
+  "category": "graphics",
+  "screenshots": []
+}

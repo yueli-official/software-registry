@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "eza",
+  "name": "eza",
+  "homepage": "https://github.com/eza-community/eza",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "eza",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "eza-community/eza",
+          "assetPattern": "eza_x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "eza-community/eza",
+          "assetPattern": "eza_aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端更清晰地浏览文件、目录与 Git 状态。",
+  "description": "eza 是维护中的独立目录查看工具，提供颜色、图标、树状目录与 Git 信息等选项，适合在终端快速了解文件结构。当前条目提供 Windows 与 Linux 官方成品，Mac 发行渠道以官方安装说明为准。\n\n### 源码与许可\n当前条目提供 0.23.5 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/eza-community/eza/tree/98442ab17c2c3738701b62a7e060b1431ae2d6ea) · [许可原文](https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/LICENSE.txt)。\n\n界面图来自[官方随附资料](https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/docs/images/screenshots.png)；原作者及许可通知见[固定版许可](https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/LICENSE.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压对应平台官方包，将 eza 放入 PATH。\n2. 运行 eza --help 查看当前选项。\n3. 在自己的测试目录运行 eza -l。\n4. 按需要尝试目录树、隐藏文件和 Git 状态显示。\n5. 使用图标显示前配置兼容字体，确认效果后再设置自己的 Shell 别名。",
+  "faq": "Mac 原版包在哪里？本次官方 Release 没有独立 Mac 成品，不能把 Linux 包标为 Mac。\n图标显示成方块怎么办？检查终端字体与相关选项。",
+  "documentationUrl": "https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#38694a\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">eza</text></svg>",
+    "sha256": "dd8e24ba511434ad71c70860655c61fb7359fedcdca50612a59a6a749bb074d1",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名eza，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/eza-community/eza/98442ab17c2c3738701b62a7e060b1431ae2d6ea/docs/images/screenshots.png",
+      "sha256": "3889a5fbe71429797807b883b50ab34c6e1c55fb23a849bae04381dcba5b0950",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/docs/images/screenshots.png",
+      "caption": "eza 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/docs/images/screenshots.png；原许可 https://github.com/eza-community/eza/blob/98442ab17c2c3738701b62a7e060b1431ae2d6ea/LICENSE.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

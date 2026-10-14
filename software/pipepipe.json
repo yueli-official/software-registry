@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pipepipe",
+  "name": "PipePipe",
+  "homepage": "https://github.com/InfinityLoop1308/PipePipe",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "InfinityLoop1308/PipePipe",
+          "assetPattern": "PipePipe_{version}-arm64-v8a-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v5.4.0"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "InfinityLoop1308/PipePipe",
+          "assetPattern": "PipePipe_{version}-x86_64-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v5.4.0"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "InfinityLoop1308/PipePipe",
+          "assetPattern": "PipePipe_{version}-x86-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v5.4.0"
+        }
+      }
+    }
+  ],
+  "summary": "在 Android 浏览和播放 B 站等平台内容，支持弹幕与后台播放。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/7349b0f632d67613cf7bbc408d611116698eb820/assets/logo.png",
+    "sha256": "b51044748a30ece3add5f4eaad4c67b197030a3c3ad0ae3a616dbbd120108f52",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；固定版文档授权及原署名见 https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/assets/logo.png"
+  },
+  "description": "PipePipe 是独立发展的 Android 视频客户端，源自 NewPipe 并扩展 BiliBili、NicoNico 等服务支持。提供弹幕、播放控制、过滤、播放列表和后台音乐模式；各平台功能及可访问内容取决于服务条件、网络环境和当前兼容状态。\n\n### 源码与许可\n当前条目提供 5.4.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/InfinityLoop1308/PipePipe/tree/7349b0f632d67613cf7bbc408d611116698eb820) · [许可和通知](https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/README.md)，原作者及配图资料和许可原文见[许可原文](https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. 按设备处理器选择官方 APK；多数新 Android 手机选择 ARM64。\n2. 安装后打开侧边菜单，选择当前需要的平台。\n3. 搜索一个可公开访问的视频，检查播放、画质和弹幕选项。\n4. 按需要建立本地播放列表，调整手势、过滤和后台播放设置。\n5. 登录、受限内容和下载功能按官方说明及平台条件使用；更新前备份本地列表和设置。",
+  "faq": "和 NewPipe 是同一个软件吗？不是，PipePipe 已独立开发，问题及兼容条件按本项目说明判断。\n必须登录吗？公开内容通常可先直接浏览，特定内容和功能可能要求账号。\n有 iOS 版吗？当前条目只发布官方 Android 成品。",
+  "documentationUrl": "https://github.com/InfinityLoop1308/PipePipe",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/7349b0f632d67613cf7bbc408d611116698eb820/fastlane/metadata/android/en-US/images/phoneScreenshots/01-v3.png",
+      "sha256": "7822f84aa073cfa6746330ce7c164290a689e617a49cf4a2acfcd2da2c890418",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/fastlane/metadata/android/en-US/images/phoneScreenshots/01-v3.png",
+      "caption": "PipePipe 官方视频浏览与播放界面示例",
+      "licenseEvidence": "固定官方文档随附功能图；官方随附文档图片，原作者归属、源码和许可原文见 https://github.com/InfinityLoop1308/PipePipe/blob/7349b0f632d67613cf7bbc408d611116698eb820/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

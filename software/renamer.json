@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "renamer",
+  "name": "ReNamer",
+  "homepage": "https://www.den4b.com/products/renamer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "renamer",
+          "architecture": "64bit",
+          "filenameTemplate": "ReNamer-{version}.zip"
+        }
+      }
+    }
+  ],
+  "summary": "按规则批量重命名文件和文件夹。",
+  "icon": {
+    "url": "https://www.den4b.com/favicon.ico",
+    "sha256": "809005f3f794e6a8a00604a52f2d5c99686ff1537c277dfa7483c15b0ccd7535",
+    "mime": "image/x-icon"
+  },
+  "description": "ReNamer：按规则批量重命名文件和文件夹。\n\n免费与付费功能及使用范围以官网许可为准。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 添加待重命名文件，加入替换、编号等规则。查看预览结果并先用副本测试，确认后执行重命名。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "files",
+  "screenshots": []
+}

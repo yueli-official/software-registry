@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lite-xl",
+  "name": "Lite XL",
+  "homepage": "https://lite-xl.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lite-xl",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lite-xl",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lite-xl/lite-xl",
+          "assetPattern": "lite-xl-v{version}-macos-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lite-xl/lite-xl",
+          "assetPattern": "lite-xl-v{version}-linux-x86_64-portable.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "轻量的图形文本编辑器，支持语法高亮、主题、项目文件与Lua插件扩展。",
+  "description": "Lite XL 是轻量的图形文本编辑器，以Lua为主要扩展语言，提供语法高亮、主题、项目文件浏览及插件机制。适合编辑代码、配置和日常文本，安装包小，功能可按需扩展。它是Lite的独立维护分支，不把同一项目的插件包另算软件。\n\n此条目提供官方2.1.8基础成品原包：Windows32位/x64、包含Intel与Apple Silicon真实主程序的Mac通用DMG，以及Linux x64便携tar.gz，单包约2–6MB。未修改原包，也未将addons版本或源码压缩包替代基础成品。主项目采用MIT许可，rxi、Francesco Abbate及Lite XL Team原署名保留，独立组件保留原许可；对应源码：https://github.com/lite-xl/lite-xl/tree/v2.1.8 ，夸克目录lite-xl-2.1.8-LICENSES.zip提供原许可资料。",
+  "usageInstructions": "1. Windows按CPU下载ZIP并完整解压，运行lite-xl.exe，保留data等资源目录。Mac打开通用DMG，将应用复制到Applications；Linux解压便携tar.gz，按要求赋予lite-xl执行权限并运行。\n2. 用Ctrl+O打开一个自己的测试文本文件，输入少量内容，按Ctrl+S保存，再重新打开确认。\n3. 尝试Ctrl+F搜索，打开项目目录查看文件树，按Ctrl+Shift+P打开命令面板查看可用操作。\n4. 需要主题或插件时，按官方README链接进入对应插件和主题资料，确认适用于Lite XL版本后再安装；当前条目使用基础成品，不预先安装额外插件。\n5. 用实际配置或代码工作前先保留文件副本，按自己的需求选择编码、缩进和扩展功能。",
+  "faq": "需要安装Lua或编译源码吗？普通使用下载已经编译好的完整应用，不需要自行编译。\n为什么不能只复制EXE？基础包还包含运行所需资源目录，应完整解压。\nMac需要区分Intel和Apple Silicon吗？当前条目选用官方通用DMG，已核实主程序包含两种CPU。",
+  "documentationUrl": "https://github.com/lite-xl/lite-xl/blob/v2.1.8/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Lite XL</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Lightweight Editor</text></svg>",
+    "sha256": "8e04cd4fbf3352d90e694646d4365122b156894225e87816666e30673757d263",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

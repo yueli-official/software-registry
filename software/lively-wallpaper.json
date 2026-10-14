@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lively-wallpaper",
+  "name": "Lively Wallpaper",
+  "homepage": "https://livelywallpaper.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lively",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "动态桌面工具。",
+  "icon": {
+    "url": "https://lively-community.github.io/lively/favicon.ico",
+    "sha256": "13cf3bd7005f88c638dffbb4479b7c8befc9f5f5ab9c061fc1f24f1936063d11",
+    "mime": "image/x-icon"
+  },
+  "description": "Lively Wallpaper 用于动态桌面。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开软件，选择内置动态壁纸并应用。需要自定义时添加视频或网页资源，再选择显示器；可在设置中调整暂停播放条件。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "graphics",
+  "screenshots": []
+}

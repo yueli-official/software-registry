@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gramophone",
+  "name": "Gramophone",
+  "homepage": "https://github.com/FoedusProgramme/Gramophone",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FoedusProgramme/Gramophone",
+          "assetPattern": "Gramophone-1.1.2-release.apk",
+          "tagPrefix": "",
+          "tagTemplate": "1.1.2"
+        }
+      }
+    }
+  ],
+  "summary": "浏览本地音乐、歌单与同步歌词的 Android 播放器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/FoedusProgramme/Gramophone/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "6400122ae52f3fd604efe78c7a0fbb0f08659236ce29c40480d2ef4f7825add4",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "description": "Gramophone 是使用 Android MediaStore 与 Media3 的本地音乐播放器，提供歌曲、文件夹、歌单、排序和同步歌词等功能。适合播放自己设备上的音乐，不内置在线曲库订阅。\n\n### 源码与许可\n当前条目提供 1.1.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/FoedusProgramme/Gramophone/tree/31bc80024e1cafa18511774ca4d230f292f57b77) · [许可原文](https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot_8.jpg)；原作者及许可通知见[固定版许可](https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK，并授予所需音乐文件访问权限。\n2. 将自己的音频文件放在设备可访问目录。\n3. 等待媒体库加载，通过歌曲或文件夹选择一首音频。\n4. 核对声音、封面和播放控制；需要歌词时按支持格式准备自己的歌词文件。\n5. 按需要建立歌单或配置系统支持的均衡器。",
+  "faq": "内置付费平台曲库吗？主要播放本地文件。\n所有歌词格式都支持吗？固定 README 列出 LRC、TTML、SRT 等，具体兼容按官方说明。",
+  "documentationUrl": "https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/readme.md",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/FoedusProgramme/Gramophone/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot_8.jpg",
+      "sha256": "115b43c9a235f108d98bb1ea1c52085a11a97b3fb3517f3e9f5bd9ab3c89597b",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot_8.jpg",
+      "caption": "Gramophone 官方播放筛选设置示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot_8.jpg；原许可 https://github.com/FoedusProgramme/Gramophone/blob/31bc80024e1cafa18511774ca4d230f292f57b77/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

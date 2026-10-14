@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notepad-minus-minus",
+  "name": "Notepad--",
+  "homepage": "https://github.com/cxasm/notepad--",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notepad--",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cxasm/notepad--",
+          "assetPattern": "Notepad--v{version}-mac_arm64_12.3.dmg",
+          "tagPrefix": "notepad-v",
+          "tagTemplate": "notepad-v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持中文的轻量文本编辑器，可用于代码、日志和文本对比。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cxasm/notepad--/4510896f716e71db9f4b25ed8559b9c39a4f23d4/src/Resources/edit/global/ndd.ico",
+    "sha256": "dfcfd3bb979f90679b8ab6e56c1c165f4059152b90d4f17960c70cb86b4e226e",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本 RealCompare.rc 中 IDI_ICON1 绑定的 ndd.ico；已实际预览蓝色文本纸页和白色 T，保留项目 GPL-3.0 来源，仅转换为 WebP。 固定来源：https://github.com/cxasm/notepad--/blob/4510896f716e71db9f4b25ed8559b9c39a4f23d4/src/Resources/edit/global/ndd.ico"
+  },
+  "description": "Notepad-- 是中文开发者维护的跨平台文本编辑器，提供语法高亮、查找替换和文件比较等功能，适合编辑代码、配置与日志。当前稳定版官方附件提供 Windows 便携版及 Apple Silicon macOS 安装包；Linux 用户请按官方说明选择适配发行版的版本。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/cxasm/notepad--/tree/4510896f716e71db9f4b25ed8559b9c39a4f23d4 。图标为固定版本 RealCompare.rc 中 IDI_ICON1 绑定的 ndd.ico；已实际预览蓝色文本纸页和白色 T，保留项目 GPL-3.0 来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 下载原 ZIP 并完整解压，运行 Notepad--.exe；Apple Silicon Mac 下载 DMG，将应用复制到应用程序目录。保留原包内组件与许可。\n2. 打开已有文本文件，先在一个副本上尝试编辑与保存；在语言菜单选择适合文件的语法高亮。\n3. 用查找/替换定位文本，批量替换前确认作用范围；比较文件时分别选取两份文本，按高亮检查差异。\n4. 中文说明与反馈入口见官方 README；当前 macOS 包要求 macOS 12.3 或更新版本。",
+  "faq": "这是 Notepad++ 吗？不是，是独立的 Notepad-- 项目。\nWindows 需要安装吗？此条目提供官方便携 ZIP，完整解压后运行。\n为什么没有当前 Linux 包？当前固定版官方附件未提供 Linux 成品，未用源码 ZIP 冒充安装包。",
+  "documentationUrl": "https://github.com/cxasm/notepad--/blob/4510896f716e71db9f4b25ed8559b9c39a4f23d4/README.md",
+  "category": "office",
+  "screenshots": []
+}

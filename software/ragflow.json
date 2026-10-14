@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ragflow",
+  "name": "RAGFlow",
+  "homepage": "https://ragflow.io",
+  "kind": "reference",
+  "packages": [],
+  "summary": "AI 文档问答工具。",
+  "icon": {
+    "url": "https://ragflow.io/img/logo.svg",
+    "sha256": "dbfc34d9c799ac37171594bdd4d11196e9392c131c478a6ab46536f6e738fe2e",
+    "mime": "image/svg+xml"
+  },
+  "description": "RAGFlow 用于AI 文档问答。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方部署文档启动服务并配置模型，创建知识库并导入测试文档。完成解析后提问并核对原文引用。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/infiniflow/ragflow/blob/main/README.md",
+  "category": "ai",
+  "screenshots": []
+}

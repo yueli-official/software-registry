@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bandiview",
+  "name": "BandiView",
+  "homepage": "https://www.bandisoft.com/bandiview/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "图片查看工具。",
+  "icon": {
+    "url": "https://www.bandisoft.com/bandiview/imgs/hv_icon.png",
+    "sha256": "85b8f5e273c64962aa86d40e1f3c8b67a06be4024c51c9cb3c1b0fb35e022dbf",
+    "mime": "image/png"
+  },
+  "description": "BandiView 用于图片查看。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 打开图片或支持的图片归档，使用浏览与缩放功能。按需要调整显示模式与文件关联。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "graphics",
+  "screenshots": []
+}

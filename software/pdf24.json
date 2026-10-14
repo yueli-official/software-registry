@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pdf24",
+  "name": "PDF24",
+  "homepage": "https://www.pdf24.org/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "PDF 工具工具。",
+  "icon": {
+    "url": "https://www.pdf24.org/static/img/pdf24.png?v=67988dc3",
+    "sha256": "009832331d66fabc5b68c1c882e020b282b70f863d347d122bb824014b8551cb",
+    "mime": "image/png"
+  },
+  "description": "PDF24 用于PDF 工具。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择需要的 PDF 工具，添加自己的文件。设置输出参数，先检查一个转换结果再批量操作。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "office",
+  "screenshots": []
+}

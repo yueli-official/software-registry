@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "shellcheck",
+  "name": "ShellCheck",
+  "homepage": "https://github.com/koalaman/shellcheck",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "shellcheck",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koalaman/shellcheck",
+          "assetPattern": "shellcheck-v{version}.darwin.x86_64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koalaman/shellcheck",
+          "assetPattern": "shellcheck-v{version}.darwin.aarch64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koalaman/shellcheck",
+          "assetPattern": "shellcheck-v{version}.linux.x86_64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "koalaman/shellcheck",
+          "assetPattern": "shellcheck-v{version}.linux.aarch64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "检查 Shell 脚本中的常见语法和使用问题。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/koalaman/shellcheck/aac0823e6b58f8a499e856e93738082691cbf212/doc/shellcheck_logo.svg",
+    "sha256": "eed4e30c35e4ca3caa73da679f84b8f1dd17892ce7ffd5f5f325859eed66165b",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/doc/shellcheck_logo.svg"
+  },
+  "description": "ShellCheck 是独立的 Shell 脚本静态检查工具，提示引号、变量、测试表达式及其他常见问题。适合在运行脚本前检查和改进脚本，也可集成到支持的编辑器或 CI 流程。\n\n### 源码与许可\n当前条目提供 0.11.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/koalaman/shellcheck/tree/aac0823e6b58f8a499e856e93738082691cbf212) · [许可原文](https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/doc/terminal.png)；原作者及许可通知见[固定版许可](https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 解压 ZIP；Mac/Linux 解压 tar.xz，将 shellcheck 加入 PATH。\n2. 运行 shellcheck --help 查看支持的 Shell 与参数。\n3. 对一个测试脚本运行 shellcheck script.sh。\n4. 按提示查看行号与规则说明，修复后再检查。\n5. 需要编辑器实时提示时，按官方说明配置插件和工具路径。",
+  "faq": "通过检查就保证脚本运行安全吗？静态检查不能保证所有运行行为，仍需结合环境验证。\n会执行被检查脚本吗？主要做静态分析。",
+  "documentationUrl": "https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/koalaman/shellcheck/aac0823e6b58f8a499e856e93738082691cbf212/doc/terminal.png",
+      "sha256": "48252766ae4d348060b36271d625a9d741da606e728d05ae73d80cd0aaff8505",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/doc/terminal.png",
+      "caption": "ShellCheck 官方脚本问题提示示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/doc/terminal.png；原许可 https://github.com/koalaman/shellcheck/blob/aac0823e6b58f8a499e856e93738082691cbf212/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

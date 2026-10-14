@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dbeaver",
+  "name": "DBeaver Community",
+  "homepage": "https://dbeaver.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dbeaver",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dbeaver",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbeaver/dbeaver",
+          "assetPattern": "dbeaver-ce-{version}-macos-x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbeaver/dbeaver",
+          "assetPattern": "dbeaver-ce-{version}-macos-aarch64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbeaver/dbeaver",
+          "assetPattern": "dbeaver-ce-{version}-linux-x86_64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbeaver/dbeaver",
+          "assetPattern": "dbeaver-ce-{version}-linux-aarch64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "管理多种数据库，编写 SQL 并查看表格数据。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dbeaver/dbeaver/26.2.2/product/community/icons-sources/icon_512x512.png",
+    "sha256": "9e028698815a9f02a3b7d7d9dfafb3f6ff3803cea8050832527dabdece862a9a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览精确26.2.2官方Community海狸产品图标，512px棕色海狸/白色圆底。Community product-branding.properties明确productLicense=ASL2.0和DBeaverCorp版权及商标；核对项目原Apache许可，产品资源目录无独立许可例外，保留产品身份与作者；不替换为第三方数据库标识。维护者仅转WebP。"
+  },
+  "description": "DBeaver Community 是通用数据库管理工具，适合连接数据库、浏览表和结构、编写执行 SQL，以及导入导出数据。此条目提供社区版官方原包，采用 Apache 2.0 许可，保留 DBeaver Corp 版权及产品标识；专业版的部分功能需另购。对应 26.2.2 源码与发行：https://github.com/dbeaver/dbeaver/tree/26.2.2 。官方完整包保留 Eclipse、JRE 和插件自身的原许可文件；随附 DBeaver-26.2.2-LICENSES.zip 保存主项目 Apache 原文及 Community 产品版权/许可配置。运行环境原版本与许可见包内 jre/release 和 jre/legal，其他组件原文件均保留。",
+  "usageInstructions": "1. Windows 解压 x64 或 ARM64 原 ZIP，在完整目录中运行 dbeaver.exe；macOS 打开对应 Intel 或 Apple Silicon DMG，将 DBeaver 应用放入应用程序目录；Linux Debian/Ubuntu 安装对应架构 .deb，并按安装器提示满足系统依赖。完整原包保留随附运行环境，不执行 Scoop 的预安装脚本。\n2. 点击新建数据库连接，选择 SQLite，用自己的测试数据库文件或副本作为路径；首次使用可能提示联网下载 JDBC 驱动。点击测试连接，成功后完成向导。连接远程数据库时，按实际服务填写地址、端口、数据库名和自己的账户。\n3. 为该连接打开 SQL 编辑器，先执行 SELECT 1; 查看结果。随后再浏览测试库中的表和结构，按需要查询或导出数据；写入操作使用自己的测试数据。更多参数和快捷键见官方连接与 SQL 编辑器文档。",
+  "faq": "这是免费社区版吗？当前条目为官方 Community 原包，商用专业版另有产品和授权。\n为什么首次连接需要下载文件？部分数据库需要 JDBC 驱动，DBeaver 会按所选数据库提示取得驱动，需要可用网络。\n能直接打开 Excel 或任意文件吗？它主要管理数据库，不代替通用办公软件；功能及格式支持按社区版和所选驱动核对。\nSQL 编辑器中的所有功能都是社区版功能吗？官网文档覆盖多个版本，按页面的版本说明判断，此条目不承诺所有专业功能都包含。\n需要什么系统？官方当前要求 Windows 10 或更新版本、macOS 11 或更新版本；原包包含运行环境，按实际系统和 CPU 选择下载。",
+  "documentationUrl": "https://dbeaver.com/docs/dbeaver/",
+  "category": "developer",
+  "screenshots": []
+}

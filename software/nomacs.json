@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nomacs",
+  "name": "nomacs",
+  "homepage": "https://nomacs.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "nomacs",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nomacs/nomacs",
+          "assetPattern": "nomacs-macOS-x86_64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nomacs/nomacs",
+          "assetPattern": "nomacs-macOS-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nomacs/nomacs",
+          "assetPattern": "nomacs-linux-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "nomacs/nomacs",
+          "assetPattern": "nomacs-linux-aarch64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "快速浏览图片与RAW文件，对比多张图片并做基础调整。",
+  "description": "nomacs 是开源看图工具，支持常见图片格式及部分RAW、PSD文件，可查看图片信息、缩放与旋转，并同步多个窗口比较图片。也提供裁剪、亮度和颜色等基础调整，适合浏览照片与整理素材。具体格式支持取决于原包内的图像插件。\n\n此条目提供未修改的官方3.22.4原包。主程序源码声明GPL 3.0或以后版本，原署名Markus Diem、Stefan Fiel、Florian Kleber；独立组件保留各自许可。对应源码：https://github.com/nomacs/nomacs/tree/3.22.4 。夸克目录中的nomacs-3.22.4-LICENSES.zip保留原通知与源码资料。",
+  "usageInstructions": "1. Windows解压官方便携ZIP，运行nomacs.exe。Mac按Intel或Apple Silicon选择DMG，将nomacs.app放到应用程序。Linux按CPU选择AppImage，赋予执行权限后打开；所需系统条件以官方README为准。\n2. 先复制几张自己的测试图片到同一文件夹，把一张拖入软件，尝试上一张/下一张、滚轮缩放与适应窗口。\n3. 查看图片尺寸与信息，打开第二个窗口，再按软件菜单的同步功能比较两张相似照片。\n4. 需要裁剪、旋转或调亮时用测试副本尝试，结果另存到新文件，重新打开检查。不要把格式转换或保存结果当成原图备份。\n5. 可在设置里查看可用界面语言；找不到中文时可先按官网或官方README操作，本批中文说明不代表所有原包的中文翻译覆盖一致。",
+  "faq": "能打开所有RAW或PSD吗？支持范围受原包图像库与插件影响，先用自己的样本确认；它不是完整PSD图层编辑器。\n是否会自动上传图片？本批是本地看图软件，图片保存在你自己的目录，按实际功能与设置操作。\n能比较两张图片吗？可打开多个窗口并使用同步功能，具体选项见当前菜单。\nMac/Linux包对应什么CPU？下载区分别列出Intel/AMD64和ARM64原包，已核对包内实际主程序。",
+  "documentationUrl": "https://github.com/nomacs/nomacs/blob/3.22.4/README.md",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#f6eee6\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"49\" fill=\"#906135\">nomacs</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"23\" fill=\"#a7805a\">Image Lounge</text></svg>",
+    "sha256": "4a81e0e04a93b2292e9a952b42b0a1540c79c6be7f7582cd99dc23259f8aa953",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；已核对官方固定tag的ImageLounge/nomacs.svg，未找到图片独立复用声明，不仿造该官方图形。"
+  },
+  "screenshots": []
+}

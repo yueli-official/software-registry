@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lazygit",
+  "name": "LazyGit",
+  "homepage": "https://github.com/jesseduffield/lazygit",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lazygit",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_windows_32-bit.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_darwin_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_linux_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jesseduffield/lazygit",
+          "assetPattern": "lazygit_{version}_linux_32-bit.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端中查看改动、暂存文件和管理Git分支的交互工具。",
+  "icon": {
+    "url": "https://user-images.githubusercontent.com/8456633/174470852-339b5011-5800-4bb9-a628-ff230aa8cd4e.png",
+    "sha256": "e74269c0686a158dcaedcd84d9bf91a774b9179851033afa57a5e94de8fbf48a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览官方README产品标识；资源上传者ID8456633与官方仓库作者ID一致，非头像或广告。已检查根许可明确包含associated documentation files；未发现此产品标识独立许可例外。保留Jesse Duffield署名、MIT许可和官方README来源。"
+  },
+  "description": "LazyGit 为Git提供终端交互界面，可查看工作区差异、选择暂存内容、管理提交与分支，减少反复输入命令。适合已有Git基础的开发者，运行前需要安装Git并进入自己的仓库。软件及随附文档采用MIT许可，此条目保留官方原包及许可。对应0.66.0源码：https://github.com/jesseduffield/lazygit/tree/v0.66.0 。\n\n产品标识：Jesse Duffield，取自官方README，MIT：https://github.com/jesseduffield/lazygit/blob/c5f7158154602d23b0750d4304c73e2aead8df5b/LICENSE 。此条目仅转换为WebP；不采用README中的赞助商图片。",
+  "usageInstructions": "1. 先安装Git并在终端运行git --version确认可用。Windows解压对应x64、ARM64或32位ZIP；macOS和Linux解压对应架构tar.gz，将lazygit程序放入自己的工具目录，按需要加入PATH。\n2. 用终端进入自己已有的Git仓库，执行lazygit；先查看文件列表、差异和提交记录，使用界面提示的帮助查看当前按键。\n3. 确认修改内容后再执行暂存、提交和分支操作；推送还需要自己的远端地址及Git认证。用q退出，执行重置或变基前阅读官方撤销与重做说明。",
+  "faq": "它能代替Git安装吗？不能，LazyGit是Git的交互界面，仍需Git命令可用。\n需要登录LazyGit账号吗？本地界面不要求账号，远端推送依赖自己的Git认证。\n当前条目图标来自哪里？采用项目作者在官方README使用的产品标识，保留Jesse Duffield署名和MIT许可；不是作者头像。",
+  "documentationUrl": "https://github.com/jesseduffield/lazygit#usage",
+  "category": "developer",
+  "screenshots": []
+}

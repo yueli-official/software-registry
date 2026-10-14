@@ -1,0 +1,38 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ytdlnis",
+  "name": "YTDLnis",
+  "homepage": "https://github.com/deniscerri/ytdlnis",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deniscerri/ytdlnis",
+          "assetPattern": "YTDLnis-1.9.0-universal-github-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v1.9.0"
+        }
+      }
+    }
+  ],
+  "summary": "在 Android 使用 yt-dlp 解析与下载支持站点的音视频。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/deniscerri/ytdlnis/f90669d39a5f235e292e277453cdf2995ceb094e/fastlane/metadata/android/en-US/images/icon.png",
+    "sha256": "cc3d544f8107b1fdaf57cdc6d31a2d252c8507b00482e42dd40875d758f7e6f2",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/deniscerri/ytdlnis/blob/f90669d39a5f235e292e277453cdf2995ceb094e/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "description": "YTDLnis 是基于 yt-dlp 的 Android 音视频下载应用，提供格式选择与任务管理。官方要求 Android 7.0 或更高；当前条目保留官方 GitHub universal APK，不混用其他仓库重新签名版本。\n\n### 源码与许可\n当前条目提供 1.9.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/deniscerri/ytdlnis/tree/f90669d39a5f235e292e277453cdf2995ceb094e) · [许可原文](https://github.com/deniscerri/ytdlnis/blob/f90669d39a5f235e292e277453cdf2995ceb094e/LICENSE)。",
+  "usageInstructions": "1. 安装当前条目官方 GitHub APK。\n2. 按需要选择输出目录并授予文件访问权限。\n3. 粘贴一个自己有权取得、可正常访问的视频地址。\n4. 先查看解析结果，选择音视频格式与输出选项。\n5. 提交任务后检查完成状态并播放输出文件；站点适配变化按官方 yt-dlp 更新说明处理。",
+  "faq": "每个网站都能下载吗？只支持工具当前兼容且可访问的站点。\n不同仓库构建能直接覆盖吗？签名可能不同，应保留原渠道并核对更新条件。",
+  "documentationUrl": "https://github.com/deniscerri/ytdlnis/blob/f90669d39a5f235e292e277453cdf2995ceb094e/README.md",
+  "category": "media",
+  "screenshots": []
+}

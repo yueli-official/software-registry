@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windhawk",
+  "name": "Windhawk",
+  "homepage": "https://windhawk.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windhawk",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "系统定制工具。",
+  "icon": {
+    "url": "https://windhawk.net/favicon.ico",
+    "sha256": "ea45fb75f7d0ec4ba87bc2d76234c426c60fef511410b27e11d75ba66aecb4f7",
+    "mime": "image/x-icon"
+  },
+  "description": "Windhawk 用于系统定制。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开模组列表，阅读模组说明和兼容性后安装。一次启用一个模组验证效果；异常时先禁用最近加入的模组。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "utilities",
+  "screenshots": []
+}

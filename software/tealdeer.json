@@ -1,0 +1,132 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tealdeer",
+  "name": "Tealdeer",
+  "homepage": "https://github.com/tealdeer-rs/tealdeer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "tealdeer",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-windows-aarch64-msvc.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-macos-x86_64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-macos-aarch64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-linux-x86_64-musl",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-linux-aarch64-musl",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tealdeer-rs/tealdeer",
+          "assetPattern": "tealdeer-linux-i686-musl",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端查阅常见命令的简短用法示例。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tealdeer-rs/tealdeer/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/deer.png",
+    "sha256": "fa651d3a5dbe15402a71e0b80e3e30089844aba819528f3151feb9a9a903dffb",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/deer.png"
+  },
+  "description": "Tealdeer 是独立的 tldr 客户端，通过简短示例帮助查找命令用法。适合学习常见命令和快速回忆参数；文档缓存和语言内容来自 tldr-pages，示例不是自动执行指令。\n\n### 源码与许可\n当前条目提供 1.9.0 官方原包。主项目许可：MIT / Apache-2.0，文档另遵循原来源许可；独立组件遵循各自许可。[固定版本源码](https://github.com/tealdeer-rs/tealdeer/tree/9a44521642a92102243b3022d03fcbe35eac9ab3) · [许可原文](https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/LICENSE-APACHE)。\n\n界面图来自[官方随附资料](https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/screenshot-default.png)；原作者及许可通知见[固定版许可](https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/LICENSE-APACHE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载平台原版，将二进制按官方说明命名为 tldr 并加入 PATH。\n2. 运行 tldr --help 查看选项。\n3. 运行 tldr --update 更新文档缓存。\n4. 运行 tldr git 查看一个熟悉命令的例子。\n5. 执行示例前核对实际参数与自己的目录，中文内容按官方语言设置启用。",
+  "faq": "能离线查阅吗？缓存准备后可查阅已取得内容。\n文档与程序许可相同吗？程序 MIT/Apache-2.0，文档按 tldr-pages 自身许可。",
+  "documentationUrl": "https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/tealdeer-rs/tealdeer/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/screenshot-default.png",
+      "sha256": "8d9a0c1e010bfc5ee00afa53465ba4018feff9a05cb5630fef914f66bfe7e916",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/screenshot-default.png",
+      "caption": "Tealdeer 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/docs/src/screenshot-default.png；原许可 https://github.com/tealdeer-rs/tealdeer/blob/9a44521642a92102243b3022d03fcbe35eac9ab3/LICENSE-APACHE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

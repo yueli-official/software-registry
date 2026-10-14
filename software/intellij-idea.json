@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "intellij-idea",
+  "name": "IntelliJ IDEA",
+  "homepage": "https://www.jetbrains.com/idea/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "开发工具工具。",
+  "icon": {
+    "url": "https://www.jetbrains.com/apple-touch-icon.png?r=1234",
+    "sha256": "754e0bacaa46fa63273b1f6f7796bc917f6ed896f90bfeba16c7f0614ae21cee",
+    "mime": "image/png"
+  },
+  "description": "IntelliJ IDEA 用于开发工具。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装后配置适配项目的 JDK，打开或创建项目。等待索引完成，按项目说明运行和调试代码。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "developer",
+  "screenshots": []
+}

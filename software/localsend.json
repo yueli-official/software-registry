@@ -1,0 +1,103 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "localsend",
+  "name": "LocalSend",
+  "homepage": "https://localsend.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "localsend",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "localsend/localsend",
+          "assetPattern": "LocalSend-{version}-android-arm64v8.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "localsend/localsend",
+          "assetPattern": "LocalSend-{version}-android-x64.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "localsend/localsend",
+          "assetPattern": "LocalSend-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "localsend/localsend",
+          "assetPattern": "LocalSend-{version}-linux-arm-64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "localsend/localsend",
+          "assetPattern": "LocalSend-{version}-linux-x86-64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在附近设备之间跨平台分享文件。",
+  "description": "LocalSend：在附近设备之间跨平台分享文件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 让发送和接收设备处于同一局域网并打开 LocalSend。发送端选择文件与接收设备，接收端确认后检查保存的文件。\n\n### 其他平台安装\n- Android arm64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Android amd64：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "files",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/localsend/localsend/c5bbe3630bb50e0de8253502b41523c4a58825bb/app/assets/img/logo-512.png",
+    "sha256": "d7e6016dd11ff9ce48ed6f1f24d8090b85d70982a450f1f1e51943739e166a48"
+  },
+  "screenshots": []
+}

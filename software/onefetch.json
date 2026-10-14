@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "onefetch",
+  "name": "Onefetch",
+  "homepage": "https://onefetch.dev",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "onefetch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "o2sh/onefetch",
+          "assetPattern": "onefetch-mac.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "o2sh/onefetch",
+          "assetPattern": "onefetch_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端概览 Git 项目的语言、提交和代码统计。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/o2sh/onefetch/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/assets/onefetch.svg",
+    "sha256": "ae7adf3b738d229064a35d2d748b05e2de5d5ba0f81c319540693a3db72b2bea",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；文档MIT授权及原署名见 https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/LICENSE.md；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/assets/onefetch.svg"
+  },
+  "description": "Onefetch 是本地 Git 仓库信息查看工具，用终端图形与统计展示项目语言、作者、提交、文件及代码规模。适合快速了解一个已经取得的 Git 项目，主要分析在本机完成，不会代替 Git 操作。\n\n### 源码与许可\n当前条目提供 3.0.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/o2sh/onefetch/tree/e4763a3bd07ac074b08a7a8512299627ccf0c6cd) · [许可和通知](https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/LICENSE.md)。\n\n本文配图来自[官方固定版文档](https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/README.md)，原作者及完整 MIT 授权见[许可原文](https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/LICENSE.md)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. Windows/macOS 解压 tar.gz，Debian/Ubuntu 安装 DEB，把 onefetch 加入 PATH。\n2. 运行 onefetch --help 查看可用显示参数。\n3. 在本地 Git 仓库目录运行 onefetch，或执行 onefetch /path/to/repo。\n4. 查看语言分布、作者和提交统计，并按需要调整显示选项。\n5. 当前条目官方 Mac 成品实际为 Apple Silicon ARM64；Intel Mac 用户按官方安装指南选择适合的渠道。",
+  "faq": "需要联网吗？查看已经取得的本地仓库可以离线完成。\n能展示 GitHub 任意仓库吗？请先取得本地 Git 仓库，再用该工具分析。",
+  "documentationUrl": "https://github.com/o2sh/onefetch/wiki/Installation",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/o2sh/onefetch/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/assets/screenshot-1.png",
+      "sha256": "b29d0cd430a5ad3bdffb78782b50cdf9e4ce7af6ea73a46d8eab2639a2fac2e3",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/assets/screenshot-1.png",
+      "caption": "Onefetch 官方本地 Git 项目统计示例",
+      "licenseEvidence": "固定官方文档随附功能图；MIT文档使用依据、原作者署名与许可全文见 https://github.com/o2sh/onefetch/blob/e4763a3bd07ac074b08a7a8512299627ccf0c6cd/LICENSE.md",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

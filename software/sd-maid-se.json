@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sd-maid-se",
+  "name": "SD Maid SE",
+  "homepage": "https://play.google.com/store/apps/details?id=eu.darken.sdmse",
+  "kind": "reference",
+  "packages": [],
+  "summary": "安卓清理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/d4rken-org/sdmaid-se/21642bab7fff3dccc02fe1e2e69fa3056e205092/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "d0da071597cfca5d35c5babcc3866320050cb4be050f7c86ef572370df501181",
+    "mime": "image/png"
+  },
+  "description": "SD Maid SE 用于安卓清理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按需授予扫描权限，查看清理结果。先确认每项内容用途，再执行清理，重要文件先备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/d4rken-org/sdmaid-se/blob/main/README.md",
+  "category": "system",
+  "screenshots": []
+}

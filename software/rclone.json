@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rclone",
+  "name": "rclone",
+  "homepage": "https://rclone.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "rclone",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rclone/rclone",
+          "assetPattern": "rclone-v{version}-osx-amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rclone/rclone",
+          "assetPattern": "rclone-v{version}-osx-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rclone/rclone",
+          "assetPattern": "rclone-v{version}-linux-386.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rclone/rclone",
+          "assetPattern": "rclone-v{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rclone/rclone",
+          "assetPattern": "rclone-v{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在本地和多种云存储之间复制与同步文件。",
+  "description": "rclone：在本地和多种云存储之间复制与同步文件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 运行 rclone config 配置远端，使用 rclone lsd 远端名: 检查连接。先用 rclone copy 源目录 远端名:目录 --dry-run 预览，再正式复制。\n\n### 其他平台安装\n- macOS amd64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- macOS arm64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n\n### 其他平台安装\n- Linux 386：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://rclone.org/docs/",
+  "category": "files",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rclone/rclone/0b8e9c4ccdec2b9b4c4f6f0b446912eb888d0a4e/graphics/logo/logo_symbol/logo_symbol_color_512px.png",
+    "sha256": "13025058a6f9e51be8d4755c1aa0e9d9f3861c22e9d2b5e1e6af2d9bff303126"
+  },
+  "screenshots": []
+}

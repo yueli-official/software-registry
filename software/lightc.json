@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lightc",
+  "name": "LightC",
+  "homepage": "https://www.lightc.app/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "C 盘清理与磁盘分析工具。",
+  "icon": {
+    "url": "https://www.lightc.app/logo.svg",
+    "sha256": "081c37d52b655644d106177ebf9bb06ff2e1b14754e381480796b92285de1d50",
+    "mime": "image/svg+xml"
+  },
+  "description": "LightC 用于C 盘清理与磁盘分析。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择磁盘或目录分析空间占用，查看大文件与清理建议。逐项确认文件用途，先备份再清理。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/Chunyu33/light-c/blob/main/README.md",
+  "category": "system",
+  "screenshots": []
+}

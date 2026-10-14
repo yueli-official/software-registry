@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "systeminformer",
+  "name": "System Informer",
+  "homepage": "https://systeminformer.sourceforge.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "systeminformer",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "winsiderss/systeminformer",
+          "assetPattern": "systeminformer-{version}-bin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "winsiderss/systeminformer",
+          "assetPattern": "systeminformer-{version}-bin.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "查看 Windows 进程、资源占用、服务与网络活动。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/winsiderss/systeminformer/99a0d28e091878967a804ac9ea2fe22f2c1fdadb/SystemInformer/resources/systeminformer-128x128.png",
+    "sha256": "9043be76ec714362ab44e29909446840beeb16795659560b568d2b1a62b85af9",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，已实际预览；资源目录未发现独立许可例外，保留 MIT 版权及来源，仅转换为 WebP。 固定来源：https://github.com/winsiderss/systeminformer/blob/99a0d28e091878967a804ac9ea2fe22f2c1fdadb/SystemInformer/resources/systeminformer-128x128.png"
+  },
+  "description": "System Informer 是 Windows 系统监控与诊断工具，继承 Process Hacker 的项目路线，提供进程树、CPU/内存/I/O 统计、服务、网络连接及详细进程属性。适合定位资源占用和检查系统运行状态。当前官方原 ZIP 同时包含 x64、32 位及 ARM64 主程序，按架构分别登记相同原包。\n\n主体采用 MIT License，保留官方版权、许可及随包第三方通知。固定版本源码：https://github.com/winsiderss/systeminformer/tree/99a0d28e091878967a804ac9ea2fe22f2c1fdadb 。官方固定版本产品图标，已实际预览；资源目录未发现独立许可例外，保留 MIT 版权及来源，仅转换为 WebP。",
+  "usageInstructions": "1. 下载官方 bin.zip 并完整解压。64 位 Windows 运行 amd64/SystemInformer.exe，32 位运行 i386/SystemInformer.exe，ARM64 运行 arm64/SystemInformer.exe；不要只复制一个 EXE。\n2. 打开后先查看进程列表与 CPU、内存列，双击自己的目标程序查看属性、线程和模块。\n3. 使用网络、磁盘或服务视图定位占用情况；先观察，再决定是否结束自己确认可关闭的程序。\n4. 某些详细信息需要管理员权限或驱动支持，按官方说明和系统提示配置。",
+  "faq": "三个下载架构为什么文件相同？官方把三种主程序放在同一个原 ZIP，此条目分别核对过每个 PE 架构。\n这是 Process Hacker 的替代项目吗？是其后续项目 System Informer，名称及界面已有更新。\n查看进程会改系统吗？只查看不会结束进程；结束、挂起和服务操作需自己明确选择。",
+  "documentationUrl": "https://github.com/winsiderss/systeminformer/blob/99a0d28e091878967a804ac9ea2fe22f2c1fdadb/README.md",
+  "category": "system",
+  "screenshots": []
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rnote",
+  "name": "Rnote",
+  "homepage": "https://github.com/flxzt/rnote",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rnote",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "用手写笔记录笔记、绘图和标注资料。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/flxzt/rnote/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/icons/scalable/apps/rnote.svg",
+    "sha256": "8d15b37221ef9c73d6e1c0da48d36baf575a41d4c016791a5bbb17871fd3da55",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/icons/scalable/apps/rnote.svg"
+  },
+  "description": "Rnote 是独立的手写笔记应用，提供绘图、文字及文档相关操作，适合支持手写输入的设备。当前条目提供已核验的官方 Windows 安装包。\n\n### 源码与许可\n当前条目提供 0.14.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/flxzt/rnote/tree/8cac558fa73ee63d958cec05124ea2fdbd7d608d) · [许可原文](https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/screenshots/document-settings.png)；原作者及许可通知见[固定版许可](https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装或解压。\n2. 新建测试笔记，验证手写笔压感与文字输入，检查保存与导出；导入自己可使用的文档副本后再测试标注。\n3. 保存自己的配置与重要资料备份，升级前核对固定版本官方说明。",
+  "faq": "为什么下载栏没有 Linux？当前条目只列已核验的发行原包，其他平台渠道见官方指南。\n所有手写笔都支持吗？输入表现取决于设备、驱动与系统。",
+  "documentationUrl": "https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/README.md",
+  "category": "office",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/flxzt/rnote/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/screenshots/document-settings.png",
+      "sha256": "993e1d2f066805669711e7c8e52c1eec897dcf187849bb8e68f4639732caad46",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/screenshots/document-settings.png",
+      "caption": "Rnote 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/crates/rnote-ui/data/screenshots/document-settings.png；原许可 https://github.com/flxzt/rnote/blob/8cac558fa73ee63d958cec05124ea2fdbd7d608d/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

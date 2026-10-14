@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "wifi-analyzer",
+  "name": "WiFi Analyzer",
+  "homepage": "https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "VREMSoftwareDevelopment/WiFiAnalyzer",
+          "assetPattern": "WiFiAnalyzer-3.3.1.apk",
+          "tagPrefix": "V",
+          "tagTemplate": "V3.3.1-F-DROID",
+          "tagSuffix": "-F-DROID"
+        }
+      }
+    }
+  ],
+  "summary": "查看附近 Wi-Fi 的信号、信道和接入点信息。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/VREMSoftwareDevelopment/WiFiAnalyzer/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/images/icon.png",
+    "sha256": "c1780893e1754f54378de26d58ef17338885a23981bba8378684a535313e2252",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方文档中的产品图标，已逐图预览确认身份；固定版文档授权及原署名见 https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/LICENSE；保留原形与颜色，不暗示作者背书。 原来源 https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/images/icon.png"
+  },
+  "description": "WiFi Analyzer 是 VREM 维护的 Android 无线网络分析工具，可查看接入点信号强度、信道分布和变化图。适合分析家中网络覆盖与信道拥挤情况；可见频段和扫描表现由手机硬件、Android 权限及系统扫描限制决定。\n\n### 源码与许可\n当前条目提供 3.3.1-F-DROID 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/tree/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599) · [许可和通知](https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/LICENSE)。\n\n本文配图来自[官方固定版文档](https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/README.md)，原作者及配图资料和许可原文见[许可原文](https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/LICENSE)；保留来源和原比例，此条目仅做格式转换。",
+  "usageInstructions": "1. 在 Android 安装官方 APK，打开 Wi-Fi 和系统要求的扫描权限。\n2. 进入接入点列表，找到自己的路由器并查看信号与信道。\n3. 切换信道图和评级视图，比较附近接入点占用情况。\n4. 到不同房间观察信号变化，按实际结果调整路由器位置。\n5. 扫描为空或刷新缓慢时，先阅读官方权限及 Android 扫描限制说明。",
+  "faq": "可以破解 Wi-Fi 密码吗？不能，软件用于信号和信道分析。\n为何无法显示 6GHz 或高带宽？需要相应手机硬件、系统和接入点支持。\n官方标签中的 F-DROID 是什么？这是作者正式发行的构建标记，此条目与 APK 内实际版本均为 3.3.1。",
+  "documentationUrl": "https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/USER_MANUAL.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/VREMSoftwareDevelopment/WiFiAnalyzer/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/fastlane/metadata/android/en-US/phoneScreenshots/02.png",
+      "sha256": "f61465a0adfcadcdcff32592a7bb501e62d2498e8aba8f1fd0ee964c8e9dbcef",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/fastlane/metadata/android/en-US/phoneScreenshots/02.png",
+      "caption": "WiFi Analyzer 官方接入点与信号分析示例",
+      "licenseEvidence": "固定官方文档随附功能图；官方随附文档图片，原作者归属、源码和许可原文见 https://github.com/VREMSoftwareDevelopment/WiFiAnalyzer/blob/8e8abad9c4ae438ce4c8d0e6b8f55ed8d4ac5599/LICENSE",
+      "provenance": "实际查看原图与产品内容，无账号秘密；保留原图归属与固定Git Blob，示意图及终端示例按原用途标注，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

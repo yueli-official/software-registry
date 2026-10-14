@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "java-jdk",
+  "name": "Java JDK",
+  "homepage": "https://www.oracle.com/java/technologies/downloads/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "开发工具工具。",
+  "icon": {
+    "url": "https://www.java.com/favicon.ico",
+    "sha256": "872bad18b566b0833d6b496477daab46763cf8bdec342d34ac310c3ac045cefd",
+    "mime": "image/x-icon",
+    "sourceKind": "official"
+  },
+  "description": "Java JDK 用于开发工具。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装与项目匹配的 JDK，在终端运行 java -version 和 javac -version 检查。按项目需要设置 JAVA_HOME 和开发工具。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "developer",
+  "screenshots": []
+}

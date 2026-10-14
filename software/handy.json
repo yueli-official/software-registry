@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "handy",
+  "name": "Handy",
+  "homepage": "https://github.com/cjpais/Handy",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_x64-setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_arm64-setup.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_aarch64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cjpais/Handy",
+          "assetPattern": "Handy_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "按快捷键说话，在桌面把语音转成文字。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cjpais/Handy/14f6f0d31cb22a4268acfbddba3052820fd0a06e/src-tauri/icons/128x128%402x.png",
+    "sha256": "f89ef38a54a2870fb5a4d6ff29c2059d50240ac798af9ecb7093d1cd2e9c4432",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/cjpais/Handy/blob/14f6f0d31cb22a4268acfbddba3052820fd0a06e/src-tauri/icons/128x128@2x.png"
+  },
+  "description": "Handy 是独立的离线语音转文字桌面应用，可用快捷键录音并把识别文字输入当前应用。音频在本机处理，使用前仍需按官方说明准备模型。\n\n### 源码与许可\n当前条目提供 0.9.8 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/cjpais/Handy/tree/14f6f0d31cb22a4268acfbddba3052820fd0a06e) · [许可原文](https://github.com/cjpais/Handy/blob/14f6f0d31cb22a4268acfbddba3052820fd0a06e/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，按官方说明安装。\n2. 首次运行后配置兼容模型、麦克风及必要的辅助功能权限，选择支持中文的模型，先在测试文本框验证快捷键与识别结果。\n3. 核对输出后再用于实际资料，模型占用与硬件条件按官方说明。",
+  "faq": "安装包包含全部模型吗？不包含，模型需另行取得，所需空间可能超过程序包本身。\n中文识别效果固定吗？取决于模型、录音和设备，先用自己的测试音频验证。",
+  "documentationUrl": "https://github.com/cjpais/Handy/blob/14f6f0d31cb22a4268acfbddba3052820fd0a06e/README.md",
+  "category": "ai",
+  "screenshots": []
+}

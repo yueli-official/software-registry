@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "difftastic",
+  "name": "Difftastic",
+  "homepage": "https://github.com/Wilfred/difftastic",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "difftastic",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Wilfred/difftastic",
+          "assetPattern": "difft-{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Wilfred/difftastic",
+          "assetPattern": "difft-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Wilfred/difftastic",
+          "assetPattern": "difft-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Wilfred/difftastic",
+          "assetPattern": "difft-{version}-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Wilfred/difftastic",
+          "assetPattern": "difft-{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "按代码语法结构查看两个文件之间的变化。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Wilfred/difftastic/b7d119e90ac9f972f03f69508da765dacd302c0c/img/logo.png",
+    "sha256": "6c8ccbef399932619f490671057241362b4a3d9721a3d7883e475fdea8b2c11a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/img/logo.png"
+  },
+  "description": "Difftastic 是独立的差异查看工具，命令为 difft，可结合语法结构展示代码变化。适合比较代码文件与 Git 变更，支持程度取决于所选语言解析器，不替代代码审查和测试。\n\n### 源码与许可\n当前条目提供 0.71.0 官方原包。主项目许可：MIT，vendored parser 按其各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/Wilfred/difftastic/tree/b7d119e90ac9f972f03f69508da765dacd302c0c) · [许可原文](https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/img/wrap_expr.png)；原作者及许可通知见[固定版许可](https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压对应平台原版，将 difft 加入 PATH。\n2. 运行 difft --help 查看选项。\n3. 对两个自己的测试代码文件运行 difft before.rs after.rs。\n4. 查看结构差异并核对完整文件。\n5. 按官方指南配置 Git 外部 diff，先在测试仓库确认显示方式。",
+  "faq": "所有文件都能按语法解析吗？支持语言以官方列表为准，其余文件有不同显示方式。\n会自动合并文件吗？主要查看差异，不把输出等同自动合并。",
+  "documentationUrl": "https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Wilfred/difftastic/b7d119e90ac9f972f03f69508da765dacd302c0c/img/wrap_expr.png",
+      "sha256": "e0e3a994201f202b1bd367440ec8678eb48059e3452b7f487a81f669b93d181d",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/img/wrap_expr.png",
+      "caption": "Difftastic 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/img/wrap_expr.png；原许可 https://github.com/Wilfred/difftastic/blob/b7d119e90ac9f972f03f69508da765dacd302c0c/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

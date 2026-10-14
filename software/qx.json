@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qx",
+  "name": "Qx 效率启动器",
+  "homepage": "https://qx.xpai.uk/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "启动与搜索工具。",
+  "icon": {
+    "url": "https://qx.xpai.uk/qx-tray.svg",
+    "sha256": "7449b1b791550a67e1c278dd979272722700c3cf89439a79c1b86a4877a85c0f",
+    "mime": "image/svg+xml"
+  },
+  "description": "Qx 效率启动器 用于启动与搜索。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 运行后通过设置中的全局快捷键唤出搜索，输入应用或文件名并选择结果。按需要配置剪贴板历史和可信插件。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/mcxen/qx/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

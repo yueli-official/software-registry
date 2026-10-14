@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sing-box",
+  "name": "sing-box",
+  "homepage": "https://github.com/SagerNet/sing-box",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-windows-amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-windows-386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-darwin-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-darwin-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-linux-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "SagerNet/sing-box",
+          "assetPattern": "sing-box-{version}-linux-386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用统一配置运行多协议代理和网络路由。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/SagerNet/sing-box/7054cac5124465ffdb145870d7c01885566711b1/docs/assets/icon.svg",
+    "sha256": "e59b482bb4793e5f7c8d1e347c42e035babeb40ccea91748788d1da4e32c574b",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/SagerNet/sing-box/blob/7054cac5124465ffdb145870d7c01885566711b1/docs/assets/icon.svg"
+  },
+  "description": "sing-box 是独立的代理与网络服务程序，可配置入站、出站和路由；当前条目提供命令行版，不把 Apple 图形组件或 Linux 软件包格式误标为 Android APK。\n\n### 源码与许可\n当前条目提供 1.14.3 官方原包。主项目许可：GPL-3.0-or-later，附加条款见固定版 LICENSE；独立组件遵循各自许可。[固定版本源码](https://github.com/SagerNet/sing-box/tree/7054cac5124465ffdb145870d7c01885566711b1) · [许可原文](https://github.com/SagerNet/sing-box/blob/7054cac5124465ffdb145870d7c01885566711b1/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 sing-box 加入 PATH，运行 sing-box --help 查看本版用法。\n3. 按当前官方文档创建独立测试配置，运行 sing-box check 检查，再使用 sing-box run 启动测试服务；核对路由和接口后配置实际运行环境。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "有免费订阅吗？不包含线路或账号。\nRelease 中 .apk 都是安卓吗？其中 Linux Alpine 包属于系统包格式，不能当安卓安装包。",
+  "documentationUrl": "https://github.com/SagerNet/sing-box/blob/7054cac5124465ffdb145870d7c01885566711b1/README.md",
+  "category": "network",
+  "screenshots": []
+}

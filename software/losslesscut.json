@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "losslesscut",
+  "name": "LosslessCut",
+  "homepage": "https://github.com/mifi/lossless-cut",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "losslesscut",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mifi/lossless-cut",
+          "assetPattern": "LosslessCut-linux-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mifi/lossless-cut",
+          "assetPattern": "LosslessCut-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mifi/lossless-cut",
+          "assetPattern": "LosslessCut-mac-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mifi/lossless-cut",
+          "assetPattern": "LosslessCut-linux-arm64.tar.bz2",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "快速无损裁剪视频和音频文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mifi/lossless-cut/70f2663a7a7c995903701acd2f616d057f4fdc2f/src/renderer/src/icon.svg",
+    "sha256": "d3d3da3f403ce1b9f846ae2a38a8fe9938fc458024352a9741b59a920eefacf9",
+    "mime": "image/svg+xml"
+  },
+  "description": "LosslessCut：快速无损裁剪视频和音频文件。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 导入视频，标记要保留片段的起止位置。选择输出目录并导出，检查音画及切点；关键帧限制可能影响精确切割。\n\n### 其他平台安装\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n\n### 其他平台安装\n- Linux arm64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "media",
+  "screenshots": []
+}

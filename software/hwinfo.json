@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hwinfo",
+  "name": "HWiNFO",
+  "homepage": "https://www.hwinfo.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "hwinfo",
+          "architecture": "64bit",
+          "stripPackageRevision": true
+        }
+      }
+    }
+  ],
+  "summary": "查看硬件详细信息并监测温度、电压与风扇传感器。",
+  "icon": {
+    "url": "https://www.hwinfo.com/favicon.ico",
+    "sha256": "fa7dcd01745a5e0d5456e6627b63b2ffc78a292f2cf997a16a5a0591b45dfd62",
+    "mime": "image/x-icon"
+  },
+  "description": "HWiNFO：查看硬件详细信息并监测温度、电压与风扇传感器。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 启动后选择传感器视图，查看温度、频率和电压等信息。需要长期观察时启用日志，读数含义和限制以硬件说明为准。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "screenshots": []
+}

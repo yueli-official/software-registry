@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "moneymanagerex",
+  "name": "Money Manager Ex",
+  "homepage": "https://moneymanagerex.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "moneymanagerex",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "moneymanagerex",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "moneymanagerex/moneymanagerex",
+          "assetPattern": "mmex-1.9.4-Darwin.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "moneymanagerex/moneymanagerex",
+          "assetPattern": "mmex_1.9.4-Ubuntu.24.04.noble_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用中文界面记录收支、管理账户与预算，查看图表报表。",
+  "description": "Money Manager Ex（MMEX）是开源个人记账软件，可按账户、分类和标签记录收支，管理定期账单、预算，并通过图表报表了解支出。支持中文界面与CSV/QIF导入，数据保存在自己的数据库文件中。\n\n此条目提供未修改的官方1.9.4桌面原包，主程序采用GPL 2.0或以后版本，原作者署名及独立组件许可保留于原包和MMEX-1.9.4-LICENSES.zip。对应源码：https://github.com/moneymanagerex/moneymanagerex/tree/v1.9.4 。",
+  "usageInstructions": "1. Windows按CPU选择便携ZIP并完整解压，打开bin目录中的mmex.exe。Mac打开官方DMG，将mmex.app放入应用程序；本包包含Intel和Apple Silicon主程序。Linux本批为Ubuntu 24.04 x64 DEB，使用系统软件安装工具或sudo apt install ./mmex_1.9.4-Ubuntu.24.04.noble_amd64.deb安装。\n2. 首次打开选择简体中文，新建一份测试数据库，默认货币选人民币/CNY。数据库保存到自己能找到的目录。\n3. 新建一个测试账户，添加一笔虚拟收入和一笔虚拟支出，设置日期、金额和分类。打开收支报表，确认记录与分类汇总正确。\n4. 再尝试按月设置预算或导入一份测试CSV，先核对日期与金额列。升级和大量导入前关闭软件并备份数据库，确认结果后再处理正式记录。",
+  "faq": "数据放在哪里？主要保存在你选择的本地数据库文件，需自行备份；云盘同步前先关闭软件，避免同时写入。\n需要联网账户吗？桌面记账可使用本地数据库；更新和部分网络功能需要联网。\n支持手机安装吗？Android/iOS是官方独立应用，本批下载区提供桌面原包，不把桌面包标成手机版。\n能关闭匿名统计吗？官方许可说明提供工具→选项→网络中的匿名统计开关，按当前界面查看。",
+  "documentationUrl": "https://github.com/moneymanagerex/moneymanagerex/blob/v1.9.4/docs/zh_CN/index.html",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#e8f4ef\"/><text x=\"128\" y=\"137\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"62\" fill=\"#237153\">MMEX</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"19\" fill=\"#46826d\">Money Manager Ex</text></svg>",
+    "sha256": "15f9c29972dd1d76d8c8c74a38d8c789d1c5afbcc7016914d6ad9202d7a2961f",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；官方README展示resources/mmexlogo.png，但当前未确认美术资源独立复用依据，未仿造官方图形。"
+  },
+  "screenshots": []
+}

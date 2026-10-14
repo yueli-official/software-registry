@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "amarok",
+  "name": "Amarok",
+  "homepage": "https://deltazefiro.github.io/Amarok-doc/en-US/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deltazefiro/Amarok-Hider",
+          "assetPattern": "Amarok-v*-foss.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "手机隐私工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/deltazefiro/Amarok-Hider/64c1079b960fc516effc820d47816f1f90c35aa2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "sha256": "cecfaaeb878fd3d140cc23bc72e37551d492f4d837f85a8c93dd6af4eedad467",
+    "mime": "image/png"
+  },
+  "description": "Amarok 用于手机隐私。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 首次启动设置保护方式并确认相关权限。先使用测试文件配置隐藏或保护功能，验证恢复方式后再处理其他内容。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/deltazefiro/Amarok-Hider/blob/main/README.md",
+  "category": "security",
+  "screenshots": []
+}

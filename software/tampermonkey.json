@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tampermonkey",
+  "name": "Tampermonkey",
+  "homepage": "https://www.tampermonkey.net/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "浏览器扩展工具。",
+  "icon": {
+    "url": "https://www.tampermonkey.net/images/icon180.png",
+    "sha256": "e02c6725fdbf5186f22723332732ee37c55ad038c9d821b4e6a83bf2e37fba82",
+    "mime": "image/png"
+  },
+  "description": "Tampermonkey 用于浏览器扩展。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从官方商店安装扩展，导入可信的用户脚本。检查权限和生效网站，用测试页面确认效果。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "browser",
+  "screenshots": []
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "winmerge",
+  "name": "WinMerge",
+  "homepage": "https://winmerge.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "winmerge",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "winmerge",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "winmerge",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "可视化比较文件和文件夹差异，并合并需要的修改。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/WinMerge/winmerge/c06b4b38bfc85e08e29ef666d9a42935ad6f35b0/Src/res/Merge.ico",
+    "sha256": "036a072b0eeb24dcd135989018c0b122839f10871a793522aa6177ed18467fdd",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "实际预览原ICO内256x256 PNG：两张纸与橙色箭头，Merge2.rc明确IDR_MAINFRAME绑定；不是横向文字logo。固定官方应用资源，根GPL-2.0，保留原包通知与官方来源；仅转换为WebP。"
+  },
+  "description": "WinMerge 是Windows上的文件比较与合并工具，左右并排显示文字差异，也可比较文件夹并查看两侧独有或内容不同的文件。支持过滤、语法高亮和中文界面，适合核对文档、代码及备份目录。此条目保留完整官方2.16.58.2原包，包含COPYING和随附组件通知；主体采用GPL-2.0，组件沿用各自许可。对应源码：https://github.com/WinMerge/winmerge/tree/v2.16.58.2 。图标为程序实际使用的Src/res/Merge.ico，保留项目来源和GPL许可。官方手册功能示例版权归Thingamahoochie Software；来源：https://github.com/WinMerge/winmerge/tree/master/Docs/Manual/English ，使用项目根GPL-2.0，仅转换为WebP。",
+  "usageInstructions": "1. Windows选择x64、32位或ARM64对应原ZIP，解压完整WinMerge目录并运行WinMergeU.exe，保留语言、插件、运行库和许可文件。\n2. 按Ctrl+O打开比较窗口，在两侧分别选择自己的两个文本文件或两个文件夹，点击Compare查看差异。先用两个测试文件了解高亮与左右对应关系。\n3. 文件夹比较时按需要设置文件过滤和包含子目录；双击不同文件可进入并排比较。合并会写入目标文件，先备份并确认复制方向，再使用Merge菜单将选中的差异复制到需要的一侧。\n4. 需要中文时在界面语言选项中选择简体中文；按F1查看原包帮助，也可阅读官方在线入门文档。",
+  "faq": "比较会自动覆盖文件吗？只打开比较不会自动合并；复制或编辑后保存才会写入目标。\n左边一定是旧文件吗？左右是自己选定的两个路径，不自动代表新旧，合并前确认方向。\n插件和第三方许可需要保留吗？请保留完整原包及COPYING、组件许可，不只取单个EXE。\n截图对应当前版本吗？使用官方手册的文件比较示例，展示差异窗格和两侧内容，不宣称当前外观完全一致。",
+  "documentationUrl": "https://manual.winmerge.org/en/Quick_start.html",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/WinMerge/winmerge/c06b4b38bfc85e08e29ef666d9a42935ad6f35b0/Docs/Manual/English/screenshots/filecomp1.png",
+      "sha256": "5d2e3e7ebadb34bf3cbb851bb05419121deb8ade25035c04e3283fe8ae04d23c",
+      "mime": "image/png",
+      "caption": "官方手册示例：左右并排比较文本，并高亮不同的行",
+      "sourcePage": "https://github.com/WinMerge/winmerge/blob/c06b4b38bfc85e08e29ef666d9a42935ad6f35b0/Docs/Manual/English/screenshots/filecomp1.png",
+      "licenseEvidence": "官方手册图片；根GPL-2.0与手册目录无独立许可例外，Index.xml/_Copyrights.xml署名Thingamahoochie Software，正文保留作者和来源。https://github.com/WinMerge/winmerge/blob/c06b4b38bfc85e08e29ef666d9a42935ad6f35b0/LICENSE.md",
+      "provenance": "已实际预览官方功能图，无凭据或私人消息；历史示例不冒充当前版本维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

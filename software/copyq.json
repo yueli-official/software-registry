@@ -1,0 +1,89 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "copyq",
+  "name": "CopyQ",
+  "homepage": "https://hluk.github.io/CopyQ/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "copyq",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hluk/CopyQ",
+          "assetPattern": "CopyQ-{version}-macos-13.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hluk/CopyQ",
+          "assetPattern": "CopyQ-{version}-macos-13-m1.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "hluk/CopyQ",
+          "assetPattern": "CopyQ-{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "保存、搜索和整理剪贴板历史的开源效率工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/hluk/CopyQ/5fba5b9d86fcfab46ce5fb00fa00a450e4af5e02/src/images/icon_256x256.png",
+    "sha256": "f41baff744fe893ce5133b41caeb83ab747aba518bb5be9e9566172602e57736",
+    "mime": "image/png",
+    "provenance": "已实际预览官方绿色剪刀产品标识。固定src/images资源，SVG元数据无独立CC许可声明，已检查AUTHORS及目录无美术许可例外；使用项目根GPL3-or-later，保留官方来源和原包许可。非头像或其他软件图标。"
+  },
+  "description": "CopyQ 可记录复制过的文本、图片和其他剪贴板内容，在窗口中搜索历史条目并复制回来。支持标签页、条目编辑、自定义快捷键和脚本命令，适合经常整理文字、重复粘贴内容或处理资料的用户。项目提供简体中文翻译。采用GPL-3.0-or-later，此条目保留官方完整原包与许可；17.0.0源码：https://github.com/hluk/CopyQ/tree/v17.0.0 。",
+  "usageInstructions": "1. Windows解压完整ZIP并运行copyq.exe，保留插件和运行库目录。macOS 13及更新系统安装对应Intel或Apple Silicon的DMG，将CopyQ.app放入应用程序目录。Linux x64使用AppImage，赋予执行权限后启动，或按官方文档使用发行版软件包。\n2. 启动后复制一段自己的文字，点击托盘图标打开历史窗口；输入关键词搜索记录，选中条目后按Ctrl+C复制回来，或按Enter粘贴到之前的活动窗口。\n3. 用F2编辑条目，按需创建标签页和配置快捷键。先在设置中了解保存历史、忽略窗口和敏感内容检测；不希望记录时暂停剪贴板监控，脚本和自定义命令按官方文档配置。",
+  "faq": "退出后历史还在吗？历史通常保存在本地，下次启动会恢复；备份和存储位置按官方文档操作。\n为什么Linux或Mac快捷键不能用？快捷键和自动粘贴受桌面环境、Wayland及系统权限影响，按官方FAQ检查，仍可手动复制条目。\n可以忽略密码管理器的复制内容吗？官方提供敏感内容检测和忽略窗口等设置，应结合自己所用应用检查效果。\n截图是什么版本？页面使用官方文档功能示例，不宣称此条目运行测试或当前版本完全相同的外观。",
+  "documentationUrl": "https://copyq.readthedocs.io/en/latest/",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/hluk/CopyQ/5fba5b9d86fcfab46ce5fb00fa00a450e4af5e02/docs/images/copyq-show.png",
+      "sha256": "7c183ab7c7f76f5dc4f601b942a98b7bc8bdd4641b0376d5a5095fa3dc456804",
+      "mime": "image/png",
+      "caption": "官方功能示例：在剪贴板历史中查看文字、图片和多条记录",
+      "sourcePage": "https://github.com/hluk/CopyQ/blob/5fba5b9d86fcfab46ce5fb00fa00a450e4af5e02/docs/images/copyq-show.png",
+      "licenseEvidence": "官方文档截图，已核docs及images目录没有独立许可例外；根GPL3：https://github.com/hluk/CopyQ/blob/5fba5b9d86fcfab46ce5fb00fa00a450e4af5e02/LICENSE 。已检查AUTHORS与产品SVG元数据，截图只展示项目自己的介绍文字与标识，不含凭据或商业插画。保留原图及项目来源。",
+      "provenance": "实际预览，英文官方示例，展示文档介绍及CopyQ自有图标；不冒充维护者实测或17.0.0具体外观保证。",
+      "reviewed": true
+    }
+  ]
+}

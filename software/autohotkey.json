@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "autohotkey",
+  "name": "AutoHotkey",
+  "homepage": "https://www.autohotkey.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "autohotkey",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "编写快捷键、热字串与 Windows 自动化脚本。",
+  "icon": {
+    "url": "https://www.autohotkey.com/favicon.ico",
+    "sha256": "d8ea36012ac8d049217f8ef13bdaefed8a00f0d22c8aa28a8d7226d516ff5d83",
+    "mime": "image/x-icon"
+  },
+  "description": "AutoHotkey：编写快捷键、热字串与 Windows 自动化脚本。\n\nv2 与 v1 语法有差异，旧脚本请先确认兼容性。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 新建 .ahk 文件，使用与下载版本一致的语法编写快捷键脚本。双击运行并测试，停止脚本可通过托盘菜单退出。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://www.autohotkey.com/docs/v2/",
+  "category": "productivity",
+  "screenshots": []
+}

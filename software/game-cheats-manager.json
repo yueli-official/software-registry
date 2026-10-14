@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "game-cheats-manager",
+  "name": "Game Cheats Manager",
+  "homepage": "https://gamezonelabs.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dyang886/Game-Cheats-Manager",
+          "assetPattern": "Game.Cheats.Manager.Setup.*.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "单机游戏修改器管理工具。",
+  "icon": {
+    "url": "https://gamezonelabs.com/icon.png?icon.5203d04d.png",
+    "sha256": "f902a70f0abd99b8703dd728dc100740f1391ec21f5d1ade52e8acdc8eac016d",
+    "mime": "image/png"
+  },
+  "description": "Game Cheats Manager 用于单机游戏修改器管理。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 打开管理器，搜索并添加对应游戏的修改器。核对游戏与修改器版本后按说明启动，仅用于允许修改的单机环境。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/dyang886/Game-Cheats-Manager/blob/main/README.md",
+  "category": "games",
+  "screenshots": []
+}

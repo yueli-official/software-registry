@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "musicplayer2",
+  "name": "MusicPlayer2",
+  "homepage": "https://github.com/zhongyang219/MusicPlayer2",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "musicplayer2",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "musicplayer2",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "中文本地音乐播放器，支持歌词、专辑封面、媒体库和音频格式转换。",
+  "description": "MusicPlayer2是中文音频播放器，支持本地音乐收藏、播放列表、歌词编辑与桌面歌词，提供歌曲标签、专辑封面、频谱、均衡器和格式转换等功能。适合管理电脑上的音频文件与歌词，支持常见音频格式及cue分轨。",
+  "usageInstructions": "1. 下载适合Windows系统的原版ZIP并完整解压，保留播放器旁的运行组件。\n2. 启动MusicPlayer2.exe；如提示缺少MSVC DLL，按官方说明安装对应Visual C++运行库。\n3. 打开本地歌曲或添加音乐文件夹，建立播放列表。\n4. 播放一首歌曲，在歌词和媒体库设置中调整显示方式；在线歌词、封面服务的可用性取决于上游。\n5. 可按需编辑歌曲标签、启用桌面歌词或转换格式，修改文件前保留自己的备份。",
+  "faq": "这是在线音乐下载工具吗？主要用于播放和整理自己的音频文件，在线歌词与封面不等同于提供音乐版权。\n为什么启动提示缺少DLL？先完整解压，再安装对应架构的Microsoft Visual C++运行库。",
+  "documentationUrl": "https://github.com/zhongyang219/MusicPlayer2/blob/8c22fd177ca9e30e4e6ffaed5970a847a776ed86/README.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">MusicPlayer2</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Local Music</text></svg>",
+    "sha256": "fb43379bb1e0f5f8acc551ecd54c57dcd92617dc7e555fa95fa20bf004e9c7af",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

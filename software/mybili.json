@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mybili",
+  "name": "MyBili",
+  "homepage": "https://github.com/qianxuntudou-ops/MyTVB",
+  "kind": "reference",
+  "packages": [],
+  "summary": "视频客户端工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/qianxuntudou-ops/MyTVB/cc0dadab9c5068858c01a7968dc1e320fd1bf416/app/src/main/res/mipmap-nodpi/ic_launcher.png",
+    "sha256": "46c8ac51ef3dd74cc0a594738b7b34720f677247131b615f0ac73c23159a8fb5",
+    "mime": "image/png"
+  },
+  "description": "MyBili 用于视频客户端。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 在 Android TV 安装官方原版客户端，按需完成扫码登录。用遥控器浏览分区并选择视频，按需要调整播放和弹幕设置。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/qianxuntudou-ops/MyTVB/blob/main/README.md",
+  "category": "media",
+  "screenshots": []
+}

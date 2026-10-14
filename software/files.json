@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "files",
+  "name": "Files",
+  "homepage": "https://files.community",
+  "kind": "reference",
+  "packages": [],
+  "summary": "Windows 文件管理器工具。",
+  "icon": {
+    "url": "https://files.community/branding/logo-light.svg",
+    "sha256": "53df692c830fe4126c245029a882a5bd93da3d9e1ace3ac6bc86cfde9eea909e",
+    "mime": "image/svg+xml"
+  },
+  "description": "Files 用于Windows 文件管理器。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 打开文件管理器，浏览目录并切换标签页。先用测试文件检查复制、移动与搜索，再设置默认打开行为。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/files-community/Files/blob/main/.github/README.md",
+  "category": "utilities",
+  "screenshots": []
+}

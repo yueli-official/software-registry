@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dngrep",
+  "name": "dnGrep",
+  "homepage": "https://dngrep.github.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dngrep",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dngrep",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dngrep",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "跨文件搜索文本内容，支持Office、PDF、压缩包、正则与结果预览。",
+  "description": "dnGrep 是Windows图形化全文搜索工具，能够在文本文件、Word、Excel、PowerPoint、PDF与压缩包中查找内容，支持普通文本、正则表达式等查询和结果预览，适合检索工作文档、资料及代码。\n\n此条目提供官方5.0.57.0的x64、32位与ARM64 MSI安装原包，单包约66–72MB；真实dnGREP主程序通过原MSI文件表和内嵌Cabinet核实，不把安装器外壳当成应用架构。附件文件名使用上游5.0.57写法，登记版本保留官方Release/Scoop完整5.0.57.0。主项目采用GPL-3.0-only，独立组件保留各自原许可；对应源码：https://github.com/dnGrep/dnGrep/tree/v5.0.57.0 ，原许可材料位于夸克目录dngrep-5.0.57.0-LICENSES.zip 。",
+  "usageInstructions": "1. 按WindowsCPU下载x64、32位或ARM64官方MSI，运行安装器，完成后从开始菜单启动dnGrep。\n2. 先准备一个包含测试文本的文件夹，在搜索路径（Search in）中选择它；首次可用*.txt文件筛选，减少搜索范围。\n3. 输入已知关键词，选择普通文本搜索模式，再开始搜索。查看结果中的文件名、行号和匹配内容。\n4. 使用结果预览确认找到的是所需文本，再尝试搜索自己的Office或PDF资料；扫描图片型PDF是否能搜索取决于它是否已有文字层。\n5. 需要更精确匹配时再启用正则表达式或其他查询模式。批量替换先在测试副本上预览并保存备份，确认后再用于实际资料。",
+  "faq": "只能搜文件名吗？主要功能是搜索文件内容，也可按文件名和路径限制范围。\n所有PDF都能搜到文字吗？没有文字层的扫描PDF不能等同于普通文本PDF，本工具不因此自动完成OCR。\n可以替换文件内容吗？支持相应格式与模式下的替换，先查看预览并用副本测试；不同文档格式支持范围按官方说明。",
+  "documentationUrl": "https://github.com/dnGrep/dnGrep/wiki",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">dnGrep</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Document Search</text></svg>",
+    "sha256": "cfbcb3c9d95209bea363280d6195ddc3cb285b260a63352f4224788efce02703",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

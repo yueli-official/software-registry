@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "winscp",
+  "name": "WinSCP",
+  "homepage": "https://winscp.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "winscp",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "通过 SFTP、FTP 等协议传输文件和同步目录。",
+  "description": "WinSCP 是 Windows 文件传输客户端，可连接 SSH/SFTP、FTP/FTPS、WebDAV 或 S3 服务，在本地与远端目录之间上传、下载或同步文件。适合维护自己的服务器、备份工作文件和管理远程站点；它需要可用的远端服务及账号，不会自动创建服务器。\n\n此条目提供经固定Scoop摘要与真实WinSCP.exe核实的官方6.5.7便携ZIP，原生32位Windows程序可用于相应Windows系统；不把.NET自动化组件另计软件。GPL-3.0-or-later许可与原署名保留，对应源码：https://github.com/winscp/winscp/tree/6.5.7 ，原许可材料见winscp-6.5.7-LICENSES.zip。",
+  "usageInstructions": "1. 解压官方便携 ZIP，在解压目录运行 WinSCP.exe；保留原包内的许可与说明文件。便携配置和站点资料需要备份。\n2. 准备自己服务器的协议、主机名、端口和账号。在新建站点中选择 SFTP 等实际协议，填写信息并登录；SFTP 常用 22 端口，其他服务以管理员给出的端口为准。首次连接时将服务器主机密钥指纹与管理员提供的值核对。\n3. 进入用于测试的远程目录，先上传一个无敏感内容的小文本文件，再下载到另一个本地目录并检查内容，确认读写权限和传输路径正确。\n4. 熟悉操作后再使用同步或脚本功能。批量同步前检查方向、覆盖与删除选项；站点密码和私钥不要放进公开配置或截图。",
+  "faq": "这是服务器软件吗？不是，它连接已有的文件传输服务；需要自己有权使用的服务和账号。\n可以在 Mac 或 Linux 原生运行吗？本候选按官方 Windows 产品核对，不把兼容层运行当作 Mac/Linux 原生安装包。\n是否需要安装 .NET SDK？GUI 客户端与上游单独发布的 .NET 自动化程序集不同，后者不另计成此条目软件。",
+  "documentationUrl": "https://winscp.net/eng/docs/guide_start",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">WinSCP</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Transfer</text></svg>",
+    "sha256": "2cbabe9012e77f150d2b32d5af5a528968aa96cd21a7a0b15be364d9d2e48831",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

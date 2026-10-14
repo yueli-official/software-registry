@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windows-terminal",
+  "name": "Windows Terminal",
+  "homepage": "https://github.com/microsoft/terminal",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windows-terminal",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "microsoft/terminal",
+          "assetPattern": "Microsoft.WindowsTerminal_{version}_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持标签页、分屏和自定义主题的现代 Windows 终端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/microsoft/terminal/099afa48ed0ae49e233a663c30a41dee09050990/res/terminal/images/Square44x44Logo.targetsize-256.png",
+    "sha256": "c4b38aa70967f629c51d9b567dd8ca4417bf44887ad3b51d877966fba2d21d97",
+    "mime": "image/png",
+    "provenance": "固定官方仓库实际产品图标，已预览；Microsoft Windows Terminal标识，MIT根许可，不使用Canary/Preview图标。"
+  },
+  "description": "Windows Terminal 是微软开源的终端应用，可在同一窗口使用 PowerShell、命令提示符和已安装的 WSL 等命令行环境，支持标签页、分屏、Unicode和自定义主题。适合日常命令操作和开发工作。项目采用MIT许可，此条目保留原版便携包及许可。对应1.25.2733.0源码与发行：https://github.com/microsoft/terminal/releases/tag/v1.25.2733.0 。",
+  "usageInstructions": "1. 使用Windows 10 2004（build 19041）或更新版本，选择x64或ARM64便携ZIP，解压整个目录并运行WindowsTerminal.exe，保留同目录运行库和资源。若系统缺少VC++运行库，请按微软官方说明安装相应运行库。\n2. 在新标签页菜单中选择已有的PowerShell或命令提示符配置，输入自己的命令。需要WSL时先按微软说明安装WSL，终端不会单独提供Linux系统。\n3. 在设置中调整默认配置、字体和配色；需要多个会话时添加标签页或拆分窗格。",
+  "faq": "适用于Windows 7吗？不适用，官方要求Windows 10 2004或更新版本。\n便携ZIP会自动更新吗？手工取得的包需要自行跟进版本，微软推荐Microsoft Store安装方式。\n与PowerShell是同一个软件吗？终端是承载命令行环境的界面，PowerShell和WSL是分别安装或系统提供的环境。官方还提供x86 ZIP、MSIX Bundle等格式，本轮提供x64和ARM64两个便携包。",
+  "documentationUrl": "https://learn.microsoft.com/zh-cn/windows/terminal/",
+  "category": "developer",
+  "screenshots": []
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "screen-recorder",
+  "name": "Screenity",
+  "homepage": "https://screenity.io",
+  "kind": "chrome-extension",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "alyssaxuu/screenity",
+          "assetPattern": "build.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "alyssaxuu/screenity",
+          "assetPattern": "build.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "alyssaxuu/screenity",
+          "assetPattern": "build.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "Chrome屏幕录制与标注扩展，可录制标签页或屏幕，制作演示、教程和反馈视频。",
+  "description": "Screenity 是Chrome浏览器中的屏幕录制与标注工具，适合制作教程、产品演示和工作反馈。可按需要选择屏幕、浏览器标签页或摄像头，并在录制过程中添加说明；麦克风、屏幕共享及保存位置按浏览器与系统授权操作。官方提供中文翻译。\n\n此条目提供官方4.6.12已编译MV3扩展原ZIP，约11MB，在Windows、Mac和Linux的兼容桌面Chromium浏览器中解压加载；这是同一浏览器扩展，不是三个独立应用或原生安装程序。主项目GPL-3.0及Alyssa X原署名保留，对应源码：https://github.com/alyssaxuu/screenity/tree/v4.6.12 ，原许可材料见screen-recorder-4.6.12-LICENSES.zip。Screenity Pro为另行提供的云服务，不把付费云功能当作本原包默认功能。",
+  "usageInstructions": "1. 使用支持ManifestV3的桌面Chrome或兼容Chromium浏览器。下载官方build.zip并完整解压，找到含manifest.json的扩展目录；无需安装Node.js或重新编译。\n2. 在Chrome打开chrome://extensions，开启开发者模式，选择“加载已解压的扩展程序”，选中刚才含manifest.json的目录；日常使用也可从官方Chrome扩展商店安装。\n3. 将Screenity固定到浏览器工具栏，点击扩展，先选择一个无敏感内容的测试标签页作为录制目标。\n4. 按浏览器提示选择屏幕或标签页；需要讲解时再允许麦克风，录制十几秒并尝试标注，然后停止录制。\n5. 按扩展界面的保存或导出入口保存视频，播放检查画面和声音。解压加载的扩展目录要保留，更新时替换完整官方版本并在扩展管理页重新加载；Google Drive等账户集成功能按官方帮助配置。",
+  "faq": "下载后为什么没有EXE？这是浏览器扩展原包，要解压后由兼容浏览器加载，不能当Windows安装器运行。\nMac和Linux是原生应用吗？同一原ZIP由各自桌面浏览器运行，平台标签说明浏览器使用范围。\n必须从源码构建吗？当前条目ZIP包含已编译扩展和真实MV3 manifest，不需要重新编译。\n是否包含Pro云服务？Pro是另行提供的服务，本包不代表订阅或付费功能授权。",
+  "documentationUrl": "https://help.screenity.io",
+  "category": "browser",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Screenity</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Screen Recorder</text></svg>",
+    "sha256": "e9adbbd7fb3c6f4eb937648cc8f25cbd57ad0c1e6d1c555b911c6d8471d32408",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

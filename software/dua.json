@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dua",
+  "name": "dua",
+  "homepage": "https://github.com/Byron/dua-cli",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dua",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Byron/dua-cli",
+          "assetPattern": "dua-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Byron/dua-cli",
+          "assetPattern": "dua-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Byron/dua-cli",
+          "assetPattern": "dua-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Byron/dua-cli",
+          "assetPattern": "dua-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "快速统计目录占用，并在终端交互查找大文件。",
+  "description": "dua 是独立的磁盘使用分析工具，提供汇总和交互浏览，适合定位占空间的目录。当前条目只提供真实架构通过核查的原包。\n\n### 源码与许可\n当前条目提供 2.45.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/Byron/dua-cli/tree/58d727cff755b74634ab0794fe15b20d2db053fa) · [许可原文](https://github.com/Byron/dua-cli/blob/58d727cff755b74634ab0794fe15b20d2db053fa/LICENSE)。",
+  "usageInstructions": "1. 解压官方包，将 dua 加入 PATH。\n2. 运行 dua --help 查看子命令。\n3. 在测试目录执行 dua，阅读容量汇总。\n4. 用 dua interactive 浏览目录层级和占用。\n5. 使用删除功能前核对选中路径并保留需要的备份。",
+  "faq": "Windows 有 ARM64 或32位包吗？本版这些命名包的实际主程序为 x64，因此当前条目只提供通过核查的 x64 Windows 包。\n显示值和系统属性相同吗？统计规则与文件系统条件可能不同，以官方说明为准。",
+  "documentationUrl": "https://github.com/Byron/dua-cli/blob/58d727cff755b74634ab0794fe15b20d2db053fa/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">dua</text></svg>",
+    "sha256": "3db69236724bec33108d396e4f64fffcc745b97aa88d178ae9b1f7f3aaf5644d",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名dua，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

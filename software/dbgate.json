@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dbgate",
+  "name": "DbGate",
+  "homepage": "https://dbgate.io",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbgate/dbgate",
+          "assetPattern": "dbgate-{version}-win_x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbgate/dbgate",
+          "assetPattern": "dbgate-{version}-win_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbgate/dbgate",
+          "assetPattern": "dbgate-{version}-mac_universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbgate/dbgate",
+          "assetPattern": "dbgate-{version}-linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dbgate/dbgate",
+          "assetPattern": "dbgate-{version}-linux_arm64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在一个界面连接多种数据库，查询、编辑并导入导出数据。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dbgate/dbgate/d562c1ee8308fab6832bb672dd59222e737d8bd9/app/icon.png",
+    "sha256": "d6060af63c827d83c28b94b6b0aec5647f4e6dd1212c20b8b7c9d92ce42b2146",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本中的产品图标，实际原图与页面产品身份已预览核对；不修改产品标识、不暗示作者背书；图片原始归属及源码见 https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/app/icon.png，许可资料见 https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/LICENSE"
+  },
+  "description": "DbGate 是跨平台数据库客户端，支持 MySQL、PostgreSQL、SQL Server、MongoDB、SQLite 等数据库。提供表数据浏览与编辑、SQL 查询、结构查看及导入导出工具；部分扩展能力属于单独商业版本，以官方说明为准。\n\n### 源码与许可\n当前条目提供 7.3.2 官方原包。主项目许可：GPL-3.0；组件保留各自许可。[固定版本源码](https://github.com/dbgate/dbgate/tree/d562c1ee8308fab6832bb672dd59222e737d8bd9) · [许可资料](https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/LICENSE)。",
+  "usageInstructions": "1. Windows 解压对应架构 ZIP 并运行 DbGate；macOS 打开通用 DMG，将 DbGate 拖入应用程序目录；Linux 选择适合发行版的 DEB 或 AppImage。\n2. 新建连接，按数据库类型填写主机、端口及账号；先测试连接。\n3. 打开数据库与数据表，查看数据或在查询编辑器中运行 SQL。\n4. 修改数据或结构前核对当前连接与目标库，重要操作先备份。\n5. 按需要使用导入、导出或结构比较功能，数据库服务由用户自行准备。",
+  "faq": "包含数据库服务器吗？这是客户端，需要另行准备本地或远端数据库。\n所有功能都免费吗？当前条目对应开源仓库的官方发行，商业版本功能与服务按官方说明区分。",
+  "documentationUrl": "https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/dbgate/dbgate/d562c1ee8308fab6832bb672dd59222e737d8bd9/img/screenshot1.png",
+      "sha256": "6a9574f77df3b724e9b7d1070d0da76c65a77c4b8fa5120130cc3559a1186e3a",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/img/screenshot1.png",
+      "caption": "DbGate 官方数据表浏览与编辑界面",
+      "licenseEvidence": "官方固定版本 README 随附的真实产品截图，保留原归属与固定源；主项目 GPL-3.0，许可 https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/LICENSE；官方文档 https://github.com/dbgate/dbgate/blob/d562c1ee8308fab6832bb672dd59222e737d8bd9/README.md",
+      "provenance": "已查看官方原图、产品身份与实际界面；固定Git Blob和SHA256，保留来源与归属；展示示例界面，不声称为维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

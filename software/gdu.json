@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gdu",
+  "name": "gdu",
+  "homepage": "https://github.com/dundee/gdu",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gdu",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_windows_arm64.exe.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_darwin_amd64.tgz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_darwin_arm64.tgz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_linux_amd64.tgz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_linux_arm64.tgz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dundee/gdu",
+          "assetPattern": "gdu_linux_386.tgz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互查看目录与文件占用，快速定位大文件。",
+  "description": "gdu是交互式磁盘空间分析工具，扫描目录后以终端列表展示占用，适合查找大文件与整理存储。针对SSD利用并行扫描，也可分析机械硬盘；性能取决于文件数量和设备。",
+  "usageInstructions": "1. 解压对应CPU原包。官方文件名带系统和CPU后缀，可在自己的安装目录改名为gdu并加入PATH。\n2. 在终端用实际程序名运行 gdu 目录路径，等待扫描完成。\n3. 用方向键移动和进入子目录，按 h 查看快捷键帮助。\n4. 根据占用结果找到需要人工整理的文件，确认用途后再操作。\n5. 只想导出非交互结果时查看 --help 中的相应选项。",
+  "faq": "双击为什么没有常规窗口？这是终端工具，需要在终端中运行。\n适合机械硬盘吗？可以使用，但并行扫描带来的优势通常不如SSD。",
+  "documentationUrl": "https://github.com/dundee/gdu/blob/387cf50377e53bad628603658cfb76fd4a54d718/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">gdu</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Disk Usage</text></svg>",
+    "sha256": "c03faa019ae299161f78a524b11ff162f4bb31e5e73d26dc5274ec2ffb249e4d",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

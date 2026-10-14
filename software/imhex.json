@@ -1,0 +1,117 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "imhex",
+  "name": "ImHex",
+  "homepage": "https://imhex.werwolv.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "imhex",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "WerWolv/ImHex",
+          "assetPattern": "imhex-{version}-Windows-Portable-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "WerWolv/ImHex",
+          "assetPattern": "imhex-{version}-macOS-x86_64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "WerWolv/ImHex",
+          "assetPattern": "imhex-{version}-macOS-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "WerWolv/ImHex",
+          "assetPattern": "imhex-{version}-Ubuntu-24.04-x86_64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "WerWolv/ImHex",
+          "assetPattern": "imhex-{version}-arm64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "查看和分析二进制文件的开源十六进制编辑器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/WerWolv/ImHex/f2d432dfd6c0b4e56b26f5e2851dd2a9f72cbe23/resources/dist/windows/icon.ico",
+    "sha256": "07e2d7dff70a6fe5b7b6876c622e0323f798e054a5890f37e154578a6844cd7d",
+    "mime": "image/x-icon",
+    "provenance": "固定官方产品图标，已实际预览。蓝色十六进制编辑器图标，GPL-2.0，资源目录无独立图标例外。"
+  },
+  "description": "ImHex 是图形化十六进制编辑器，可查看二进制内容、搜索数据、比较文件、计算摘要并分析数据分布。借助Pattern Language可描述和解析文件结构，适合开发、文件格式研究和数据分析。包含简体中文翻译资源。采用GPL-2.0，此条目保留官方完整原包及许可；对应1.38.1发行页包含完整源码包：https://github.com/WerWolv/ImHex/releases/tag/v1.38.1 。",
+  "usageInstructions": "1. Windows解压对应x64或ARM64便携ZIP，运行imhex.exe并保留插件和资源目录。macOS使用对应Intel或Apple Silicon的DMG，将ImHex.app复制到应用程序目录；先核对官方系统要求，当前文档要求macOS 15及更新系统。Linux x64提供Ubuntu 24.04的Debian包，ARM64提供AppImage。\n2. 从文件菜单打开自己要分析的文件，在十六进制视图中查看字节与文本；需要查找时使用搜索功能。建议先用副本练习修改和保存。\n3. 在数据分析、摘要或文件比较视图中选择需要的工具。需要解析文件结构时，按官方文档导入对应模式，并确认匹配自己的文件格式。",
+  "faq": "普通文本文档适合用它编辑吗？它主要用于二进制数据分析，文字写作通常选择文本编辑器。\n为什么启动出现图形问题？标准版本需要支持OpenGL 3.0的显卡和可用驱动；官方另有部分NoGPU构建，当前条目分发标准版本。\nLinux包通用吗？x64 Deb针对Ubuntu 24.04，ARM64 AppImage仍需满足系统运行库要求；其他发行版可从官方Release选择对应包。",
+  "documentationUrl": "https://docs.werwolv.net/imhex",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/WerWolv/ImHex/f2d432dfd6c0b4e56b26f5e2851dd2a9f72cbe23/plugins/builtin/romfs/assets/screenshots/data_analysis.png",
+      "sha256": "d009687c21e795e293926b7c5905fcdf55e0f3a379f7f5d1686240120158fbc0",
+      "mime": "image/png",
+      "caption": "官方功能示例：查看二进制文件的数据分布和熵",
+      "sourcePage": "https://github.com/WerWolv/ImHex/blob/f2d432dfd6c0b4e56b26f5e2851dd2a9f72cbe23/plugins/builtin/romfs/assets/screenshots/data_analysis.png",
+      "licenseEvidence": "固定官方仓库产品功能图，已检查图片目录许可。根及builtin资源LICENSE为GPL-2.0：https://github.com/WerWolv/ImHex/blob/f2d432dfd6c0b4e56b26f5e2851dd2a9f72cbe23/plugins/builtin/romfs/licenses/LICENSE 。",
+      "provenance": "实际预览，官方示例图，无认证资料；不宣称维护者实测或最新版本外观。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "1panel",
+  "name": "1Panel",
+  "homepage": "https://1panel.pro",
+  "kind": "reference",
+  "packages": [],
+  "summary": "服务器管理工具。",
+  "icon": {
+    "url": "https://1panel.pro/favicon.png",
+    "sha256": "8e5294b52facc9eb75f3f12b8771afb0cccd5e6e3aaa152d5554404c6079c736",
+    "mime": "image/png"
+  },
+  "description": "1Panel 用于服务器管理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方服务器安装文档部署，设置管理账号和访问控制。先添加测试应用，核对数据目录与备份再部署正式服务。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/1Panel-dev/1Panel/blob/dev-v2/README.md",
+  "category": "developer",
+  "screenshots": []
+}

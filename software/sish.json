@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sish",
+  "name": "sish",
+  "homepage": "https://github.com/antoniomika/sish",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.windows-amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.darwin-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.darwin-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.linux-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antoniomika/sish",
+          "assetPattern": "sish-{version}.linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过 SSH 建立自己的反向代理和端口转发服务。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/antoniomika/sish/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/logo.svg",
+    "sha256": "25a2abebfe0ebc7d2789a5c8a64861612feddb11ba4df673f0cd9662d3407f4d",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/logo.svg"
+  },
+  "description": "sish 是独立的 SSH 反向隧道服务端，可将本地服务经自己部署的入口转发，适合开发环境预览和远程连接。\n\n### 源码与许可\n当前条目提供 2.24.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/antoniomika/sish/tree/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66) · [许可原文](https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/hiw-sish-private.png)；原作者及许可通知见[固定版许可](https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 sish 加入 PATH，运行 sish --help 查看本版用法。\n3. 在自己可管理的服务器按官方部署指南配置域名、监听地址和认证；用独立测试服务建立 SSH 转发，核对访问范围、日志和关闭流程后再使用。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "需要自己的服务器吗？服务端需部署到可达的入口并准备域名或地址。\n会自动提供访问控制吗？按自己的部署配置认证、监听和路由。",
+  "documentationUrl": "https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/README.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/antoniomika/sish/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/hiw-sish-private.png",
+      "sha256": "572e53ca4827273e57bd079f1ac0b59717d06872b994c52580c10a7b6adc6848",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/hiw-sish-private.png",
+      "caption": "sish 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/docs/static/hiw-sish-private.png；原许可 https://github.com/antoniomika/sish/blob/17ad1f3455bae7757bb5b4fabdcc83f17bf01c66/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

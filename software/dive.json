@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dive",
+  "name": "Dive",
+  "homepage": "https://github.com/wagoodman/dive",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dive",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wagoodman/dive",
+          "assetPattern": "dive_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wagoodman/dive",
+          "assetPattern": "dive_{version}_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wagoodman/dive",
+          "assetPattern": "dive_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wagoodman/dive",
+          "assetPattern": "dive_{version}_linux_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wagoodman/dive",
+          "assetPattern": "dive_{version}_linux_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "分析容器镜像各层内容，定位占用和重复文件。",
+  "description": "Dive 是独立的容器镜像分析工具，可交互查看每层文件变化与空间效率，并支持按配置检查镜像。适合优化自己构建的容器镜像，不是完整容器运行平台。\n\n### 源码与许可\n当前条目提供 0.13.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/wagoodman/dive/tree/fe98c8a2eb08c443a36e3cc7568078909e298433) · [许可原文](https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/.data/demo-ci.png)；原作者及许可通知见[固定版许可](https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压对应平台官方包；Debian/Ubuntu 安装 DEB，将 dive 加入 PATH。\n2. 确保需要的容器引擎或镜像读取方式已配置。\n3. 运行 dive 后加一个自己的测试镜像名称。\n4. 切换图层，查看新增、删除和重复文件及空间占用。\n5. 调整自己的镜像构建步骤后重新比较结果，CI 规则按官方配置启用。",
+  "faq": "会直接清理所有镜像吗？主要用于分析，清理由容器工具和自己的流程处理。\n配图中 FAIL 是本次发布失败吗？不是，图为官方 CI 规则演示，展示镜像效率不达规则时的输出。",
+  "documentationUrl": "https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#207555\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">Dive</text></svg>",
+    "sha256": "5f18fa162d70364c85630ac9c90792e9bf36e564019e6ba2dea7ba9e68e7666d",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名Dive，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/wagoodman/dive/fe98c8a2eb08c443a36e3cc7568078909e298433/.data/demo-ci.png",
+      "sha256": "0a3edc6552783365d2a0f13836f6a57a76453952b35b5a5c94f4082e4aef157d",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/.data/demo-ci.png",
+      "caption": "Dive 官方容器镜像 CI 规则检查示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/.data/demo-ci.png；原许可 https://github.com/wagoodman/dive/blob/fe98c8a2eb08c443a36e3cc7568078909e298433/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "htmlq",
+  "name": "htmlq",
+  "homepage": "https://github.com/mgdm/htmlq",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "htmlq",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgdm/htmlq",
+          "assetPattern": "htmlq-x86_64-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mgdm/htmlq",
+          "assetPattern": "htmlq-x86_64-linux.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用 CSS 选择器从 HTML 中提取文本、元素和属性。",
+  "description": "htmlq 是独立的 HTML 查询工具，可使用 CSS 选择器提取页面内容，适合处理已取得的 HTML 文件或命令输出。它处理 HTML 文本，不运行浏览器中的 JavaScript。\n\n### 源码与许可\n当前条目提供 0.4.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/mgdm/htmlq/tree/1361c8c46811dd7b961c3fe9c6b04f9318a345e8) · [许可原文](https://github.com/mgdm/htmlq/blob/1361c8c46811dd7b961c3fe9c6b04f9318a345e8/LICENSE.md)。",
+  "usageInstructions": "1. 解压对应平台原版并将 htmlq 加入 PATH。\n2. 运行 htmlq --help。\n3. 准备自己的测试 HTML 文件。\n4. 将文件输入通过管道交给 htmlq，按官方语法选择元素。\n5. 按需要提取文本或属性，并核对没有匹配时的结果。",
+  "faq": "能执行动态网页脚本吗？不执行浏览器JavaScript，动态内容需另行取得。\n版本是否较早？当前官方稳定 Release 为0.4.0，未将开发源码作为新版本包。",
+  "documentationUrl": "https://github.com/mgdm/htmlq/blob/1361c8c46811dd7b961c3fe9c6b04f9318a345e8/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">htmlq</text></svg>",
+    "sha256": "7710716fc3bb0a3d2834261598507e654780704022f5e7b93cdfb88a7a8993f6",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名htmlq，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

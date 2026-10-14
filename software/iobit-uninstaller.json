@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "iobit-uninstaller",
+  "name": "IObit Uninstaller",
+  "homepage": "https://www.iobit.com/en/advanceduninstaller.php",
+  "kind": "reference",
+  "packages": [],
+  "summary": "软件卸载工具。",
+  "icon": {
+    "url": "https://www.iobit.com/tpl/images/iu_icon.png",
+    "sha256": "fa1c02b7a8b8a36f6ba39ef3485c04b12601ca0b7ed9f43b93f472c24477d0de",
+    "mime": "image/png"
+  },
+  "description": "IObit Uninstaller 用于软件卸载。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 选择要卸载的程序，先完成普通卸载。残留扫描后逐项确认，重要配置先备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "system",
+  "screenshots": []
+}

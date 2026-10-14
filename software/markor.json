@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "markor",
+  "name": "Markor",
+  "homepage": "https://github.com/gsantner/markor",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gsantner/markor",
+          "assetPattern": "net.gsantner.markor-*-{version}-flavorDefault-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "离线纯文本与 Markdown 笔记编辑器，支持待办清单、语法高亮和预览。",
+  "description": "Markor 使用手机上的普通文本文件保存笔记，可编辑Markdown、todo.txt等格式并预览内容，适合随手记、写文章草稿和维护待办清单。文件可由用户自行备份或配合其他同步工具；编辑本身不要求注册云账户。代码采用Apache-2.0，作者Gregor Santner；翻译和样例另依CC0声明保留。\n\n此条目提供官方2.16.1完整Android APK，保留原始字节。主许可Apache-2.0，原署名与组件通知保留；对应源码：https://github.com/gsantner/markor/tree/v2.16.1 ，原许可材料见markor-2.16.1-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方Android APK，首次打开按提示选择自己的笔记目录并授权访问。\n2. 新建一份学习笔记.md，输入一个标题、一段正文和两条列表，再切换预览检查排版。\n3. 返回编辑页修改文本，保存后在笔记目录确认文件存在。\n4. 要管理待办时创建todo.txt，添加一项任务，完成后按应用提供的待办操作标记。\n5. 定期备份笔记目录；需要多设备同步时自行选择兼容的文件同步工具，Markor不代替同步服务。",
+  "faq": "笔记必须上传云端吗？使用本地纯文本文件即可，云同步由用户按需要另行配置。\n是否支持中文？官方包含简体中文翻译，此条目提供中文首次使用说明。\n能否用电脑打开笔记？Markdown和todo.txt是普通文本文件，可用兼容编辑器打开。",
+  "documentationUrl": "https://github.com/gsantner/markor/blob/v2.16.1/README.md",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Markor</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Text Notes</text></svg>",
+    "sha256": "c011a15ba05a0a99690228b1d66c6724576ba78efb5f7af6532b0c10e7205ef5",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

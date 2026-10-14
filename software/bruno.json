@@ -1,0 +1,117 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bruno",
+  "name": "Bruno",
+  "homepage": "https://www.usebruno.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "bruno",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usebruno/bruno",
+          "assetPattern": "bruno_{version}_arm64_win.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usebruno/bruno",
+          "assetPattern": "bruno_{version}_x64_mac.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usebruno/bruno",
+          "assetPattern": "bruno_{version}_arm64_mac.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usebruno/bruno",
+          "assetPattern": "bruno_{version}_amd64_linux.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usebruno/bruno",
+          "assetPattern": "bruno_{version}_arm64_linux.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把API请求集合保存在本地文件中的开源调试工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/usebruno/bruno/9d177eb4f89f46e54191fdcf991b7a6ca4781fce/packages/bruno-electron/resources/icons/png/256x256.png",
+    "sha256": "f40e589ebb1df0c4153d064c5655820cb5aa10516ca36d45b3b54a88b97f6578",
+    "mime": "image/png",
+    "provenance": "固定官方产品图标，已实际预览。官方狗狗标识来自OpenMoji contributors，CC BY-SA 4.0；产品正文保留来源、署名、许可与格式转换说明，软件MIT不代替图标许可。"
+  },
+  "description": "Bruno 是桌面API客户端，可组织请求集合、配置变量与认证、查看响应并编写测试。集合保存为本地文件，便于放入自己的Git仓库，适合接口开发、联调和测试。项目提供中文使用介绍。此条目提供开源版官方原包，采用MIT许可；部分商业功能需另购，具体以官方说明为准。对应4.2.1源码与发行：https://github.com/usebruno/bruno/releases/tag/v4.2.1 。\n\n图标署名：OpenMoji contributors，CC BY-SA 4.0（https://creativecommons.org/licenses/by-sa/4.0/），原图 https://openmoji.org/library/emoji-1F436/ 。采用Bruno官方提供的图标版本，此条目仅转换为WebP，转换图仍遵循同一许可。",
+  "usageInstructions": "1. Windows按x64或ARM64解压完整ZIP并运行Bruno.exe；macOS解压对应架构ZIP，将Bruno.app放到应用程序目录；Linux按amd64或arm64安装Debian包。\n2. 创建集合并选择本地保存目录，新增请求，填写自己的接口URL、请求方法和必要参数；调用需要认证的接口时配置自己的授权。\n3. 点击发送，查看响应状态、正文和耗时；按需设置环境变量和测试，将集合文件纳入自己的版本管理。共享文件前先确认敏感值的保存方式。",
+  "faq": "必须使用云端账号吗？本地API集合不依赖Bruno云同步账号；所调用接口可能需要自己的凭据。\n开源版包含全部商业功能吗？并非所有付费功能都包含，商业授权和套餐以官方资料为准。\n这是Bruno CLI吗？当前条目分发桌面应用；CLI是另一个使用方式，需要按官方CLI文档单独配置。",
+  "documentationUrl": "https://docs.usebruno.com/",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/usebruno/bruno/9d177eb4f89f46e54191fdcf991b7a6ca4781fce/assets/images/landing-2-light.png",
+      "sha256": "180befffa937b1d5103a51c4db665da78a6629126707538b268b611d59019248",
+      "mime": "image/png",
+      "caption": "官方API客户端示例：组织请求集合并查看JSON响应",
+      "sourcePage": "https://github.com/usebruno/bruno/blob/9d177eb4f89f46e54191fdcf991b7a6ca4781fce/readme.md",
+      "licenseEvidence": "固定官方仓库产品功能图，已检查图片目录许可。根MIT：https://github.com/usebruno/bruno/blob/9d177eb4f89f46e54191fdcf991b7a6ca4781fce/license.md 。狗狗图标另属OpenMoji CC BY-SA4.0，正文保留署名和来源，保留原始截图；其他界面标识不主张维护者权利。",
+      "provenance": "实际预览，官方示例图，无认证资料；不宣称维护者实测或最新版本外观。",
+      "reviewed": true
+    }
+  ]
+}

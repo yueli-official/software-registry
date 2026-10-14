@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "strawberry",
+  "name": "Strawberry",
+  "homepage": "https://www.strawberrymusicplayer.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "strawberrymusicplayer/strawberry",
+          "assetPattern": "strawberry_{version}-noble_amd64.deb",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "播放和整理本地音乐，支持歌单、标签、均衡器与音频转换。",
+  "description": "Strawberry 是基于 Qt 的开源音乐播放器和音乐库管理工具，支持常见有损与无损音频、播放列表、标签编辑、均衡器及格式转换，适合整理自己的音乐收藏。\n\n此条目提供官方 1.2.31 Ubuntu 24.04（noble）x86_64 DEB 原包，包含真正的 Strawberry 应用。当前 Windows、Mac 新版向赞助者提供，此条目未镜像这些包；不同 Linux 发行版请使用官方对应渠道。主项目采用 GPL-3.0-or-later，原作者与组件署名保留；对应源码：https://github.com/strawberrymusicplayer/strawberry/tree/1.2.31 ，夸克目录中的 strawberry-1.2.31-LICENSES.zip 提供原许可材料。",
+  "usageInstructions": "1. 确认电脑使用 Ubuntu 24.04 x86_64，再下载当前条目 noble_amd64.deb；其他发行版使用官方对应版本。\n2. 在下载目录打开终端，运行 sudo apt install ./strawberry_1.2.31-noble_amd64.deb，由包管理器安装程序并处理依赖。\n3. 从应用菜单启动 Strawberry，打开设置中的音乐库（Collection）选项，添加一个保存本地音乐的文件夹，等待扫描。\n4. 在音乐库中选择歌曲加入播放列表，双击开始播放，尝试暂停、切歌和调整音量。\n5. 保存一份播放列表，再按需要使用均衡器或编辑音乐标签。修改标签或转换音频前先用文件副本测试。",
+  "faq": "能直接下载付费音乐吗？这是播放器和音乐整理工具，音乐文件与在线服务访问条件由对应来源决定。\nWindows和Mac包在哪里？官方当前向赞助者提供这些新版成品，此条目保留官方入口，未提供未取得的包。\n为什么Debian或其他Ubuntu版本不能直接用这个DEB？该附件面向Ubuntu24.04，依赖版本不同，其他系统应选官方对应渠道。",
+  "documentationUrl": "https://wiki.strawberrymusicplayer.org/",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Strawberry</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Music Player</text></svg>",
+    "sha256": "da69f3260db949b9e465a201d3904c95f3ca7e0f72f984266edd56fdcbef919f",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

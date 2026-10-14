@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "facefusion",
+  "name": "FaceFusion",
+  "homepage": "https://facefusion.io",
+  "kind": "reference",
+  "packages": [],
+  "summary": "AI 人像处理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/facefusion/facefusion/72470819a0373be3388b3929c8f8f311f418fc3c/facefusion.ico",
+    "sha256": "8d2d6814002ebe0dbf30b04ac0a3d8a42da9c8494a8d094c9cbf66b1088e1bfb",
+    "mime": "image/x-icon"
+  },
+  "description": "FaceFusion 用于AI 人像处理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方步骤安装并配置运行环境，使用自己有权处理的素材测试。选择模型、处理范围和输出路径，预览后运行。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/facefusion/facefusion/blob/master/README.md",
+  "category": "ai",
+  "screenshots": []
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dufs",
+  "name": "dufs",
+  "homepage": "https://github.com/sigoden/dufs",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dufs",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "dufs",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sigoden/dufs",
+          "assetPattern": "dufs-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sigoden/dufs",
+          "assetPattern": "dufs-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sigoden/dufs",
+          "assetPattern": "dufs-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sigoden/dufs",
+          "assetPattern": "dufs-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用一个命令启动带网页目录的文件服务器，支持上传与WebDAV。",
+  "description": "dufs将指定目录以网页文件列表方式提供，支持按需开启上传、搜索、归档下载和WebDAV。适合在局域网中临时共享资料。默认只读，写入能力与账号规则可以单独配置。",
+  "usageInstructions": "1. 解压原包并把dufs程序加入PATH，进入要分享的资料目录。\n2. 执行 dufs -b 127.0.0.1，打开 http://127.0.0.1:5000 查看只读文件列表。\n3. 需要局域网访问时按实际网卡地址设置 -b，并让接收设备访问该地址的5000端口。\n4. 需要上传时增加 --allow-upload；账号权限用 -a 规则配置。\n5. 测试结束在启动终端按Ctrl+C停止服务，保留原目录文件。",
+  "faq": "能直接共享整个硬盘吗？建议只选择实际要共享的目录。\n默认是否允许上传删除？默认只读，上传和其他修改能力按选项开启。",
+  "documentationUrl": "https://github.com/sigoden/dufs/blob/b69946df232ceca5d24d0067f2beb6b5ed1c292c/README.md",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">dufs</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Server</text></svg>",
+    "sha256": "a1ee630968e613b107d5026d3407a9c4a0c7cfe4efe196af6f5b9500413acbf0",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

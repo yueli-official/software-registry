@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "alacritty",
+  "name": "Alacritty",
+  "homepage": "https://github.com/alacritty/alacritty",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "alacritty",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "alacritty/alacritty",
+          "assetPattern": "Alacritty-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "使用 GPU 渲染的轻量终端，连接本机 Shell 工作环境。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/alacritty/alacritty/94e7c8874e526b1e67b349d9ba30ddf81669119e/extra/logo/compat/alacritty-term+scanlines.png",
+    "sha256": "933b3b851a7357b21962cb8763da6149c2be733b48cff5ffae89f4f77c8f75cb",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/alacritty/alacritty/blob/94e7c8874e526b1e67b349d9ba30ddf81669119e/extra/logo/compat/alacritty-term%2Bscanlines.png"
+  },
+  "description": "Alacritty 是跨平台终端模拟器，利用 GPU 渲染文字并提供可配置的显示与输入行为。适合日常命令行工作；它运行系统 Shell，本身不是 Shell，也不内置完整 IDE。\n\n### 源码与许可\n当前条目提供 0.17.0 官方原包。主项目许可：Apache-2.0（含按各自许可发布的组件）；独立组件遵循各自许可。[固定版本源码](https://github.com/alacritty/alacritty/tree/94e7c8874e526b1e67b349d9ba30ddf81669119e) · [许可原文](https://github.com/alacritty/alacritty/blob/94e7c8874e526b1e67b349d9ba30ddf81669119e/LICENSE-APACHE)。",
+  "usageInstructions": "1. Windows 当前条目为官方便携 EXE，Mac 打开通用 DMG。\n2. 启动终端，确认进入自己设置的系统 Shell。\n3. 执行常用的目录查看和项目命令，检查字体与中文显示。\n4. 按官方 TOML 配置说明调整字体、颜色和键盘选项。\n5. Linux 按官方发行版或构建渠道选择；该稳定 Release 没有独立 Linux 成品包。",
+  "faq": "需要显卡支持吗？需要满足官方图形与驱动要求。\n它会安装 Linux Shell 吗？不会，Shell 和相关环境由本机另外配置。",
+  "documentationUrl": "https://github.com/alacritty/alacritty/blob/94e7c8874e526b1e67b349d9ba30ddf81669119e/README.md",
+  "category": "developer",
+  "screenshots": []
+}

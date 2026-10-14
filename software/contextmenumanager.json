@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "contextmenumanager",
+  "name": "ContextMenuManager",
+  "homepage": "https://github.com/BluePointLilac/ContextMenuManager",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "BluePointLilac/ContextMenuManager",
+          "assetPattern": "ContextMenuManager.NET.4.0.exe",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "中文Windows右键菜单管理器，可启用、禁用和整理常见菜单项目。",
+  "description": "ContextMenuManager 是中文 Windows 右键菜单管理工具，覆盖文件、文件夹、新建、发送到、打开方式等场景，可查看、启用、禁用及自定义菜单项目，适合整理安装软件后变长的右键菜单。\n\n此条目提供官方 3.3.3.1 的.NET4.0单文件原版程序，使用兼容的.NET Framework运行环境，官方声明支持32位和64位Windows。它是完整的托管桌面应用，不把EXE的PE标记误当成只支持32位。该正式版本发布较早，官方兼容列表为Vista至Windows10；较新系统应查看实际菜单兼容情况。项目采用MIT许可，Copyright 2020 蓝点lilac；对应源码：https://github.com/BluePointLilac/ContextMenuManager/tree/3.3.3.1 ，原许可材料在夸克目录 contextmenumanager-3.3.3.1-LICENSES.zip 中保留。",
+  "usageInstructions": "1. 下载ContextMenuManager.NET.4.0.exe，放入独立文件夹，确认系统已有兼容的.NET Framework4.0或更高运行库，再运行程序。\n2. 先在左侧选择一个菜单场景，例如文件夹或文件，查看右侧列出的菜单项目。\n3. 选择一个确定不常用的项目，先使用禁用操作，再回到资源管理器打开对应右键菜单，检查变化。\n4. 如需恢复，在同一场景重新启用该项目；首次使用优先启用和禁用，不直接永久删除注册表项目。\n5. 按需要查看项目对应的程序和位置，再学习修改名称或添加自定义命令。修改系统范围项目时按Windows提示处理权限。",
+  "faq": "需要安装吗？当前条目提供官方单文件程序，具备相应.NET运行库后即可运行。\n和清理卸载残留工具一样吗？它主要管理右键菜单，官方不把它定义为卸载残留清理工具。\n禁用后能恢复吗？可以在对应场景重新启用；永久删除是不同操作，首次使用建议先禁用。",
+  "documentationUrl": "https://github.com/BluePointLilac/ContextMenuManager/blob/3.3.3.1/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"22\" fill=\"#376656\">ContextMenuManager</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Context Menu</text></svg>",
+    "sha256": "efecc300fe3af5ba82163a9092f5d17c76276ed5e971c01b92ee6ac05aedf798",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

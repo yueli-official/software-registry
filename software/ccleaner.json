@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ccleaner",
+  "name": "CCleaner",
+  "homepage": "https://www.ccleaner.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "系统清理工具。",
+  "icon": {
+    "url": "https://s1.pir.fm/pf/favicons--AwgCBwYOBQc/apple-touch-icon.png",
+    "sha256": "a14e72e6d36f8d2f2b063def81c6ae0a24cb57853b36a2fe05af6a8fe1ab8645",
+    "mime": "image/png"
+  },
+  "description": "CCleaner 用于系统清理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 先扫描并查看临时文件和历史记录列表，取消需要保留的项目。确认后清理，重要数据先备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "system",
+  "screenshots": []
+}

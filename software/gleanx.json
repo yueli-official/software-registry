@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gleanx",
+  "name": "Gleanx",
+  "homepage": "https://github.com/dcxa521gi/Gleanx",
+  "kind": "reference",
+  "packages": [],
+  "summary": "剪贴板与活动记录工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dcxa521gi/Gleanx/cb93d5b2c9e8924213b3db253450aa58d0860c87/.github/readme/icon.png",
+    "sha256": "e6437604b0ed553fdc7edb5263cb979b34d924891a2a33ea3fbfa65734c713c7",
+    "mime": "image/png"
+  },
+  "description": "Gleanx 用于剪贴板与活动记录。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 运行后复制测试文字，打开剪贴板记录查看和再次复制。按需要配置 OCR、备忘录和其他模块，重要资料定期导出备份。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/dcxa521gi/Gleanx/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

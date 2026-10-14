@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "escrcpy",
+  "name": "Escrcpy",
+  "homepage": "https://viarotel.eu.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "escrcpy",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "viarotel-org/escrcpy",
+          "assetPattern": "Escrcpy-{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "viarotel-org/escrcpy",
+          "assetPattern": "Escrcpy-{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "viarotel-org/escrcpy",
+          "assetPattern": "Escrcpy-{version}-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "viarotel-org/escrcpy",
+          "assetPattern": "Escrcpy-{version}-mac-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "安卓投屏桌面界面工具。",
+  "icon": {
+    "url": "https://viarotel.eu.org/images/logo.ico",
+    "sha256": "b8325e6ffd5223a5278479752a50b63f6325f0b807d88353838b7fd7e08b0ebe",
+    "mime": "image/x-icon"
+  },
+  "description": "Escrcpy 用于安卓投屏桌面界面。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 在 Android 手机开启 USB 调试，连接电脑并确认授权。打开软件选择设备并连接，即可查看和控制手机画面。\n\n### 其他平台安装\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "network",
+  "screenshots": []
+}

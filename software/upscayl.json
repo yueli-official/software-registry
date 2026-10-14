@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "upscayl",
+  "name": "Upscayl",
+  "homepage": "https://upscayl.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "upscayl",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "upscayl/upscayl",
+          "assetPattern": "upscayl-{version}-linux.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "AI 图片放大工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/upscayl/upscayl/a00d55fee90e0f9435d5eaa86e76700df8199af8/build/icon.png",
+    "sha256": "660a47502195a961f25dd814358b48f5c25749fd1b3de5e407ad7f07d67b8ac1",
+    "mime": "image/png"
+  },
+  "description": "Upscayl 用于AI 图片放大。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开图片，选择放大模型与输出目录。开始处理后比较原图和结果；显卡兼容性与模型要求以软件提示为准。\n\n### 其他平台安装\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "ai",
+  "screenshots": []
+}

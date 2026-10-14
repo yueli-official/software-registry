@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ztools",
+  "name": "ZTools",
+  "homepage": "https://github.com/ZToolsCenter/ZTools",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ZToolsCenter/ZTools",
+          "assetPattern": "ZTools-*-win-x64-setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ZToolsCenter/ZTools",
+          "assetPattern": "ZTools-{version}-mac-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ZToolsCenter/ZTools",
+          "assetPattern": "ZTools-{version}-mac-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "启动与搜索工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ZToolsCenter/ZTools/6c9dee8c998ed7b4e6d0a80ad4311d3d8d24f72c/build/icon.ico",
+    "sha256": "02827ebcdd4ae83d7ff7c84c819bd2445bfbd60afd8be4341e3a4cf0c18cd4fd",
+    "mime": "image/x-icon"
+  },
+  "description": "ZTools 用于启动与搜索。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装并运行后按 Alt+Z 打开主界面，输入应用名称并按 Enter 启动。按需要配置剪贴板与可信插件。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/ZToolsCenter/ZTools/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

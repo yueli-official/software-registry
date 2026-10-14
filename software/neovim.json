@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "neovim",
+  "name": "Neovim",
+  "homepage": "https://neovim.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "neovim",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "neovim/neovim",
+          "assetPattern": "nvim-win-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "neovim/neovim",
+          "assetPattern": "nvim-macos-x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "neovim/neovim",
+          "assetPattern": "nvim-macos-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "neovim/neovim",
+          "assetPattern": "nvim-linux-x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "neovim/neovim",
+          "assetPattern": "nvim-linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持Lua扩展、内置终端和语言服务的键盘驱动代码编辑器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/neovim/neovim.github.io/5801b2318a1b1fd880e54985cce8357affe855f0/static/logos/neovim-mark.png",
+    "sha256": "c80421a4dd237414099979f51feeb5619a4ed88472a9aac0dcac42e6d3136d1e",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方站源码固定提交蓝绿N标识，已实际预览。图标Jason Long独立CC BY3.0，正文保留作者、许可、来源及WebP变换说明。"
+  },
+  "description": "Neovim 是基于Vim理念的开源文本编辑器，适合编写代码、编辑配置和处理文本。提供终端界面、Lua配置、异步任务和语言服务接口；代码补全等能力需按语言配置对应服务。此条目分发完整官方原包，保留运行时文件及许可。主体采用Apache-2.0，部分历史代码沿用Vim许可，第三方库适用各自许可。对应0.12.5源码：https://github.com/neovim/neovim/tree/v0.12.5 。\n\n产品图标作者Jason Long，CC BY 3.0：https://creativecommons.org/licenses/by/3.0/ ；官方来源：https://neovim.io/ 。此条目仅转换为WebP，保留署名和来源。",
+  "usageInstructions": "1. Windows解压对应x64或ARM64的完整ZIP，保留bin、share等目录，在终端运行bin目录内的nvim.exe。macOS或Linux解压对应架构的tar.gz，保留完整目录，从终端运行bin/nvim；按需要将bin路径加入PATH。\n2. 执行nvim note.txt打开文本，按i进入插入模式输入内容；按Esc返回普通模式，输入:w保存，:q退出，:wq保存并退出。\n3. 在编辑器中输入:Tutor学习基础操作，用:help查看内置文档。配置Lua、插件或语言服务前先阅读官方说明，不将语言服务器误认为所有原包已经内置。",
+  "faq": "这是鼠标为主的图形编辑器吗？官方原包主要提供终端编辑器，需要学习普通模式、插入模式和命令。\n支持中文吗？可以编辑Unicode中文文本；终端字体、输入法和编码需正确配置。\n需要把单个nvim程序复制出去吗？不要丢弃原包运行时目录，否则帮助、语法和其他功能可能失效。",
+  "documentationUrl": "https://neovim.io/doc/user/",
+  "category": "developer",
+  "screenshots": []
+}

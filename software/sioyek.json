@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sioyek",
+  "name": "Sioyek",
+  "homepage": "https://github.com/ahrm/sioyek",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sioyek",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ahrm/sioyek",
+          "assetPattern": "sioyek-release-mac.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ahrm/sioyek",
+          "assetPattern": "sioyek-release-linux-portable.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "阅读技术 PDF，搜索内容并用快捷键导航文献。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ahrm/sioyek/7cb948face57b56ee55224b62d841c316e85294c/resources/sioyek-icon-linux.png",
+    "sha256": "ae06a0a8b08d61ad41ce53bc0ad9813f79a9c111bcc35d011f81b2b08a0067ee",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方项目原版产品标识，逐图核对产品身份及资源目录，无另行授权标记时不宣称美术资源具有源码同等许可；仅用于本产品说明与辨识，保留原形、比例和色彩，不暗示作者背书。资源及作者记录：https://github.com/ahrm/sioyek/blob/7cb948face57b56ee55224b62d841c316e85294c/resources/sioyek-icon-linux.png"
+  },
+  "description": "Sioyek 是面向研究论文与技术书籍的 PDF 阅读器，提供键盘导航、搜索、书签和智能跳转等功能。适合经常阅读长文档的用户；它主要用于阅读，不作为通用 PDF 编辑或办公套件。\n\n### 源码与许可\n当前条目提供 2.0.0 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/ahrm/sioyek/tree/7cb948face57b56ee55224b62d841c316e85294c) · [许可原文](https://github.com/ahrm/sioyek/blob/7cb948face57b56ee55224b62d841c316e85294c/LICENSE)。",
+  "usageInstructions": "1. Windows 解压官方 ZIP；Mac 解压 ZIP 后打开其中 build/sioyek.dmg；Linux 解压便携包后使用内含 AppImage。\n2. 启动阅读器并打开一份本地 PDF。\n3. 搜索文档内的词语，按帮助说明练习页面和位置跳转。\n4. 为常读位置设置书签，按需调整快捷键和显示参数。\n5. 当前条目 Mac 与 Linux 成品为 x64，系统兼容与首次启动条件见官方说明。",
+  "faq": "可以修改 PDF 正文吗？主要提供阅读与导航功能。\nMac 下载后为何还有 DMG？官方 ZIP 内包含实际安装用的 DMG，解压后再打开它。",
+  "documentationUrl": "https://github.com/ahrm/sioyek/blob/7cb948face57b56ee55224b62d841c316e85294c/README.md",
+  "category": "reading",
+  "screenshots": []
+}

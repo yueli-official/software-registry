@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "git",
+  "name": "Git",
+  "homepage": "https://git-scm.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "git",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "分布式版本控制工具，用于管理源码历史与协作开发。",
+  "icon": {
+    "url": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+    "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220",
+    "mime": "image/svg+xml"
+  },
+  "description": "Git 是分布式版本控制系统，可跟踪源码历史、管理分支并支持多人协作。Windows 版本采用 Git for Windows。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 安装后打开终端运行 git --version。设置提交者姓名和邮箱，使用 git clone 仓库地址 下载项目，在项目目录运行 git status 查看状态。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://git-scm.com/doc",
+  "category": "developer",
+  "screenshots": []
+}

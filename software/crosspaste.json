@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "crosspaste",
+  "name": "CrossPaste",
+  "homepage": "https://crosspaste.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "CrossPaste/crosspaste-desktop",
+          "assetPattern": "crosspaste-*-windows-amd64.zip",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "CrossPaste/crosspaste-desktop",
+          "assetPattern": "crosspaste-*-mac-amd64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "CrossPaste/crosspaste-desktop",
+          "assetPattern": "crosspaste-*-mac-aarch64.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "CrossPaste/crosspaste-desktop",
+          "assetPattern": "crosspaste_*_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "CrossPaste/crosspaste-desktop",
+          "assetPattern": "crosspaste_*_arm64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨设备同步剪贴板，在另一台电脑直接粘贴。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/CrossPaste/crosspaste-desktop/f648c6d55c02761a5a464efa16e0a673b9ccea18/app/src/desktopMain/composeResources/drawable/crosspaste.png",
+    "sha256": "525bc08dd1167ebe535ddb4d67d5b98278811a00a84c0762c2b51c92dcbb4d50",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/app/src/desktopMain/composeResources/drawable/crosspaste.png"
+  },
+  "description": "CrossPaste 是跨设备剪贴板工具，桌面版支持 Windows、macOS 和 Linux，可在自己的局域网设备间共享文字、图片、文件等内容，提供本地保存与端到端加密。\n\n### 源码与许可\n当前条目提供 2.2.0.2544 官方原包。主项目许可：AGPL-3.0，独立组件与素材遵循各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/CrossPaste/crosspaste-desktop/tree/f648c6d55c02761a5a464efa16e0a673b9ccea18) · [许可原文](https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/doc/zh/marketing.webp)；原作者及许可通知见[固定版许可](https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 两台设备分别下载对应平台原包。Windows 解压后启动 CrossPaste；macOS 解压后安装应用；Debian/Ubuntu 安装官方 DEB 并满足系统依赖。\n2. 让设备处于同一局域网，按首次引导授予必要的剪贴板及系统权限，在设备页面发现或添加自己的另一台设备并确认连接。\n3. 先复制一段测试文字，在另一台设备粘贴，确认图片和文件共享后再使用；按需设置历史清理和存储范围。",
+  "faq": "需要云端账号吗？桌面版主要在局域网直接连接，实际条件按官方说明。\n发现不了另一台设备怎么办？检查网络隔离、防火墙和设备连接；必要时按官方指南手动添加。\n手机版本也在这些包里吗？当前条目 GitHub 原包为桌面版，移动端渠道见官网。",
+  "documentationUrl": "https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/README.md",
+  "category": "files",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/CrossPaste/crosspaste-desktop/f648c6d55c02761a5a464efa16e0a673b9ccea18/doc/zh/marketing.webp",
+      "sha256": "7650dda8686b86f38114aa56bd61342be456f12c59ba678e538d7f1691de79cd",
+      "mime": "image/webp",
+      "sourcePage": "https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/doc/zh/marketing.webp",
+      "caption": "CrossPaste 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/doc/zh/marketing.webp；原许可 https://github.com/CrossPaste/crosspaste-desktop/blob/f648c6d55c02761a5a464efa16e0a673b9ccea18/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

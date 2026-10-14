@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flashdim",
+  "name": "FlashDim",
+  "homepage": "https://github.com/cyb3rko/flashdim",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "cyb3rko/flashdim",
+          "assetPattern": "FlashDim-*.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓手电筒工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cyb3rko/flashdim/4890a678269bf758539f5ae6d4d7d1ac9a5bdf99/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "56e7bcad21153a940ad04231eb81ffe88deb49c4edcdd37a09b750594c028e29",
+    "mime": "image/png"
+  },
+  "description": "FlashDim 用于安卓手电筒。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 授予开启手电筒所需权限，打开手电筒并调节亮度。设备是否支持亮度分级以系统与硬件能力为准。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/cyb3rko/flashdim/blob/main/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

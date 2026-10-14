@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notesnook",
+  "name": "Notesnook",
+  "homepage": "https://github.com/streetwriters/notesnook",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notesnook",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "streetwriters/notesnook",
+          "assetPattern": "notesnook_win_arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "streetwriters/notesnook",
+          "assetPattern": "notesnook_mac_x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "streetwriters/notesnook",
+          "assetPattern": "notesnook_mac_arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "streetwriters/notesnook",
+          "assetPattern": "notesnook_linux_x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "streetwriters/notesnook",
+          "assetPattern": "notesnook_linux_arm64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在桌面整理笔记、笔记本与个人资料。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/streetwriters/notesnook/430ee0fbf301da02ca72e26daaf69380535f7b9f/apps/desktop/assets/icons/512x512.png",
+    "sha256": "bb8bb7a0780a0f14bb05d7f4891cb7dc980fd4792971e24dd07aace791762f9a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/streetwriters/notesnook/blob/430ee0fbf301da02ca72e26daaf69380535f7b9f/apps/desktop/assets/icons/512x512.png"
+  },
+  "description": "Notesnook 是独立的笔记应用，提供笔记整理及按账号条件使用的加密同步。当前条目为官方桌面发行，云服务和付费功能以官方计划为准。\n\n### 源码与许可\n当前条目提供 3.4.9 官方原包。主项目许可：GPL-3.0，独立组件另有许可；独立组件遵循各自许可。[固定版本源码](https://github.com/streetwriters/notesnook/tree/430ee0fbf301da02ca72e26daaf69380535f7b9f) · [许可原文](https://github.com/streetwriters/notesnook/blob/430ee0fbf301da02ca72e26daaf69380535f7b9f/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 先创建一条测试笔记并建立笔记本，检查编辑与导出；需要同步时配置自己的账号，核对恢复资料和多设备同步后再迁移重要内容。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "所有功能都免费吗？桌面程序与云服务计划不同，功能和价格见官方。\n可以替代备份吗？同步不等同独立备份，应保留可恢复的导出资料。",
+  "documentationUrl": "https://github.com/streetwriters/notesnook/blob/430ee0fbf301da02ca72e26daaf69380535f7b9f/README.md",
+  "category": "reading",
+  "screenshots": []
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "vscode",
+  "name": "Visual Studio Code",
+  "homepage": "https://code.visualstudio.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "vscode",
+          "architecture": "64bit",
+          "filenameTemplate": "VSCode-win32-x64-{version}.zip"
+        }
+      }
+    }
+  ],
+  "summary": "微软推出的跨平台代码编辑器，支持扩展、调试和 Git。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/microsoft/vscode/07f806f999227108933c2e30515b26eecc1fda74/resources/win32/code.ico",
+    "sha256": "f5fbea39d2e1f5e223ef2bdc1b0658b31601476ee5e9bdbec89319b81764b2be",
+    "mime": "image/x-icon"
+  },
+  "description": "Visual Studio Code 是微软推出的跨平台代码编辑器，支持扩展生态、调试、终端、Git 与多种语言开发工作流。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开项目文件夹，按语言需要安装官方或可信扩展。编辑并保存文件，在集成终端运行项目命令；运行要求以项目说明为准。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://code.visualstudio.com/docs",
+  "category": "developer",
+  "screenshots": []
+}

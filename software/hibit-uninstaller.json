@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hibit-uninstaller",
+  "name": "HiBit Uninstaller",
+  "homepage": "https://www.hibitsoft.ir/Uninstaller.html",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "hibit-uninstaller",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "卸载 Windows 软件并扫描清理残留文件和注册表项。",
+  "description": "HiBit Uninstaller 是一款 Windows 软件卸载与系统清理工具，可批量卸载程序，并在卸载后扫描残留文件、文件夹与注册表项。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在程序列表选择要卸载的软件，先运行正常卸载。扫描残留后逐项确认再删除；需要恢复的配置先备份。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "icon": {
+    "url": "https://www.hibitsoft.ir/images/Uninstaller-icon.png",
+    "sha256": "fbd8ba838560773898b8580b8c1b38e5681386db142961f5b0be0fc852cd52a7"
+  },
+  "screenshots": []
+}

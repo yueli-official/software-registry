@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pcsx2",
+  "name": "PCSX2",
+  "homepage": "https://github.com/PCSX2/pcsx2",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PCSX2/pcsx2",
+          "assetPattern": "pcsx2-v{version}-windows-x64-Qt.7z",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PCSX2/pcsx2",
+          "assetPattern": "pcsx2-v{version}-macos-Qt.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PCSX2/pcsx2",
+          "assetPattern": "pcsx2-v{version}-linux-appimage-x64-Qt.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在电脑配置和运行 PlayStation 2 模拟环境。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/PCSX2/pcsx2/fd9d310ccbb6b8b62c976da8886a3c8fd3a10ff3/pcsx2-qt/resources/icons/PCSX2logo.svg",
+    "sha256": "852fd17cb4a7debfd4e6af3c31ee84ebd675d386da55795b807fdc269d400b10",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/PCSX2/pcsx2/blob/fd9d310ccbb6b8b62c976da8886a3c8fd3a10ff3/pcsx2-qt/resources/icons/PCSX2logo.svg"
+  },
+  "description": "PCSX2 是独立的 PlayStation 2 模拟器，提供图形、控制器、存档和兼容设置。首次使用需按官方指南准备自己合法取得的 BIOS 和程序数据；当前条目 Mac 稳定成品实际为 Intel，不误标为通用架构。\n\n### 源码与许可\n当前条目提供 2.8.2 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/PCSX2/pcsx2/tree/fd9d310ccbb6b8b62c976da8886a3c8fd3a10ff3) · [许可原文](https://github.com/PCSX2/pcsx2/blob/fd9d310ccbb6b8b62c976da8886a3c8fd3a10ff3/COPYING.GPLv3)。",
+  "usageInstructions": "1. Windows 解压官方 7z；Mac 解压应用；Linux 使用 AppImage。\n2. 按官方首次设置指南配置自己的 BIOS 与数据路径。\n3. 映射控制器，并打开自己的兼容测试程序或合法游戏数据。\n4. 先使用基础配置检查输入、画面与声音。\n5. 根据官方兼容说明调整选项，保留存档备份。",
+  "faq": "自带 PS2 BIOS 或游戏吗？不提供这些数据。\nMac 包支持什么 CPU？本版主程序实际为 Intel amd64，Apple Silicon 需核对兼容方式。",
+  "documentationUrl": "https://github.com/PCSX2/pcsx2/blob/fd9d310ccbb6b8b62c976da8886a3c8fd3a10ff3/README.md",
+  "category": "games",
+  "screenshots": []
+}

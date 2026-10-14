@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "neriplayer",
+  "name": "NeriPlayer",
+  "homepage": "https://kano.kim",
+  "kind": "reference",
+  "packages": [],
+  "summary": "音乐播放器工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/cwuom/NeriPlayer/d43ee119525a62bc69ef4306911b301972cbb868/icon/ic_neriplayer.svg",
+    "sha256": "9a2b3e4fd496b238451c08c01781aa78690986079c9aafc42399b9c4b02ef21b",
+    "mime": "image/svg+xml"
+  },
+  "description": "NeriPlayer 用于音乐播放器。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装适配设备的 Android 包，按首次启动引导完成设置。选择本地音频或配置已有平台账号，测试播放、歌词和歌单。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/cwuom/NeriPlayer/blob/master/README.md",
+  "category": "media",
+  "screenshots": []
+}

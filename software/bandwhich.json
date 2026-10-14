@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bandwhich",
+  "name": "bandwhich",
+  "homepage": "https://github.com/imsnif/bandwhich",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "bandwhich",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imsnif/bandwhich",
+          "assetPattern": "bandwhich-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imsnif/bandwhich",
+          "assetPattern": "bandwhich-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imsnif/bandwhich",
+          "assetPattern": "bandwhich-v{version}-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imsnif/bandwhich",
+          "assetPattern": "bandwhich-v{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端查看进程、连接和网络接口的带宽占用。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/imsnif/bandwhich/4faccd1f43968e9be16bae9f26f9c13d2e5c2b10/res/bandwhich.svg",
+    "sha256": "c94e42a373c444e45cc57ffe6c10993b92ba6a7ac91014900954bb29e2f3bb49",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/imsnif/bandwhich/blob/4faccd1f43968e9be16bae9f26f9c13d2e5c2b10/res/bandwhich.svg"
+  },
+  "description": "bandwhich 是独立的实时网络带宽查看器，可按进程、连接和接口观察网络活动，适合排查哪个程序正在占用带宽。捕获权限和系统依赖按平台准备。\n\n### 源码与许可\n当前条目提供 0.23.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/imsnif/bandwhich/tree/4faccd1f43968e9be16bae9f26f9c13d2e5c2b10) · [许可原文](https://github.com/imsnif/bandwhich/blob/4faccd1f43968e9be16bae9f26f9c13d2e5c2b10/LICENSE.md)。",
+  "usageInstructions": "1. 解压对应平台原包，将 bandwhich 加入 PATH。\n2. 运行 bandwhich --help。\n3. Windows 按官方说明准备 Npcap；Linux/Mac 按官方捕获权限要求配置。\n4. 在自己的设备启动监控，查看进程与连接。\n5. 对比下载前后的带宽变化，退出后结束监控。",
+  "faq": "Windows 需要额外依赖吗？官方使用 Npcap，权限与驱动安装见固定版本说明。\n能代替长期流量统计吗？主要观察实时活动，历史报表需另配工具。",
+  "documentationUrl": "https://github.com/imsnif/bandwhich/blob/4faccd1f43968e9be16bae9f26f9c13d2e5c2b10/README.md",
+  "category": "developer",
+  "screenshots": []
+}

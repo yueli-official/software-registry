@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "opencode",
+  "name": "OpenCode",
+  "homepage": "https://opencode.ai/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "opencode",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anomalyco/opencode",
+          "assetPattern": "opencode-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anomalyco/opencode",
+          "assetPattern": "opencode-darwin-x64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anomalyco/opencode",
+          "assetPattern": "opencode-darwin-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anomalyco/opencode",
+          "assetPattern": "opencode-linux-x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "anomalyco/opencode",
+          "assetPattern": "opencode-linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "开源 AI 编程助手，在终端中理解项目、规划任务并修改代码。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/anomalyco/opencode/53d1eabb61e21162157817bf677da0a4ad3332e3/packages/console/app/src/asset/brand/opencode-logo-dark-square.png",
+    "sha256": "44d24a1c9e7e2af1f6551bd808b1330e2493e233a173c5930b300b70290e1b57",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方仓库console/app品牌方形图标，固定v1.18.35提交；600×600 PNG已实际预览，根MIT声明保存，路径未发现独立美术许可例外，仅用作产品识别。"
+  },
+  "description": "OpenCode 提供交互式终端界面，可结合所配置的模型服务阅读代码、规划实现、编辑文件和运行命令。内置 build 与 plan 两种模式，支持项目级规则、文件引用以及撤销和重做。当前条目分发 1.18.35 稳定命令行版的官方原包；桌面测试版可从官方发行页另行了解。软件采用 MIT 许可，原版包及版权声明保持不变。",
+  "usageInstructions": "1. 按系统和处理器下载对应原包：Windows 解压 ZIP；macOS 解压 ZIP；Linux 解开 tar.gz。把 opencode.exe 或 opencode 放入独立工具目录并加入 PATH；macOS/Linux 如需要可执行 chmod +x opencode。\n2. 在现代终端进入项目目录，运行 opencode。Windows 官方建议需要完整兼容体验时使用 WSL；WSL 应选择 Linux 包。\n3. 在界面输入 /connect，选择你使用的模型服务并填写所需凭据。模型服务的额度、费用与软件安装包分开。\n4. 输入 /init 生成项目规则，再描述希望分析或实现的任务；按 Tab 切换 plan/build，使用 @ 引用项目文件。\n5. 如修改不符合预期，可用 /undo 撤销、/redo 重做。先在有版本管理或备份的项目中确认操作。",
+  "faq": "### 这是桌面安装程序吗？\n不是。所配置的软件包是稳定命令行版，需要在终端运行 opencode。官方另有桌面 BETA，二者属于同一产品。\n\n### 下载后还需要什么？\n需要现代终端，并配置相应模型服务的凭据；部分服务可能收费。模型本身不包含在软件包内。\n\n### 怎么选择系统包？\nWindows 与 Linux 的 amd64 对应常见 Intel/AMD 64 位处理器，arm64 对应 ARM 64 位；macOS arm64 对应 Apple Silicon，amd64 对应 Intel Mac。当前条目 Linux 包为常规 glibc 版本，Alpine 等 musl 系统请查看官方兼容包。\n\n### 为什么有计划和构建模式？\nplan 主要用于分析与建议，build 可以实施修改并运行工具。首次使用可先切换 plan 核对方案。\n\n### 开源许可在哪里？\n原版采用 MIT 许可，版权与许可全文见 https://github.com/anomalyco/opencode/blob/53d1eabb61e21162157817bf677da0a4ad3332e3/LICENSE 。",
+  "documentationUrl": "https://opencode.ai/docs/",
+  "category": "ai",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/anomalyco/opencode/53d1eabb61e21162157817bf677da0a4ad3332e3/packages/web/src/assets/lander/screenshot.png",
+      "sha256": "14b01372a2589a120ab0d6a0510868e71bceadcbd1f1278fb099d700a03912cb",
+      "mime": "image/png",
+      "caption": "官方终端功能示意：理解项目并规划代码修改（示例界面）",
+      "sourcePage": "https://github.com/anomalyco/opencode/blob/53d1eabb61e21162157817bf677da0a4ad3332e3/packages/web/src/content/docs/zh-cn/index.mdx",
+      "licenseEvidence": "固定提交官方仓库关联文档截图，根MIT LICENSE： https://github.com/anomalyco/opencode/blob/53d1eabb61e21162157817bf677da0a4ad3332e3/LICENSE 。检查资源所在路径无独立许可例外，保留版权与来源；不将软件许可扩大到图中第三方商标。",
+      "provenance": "从官方项目固定提交获取真实功能示意，已实际预览；不使用月刊热链，不伪造维护者实机截图。",
+      "reviewed": true
+    }
+  ]
+}

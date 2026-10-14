@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hammerspoon",
+  "name": "Hammerspoon",
+  "homepage": "https://www.hammerspoon.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Hammerspoon/hammerspoon",
+          "assetPattern": "Hammerspoon-{version}.zip",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Hammerspoon/hammerspoon",
+          "assetPattern": "Hammerspoon-{version}.zip",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "通过 Lua 脚本配置 Mac 快捷键、窗口管理和桌面自动化。",
+  "description": "Hammerspoon 将 macOS 系统功能接入 Lua 脚本，可配置快捷键、窗口操作、菜单栏和事件响应。适合愿意编写或调整脚本的 Mac 用户；安装后不会自动执行整套工作流，需要维护自己的 init.lua 配置。窗口控制等功能按系统提示授予辅助功能权限。\n\n当前条目提供 1.1.1 官方原 ZIP；实际主程序包含 Intel 与 Apple Silicon 两种架构，原 Info.plist 要求 macOS 13.0 或更高。主项目 MIT，组件保留各自许可；固定源码：https://github.com/Hammerspoon/hammerspoon/tree/1.1.1 ，原许可资料见 hammerspoon-1.1.1-LICENSES.zip。",
+  "usageInstructions": "1. 在 macOS 13 或更高版本解压官方 ZIP，将 Hammerspoon.app 拖入 Applications。\n2. 打开应用，按系统提示配置辅助功能权限。点击菜单栏图标，选择 Open Config。\n3. 在自己的 ~/.hammerspoon/init.lua 中加入一行 hs.alert.show(\"Hello\") 并保存。\n4. 从菜单栏选择 Reload Config，确认屏幕出现提示，作为首次配置测试。\n5. 继续按官方 Getting Started 文档添加自己的快捷键或窗口脚本；修改配置后保存并重新加载。",
+  "faq": "安装后为什么没有变化？默认需要你自己编写 init.lua 配置。\n需要另装 Lua 吗？Hammerspoon 内置 Lua 脚本引擎。\nIntel 和 Apple Silicon 是两款软件吗？是同一官方通用应用原包，按两种架构提供下载选择。",
+  "documentationUrl": "https://www.hammerspoon.org/go/",
+  "category": "productivity",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Hammerspoon</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Mac Automation</text></svg>",
+    "sha256": "786ef76ca8a7ffcd24559266dc66e656869588d20706ce5a0c4eaef58e030fb7",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

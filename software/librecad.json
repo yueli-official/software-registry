@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "librecad",
+  "name": "LibreCAD",
+  "homepage": "https://github.com/LibreCAD/LibreCAD",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "librecad",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibreCAD/LibreCAD",
+          "assetPattern": "LibreCAD-v{version}-msvc.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibreCAD/LibreCAD",
+          "assetPattern": "LibreCAD-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibreCAD/LibreCAD",
+          "assetPattern": "LibreCAD-v{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibreCAD/LibreCAD",
+          "assetPattern": "LibreCAD-v{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "LibreCAD/LibreCAD",
+          "assetPattern": "LibreCAD-v{version}-aarch64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "绘制二维 CAD 图纸，管理图层、尺寸和 DXF 文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/LibreCAD/LibreCAD/7ebab007d9eb4c68609388b835a2487648f0877b/desktop/media/icons/librecad_icon.svg",
+    "sha256": "4ac702d59cb084bd4ddc83c137c397d80a71ff4ebffbd0671be378626a3b8c17",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "原 SVG 内明确 CC BY-SA 3.0，作者 Diego Alejandro Torres Morales，作品 LibreCAD Icon；维护者仅做 WebP 格式转换，转换图保留 CC BY-SA 3.0。原资源 https://github.com/LibreCAD/LibreCAD/blob/7ebab007d9eb4c68609388b835a2487648f0877b/desktop/media/icons/librecad_icon.svg"
+  },
+  "description": "LibreCAD 是开源二维 CAD 软件，提供直线、圆弧、图层、捕捉、尺寸标注与打印输出。适合二维机械草图、平面图和 DXF 编辑；它不是三维实体建模软件。\n\n### 源码与许可\n当前条目提供 2.2.1.5 官方原包。主项目许可：GPL-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/LibreCAD/LibreCAD/tree/7ebab007d9eb4c68609388b835a2487648f0877b) · [许可原文](https://github.com/LibreCAD/LibreCAD/blob/7ebab007d9eb4c68609388b835a2487648f0877b/LICENSE)。\n\n产品图标：Diego Alejandro Torres Morales，[LibreCAD Icon](https://github.com/LibreCAD/LibreCAD/blob/7ebab007d9eb4c68609388b835a2487648f0877b/desktop/media/icons/librecad_icon.svg)，[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)。此条目仅转换 WebP 格式，转换图沿用相同许可。\n\n界面图来自 LibreCAD User Manual contributors（含维护者 Gary S）的[官方手册](https://github.com/LibreCAD/docs/blob/94801d0c38e9e1a5a7919a1397ac50570eadad3b/images/LC_defaultAnnotated.png)，按[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)使用；仅转换图片格式。手册示例不保证与当前版本外观完全一致。",
+  "usageInstructions": "1. Windows 运行匹配 CPU 的安装程序；Mac 打开 DMG；Linux 使用 AppImage。\n2. 新建图纸，先设置绘图单位、比例和图层。\n3. 用直线或圆工具绘制简单图形，开启需要的捕捉方式。\n4. 添加尺寸标注，保存为 DXF 并检查重新打开后的结果。\n5. 通过打印预览设置纸张与比例，再按需要导出 PDF。",
+  "faq": "支持三维实体吗？主要处理二维 CAD 图纸。\n官方示意图和当前界面完全一样吗？配图是官方手册的 Linux 界面布局示意，不是此条目运行截图；不同系统和版本外观可能略有变化。",
+  "documentationUrl": "https://github.com/LibreCAD/LibreCAD/blob/7ebab007d9eb4c68609388b835a2487648f0877b/README.md",
+  "category": "graphics",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/LibreCAD/docs/94801d0c38e9e1a5a7919a1397ac50570eadad3b/images/LC_defaultAnnotated.png",
+      "sha256": "27cf849cd2c82ca134065ac9377d7f5479d9cb364bb1dbb5298d8c761fb66ee2",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/LibreCAD/docs/blob/94801d0c38e9e1a5a7919a1397ac50570eadad3b/images/LC_defaultAnnotated.png",
+      "caption": "LibreCAD 官方手册 Linux 界面布局示意",
+      "licenseEvidence": "LibreCAD User Manual contributors，含维护者 Gary S；about/index.rst Copyright 明确 CC BY 4.0；仅转换 WebP，保留官方标注：https://github.com/LibreCAD/docs/blob/94801d0c38e9e1a5a7919a1397ac50570eadad3b/about/index.rst",
+      "provenance": "已实际预览原图、功能内容和固定源；保留原图用途与署名，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

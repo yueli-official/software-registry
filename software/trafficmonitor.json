@@ -1,0 +1,75 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "trafficmonitor",
+  "name": "TrafficMonitor",
+  "homepage": "https://github.com/zhongyang219/TrafficMonitor",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "trafficmonitor",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "trafficmonitor",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zhongyang219/TrafficMonitor",
+          "assetPattern": "TrafficMonitor_V{version}_arm64ec.zip",
+          "tagPrefix": "V",
+          "tagTemplate": "V{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在悬浮窗或任务栏显示网速、CPU和内存，查看历史流量。",
+  "description": "TrafficMonitor是Windows网速与系统资源监控工具，可选择网卡、查看历史流量、调整皮肤并把信息放在任务栏。当前条目固定1.86标准版，包含硬件监控，按官方说明需要管理员权限；Lite版是另一个功能较少的发行，不混入同一主包。ARM64原包采用ARM64EC，需要Windows 11 on ARM，不适用于Windows 10 ARM。",
+  "usageInstructions": "1. 按处理器选择原ZIP并解压，运行TrafficMonitor.exe；标准版按系统提示授予管理员权限。\n2. 如果出现找不到MSVC运行库的提示，按官方README链接安装对应Visual C++运行环境。\n3. 在悬浮窗右键菜单中选择实际联网网卡，核对当前上传和下载速率。\n4. 需要在任务栏显示时启用“显示任务栏窗口”，再按需要调整显示项目。\n5. 在设置中选择皮肤、记录流量和自启动；不需要常驻时从菜单退出。",
+  "faq": "为什么需要管理员权限？当前条目标准版包含硬件监控，官方说明标准版需要管理员权限。\nARM64包支持哪些系统？该原包采用ARM64EC，要求Windows 11 on ARM，不是普通Windows x64包。\n\n## 官方文档截图的许可与原声明\n\n当前条目界面图为官方README的原选项对话框示例，界面以实际版本为准。图片来源与原声明保留，许可全文如下：\n\n```text\nCopyright (c) <2019> <copyright zhongyang219>\n\n\"Anti 996\" License Version 1.0 (Draft)\n\nPermission is hereby granted to any individual or legal entity\nobtaining a copy of this licensed work (including the source code,\ndocumentation and/or related items, hereinafter collectively referred\nto as the \"licensed work\"), free of charge, to deal with the licensed\nwork for any purpose, including without limitation, the rights to use,\nreproduce, modify, prepare derivative works of, distribute, publish\nand sublicense the licensed work, subject to the following conditions:\n\n1. The individual or the legal entity must conspicuously display,\nwithout modification, this License and the notice on each redistributed\nor derivative copy of the Licensed Work.\n\n2. The individual or the legal entity must strictly comply with all\napplicable laws, regulations, rules and standards of the jurisdiction\nrelating to labor and employment where the individual is physically\nlocated or where the individual was born or naturalized; or where the\nlegal entity is registered or is operating (whichever is stricter). In\ncase that the jurisdiction has no such laws, regulations, rules and\nstandards or its laws, regulations, rules and standards are\nunenforceable, the individual or the legal entity are required to\ncomply with Core International Labor Standards.\n\n3. The individual or the legal entity shall not induce, suggest or force\nits employee(s), whether full-time or part-time, or its independent\ncontractor(s), in any methods, to agree in oral or written form, to\ndirectly or indirectly restrict, weaken or relinquish his or her\nrights or remedies under such laws, regulations, rules and standards\nrelating to labor and employment as mentioned above, no matter whether\nsuch written or oral agreements are enforceable under the laws of the\nsaid jurisdiction, nor shall such individual or the legal entity\nlimit, in any methods, the rights of its employee(s) or independent\ncontractor(s) from reporting or complaining to the copyright holder or\nrelevant authorities monitoring the compliance of the license about\nits violation(s) of the said license.\n\nTHE LICENSED WORK IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN ANY WAY CONNECTION WITH THE\nLICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.\n```",
+  "documentationUrl": "https://github.com/zhongyang219/TrafficMonitor/blob/02a817a069bac6bf4d263b5209d9c1b07fe2f950/README.md",
+  "category": "system",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">TrafficMonitor</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">网速监控</text></svg>",
+    "sha256": "3bb97ca991a7d11b8dbf68b8fe8004d2c7b5eec3ae284fae81caa6103737b894",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/zhongyang219/TrafficMonitor/02a817a069bac6bf4d263b5209d9c1b07fe2f950/Screenshots/option.jpg",
+      "sha256": "9cdb3ff2b37bcce96ad65fc7bd6c6b253edb27703d350009a629ce59015577c0",
+      "mime": "image/jpeg",
+      "caption": "TrafficMonitor官方任务栏选项示例",
+      "sourcePage": "https://github.com/zhongyang219/TrafficMonitor/blob/02a817a069bac6bf4d263b5209d9c1b07fe2f950/Screenshots/option.jpg",
+      "licenseEvidence": "https://github.com/zhongyang219/TrafficMonitor/blob/02a817a069bac6bf4d263b5209d9c1b07fe2f950/LICENSE；原许可明确覆盖documentation/related items，本页问答完整展示原许可及copyright notice。",
+      "provenance": "逐图实际预览通过：官方固定README直接引用的纯选项对话框，无无关角色或壁纸。只转换展示格式，保留界面，标为官方功能示例，不冒充当前电脑/当前版本运行截图。许可scope为明确的文档/相关项目资料，未以源码许可推断无关美术授权。",
+      "reviewed": true
+    }
+  ]
+}

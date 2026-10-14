@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "trilium",
+  "name": "Trilium Notes",
+  "homepage": "https://triliumnotes.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "trilium",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "trilium",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TriliumNext/Trilium",
+          "assetPattern": "TriliumNotes-v{version}-macos-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TriliumNext/Trilium",
+          "assetPattern": "TriliumNotes-v{version}-macos-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TriliumNext/Trilium",
+          "assetPattern": "TriliumNotes-v{version}-linux-x64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TriliumNext/Trilium",
+          "assetPattern": "TriliumNotes-v{version}-linux-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持中文的树状笔记与个人知识库，提供富文本、代码笔记、链接和全文搜索。",
+  "description": "Trilium Notes 是跨平台的个人知识库应用，支持树状组织笔记、富文本、图片表格、代码笔记、笔记链接、全文搜索和多种导入导出格式，界面支持简体中文。适合整理学习资料、项目记录与长期个人知识，可先在本机使用，再按需要配置自托管同步。\n\n此条目提供官方0.106.0完整桌面原包：Windows x64/ARM64便携ZIP、Mac Intel/Apple Silicon分别对应的DMG、Linux x64/ARM64完整ZIP，共6个槽位。各原包的真实主程序与CPU已核实，单包约198–227MB，未修改原始字节；不把服务器包、网页剪藏扩展或源码另算软件。主项目采用AGPL-3.0-only，原署名Trilium Notes Team及随包组件通知保留；对应源码：https://github.com/TriliumNext/Trilium/tree/v0.106.0 ，原许可材料在trilium-0.106.0-LICENSES.zip中。",
+  "usageInstructions": "1. Windows选择对应CPU的ZIP并完整解压，运行trilium.exe，保留resources及配套文件。Mac选择Intel或Apple Silicon对应DMG，打开后将应用放入Applications。Linux完整解压对应CPU的ZIP，在目录中运行./trilium；若缺少执行权限，先chmod +x trilium。系统条件与桌面安装说明见官方用户指南。\n2. 首次打开按初始界面建立本地笔记数据；暂不需要多人或多设备同步时，先完成本机使用。进入设置选择简体中文。\n3. 在笔记树中新建一条“学习笔记”，输入标题和一段正文，再添加一条子笔记，体验层级整理。\n4. 插入一张自己的截图或一个表格，并用搜索找到刚才输入的文字；重新打开笔记检查内容。\n5. 按F1查看应用内帮助，了解笔记链接、导出与备份。需要多设备同步时，再按官方同步指南配置自己的服务器；升级旧数据库前先备份并查看迁移与同步版本要求。",
+  "faq": "一定要部署服务器吗？桌面版可先在本机使用；多设备同步和远程访问再按需配置。\n有没有中文？固定官方中文README明确支持简体及繁体中文，应用也提供内置帮助。\nLinux下载的是源码吗？当前条目提供含真实主程序的完整桌面ZIP，不是源码或Server压缩包。\n旧zadam/trilium可以直接当成新软件再添加吗？这是同一笔记产品的社区维护延续，不把旧名称、服务器包或剪藏扩展重复计数。\n能直接与旧版本同步吗？官方说明较新版本会提高同步版本，升级前应查看迁移指南并备份。",
+  "documentationUrl": "https://github.com/TriliumNext/Trilium/blob/v0.106.0/docs/README-ZH_CN.md",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Trilium Notes</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Knowledge Notes</text></svg>",
+    "sha256": "9ea58d7bc428a8c083412bda614a09dd112b7cea8e978b567cfd45c68a676858",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

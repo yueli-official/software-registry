@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "oxipng",
+  "name": "oxipng",
+  "homepage": "https://github.com/oxipng/oxipng",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "oxipng",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oxipng/oxipng",
+          "assetPattern": "oxipng-{version}-i686-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oxipng/oxipng",
+          "assetPattern": "oxipng-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oxipng/oxipng",
+          "assetPattern": "oxipng-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oxipng/oxipng",
+          "assetPattern": "oxipng-{version}-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oxipng/oxipng",
+          "assetPattern": "oxipng-{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "无损优化 PNG 文件，减少图片体积。",
+  "description": "oxipng 是独立的 PNG 优化程序，通过压缩和编码优化减小文件体积，适合整理网页图片和资源文件。是否移除元数据由自己的参数决定。\n\n### 源码与许可\n当前条目提供 10.2.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/oxipng/oxipng/tree/36f3ef8aac65ecf1761739ea2f2e530281f1312b) · [许可原文](https://github.com/oxipng/oxipng/blob/36f3ef8aac65ecf1761739ea2f2e530281f1312b/LICENSE)。",
+  "usageInstructions": "1. 解压平台原版，将 oxipng 加入 PATH。\n2. 运行 oxipng --help 查看优化等级与输出选项。\n3. 复制一张测试 PNG 到独立目录。\n4. 按官方选项优化副本，比较体积并打开检查。\n5. 确认元数据、动画和色彩需求后再批量处理。",
+  "faq": "适合直接覆盖全部素材吗？先用副本验证参数和元数据要求。\n可以优化 JPEG 吗？本工具主要用于 PNG，JPEG 使用对应工具。",
+  "documentationUrl": "https://github.com/oxipng/oxipng/blob/36f3ef8aac65ecf1761739ea2f2e530281f1312b/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">oxi</text></svg>",
+    "sha256": "82e77017bb0ff9e22185a1e99a04f90868375478263214c429211eb2db4b4a33",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名oxi，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "copytranslator",
+  "name": "CopyTranslator",
+  "homepage": "https://copytranslator.github.io",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "copytranslator",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "翻译工具。",
+  "icon": {
+    "url": "https://copytranslator.github.io/icon.png",
+    "sha256": "edf0625b37c0c8e859bb31f49fd9b0609d149266709d674bf113b492b88e2556",
+    "mime": "image/png"
+  },
+  "description": "CopyTranslator 用于翻译。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 启动后选择源语言、目标语言和翻译服务。复制一段文本观察翻译结果；按需要调整剪贴板监听行为。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "utilities",
+  "screenshots": []
+}

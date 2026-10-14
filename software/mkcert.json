@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mkcert",
+  "name": "mkcert",
+  "homepage": "https://github.com/FiloSottile/mkcert",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mkcert",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mkcert",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FiloSottile/mkcert",
+          "assetPattern": "mkcert-v{version}-darwin-amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FiloSottile/mkcert",
+          "assetPattern": "mkcert-v{version}-darwin-arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FiloSottile/mkcert",
+          "assetPattern": "mkcert-v{version}-linux-amd64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FiloSottile/mkcert",
+          "assetPattern": "mkcert-v{version}-linux-arm64",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "为本地开发域名生成受本机信任的HTTPS证书。",
+  "description": "mkcert用于开发环境的本地证书，创建本地CA并为localhost或自定义开发域名签发证书。它适合本机HTTPS调试，不提供公网浏览器普遍信任的生产证书。",
+  "usageInstructions": "1. 下载对应CPU的原可执行文件；可在自己目录重命名为mkcert并加入PATH，原下载文件不变。\n2. 执行 mkcert -install 安装开发用本地根证书，这一步按系统提示授权；Linux的浏览器信任支持按官方说明准备。\n3. 执行 mkcert localhost 127.0.0.1 ::1，生成证书文件与私钥。\n4. 在自己的开发服务器中指定这两个文件，再访问对应HTTPS地址。\n5. 通过 mkcert -CAROOT 查看本地CA位置，根私钥只保留在自己的开发环境，不用于共享。",
+  "faq": "能作为公网生产证书吗？不能，默认只有安装过该本地CA的设备信任。\n安装程序会自动改服务器配置吗？不会，需自行把生成的证书和私钥配置给开发服务器。",
+  "documentationUrl": "https://github.com/FiloSottile/mkcert/blob/2a46726cebac0ff4e1f133d90b4e4c42f1edf44a/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">mkcert</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Local HTTPS</text></svg>",
+    "sha256": "2269d705a8fc7893ee7bbbc230a53ebaf82b5ac1fcffbf81c6da36bacd1049c3",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

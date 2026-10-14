@@ -1,0 +1,23 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "cosyvoice",
+  "name": "CosyVoice",
+  "homepage": "https://funaudiollm.github.io/cosyvoice3",
+  "kind": "reference",
+  "packages": [],
+  "summary": "AI 语音合成工具。",
+  "description": "CosyVoice 用于AI 语音合成。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方安装说明配置环境并下载模型，输入文本选择支持的语音模式。先合成短句检查音质，再处理完整内容。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/QwenAudio/CosyVoice/blob/main/README.md",
+  "category": "ai",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"><rect x=\"16\" y=\"16\" width=\"480\" height=\"480\" rx=\"96\" fill=\"hsl(353,42%,30%)\"/><text x=\"256\" y=\"282\" text-anchor=\"middle\" font-family=\"Arial,Microsoft YaHei,sans-serif\" font-weight=\"700\" font-size=\"160\" fill=\"#fff\">CO</text><path d=\"M156 328H356\" stroke=\"#fff\" stroke-opacity=\".3\" stroke-width=\"4\"/><text x=\"256\" y=\"383\" text-anchor=\"middle\" font-size=\"24\" fill=\"#f8fafc\">CosyVoice</text></svg>",
+    "sha256": "6e82572c57577694f14aefb06cdfec982ca83cd01d29869291f57657880efeab",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标；在当前核实来源中未取得合适的产品图标。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "symphony",
+  "name": "Symphony",
+  "homepage": "https://github.com/zyrouge/symphony",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zyrouge/symphony",
+          "assetPattern": "symphony-v2024.12.115.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v2024.12.115"
+        }
+      }
+    }
+  ],
+  "summary": "在 Android 手机离线浏览与播放自己的音乐文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/zyrouge/symphony/b134bfb352490cb8c7047dc97495a2903ee470b6/media/icon.svg",
+    "sha256": "d3e1f7058d695f04667306da743922c7633c638ebfb90d9bd33292ea305dd188",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/zyrouge/symphony/blob/b134bfb352490cb8c7047dc97495a2903ee470b6/media/icon.svg"
+  },
+  "description": "Symphony 是 Android 本地音乐播放器，可按歌曲、专辑和文件夹浏览自己的音频。适合离线音乐库，官方要求 Android 9 或更高版本；当前条目提供官方 latest 指向的正式发行，不将 nightly 当稳定版。\n\n### 源码与许可\n当前条目提供 2024.12.115 官方原包。主项目许可：AGPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/zyrouge/symphony/tree/b134bfb352490cb8c7047dc97495a2903ee470b6) · [许可原文](https://github.com/zyrouge/symphony/blob/b134bfb352490cb8c7047dc97495a2903ee470b6/LICENSE)。",
+  "usageInstructions": "1. 在 Android 9 或更高版本安装官方 APK。\n2. 授予所需媒体访问权限，准备自己的音频文件。\n3. 等待媒体库扫描，在歌曲或文件夹页打开一首音频。\n4. 核对声音和播放队列，按需要调整设置。\n5. 新增文件后重新查看媒体库并备份需要的歌单资料。",
+  "faq": "是否提供音乐会员曲库？这是本地离线播放器。\n为何版本是 2024.12.115？这是本次核查官方 latest 的发行版本，不用开发版虚构更新。",
+  "documentationUrl": "https://github.com/zyrouge/symphony/blob/b134bfb352490cb8c7047dc97495a2903ee470b6/README.md",
+  "category": "media",
+  "screenshots": []
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "powershell",
+  "name": "PowerShell",
+  "homepage": "https://github.com/PowerShell/PowerShell",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "pwsh",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "pwsh",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "pwsh",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PowerShell/PowerShell",
+          "assetPattern": "powershell-{version}-osx-x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PowerShell/PowerShell",
+          "assetPattern": "powershell-{version}-osx-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PowerShell/PowerShell",
+          "assetPattern": "powershell-{version}-linux-x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "PowerShell/PowerShell",
+          "assetPattern": "powershell-{version}-linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨平台Shell与脚本工具，通过对象管道处理系统和结构化数据。",
+  "description": "PowerShell 7提供跨平台Shell、脚本语言与对象管道，可处理文件、进程和JSON等数据。当前条目是完整便携原包，与Windows内置PowerShell5.1并行使用，不将运行时组件额外计数。",
+  "usageInstructions": "1. 解压对应系统的完整原包，保留运行时和模块目录。Windows运行pwsh.exe，macOS/Linux按官方安装要求保留执行权限并启动pwsh。\n2. 在新Shell里运行 Get-ChildItem 查看当前目录。\n3. 执行 Get-ChildItem | Select-Object Name,Length，体验对象管道。\n4. 用 Get-Help 查询命令，将自己的命令保存为.ps1脚本后按系统策略执行。\n5. 持久使用时按官方系统安装指南设置PATH和用户配置。",
+  "faq": "这会替换Windows内置5.1吗？便携原包可并行使用，程序名是pwsh。\n只复制pwsh.exe能用吗？必须保留随包运行时和模块。",
+  "documentationUrl": "https://github.com/PowerShell/PowerShell/blob/f260eb9c31ec72c5282f98e5ea24d9be4f8d7536/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">PowerShell</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Automation Shell</text></svg>",
+    "sha256": "9c41ee9be7a37339cc5e114ac7c6a28a63ebe3b5d8946c4868fd9aef79934747",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

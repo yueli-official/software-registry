@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "letsview",
+  "name": "LetsView",
+  "homepage": "https://letsview.com/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "投屏工具。",
+  "icon": {
+    "url": "https://cfcdn.apowersoft.info/astro/letsview/img/letsview-favicon192.png",
+    "sha256": "37b0e2ff5beb76392090db89e7f9d2df4e72456447e4c8a95ff04eb6b1721050",
+    "mime": "image/png"
+  },
+  "description": "LetsView 用于投屏。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 按官方说明连接可互通的发送与接收设备，选择投屏目标。测试画面和声音后再调整显示设置。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "network",
+  "screenshots": []
+}

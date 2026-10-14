@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "navi",
+  "name": "Navi",
+  "homepage": "https://github.com/denisidoro/navi",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "navi",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "denisidoro/navi",
+          "assetPattern": "navi-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "denisidoro/navi",
+          "assetPattern": "navi-v{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端搜索自己的命令速查表并填写参数。",
+  "description": "Navi 是交互式命令速查工具，可搜索示例、填写参数并按需运行命令。适合整理自己的常用命令，依赖 fzf；陌生速查表应先检查内容与目标环境。\n\n### 源码与许可\n当前条目提供 2.24.0 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/denisidoro/navi/tree/5515367dc8a2a561d2d82b8352f729b1da4120d3) · [许可原文](https://github.com/denisidoro/navi/blob/5515367dc8a2a561d2d82b8352f729b1da4120d3/LICENSE)。",
+  "usageInstructions": "1. 解压官方 Windows/Linux 包，将 navi 加入 PATH。\n2. 按官方要求安装 fzf 并准备当前 Shell 配置。\n3. 运行 navi --help，添加一份自己确认过的速查表。\n4. 交互选择测试命令并核对参数。\n5. 先查看命令内容，确认目标目录和环境后再运行；Shell 集成按官方指南配置。",
+  "faq": "内置所有工具和依赖吗？依赖 fzf，示例命令涉及的工具也需自己的环境具备。\n提供 Mac 原版吗？本次官方 Release 没有独立 Mac 成品，其他安装途径见官方指南。",
+  "documentationUrl": "https://github.com/denisidoro/navi/blob/5515367dc8a2a561d2d82b8352f729b1da4120d3/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#397985\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">Navi</text></svg>",
+    "sha256": "81555f7d63ae2a3ff8b77aa5944f6cb99becc045aecae7565bfa95bbe5c419a9",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名Navi，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

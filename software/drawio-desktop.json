@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "drawio-desktop",
+  "name": "draw.io",
+  "homepage": "https://www.drawio.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "draw.io",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jgraph/drawio-desktop",
+          "assetPattern": "draw.io-arm64-{version}-windows-arm64-installer.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jgraph/drawio-desktop",
+          "assetPattern": "draw.io-x64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jgraph/drawio-desktop",
+          "assetPattern": "draw.io-arm64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jgraph/drawio-desktop",
+          "assetPattern": "drawio-amd64-{version}.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jgraph/drawio-desktop",
+          "assetPattern": "drawio-arm64-{version}.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "离线绘制流程图、结构图和网络拓扑的开源桌面工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/jgraph/drawio-desktop/802aca6f13bf3dcfb7980b744ad87c94e1009e2e/build/256x256.png",
+    "sha256": "f30591914b7e4375bc9f19d481059a8db2c67d050725ac1d24d4ac28ba291213",
+    "mime": "image/png",
+    "provenance": "固定官方仓库产品图标；实际预览确认橙色流程图标识；GPL-3.0根许可。"
+  },
+  "description": "draw.io Desktop 是开源图表编辑器的桌面版本，可在本地绘制流程图、结构图、网络拓扑等图表。适合工作说明、学习笔记和技术文档配图，支持本地保存以及导出图片或PDF。桌面应用基于Electron，采用GPL-3.0；保留原始软件包及第三方组件许可。对应32.3.0源码与发行：https://github.com/jgraph/drawio-desktop/releases/tag/v32.3.0 。",
+  "usageInstructions": "1. Windows选择x64或ARM64安装器，运行并按提示安装；这些安装器需要管理员权限。macOS解压对应Intel或Apple Silicon的ZIP，将draw.io.app放到应用程序目录。Linux用对应amd64/arm64的Debian包安装。\n2. 打开软件，选择在本机创建图表，从空白图或模板开始。拖入左侧图形，用连接线组织流程，并编辑文字。\n3. 保存可再次编辑的.drawio文件；需要放进文档时，从导出菜单选择PNG、SVG或PDF。",
+  "faq": "必须联网或注册吗？桌面版可用于本地图表编辑；联网服务或更新按官方说明使用。\n没有Windows管理员权限怎么办？官方另外提供x64便携ZIP、每用户MSI及ARM64便携版，可从官方Release选择；\nMac或Linux还有其他格式吗？官方还提供Universal DMG、RPM和AppImage；此条目提供两个Mac架构ZIP与两个Debian包，不重复上架同一产品。",
+  "documentationUrl": "https://www.drawio.com/docs/",
+  "category": "office",
+  "screenshots": []
+}

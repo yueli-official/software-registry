@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dependencies",
+  "name": "Dependencies",
+  "homepage": "https://github.com/lucasg/Dependencies",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dependencies",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lucasg/Dependencies",
+          "assetPattern": "Dependencies_x86_Release.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "分析 Windows EXE、DLL 的导入依赖与缺失模块。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/lucasg/Dependencies/6e40a277a54749d8d84bc1a2ab928ff7f83c510c/DependenciesGui/Dependencies.ico",
+    "sha256": "9377c294f26e8fe68311bc7e751c342d4235ef034221259f3cfb315f7e538826",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，已实际预览；资源目录未发现独立许可例外，保留 MIT 版权及来源，仅转换为 WebP。 固定来源：https://github.com/lucasg/Dependencies/blob/6e40a277a54749d8d84bc1a2ab928ff7f83c510c/DependenciesGui/Dependencies.ico"
+  },
+  "description": "Dependencies 是现代 Dependency Walker 风格的 Windows 依赖分析工具，可查看 PE 文件的导入、导出和 DLL 依赖树，帮助开发者定位缺失依赖及加载问题。包含图形界面和命令行工具；不是运行库安装器，也不会自动修复系统 DLL。\n\n主体采用 MIT License，保留官方版权、许可及随包第三方通知。固定版本源码：https://github.com/lucasg/Dependencies/tree/6e40a277a54749d8d84bc1a2ab928ff7f83c510c 。官方固定版本产品图标，已实际预览；资源目录未发现独立许可例外，保留 MIT 版权及来源，仅转换为 WebP。",
+  "usageInstructions": "1. 按目标环境选择 x64 或 x86 原 ZIP，完整解压，保留随附依赖与许可；运行 DependenciesGui.exe 打开图形界面。需要对应 Visual C++ Redistributable 和官方说明要求的运行环境。\n2. 在界面打开自己要分析的 EXE 或 DLL，查看依赖树、导入/导出列表及缺失项。\n3. 核对架构、实际 DLL 搜索位置与应用部署目录；缺失模块先从软件原版安装包或官方运行库解决，不从不明 DLL 网站拼装。\n4. 命令行分析使用随包 Dependencies.exe，参数参照固定版本 README。",
+  "faq": "这是 DLL 下载器吗？不是，只用于分析依赖。\n为什么仍提示运行库缺失？工具自身也需要相应 Visual C++ 运行库。\n分析器会执行被检查的软件吗？常规静态依赖查看读取 PE 信息，不等于启动目标程序。",
+  "documentationUrl": "https://github.com/lucasg/Dependencies/blob/6e40a277a54749d8d84bc1a2ab928ff7f83c510c/README.md",
+  "category": "developer",
+  "screenshots": []
+}

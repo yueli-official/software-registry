@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "optimizerduck",
+  "name": "optimizerDuck",
+  "homepage": "https://optimizerduck.vercel.app/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "itsfatduck/optimizerDuck",
+          "assetPattern": "optimizerDuck-Windows-x64-*.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Windows 系统优化工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/itsfatduck/optimizerDuck/1a310e992bf71cd10bf4f2c2ccd658541a378be7/optimizerDuck/Logo.ico",
+    "sha256": "f7b7b5c218773ef6cbb4cff2568a5c2b026c77f9e0f23bc3b2d3efef062cc4f1",
+    "mime": "image/x-icon"
+  },
+  "description": "optimizerDuck 用于Windows 系统优化。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 先记录或备份当前系统设置，打开软件逐项阅读优化选项。一次只应用一项并检查结果，出现异常时恢复原设置。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/itsfatduck/optimizerDuck/blob/master/README.md",
+  "category": "system",
+  "screenshots": []
+}

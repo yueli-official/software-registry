@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "netron",
+  "name": "Netron",
+  "homepage": "https://github.com/lutzroeder/netron",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "netron",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lutzroeder/netron",
+          "assetPattern": "Netron-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "lutzroeder/netron",
+          "assetPattern": "Netron-{version}-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "可视化查看机器学习模型的结构、节点和张量属性。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/lutzroeder/netron/af543115db4cf179aee23fdd4ba9e15c6e6210f1/publish/icon.png",
+    "sha256": "aca26a2163726ba8989bd9873e0dd2c05e04f78e50843b5d8c73e09e8e82b58d",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/publish/icon.png"
+  },
+  "description": "Netron 是独立的模型查看器，支持多种机器学习模型格式，可浏览计算图、节点连接和属性，适合检查导出模型与理解网络结构。\n\n### 源码与许可\n当前条目提供 9.3.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/lutzroeder/netron/tree/af543115db4cf179aee23fdd4ba9e15c6e6210f1) · [许可原文](https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/.github/screenshot.png)；原作者及许可通知见[固定版许可](https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 打开一份自己可使用的测试模型，浏览计算图并选择节点查看输入、输出与属性；根据官方格式支持列表核对识别情况。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "能直接训练模型吗？主要用于查看模型结构，不替代训练框架。\n所有自定义算子都能解析吗？支持程度取决于格式与算子，无法识别时核对官方文档。",
+  "documentationUrl": "https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/README.md",
+  "category": "ai",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/lutzroeder/netron/af543115db4cf179aee23fdd4ba9e15c6e6210f1/.github/screenshot.png",
+      "sha256": "011638f6eb9de26d37c986270b11fe9f034473ba04f6bcef8e98afaae642e989",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/.github/screenshot.png",
+      "caption": "Netron 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/.github/screenshot.png；原许可 https://github.com/lutzroeder/netron/blob/af543115db4cf179aee23fdd4ba9e15c6e6210f1/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

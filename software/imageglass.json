@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "imageglass",
+  "name": "ImageGlass",
+  "homepage": "https://imageglass.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "imageglass",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "imageglass",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "d2phap/ImageGlass",
+          "assetPattern": "ImageGlass_10.0.6.906_mac-arm64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "d2phap/ImageGlass",
+          "assetPattern": "ImageGlass_10.0.6.906_linux-x64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "轻快浏览照片与多种图片格式，支持缩放和基础图像操作。",
+  "description": "ImageGlass 是开源图片浏览器，可快速浏览照片与多种图片格式，支持精确缩放、全屏、旋转、裁剪、调整尺寸和取色等功能。适合查看摄影图片、设计素材及文件夹中的连续图片；不同格式的支持以当前原包和官方文档为准。\n\n此条目提供未修改的官方10.0.6.906原包。固定发行主程序声明GPL 3.0或以后版本，Copyright 2010–2026 DUONG DIEU PHAP，独立组件保留各自许可。对应源码：https://github.com/d2phap/ImageGlass/tree/10.0.6.906 。夸克目录中的imageglass-10.0.6.906-LICENSES.zip保留原许可通知与源码资料。",
+  "usageInstructions": "1. Windows按CPU选择x64或ARM64便携ZIP，完整解压后打开ImageGlass.exe；官方10版要求Windows 10/11 1809或以后版本。Mac本批为Apple Silicon ARM64 DMG，要求macOS 14或以后版本，打开后将应用放入应用程序。Linux本批为X11桌面的x64 AppImage，赋予执行权限后启动。\n2. 先把几张自己的测试图片放入同一文件夹，将其中一张拖入软件，尝试上一张/下一张、适应窗口与滚轮缩放。\n3. 从工具栏尝试旋转、取色或查看多帧图片；需要修改尺寸或裁剪时先使用副本，按当前菜单另存结果。\n4. 保存后重新打开结果，确认尺寸、方向和格式正确。若某种RAW、HEIC或其他格式无法打开，查看官方格式支持说明及当前原包条件。\n5. 界面语言和快捷键可按软件设置与官方文档调整；当前条目提供中文步骤，不把教程语言当成所有平台翻译覆盖的保证。",
+  "faq": "这版支持Intel Mac吗？当前正式10.0.6.906发行页的Mac包为ARM64，本批不冒称Intel原生支持。\nLinux Wayland可以直接用吗？官方10版要求列出的Linux桌面为X11，请按当前系统兼容情况和官方文档确认。\n能编辑完整PSD图层吗？它以看图和基础图像操作为主，不是完整图层排版编辑器。\n所有渠道都免费吗？此条目使用官方GitHub开源原包；商店版及其他发行渠道的定价以官网为准。",
+  "documentationUrl": "https://imageglass.org/docs",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#f5eaf3\"/><text x=\"128\" y=\"133\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"35\" fill=\"#91527f\">ImageGlass</text><text x=\"128\" y=\"174\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"24\" fill=\"#a47797\">Photo Viewer</text></svg>",
+    "sha256": "8a7e093cbb6fcc6b0bdbb9472d1650e85fefc1219437b42322d2856cd24a90b0",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；未将主程序GPL声明自动用于官网商标、README摄影截图或其他独立美术资源，不仿造官方图形。"
+  },
+  "screenshots": []
+}

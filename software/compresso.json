@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "compresso",
+  "name": "CompressO",
+  "homepage": "https://github.com/codeforreal1/compressO",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "codeforreal1/compressO",
+          "assetPattern": "CompressO_*_x64.exe",
+          "tagPrefix": ""
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "codeforreal1/compressO",
+          "assetPattern": "CompressO_{version}_aarch64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "codeforreal1/compressO",
+          "assetPattern": "CompressO_{version}_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "codeforreal1/compressO",
+          "assetPattern": "CompressO_{version}_x64.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "媒体压缩工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/codeforreal1/compressO/a02501733570f74c7111b866b5c03c8c1f9f0788/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "sha256": "e045d6ffb4d8aebf0451951c26a9b832ec3972da3cedfcc4264261f38e731543",
+    "mime": "image/png"
+  },
+  "description": "CompressO 用于媒体压缩。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 添加要压缩的媒体文件，设置输出格式与质量。先转换一个文件，确认质量后再处理其他文件。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "media",
+  "screenshots": []
+}

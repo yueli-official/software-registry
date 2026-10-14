@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "daily-you",
+  "name": "Daily You",
+  "homepage": "https://github.com/Demizo/Daily_You",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Demizo/Daily_You",
+          "assetPattern": "daily-you-arm64-v8a-v*.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "日记工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Demizo/Daily_You/2f622d4cef9036c0b41b5d625b85a2915a5f4c8d/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "808215e67871236bd3ffdf673c91855a4fd6c4119c4b0ce6e8a5e16164e882af",
+    "mime": "image/png"
+  },
+  "description": "Daily You 用于日记。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 创建当天日记，填写文字并按需要加入图片。设置提醒，定期按官方说明备份或导出记录。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/Demizo/Daily_You/blob/master/README.md",
+  "category": "reading",
+  "screenshots": []
+}

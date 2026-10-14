@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "transmission",
+  "name": "Transmission",
+  "homepage": "https://transmissionbt.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "transmission",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "transmission/transmission",
+          "assetPattern": "Transmission-{version}.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/transmission/transmission/48835c6660a7a3730b5a122bb7b88909997addbe/macosx/Images/Images.xcassets/AppIcon.appiconset/icon_512x512.png",
+    "sha256": "cd97fd28d3f75972478a2ef6914606b50e59a3c9d6ff945024ba5ba029ff9ab5",
+    "mime": "image/png"
+  },
+  "description": "Transmission 用于下载工具。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 添加种子文件或磁力链接，选择保存路径与需要的文件。开始任务并设置速度限制；仅分享你有权分发的内容。\n\n### 其他平台安装\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "documentationUrl": "https://github.com/transmission/transmission/blob/main/README.md",
+  "category": "files",
+  "screenshots": []
+}

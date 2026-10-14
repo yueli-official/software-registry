@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "multi-calculator",
+  "name": "Multi Calculator",
+  "homepage": "https://github.com/YangDai2003/Multi-Calculator-Android",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "YangDai2003/Multi-Calculator-Android",
+          "assetPattern": "Multi-Calculator._Release_*.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓计算器工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/YangDai2003/Multi-Calculator-Android/9f55092339d23cd9adfaba244898ec84f9c73ea0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+    "sha256": "6a7f68b25cfe5f0fbb3b0729b4751ae2ecaddd87e10aa10c18865719ce180ac0",
+    "mime": "image/png"
+  },
+  "description": "Multi Calculator 用于安卓计算器。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 打开软件选择需要的计算器，输入数值与单位。检查结果，复杂计算使用已知例子先验证输入方式。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/YangDai2003/Multi-Calculator-Android/blob/master/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

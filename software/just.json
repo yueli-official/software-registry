@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "just",
+  "name": "just",
+  "homepage": "https://github.com/casey/just",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "just",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "just",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "casey/just",
+          "assetPattern": "just-{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "casey/just",
+          "assetPattern": "just-{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "casey/just",
+          "assetPattern": "just-{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "casey/just",
+          "assetPattern": "just-{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "将项目常用命令保存为justfile配方，通过短命令重复执行。",
+  "description": "just是项目命令运行器，使用justfile集中维护构建、测试和常用脚本入口。它适合团队统一命令，不依赖Make的文件更新时间规则。官方有中文说明，具体执行仍需要配方所调用的Shell和工具。",
+  "usageInstructions": "1. 解压原包，把just程序加入PATH。\n2. 在项目目录创建justfile，写一个 hello: 配方，并在下一行缩进写入 echo Hello。\n3. 执行 just --list 查看已定义配方，运行 just hello 执行它。\n4. 将项目实际测试与构建命令写成其他配方。\n5. Windows若没有默认sh，按官方Shell配置使用PowerShell或已安装的Shell。",
+  "faq": "是否会自动安装配方中的工具？不会，项目需要的工具另行准备。\n有中文教程吗？官方仓库提供README.中文.md，注册表保留固定英文源资料。",
+  "documentationUrl": "https://github.com/casey/just/blob/7f4ef81bd6a93faa2b28430912c8e9ab0e3dd29a/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">just</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Command Runner</text></svg>",
+    "sha256": "d18fde7fc445befcb4298247910861815f88fb5d581ccf6fda4e94b65d2eeb4e",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

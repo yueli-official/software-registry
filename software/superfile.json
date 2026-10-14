@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "superfile",
+  "name": "Superfile",
+  "homepage": "https://github.com/yorukot/superfile",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "superfile",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yorukot/superfile",
+          "assetPattern": "superfile-windows-v{version}-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yorukot/superfile",
+          "assetPattern": "superfile-darwin-v{version}-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yorukot/superfile",
+          "assetPattern": "superfile-darwin-v{version}-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yorukot/superfile",
+          "assetPattern": "superfile-linux-v{version}-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "yorukot/superfile",
+          "assetPattern": "superfile-linux-v{version}-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端用多面板浏览、预览和管理文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/yorukot/superfile/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/public/logo.svg",
+    "sha256": "3985147334424d2a8fb51f9fe03eae1affbe428925d9fbb9599d18f8c2cdf3ea",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/public/logo.svg"
+  },
+  "description": "Superfile 是独立的终端文件管理器，支持目录导航、多面板和文件操作，适合习惯键盘的用户。原版命令为 spf。\n\n### 源码与许可\n当前条目提供 1.6.0 官方原包。主项目许可：MIT，组件及 NOTICE 保留各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/yorukot/superfile/tree/865dba26c1d8d35b95bd7b7501ebdeac66ce2618) · [许可原文](https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/src/assets/demo.png)；原作者及许可通知见[固定版许可](https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 spf 加入 PATH，运行 spf --help 查看本版用法。\n3. 准备兼容的终端和字体，在独立测试目录运行 spf，查看快捷键帮助；先浏览和预览文件，再用副本验证复制、移动等操作。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "命令为什么叫 spf？这是官方程序名。\n预览所有格式都内置吗？部分预览功能需按官方说明准备外部工具。",
+  "documentationUrl": "https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/yorukot/superfile/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/src/assets/demo.png",
+      "sha256": "cd913ea259ffeaa64676d022f68e5d79cea65e52bdd3998a57e8f7390f8a4c09",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/src/assets/demo.png",
+      "caption": "Superfile 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/website/src/assets/demo.png；原许可 https://github.com/yorukot/superfile/blob/865dba26c1d8d35b95bd7b7501ebdeac66ce2618/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

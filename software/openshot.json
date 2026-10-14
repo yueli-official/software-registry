@@ -1,0 +1,97 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "openshot",
+  "name": "OpenShot",
+  "homepage": "https://www.openshot.org/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "openshot",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "openshot",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OpenShot/openshot-qt",
+          "assetPattern": "OpenShot-v{version}-x86_64.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OpenShot/openshot-qt",
+          "assetPattern": "OpenShot-v{version}-x86_64.AppImage",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "剪辑视频、编排音轨并导出作品。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/OpenShot/openshot-qt/5b0588ca36beedebe790e9ed4f48d105a1752f18/images/openshot.png",
+    "sha256": "7c0f5e37f5b34283088c880215852e288d11d26334ad2187b7ba93ce84a3e311",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "实际预览精确4.0.1 images/openshot.png蓝色胶片球产品图标，OpenShot Studios项目版权/原GPL3及images/README核对；同目录只有Humanity子图集GPL2独立例外，产品PNG不属于该图集。保留产品身份和来源，仅WebP编码，不用作者头像或其他软件标识。"
+  },
+  "description": "OpenShot 是开源视频编辑器，适合将自己的视频、图片和音频编排到时间线，完成裁剪、转场、标题和颜色调整，再导出视频。此条目提供官方完整原包，不含个人素材或第三方商业模板。\n\n项目版权 OpenShot Studios, LLC，采用 GPL 3 或后续版本，对应 4.0.1 源码：https://github.com/OpenShot/openshot-qt/tree/v4.0.1 。原包中依赖与各自许可文件原样保留；同目录 OpenShot-4.0.1-LICENSES.zip 保存项目原 GPL3、README版权、资源原许可和 Humanity 图集原 GPL2。官方产品图与文档截图保留项目作者和来源，图集独立许可不改成主GPL3；此条目说明由此条目编写，截图是官方文档示例。",
+  "usageInstructions": "1. Windows 选择匹配系统的 64 位或 32 位官方安装器；macOS 打开 Intel DMG，将应用放入应用程序目录，当前条目没有 Apple Silicon 原生包。Linux x64 给 AppImage 执行权限后启动，系统缺少 FUSE 等运行依赖时按官方安装文档处理。\n2. 新建项目，导入自己的几段视频、图片和一段音频，将素材拖到时间线的轨道上。调整片段顺序，拖动边缘修剪长度，需要时加入转场、标题或颜色调整。\n3. 点击预览播放检查声音和画面，保存项目。使用导出视频，选择输出目录、格式和画面规格，先导出一个短片检查结果；项目文件只是编辑记录，不是最终视频。",
+  "faq": "需要另外购买软件吗？OpenShot 是开源软件，当前条目为官方原包。\n保存项目后为什么没有视频？项目保存素材引用和编辑记录，需要导出才能生成最终视频文件。\nMac ARM 可以直接原生运行吗？本次官方稳定附件只有 Intel Mac 包，不标成 ARM 原生；系统兼容性按官方说明判断。\n3D 动画标题需要什么？部分功能依赖另外安装的 Blender 等工具，不是所有功能都要求它们。",
+  "documentationUrl": "https://www.openshot.org/user-guide/",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/OpenShot/openshot-qt/5b0588ca36beedebe790e9ed4f48d105a1752f18/doc/images/color-curve-editor.jpg",
+      "sha256": "6f7558828128b6bde25dfe2f375fc868ab77d3ff786cee8c54a93a62cdd48b1b",
+      "mime": "image/jpeg",
+      "caption": "官方示例：颜色曲线编辑",
+      "sourcePage": "https://github.com/OpenShot/openshot-qt/blob/5b0588ca36beedebe790e9ed4f48d105a1752f18/doc/images/color-curve-editor.jpg",
+      "licenseEvidence": "精确v4.0.1官方doc/images功能截图，项目原GPL3-or-later/README作者版权与文档资源树无独立许可例外，保留OpenShot Studios/项目贡献者、来源和主许可；无第三方影片或照片内容。",
+      "provenance": "已实际预览：仅曲线编辑窗口与控制点，无第三方照片；官方文档示例，不冒充维护者实时实测，仅转WebP。",
+      "reviewed": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenShot/openshot-qt/5b0588ca36beedebe790e9ed4f48d105a1752f18/doc/images/quick-start-export.jpg",
+      "sha256": "29e970748fd75edd8d5bc7caff7a0f6ba095d342244d93736146e40748f1b186",
+      "mime": "image/jpeg",
+      "caption": "官方示例：导出视频设置",
+      "sourcePage": "https://github.com/OpenShot/openshot-qt/blob/5b0588ca36beedebe790e9ed4f48d105a1752f18/doc/images/quick-start-export.jpg",
+      "licenseEvidence": "精确v4.0.1官方doc/images功能截图，项目原GPL3-or-later/README作者版权与文档资源树无独立许可例外，保留OpenShot Studios/项目贡献者、来源和主许可；无第三方影片或照片内容。",
+      "provenance": "已实际预览：导出界面，公开/home/jonathan路径，无凭据或用户素材照片；官方文档示例，不冒充维护者实时实测，仅转WebP。",
+      "reviewed": true
+    }
+  ]
+}

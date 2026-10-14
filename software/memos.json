@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "memos",
+  "name": "Memos",
+  "homepage": "https://usememos.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usememos/memos",
+          "assetPattern": "memos_{version}_windows_amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usememos/memos",
+          "assetPattern": "memos_{version}_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usememos/memos",
+          "assetPattern": "memos_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usememos/memos",
+          "assetPattern": "memos_{version}_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "usememos/memos",
+          "assetPattern": "memos_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "自托管的短笔记工具，用Markdown记录想法、链接和日志。",
+  "description": "Memos 是开源自托管笔记应用，通过浏览器记录短笔记、链接、工作日志和代码片段，支持Markdown、附件、标签、搜索与置顶。笔记数据放在自己运行的实例中，可以保持私密或按需分享。适合愿意自行运行服务的个人和小团队。\n\n此条目提供未修改的官方0.31.0服务端成品包，包含完整Memos应用，按Windows、Mac及Linux的真实CPU选择。主项目采用MIT许可，Copyright 2025 Memos，独立组件保留原许可；对应源码：https://github.com/usememos/memos/tree/v0.31.0 。夸克目录中的memos-0.31.0-LICENSES.zip提供原许可与源码资料。",
+  "usageInstructions": "1. 按系统和CPU下载官方原包并解压，找到memos.exe或memos。它是需要持续运行的笔记服务，用浏览器操作；Mac/Linux按系统要求赋予主程序执行权限。\n2. 在程序目录新建memos-data文件夹用于保存数据。Windows PowerShell运行：.\\memos.exe --addr 127.0.0.1 --port 5230 --data .\\memos-data 。Mac/Linux终端运行：./memos --addr 127.0.0.1 --port 5230 --data ./memos-data 。这里显式指定本机地址和5230端口，数据目录必须先存在。\n3. 保持程序运行，在浏览器打开http://127.0.0.1:5230，按首次初始化页面创建账号，再新建一条测试笔记，例如“#读书 今天整理了一条笔记”，尝试搜索和标签。\n4. 先确认笔记保存成功，再尝试自己的测试附件与可见性选项。关闭服务后备份整个数据目录，升级前保留备份；关闭程序会使该实例暂时无法访问。\n5. 如需手机或其他设备访问同一实例，按官方部署文档配置网络入口、账号和HTTPS。当前条目首次操作命令仅供本机试用，不自动开放公网。",
+  "faq": "必须用Docker吗？官方提供Docker和这些原生服务端成品，此条目下载区保留正式原生包，具体部署方式见官方文档。\n双击后为什么不是普通笔记窗口？这是服务端应用，需要保持程序运行，再用浏览器访问。\n手机能直接安装这些包吗？本批提供桌面系统的服务端原包，手机通过可达的同一实例网页访问，不把EXE或tar.gz标成手机安装包。\n笔记在哪里？使用当前条目命令时存储在你创建的memos-data目录，需自行备份，停止服务后再复制备份更方便。",
+  "documentationUrl": "https://usememos.com/docs/deploy",
+  "category": "reading",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#e9f4ec\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"51\" fill=\"#39744f\">Memos</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"24\" fill=\"#668f75\">Daily Notes</text></svg>",
+    "sha256": "febba3d16e0eb086d80a6c3126fb4fac48892b58be3b8108a2db2d34e15d9a41",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；官方README的logo.webp与独立.github仓库Demo图片尚未核明美术/示例内容复用依据，不将主代码MIT许可自动用于这些图片，不仿造官方图形。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rytunex",
+  "name": "RyTuneX",
+  "homepage": "https://rayenghanmi.github.io/rytunex",
+  "kind": "reference",
+  "packages": [],
+  "summary": "Windows 系统优化工具。",
+  "icon": {
+    "url": "https://rayenghanmi.github.io/rytunex/assets/logo.png",
+    "sha256": "482028fbfdc6549e8d07b9c80d5fe763c9580aa9380a4521a2c2e719e42a69bd",
+    "mime": "image/png"
+  },
+  "description": "RyTuneX 用于Windows 系统优化。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 先备份重要设置，逐项查看系统优化和应用管理选项。一次应用一个改动并检查效果。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/rayenghanmi/RyTuneX/blob/main/README.md",
+  "category": "system",
+  "screenshots": []
+}

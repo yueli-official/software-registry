@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "eartrumpet",
+  "name": "EarTrumpet",
+  "homepage": "https://eartrumpet.app",
+  "kind": "reference",
+  "packages": [],
+  "summary": "应用音量控制工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/File-New-Project/EarTrumpet/154980811087fb7c423d806e2d9816733db6a7a5/EarTrumpet.Package/Assets/Square44x44Logo.targetsize-256.png",
+    "sha256": "18e2adb6b9d119821156294695067c35db159c552c9dd3f14ada489eab204d35",
+    "mime": "image/png"
+  },
+  "description": "EarTrumpet 用于应用音量控制。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 运行后打开托盘音量面板，为各应用分别调整音量；按需要切换应用的输出设备。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/File-New-Project/EarTrumpet/blob/master/README.md",
+  "category": "system",
+  "screenshots": []
+}

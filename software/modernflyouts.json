@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "modernflyouts",
+  "name": "ModernFlyouts",
+  "homepage": "https://modernflyouts-community.github.io",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "modernflyouts",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "系统浮窗增强工具。",
+  "icon": {
+    "url": "https://modernflyouts-community.github.io/favicon.ico",
+    "sha256": "05385223efbfbf93876eb4aa115bc95a921007cf3c8f4c8db0b5dd0699135e33",
+    "mime": "image/x-icon"
+  },
+  "description": "ModernFlyouts 用于系统浮窗增强。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 运行后调整系统音量或亮度，查看新的浮窗。通过软件设置调整主题和位置；若当前 Windows 版本不兼容，可关闭自启动并退出。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "utilities",
+  "screenshots": []
+}

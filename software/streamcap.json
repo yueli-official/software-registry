@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "streamcap",
+  "name": "StreamCap",
+  "homepage": "https://github.com/ihmily/StreamCap",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ihmily/StreamCap",
+          "assetPattern": "StreamCap_*_Win_x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ihmily/StreamCap",
+          "assetPattern": "StreamCap_{version}_mac_arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "直播录制工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ihmily/StreamCap/e1e8dbf1657df58f363e6de7a9ce739c340dba55/assets/icons/icon.iconset/icon_512x512.png",
+    "sha256": "0e3ce7ebc41b8bd1111bf59efe61fac20c2333d5edea80d31143b1dc22dca0a5",
+    "mime": "image/png"
+  },
+  "description": "StreamCap 用于直播录制。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 添加你有权录制的直播地址，设置保存目录与录制选项。启动任务后检查文件是否正常生成。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "capture",
+  "screenshots": []
+}

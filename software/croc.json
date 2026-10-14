@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "croc",
+  "name": "croc",
+  "homepage": "https://github.com/schollz/croc",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "croc",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "croc",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "croc",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schollz/croc",
+          "assetPattern": "croc_v{version}_macOS-64bit.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schollz/croc",
+          "assetPattern": "croc_v{version}_macOS-ARM64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schollz/croc",
+          "assetPattern": "croc_v{version}_Linux-64bit.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schollz/croc",
+          "assetPattern": "croc_v{version}_Linux-ARM64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schollz/croc",
+          "assetPattern": "croc_v{version}_Linux-32bit.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "通过短口令在两台设备间传输文件和文件夹，支持中断续传。",
+  "description": "croc用于跨系统传输文件和文件夹，使用口令建立连接并支持加密与中断续传。默认公共中继可能受网络环境影响，也可按文档配置自己的中继。浏览器入口与桌面程序是同一产品的不同使用方式。",
+  "usageInstructions": "1. 两台电脑都解压对应系统原包，把croc程序加入PATH。\n2. 发送端运行 croc send 文件路径，记录程序显示的连接口令。\n3. 接收端运行 croc，在交互提示中输入该口令并确认接收。\n4. 保持两端程序运行直到传输完成，核对接收文件。\n5. 传输目录时可直接把目录路径传给send；网络失败时按文档检查中继连接。",
+  "faq": "必须手动开放家用路由器端口吗？默认工作流利用中继协调，不要求常规手动端口映射。\n浏览器版算另一款软件吗？不算，此条目仅按croc产品计数。",
+  "documentationUrl": "https://github.com/schollz/croc/blob/15a4577e56bf6bbad116576e448bd33120bd90c1/README.md",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">croc</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">File Transfer</text></svg>",
+    "sha256": "934f0098810909d295a1098dc8ee0161594efe417434e2c4371c82b8a4e8a60a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

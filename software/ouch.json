@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ouch",
+  "name": "ouch",
+  "homepage": "https://github.com/ouch-org/ouch",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "ouch",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ouch-org/ouch",
+          "assetPattern": "ouch-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ouch-org/ouch",
+          "assetPattern": "ouch-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ouch-org/ouch",
+          "assetPattern": "ouch-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ouch-org/ouch",
+          "assetPattern": "ouch-x86_64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ouch-org/ouch",
+          "assetPattern": "ouch-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用统一命令压缩、解压和查看多种归档格式。",
+  "description": "ouch 是独立的命令行归档工具，可根据文件扩展名处理常见压缩格式并显示易读提示，适合整理下载文件和批量归档。\n\n### 源码与许可\n当前条目提供 0.8.3 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/ouch-org/ouch/tree/433c05d21ffd3a59a213930e256ce4b4ad863d79) · [许可原文](https://github.com/ouch-org/ouch/blob/433c05d21ffd3a59a213930e256ce4b4ad863d79/LICENSE)。",
+  "usageInstructions": "1. 解压平台原包并将 ouch 加入 PATH。\n2. 运行 ouch --help 查看当前格式支持。\n3. 在测试目录用 ouch compress sample.txt sample.zip 创建归档。\n4. 用 ouch list sample.zip 检查内容。\n5. 将归档解压到独立目录，核对后再处理原文件。",
+  "faq": "RAR 也能创建吗？官方仅支持 RAR 解压和列出，不能创建 RAR。\n解压会覆盖文件吗？先选择独立目标目录，并查看当前冲突处理选项。",
+  "documentationUrl": "https://github.com/ouch-org/ouch/blob/433c05d21ffd3a59a213930e256ce4b4ad863d79/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">ouch</text></svg>",
+    "sha256": "6dc11ae4d6eadd9b284cf8b9ebade900837e308e4dbb385f4388d9392c349b38",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名ouch，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

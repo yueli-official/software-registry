@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "moonlight",
+  "name": "Moonlight",
+  "homepage": "https://moonlight-stream.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "moonlight",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "moonlight-stream/moonlight-qt",
+          "assetPattern": "MoonlightPortable-arm64-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "moonlight-stream/moonlight-qt",
+          "assetPattern": "Moonlight-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "moonlight-stream/moonlight-qt",
+          "assetPattern": "Moonlight-{version}-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把另一台电脑的游戏或桌面串流到当前设备。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/moonlight-stream/moonlight-qt/de2467e433821664cdd2224aad8c89a625be1ad9/app/moonlight.ico",
+    "sha256": "217eaa17949f190a582c39898ef524ae80bb944fcc75e54daea714c22831c4d5",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/moonlight-stream/moonlight-qt/blob/de2467e433821664cdd2224aad8c89a625be1ad9/app/moonlight.ico"
+  },
+  "description": "Moonlight PC 是开源游戏串流客户端，连接运行 Sunshine 或兼容 GameStream 服务的主机，支持硬件视频解码、游戏手柄、音频传输与远程桌面操作。适合在局域网内把游戏电脑的画面投送到另一台 Windows、Mac 或 Linux 设备；需要自行准备串流主机。\n\n原包保持官方字节、组件与许可；软件采用 GPL-3.0，第三方组件沿用各自许可。对应版本源码：https://github.com/moonlight-stream/moonlight-qt/tree/de2467e433821664cdd2224aad8c89a625be1ad9 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 按 x64 或 ARM64 选择便携 ZIP，完整解压后运行 Moonlight.exe；macOS 打开通用 DMG 并将应用放入应用程序目录；Linux AppImage 赋予执行权限后启动。\n2. 在游戏主机安装并配置 Sunshine，先把主机与客户端接入同一局域网。打开 Moonlight，选择发现的主机，按提示在主机端确认配对 PIN。\n3. 选择主机发布的游戏或桌面开始串流。先尝试较低分辨率与码率，确认流畅后再调高；可在设置中调整解码、手柄与音频。\n4. 外网连接需要自己配置受控网络与 Sunshine；软件不会提供云电脑或主机。",
+  "faq": "这是串流主机吗？不是，是客户端，需要另一台运行 Sunshine 的电脑。\nmacOS 如何选架构？此条目提供官方通用 DMG，已核对 Intel 和 Apple Silicon 主程序。\nWindows 便携版如何保留设置？升级时按官方说明迁移 Moonlight Game Streaming Project 设置目录。",
+  "documentationUrl": "https://github.com/moonlight-stream/moonlight-qt/blob/de2467e433821664cdd2224aad8c89a625be1ad9/README.md",
+  "category": "games",
+  "screenshots": []
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "dupeguru",
+  "name": "dupeGuru",
+  "homepage": "https://dupeguru.voltaicideas.net/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dupeguru",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "dupeguru",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "arsenetar/dupeguru",
+          "assetPattern": "dupeguru_macOS_Qt_{version}.zip",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "arsenetar/dupeguru",
+          "assetPattern": "dupeguru_{version}_amd64.deb",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "查找重复文件，整理磁盘空间。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/arsenetar/dupeguru/1f1dfa88dc5f6ffe13f4de514c884ab9c83bd7ce/images/dgse_logo_128.png",
+    "sha256": "fe9c29b9a85ac486d04f8951e2b60a937a1e272aae3377024bb5a3f2ca2bdeb8",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "精确4.3.1官方标准版主图标，真实预览为透明底红橙相向箭头；CREDITS明确作者Jérôme Cantin，资源索引及原程序LOGO_NAME核实对应实际产品。固定版本根GPL与图片目录无独立例外已核，不混同另署名Exchange/zoom美术。保留原作者与源码，只做WebP技术编码。"
+  },
+  "description": "dupeGuru 是重复文件查找工具，可以按文件名或内容扫描文件，也提供音乐标签和图片相似度比较模式。它把候选重复项分组显示，方便逐组确认后移动、复制或送入回收站，并支持简体中文。此条目提供完整官方原包。\n\n主程序采用 GPL 3，保留 Hardcoded Software、维护者与贡献者版权；对应 4.3.1 源码：https://github.com/arsenetar/dupeguru/tree/4.3.1 。hscommon、semantic_version 和运行环境等独立许可分别保留，不改成统一主GPL。dupeGuru-4.3.1-LICENSES.zip 随原包目录提供主GPL、原作者名单、历史 Debian 版权和已核实运行环境的原通知。Qt/PyQt、Python、OpenSSL 等的源码与通知来源记录在附件回执中，原软件包不改动。产品主图标由 Jérôme Cantin 制作，保留项目出处及 CREDITS；此条目中文说明由此条目编写。",
+  "usageInstructions": "1. Windows 选择适合系统的 64 位或 32 位官方安装器；macOS 解压原 ZIP，把 dupeguru.app 放入应用程序目录，官方包同时包含 Intel 和 Apple Silicon 程序。Debian/Ubuntu x64 安装原 .deb，并按包管理器提示满足 Python、Qt 等依赖。\n2. 启动后用“+”或拖放添加要扫描的文件夹，先选择一个测试目录，使用默认设置点击扫描。根据需要切换标准、音乐或图片模式。\n3. 在结果中逐组核对重复项与保留的参考文件。误匹配的项目先从结果中移除，确认后标记需要处理的重复项，通过操作菜单移动、复制或送入回收站；保留重要文件的备份。",
+  "faq": "扫描到的都是可以删除的文件吗？不是。相似名称或图片匹配可能包含误匹配，需要逐组确认；软件不会因为扫描完成就自动删除所有结果。\n支持中文吗？项目提供简体中文翻译，部分帮助文档仍是英文。\nMac 要选两个不同包吗？本次官方 ZIP 的主程序和随包原生依赖同时包含 Intel 与 Apple Silicon 架构，是同一个通用包。\nLinux 的包会自动带齐运行环境吗？此 Debian 原包使用系统 Python/Qt 依赖，安装时按包管理器提示处理，不把它当成免依赖 AppImage。",
+  "documentationUrl": "https://dupeguru.voltaicideas.net/help/en/",
+  "category": "utilities",
+  "screenshots": []
+}

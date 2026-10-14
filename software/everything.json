@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "everything",
+  "name": "Everything",
+  "homepage": "https://www.voidtools.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "everything",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "文件搜索工具。",
+  "icon": {
+    "url": "https://www.voidtools.com/favicon.ico",
+    "sha256": "ca8be8b4161305bee99afa076ba52e34b2ffe3431626d644a144e34d97a1eb41",
+    "mime": "image/x-icon"
+  },
+  "description": "Everything 用于文件搜索。",
+  "usageInstructions": "1. 下载区选择原版 Windows 包，安装或解压。\n2. 解压并运行 Everything，等待文件名索引建立。输入文件名关键词筛选结果，双击打开或通过右键定位文件。",
+  "faq": "主要按文件和目录名搜索；内容搜索等功能以官方文档为准。软件包保留原版权与第三方许可。",
+  "documentationUrl": "https://www.voidtools.com/support/everything/",
+  "category": "utilities",
+  "screenshots": []
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fx",
+  "name": "fx",
+  "homepage": "https://github.com/antonmedv/fx",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fx",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antonmedv/fx",
+          "assetPattern": "fx_windows_arm64.exe",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antonmedv/fx",
+          "assetPattern": "fx_darwin_amd64",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antonmedv/fx",
+          "assetPattern": "fx_darwin_arm64",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antonmedv/fx",
+          "assetPattern": "fx_linux_amd64",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "antonmedv/fx",
+          "assetPattern": "fx_linux_arm64",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互浏览 JSON，并按表达式提取数据。",
+  "description": "fx 是独立的终端 JSON 查看与处理工具，适合阅读接口结果、展开数据层级和快速查询字段。交互浏览和表达式处理的用法见当前官方帮助。\n\n### 源码与许可\n当前条目提供 40.0.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/antonmedv/fx/tree/21d00a8b382e2174a90b019b879fa47cacadf3b7) · [许可原文](https://github.com/antonmedv/fx/blob/21d00a8b382e2174a90b019b879fa47cacadf3b7/LICENSE)。",
+  "usageInstructions": "1. 下载平台二进制，Windows 保留 EXE，Mac/Linux 给执行权限并加入 PATH。\n2. 运行 fx --help。\n3. 用 fx sample.json 浏览自己的测试 JSON。\n4. 查看交互帮助，尝试展开、搜索和字段查询。\n5. 将处理结果写到新文件，并核对数组、空值和数据类型。",
+  "faq": "需要安装 Node.js 吗？当前条目提供官方独立二进制，其他 npm 安装途径按官方说明。\n能随意执行来源不明表达式吗？表达式是自己的处理逻辑，使用前应检查。",
+  "documentationUrl": "https://github.com/antonmedv/fx/blob/21d00a8b382e2174a90b019b879fa47cacadf3b7/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">fx</text></svg>",
+    "sha256": "d283fca3e5f5d86e0e886bccafd0919236557dd5dadb468718842c84ae289635",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名fx，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

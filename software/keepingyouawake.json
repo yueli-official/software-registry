@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "keepingyouawake",
+  "name": "KeepingYouAwake",
+  "homepage": "https://keepingyouawake.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "newmarcel/KeepingYouAwake",
+          "assetPattern": "KeepingYouAwake-*.zip",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "Mac 防休眠工具。",
+  "icon": {
+    "url": "https://keepingyouawake.app/icon.png",
+    "sha256": "e2acb94cde18e1863c6b5375ca7027129f47525c0f2131a9d5c87d3d442d486d",
+    "mime": "image/png"
+  },
+  "description": "KeepingYouAwake 用于Mac 防休眠。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 解压并运行，在菜单栏启用保持唤醒，按需要设置持续时间。完成任务后关闭保持唤醒，避免长期阻止休眠。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/newmarcel/KeepingYouAwake/blob/main/README.md",
+  "category": "productivity",
+  "screenshots": []
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "jpegoptim",
+  "name": "jpegoptim",
+  "homepage": "https://github.com/tjko/jpegoptim",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "jpegoptim",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tjko/jpegoptim",
+          "assetPattern": "jpegoptim-{version}-x64-osx.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tjko/jpegoptim",
+          "assetPattern": "jpegoptim-{version}-x64-linux.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "无损优化 JPEG 压缩，并按需控制图片质量。",
+  "description": "jpegoptim 是独立的 JPEG 优化工具，可优化编码并选择是否移除元数据；设置质量参数时可能变为有损压缩。\n\n### 源码与许可\n当前条目提供 1.5.6 官方原包。主项目许可：GPL-3.0-or-later；独立组件遵循各自许可。[固定版本源码](https://github.com/tjko/jpegoptim/tree/d0c79a8eb4cac61d1d4797ad93d8a49ffdb1ec29) · [许可原文](https://github.com/tjko/jpegoptim/blob/d0c79a8eb4cac61d1d4797ad93d8a49ffdb1ec29/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 jpegoptim 加入 PATH，运行 jpegoptim --help 查看本版用法。\n3. 复制一张测试 JPEG，按帮助中的输出选项优化副本，比较体积、画质和元数据，再确定批量参数。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "Mac 包名含 x64 是 Intel 吗？本版本该原包实际主程序为 ARM64，当前条目按实际 Apple Silicon 标注。\n始终无损吗？质量限制选项会改变图像，请核对参数。",
+  "documentationUrl": "https://github.com/tjko/jpegoptim/blob/d0c79a8eb4cac61d1d4797ad93d8a49ffdb1ec29/README",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">jpeg</text></svg>",
+    "sha256": "f978a4624688ecc74b7d6ac51fc5289eba04825cbe1d6d8c0cefd107688d190e",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名jpeg，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

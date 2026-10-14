@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "potplayer",
+  "name": "PotPlayer",
+  "homepage": "https://potplayer.tv/?lang=zh_CN",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "potplayer",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "potplayer",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "potplayer",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "播放本地音视频，调整字幕与硬件解码。",
+  "description": "PotPlayer 是 Windows 音视频播放器，支持多种媒体与字幕格式，可使用硬件加速和播放设置。下载安装请使用 Kakao 官方入口，软件使用与分发遵循官方条款。",
+  "usageInstructions": "1. 在下载页选择与系统相符的 x64、x86 或 ARM64 官方原安装包，核对安装选项后安装。\n2. 打开自己有权使用的视频或音频，测试声音、字幕和播放进度，再按设备情况调整硬件解码。\n3. 保留原媒体文件，更新和附加编解码器按官方指引处理。",
+  "faq": "支持 Mac 或 Linux 吗？本软件官网提供 Windows 包，没有虚列其他平台。\n软件包含影视资源吗？不包含，请使用自己的合法媒体。\n是否开源？这是免费使用的专有软件，遵循 Kakao 官方许可。",
+  "documentationUrl": "https://potplayer.tv/publicRelation",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><image width=\"256\" height=\"256\" href=\"data:image/webp;base64,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\"/></svg>",
+    "sha256": "f55df016456a18ec2d7b99bceefddd0c528cd74cac174325749bf7d601792ea7",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方 PotPlayer 260819 原包 https://t1.daumcdn.net/potplayer/PotPlayer/Version/260819/PotPlayerSetup64.exe SHA256 4b9833adf53b78c2149fe13dd67f2504bf39ee30b45c03f09e5f2c25e43f9cfe；实际 PotPlayerMini64.exe RT_GROUP_ICON 100，8帧 ICO 提取并实际预览；保留官方黄色播放器标识，仅转换WebP并嵌入SVG，无重绘。资源与软件仍为原厂所有。"
+  },
+  "screenshots": []
+}

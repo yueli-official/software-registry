@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ventoy",
+  "name": "Ventoy",
+  "homepage": "https://www.ventoy.net/cn/index.html",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ventoy",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ventoy",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ventoy",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ventoy/Ventoy",
+          "assetPattern": "ventoy-{version}-linux.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ventoy/Ventoy",
+          "assetPattern": "ventoy-{version}-linux.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ventoy/Ventoy",
+          "assetPattern": "ventoy-{version}-linux.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把多个系统镜像放进同一个启动U盘的开源工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ventoy/Ventoy/490ed6ce0f7029ef045dc5c9378cf4b8d93bf5c1/ICON/logo_256.png",
+    "sha256": "c7f486fbac36b817b06209d14e725127ca7c4cdb64e1baf3327bff3f163e83b9",
+    "mime": "image/png",
+    "provenance": "固定官方仓库实际产品图标，已经实际预览。GPL-3.0根许可，蓝色USB启动盘标识。"
+  },
+  "description": "Ventoy 可制作多系统启动U盘。完成首次安装后，把自己的ISO、WIM等镜像复制到U盘，在启动菜单中选择即可，适合系统安装、维护和应急工具盘。提供中文界面和中文官方文档。采用GPL-3.0，此条目提供完整官方原包，保留许可及第三方文件；对应1.1.17源码与发行：https://github.com/ventoy/Ventoy/releases/tag/v1.1.17 。",
+  "usageInstructions": "1. 先备份目标U盘的数据，首次安装会格式化所选磁盘。Windows解压完整ZIP，运行Ventoy2Disk.exe；需要x64或ARM64主程序时，将altexe中的对应程序复制到上一层，与Ventoy2Disk.exe放在一起。Linux解压完整tar.gz，按主机架构运行VentoyGUI.x86_64、VentoyGUI.aarch64或VentoyGUI.i386，并按官方说明使用所需权限。\n2. 仔细确认选中的设备就是自己的目标U盘，然后执行安装。安装完成后，将自己的系统ISO或其他受支持镜像复制到U盘的大容量分区。\n3. 用电脑的启动设备菜单选择该U盘，在Ventoy菜单中选择镜像。Secure Boot、特殊镜像和插件要求按中文官方文档配置。",
+  "faq": "需要每加一个镜像就重做U盘吗？首次安装后通常只需复制、删除镜像文件。\n为什么几个CPU版本下载同一个包？Windows和Linux原包分别包含多种架构程序，此条目保留完整原包；请按主机CPU选择包内的主程序。\n包含Windows或其他系统镜像吗？软件包不提供系统镜像，需要自己取得。官方还提供LiveCD；没有独立macOS桌面安装程序。",
+  "documentationUrl": "https://www.ventoy.net/cn/doc_start.html",
+  "category": "system",
+  "screenshots": []
+}

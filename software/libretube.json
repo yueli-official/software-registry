@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "libretube",
+  "name": "LibreTube",
+  "homepage": "https://github.com/libre-tube/LibreTube",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "libre-tube/LibreTube",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v32.1"
+        }
+      }
+    }
+  ],
+  "summary": "在安卓手机使用开放的视频观看客户端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/libre-tube/LibreTube/6a861f4282c3de73b840793365d8ac7114b5a80f/assets/icons/icon.svg",
+    "sha256": "c621c19714e913a1e9a09d6fb3f3cc618ecb27bad34c8af5aff031db2505ccac",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 官方 README 明确默认应用图标作者 XelXen；保留作者署名。 原资源：https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/assets/icons/icon.svg"
+  },
+  "description": "LibreTube 是独立的安卓视频客户端，功能与可用性依官方说明及自己选择的服务配置。程序不附带视频版权、账号或网络代理。\n\n### 源码与许可\n当前条目提供 32.1 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/libre-tube/LibreTube/tree/6a861f4282c3de73b840793365d8ac7114b5a80f) · [许可原文](https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/LICENSE)。\n\n默认应用图标由 XelXen 制作，出处与作者说明见[官方 README](https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/README.md)，保留原归属。\n\n界面图来自[官方随附资料](https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_11.jpg)；原作者及许可通知见[固定版许可](https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载官方 APK，核对设备架构与已有安装渠道，按安卓提示安装。\n2. 先按官方说明配置可用服务及网络，检查公开测试内容的播放与订阅，再整理自己的播放设置与资料备份。\n3. 升级前保留重要资料，避免混用不同签名渠道。",
+  "faq": "所有地区都能直接访问吗？取决于网络及服务可用性，当前条目不保证第三方服务长期可用。\n是否包含视频资源授权？不包含，内容归各自权利人。",
+  "documentationUrl": "https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/README.md",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/libre-tube/LibreTube/6a861f4282c3de73b840793365d8ac7114b5a80f/fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_11.jpg",
+      "sha256": "660590e7a215bab483d470b7169ecc7624a7c3919040a8b4f63a2b45965d2b23",
+      "mime": "image/jpeg",
+      "sourcePage": "https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_11.jpg",
+      "caption": "LibreTube 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/fastlane/metadata/android/en-US/images/phoneScreenshots/Screenshot_11.jpg；原许可 https://github.com/libre-tube/LibreTube/blob/6a861f4282c3de73b840793365d8ac7114b5a80f/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

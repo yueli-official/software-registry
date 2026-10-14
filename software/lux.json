@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lux",
+  "name": "Lux",
+  "homepage": "https://github.com/iawia002/lux",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "lux",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Windows_i386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Darwin_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Linux_x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "iawia002/lux",
+          "assetPattern": "lux_{version}_Linux_i386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在命令行查看与下载支持网站的视频资源。",
+  "description": "Lux 是独立的视频资源下载工具，可按支持站点解析媒体信息并选择下载选项。适合在命令行管理有权取得的媒体，站点兼容、合并工具和网络条件以当前官方说明为准。\n\n### 源码与许可\n当前条目提供 0.24.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/iawia002/lux/tree/348ae97219784a32dd3c4721ad0cbc2584ee7b46) · [许可原文](https://github.com/iawia002/lux/blob/348ae97219784a32dd3c4721ad0cbc2584ee7b46/LICENSE)。",
+  "usageInstructions": "1. 解压对应平台原包，将 lux 加入 PATH。\n2. 运行 lux --help 查看站点和下载参数。\n3. 用 lux -i 加上一个允许访问的视频地址，先查看可用媒体信息。\n4. 按官方语法选择清晰度或输出目录再下载。\n5. 需要音视频合并时配置 FFmpeg，并检查输出文件能否播放。",
+  "faq": "所有网站都能下载吗？只支持官方列出的当前兼容站点。\n需要 FFmpeg 吗？某些媒体合并流程需要另外配置。",
+  "documentationUrl": "https://github.com/iawia002/lux/blob/348ae97219784a32dd3c4721ad0cbc2584ee7b46/README.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#2463a5\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">Lux</text></svg>",
+    "sha256": "c9f27c7ab61a6a2f5a2ed6f7d530b003b4ed8e70ecd518465b36b7c2c49dd857",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名Lux，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mpvnet",
+  "name": "mpv.net",
+  "homepage": "https://github.com/mpvnet-player/mpv.net",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mpv.net",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mpvnet-player/mpv.net",
+          "assetPattern": "mpv.net-v{version}-portable-ARM64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "基于mpv的Windows播放器，提供图形菜单、配置编辑、字幕与硬件解码支持。",
+  "description": "mpv.net 是基于libmpv的独立Windows媒体播放器，提供图形界面、播放控制、可自定义右键菜单、配置和快捷键编辑器，并支持外部字幕、脚本扩展及硬件解码。适合希望使用mpv播放能力、同时需要图形配置界面的用户。它是完整播放器，不把同项目扩展或libmpv组件另算软件。\n\n此条目提供未修改的官方7.1.2.0便携ZIP：Windows x64与ARM64两包，真实主mpvnet.exe架构已核。固定版本官方文档要求Windows 10及以上和.NET Desktop Runtime 10.0；本项目没有Mac/Linux成品，不把底层mpv平台范围当成mpv.net下载范围。主项目采用GPLv2，原署名与随包组件通知保留；对应源码：https://github.com/mpvnet-player/mpv.net/tree/v7.1.2.0 ，原许可材料在mpvnet-7.1.2.0-LICENSES.zip中。",
+  "usageInstructions": "1. 在Windows 10及以上选择x64或ARM64对应ZIP，完整解压，保留播放器、libmpv及资源。按固定官方文档准备相同CPU的.NET Desktop Runtime 10.0，运行mpvnet.exe。\n2. 打开一个自己的本地视频或音频文件，使用屏幕播放控件测试播放、暂停、进度和音量。\n3. 需要字幕时加载同目录字幕或手动选择字幕文件；在右键菜单中切换音轨、字幕及显示设置。\n4. 右键菜单的Config提供配置和快捷键编辑器，先修改少量设置再播放验证。Config > Open Config Folder可打开配置目录。\n5. 普通本地播放无需配置在线解析工具；需要官方支持的网络媒体解析时，按文档另行安装yt-dlp并放到程序目录或用户PATH。文件关联可在Config > Setup设置，再由Windows默认应用选择确认。",
+  "faq": "它和mpv是什么关系？它使用libmpv播放核心并增加Windows图形界面，是完整应用而不是插件。\nWindows ARM设备能用吗？请选择已核实主ARM64程序的ARM64 ZIP，不要下载x64包冒充原生ARM。\n是否有Mac和Linux版？本项目本版只发布Windows成品，底层mpv支持的平台不代表本应用支持。\n为什么文档写.NET 10？此条目按固定v7.1.2.0源码的官方manual与net10.0工程记录运行条件，不沿用旧版的.NET要求。",
+  "documentationUrl": "https://github.com/mpvnet-player/mpv.net/blob/v7.1.2.0/docs/manual.md",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">mpv.net</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Media Player</text></svg>",
+    "sha256": "8153dc1fbf5d7a764f38215eba1cb3fe455e40e84f1950959dbec0e1e4c80f9b",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

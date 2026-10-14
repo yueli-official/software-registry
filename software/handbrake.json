@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "handbrake",
+  "name": "HandBrake",
+  "homepage": "https://handbrake.fr",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "handbrake",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "HandBrake/HandBrake",
+          "assetPattern": "HandBrake-{version}.dmg",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "将视频转换为常用格式和编码的转码工具。",
+  "description": "HandBrake：将视频转换为常用格式和编码的转码工具。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开视频文件，选择与设备匹配的转换预设。设置输出文件名，先转换一小段检查质量，再开始完整任务。\n\n### 其他平台安装\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://handbrake.fr/docs/",
+  "category": "media",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/HandBrake/HandBrake/dc3832bf0efc8ed6d38536c23e33caae4ded8fed/gtk/icons/256x256/apps/fr.handbrake.ghb.png",
+    "sha256": "5491be44ad553919ce1caec4288545bdea575933809d96da9dc15e78dfa1e92d"
+  },
+  "screenshots": []
+}

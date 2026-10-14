@@ -1,0 +1,91 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "piik",
+  "name": "Piik",
+  "homepage": "https://piik.tv",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TNTcraftHIM/Piik",
+          "assetPattern": "piik-app-windows-amd64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TNTcraftHIM/Piik",
+          "assetPattern": "piik-app-darwin-amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TNTcraftHIM/Piik",
+          "assetPattern": "piik-app-darwin-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TNTcraftHIM/Piik",
+          "assetPattern": "piik-app-linux-amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "TNTcraftHIM/Piik",
+          "assetPattern": "piik-app-linux-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "屏幕共享工具。",
+  "icon": {
+    "url": "https://piik.tv/assets/favicon.svg",
+    "sha256": "959f48dd0d8185aa1f41da34d773b78474ef83e4604f6db454afaf1a0472d782",
+    "mime": "image/svg+xml"
+  },
+  "description": "Piik 用于屏幕共享。",
+  "usageInstructions": "1. 下载 Piik App，解压并打开。选择 Public invite，再选择 Open Piik 创建临时房间。\n2. 选择 Start sharing，设置画面与音频。复制邀请链接发给朋友，对方在浏览器打开观看；共享期间保持程序运行。\n\n### 其他平台安装\n- macOS amd64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- macOS arm64：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。\n- Linux amd64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- Linux arm64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://piik.tv/docs/?lang=en",
+  "category": "media",
+  "screenshots": []
+}

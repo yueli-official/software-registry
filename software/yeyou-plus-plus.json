@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "yeyou-plus-plus",
+  "name": "页游++",
+  "homepage": "https://github.com/bilibilibaiyun/yeyou-plus-plus",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "bilibilibaiyun/yeyou-plus-plus",
+          "assetPattern": "YeyouPlusPlus_*_x64_Setup.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Flash 浏览器工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/bilibilibaiyun/yeyou-plus-plus/a35279914baacf1f9f145e0b1468943c4167d164/assets/icon.ico",
+    "sha256": "dbbace5600ab6502119a742b89f6be56a3a117c8312725e23cf442bf75f2907b",
+    "mime": "image/x-icon"
+  },
+  "description": "页游++ 用于Flash 浏览器。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 启动程序后添加你有权访问的网页游戏地址。打开页面并按软件说明配置兼容或显示选项。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "utilities",
+  "screenshots": []
+}

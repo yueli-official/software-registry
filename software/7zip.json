@@ -1,0 +1,89 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "7zip",
+  "name": "7-Zip",
+  "homepage": "https://www.7-zip.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "7zip",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ip7z/7zip",
+          "assetPattern": "7z{versionCompact}-linux-arm64.tar.xz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ip7z/7zip",
+          "assetPattern": "7z{versionCompact}-linux-x64.tar.xz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ip7z/7zip",
+          "assetPattern": "7z{versionCompact}-linux-x86.tar.xz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ip7z/7zip",
+          "assetPattern": "7z{versionCompact}-mac.tar.xz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "支持多种格式的文件压缩与解压工具。",
+  "description": "7-Zip：支持多种格式的文件压缩与解压工具。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在文件管理器右键选择文件，使用 7-Zip 压缩或解压。创建压缩包时选择格式与保存路径；设置密码后妥善保管。\n\n### 其他平台安装\n- Linux arm64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- Linux amd64：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- Linux 386：解压原版归档，按官方文档运行程序；命令行工具从终端使用。\n- macOS universal：解压原版包，应用拖入“应用程序”；命令行工具在终端按官方文档使用。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "utilities",
+  "icon": {
+    "url": "https://www.7-zip.org/7ziplogo.png",
+    "sha256": "f8ac2201f43c4989eb95b2184eee17a705a3107e43852859d5ce01e239d16ada"
+  },
+  "screenshots": []
+}

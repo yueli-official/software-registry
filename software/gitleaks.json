@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gitleaks",
+  "name": "Gitleaks",
+  "homepage": "https://github.com/gitleaks/gitleaks",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gitleaks",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_windows_x32.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_darwin_x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_linux_x64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitleaks/gitleaks",
+          "assetPattern": "gitleaks_{version}_linux_x32.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "检查项目与 Git 历史里误提交的密钥和令牌。",
+  "description": "Gitleaks 是独立的秘密信息检查工具，可以扫描 Git 历史、本地目录或标准输入，定位符合规则的凭据内容。适合开发者在提交和发布前检查项目，不会替代密钥撤销与权限管理。\n\n### 源码与许可\n当前条目提供 8.30.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/gitleaks/gitleaks/tree/83d9cd684c87d95d656c1458ef04895a7f1cbd8e) · [许可原文](https://github.com/gitleaks/gitleaks/blob/83d9cd684c87d95d656c1458ef04895a7f1cbd8e/LICENSE)。",
+  "usageInstructions": "1. 解压官方 ZIP 或 tar.gz，把 gitleaks 加入 PATH。\n2. 运行 gitleaks --help 查看当前版本子命令。\n3. 在自己的 Git 项目目录运行 gitleaks git .。\n4. 查看命中位置并人工确认是否确为秘密；按项目需求配置规则或忽略已核实的误报。\n5. 若发现有效凭据，按对应服务流程撤销或轮换，再处理仓库中的残留。",
+  "faq": "找到问题会自动撤销密钥吗？不会，需到对应服务处理。\n扫描结果都是真实泄露吗？需结合上下文人工确认，规则可能误报。",
+  "documentationUrl": "https://github.com/gitleaks/gitleaks/blob/83d9cd684c87d95d656c1458ef04895a7f1cbd8e/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#2463a5\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">GL</text></svg>",
+    "sha256": "eeade02e3bbcc765e1d9cfdb55a40a06f60c2969bcdd78130cfb4e32b1448759",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。标记GL，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

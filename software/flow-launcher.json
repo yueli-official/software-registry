@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flow-launcher",
+  "name": "Flow Launcher",
+  "homepage": "https://flowlauncher.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "flow-launcher",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "Windows 启动与搜索工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Flow-Launcher/Flow.Launcher/5da5103df70632485a72ce0dec81d5f4df9faa57/Artworks/Logo/logo.ico",
+    "sha256": "10d0d8ef4bca985080d0ffa8178451c408840d3ba0da66342ce9a7048febb0e3",
+    "mime": "image/x-icon"
+  },
+  "description": "Flow Launcher 用于Windows 启动与搜索。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 运行后按 Alt+Space 打开搜索框。输入应用、文件名或关键词并选择结果；在设置中管理快捷键和插件。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "productivity",
+  "screenshots": []
+}

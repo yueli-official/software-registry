@@ -1,0 +1,89 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "deskflow",
+  "name": "Deskflow",
+  "homepage": "https://deskflow.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "deskflow",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deskflow/deskflow",
+          "assetPattern": "deskflow-{version}-debian-trixie-aarch64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deskflow/deskflow",
+          "assetPattern": "deskflow-{version}-debian-trixie-x86_64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deskflow/deskflow",
+          "assetPattern": "deskflow-{version}-macos-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "deskflow/deskflow",
+          "assetPattern": "deskflow-{version}-macos-x86_64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在多台电脑之间共享一套键盘和鼠标。",
+  "description": "Deskflow：在多台电脑之间共享一套键盘和鼠标。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在两台设备安装并启动 Deskflow，指定服务器端与客户端。按电脑摆放位置设置屏幕布局，确认连接后测试鼠标跨屏与键盘输入。\n\n### 其他平台安装\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "productivity",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/deskflow/deskflow/081f6478e654a112168879e67a41ce7d7e4ae3af/deploy/linux/org.deskflow.deskflow.png",
+    "sha256": "c96d6ea055fdcdeabc06d4768c72c675996ef33e3b937f13b7bf67d7f2900f6c"
+  },
+  "screenshots": []
+}

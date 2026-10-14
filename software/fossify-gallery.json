@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fossify-gallery",
+  "name": "Fossify Gallery",
+  "homepage": "https://github.com/FossifyOrg/Gallery",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FossifyOrg/Gallery",
+          "assetPattern": "gallery-28-foss-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "浏览、整理手机照片与视频，支持基础编辑、隐藏和回收站。",
+  "description": "Fossify Gallery 是 Android 开源相册，可按文件夹浏览照片和视频，并进行裁切、旋转、缩放、绘画等基础编辑。支持隐藏内容、应用或相册访问保护、回收站和界面主题设置，没有广告。支持的媒体格式及实际解码能力取决于应用与系统，不把回收站当成完整备份。\n\n此条目提供官方 1.13.1 完整原 APK，包含四种已核实的原生 ABI，保留原签名和 GPL-3.0 及组件许可。对应源码：https://github.com/FossifyOrg/Gallery/tree/1.13.1 ，原许可材料见 fossify-gallery-1.13.1-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 gallery APK，首次打开按 Android 提示允许访问需要浏览的照片和视频。\n2. 从文件夹列表打开相机或测试图片目录，点击一张图片浏览，尝试缩放和切换。\n3. 先用一张副本测试编辑：裁切或旋转后保存，重新打开确认结果。\n4. 按需要调整文件夹排序、显示隐藏项目或主题；使用访问保护时保存好自己设置的解锁方式。\n5. 在测试副本上了解回收站与恢复流程，重要照片另外备份；导出或分享前确认选中的文件。",
+  "faq": "为什么看不到照片？检查 Android 照片权限、选择的目录和隐藏项目设置。\n回收站能代替备份吗？不能，清空或超过保留期限后可能无法恢复。\n支持哪些格式？官方列出常见图片和视频格式，具体文件能否打开也取决于编码和设备。",
+  "documentationUrl": "https://github.com/FossifyOrg/Gallery/blob/1.13.1/README.md",
+  "category": "graphics",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"29\" fill=\"#376656\">Fossify Gallery</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Gallery</text></svg>",
+    "sha256": "a36730a6b669f44d09b691e6e2c2a0f68b7f6a8ec568b53f1ba1f8dbddba2dea",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

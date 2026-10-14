@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "aneko",
+  "name": "ANeko",
+  "homepage": "https://aneko.pwhs.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "pass-with-high-score/ANeko",
+          "assetPattern": "app-release.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "安卓桌宠工具。",
+  "icon": {
+    "url": "https://aneko.pwhs.app/aneko/icon.png",
+    "sha256": "f0a00c3dd649cfd79935cb24bc347fb281a898e30f4bcaa07ad4611bb3c6aa7e",
+    "mime": "image/png"
+  },
+  "description": "ANeko 用于安卓桌宠。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装后按说明授予显示桌宠所需权限，启用桌宠并设置样式。测试桌面显示效果，需要时从软件设置停止。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/pass-with-high-score/ANeko/blob/main/README.md",
+  "category": "mobile",
+  "screenshots": []
+}

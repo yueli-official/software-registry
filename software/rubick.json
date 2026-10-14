@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rubick",
+  "name": "Rubick",
+  "homepage": "https://rubickcenter.github.io/docs",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rubickCenter/rubick",
+          "assetPattern": "rubick-Setup-*-x64.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rubickCenter/rubick",
+          "assetPattern": "rubick-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rubickCenter/rubick",
+          "assetPattern": "rubick-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rubickCenter/rubick",
+          "assetPattern": "rubick_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "启动与搜索工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rubickCenter/rubick/d2f3f347af9a1104fd92d19c78b849c710dc275f/public/icons/icon.ico",
+    "sha256": "4c3744209b47bc1f76e9f96b4a0c472d497cec95c9af4471350fab0a8cdbb2f8",
+    "mime": "image/x-icon"
+  },
+  "description": "Rubick 用于启动与搜索。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 运行后打开搜索框，输入应用或插件关键词。在插件管理中选择所需插件并按提示配置。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "productivity",
+  "screenshots": []
+}

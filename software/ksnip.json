@@ -1,0 +1,65 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ksnip",
+  "name": "ksnip",
+  "homepage": "https://github.com/ksnip/ksnip",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ksnip",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ksnip/ksnip",
+          "assetPattern": "ksnip-1.10.1.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ksnip/ksnip",
+          "assetPattern": "ksnip-1.10.1-x86_64.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "跨平台截图与标注工具，支持区域截图、延时截图、箭头、文字和模糊处理。",
+  "description": "Ksnip 是采用Qt的跨平台截图工具，支持区域、屏幕及部分窗口截图，提供箭头、文字、编号、绘图等标注功能，以及延时截图和对已有图片的标注。适合制作教程、反馈软件问题和整理办公截图。\n\n此条目提供未修改的官方1.10.1原包：Windows x64完整便携ZIP、Mac Intel DMG、Linux x64 AppImage；本版本没有Apple Silicon专用成品，不把Intel包标为ARM64。不同Linux桌面环境的截图范围会有区别，Wayland可能通过系统截图门户请求确认。主程序原源码明确GPL-2.0-or-later，Copyright 2017 Damir Porobic；原许可和组件通知保留在ksnip-1.10.1-LICENSES.zip，对应源码：https://github.com/ksnip/ksnip/tree/v1.10.1 。该稳定版发布较早，不使用continuous开发构建代替。",
+  "usageInstructions": "1. Windows完整解压ZIP后运行ksnip.exe，保留随包DLL和资源。Mac Intel打开DMG并将应用放入Applications。Linux给AppImage添加执行权限后运行，例如chmod +x ksnip-1.10.1-x86_64.AppImage。\n2. 打开应用，选择“新建”中的区域截图，拖动选择需要的画面；如需截图弹出菜单，可先设置截图延时。\n3. 用工具栏的箭头、文字或编号说明重点；也可以打开一张已有图片后添加标注。\n4. 保存到自己的文件夹，检查输出图片。只有准备好分享内容时，才使用应用提供的上传功能。\n5. Mac首次截图按系统提示授予屏幕录制权限；Wayland下按系统截图门户确认，实际可用截图类型以当前桌面环境为准。",
+  "faq": "可以只拿Windows EXE运行吗？需要完整保留同目录的运行库和资源。\n能给已有图片做标注吗？可以先打开图片，再使用标注工具，保存新的输出。\n为什么不同Linux桌面的截图选项不一样？固定官方README列明X11、各Wayland桌面和截图门户的支持范围存在差异。\n有没有Mac ARM64版？当前条目固定1.10.1正式Release只提供已核实Intel主程序的DMG。",
+  "documentationUrl": "https://github.com/ksnip/ksnip/blob/v1.10.1/README.md",
+  "category": "capture",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">ksnip</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Screenshot Tool</text></svg>",
+    "sha256": "3bb7b144a320a35a5623592078d35d7a15407514dee8004ef31463e7d76330cc",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

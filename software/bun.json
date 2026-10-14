@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bun",
+  "name": "Bun",
+  "homepage": "https://bun.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-windows-x64-baseline.zip",
+          "tagPrefix": "bun-v"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-windows-aarch64.zip",
+          "tagPrefix": "bun-v",
+          "tagTemplate": "bun-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-darwin-x64-baseline.zip",
+          "tagPrefix": "bun-v",
+          "tagTemplate": "bun-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-darwin-aarch64.zip",
+          "tagPrefix": "bun-v",
+          "tagTemplate": "bun-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-linux-x64-baseline.zip",
+          "tagPrefix": "bun-v",
+          "tagTemplate": "bun-v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "oven-sh/bun",
+          "assetPattern": "bun-linux-aarch64.zip",
+          "tagPrefix": "bun-v",
+          "tagTemplate": "bun-v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "统一运行 JavaScript/TypeScript，安装依赖并执行测试。",
+  "icon": {
+    "url": "https://github.com/user-attachments/assets/50282090-adfd-4ddb-9e27-c30753c6b161",
+    "sha256": "27ab4521273fad2419fdbc3071ece3c7c6b964637ae28265163337f258593b97",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "Bun 官方 Press kit 允许产品展示，保持原色、比例和内容，不增加修饰；https://bun.sh/press-kit 原来源 https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/README.md"
+  },
+  "description": "Bun 是独立的 JavaScript/TypeScript 运行时和命令行工具，集成包管理、脚本执行、测试与打包。适合前端工程、脚本和服务端开发；Node.js 生态的具体兼容程度应以项目实测及官方文档为准。\n\n### 源码与许可\n当前条目提供 1.4.2 官方原包。主项目许可：MIT（含 LGPL 与其他许可组件）；独立组件遵循各自许可。[固定版本源码](https://github.com/oven-sh/bun/tree/744846f844374847c902b5e7fd59b4342a51ef99) · [许可和通知](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/LICENSE.md)。\n\n产品图标来自 Bun 官方资料，按[官方图标规范](https://bun.sh/press-kit)保留原色与比例，仅用于标识本产品。",
+  "usageInstructions": "1. 解压对应系统和处理器的官方 ZIP，把 bun 程序所在目录加入 PATH。\n2. 在终端运行 bun --version，确认当前使用的程序版本。\n3. 在测试项目目录运行 bun init，或在现有项目内按文档运行 bun install。\n4. 用 bun run 执行 package.json 脚本，用 bun test 执行项目测试。\n5. 当前条目 x64 使用官方 baseline 包；系统及 CPU 条件参见官方安装文档。",
+  "faq": "是 JavaScript 库吗？这是可以独立安装和运行的工具与运行时。\n可以直接替代所有 Node.js 项目吗？先核对依赖与运行结果，兼容情况以具体项目为准。",
+  "documentationUrl": "https://bun.com/docs",
+  "category": "developer",
+  "screenshots": []
+}

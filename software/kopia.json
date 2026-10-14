@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "kopia",
+  "name": "Kopia",
+  "homepage": "https://github.com/kopia/kopia",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kopia/kopia",
+          "assetPattern": "KopiaUI-{version}-win.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kopia/kopia",
+          "assetPattern": "KopiaUI-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kopia/kopia",
+          "assetPattern": "KopiaUI-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kopia/kopia",
+          "assetPattern": "kopia-ui_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "kopia/kopia",
+          "assetPattern": "kopia-ui_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用图形界面创建加密快照，管理并恢复文件备份。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/kopia/kopia/72ec08fd8edb86c67ed27099bf1b955e1f308ffa/icons/kopia-app-1024.png",
+    "sha256": "775753698e5d5c349dc14b3d2664bd6df998396e838cd045abadf933ea49cb64",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/kopia/kopia/blob/72ec08fd8edb86c67ed27099bf1b955e1f308ffa/icons/kopia-app-1024.png"
+  },
+  "description": "Kopia 是开源备份工具，支持加密、去重、压缩和快照策略。当前条目提供 KopiaUI 图形界面官方成品，可连接本地目录或支持的存储仓库，适合管理个人文件和定期备份。\n\n### 源码与许可\n当前条目提供 0.23.1 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/kopia/kopia/tree/72ec08fd8edb86c67ed27099bf1b955e1f308ffa) · [许可原文](https://github.com/kopia/kopia/blob/72ec08fd8edb86c67ed27099bf1b955e1f308ffa/LICENSE)。",
+  "usageInstructions": "1. Windows 解压官方 KopiaUI ZIP；Mac 打开 DMG；Debian/Ubuntu 安装对应 DEB。\n2. 启动 KopiaUI，创建或连接一个备份仓库并保存仓库密码。\n3. 先选择一个测试目录，创建快照并查看完成结果。\n4. 从快照恢复文件到另一个目录，核对内容。\n5. 确认恢复成功后再配置正式备份目录、保留策略和自动快照。",
+  "faq": "这个下载有图形界面吗？当前条目选择 KopiaUI 成品，不把纯命令行包当图形版。\n备份完成就能删除原件吗？先验证恢复并保留所需冗余，再按自己的存储计划处理。",
+  "documentationUrl": "https://github.com/kopia/kopia/blob/72ec08fd8edb86c67ed27099bf1b955e1f308ffa/README.md",
+  "category": "files",
+  "screenshots": []
+}

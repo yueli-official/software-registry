@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "grepwin",
+  "name": "grepWin",
+  "homepage": "https://tools.stefankueng.com/grepWin.html",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "grepwin",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "grepwin",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ],
+  "summary": "在Windows中按文字或正则搜索文件，并批量替换内容。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/stefankueng/grepWin/2bc143c0b10e379a3b7f69632bb0d238b8d7bf73/src/Resources/logo.png",
+    "sha256": "c66cbe68ab9a05ab10057aaf2694064a558871c539d9e710acee7fe0008bca83",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "已实际预览官方产品资源src/Resources/logo.png，不是头像或广告；固定提交与摘要，版本原LICENSE和当前根许可文本一致，资源目录无独立许可例外。保留官方项目来源与根GPL-3.0，仅转换为WebP。"
+  },
+  "description": "grepWin 提供图形化文件内容搜索和替换，可限定目录、文件类型、大小和日期，适合查找配置、代码及文本资料。支持普通文字和正则表达式，不需要命令行。采用GPL-3.0，开发者Stefan Küng；此条目保留完整官方原包，并在同版夸克目录附原LICENSE文本。对应2.1.12源码：https://github.com/stefankueng/grepWin/tree/2.1.12 。图标与官方功能示例来自项目src/Resources，保留项目来源和根GPL许可，此条目只转换为WebP。",
+  "usageInstructions": "1. 选择Windows x64或32位原包，解压完整ZIP，运行其中带版本号的grepWin程序；同时保留当前条目夸克目录随附的LICENSES.zip。当前官网要求Windows 10 22H2或更新系统。\n2. 在Search in中选择自己的文本文件夹，选择Text search并输入普通关键词；先点击Search，只查看底部匹配文件，不执行替换。\n3. 需要正则时改用Regex search，可先用Test regex检查表达式。设置文件名、文件大小等范围后再搜索；批量替换前备份文件，确认Replace with和匹配范围，并按需启用Create backup files。",
+  "faq": "搜索会修改文件吗？Search只查找，Replace才会写入文件；初次使用先做搜索。\n支持中文吗？可以搜索中文文本；匹配结果取决于文件编码，按官网说明检查编码选项。\n为什么有些文件没有命中？查看文件名、大小、隐藏文件、子目录等筛选，正则模式和普通文本模式也会产生不同结果。\n截图是什么版本？使用官方仓库的功能示例，展示搜索表单及结果，不宣称当前版本每项外观一致。",
+  "documentationUrl": "https://tools.stefankueng.com/grepWin.html",
+  "category": "system",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/stefankueng/grepWin/2bc143c0b10e379a3b7f69632bb0d238b8d7bf73/src/Resources/grepWin_search.png",
+      "sha256": "cdcb51400281afce49181b27038e11bd60f810cdaa842e75ea27ac133b515149",
+      "mime": "image/png",
+      "caption": "官方功能示例：限定目录及文件范围，并查看关键词搜索结果",
+      "sourcePage": "https://github.com/stefankueng/grepWin/blob/2bc143c0b10e379a3b7f69632bb0d238b8d7bf73/src/Resources/grepWin_search.png",
+      "licenseEvidence": "官方src/Resources内功能图，已核固定根GPL-3.0及该资源目录无独立许可例外；原许可：https://github.com/stefankueng/grepWin/blob/2bc143c0b10e379a3b7f69632bb0d238b8d7bf73/LICENSE 。画面展示公开TortoiseSVN源码目录及文件名，不含凭据、私人消息或第三方插画，保留Stefan Küng和官方来源。",
+      "provenance": "已实际预览官方历史功能示例，展示搜索表单与结果；非维护者实测，不保证与2.1.12每项外观一致。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bcuninstaller",
+  "name": "BCUninstaller",
+  "homepage": "https://www.bcuninstaller.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "bulk-crap-uninstaller",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "bulk-crap-uninstaller",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "查看已装程序，批量卸载并检查卸载后残留。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/BCUninstaller/Bulk-Crap-Uninstaller/30da609384c98ba6e35c6530129541ea4ff3970a/source/BulkCrapUninstaller/Resources/logo.ico",
+    "sha256": "e64650a06deddbb96acbe7317aba95a99d0622e756598c9bcea6b5a4e6aec94c",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "实际预览原ICO内256x256 PNG：黑白B八边形官方产品标识，不是NBug或其他子项目图标。固定官方应用资源，根Apache-2.0，保留原包通知与官方来源；仅转换为WebP。"
+  },
+  "description": "Bulk Crap Uninstaller（BCUninstaller、BCU）用于整理Windows中的已安装程序，支持搜索、过滤、批量调用卸载程序和检查残留。适合清理不再需要的软件，也可先浏览列表了解程序来源。当前条目采用6.3.0完整portable原包，附带.NET运行时；同一原包包含win-x64和win-arm64两个目录，不拆包或修改字节。主体采用Apache-2.0，保留原Licence.txt、NOTICE及NBug等组件通知；项目经理和主要开发者为Marcin Szeniak。对应源码：https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/tree/v6.3 。产品图标来自官方应用Resources/logo.ico，使用根Apache-2.0。官方主窗口历史示例来自官网gh-pages分支，该分支也采用Apache-2.0，保留作者和来源，此条目仅转换为WebP。",
+  "usageInstructions": "1. 使用Windows 10或更新系统，将完整portable 7z解压到自己的工具目录；x64机器进入win-x64，Windows ARM64机器进入win-arm64，运行BCUninstaller.exe。保留随附运行时、Licence.txt、NOTICE和其他文件，不仅复制EXE。\n2. 等待软件列表扫描完成，先用搜索或筛选找到自己确认不再需要的程序；核对名称、发布者和安装位置，不按颜色直接判断必须删除。\n3. 选中目标后使用Uninstall，按向导核对卸载列表并调用原卸载程序。残留检查结果需要自己确认，操作前保存相关数据，首次使用先只卸载一款熟悉的软件。",
+  "faq": "需要另外安装.NET吗？当前条目完整portable包包含运行时；官方net精简包另需.NET 8，当前条目不把它当完整portable分发。\n官网说旧Windows也能用？官网部分要求描述的是旧版本，当前6.x官方README要求Windows 10及更新系统；不要将旧版要求套到当前条目。\n为什么两个Windows架构下载同一个文件？官方完整原包自带win-x64与win-arm64，此条目保留原档案并按真实主程序架构提供两个槽位，不重复重打包。\n截图怎么写着4.16？使用官网官方历史功能示例，展示软件列表和筛选，不冒充6.3.0实测或当前界面。",
+  "documentationUrl": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/blob/master/doc/BCU_manual.html",
+  "category": "system",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/BCUninstaller/Bulk-Crap-Uninstaller/e591e730436389077e7c2371b1dabe3cf36dcfad/assets/1.png",
+      "sha256": "94502c74d0d1e80c74c0ac861f181c5227cd4dc841ab3f0dcde95f4798fb2dea",
+      "mime": "image/png",
+      "caption": "官方历史示例（4.16）：已装软件列表、筛选与卸载入口",
+      "sourcePage": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/blob/e591e730436389077e7c2371b1dabe3cf36dcfad/assets/1.png",
+      "licenseEvidence": "官网gh-pages图片，已核同分支原LICENSE为Apache-2.0：https://raw.githubusercontent.com/BCUninstaller/Bulk-Crap-Uninstaller/e591e730436389077e7c2371b1dabe3cf36dcfad/LICENSE；正文保留Marcin Szeniak及项目来源。画面为官方演示的软件列表，无私人凭据或第三方插画；应用名称和小图标仅作为界面的一部分，不作为维护者产品标识。",
+      "provenance": "已实际预览官方功能图，无凭据或私人消息；历史示例不冒充当前版本维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

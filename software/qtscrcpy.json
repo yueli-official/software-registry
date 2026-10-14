@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qtscrcpy",
+  "name": "QtScrcpy",
+  "homepage": "https://blog.csdn.net/rankun1/article/details/87970523",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qtscrcpy",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "barry-ran/QtScrcpy",
+          "assetPattern": "QtScrcpy-mac-arm64-Qt6.5.3-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "barry-ran/QtScrcpy",
+          "assetPattern": "QtScrcpy-mac-x64-Qt5.15.2-v{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "barry-ran/QtScrcpy",
+          "assetPattern": "QtScrcpy-ubuntu-x64-v{version}.AppImage",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "安卓投屏工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/barry-ran/QtScrcpy/f90e2259ea6745c30fc242f501a0210771288f8a/backup/logo.png",
+    "sha256": "a96a81cee07375eaed07d927e67dbeb1f2d3c9e0c3791d5d14156bd03bf73371",
+    "mime": "image/png"
+  },
+  "description": "QtScrcpy 用于安卓投屏。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 安装所需设备驱动，在 Android 手机开启 USB 调试并连接电脑。确认手机授权，选择设备后启动投屏；先测试 USB 连接再配置无线。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：为 AppImage 添加可执行权限后打开；发行版依赖以官方文档为准。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "network",
+  "screenshots": []
+}

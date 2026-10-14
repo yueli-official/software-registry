@@ -1,0 +1,33 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "weasel",
+  "name": "小狼毫",
+  "homepage": "https://rime.im/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "rime/weasel",
+          "assetPattern": "weasel-*-installer.exe"
+        }
+      }
+    }
+  ],
+  "summary": "基于 Rime 输入法引擎的 Windows 中文输入法。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rime/weasel/d73f6295e8252ed2f7b9c12bae32e9001b1afdaa/resource/weasel.ico",
+    "sha256": "6e48e0091cc04893e0c382b491cea854ac428ef40872306b942f26f805ab0ee6",
+    "mime": "image/x-icon"
+  },
+  "description": "小狼毫：基于 Rime 输入法引擎的 Windows 中文输入法。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 安装后切换到小狼毫输入法，选择所需输入方案。修改配置后执行重新部署，再在文本框测试；修改前备份用户配置。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "productivity",
+  "screenshots": []
+}

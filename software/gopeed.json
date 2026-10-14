@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gopeed",
+  "name": "Gopeed",
+  "homepage": "https://gopeed.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "gopeed",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GopeedLab/gopeed",
+          "assetPattern": "Gopeed-v{version}-android.apk",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GopeedLab/gopeed",
+          "assetPattern": "Gopeed-v{version}-linux-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GopeedLab/gopeed",
+          "assetPattern": "Gopeed-v{version}-linux-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "GopeedLab/gopeed",
+          "assetPattern": "Gopeed-v{version}-macos.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/GopeedLab/gopeed/224b4880871f8d7a87c16a3d4daca31546f0ca80/ui/flutter_old/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png",
+    "sha256": "7cc2e23bdfae976a35c4d5afe74dfd9c3c1a0c74c595ef6a36820a224bca5ff2",
+    "mime": "image/png"
+  },
+  "description": "Gopeed 用于下载工具。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 新建下载任务并粘贴文件链接。选择保存目录开始下载，在任务列表检查进度与失败原因。\n\n### 其他平台安装\n- Android universal：在 Android 设备打开 APK，按系统提示允许当前安装来源并安装；安装后可关闭该来源权限。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS universal：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "files",
+  "screenshots": []
+}

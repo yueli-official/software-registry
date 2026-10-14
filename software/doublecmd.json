@@ -1,0 +1,131 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "doublecmd",
+  "name": "Double Commander",
+  "homepage": "https://doublecmd.sourceforge.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "doublecmd",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "doublecmd",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "doublecmd/doublecmd",
+          "assetPattern": "doublecmd-{version}.cocoa.x86_64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "doublecmd/doublecmd",
+          "assetPattern": "doublecmd-{version}.cocoa.aarch64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "doublecmd/doublecmd",
+          "assetPattern": "doublecmd-{version}.gtk2.x86_64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "doublecmd/doublecmd",
+          "assetPattern": "doublecmd-{version}.gtk2.aarch64.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "doublecmd/doublecmd",
+          "assetPattern": "doublecmd-{version}.gtk2.i386.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用双栏界面复制、移动、搜索文件，并支持批量改名。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/doublecmd/doublecmd/d469abae372f264c1ecd301670381b02edb7a2ea/src/doublecmd.ico",
+    "sha256": "12ad5384b2132dc70568e8df586df9cf2c3d1e131b8b533062e73854a6cce066",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方产品资源src/doublecmd.ico实际预览并核根GPL-2.0及精确1.2.9图标Blob一致，保留项目作者及原许可。维护者只转换为WebP。"
+  },
+  "description": "Double Commander 是跨平台文件管理器，用左右文件面板处理目录，支持标签页、内置查看器、文件内容搜索、批量重命名和压缩包操作，适合整理下载、文档及项目文件。它是独立开源项目，受Total Commander启发；此条目提供1.2.9的Windows x64/32位、Mac Intel/Apple Silicon、Linux x64/ARM64/32位七个完整原包。主程序采用GPL-2.0，FPC、Lazarus及随附插件保留各自许可与原doc通知；来源及源码：https://github.com/doublecmd/doublecmd/tree/v1.2.9 。红色DC产品图标来自固定官方src资源，保留Double Commander作者与根GPL许可；批量改名示例来自官方手册，手册声明与程序相同条款，此条目只转换为WebP。",
+  "usageInstructions": "1. Windows解压与x64/32位系统对应的完整ZIP并运行doublecmd.exe，保留doc、插件及语言资源；Mac打开对应Intel或Apple Silicon的DMG，按官方说明安装应用。Linux解压对应x64、ARM64或32位的GTK2 tar.xz，保留完整doublecmd目录，配置适合该架构的GTK2系统依赖，再使用原包启动入口。\n2. 在左侧打开自己的源目录，在右侧打开目标目录，用Tab或鼠标切换面板；选中一个测试文件按F5复制，确认目标路径，再打开目标文件核对。F6用于移动，先在副本上熟悉操作。\n3. 批量改名前选中少量测试文件，打开Multi-Rename Tool，先查看旧名、新名和计数预览，确认后执行；重要文件保留备份。\n4. 用F3查看文件、F4调用编辑功能，按官方手册配置搜索、标签、同步目录和插件。网络协议及额外插件按需要单独配置，不把所有Total Commander插件兼容当作保证。",
+  "faq": "它就是Total Commander吗？不是，是独立的开源文件管理器，两者插件兼容能力以官方说明为准。\nLinux为什么有多种GUI包？官方提供GTK和Qt变体，当前条目固定GTK2同版原包，不混淆其依赖与Qt版本。\n复制会覆盖同名文件吗？依照实际确认对话选择处理方式，操作前核对目标目录并保留重要数据备份。\n官方截图与我的主题不同正常吗？图为官方手册功能示例，操作系统、主题和版本可能使外观不同。",
+  "documentationUrl": "https://doublecmd.github.io/doc/en/",
+  "category": "files",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/doublecmd/doublecmd.github.io/0cb97927f3e06f7885f519aa9e959414a975c37a/doc/en/images/imgDC/pic21.png",
+      "sha256": "d7b13bca0c2a6ca4c4bfe6a65c3f2fb89cda0ad5a3e208399baceea75d2ec634",
+      "mime": "image/png",
+      "caption": "官方手册示例：批量重命名并预览新旧文件名",
+      "sourcePage": "https://github.com/doublecmd/doublecmd.github.io/blob/0cb97927f3e06f7885f519aa9e959414a975c37a/doc/en/images/imgDC/pic21.png",
+      "licenseEvidence": "官方独立Help仓库的文件批量改名示例，精确固定doc/en/index.html声明手册与Double Commander相同条款，根程序GPL-2.0已核；只显示四个示例文件名和公开通用路径，无图片内容或凭据。保留Double Commander作者与来源/原许可。条款：https://github.com/doublecmd/doublecmd.github.io/blob/0cb97927f3e06f7885f519aa9e959414a975c37a/doc/en/index.html 。",
+      "provenance": "实际预览官方文档功能示例，非维护者实测截图，不宣称与当前系统主题或所有版本外观一致。",
+      "reviewed": true
+    }
+  ]
+}

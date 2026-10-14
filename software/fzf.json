@@ -1,0 +1,106 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fzf",
+  "name": "fzf",
+  "homepage": "https://github.com/junegunn/fzf",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fzf",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fzf",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "junegunn/fzf",
+          "assetPattern": "fzf-*-darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "junegunn/fzf",
+          "assetPattern": "fzf-*-darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "junegunn/fzf",
+          "assetPattern": "fzf-*-linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "junegunn/fzf",
+          "assetPattern": "fzf-*-linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互搜索文件、历史命令和文本列表。",
+  "description": "fzf 是命令行模糊搜索工具，可以将文本列表变成可输入关键词、移动选择并返回结果的终端界面。适合经常使用终端的开发者和进阶用户，可与文件查找、Shell 历史及自定义脚本配合。它是可独立运行的终端程序，此条目按一款软件统计；需要打开终端使用。\n\n此条目提供官方0.74.4的Windows/Mac/Linux各AMD64与ARM64原包。MIT许可及作者Junegunn Choi原署名保留，对应源码：https://github.com/junegunn/fzf/tree/v0.74.4 ，原项目、依赖及运行时通知见fzf-0.74.4-LICENSES.zip。",
+  "usageInstructions": "1. Windows 解压与你电脑架构对应的原 ZIP，在该目录打开 PowerShell；Mac/Linux 解压相应原 tar.gz，进入含 fzf 的目录。需要从其他目录调用时再将该目录加入 PATH。\n2. 先用测试列表体验：PowerShell 输入 \"apple\", \"banana\", \"cherry\" | .\\fzf.exe；Mac/Linux 输入 printf \"%s\\n\" apple banana cherry | ./fzf。输入 ban 筛选，再用方向键选择并按 Enter，终端会输出选中的 banana；按 Esc 退出。\n3. 确认基本搜索正常后，再按官方文档设置 Bash、Zsh、Fish 或 PowerShell 集成。快捷键、文件预览和历史搜索需要相应 Shell 或配置，不把官方带预览的截图当成下载后默认效果。\n4. 使用 --help 查看参数，修改 Shell 配置前保留副本。初次不要把选择结果直接接到删除或覆盖文件的命令。",
+  "faq": "双击后为什么没有窗口？这是终端程序，请在 PowerShell 或其他终端里运行。\n截图中的右侧预览是默认效果吗？预览需要配置 --preview 命令并满足相关工具条件。\n安卓包是安装 APK 吗？上游 Android tar 是终端二进制；本批桌面槽位不把它当成手机安装包。\n是否提供所有 CPU 和 BSD 包？上游还有其他架构与 BSD 包，查看官方发行页；此条目本批核验 Windows/Mac/Linux 的 AMD64 和 ARM64。",
+  "documentationUrl": "https://github.com/junegunn/fzf/tree/v0.74.4#usage",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">fzf</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Terminal Search</text></svg>",
+    "sha256": "d93234f55133ca822f903efa2d0784442c78e57769fdcb56175123e6017df45b",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

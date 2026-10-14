@@ -1,0 +1,62 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sumatrapdf",
+  "name": "SumatraPDF",
+  "homepage": "https://www.sumatrapdfreader.org/free-pdf-reader",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sumatrapdf",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sumatrapdf",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sumatrapdf",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "轻量的Windows PDF、电子书和漫画阅读器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/sumatrapdfreader/sumatrapdf/9421763f712055a1de627d969c1da7a1e166d4b1/src/gfx/appx/SumatraPDF_StoreLogo_150x150.png",
+    "sha256": "6324274b97ae6b44effbbfcd84a4d0917d04647aba0c0b68894ad8c860653777",
+    "mime": "image/png",
+    "provenance": "实际预览官方黄色PDF产品图。v3.6.1rel AUTHORS明确Windows产品图标由Alex创作并适用独立CC BY3，不以代码GPL替代图标许可；正文保留作者、来源、许可及WebP转换说明。"
+  },
+  "description": "SumatraPDF 是Windows上的轻量文档阅读器，可打开PDF、EPUB、MOBI、CBZ、CBR、FB2、CHM、XPS和DjVu等格式，适合日常看文档、电子书与漫画。提供便携版，解压后可直接打开文件。项目包含多语言界面。此条目保留官方3.6.1原包；主要代码适用GPL-3.0，部分代码为BSD，MuPDF使AGPL-3.0相关条款同时适用，其他组件见官方AUTHORS。对应完整源码及原许可：https://github.com/sumatrapdfreader/sumatrapdf/tree/3.6.1rel 。\n\n同一夸克版本目录提供SumatraPDF-3.6.1-LICENSES.zip，收录原始AUTHORS、COPYING、COPYING.BSD和mupdf/COPYING，随原包保留；软件原ZIP未重新打包。\n\n产品图标作者Alex（Zenon），CC BY 3.0：https://creativecommons.org/licenses/by/3.0/ 。来源为SumatraPDF官方产品资源，署名及许可依据：https://github.com/sumatrapdfreader/sumatrapdf/blob/3.6.1rel/AUTHORS 。此条目仅转换为WebP，保留来源和署名。",
+  "usageInstructions": "1. Windows按自己的系统架构选择x64、ARM64或32位原版ZIP，解压后运行SumatraPDF程序；便携版无需安装。同目录的许可资料包随软件保留。\n2. 在菜单中打开自己的PDF、电子书或漫画文件，也可将文件拖入窗口；使用翻页、缩放和搜索查看内容。\n3. 按需要调整阅读视图和界面语言，从官方文档查阅快捷键及设置。需要批注、编辑PDF正文或复杂转换时，先确认工具是否支持对应功能。",
+  "faq": "便携版必须安装吗？此条目提供官方便携ZIP，完整解压后直接运行；也可在官网取得安装版。\n支持Mac或安卓吗？这个产品的官方成品针对Windows，此条目不虚构其他系统版本。\n为什么有三种Windows包？分别核对为x64、ARM64和x86，按系统架构选择即可。\n它能直接编辑PDF正文吗？它主要是阅读器，正文编辑等需求应查看官方功能说明。",
+  "documentationUrl": "https://www.sumatrapdfreader.org/docs/SumatraPDF-documentation",
+  "category": "reading",
+  "screenshots": []
+}

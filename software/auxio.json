@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "auxio",
+  "name": "Auxio",
+  "homepage": "https://github.com/OxygenCobalt/Auxio",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OxygenCobalt/Auxio",
+          "assetPattern": "Auxio_v{version}.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "轻量本地音乐播放器，管理手机音乐库、专辑与播放列表。",
+  "description": "Auxio 是 Android 本地音乐播放器，支持专辑和艺术家整理、播放列表、无缝播放及 ReplayGain 等功能。它播放你已有的音乐文件，不提供在线音乐曲库。官方固定版本最低 Android 7.0，音频权限和可读取目录取决于系统版本及设置。\n\n此条目提供官方 4.1.5 原 APK；主项目 GPL-3.0，组件保留各自许可。对应精确版本源码：https://github.com/OxygenCobalt/Auxio/tree/v4.1.5 ，原许可材料见 auxio-4.1.5-LICENSES.zip。",
+  "usageInstructions": "1. 下载并安装官方 APK，先把一两首你已有的音乐文件放在手机可读取的音乐目录。\n2. 打开 Auxio，按系统提示允许读取音乐或音频文件；如果使用 SD 卡，按设置选择相应目录。\n3. 等待音乐库扫描完成，在歌曲或专辑列表找到测试文件并播放，确认声音和歌曲信息。\n4. 将歌曲加入播放队列或播放列表，尝试切换专辑、搜索艺术家和调整排序。\n5. 新增文件后重新扫描音乐库；歌曲信息不正确时检查文件标签，其他播放选项按官方 Wiki 配置。",
+  "faq": "为什么没有歌曲？检查手机是否已有可读音乐文件、音频权限及扫描目录。\n提供在线歌曲下载吗？当前条目介绍的核心功能是本地播放，需要自备音频文件。\n适合哪些系统？固定版本官方 README 标注 Android API 24 及以上。",
+  "documentationUrl": "https://github.com/OxygenCobalt/Auxio/wiki",
+  "category": "media",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">Auxio</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Music Player</text></svg>",
+    "sha256": "988a21a8a4db2aabb291d4c46b3b4fa5c9d75549bd99a73de894a37ba67ce55a",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

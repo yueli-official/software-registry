@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "imfile",
+  "name": "imFile",
+  "homepage": "https://github.com/imfile-io/imfile-desktop",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imfile-io/imfile-desktop",
+          "assetPattern": "imFile-*-x64.zip",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imfile-io/imfile-desktop",
+          "assetPattern": "imFile-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imfile-io/imfile-desktop",
+          "assetPattern": "imFile_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imfile-io/imfile-desktop",
+          "assetPattern": "imFile-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "imfile-io/imfile-desktop",
+          "assetPattern": "imFile_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "下载工具工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/imfile-io/imfile-desktop/a4ac9812294e3d0607e119fc1234e9ff4a1a229d/build/icon.ico",
+    "sha256": "287e48d94efd83af59d2439c6d94ef474a37a7d9e4fae0f0c123e6f753a9e97a",
+    "mime": "image/x-icon"
+  },
+  "description": "imFile 用于下载工具。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 添加下载链接、磁力链接或种子，选择保存目录。开始任务后查看进度并调整速度限制。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- Linux arm64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "files",
+  "screenshots": []
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "crystaldiskinfo",
+  "name": "CrystalDiskInfo",
+  "homepage": "https://crystalmark.info/en/software/crystaldiskinfo/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "crystaldiskinfo",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "查看 HDD、SSD 和 NVMe 硬盘健康状态及 S.M.A.R.T. 信息。",
+  "icon": {
+    "url": "https://crystalmark.info/favicon.ico",
+    "sha256": "70f583e074a1e4b8e942c5586c298e7b5a7f9676400b3730eef07fc399a84c5e",
+    "mime": "image/x-icon"
+  },
+  "description": "CrystalDiskInfo：查看 HDD、SSD 和 NVMe 硬盘健康状态及 S.M.A.R.T. 信息。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开软件并选择要查看的硬盘，检查健康状态、温度和 SMART 信息。发现异常先备份数据，再安排进一步检测。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "category": "system",
+  "screenshots": []
+}

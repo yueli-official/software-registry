@@ -1,0 +1,49 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fossify-voice-recorder",
+  "name": "Fossify Voice Recorder",
+  "homepage": "https://github.com/FossifyOrg/Voice-Recorder",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "FossifyOrg/Voice-Recorder",
+          "assetPattern": "voicerecorder-18-foss-release.apk",
+          "tagPrefix": "",
+          "tagTemplate": "1.7.1"
+        }
+      }
+    }
+  ],
+  "summary": "在手机记录语音，回放和管理本地录音。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/FossifyOrg/Voice-Recorder/16031bbab5d790d87ed0926489c5a60d9afabf5d/graphics/icon.webp",
+    "sha256": "3ed5a79692ba2f6f67ff1fa14f1e28e6049fe608c6966370cb62ea7aab1ac806",
+    "mime": "image/webp",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/graphics/icon.webp"
+  },
+  "description": "Fossify Voice Recorder 是简洁的 Android 录音应用，适合语音备忘、会议片段和日常声音记录。提供录音音量显示与文件管理，实际质量取决于麦克风、环境和设置。\n\n### 源码与许可\n当前条目提供 1.7.1 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/FossifyOrg/Voice-Recorder/tree/16031bbab5d790d87ed0926489c5a60d9afabf5d) · [许可原文](https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/LICENSE)。\n\n界面图来自[官方随附资料](https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png)；原作者及许可通知见[固定版许可](https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 安装官方 APK，按需要授予麦克风及文件访问权限。\n2. 进入录音页，先录制一段自己的十秒语音。\n3. 停止录音并命名，进入播放器回听。\n4. 检查保存位置和格式后再录制长音频。\n5. 定期备份需要保留的录音，删除前核对文件。",
+  "faq": "能保证录制系统通话吗？它主要是声音录制工具，通话录音受系统限制，不能保证。\n需要音乐会员吗？本地录音不需要音乐订阅。",
+  "documentationUrl": "https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/README.md",
+  "category": "media",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/FossifyOrg/Voice-Recorder/16031bbab5d790d87ed0926489c5a60d9afabf5d/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "sha256": "9db9803b84c09b55ceed7d86c0038c9dad0f341dc43c692eca4a2380db23cf3a",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+      "caption": "Fossify Voice Recorder 官方功能界面示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png；原许可 https://github.com/FossifyOrg/Voice-Recorder/blob/16031bbab5d790d87ed0926489c5a60d9afabf5d/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "task",
+  "name": "Task",
+  "homepage": "https://github.com/go-task/task",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "task",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_windows_386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_darwin_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_darwin_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "go-task/task",
+          "assetPattern": "task_linux_386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用 Taskfile 统一运行项目中的构建和日常命令。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/go-task/task/b5aef1c287a9be8038347a17646bdf4bc7185bce/website/src/public/img/logo.svg",
+    "sha256": "31bbfbd9df5d3c426b567ee3fc71f3a345dd8d6716a3220cdc5a18447acb3008",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/go-task/task/blob/b5aef1c287a9be8038347a17646bdf4bc7185bce/website/src/public/img/logo.svg"
+  },
+  "description": "Task 是独立的任务运行工具，用 YAML Taskfile 配置命令、依赖和变量，适合简化项目常用操作；它不是待办事项应用。\n\n### 源码与许可\n当前条目提供 3.54.0 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/go-task/task/tree/b5aef1c287a9be8038347a17646bdf4bc7185bce) · [许可原文](https://github.com/go-task/task/blob/b5aef1c287a9be8038347a17646bdf4bc7185bce/LICENSE)。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 task 加入 PATH，运行 task --help 查看本版用法。\n3. 在自己的测试目录创建 Taskfile.yml，定义一个只输出提示的任务；先运行 task --list 查看任务，再运行测试任务，核对工作目录与变量后接入构建。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "所有平台命令完全相同吗？被执行的命令仍需适合当前系统。\n会提供编译器吗？运行工具和项目依赖需自己的环境具备。",
+  "documentationUrl": "https://github.com/go-task/task/blob/b5aef1c287a9be8038347a17646bdf4bc7185bce/README.md",
+  "category": "developer",
+  "screenshots": []
+}

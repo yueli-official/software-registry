@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "amphetamine",
+  "name": "Amphetamine",
+  "homepage": "https://apps.apple.com/app/amphetamine/id937984704",
+  "kind": "reference",
+  "packages": [],
+  "summary": "Mac 桌面效率工具。",
+  "icon": {
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/b9/93/46/b99346d8-5dcd-e78a-25fe-8810a64771ce/AppIcon-0-0-85-220-0-4-0-2x.png/512x512bb.png",
+    "sha256": "ac8577dfbcb35f3af9d47d312368ecd1991f870465b14082325d74035a4e392c",
+    "mime": "image/png"
+  },
+  "description": "Amphetamine 用于Mac 桌面效率。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 从官方应用商店安装，启动后通过菜单栏选择保持唤醒的条件和时长。任务结束后关闭保持唤醒。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "productivity",
+  "screenshots": []
+}

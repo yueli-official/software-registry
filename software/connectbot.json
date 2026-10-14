@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "connectbot",
+  "name": "ConnectBot",
+  "homepage": "https://github.com/connectbot/connectbot",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "connectbot/connectbot",
+          "assetPattern": "ConnectBot-v{version}-oss.apk",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Android SSH 客户端，在手机上连接自己的服务器并使用远程终端。",
+  "description": "ConnectBot 是 Android SSH 客户端，可通过加密连接访问远程服务器终端。当前条目提供官方 OSS 变体，自带加密服务提供组件，不是依赖 Google Play Services 的 google 变体。原包最低 Android 7.0，实际包名 org.connectbot、版本 v1.11.0。SSH 连接需要你已有的服务器地址和相应账号，安装客户端不会自动创建服务器。\n\n此条目提供官方 1.11.0 原 APK；主项目 Apache-2.0，组件保留各自许可。对应精确版本源码：https://github.com/connectbot/connectbot/tree/v1.11.0 ，原许可材料见 connectbot-1.11.0-LICENSES.zip。",
+  "usageInstructions": "1. 在 Android 7.0 或更高版本安装官方 OSS APK，打开 ConnectBot。\n2. 准备自己有权使用的 SSH 服务器地址、端口、用户名和密码或密钥。新增主机，输入用户名、主机及端口。\n3. 首次连接时对照服务器管理端提供的信息核对主机密钥指纹，再确认保存。\n4. 使用账号密码或已配置的私钥登录，先执行 pwd 和 ls 等只读命令确认当前位置。\n5. 完成后退出远程会话，需要重复连接时使用保存的主机配置；私钥导入与认证方式按服务器要求设置。",
+  "faq": "google 和 oss 有什么区别？官方说明 google 版使用 Google Play Services 更新加密服务提供组件，oss 版将该组件包含在 APK 中。\n为什么下载后还不能登录服务器？需要正确地址、网络、端口及已有账号认证条件。\n能和 Play 商店版混着升级吗？官方说明 Play 的密钥轮换可能导致不能再安装 GitHub 版，升级前按官方安装说明确认渠道。",
+  "documentationUrl": "https://github.com/connectbot/connectbot/blob/v1.11.0/README.md",
+  "category": "network",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">ConnectBot</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">SSH Client</text></svg>",
+    "sha256": "a910a25bc00d9d188b9f8460f697fadea72fc6c76fb4b233f1b81dbb8ca58c1f",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gitako",
+  "name": "Gitako",
+  "homepage": "https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk",
+  "kind": "reference",
+  "packages": [],
+  "summary": "GitHub 浏览器扩展工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/EnixCoda/Gitako/f64526d45347670cf057e4580069279e989f7cec/Safari/Gitako/Gitako/Assets.xcassets/AppIcon.appiconset/Gitako-512.png",
+    "sha256": "d54c63eb687f7d807760e19cdf6fce91d643697b82d57f3f0acbd093da606bfc",
+    "mime": "image/png"
+  },
+  "description": "Gitako 用于GitHub 浏览器扩展。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装扩展后打开 GitHub 仓库，使用侧边文件树浏览代码。需要访问私有内容时按官方说明配置最小权限凭据。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/EnixCoda/Gitako/blob/develop/README.md",
+  "category": "browser",
+  "screenshots": []
+}

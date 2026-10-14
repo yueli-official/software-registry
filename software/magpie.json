@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "magpie",
+  "name": "Magpie",
+  "homepage": "https://github.com/Blinue/Magpie",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "magpie",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "图片与视频增强工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Blinue/Magpie/1c06186ca176f34be0fd9bbe3b6f3ed491e737de/src/Magpie/Icons/PNG/Magpie%20Icon%20Full%20Enabled/256.png",
+    "sha256": "ce2d9f7d305b56c51e35b5c95fa697abe07ccb156fd5f3a682afc4eef0d61f66",
+    "mime": "image/png"
+  },
+  "description": "Magpie 用于图片与视频增强。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 启动需要缩放的窗口程序。打开 Magpie，选择缩放模式与目标窗口，再按配置的快捷键开始或结束缩放。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "graphics",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Blinue/Magpie/1c06186ca176f34be0fd9bbe3b6f3ed491e737de/img/main-window.png",
+      "sha256": "9832f32fbcc0ad43ccad25a6f18fcb9986ba90672f1014d2b31fee9a343c0e7d",
+      "mime": "image/png",
+      "caption": "官方主界面示例：设置窗口缩放快捷键、配置与工具栏",
+      "sourcePage": "https://github.com/Blinue/Magpie/blob/1c06186ca176f34be0fd9bbe3b6f3ed491e737de/README.md",
+      "licenseEvidence": "官方README所用仓库界面图，固定提交下原图；根许可GPL-3.0：https://github.com/Blinue/Magpie/blob/1c06186ca176f34be0fd9bbe3b6f3ed491e737de/LICENSE。已检查图片目录，无单独许可例外；保留来源并明确官方示例身份。",
+      "provenance": "已实际预览官方界面图，确认产品身份、界面功能及无私人凭据；未冒充维护者实测。",
+      "reviewed": true
+    }
+  ]
+}

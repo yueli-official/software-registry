@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "powertoys",
+  "name": "PowerToys",
+  "homepage": "https://github.com/microsoft/PowerToys",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "powertoys",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "Windows 效率工具集工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/microsoft/PowerToys/1400fd8e999f381329e16e9df4084f7dc588c8a7/src/settings-ui/Settings.UI/Assets/Settings/icon.ico",
+    "sha256": "2c9cc2d6122e0b946de20e991253a3c082451c3f617eb8ea1368cd9277e498ef",
+    "mime": "image/x-icon"
+  },
+  "description": "PowerToys 用于Windows 效率工具集。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 打开 PowerToys 设置，选择需要的模块并启用。按模块页面提示设置快捷键；先试用文件重命名、窗口布局或取色等功能。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "productivity",
+  "screenshots": []
+}

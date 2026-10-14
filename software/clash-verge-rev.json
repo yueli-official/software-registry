@@ -1,0 +1,117 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "clash-verge-rev",
+  "name": "Clash Verge Rev",
+  "homepage": "https://www.clashverge.dev/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "clash-verge-rev",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clash-verge-rev/clash-verge-rev",
+          "assetPattern": "Clash.Verge_{version}_arm64-setup.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clash-verge-rev/clash-verge-rev",
+          "assetPattern": "Clash.Verge_{version}_x64.app.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clash-verge-rev/clash-verge-rev",
+          "assetPattern": "Clash.Verge_{version}_aarch64.app.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clash-verge-rev/clash-verge-rev",
+          "assetPattern": "Clash.Verge_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "clash-verge-rev/clash-verge-rev",
+          "assetPattern": "Clash.Verge_{version}_arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "带中文界面的跨平台代理配置与连接管理工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/1c2817023e427a194b287ddf55a797f6ec56c7c1/src-tauri/icons/128x128@2x.png",
+    "sha256": "c00aa188a46b916bd6eaca494c74e1a503b17a74c84f5591919a395be502503b",
+    "mime": "image/png",
+    "provenance": "官方产品图标，固定提交。Godot品牌标识CC BY4.0另见misc/logo/LICENSE.txt，其余项目图标核对根许可及目录；实际预览后才发行。"
+  },
+  "description": "Clash Verge Rev 是基于 Rust 与 Tauri 的代理管理桌面客户端，提供配置导入、代理组选择、规则查看、连接管理和日志界面，并包含 mihomo 内核。适合需要管理已有网络代理配置的用户；软件本身不提供代理服务器或订阅服务。项目提供中文界面和中文说明，采用 GPL-3.0 许可。",
+  "usageInstructions": "1. 按系统与架构下载官方原包。Windows运行安装器，macOS解压应用归档后把Clash Verge.app移入应用程序目录，Linux使用发行版的软件包管理器安装对应DEB。\n2. 启动软件，在订阅或配置页面导入自己已有的配置文件或链接，选择配置，再检查代理组和日志。\n3. 根据实际需要设置系统代理或规则模式，并用自己的网络请求核对配置效果。功能位置可能随版本变化，以官方文档为准。",
+  "faq": "下载后有服务器吗？没有，软件只是配置管理客户端，服务器或订阅需要自行准备。\nWindows启动提示WebView2怎么办？常规安装器可能需要WebView2运行时；离线场景可在官方Release选择包含固定运行时的安装包，此条目默认提供常规包。\n有哪些系统包？本轮提供Windows x64/arm64、macOS Intel/Apple Silicon、Linux amd64/arm64；ARM32、RPM、DMG和包含运行时的替代包请到官方发行页按需要选择。",
+  "documentationUrl": "https://github.com/clash-verge-rev/clash-verge-rev/blob/1c2817023e427a194b287ddf55a797f6ec56c7c1/README.md",
+  "category": "network",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/1c2817023e427a194b287ddf55a797f6ec56c7c1/docs/preview_light.png",
+      "sha256": "a8041a5001076f4c0fb4af94aebbf27daf704b235da145172c23ce6a5191b591",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/clash-verge-rev/clash-verge-rev/blob/1c2817023e427a194b287ddf55a797f6ec56c7c1/README.md",
+      "caption": "官方代理组界面示例：查看规则与选择配置（示例界面）",
+      "licenseEvidence": "官方README直接引用docs/preview_light.png；GPL-3.0根LICENSE及目录核对，保留示例出处，不作为第三方服务宣传图。",
+      "provenance": "已实际预览官方中文功能截图，无凭据和私有订阅地址；仅展示产品界面。",
+      "reviewed": true
+    }
+  ]
+}

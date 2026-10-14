@@ -1,0 +1,31 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "iterm2",
+  "name": "iTerm2",
+  "homepage": "https://iterm2.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "iterm-release",
+        "options": {}
+      }
+    }
+  ],
+  "summary": "支持分屏、标签页和搜索的 macOS 终端。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/gnachman/iTerm2/4acdd013c7e5df14cfd85af312000a49417e3e5d/iTermCompanion/iTermCompanion/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+    "sha256": "dda928774d42d5d63b20d7a008f1ae89f724119d794b17b18bf0be95499f48a5",
+    "mime": "image/png"
+  },
+  "description": "iTerm2 是 macOS 终端工具，提供分屏、标签页、搜索、配置档案和快捷操作，适合命令行开发与日常系统管理。",
+  "usageInstructions": "1. 下载官方 ZIP，解压后将 iTerm.app 放入“应用程序”；3.7.3 需要 macOS 13 或更新版本，本包支持 Intel 和 Apple Silicon。\n2. 打开 iTerm2，输入 pwd 查看当前目录，再用 cd 进入项目目录。\n3. 使用 Cmd+T 新建标签页、Cmd+D 垂直分屏；在 Settings → Profiles 中调整字体、配色和默认工作目录。\n4. 执行不熟悉的命令前先阅读其说明，不直接粘贴来源不明的脚本。",
+  "faq": "这是官方原版 ZIP。本版本源码：https://github.com/gnachman/iTerm2/tree/v3.7.3；官方 GPL 许可文件：https://github.com/gnachman/iTerm2/blob/v3.7.3/LICENSE。官网同时提供其他版本和系统兼容说明，安装前按自己的 macOS 版本核对。",
+  "documentationUrl": "https://iterm2.com/documentation.html",
+  "category": "developer",
+  "screenshots": []
+}

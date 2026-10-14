@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fq",
+  "name": "fq",
+  "homepage": "https://github.com/wader/fq",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "fq",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wader/fq",
+          "assetPattern": "fq_{version}_windows_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wader/fq",
+          "assetPattern": "fq_{version}_macos_amd64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wader/fq",
+          "assetPattern": "fq_{version}_macos_arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wader/fq",
+          "assetPattern": "fq_{version}_linux_amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "wader/fq",
+          "assetPattern": "fq_{version}_linux_arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端解析和检查多种二进制文件的数据结构。",
+  "description": "fq 是独立的文件解析与查询工具，结合 jq 风格表达式与格式解码器查看二进制、媒体或数据文件。适合分析文件结构和提取字段，支持格式以官方列表为准。\n\n### 源码与许可\n当前条目提供 0.18.0 官方原包。主项目许可：MIT，解码依赖各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/wader/fq/tree/6f01e5ba28957801ba6154458c0e89d1eb7e8941) · [许可原文](https://github.com/wader/fq/blob/6f01e5ba28957801ba6154458c0e89d1eb7e8941/LICENSE)。",
+  "usageInstructions": "1. 解压原版，将 fq 加入 PATH。\n2. 运行 fq --help 查看格式与交互选项。\n3. 按官方例子打开自己的一份小型测试文件。\n4. 浏览解码结构并查询需要的字段。\n5. 对不支持或识别不确定的格式手动指定解码方式，并保留原文件。",
+  "faq": "是播放器吗？主要分析格式结构，不替代音视频播放器。\n能解析所有文件吗？解码器覆盖有限，准确性需结合文件与官方格式支持判断。",
+  "documentationUrl": "https://github.com/wader/fq/blob/6f01e5ba28957801ba6154458c0e89d1eb7e8941/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">fq</text></svg>",
+    "sha256": "4e03d40ba76c18b9d621a0a0b05c4d575be2e80304c7f7d95f99c842951772cb",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名fq，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": []
+}

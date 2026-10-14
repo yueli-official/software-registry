@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "calibre",
+  "name": "Calibre",
+  "homepage": "https://calibre-ebook.com/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "calibre",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "电子书管理、格式转换、阅读和设备同步工具。",
+  "description": "Calibre 是一套跨平台电子书工具，可管理书库、转换常见电子书格式、阅读与编辑电子书，并与阅读设备同步。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 添加自己的电子书到书库，检查书名与作者等元数据。选择书籍阅读或转换格式，需要传到设备时先确认设备支持的格式。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://manual.calibre-ebook.com/",
+  "category": "reading",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/kovidgoyal/calibre/47b00ead47e90cfd1c1383da41e8a0b178300dd4/icons/calibre.png",
+    "sha256": "25c4cbcb0283f682f36a5bcf92d18e10b6458d22dda6641e5849b782ad0e0b31"
+  },
+  "screenshots": []
+}

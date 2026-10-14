@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hexyl",
+  "name": "hexyl",
+  "homepage": "https://github.com/sharkdp/hexyl",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "hexyl",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "hexyl",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hexyl",
+          "assetPattern": "hexyl-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hexyl",
+          "assetPattern": "hexyl-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hexyl",
+          "assetPattern": "hexyl-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hexyl",
+          "assetPattern": "hexyl-v{version}-aarch64-unknown-linux-gnu.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hexyl",
+          "assetPattern": "hexyl-v{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用带颜色的十六进制视图查看文件字节与文本区域。",
+  "description": "hexyl是终端十六进制查看工具，按字节类型着色，同时显示偏移、十六进制字节和可读文本。适合查看文件头、编码或二进制资料；它提供读取视图，不是图形化二进制编辑器。\n\n当前条目固定官方稳定版0.17.0原包。主项目许可MIT OR Apache-2.0，各组件保留自身许可。固定源码：https://github.com/sharkdp/hexyl/tree/8eb6d4771ce1ec7af65d06bd335457783b77d557 。许可资料：https://github.com/sharkdp/hexyl/blob/8eb6d4771ce1ec7af65d06bd335457783b77d557/LICENSE-APACHE；https://github.com/sharkdp/hexyl/blob/8eb6d4771ce1ec7af65d06bd335457783b77d557/LICENSE-MIT 。",
+  "usageInstructions": "1. 解压原包，把hexyl加入PATH。\n2. 在终端运行 hexyl 示例文件.bin 查看原始字节。\n3. 使用--help查看偏移和读取范围参数，只查看需要的部分。\n4. 用兼容ANSI颜色的终端获得清晰显示；查看结束后原文件保持原样。",
+  "faq": "能修改文件吗？hexyl用于查看，修改应使用其他编辑工具。\n为什么中文不按文字显示？这是字节视图，显示的是原始编码字节。",
+  "documentationUrl": "https://github.com/sharkdp/hexyl/blob/8eb6d4771ce1ec7af65d06bd335457783b77d557/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">hexyl</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">十六进制</text></svg>",
+    "sha256": "999d86627bb6b659899c0eded2547baaa2a01add2ae7048773fec3d5580489fd",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

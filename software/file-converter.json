@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "file-converter",
+  "name": "File Converter",
+  "homepage": "https://file-converter.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Tichau/FileConverter",
+          "assetPattern": "FileConverter-*-x64-setup.msi",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "格式转换工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Tichau/FileConverter/6c157a411fb70fb7440d2e3b226042781fd55b15/Resources/Icons/ApplicationIcon-256x256.ico",
+    "sha256": "1898954493e8cc73d706336e7469c915666dc1f01b6f4e681494510eebeb650e",
+    "mime": "image/x-icon"
+  },
+  "description": "File Converter 用于格式转换。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装后在文件管理器右键选择受支持的文件，使用 File Converter 转换。先用副本测试，可在设置中调整转换预设。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "category": "utilities",
+  "screenshots": []
+}

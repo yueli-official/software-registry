@@ -1,0 +1,46 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "monitorcontrol",
+  "name": "MonitorControl",
+  "homepage": "https://monitorcontrol.app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "MonitorControl/MonitorControl",
+          "assetPattern": "MonitorControl.*.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "显示器亮度控制工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/84ac2d72bfb53b653536e484946f6ed027e4229c/MonitorControl/Assets.xcassets/AppIcon.appiconset/Icon-512.png",
+    "sha256": "c93b108426bd92c2ea3fad034456c626a75e9b4e15f5569b11dcfa8db14b86d8",
+    "mime": "image/png"
+  },
+  "description": "MonitorControl 用于显示器亮度控制。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 安装后通过菜单栏调整支持的显示器亮度与音量。外接显示器需要相应硬件协议支持，按官方兼容性说明选择连接方式。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/MonitorControl/MonitorControl/blob/main/README.md",
+  "category": "system",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/84ac2d72bfb53b653536e484946f6ed027e4229c/.github/pref_1.png",
+      "sha256": "9a0d45855dd9275e4064176de656144264607137c52677bcca38fdb922b3ff0b",
+      "mime": "image/png",
+      "caption": "官方设置界面示例：调整显示器亮度控制与应用启动选项",
+      "sourcePage": "https://github.com/MonitorControl/MonitorControl/blob/84ac2d72bfb53b653536e484946f6ed027e4229c/README.md",
+      "licenseEvidence": "官方README引用.github/pref_1.png，固定提交下原图；根MIT许可：https://github.com/MonitorControl/MonitorControl/blob/84ac2d72bfb53b653536e484946f6ed027e4229c/License.txt。已核查图片目录无独立许可例外，保留官方来源。",
+      "provenance": "已实际预览官方macOS设置窗口，展示亮度控制、开机启动和更新选项，无私人凭据；明确标为官方示例。",
+      "reviewed": true
+    }
+  ]
+}

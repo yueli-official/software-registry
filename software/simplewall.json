@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "simplewall",
+  "name": "simplewall",
+  "homepage": "https://github.com/henrypp/simplewall",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "simplewall",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "simplewall",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "simplewall",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "按应用管理Windows联网规则，查看连接、过滤事件和允许列表。",
+  "description": "simplewall 是基于Windows Filtering Platform的应用联网规则管理工具，可按程序允许或阻止连接，编辑规则并查看过滤事件。适合了解Windows网络权限的进阶用户；它有自己的WFP过滤规则，不是Windows防火墙设置界面的替代皮肤。\n\n此条目提供未修改的官方3.8.7便携7z原包，内含真正的32位、64位与ARM64主程序。三个下载架构使用同一个完整原包，解压后按系统选择对应目录。主项目采用GPL-3.0-only，原许可与署名保留；对应源码：https://github.com/henrypp/simplewall/tree/v.3.8.7 ，原许可材料位于夸克目录simplewall-3.8.7-LICENSES.zip 。",
+  "usageInstructions": "1. 下载官方7z原包，用常见解压软件完整解压，按系统CPU打开32、64或arm64目录中的simplewall.exe，按Windows提示取得所需管理员权限。\n2. 先查看程序列表和现有配置，阅读官方规则说明，再为浏览器、通信工具等需要联网的软件设置允许规则。\n3. 确认允许列表后再启用过滤；未允许的程序可能无法联网。首次试用可按官方说明选择重启后重置的临时规则模式。\n4. 用自己的测试程序检查联网和事件记录，再按需要调整具体允许或阻止规则。\n5. 不再使用时先在程序中点击Disable filters（禁用过滤），确认移除本程序创建的规则，再退出。仅退出或卸载程序不代表这些规则已经移除。",
+  "faq": "它会修改Windows防火墙界面里的规则吗？官方说明它独立使用WFP，不是Windows防火墙控制界面。\n退出后过滤会停止吗？永久规则不会因退出自动消失，应使用Disable filters移除。\n三个架构为什么文件相同？官方便携原包同时包含三个CPU版本，此条目保留原始7z，不重新打包。",
+  "documentationUrl": "https://github.com/henrypp/simplewall/blob/v.3.8.7/README.md",
+  "category": "security",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">simplewall</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Network Rules</text></svg>",
+    "sha256": "0b1cc38f8154d1811828c73955b693a47013ff1040d5c1c38b8f6b37e4c0cf4e",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

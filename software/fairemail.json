@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fairemail",
+  "name": "FairEmail",
+  "homepage": "https://email.faircode.eu/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "android",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "M66B/FairEmail",
+          "assetPattern": "FairEmail-v{version}a-github-release.apk",
+          "tagPrefix": ""
+        }
+      }
+    }
+  ],
+  "summary": "Android 邮件客户端，支持多个账户、统一收件箱和标准邮件协议。",
+  "description": "FairEmail 是 Android 开源邮件客户端，支持 IMAP、POP3 和 SMTP、多账户及统一收件箱，提供邮件会话整理和离线操作。需自备已有邮箱，不提供邮箱注册服务；官方说明不支持 Exchange Web Services 或 ActiveSync。基础功能与 Pro 高级功能分开，当前条目原 APK 不代表 Pro 购买授权。最低 Android 6.0，实际包名 eu.faircode.email、包内版本1.2338；保留带 a 后缀的官方原文件名。\n\n此条目提供官方 1.2338 原 APK；主项目 GPL-3.0，组件保留各自许可。对应精确版本源码：https://github.com/M66B/FairEmail/tree/1.2338 ，原许可材料见 fairemail-1.2338-LICENSES.zip。",
+  "usageInstructions": "1. 在 Android 6.0 或更高版本安装官方 GitHub APK，准备自己已有邮箱的账户和服务商官方客户端设置说明。\n2. 打开 FairEmail 的账户设置，选择对应服务商或手动配置；填写服务商提供的接收服务器、端口及认证方式。\n3. 如果服务商要求 OAuth 或独立客户端授权码，按该服务商说明完成认证；不要把邮箱地址当成服务器地址。\n4. 配置发送身份及 SMTP，检查连接后同步收件箱，先阅读一封自己的测试邮件。\n5. 给自己的另一个邮箱发送一封测试邮件，确认发送和接收都正常，再按需要设置同步、通知和文件夹；Pro 设置按官方授权说明操作。",
+  "faq": "安装后能创建新邮箱吗？不能，它是客户端，需要已有邮箱账户。\n国内邮箱能用吗？以服务商是否提供标准协议和相应认证方式为准，使用其官方客户端设置说明。\n包含全部 Pro 功能吗？下载原包不等于购买 Pro，部分高级功能需另行授权。\n为什么文件名和显示版本不同？官方附件保留构建后缀 a，实际原 APK 的 versionName 是1.2338，原文件未改名或重打包。",
+  "documentationUrl": "https://github.com/M66B/FairEmail/blob/1.2338/README.md",
+  "category": "office",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">FairEmail</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">Email Client</text></svg>",
+    "sha256": "c5a36594a267c56a4d6d264ebe9dfeaa1d5815f7c4ab1f647623e085c71ab964",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

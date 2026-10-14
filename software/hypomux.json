@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hypomux",
+  "name": "HypoMux",
+  "homepage": "https://hypomux.com",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Hypostasis-Cat/HypoMux",
+          "assetPattern": "HypoMux_Setup_*.exe",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "多网卡带宽聚合工具。",
+  "icon": {
+    "url": "https://hypomux.com/icon.ico",
+    "sha256": "5c3157156ee6a765262a6fb3d646ea52c77acdc52d224dd5093a8df969b8e60f",
+    "mime": "image/x-icon"
+  },
+  "description": "HypoMux 用于多网卡带宽聚合。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 连接至少两张可用网卡，在软件中检查网卡和服务状态，按提示配置聚合。用支持多连接的下载任务测试；它不能把单条连接拆成多路。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/Hypostasis-Cat/HypoMux/blob/main/README.md",
+  "category": "utilities",
+  "screenshots": []
+}

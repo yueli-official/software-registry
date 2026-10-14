@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "stylus",
+  "name": "Stylus",
+  "homepage": "https://add0n.com/stylus.html",
+  "kind": "reference",
+  "packages": [],
+  "summary": "网页样式扩展工具。",
+  "icon": {
+    "url": "https://icons.add0n.com/stylus64.png",
+    "sha256": "550a1b6e9fed3ca668b0d3af835171eff9ac6b9f5c832017e86c3380ce430b55",
+    "mime": "image/png"
+  },
+  "description": "Stylus 用于网页样式扩展。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装扩展，添加可信的网页样式或创建自己的规则。限定生效网站，启用后检查页面显示。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/openstyles/stylus/blob/master/README.md",
+  "category": "browser",
+  "screenshots": []
+}

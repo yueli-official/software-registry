@@ -1,0 +1,120 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hyperfine",
+  "name": "hyperfine",
+  "homepage": "https://github.com/sharkdp/hyperfine",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "hyperfine",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "hyperfine",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hyperfine",
+          "assetPattern": "hyperfine-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hyperfine",
+          "assetPattern": "hyperfine-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hyperfine",
+          "assetPattern": "hyperfine-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hyperfine",
+          "assetPattern": "hyperfine-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "sharkdp/hyperfine",
+          "assetPattern": "hyperfine-v{version}-i686-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "多次运行命令并统计耗时，比较脚本或工具的执行速度。",
+  "description": "hyperfine针对命令行任务进行重复计时，提供预热、统计分析和结果导出。2.0默认直接执行命令，管道与重定向等Shell语法需要显式选择Shell模式。测试结果受机器负载、缓存和任务内容影响。\n\n当前条目固定官方稳定版2.0.0原包。主项目许可MIT OR Apache-2.0，各组件保留自身许可。固定源码：https://github.com/sharkdp/hyperfine/tree/b33755fe1fca8bcc1f182c773ca3ab040bfe517d 。许可资料：https://github.com/sharkdp/hyperfine/blob/b33755fe1fca8bcc1f182c773ca3ab040bfe517d/LICENSE-APACHE；https://github.com/sharkdp/hyperfine/blob/b33755fe1fca8bcc1f182c773ca3ab040bfe517d/LICENSE-MIT 。",
+  "usageInstructions": "1. 将原包解压并把hyperfine加入PATH。\n2. 选择已安装且可重复运行的命令，例如 hyperfine --warmup 2 \"git --version\"。\n3. 把两个命令作为独立参数传入可比较耗时；确认两者确实完成同一工作。\n4. 用--export-json结果文件.json保存统计，用--help查看参数；需要Shell语法时按文档设置-S。",
+  "faq": "它会真正执行被测命令吗？会，且会重复执行；先使用可安全重复的测试任务。\n为什么结果每次不同？后台负载、缓存及被测程序状态都会影响计时。",
+  "documentationUrl": "https://github.com/sharkdp/hyperfine/blob/b33755fe1fca8bcc1f182c773ca3ab040bfe517d/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">hyperfine</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">命令测速</text></svg>",
+    "sha256": "678b2b77891fb6fd458e3830cabd0fc31beeedb3b875a6f48f706c663b548c76",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

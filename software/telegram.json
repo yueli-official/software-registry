@@ -1,0 +1,93 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "telegram",
+  "name": "Telegram Desktop",
+  "homepage": "https://telegram.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "telegram",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "telegramdesktop/tdesktop",
+          "assetPattern": "td-portable-win-x86-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "telegramdesktop/tdesktop",
+          "assetPattern": "td-portable-win-arm-{version}.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "telegramdesktop/tdesktop",
+          "assetPattern": "td-setup-mac-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "telegramdesktop/tdesktop",
+          "assetPattern": "td-setup-linux-x64-{version}.tar.xz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "Telegram 官方桌面客户端，支持消息、群组、频道和文件传输。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/telegramdesktop/tdesktop/42f8a36d43b8c805bc821905bea4cfeb3af1d41d/Telegram/Resources/art/icon256.png",
+    "sha256": "3fb1400c7dc9bbc3b5cb3ffedcbf4a9b09c53e28b57a7ff33a8a6b9048864090",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。 固定来源：https://github.com/telegramdesktop/tdesktop/blob/42f8a36d43b8c805bc821905bea4cfeb3af1d41d/Telegram/Resources/art/icon256.png"
+  },
+  "description": "Telegram Desktop 是 Telegram 的官方桌面客户端，支持跨设备消息同步、群组与频道、文件分享和语音等功能。适合在电脑上管理已有 Telegram 会话；使用需要自己的账号及可访问 Telegram 服务的网络。桌面客户端与手机端的发行项目和版本分别维护。\n\n主体采用 GPL-3.0 并含 OpenSSL exception，保留精确版本 LICENSE 及随包通知。Telegram 产品图标来自固定官方资源，仅用于识别官方客户端。固定版本源码：https://github.com/telegramdesktop/tdesktop/tree/42f8a36d43b8c805bc821905bea4cfeb3af1d41d 。图标为固定版本官方应用资源，已实际预览；资源目录未发现独立许可例外，保留 GPL 项目来源，仅转换为 WebP。",
+  "usageInstructions": "1. Windows 按 x64、32 位或 ARM64 选择便携 ZIP，完整解压后运行 Telegram.exe；macOS 打开通用 DMG 并复制应用；Linux 解压 tar.xz 后运行 Telegram 启动器。\n2. 用已有手机端扫描登录二维码，或按应用提示使用手机号登录自己的账号。首次登录可能需要手机端确认。\n3. 使用搜索找到已知联系人、群组或频道；发送测试消息、附件前确认接收对象。\n4. 在设置中检查通知、下载目录和隐私选项；软件不提供账号、网络代理或第三方账号代购。",
+  "faq": "需要 Telegram 账号吗？需要，可通过官方应用完成登录与验证。\n是否自带网络服务？没有，连接取决于自己可访问 Telegram 的网络。\n这里包含 Android 客户端吗？此处是官方桌面项目；手机端请通过 Telegram 官方入口选择。",
+  "documentationUrl": "https://github.com/telegramdesktop/tdesktop/blob/42f8a36d43b8c805bc821905bea4cfeb3af1d41d/README.md",
+  "category": "network",
+  "screenshots": []
+}

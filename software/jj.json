@@ -1,0 +1,118 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "jj",
+  "name": "Jujutsu",
+  "homepage": "https://github.com/jj-vcs/jj",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "jj",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jj-vcs/jj",
+          "assetPattern": "jj-v{version}-aarch64-pc-windows-msvc.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jj-vcs/jj",
+          "assetPattern": "jj-v{version}-x86_64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jj-vcs/jj",
+          "assetPattern": "jj-v{version}-aarch64-apple-darwin.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jj-vcs/jj",
+          "assetPattern": "jj-v{version}-x86_64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jj-vcs/jj",
+          "assetPattern": "jj-v{version}-aarch64-unknown-linux-musl.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "使用 Jujutsu 管理代码变更，查看历史并处理冲突。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/jj-vcs/jj/7d382314f9420b4b8d932245b49c99492c812b9f/docs/images/jj-logo.svg",
+    "sha256": "36461ac6cb98c1652c3f1b40aa021635b90cd69b00199c3055e3dbb68dd32e29",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "jj-logo.svg 明确 © 2025 J. Jennings，SVG 改编 Lucas Garron，CC BY 4.0；仅等比例转 WebP。原许可：https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/docs/images/LICENSE 原资源：https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/docs/images/jj-logo.svg"
+  },
+  "description": "Jujutsu（命令 jj）是独立的版本控制工具，提供工作副本变更、操作日志和 Git 兼容后端。适合希望体验不同变更管理流程的开发者，概念与 Git 命令并非一一对应。\n\n### 源码与许可\n当前条目提供 0.46.0 官方原包。主项目许可：Apache-2.0；独立组件遵循各自许可。[固定版本源码](https://github.com/jj-vcs/jj/tree/7d382314f9420b4b8d932245b49c99492c812b9f) · [许可原文](https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/LICENSE)。\n\n产品图标：© 2025 J. Jennings，SVG 改编 Lucas Garron，按[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)使用；[原资源与署名许可](https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/docs/images/LICENSE)，仅转换图片格式。\n\n界面图来自[官方随附资料](https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/demos/working_copy.png)；原作者及许可通知见[固定版许可](https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/LICENSE)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压官方 ZIP 或 tar.gz，将 jj 加入 PATH。\n2. 运行 jj --help，在独立测试目录按官方快速入门创建或取得仓库。\n3. 用 jj status 和 jj log 查看工作状态与历史。\n4. 修改测试文件，按官方指南描述变更并创建下一次工作变更。\n5. 熟悉操作日志、书签与 Git 后端后再用于正式项目。",
+  "faq": "可以直接照搬所有 Git 命令吗？不能，变更模型和操作名称有所不同。\n图里的示例是此条目仓库吗？不是，是官方文档的演示仓库。",
+  "documentationUrl": "https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7d382314f9420b4b8d932245b49c99492c812b9f/demos/working_copy.png",
+      "sha256": "eb8f8d921f048dbca0ebbcfb7189c61b2208560bb9ae65c258efe8cfac18a516",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/demos/working_copy.png",
+      "caption": "Jujutsu 官方工作副本与变更演示",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/demos/working_copy.png；原许可 https://github.com/jj-vcs/jj/blob/7d382314f9420b4b8d932245b49c99492c812b9f/LICENSE",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "miller",
+  "name": "Miller",
+  "homepage": "https://github.com/johnkerl/miller",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "miller",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-windows-386.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-windows-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-darwin-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-darwin-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-linux-amd64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-linux-arm64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "johnkerl/miller",
+          "assetPattern": "miller-{version}-linux-386.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "用命令行筛选、排序和转换 CSV、TSV、JSON 数据。",
+  "description": "Miller 的程序名为 mlr，是独立的结构化文本处理工具，按字段名处理表格、记录与数据流，适合整理导出数据和构建重复的数据处理流程。\n\n### 源码与许可\n当前条目提供 6.22.0 官方原包。主项目许可：BSD-2-Clause，依赖按各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/johnkerl/miller/tree/1362c2ec03f319da56f7defebb3caac74c97445e) · [许可原文](https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/LICENSE.txt)。\n\n界面图来自[官方随附资料](https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/docs/src/coverart/cover-combined.png)；原作者及许可通知见[固定版许可](https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/LICENSE.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 解压原包，将 mlr 加入 PATH。\n2. 运行 mlr --help 查看输入输出格式。\n3. 对测试 CSV 运行 mlr --icsv --opprint cat sample.csv 检查字段。\n4. 按官方示例使用 filter、sort 或 put，先写到新文件。\n5. 核对记录数、列名和转换结果后，再用于实际批量处理。",
+  "faq": "只有 Go 代码库吗？当前条目提供可直接使用的独立 mlr 程序。\n会修改原文件吗？按输入输出参数工作，先输出到新文件再核对。",
+  "documentationUrl": "https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" rx=\"56\" fill=\"#386390\"/><text x=\"128\" y=\"145\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"70\" font-weight=\"700\" fill=\"white\">mlr</text></svg>",
+    "sha256": "3f14dce785a2c0d199e5dbff8200d82a36d8c7dc8e1bf84b2efb2d44de1bc4ab",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作的软件名称排版标识，非官方图标。已查固定版README与仓库图片；未取得可靠的独立产品图标，不使用项目成员头像或通用图标。原名mlr，仅纯文字与维护者几何背景，不仿造产品美术标识。"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/johnkerl/miller/1362c2ec03f319da56f7defebb3caac74c97445e/docs/src/coverart/cover-combined.png",
+      "sha256": "30d09c66921ea95d8b7239385ba76d11de5e63c71dfd10c6d597ac96f5ef2df1",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/docs/src/coverart/cover-combined.png",
+      "caption": "Miller 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/docs/src/coverart/cover-combined.png；原许可 https://github.com/johnkerl/miller/blob/1362c2ec03f319da56f7defebb3caac74c97445e/LICENSE.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

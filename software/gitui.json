@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gitui",
+  "name": "GitUI",
+  "homepage": "https://github.com/gitui-org/gitui",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gitui",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitui-org/gitui",
+          "assetPattern": "gitui-mac-x86.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitui-org/gitui",
+          "assetPattern": "gitui-mac.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitui-org/gitui",
+          "assetPattern": "gitui-linux-x86_64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gitui-org/gitui",
+          "assetPattern": "gitui-linux-aarch64.tar.gz",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "在终端交互查看 Git 变更、提交、分支和日志。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/gitui-org/gitui/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/logo.png",
+    "sha256": "e76dabc9bd8bdf406cd86df2e703a854246f6cec9d3b0cffa7d32e4afacc8ebf",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/logo.png"
+  },
+  "description": "GitUI 是独立的终端 Git 客户端，提供键盘操作的状态、差异与历史界面，适合日常仓库维护。\n\n### 源码与许可\n当前条目提供 0.28.1 官方原包。主项目许可：MIT；独立组件遵循各自许可。[固定版本源码](https://github.com/gitui-org/gitui/tree/e24fb45df1584ee8d8ebdc4258531b4a91ca975d) · [许可原文](https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/LICENSE.md)。\n\n界面图来自[官方随附资料](https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/light-theme.png)；原作者及许可通知见[固定版许可](https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/LICENSE.md)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包；Windows 解压或保留 EXE，Mac/Linux 解压并给执行权限，DEB 按系统安装方式处理。\n2. 将 gitui 加入 PATH，运行 gitui --help 查看本版用法。\n3. 先在自己的测试仓库运行 gitui，阅读界面帮助，查看差异与日志，再尝试暂存和提交；执行会改动仓库的操作前确认目标。\n4. 正式使用前按固定版本文档核对依赖和配置，保留需要的原始资料。",
+  "faq": "会代替 GitHub 登录吗？远端认证仍按 Git 与系统凭据配置。\n当前条目是 SDK 吗？提供完整终端客户端。",
+  "documentationUrl": "https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/README.md",
+  "category": "developer",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/gitui-org/gitui/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/light-theme.png",
+      "sha256": "1c275db0fe8a5f28b0282c6c99c6753018f99e8deaf50c68ebae0aeb83ed401e",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/light-theme.png",
+      "caption": "GitUI 官方功能示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/assets/light-theme.png；原许可 https://github.com/gitui-org/gitui/blob/e24fb45df1584ee8d8ebdc4258531b4a91ca975d/LICENSE.md",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

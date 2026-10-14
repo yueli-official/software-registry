@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "aria2",
+  "name": "aria2",
+  "homepage": "https://aria2.github.io/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "aria2",
+          "architecture": "64bit",
+          "stripPackageRevision": true
+        }
+      }
+    }
+  ],
+  "summary": "支持 HTTP、FTP、BitTorrent、Metalink 等协议的轻量下载工具。",
+  "description": "aria2 是轻量级多协议、多来源命令行下载工具，支持 HTTP/HTTPS、FTP/SFTP、BitTorrent、Metalink 与 RPC 控制。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 在终端运行 aria2c --version。使用 aria2c \"下载地址\" 新建任务，或传入种子文件；需要后台控制时按官方说明配置 RPC。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://aria2.github.io/manual/en/html/index.html",
+  "category": "files",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><rect width=\"512\" height=\"512\" rx=\"112\" fill=\"#2f74c0\"/><path d=\"M256 92v194m-76-68 76 76 76-76M150 340h212\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"30\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"256\" y=\"430\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"86\" font-weight=\"700\" fill=\"#ffffff\">aria2</text></svg>",
+    "sha256": "fdd5db81d5c75cc920b688a2cbf792cd0f8270e6588cde200290947444402789",
+    "mime": "image/svg+xml"
+  },
+  "screenshots": []
+}

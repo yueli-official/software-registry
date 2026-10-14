@@ -1,0 +1,132 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ferdium",
+  "name": "Ferdium",
+  "homepage": "https://github.com/ferdium/ferdium-app",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ferdium",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-win-AutoSetup-{version}-arm64.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-win-AutoSetup-{version}-ia32.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-mac-{version}-x64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-mac-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-linux-{version}-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ferdium/ferdium-app",
+          "assetPattern": "Ferdium-linux-{version}-arm64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "把多个网页服务放在统一桌面工作区中。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ferdium/ferdium-app/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/build-helpers/images/icons/512x512.png",
+    "sha256": "bcc5795c808ebb3600156bc792f91962de9dd67ff6ad67a65572e88a05415ef9",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/build-helpers/images/icons/512x512.png"
+  },
+  "description": "Ferdium 是独立的服务聚合客户端，可在一个桌面应用中管理多个服务和工作区，适合减少频繁切换浏览器页签。各第三方服务的账号与可用性独立。\n\n### 源码与许可\n当前条目提供 7.2.3 官方原包。主项目许可：Apache-2.0，服务配方与素材按各自许可；独立组件遵循各自许可。[固定版本源码](https://github.com/ferdium/ferdium-app/tree/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6) · [许可原文](https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/LICENSE.md)。\n\n界面图来自[官方随附资料](https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/branding/screenshots/workspaces.png)；原作者及许可通知见[固定版许可](https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/LICENSE.md)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. 下载对应平台官方原包，Windows 安装或解压，Mac 将应用放入自己的应用目录，Linux 按 DEB/AppImage 方式处理。\n2. 先添加一项自己常用且兼容的服务，在官方登录页面登录自己的账号；核对通知和工作区切换，再按需要添加其他服务。\n3. 按固定版本官方说明核对依赖、配置与数据导出方式。",
+  "faq": "所有服务都由 Ferdium 提供吗？服务由各自提供方运行，Ferdium 负责聚合界面。\n截图保证所有旧服务仍可用吗？官方示例仅展示工作区方式，当前服务支持需逐项核对。",
+  "documentationUrl": "https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/README.md",
+  "category": "productivity",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/ferdium/ferdium-app/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/branding/screenshots/workspaces.png",
+      "sha256": "3bc011a162db7929a74aa2eb0d0f7104116c9674892044f311312a766baac776",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/branding/screenshots/workspaces.png",
+      "caption": "Ferdium 官方早期工作区示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/branding/screenshots/workspaces.png；原许可 https://github.com/ferdium/ferdium-app/blob/a44bc7d85dea106aaf7f7f6e2c9820597d38ebc6/LICENSE.md",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

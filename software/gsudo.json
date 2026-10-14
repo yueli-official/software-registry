@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gsudo",
+  "name": "gsudo",
+  "homepage": "https://github.com/gerardog/gsudo",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gsudo",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gsudo",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "gsudo",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ],
+  "summary": "在Windows终端中以管理员权限运行命令，保留当前工作流程。",
+  "description": "gsudo是Windows命令提权工具，可在当前控制台执行需要管理员权限的命令，支持多种Shell，并提供可选PowerShell模块。正常提权会使用Windows UAC；凭据缓存是可选配置，不由此条目默认开启。原portable.zip包含x64、x86和arm64目录，三个下载槽位共用同一个未改动官方原包。",
+  "usageInstructions": "1. 下载原portable.zip，解压与你的处理器对应的x64、x86或arm64目录。\n2. 把该目录加入自己的PATH，再重新打开终端。\n3. 运行gsudo --help查看参数。需要提权时在命令前加gsudo，例如gsudo whoami，并确认Windows UAC提示。\n4. PowerShell脚本块按官方说明使用gsudo { 命令 }；可选模块的安装与缓存设置另见官方文档。",
+  "faq": "会绕过管理员验证吗？不会，仍使用Windows UAC与相应管理员权限。\n为什么各架构下载文件相同？官方便携ZIP同时包含三个架构目录，解压时选择对应目录。\n能用于Linux吗？这是Windows工具，不能替换Linux的sudo。",
+  "documentationUrl": "https://github.com/gerardog/gsudo/blob/b7376285a6bb7b180f8a28b42797b0ab5c22dd34/README.md",
+  "category": "developer",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"48\" fill=\"#eff5f2\"/><text x=\"128\" y=\"136\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-weight=\"700\" font-size=\"39\" fill=\"#376656\">gsudo</text><text x=\"128\" y=\"175\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"22\" fill=\"#587c6d\">命令提权</text></svg>",
+    "sha256": "c6040fb8d4bdb8e6795e6e444ea525c3c06be3cd52a90c51bf5ecec52ca1a31e",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "维护者制作、非官方图标；可靠官方图形复用依据尚未取得，采用独立软件名称排版，不仿造官方商标。"
+  },
+  "screenshots": []
+}

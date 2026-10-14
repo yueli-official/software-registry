@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lulu",
+  "name": "LuLu",
+  "homepage": "https://objective-see.org/products/lulu.html",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "objective-see/LuLu",
+          "assetPattern": "LuLu_*.dmg",
+          "tagPrefix": "v"
+        }
+      }
+    }
+  ],
+  "summary": "Mac 网络防火墙工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/objective-see/LuLu/f61db25c9c7f6bdc062baf51ea10da3a99998169/LuLu/App/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+    "sha256": "315ee9fe5093b4e7ebf1f83bcd7ff38968056165d33db7fc487ba3fba1dc5a4e",
+    "mime": "image/png"
+  },
+  "description": "LuLu 用于Mac 网络防火墙。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 按安装提示完成配置和系统权限授权。应用首次联网时检查连接提示，决定允许或阻止，再在规则列表检查保存的规则。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/objective-see/LuLu/blob/master/README.md",
+  "category": "security",
+  "screenshots": []
+}

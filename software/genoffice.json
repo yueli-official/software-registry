@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "genoffice",
+  "name": "GenOffice",
+  "homepage": "https://genoffice.ai/",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "genspark-ai/genoffice",
+          "assetPattern": "GenOfficeSetup-v*-x64.exe",
+          "tagPrefix": "v"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "genspark-ai/genoffice",
+          "assetPattern": "GenOffice-{version}-arm64.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "genspark-ai/genoffice",
+          "assetPattern": "genoffice_{version}_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "genspark-ai/genoffice",
+          "assetPattern": "GenOffice-{version}.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ],
+  "summary": "办公套件工具。",
+  "icon": {
+    "url": "https://genoffice.ai/favicon.svg",
+    "sha256": "adf2f73554a75553f5b000b7ba69d7b24acacb9d15b732e22c68407341efd73c",
+    "mime": "image/svg+xml"
+  },
+  "description": "GenOffice 用于办公套件。",
+  "usageInstructions": "1. 取得下载区原版包，安装或解压后运行。\n2. 打开自己的文档、表格或演示文件，先另存副本再编辑。需要 AI 功能时配置模型服务，并逐项检查生成的改动。\n\n### 其他平台安装\n- macOS arm64：打开 DMG 并将应用拖入“应用程序”。\n- Linux amd64：适用于 Debian/Ubuntu 系，使用系统软件安装工具安装 .deb；先确认官方系统和依赖要求。\n- macOS amd64：打开 DMG 并将应用拖入“应用程序”。",
+  "faq": "系统要求、模型与第三方服务条件以官方说明为准。原软件的许可和使用限制仍适用。",
+  "documentationUrl": "https://github.com/genspark-ai/genoffice/blob/main/README.md",
+  "category": "office",
+  "screenshots": []
+}

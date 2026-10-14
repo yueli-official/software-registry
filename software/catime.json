@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "catime",
+  "name": "Catime",
+  "homepage": "https://cati.me",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "catime",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "计时与番茄钟工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/vladelaina/Catime/f47ed51044743d55e029872e7844ed6469a253dc/asset/icon/catime.ico",
+    "sha256": "dda36ab746a714071eef08da9971da755bc05613f8b7d893d74737aee3161b36",
+    "mime": "image/x-icon"
+  },
+  "description": "Catime 用于计时与番茄钟。",
+  "usageInstructions": "1. 从下载区取得原版包，安装或解压后运行。\n2. 运行后设置倒计时或计时模式。调整显示位置与到时提醒，再启动一个短计时验证效果。",
+  "faq": "下载版本和系统要求以下载区及官方说明为准。第三方服务的账号、API 密钥与订阅不包含在软件包内。",
+  "category": "productivity",
+  "screenshots": []
+}

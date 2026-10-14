@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "clibor",
+  "name": "Clibor",
+  "homepage": "https://chigusa-web.com/clibor/",
+  "kind": "reference",
+  "packages": [],
+  "summary": "剪贴板工具。",
+  "icon": {
+    "url": "https://chigusa-web.com/clibor/wp-content/uploads/sites/4/2021/09/cropped-clibor2-270x270.png",
+    "sha256": "bd7827766eb3ec8ffb083cf72843c5a8eb883c615ccd25b84efc0c1f97c7f199",
+    "mime": "image/png"
+  },
+  "description": "Clibor 用于剪贴板。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 运行后复制测试文本，打开剪贴板历史选择记录。按需要配置快捷键和常用文本，注意不保存敏感内容。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "category": "productivity",
+  "screenshots": []
+}

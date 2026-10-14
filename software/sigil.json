@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sigil",
+  "name": "Sigil",
+  "homepage": "https://github.com/Sigil-Ebook/Sigil",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sigil",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Sigil-Ebook/Sigil",
+          "assetPattern": "Sigil.app-{version}-Mac-x86_64.txz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Sigil-Ebook/Sigil",
+          "assetPattern": "Sigil.app-{version}-Mac-arm64.txz",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Sigil-Ebook/Sigil",
+          "assetPattern": "Sigil-{version}-x86_64.AppImage",
+          "tagPrefix": "",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ],
+  "summary": "编辑 EPUB 电子书的正文、目录与元数据。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Sigil-Ebook/Sigil/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/src/Resource_Files/icon/app_icons_orig/app_icon_256.png",
+    "sha256": "91c9831d4b9a08d137fe29fe2613a616542ac05ac6c9a91a6c9b337e20487344",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "固定官方产品资源，逐图预览确认身份及完整性；已核对所在目录和资源元数据，无独立美术授权声明时不冒称美术许可等同代码许可。仅用于介绍本产品，保留原图、比例、颜色与归属，不暗示官方背书。 原资源：https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/src/Resource_Files/icon/app_icons_orig/app_icon_256.png"
+  },
+  "description": "Sigil 是独立的 EPUB 电子书编辑器，提供代码编辑、预览、目录生成与元数据管理。适合制作和修订自己的电子书，不将格式检查等同所有阅读器上的一致显示。\n\n### 源码与许可\n当前条目提供 2.8.1 官方原包。主项目许可：GPL-3.0；独立组件遵循各自许可。[固定版本源码](https://github.com/Sigil-Ebook/Sigil/tree/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced) · [许可原文](https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/COPYING.txt)。\n\n界面图来自[官方随附资料](https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/docs/screencaps/edit_metadata.png)；原作者及许可通知见[固定版许可](https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/COPYING.txt)。仅转换图片格式，示例外观不保证与当前系统完全一致。",
+  "usageInstructions": "1. Windows 安装官方安装器；Mac 解压对应 CPU 应用；Linux 使用 AppImage。\n2. 先备份自己的 EPUB，再在 Sigil 打开测试副本。\n3. 修改一段正文或元数据，在预览窗核对。\n4. 按需要生成目录并执行适用检查。\n5. 保存后在自己的目标阅读器打开，检查目录与排版。",
+  "faq": "可以直接编辑所有 PDF 吗？主要编辑 EPUB，不是通用 PDF 编辑器。\n配图是当前版本实测吗？是官方随附早期元数据编辑示例，图内保留原示例版本标识。",
+  "documentationUrl": "https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/README.md",
+  "category": "reading",
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Sigil-Ebook/Sigil/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/docs/screencaps/edit_metadata.png",
+      "sha256": "7bdb730559a83629660a14626ac57afc8e63fa37e7ffd5e3b85e13f272eb6da9",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/docs/screencaps/edit_metadata.png",
+      "caption": "Sigil 官方早期元数据编辑示例",
+      "licenseEvidence": "固定官方随附文档示例，保留原项目贡献者归属与许可原文；不冒称维护者实测或当前系统外观。原资料 https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/docs/screencaps/edit_metadata.png；原许可 https://github.com/Sigil-Ebook/Sigil/blob/abfaeabf0aa9c0bf4ffead94a3a52b1056f9cced/COPYING.txt",
+      "provenance": "实际预览官方示例，保留原图归属和固定源码摘要；仅做 WebP 格式转换，不声称维护者运行截图。",
+      "reviewed": true
+    }
+  ]
+}

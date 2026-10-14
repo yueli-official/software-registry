@@ -1,0 +1,35 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "notepadplusplus",
+  "name": "Notepad++",
+  "homepage": "https://notepad-plus-plus.org",
+  "kind": "package",
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "notepadplusplus",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ],
+  "summary": "支持多种编程语言的文本和源代码编辑器。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/603ec5aa7ba732b9a7ab17fae7856bce2dba1d2a/PowerEditor/src/icons/npp.ico",
+    "sha256": "7f00c181277bddfe06f51e7712c713e24e29a167b20033c43829136cdadc655d",
+    "mime": "image/x-icon"
+  },
+  "description": "Notepad++：支持多种编程语言的文本和源代码编辑器。",
+  "usageInstructions": "1. 在下载区选择与你的系统相符的原版包，安装或解压。\n2. 打开文本或代码文件，在语言菜单选择对应语法。使用查找替换处理文本，保存前确认编码和换行格式。",
+  "faq": "系统要求和功能限制以官方说明为准。操作重要文件、分区或配置前请先备份。",
+  "documentationUrl": "https://npp-user-manual.org/",
+  "category": "developer",
+  "screenshots": []
+}

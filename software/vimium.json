@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "vimium",
+  "name": "Vimium",
+  "homepage": "https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb",
+  "kind": "reference",
+  "packages": [],
+  "summary": "浏览器键盘操作扩展工具。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/philc/vimium/5aa29614bf1dce05e0d316f8c38722e17f9b38c3/icons/icon.svg",
+    "sha256": "5aaf51e7cef05104f0667b3aec1bd35f5692479c5f95ece37ac30c07a6a2a632",
+    "mime": "image/svg+xml"
+  },
+  "description": "Vimium 用于浏览器键盘操作扩展。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 安装扩展，按官方快捷键说明测试页面滚动、链接选择和标签页操作。对有冲突的网站设置排除规则。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/philc/vimium/blob/master/README.md",
+  "category": "browser",
+  "screenshots": []
+}

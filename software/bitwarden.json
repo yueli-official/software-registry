@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "bitwarden",
+  "name": "Bitwarden",
+  "homepage": "https://bitwarden.com",
+  "kind": "reference",
+  "packages": [],
+  "summary": "密码管理工具。",
+  "icon": {
+    "url": "https://bitwarden.com/icons/icon-96x96.png",
+    "sha256": "43704b4ba1a224303208106dfb54e4384ef07f633574b86eaf38c630221aa9f7",
+    "mime": "image/png"
+  },
+  "description": "Bitwarden 用于密码管理。",
+  "usageInstructions": "1. 从官网或官方项目的下载、商店或部署说明取得适配版本。\n2. 登录账号或创建账号，添加一个登录项目并测试查看和复制。妥善保存主密码与恢复资料。",
+  "faq": "可用平台、账号、试用期限和授权条件以官方为准；",
+  "documentationUrl": "https://github.com/bitwarden/clients/blob/main/README.md",
+  "category": "security",
+  "screenshots": []
+}
