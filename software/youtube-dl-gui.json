@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "youtube-dl-gui",
+  "kind": "package",
+  "name": "yt-dlg",
+  "category": "media",
+  "summary": "为 yt-dlp 提供免费桌面图形操作界面。",
+  "description": "可粘贴视频地址、选择格式和保存目录，适合不希望使用命令行管理下载的用户。\n\n许可：Unlicense。许可及第三方通知：https://github.com/oleksis/youtube-dl-gui/blob/1c7dbf0db5c8498294bb19162c26348db9b841ec/LICENSE 。对应版本源码：https://github.com/oleksis/youtube-dl-gui/tree/v1.8.5 。",
+  "faq": "可以保存无权访问的视频吗？不能，登录、账户权益及内容许可仍由对应平台决定。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先确认下载器和所需 FFmpeg 已配置，粘贴一个可访问地址并选择格式；完成一个测试任务后再添加批量下载。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/oleksis/youtube-dl-gui",
+  "documentationUrl": "https://github.com/oleksis/youtube-dl-gui/blob/1c7dbf0db5c8498294bb19162c26348db9b841ec/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/oleksis/youtube-dl-gui/1c7dbf0db5c8498294bb19162c26348db9b841ec/youtube_dl_gui/data/pixmaps/youtube-dl-gui.ico",
+    "sha256": "c518dae0dd48daf55712e43d87fb038f73b5fec1a17869a824c5d5ac7bd54fb4",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/oleksis/youtube-dl-gui/blob/1c7dbf0db5c8498294bb19162c26348db9b841ec/youtube_dl_gui/data/pixmaps/youtube-dl-gui.ico ；许可及通知：https://github.com/oleksis/youtube-dl-gui/blob/1c7dbf0db5c8498294bb19162c26348db9b841ec/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "youtube-dl-gui",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

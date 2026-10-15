@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "fooyin",
+  "kind": "package",
+  "name": "fooyin",
+  "category": "media",
+  "summary": "免费音乐播放器，可整理本地音频并定制界面。",
+  "description": "提供音乐库、播放列表、标签和多种音频格式支持，适合维护自己的本地音乐收藏。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/fooyin/fooyin/blob/9f6e9364b9d1cdcccecf598db08b84b3f701e1b0/COPYING 。对应版本源码：https://github.com/fooyin/fooyin/tree/v0.13.1 。",
+  "faq": "会提供在线免费歌曲吗？主要使用自己的音乐文件，在线服务和音乐授权另行处理。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 选择音乐文件夹建立曲库，查看歌曲标签并创建歌单；播放测试后再调整布局、输出设备和播放选项。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://fooyin.org/",
+  "documentationUrl": "https://github.com/fooyin/fooyin/blob/9f6e9364b9d1cdcccecf598db08b84b3f701e1b0/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/fooyin/fooyin/9f6e9364b9d1cdcccecf598db08b84b3f701e1b0/data/icons/512-fooyin.png",
+    "sha256": "5e6ae04de032148aa2dbaf49e904b96f8edea7f3daf101c01ede96d1f3ca4996",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/fooyin/fooyin/blob/9f6e9364b9d1cdcccecf598db08b84b3f701e1b0/data/icons/512-fooyin.png ；许可及通知：https://github.com/fooyin/fooyin/blob/9f6e9364b9d1cdcccecf598db08b84b3f701e1b0/COPYING"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fooyin",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "fooyin",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fooyin/fooyin",
+          "assetPattern": "fooyin_{version}-bookworm_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "fooyin/fooyin",
+          "assetPattern": "fooyin_{version}-bookworm_arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

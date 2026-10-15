@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windows11-drag-drop-fix",
+  "kind": "package",
+  "name": "Windows 11 Drag & Drop to the Taskbar Fix",
+  "category": "system",
+  "summary": "为缺少相关功能的早期 Windows 11 恢复任务栏拖放操作。",
+  "description": "将文件拖到任务栏上的应用时协助切换窗口，适合仍使用受影响旧版系统的用户。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/blob/7cf817b7b9a5997e12479fc01bc0597c9ab7f0a0/LICENSE 。对应版本源码：https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/tree/v.2.4.0.0-release 。",
+  "faq": "新版 Windows 11 还需要它吗？很多版本已恢复原生支持，能正常操作时无需重复安装辅助工具。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先确认系统是否已原生支持所需拖放行为；仍有需要时启动工具，使用测试文件检查拖放，再决定是否开机启动。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix",
+  "documentationUrl": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/blob/7cf817b7b9a5997e12479fc01bc0597c9ab7f0a0/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/7cf817b7b9a5997e12479fc01bc0597c9ab7f0a0/Windows11DragAndDropToTaskbarFix/Windows11DragAndDropToTaskbarFixAlternative.ico",
+    "sha256": "dec01fa359a97341cc21b1840ed1a41eb7782efde48574339d249992025f81e2",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/blob/7cf817b7b9a5997e12479fc01bc0597c9ab7f0a0/Windows11DragAndDropToTaskbarFix/Windows11DragAndDropToTaskbarFixAlternative.ico ；许可及通知：https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/blob/7cf817b7b9a5997e12479fc01bc0597c9ab7f0a0/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "win11dragdroptaskbarfix",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

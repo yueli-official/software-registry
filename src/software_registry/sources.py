@@ -156,6 +156,9 @@ def resolve_github(entry, reader):
         require(suffix in ('-stable', '-F-DROID') and version.endswith(suffix),
                 'source.tag', 'Expected the configured official release suffix')
         version = version[:-len(suffix)]
+    if tag_template and '{version}' in tag_template:
+        # The exact requested tag was already checked, including any project suffix.
+        version = entry['_sourceVersion']
     if options.get('tagVersionFormat') == 'date-build':
         match = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})-(\d{2})', version)
         require(match is not None, 'source.version', 'Expected an official YYYY-MM-DD-NN build tag')
@@ -166,7 +169,7 @@ def resolve_github(entry, reader):
             raise PlanError('source.version', 'Official build tag has an invalid calendar date') from None
         require(components[3] > 0, 'source.version', 'Official daily build number must be positive')
         version = '.'.join(map(str, components))
-    require(version and re.fullmatch(r'[0-9]+(?:\.[0-9]+){1,3}(?:[-+][0-9A-Za-z.-]+)?', version),
+    require(version and re.fullmatch(r'[0-9]+(?:\.[0-9]+){0,3}(?:[-+][0-9A-Za-z.-]+)?', version),
             'source.version', 'GitHub release tag did not yield a numeric version')
     pattern = options['assetPattern'].replace('{version}', version).replace('{versionCompact}', version.replace('.', ''))
     if options.get('versionFromPrimary'):

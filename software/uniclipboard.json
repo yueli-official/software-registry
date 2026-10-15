@@ -1,0 +1,102 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "uniclipboard",
+  "kind": "package",
+  "name": "UniClipboard",
+  "category": "productivity",
+  "summary": "免费跨设备剪贴板同步工具，便于传递文字等内容。",
+  "description": "以本地优先和设备配对的方式在自己的设备间同步剪贴板，适合减少复制资料时的来回操作。\n\n许可：AGPL-3.0。许可及第三方通知：https://github.com/UniClipboard/UniClipboard/blob/60499d936cfeb22192d699fef61204e106f27d93/LICENSE 。对应版本源码：https://github.com/UniClipboard/UniClipboard/tree/v1.1.2 。",
+  "faq": "所有复制内容都适合自动同步吗？应检查排除和同步规则，密码、密钥及私人资料需要特别控制。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 在需要同步的设备安装客户端，按官方说明配对并确认身份；先发送普通测试文字，检查同步方向和启用范围。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://uniclipboard.app",
+  "documentationUrl": "https://github.com/UniClipboard/UniClipboard/blob/60499d936cfeb22192d699fef61204e106f27d93/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/UniClipboard/UniClipboard/60499d936cfeb22192d699fef61204e106f27d93/assets/logo.png",
+    "sha256": "9d50ad379c403c80c1309088a0f8b60ce1c1a981725218076e0173d0a6d9f16d",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/UniClipboard/UniClipboard/blob/60499d936cfeb22192d699fef61204e106f27d93/assets/logo.png ；许可及通知：https://github.com/UniClipboard/UniClipboard/blob/60499d936cfeb22192d699fef61204e106f27d93/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "uniclipboard",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "uniclipboard",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "UniClipboard/UniClipboard",
+          "assetPattern": "UniClipboard_{version}_x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "UniClipboard/UniClipboard",
+          "assetPattern": "UniClipboard_{version}_aarch64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "UniClipboard/UniClipboard",
+          "assetPattern": "UniClipboard_{version}_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "UniClipboard/UniClipboard",
+          "assetPattern": "UniClipboard_{version}_arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

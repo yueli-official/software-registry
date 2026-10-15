@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "universal-android-debloater-next-generation",
+  "kind": "package",
+  "name": "Universal Android Debloater NG",
+  "category": "mobile",
+  "summary": "免费图形工具，通过 ADB 管理 Android 设备上的预装应用。",
+  "description": "可查看应用列表及项目提供的说明，适合了解并按需处理手机中不使用的预装组件。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/LICENSE 。对应版本源码：https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/tree/v1.2.0 。",
+  "faq": "名称里有“推荐”就可以全部处理吗？不能保证适合每台设备，关键系统组件可能影响通话、登录或更新，操作前备份并了解恢复方法。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux 压缩包：完整解压，按官方说明安装运行依赖，再启动其中的图形应用。\n2. 按官方说明准备 ADB、USB 调试及设备授权，连接自己的手机；先阅读应用说明和恢复方式，小范围测试后检查手机功能。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+  "documentationUrl": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/resources/assets/icon.ico",
+    "sha256": "d0e732ba8930511b701f6cbc25243818380fa4ba264ef5df0dc7fcfec0cb555f",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/resources/assets/icon.ico ；许可及通知：https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/resources/screenshots/v0.5.0.png",
+      "sha256": "0655a90ccc0d9acec42b1ba6950077ab6ba45802c402324e2fe7d6566476cd39",
+      "mime": "image/png",
+      "caption": "Universal Android Debloater 官方历史界面示例（v0.5.0）",
+      "sourcePage": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/dcaf90396eeb4cc00c9b8f19cb0e99d4e0de4342/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "uad-ng",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+          "assetPattern": "uad-ng-macos-intel.tar.gz",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+          "assetPattern": "uad-ng-linux.tar.gz",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

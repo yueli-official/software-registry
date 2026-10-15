@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "tartube",
+  "kind": "package",
+  "name": "Tartube",
+  "category": "media",
+  "summary": "面向 yt-dlp 等下载器的免费图形客户端。",
+  "description": "可组织视频来源和下载任务，并查看任务状态，适合保存自己有权下载的公开视频或个人内容。\n\n许可：LGPL-2.1。许可及第三方通知：https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/LICENSE 。对应版本源码：https://github.com/axcore/tartube/tree/v2.5.231 。",
+  "faq": "为什么有些网站无法下载？可访问性、账户权限和网站改版都可能影响下载，先查看下载器及项目说明。 Linux 的 STRICT 包由系统或用户单独安装更新 yt-dlp、FFmpeg，客户端不自动下载更新这些依赖。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 按首次配置向导确认可用下载器及 FFmpeg，设置保存目录；添加一个可访问地址进行测试，再整理批量任务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/axcore/tartube",
+  "documentationUrl": "https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/README.rst",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/axcore/tartube/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/nsis/tartube_icon.ico",
+    "sha256": "19aa70d9fa51a68dbf3208a831d4f0903f41647504c1e35ce1f3a38959b1ed1f",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/nsis/tartube_icon.ico ；许可及通知：https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/axcore/tartube/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/screenshots/example25.png",
+      "sha256": "e12d414527de05fe1b4e9a0c62a3b87c4ddcf86cdbb4ccd9c5bb9f21c33c5a57",
+      "mime": "image/png",
+      "caption": "Tartube 官方主窗口与直播列表界面示例",
+      "sourcePage": "https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/README.rst",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/axcore/tartube/blob/13f753e1d6c63378ebb38b183ff9ec5cab3aecd4/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "tartube",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "axcore/tartube",
+          "assetPattern": "python3-tartube_{version}-STRICT.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

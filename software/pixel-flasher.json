@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pixel-flasher",
+  "kind": "package",
+  "name": "PixelFlasher",
+  "category": "mobile",
+  "summary": "免费 Android 手机固件操作图形工具，主要面向 Google Pixel。",
+  "description": "集中展示设备、固件及相关操作，适合已了解自己设备刷写条件的用户管理官方固件流程。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/LICENSE 。对应版本源码：https://github.com/badabing2005/PixelFlasher/tree/v10.1.1.1 。",
+  "faq": "连接后可以直接点击刷写吗？不可以，错误固件或选项可能清除数据或导致无法启动；先读项目说明及设备厂商文档，不确定时保持只读。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux AppImage：赋予可执行权限后启动；系统需具备对应的 AppImage/FUSE 运行条件，具体兼容性见官方说明。\n2. 先备份手机资料，阅读对应机型官方刷写条件，准备兼容的 Android Platform Tools；连接自己的设备并确认识别结果，逐项核对机型、固件和解锁状态后再决定操作。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/badabing2005/PixelFlasher",
+  "documentationUrl": "https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/badabing2005/PixelFlasher/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/images/icon-256.png",
+    "sha256": "5b3636592d9c437e5ffca64382ac969cb6b35cc8675c7e3e464b56e4c068d199",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/images/icon-256.png ；许可及通知：https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/badabing2005/PixelFlasher/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/images/basic-gui.png",
+      "sha256": "be666bf8286368a3123e9a8178bb261777bc71fadc91d6f6c6a68f6185c21647",
+      "mime": "image/png",
+      "caption": "PixelFlasher 官方设备与固件操作界面示例",
+      "sourcePage": "https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/badabing2005/PixelFlasher/blob/081286d6baf8ac969df29e8b0ab3a5b6ae4cfb54/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "pixelflasher",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "badabing2005/PixelFlasher",
+          "assetPattern": "PixelFlasher_MacOS.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "badabing2005/PixelFlasher",
+          "assetPattern": "PixelFlasher-x86_64.AppImage",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

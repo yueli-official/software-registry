@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ytdlp-interface",
+  "kind": "package",
+  "name": "yt-dlp interface",
+  "category": "media",
+  "summary": "Windows 上的免费 yt-dlp 图形界面。",
+  "description": "可集中查看下载任务与进度，并配置格式、路径和相关处理选项，适合日常音视频保存与整理。\n\n许可：MIT。许可及第三方通知：https://github.com/ErrorFlynn/ytdlp-interface/blob/2173316ebb5e50af49a2a4e939693fa8c3a3459c/LICENSE 。对应版本源码：https://github.com/ErrorFlynn/ytdlp-interface/tree/v2.19.1 。",
+  "faq": "旧版 Windows 是否都适用？不同发行包的系统要求不同，请按官方说明选择，不要混用依赖。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 完整解压后按官方说明确认 yt-dlp 和 FFmpeg 路径，粘贴一个可访问地址；选择格式及目录，测试成功后再安排多个任务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/ErrorFlynn/ytdlp-interface",
+  "documentationUrl": "https://github.com/ErrorFlynn/ytdlp-interface/blob/2173316ebb5e50af49a2a4e939693fa8c3a3459c/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ErrorFlynn/ytdlp-interface/2173316ebb5e50af49a2a4e939693fa8c3a3459c/ytdlp-interface/Youtube-Round.ico",
+    "sha256": "167d416ecd145b6ee3ed46f51bae40776cb425c28c9fd1e22695dd26e5824517",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/ErrorFlynn/ytdlp-interface/blob/2173316ebb5e50af49a2a4e939693fa8c3a3459c/ytdlp-interface/Youtube-Round.ico ；许可及通知：https://github.com/ErrorFlynn/ytdlp-interface/blob/2173316ebb5e50af49a2a4e939693fa8c3a3459c/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ytdlp-interface",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

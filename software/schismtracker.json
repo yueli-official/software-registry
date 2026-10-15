@@ -1,0 +1,89 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "schismtracker",
+  "kind": "package",
+  "name": "Schism Tracker",
+  "category": "media",
+  "summary": "免费的 Tracker 风格音乐制作软件，可用采样与音序编曲。",
+  "description": "继承经典 Impulse Tracker 操作风格，适合学习基于采样的音序编曲和编辑模块音乐。\n\n许可：GPL-2.0。许可及第三方通知：https://github.com/schismtracker/schismtracker/blob/74215ae300b555928332e03152dfcdc898f96ca6/COPYING 。对应版本源码：https://github.com/schismtracker/schismtracker/tree/20260524 。",
+  "faq": "不熟悉 Tracker 能直接使用吗？它的操作与常见钢琴卷帘编辑器不同，建议先看官方操作说明。Mac 原包同时包含 Intel 64 和 Apple Silicon 主程序。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux 压缩包：完整解压，按官方说明安装运行依赖，再启动其中的图形应用。\n2. 完整解压后启动主程序，先打开示例模块并设置音频输出；阅读快捷键说明，导入自己的采样，用少量音符测试 pattern 与播放顺序。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/schismtracker/schismtracker",
+  "documentationUrl": "https://github.com/schismtracker/schismtracker/blob/74215ae300b555928332e03152dfcdc898f96ca6/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/schismtracker/schismtracker/74215ae300b555928332e03152dfcdc898f96ca6/icons/schism-icon-192.png",
+    "sha256": "50cf45af0621db32eee7a53dcbc3f9aee0d885d3310bfc880ddd05b01ce56d56",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/schismtracker/schismtracker/blob/74215ae300b555928332e03152dfcdc898f96ca6/icons/schism-icon-192.png ；许可及通知：https://github.com/schismtracker/schismtracker/blob/74215ae300b555928332e03152dfcdc898f96ca6/COPYING"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "schismtracker",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "schismtracker",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "schismtracker",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schismtracker/schismtracker",
+          "assetPattern": "schismtracker-{version}-macos.zip",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "schismtracker/schismtracker",
+          "assetPattern": "schismtracker-{version}-linux.zip",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ]
+}

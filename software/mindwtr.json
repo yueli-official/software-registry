@@ -1,0 +1,100 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mindwtr",
+  "kind": "package",
+  "name": "Mindwtr",
+  "category": "productivity",
+  "summary": "免费 GTD 待办与项目管理工具。",
+  "description": "支持收集想法、整理项目、管理下一步行动和定期回顾，适合建立个人任务工作流。\n\n许可：AGPL-3.0。许可及第三方通知：https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/LICENSE 。对应版本源码：https://github.com/dongdongbh/Mindwtr/tree/v1.3.6 。",
+  "faq": "必须联网才能使用吗？主要流程可离线使用，同步能力和远端账户需要另行配置。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\nAndroid：选择适合设备的官方 APK，在系统提示中仅为本次使用的文件来源允许安装；安装后按需要授予权限。\n2. 先把待处理事项放进收件箱，再逐项补充下一步行动和项目；设置少量日期与标签，定期回顾并完成或归档任务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://mindwtr.app",
+  "documentationUrl": "https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/dongdongbh/Mindwtr/7880a9c283bd167ef4bf82d0412adc6cff900c38/apps/ios-native/App/Assets.xcassets/AppIcon.appiconset/icon.png",
+    "sha256": "eea612902042cf79ebe1faf68fef668c9454a62400bd498273578e2cda9f953a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/apps/ios-native/App/Assets.xcassets/AppIcon.appiconset/icon.png ；许可及通知：https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/dongdongbh/Mindwtr/7880a9c283bd167ef4bf82d0412adc6cff900c38/apps/desktop/screenshots/flathub/board_view_light.png",
+      "sha256": "8aeb4ca152587ef7846b9a8b8fbda7f3c7e7144d867d55130f0eea9678ccb0dd",
+      "mime": "image/png",
+      "caption": "Mindwtr 官方任务看板示例",
+      "sourcePage": "https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/dongdongbh/Mindwtr/blob/7880a9c283bd167ef4bf82d0412adc6cff900c38/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mindwtr",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dongdongbh/Mindwtr",
+          "assetPattern": "mindwtr_{version}_x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dongdongbh/Mindwtr",
+          "assetPattern": "mindwtr_{version}_aarch64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dongdongbh/Mindwtr",
+          "assetPattern": "mindwtr_{version}_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "dongdongbh/Mindwtr",
+          "assetPattern": "mindwtr-{version}-foss.apk",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

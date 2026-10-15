@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "space-radar",
+  "kind": "package",
+  "name": "SpaceRadar",
+  "category": "files",
+  "summary": "用图形方式查看磁盘空间占用的免费工具。",
+  "description": "可扫描目录并用层次视图展示文件大小，帮助了解哪些文件夹占用较多空间。\n\n许可：MIT。许可及第三方通知：https://github.com/zz85/space-radar/blob/d38e36923df606338ef91aafd624d97c596afdea/LICENSE 。对应版本源码：https://github.com/zz85/space-radar/tree/v6.0.1 。",
+  "faq": "扫描结果是否表示可以直接删除？不表示，体积大的文件也可能是系统或应用必需资料。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. macOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\n2. 选择自己有访问权限的目录进行扫描，展开大目录定位文件；需要清理时先确认用途，并通过系统正常管理文件。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/zz85/space-radar",
+  "documentationUrl": "https://github.com/zz85/space-radar/blob/d38e36923df606338ef91aafd624d97c596afdea/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/zz85/space-radar/d38e36923df606338ef91aafd624d97c596afdea/app/Icon.png",
+    "sha256": "a9ab9388357f53da7ce4bfb5f02daad759df2694344b0b789ad09a9fea2eaf85",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/zz85/space-radar/blob/d38e36923df606338ef91aafd624d97c596afdea/app/Icon.png ；许可及通知：https://github.com/zz85/space-radar/blob/d38e36923df606338ef91aafd624d97c596afdea/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zz85/space-radar",
+          "assetPattern": "stable-macos-arm64-SpaceRadar.dmg"
+        }
+      }
+    }
+  ]
+}

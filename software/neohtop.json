@@ -1,0 +1,87 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "neohtop",
+  "kind": "package",
+  "name": "NeoHtop",
+  "category": "system",
+  "summary": "免费图形进程监视器，可查看 CPU 与内存占用。",
+  "description": "以列表和图表观察正在运行的进程，支持搜索、排序和资源占用查看，适合了解电脑当前负载。\n\n许可：MIT。许可及第三方通知：https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/LICENSE 。对应版本源码：https://github.com/Abdenasser/neohtop/tree/v1.2.0 。",
+  "faq": "能随意结束系统进程吗？不应仅按占用大小操作，结束系统或正在写入的进程可能影响运行。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 启动后先查看资源总览，按 CPU 或内存排序定位高占用应用；核对进程身份，优先在对应应用中正常关闭不需要的任务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/Abdenasser/neohtop",
+  "documentationUrl": "https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Abdenasser/neohtop/0fbef7c235c9fca9c997cfdc16d9425535976a5a/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png",
+    "sha256": "d154c0c9adb44de69d980c73e8daaddbbeee70c106cb84d09b421983fd3f613d",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png ；许可及通知：https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Abdenasser/neohtop/0fbef7c235c9fca9c997cfdc16d9425535976a5a/screenshot.png",
+      "sha256": "de067c9542c61f396ce909d493302223d3174842e145aa2336fef2b6dd794272",
+      "mime": "image/png",
+      "caption": "NeoHtop 官方进程监控界面示例",
+      "sourcePage": "https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/Abdenasser/neohtop/blob/0fbef7c235c9fca9c997cfdc16d9425535976a5a/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "neohtop",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Abdenasser/neohtop",
+          "assetPattern": "intel-NeoHtop_{version}_x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Abdenasser/neohtop",
+          "assetPattern": "silicon-NeoHtop_{version}_aarch64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Abdenasser/neohtop",
+          "assetPattern": "NeoHtop_{version}_x86_64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

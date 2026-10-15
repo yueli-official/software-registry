@@ -51,6 +51,37 @@ def release(data=b'original package'):
 
 
 class RegistryTests(unittest.TestCase):
+    def test_exact_secondary_tag_template_preserves_primary_version(self):
+        from software_registry.sources import resolve_github
+        value = release(); value['tag_name'] = 'v1.2.3_sample'
+        entry = {'_sourceVersion': '1.2.3', 'slot': manifest()['packages'][0] | {},
+                 'source': {'driver': 'github-release', 'options': {'repository': 'example/sample',
+                            'assetPattern': 'sample-{version}.zip', 'tagTemplate': 'v{version}_sample'}}}
+        entry['slot'] = {k: entry['slot'][k] for k in ('platform', 'architecture', 'channel')}
+        reader = FixtureReader({'repos/example/sample/releases/tags/v1.2.3_sample': value})
+        result = resolve_github(entry, reader)
+        self.assertEqual(result['version'], '1.2.3')
+        self.assertEqual(result['artifacts'][0]['filename'], 'sample-1.2.3.zip')
+        value['tag_name'] = 'v1.2.4_sample'
+        with self.assertRaises(RegistryError):
+            resolve_github(entry, FixtureReader({'repos/example/sample/releases/tags/v1.2.3_sample': value}))
+
+    def test_github_numeric_date_version_preserves_upstream_identity(self):
+        for version in ('20260524', '42'):
+            value = release(); value['tag_name'] = version
+            value['assets'][0].update(name='sample-' + version + '.zip',
+                                     browser_download_url='https://github.com/example/sample/releases/download/' + version + '/sample-' + version + '.zip')
+            definition = manifest(); definition['packages'][0]['source']['options']['tagPrefix'] = ''
+            plan = create_plan(definition, FixtureReader({'repos/example/sample/releases/latest': value}))
+            self.assertEqual(plan['version'], version)
+            self.assertEqual(plan['artifacts'][0]['filename'], value['assets'][0]['name'])
+            self.assertEqual(plan['artifacts'][0]['url'], value['assets'][0]['browser_download_url'])
+        for version in ('latest', '2026/05/24', '1.2.3.4.5'):
+            value = release(); value['tag_name'] = version
+            definition = manifest(); definition['packages'][0]['source']['options']['tagPrefix'] = ''
+            with self.subTest(version=version), self.assertRaises(RegistryError):
+                create_plan(definition, FixtureReader({'repos/example/sample/releases/latest': value}))
+
     def test_release_date_is_official_optional_and_validated(self):
         value = release()
         reader = FixtureReader({'repos/example/sample/releases/latest': value})

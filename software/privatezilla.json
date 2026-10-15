@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "privatezilla",
+  "kind": "package",
+  "name": "Privatezilla",
+  "category": "system",
+  "summary": "免费 Windows 10 隐私设置检查与调整工具。",
+  "description": "用图形界面检查常见隐私选项并展示状态，适合按自己的需求逐项了解和调整系统设置。\n\n许可：MIT。许可及第三方通知：https://github.com/builtbybel/privatezilla/blob/15ad192013dcaf436859d3e5e14e712c54c313c9/LICENSE 。对应版本源码：https://github.com/builtbybel/privatezilla/tree/0.60.0 。",
+  "faq": "适合所有 Windows 版本吗？项目主要针对 Windows 10，不应把它当作已经验证兼容 Windows 11 的一键优化器。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 解压后启动，先执行分析并阅读每项说明，记录原状态；只应用自己理解且需要的选项，再检查相关系统功能。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://www.builtbybel.com/ms-apps/privatezilla",
+  "documentationUrl": "https://github.com/builtbybel/privatezilla/blob/15ad192013dcaf436859d3e5e14e712c54c313c9/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/builtbybel/privatezilla/15ad192013dcaf436859d3e5e14e712c54c313c9/src/Privatezilla/privatezilla.ico",
+    "sha256": "95ba4f4d0b94d2c8fe4d53468e57a99d11c34208bb570169cb4c593e2d9f1afd",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/builtbybel/privatezilla/blob/15ad192013dcaf436859d3e5e14e712c54c313c9/src/Privatezilla/privatezilla.ico ；许可及通知：https://github.com/builtbybel/privatezilla/blob/15ad192013dcaf436859d3e5e14e712c54c313c9/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "builtbybel/privatezilla",
+          "assetPattern": "privatezilla.zip"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "seelen-ui",
+  "kind": "package",
+  "name": "Seelen UI",
+  "category": "system",
+  "summary": "免费 Windows 桌面定制工具，提供状态栏、程序坞等界面。",
+  "description": "可调整桌面布局、窗口组织和主题，适合希望按自己习惯整理桌面的用户。\n\n许可：AGPL-3.0。许可及第三方通知：https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/LICENSE 。对应版本源码：https://github.com/eythaann/Seelen-UI/tree/v2.8.9 。",
+  "faq": "能直接用于任意旧版 Windows 吗？需要兼容的 Windows 10/11 及相关运行条件，请先看对应版本说明。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 安装后先体验默认布局，逐项配置状态栏和程序坞；了解恢复默认及退出方式，再按需要启用启动项和主题。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://seelen.io/apps/seelen-ui",
+  "documentationUrl": "https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/eythaann/Seelen-UI/507378aa01190617c18ee2c70ecc66b316169437/src/static/icons/icon.ico",
+    "sha256": "7343d7d4ed5fed4b9442c250fd0c7417e6a8dab7742fa19d3a63f66da135b0fa",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/src/static/icons/icon.ico ；许可及通知：https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/eythaann/Seelen-UI/507378aa01190617c18ee2c70ecc66b316169437/documentation/images/theme_preview.png",
+      "sha256": "1909ddb6848bb52ad0ed17226a85bcf447f3d9bddfd9010f068f82a6d340a8b9",
+      "mime": "image/png",
+      "caption": "Seelen UI 官方桌面定制界面示例",
+      "sourcePage": "https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/eythaann/Seelen-UI/blob/507378aa01190617c18ee2c70ecc66b316169437/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "seelen-ui",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "seelen-ui",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ]
+}

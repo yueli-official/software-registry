@@ -1,0 +1,113 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "feishin",
+  "kind": "package",
+  "name": "Feishin",
+  "category": "media",
+  "summary": "连接个人音乐服务器的免费桌面播放器。",
+  "description": "适用于 Navidrome、Jellyfin 和兼容 OpenSubsonic 的音乐服务，支持专辑浏览、播放列表与歌词等功能。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/LICENSE 。对应版本源码：https://github.com/jeffvli/feishin/tree/v1.17.0 。",
+  "faq": "安装后就有歌曲吗？需要连接已有曲库，程序不附送音乐资源或服务器账户。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 填写自己可用的音乐服务器地址和账户，扫描曲库；播放一首歌曲检查声音，再整理歌单和歌词设置。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/jeffvli/feishin",
+  "documentationUrl": "https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/jeffvli/feishin/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/media/feishin.svg",
+    "sha256": "51ceecda49e877688792e1b09489ac7c901297dd70ed6d1423c7faf23279a9d6",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/media/feishin.svg ；许可及通知：https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/jeffvli/feishin/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/media/preview_full_screen_player.png",
+      "sha256": "852dca3dbc8a674e451775764fadf02d8c2f4365129c5596bbcc83839935c387",
+      "mime": "image/png",
+      "caption": "Feishin 官方音乐播放与歌词界面示例",
+      "sourcePage": "https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/jeffvli/feishin/blob/5c169aca8d550032c9aa6e8e2b9f624d03d42fec/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "feishin",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "feishin",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jeffvli/feishin",
+          "assetPattern": "Feishin-{version}-mac-x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jeffvli/feishin",
+          "assetPattern": "Feishin-{version}-mac-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jeffvli/feishin",
+          "assetPattern": "Feishin-linux-amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "jeffvli/feishin",
+          "assetPattern": "Feishin-linux-arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "quickclipboard",
+  "kind": "package",
+  "name": "QuickClipboard",
+  "category": "productivity",
+  "summary": "免费 Windows 剪贴板增强工具，可搜索和整理历史内容。",
+  "description": "支持文本、图片及文件等复制记录，提供置顶、筛选和快捷操作，适合整理经常重复使用的资料。\n\n许可：Apache-2.0。许可及第三方通知：https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/LICENSE 。对应版本源码：https://github.com/mosheng1/QuickClipboard/tree/v0.5.0 。",
+  "faq": "适合保留密码和敏感资料吗？剪贴记录可能包含复制过的内容，应检查排除、保留和清理设置。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先复制一段测试文字并打开历史面板，尝试搜索、置顶和回贴；设置快捷键与保留规则，按需要清理历史记录。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://quickclipboard.cn/en",
+  "documentationUrl": "https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mosheng1/QuickClipboard/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/readme-assets/logo.png",
+    "sha256": "51dffa046ecea28045cbcbf1a3412e19e9a15b1662887430186f32db27c659b7",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/readme-assets/logo.png ；许可及通知：https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/mosheng1/QuickClipboard/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/readme-assets/display/%E6%B5%85%E8%89%B2.png",
+      "sha256": "ccd53d68ee4fbbd07dd951fcea7d8604146beaf2b6b569d521d7d0d0a5ae32b6",
+      "mime": "image/png",
+      "caption": "QuickClipboard 官方剪贴板历史与搜索界面示例",
+      "sourcePage": "https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/mosheng1/QuickClipboard/blob/55679aec7dafd79a27a3bdf73f86c34aa9c24d86/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "quickclipboard",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

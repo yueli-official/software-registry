@@ -1,0 +1,100 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "mrrss",
+  "kind": "package",
+  "name": "MrRSS",
+  "category": "reading",
+  "summary": "免费的桌面 RSS 阅读器，可集中管理订阅文章。",
+  "description": "提供订阅分类、阅读列表及可选的翻译和摘要功能，适合减少在多个网站间来回查看。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/LICENSE 。对应版本源码：https://github.com/DevXDojo/MrRSS/tree/v1.3.40 。",
+  "faq": "AI 摘要是否必须使用？不必，基础订阅和阅读可独立使用，模型服务的账户及费用另行处理。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux AppImage：赋予可执行权限后启动；系统需具备对应的 AppImage/FUSE 运行条件，具体兼容性见官方说明。\nLinux 压缩包：完整解压，按官方说明安装运行依赖，再启动其中的图形应用。\n2. 添加几个常看的 RSS 地址，更新后检查文章能否打开；按主题分类，按需配置翻译或模型服务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/WCY-dt/MrRSS",
+  "documentationUrl": "https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/DevXDojo/MrRSS/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/build/windows/icon.ico",
+    "sha256": "85bfc2c956342627f50ee77228dd6120a071b882ddf29d162af025ec1bcafdde",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/build/windows/icon.ico ；许可及通知：https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/DevXDojo/MrRSS/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/imgs/og1.png",
+      "sha256": "5aa0959146a2659263f319e355e67f43715f8b68343a7279abc5e9b0e93bcad1",
+      "mime": "image/png",
+      "caption": "MrRSS 官方阅读功能界面示意",
+      "sourcePage": "https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/DevXDojo/MrRSS/blob/d5d0032b7c85efb4d8d7fbd81e0a705049b5e47d/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mrrss",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "mrrss",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DevXDojo/MrRSS",
+          "assetPattern": "MrRSS-{version}-darwin-universal.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DevXDojo/MrRSS",
+          "assetPattern": "MrRSS-{version}-linux-amd64.AppImage",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "DevXDojo/MrRSS",
+          "assetPattern": "MrRSS-{version}-linux-arm64-portable.tar.gz",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

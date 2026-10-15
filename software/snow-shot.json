@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "snow-shot",
+  "kind": "package",
+  "name": "Snow Shot",
+  "category": "capture",
+  "summary": "免费开源的截图与画面标注工具。",
+  "description": "提供截图、标注及相关图片处理能力，适合制作操作说明和日常截取屏幕内容。\n\n许可：Snow Shot 为 GPL-3.0-or-later，共享组件按原 Apache-2.0 等许可。许可及第三方通知：https://github.com/mg-chao/snow-apps/blob/8982d6660c0329957e303f7a45b9d6208c87959e/LICENSE.md 。对应版本源码：https://github.com/mg-chao/snow-apps/tree/v1.3.0_snow-shot 。",
+  "faq": "文字识别或 AI 功能是否都能直接离线用？相关模型、服务和账户条件以官方说明为准，基础截图可先独立体验。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\n2. 启动后设置截图快捷键，选择区域并尝试画笔、文字和箭头；确认保存位置后导出一张测试图片，再配置需要的附加功能。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://snowshot.top",
+  "documentationUrl": "https://github.com/mg-chao/snow-apps/blob/8982d6660c0329957e303f7a45b9d6208c87959e/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mg-chao/snow-apps/8982d6660c0329957e303f7a45b9d6208c87959e/snow_shot/resources/app-icon.ico",
+    "sha256": "b94f04e476ac16fce0ae80e62ceb55dd5ad21238743bfb45ea44ae5bcbfb1385",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/mg-chao/snow-apps/blob/8982d6660c0329957e303f7a45b9d6208c87959e/snow_shot/resources/app-icon.ico ；许可及通知：https://github.com/mg-chao/snow-apps/blob/8982d6660c0329957e303f7a45b9d6208c87959e/LICENSE.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "snowshot",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mg-chao/snow-apps",
+          "assetPattern": "snow-shot-{version}-windows-arm64-portable.zip",
+          "tagTemplate": "v{version}_snow-shot"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mg-chao/snow-apps",
+          "assetPattern": "snow-shot-{version}-macos-x86_64.dmg",
+          "tagTemplate": "v{version}_snow-shot"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mg-chao/snow-apps",
+          "assetPattern": "snow-shot-{version}-macos-arm64.dmg",
+          "tagTemplate": "v{version}_snow-shot"
+        }
+      }
+    }
+  ]
+}

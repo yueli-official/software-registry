@@ -1,0 +1,87 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "ferrite",
+  "kind": "package",
+  "name": "Ferrite",
+  "category": "reading",
+  "summary": "轻量的免费文本与 Markdown 编辑器。",
+  "description": "可在桌面编辑笔记、Markdown 和常见文本资料，提供多文件浏览与编辑辅助，适合日常文字整理。\n\n许可：MIT。许可及第三方通知：https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/LICENSE 。对应版本源码：https://github.com/OlaProeis/Ferrite/tree/v0.3.0 。",
+  "faq": "能直接编辑 Word 文档吗？它面向文本文件，不能代替完整的 Word 排版工具。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 新建一个文本或 Markdown 文件，输入内容后保存到自己的资料目录；重新打开检查编码与排版，修改已有文件前保留副本。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://getferrite.dev/",
+  "documentationUrl": "https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/OlaProeis/Ferrite/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/assets/icons/linux/512x512/ferrite.png",
+    "sha256": "c7eb21f49d55b8d9999dc56ea670b0e9e7a77af631e1afac0a22a519d154549a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/assets/icons/linux/512x512/ferrite.png ；许可及通知：https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/OlaProeis/Ferrite/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/assets/screenshots/raw-dark.png",
+      "sha256": "48dca6dcb2bbed47007e5d66d34348f6cef0f59fbb778faa0af38912c99d0ddb",
+      "mime": "image/png",
+      "caption": "Ferrite 官方 Markdown 编辑界面示例",
+      "sourcePage": "https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/OlaProeis/Ferrite/blob/ac4f36695e5b60a0a41fe64a458e0c2279fca13c/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "ferrite",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OlaProeis/Ferrite",
+          "assetPattern": "ferrite-macos-x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OlaProeis/Ferrite",
+          "assetPattern": "ferrite-macos-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "OlaProeis/Ferrite",
+          "assetPattern": "ferrite-editor_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

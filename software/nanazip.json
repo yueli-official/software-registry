@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "nanazip",
+  "kind": "package",
+  "name": "NanaZip",
+  "category": "files",
+  "summary": "面向现代 Windows 界面的免费开源压缩与解压工具。",
+  "description": "基于 7-Zip 相关组件，提供压缩包管理和资源管理器集成，适合日常打包与解压文件。\n\n许可：MIT、7-Zip 及第三方原许可；应用图标作者 Shomnipotence，CC BY-ND 4.0。许可及第三方通知：https://github.com/M2Team/NanaZip/blob/df5db3c4a327c980e9f66dc28fbabd6782cda5e0/License.md 。对应版本源码：https://github.com/M2Team/NanaZip/tree/7.0.1843.0 。",
+  "faq": "为什么包名是 MSIXBundle？它是 Windows 应用安装包，需要兼容的系统和应用安装器，不能当普通便携 ZIP 使用。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 选择对应架构的官方包并通过 Windows 应用安装器安装，按系统要求满足依赖；先解压一个测试压缩包，再设置文件关联。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://nanazip.org",
+  "documentationUrl": "https://github.com/M2Team/NanaZip/blob/df5db3c4a327c980e9f66dc28fbabd6782cda5e0/ReadMe.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/M2Team/NanaZip/df5db3c4a327c980e9f66dc28fbabd6782cda5e0/Assets/PackageAssets/Square44x44Logo.targetsize-512.png",
+    "sha256": "040d1864496b5d2097f6086becc1018b15204c3308ffd1728c805651e05aeca2",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/M2Team/NanaZip/blob/df5db3c4a327c980e9f66dc28fbabd6782cda5e0/Assets/PackageAssets/Square44x44Logo.targetsize-512.png ；许可及通知：https://github.com/M2Team/NanaZip/blob/df5db3c4a327c980e9f66dc28fbabd6782cda5e0/License.md ；图标作者 Shomnipotence，CC BY-ND 4.0，仅用于识别 NanaZip，不改图案。"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "nanazip",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "main",
+          "app": "nanazip",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ]
+}

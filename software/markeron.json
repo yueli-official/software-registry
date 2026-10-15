@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "markeron",
+  "kind": "package",
+  "name": "MarkerOn",
+  "category": "capture",
+  "summary": "免费屏幕标注工具，可在当前画面上画线、写字和高亮。",
+  "description": "适合演示、讲解和远程会议中的临时标注，可用快捷键进入标注并调整画笔。\n\n许可：MIT。许可及第三方通知：https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/LICENSE 。对应版本源码：https://github.com/ifer47/markeron/tree/v2.11.1 。",
+  "faq": "标注会直接修改底下的文件吗？屏幕上的临时标记不等于编辑原文件，保存结果需按程序提供的功能操作。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\n2. 启动后设置不冲突的快捷键，打开一张测试画面；尝试画笔、箭头和高亮，了解退出及清除标注的方法后再用于演示。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://markeron.cn",
+  "documentationUrl": "https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ifer47/markeron/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/docs/assets/icon.png",
+    "sha256": "e032a1c1fe10c3b0d1de26d435d35c2867649c743fd382de99b8c5e8a9631e80",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/docs/assets/icon.png ；许可及通知：https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/ifer47/markeron/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/assets/MarkerOn_en.png",
+      "sha256": "22cbfcbc321f27f65e058785621e3e13d8a26147bd4b604e6608712ff62d58c6",
+      "mime": "image/png",
+      "caption": "MarkerOn 官方屏幕标注功能示意",
+      "sourcePage": "https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/ifer47/markeron/blob/2cd0ef1495b5854ec3d8a5e75b70ab8d2fe37b76/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "markeron",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ifer47/markeron",
+          "assetPattern": "MarkerOn_{version}_x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ifer47/markeron",
+          "assetPattern": "MarkerOn_{version}_aarch64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

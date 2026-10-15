@@ -1,0 +1,36 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "flowvision",
+  "kind": "package",
+  "name": "FlowVision",
+  "category": "graphics",
+  "summary": "免费 macOS 图片浏览器，提供瀑布流缩略图与大图查看。",
+  "description": "适合浏览摄影作品和本地图片目录，可按自己的浏览习惯调整布局和查看方式。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/netdcy/FlowVision/blob/d16f20ee7454348840bb40c9d67313c06839c9b4/LICENSE 。对应版本源码：https://github.com/netdcy/FlowVision/tree/1.7.6 。",
+  "faq": "支持 Windows 吗？当前官方发行面向 macOS，请按系统版本与处理器选择合适的包。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. macOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\n2. 打开一份图片目录，选择瀑布流或大图视图，测试缩放、切换和排序；需要管理原文件时先确认操作对象。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://flowvision.app",
+  "documentationUrl": "https://github.com/netdcy/FlowVision/blob/d16f20ee7454348840bb40c9d67313c06839c9b4/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/netdcy/FlowVision/d16f20ee7454348840bb40c9d67313c06839c9b4/FlowVision/Resources/Assets.xcassets/AppIcon.appiconset/icon.png",
+    "sha256": "ff1ace3f691b0fea127821e9c035aa7385a18edfc7408a69b2ec4f812585f231",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/netdcy/FlowVision/blob/d16f20ee7454348840bb40c9d67313c06839c9b4/FlowVision/Resources/Assets.xcassets/AppIcon.appiconset/icon.png ；许可及通知：https://github.com/netdcy/FlowVision/blob/d16f20ee7454348840bb40c9d67313c06839c9b4/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "netdcy/FlowVision",
+          "assetPattern": "FlowVision.{version}.zip"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lrcget",
+  "kind": "package",
+  "name": "LRCGET",
+  "category": "media",
+  "summary": "为本地音乐批量查找与下载 LRC 歌词的免费工具。",
+  "description": "根据音乐标签查找匹配歌词，便于在支持歌词的本地播放器中显示同步文本。\n\n许可：MIT。许可及第三方通知：https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/LICENSE 。对应版本源码：https://github.com/tranxuanthang/lrcget/tree/2.2.0 。",
+  "faq": "歌词时间不准怎么办？先确认歌曲版本和标签，再选择更匹配的结果或自行调整歌词时间。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 选择音乐目录，核对歌曲名和歌手标签；先为几首歌曲搜索歌词，预览时间轴是否匹配，再批量保存。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/tranxuanthang/lrcget",
+  "documentationUrl": "https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tranxuanthang/lrcget/bd31b5c2789576e9c875e37ba87e792da02b4606/src-tauri/icons/icon.png",
+    "sha256": "03f40ffe19c210a15a58def8f631fc96ddda04fed84af535a3328f94c91d62bc",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/src-tauri/icons/icon.png ；许可及通知：https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/tranxuanthang/lrcget/bd31b5c2789576e9c875e37ba87e792da02b4606/screenshots/01.png",
+      "sha256": "e2a419abb01b0fbb306a54fab8d1065b11a372ec029562bd56a82f7b31beedb7",
+      "mime": "image/png",
+      "caption": "LRCGET 官方歌词查找与下载界面示例",
+      "sourcePage": "https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/tranxuanthang/lrcget/blob/bd31b5c2789576e9c875e37ba87e792da02b4606/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lrcget",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tranxuanthang/lrcget",
+          "assetPattern": "LRCGET_{version}_x64.dmg",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tranxuanthang/lrcget",
+          "assetPattern": "LRCGET_{version}_aarch64.dmg",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "tranxuanthang/lrcget",
+          "assetPattern": "LRCGET_{version}_amd64.deb",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ]
+}

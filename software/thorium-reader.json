@@ -1,0 +1,113 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "thorium-reader",
+  "kind": "package",
+  "name": "Thorium Reader",
+  "category": "reading",
+  "summary": "免费桌面电子书阅读器，可管理书库并调整阅读版式。",
+  "description": "提供 EPUB 等阅读能力及无障碍相关选项，适合阅读自己拥有访问权限的电子书。\n\n许可：BSD-3-Clause。许可及第三方通知：https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/LICENSE 。对应版本源码：https://github.com/edrlab/thorium-reader/tree/v3.5.1 。",
+  "faq": "能直接解除电子书保护吗？不能，受保护内容仍需有效许可和相应阅读支持。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 导入一份受支持的电子书，检查目录、字号和阅读模式；需要访问受保护内容时按发行方说明提供自己的许可。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/edrlab/thorium-reader",
+  "documentationUrl": "https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/edrlab/thorium-reader/137e8901196bc47173580856105fe78b40473570/resources/icon.png",
+    "sha256": "3b0b0ad69885ce5e5d91ab7f77dd2df740f248ee4e5caca41fb8a901b1d11ea1",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，保留原图案；图形出处：https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/resources/icon.png ；许可及通知：https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/edrlab/thorium-reader/137e8901196bc47173580856105fe78b40473570/img/library.png",
+      "sha256": "7afc399ad7f760eaa376b06e3a9c3713d30c7db83a8ca69cc2c7f3bc7a1b5d95",
+      "mime": "image/png",
+      "caption": "Thorium Reader 官方电子书书库示例",
+      "sourcePage": "https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/README.md",
+      "licenseEvidence": "官方项目所用软件界面或功能示例，保留作者和原出处；原许可及第三方通知：https://github.com/edrlab/thorium-reader/blob/137e8901196bc47173580856105fe78b40473570/LICENSE",
+      "provenance": "官方示例图片，已实际预览后选用；示例内容属于原作者，不表示本地运行结果。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "thorium-reader",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "thorium-reader",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "edrlab/thorium-reader",
+          "assetPattern": "Thorium-{version}-x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "edrlab/thorium-reader",
+          "assetPattern": "Thorium-{version}-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "edrlab/thorium-reader",
+          "assetPattern": "Thorium-{version}-amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "edrlab/thorium-reader",
+          "assetPattern": "Thorium-{version}-arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

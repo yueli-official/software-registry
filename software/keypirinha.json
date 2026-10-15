@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "keypirinha",
+  "kind": "package",
+  "name": "Keypirinha",
+  "category": "productivity",
+  "summary": "免费 Windows 键盘启动器，快速搜索程序、文件和常用操作。",
+  "description": "通过键盘输入和模糊匹配减少查找程序的步骤，支持按配置选择目录与插件。软件采用作者自定义免费许可，并非开放源码。\n\n许可：作者自定义免费许可；仅完整未修改的官方包可再分发，内含组件保留原许可。许可及第三方通知：https://keypirinha.com/license.html 。对应版本项目资料：https://github.com/Keypirinha/Keypirinha/tree/v2.26 。",
+  "faq": "设置界面在哪里？主要通过 INI 配置文件调整；分发只保留完整未修改的官方包，内含组件按各自原许可提供。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "documentationUrl": "https://keypirinha.com/first.html",
+  "homepage": "https://keypirinha.com/",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 完整解压官方原包，启动后按 Ctrl+Win+K 呼出；输入一个程序名并确认结果，再阅读配置文档设置搜索范围和自己的热键。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\"><rect x=\"8\" y=\"8\" width=\"240\" height=\"240\" rx=\"44\" fill=\"#edf2fa\"/><text x=\"128\" y=\"148\" text-anchor=\"middle\" font-family=\"Arial,sans-serif\" font-size=\"94\" font-weight=\"700\" fill=\"#284b7b\">KP</text></svg>",
+    "sha256": "f37ab69e82e9f7e5a9d166ecc000437f10445f18f751dfb23bd75bef36255fcf",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "软件名称首字母排版标识，由维护者制作，非官方图标；未使用作者头像或第三方商标。"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "keypirinha",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "keypirinha",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}
