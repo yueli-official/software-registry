@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sidebar-diagnostics",
+  "kind": "package",
+  "name": "Sidebar Diagnostics",
+  "category": "system",
+  "summary": "在 Windows 桌面侧栏显示 CPU、内存、磁盘等硬件状态。",
+  "description": "通过常驻侧栏观察硬件资源和传感器信息，可调整显示项目与位置，适合日常查看电脑负载。可用传感器取决于设备与驱动。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/ArcadeRenegade/SidebarDiagnostics/blob/8893ef75ca25511c2d5431eb1741c246413017e9/LICENSE.md 。对应版本源码：https://github.com/ArcadeRenegade/SidebarDiagnostics/tree/v3.6.3 。",
+  "faq": "所有温度和传感器都能显示吗？不能，硬件、驱动和访问权限会影响可读取的信息。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 完整解压便携包后启动，选择侧栏所在显示器和位置；在设置中只保留需要的监测项目；对照系统任务管理器观察负载，确认布局后再考虑开机启动。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/ArcadeRenegade/SidebarDiagnostics",
+  "documentationUrl": "https://github.com/ArcadeRenegade/SidebarDiagnostics/blob/8893ef75ca25511c2d5431eb1741c246413017e9/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ArcadeRenegade/SidebarDiagnostics/8893ef75ca25511c2d5431eb1741c246413017e9/sidebar.ico",
+    "sha256": "08f43454737cef3d8776627192e8a4898556bd4a77f47a9392ee29f1802621a1",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/ArcadeRenegade/SidebarDiagnostics/blob/8893ef75ca25511c2d5431eb1741c246413017e9/sidebar.ico ；原始许可与通知：https://github.com/ArcadeRenegade/SidebarDiagnostics/blob/8893ef75ca25511c2d5431eb1741c246413017e9/LICENSE.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sidebar-diagnostics",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

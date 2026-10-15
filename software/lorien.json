@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lorien",
+  "kind": "package",
+  "name": "Lorien",
+  "category": "graphics",
+  "summary": "免费无限画布手绘工具，适合草图、课堂笔记和思路整理。",
+  "description": "以可缩放的画布组织手写内容，提供画笔、擦除和视图移动等操作，适合画流程草图或用数位笔记录想法。\n\n许可：MIT。许可及第三方通知：https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/LICENSE 。对应版本源码：https://github.com/mbrlabs/Lorien/tree/v0.6.0 。",
+  "faq": "它是完整的照片编辑器吗？不是，主要用于手绘、草图与笔记，照片修饰请使用专门工具。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux 压缩包：完整解压，按官方说明安装运行依赖，再启动其中的图形应用。\n2. 新建画布，选择画笔、颜色与线宽；尝试缩放和移动视图，再绘制分区笔记；及时保存工程，分享前另行导出图片。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/mbrlabs/Lorien",
+  "documentationUrl": "https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/mbrlabs/Lorien/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/images/lorien.svg",
+    "sha256": "ff6edcf30b672ce0272d079e7b56df8314b1a2434a95d9c7eb422f20f13c01ff",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/images/lorien.svg ；原始许可与通知：https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/mbrlabs/Lorien/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/images/lorien_demo.png",
+      "sha256": "5c7bb3e6e946ef23a01d6845a474325bf37ca1fb08d9a4d918896b348e62750b",
+      "mime": "image/png",
+      "caption": "Lorien 官方无限画布示例",
+      "sourcePage": "https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/mbrlabs/Lorien/blob/da288cb3f6b55e167d6145d4d4efa81c4ec7a575/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lorien",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mbrlabs/Lorien",
+          "assetPattern": "Lorien_v{version}_Mac.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "mbrlabs/Lorien",
+          "assetPattern": "Lorien_v{version}_Linux.tar.xz",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gyroflow",
+  "kind": "package",
+  "name": "Gyroflow",
+  "category": "media",
+  "summary": "利用陀螺仪数据稳定视频的免费开源工具。",
+  "description": "结合相机或运动传感器记录的运动信息及镜头配置，对视频进行防抖处理。适合运动相机、无人机和支持相关数据的设备素材。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/LICENSE 。对应版本源码：https://github.com/gyroflow/gyroflow/tree/v1.6.3 。",
+  "faq": "所有视频都能自动稳定吗？效果依赖可用运动数据、镜头配置和同步质量，没有匹配数据时不能保证结果。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux AppImage：赋予可执行权限后启动；系统需具备对应的 AppImage/FUSE 运行条件，具体兼容性见官方说明。\nAndroid：选择适合设备的官方 APK，在系统提示中仅为本次使用的文件来源允许安装；安装后按需要授予权限。\n2. 导入视频，确认陀螺仪数据与镜头配置；按官方说明完成同步并查看预览；调整平滑与裁剪，先导出一小段检查效果后再处理整段视频。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://gyroflow.xyz/",
+  "documentationUrl": "https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/gyroflow/gyroflow/977b843e320fd36b32db2b71f210f1f1a516f8cb/_deployment/linux/gyroflow.svg",
+    "sha256": "847ac94756cb80317c2cb716790c4fded707236eaecbf6c9611d27124c442578",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/_deployment/linux/gyroflow.svg ；原始许可与通知：https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/gyroflow/gyroflow/977b843e320fd36b32db2b71f210f1f1a516f8cb/resources/screenshot.jpg",
+      "sha256": "b28384f66cd04f1090286bc7d8324db9c09ba6a88a432cab0a02509e01fee404",
+      "mime": "image/jpeg",
+      "caption": "Gyroflow 官方视频稳定界面示例",
+      "sourcePage": "https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/gyroflow/gyroflow/blob/977b843e320fd36b32db2b71f210f1f1a516f8cb/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "gyroflow",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "gyroflow",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gyroflow/gyroflow",
+          "assetPattern": "Gyroflow-mac-universal.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gyroflow/gyroflow",
+          "assetPattern": "Gyroflow-linux64.AppImage",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "android",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "gyroflow/gyroflow",
+          "assetPattern": "Gyroflow.apk",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

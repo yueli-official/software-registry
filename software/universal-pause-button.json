@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "universal-pause-button",
+  "kind": "package",
+  "name": "Universal Pause Button",
+  "category": "games",
+  "summary": "通过快捷键临时暂停、恢复部分 Windows 程序。",
+  "description": "通过挂起与恢复目标进程实现暂停，适合在部分没有暂停选项的单机程序中临时使用。不是所有游戏或应用都能安全恢复。\n\n许可：MIT。许可及第三方通知：https://github.com/ryanries/UniversalPauseButton/blob/c61cdca18d34adc9fb9a5b01763c44c5d970a62f/LICENSE.md 。对应版本源码：https://github.com/ryanries/UniversalPauseButton/tree/v1.1.5 。",
+  "faq": "能用于联机游戏或系统程序吗？不建议，联机、反作弊、后台写入和系统进程可能出现断线或状态异常。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先在无重要任务的普通测试程序上启动工具并按官方快捷键暂停、恢复；确认目标程序状态正常后再考虑实际使用；使用完毕退出工具。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/ryanries/UniversalPauseButton",
+  "documentationUrl": "https://github.com/ryanries/UniversalPauseButton/blob/c61cdca18d34adc9fb9a5b01763c44c5d970a62f/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ryanries/UniversalPauseButton/c61cdca18d34adc9fb9a5b01763c44c5d970a62f/pause.ico",
+    "sha256": "5686375d6c0f631f6fe6a71aaea26be62f151e0943fb66ecdbf35ee79f60a66d",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/ryanries/UniversalPauseButton/blob/c61cdca18d34adc9fb9a5b01763c44c5d970a62f/pause.ico ；原始许可与通知：https://github.com/ryanries/UniversalPauseButton/blob/c61cdca18d34adc9fb9a5b01763c44c5d970a62f/LICENSE.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "universalpausebutton",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

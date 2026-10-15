@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "audio-switcher",
+  "kind": "package",
+  "name": "Audio Switcher",
+  "category": "media",
+  "summary": "通过通知区域和快捷键快速切换 Windows 播放、录音设备。",
+  "description": "适合在耳机、音箱、显示器音频和麦克风之间切换，可设置常用设备及快捷键，减少反复打开系统声音面板的操作。\n\n许可：MS-PL。许可及第三方通知：https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/LICENSE 。对应版本源码：https://github.com/xenolightning/AudioSwitcher_v1/tree/1.8.0.142 。",
+  "faq": "它会安装声卡驱动吗？不会，设备需要先在 Windows 中正常识别。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 打开程序查看播放与录音设备，将常用耳机或音箱设为默认；在设置中为设备分配不冲突的快捷键，再用系统声音测试确认切换结果。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://audioswit.ch",
+  "documentationUrl": "https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xenolightning/AudioSwitcher_v1/da95b8837316069e4464ad2c6a79ebc84331f06c/FortyOne.AudioSwitcher/Resources/Music_Note_Double.ico",
+    "sha256": "0afa2eb896ffe20c5244dd191be791231c8b5b71eff200e75a3150a8e3296f30",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/FortyOne.AudioSwitcher/Resources/Music_Note_Double.ico ；原始许可与通知：https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/xenolightning/AudioSwitcher_v1/da95b8837316069e4464ad2c6a79ebc84331f06c/Screenshots/Settings.png",
+      "sha256": "433db351114bfe580f23a8785c85b522fb30110b7065c2df45cde5cfa56e47a7",
+      "mime": "image/png",
+      "caption": "Audio Switcher 官方设置界面示例",
+      "sourcePage": "https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/xenolightning/AudioSwitcher_v1/blob/da95b8837316069e4464ad2c6a79ebc84331f06c/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "audioswitcher",
+          "architecture": "universal"
+        }
+      }
+    }
+  ]
+}

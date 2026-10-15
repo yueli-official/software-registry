@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "beeftext",
+  "kind": "package",
+  "name": "Beeftext",
+  "category": "productivity",
+  "summary": "用短缩写快速输入常用长文本的免费工具。",
+  "description": "可为地址、邮件回复、模板语句等设置缩写，在支持的桌面输入框中自动展开。内容在本机维护，适合重复输入较多的办公场景。\n\n许可：MIT。许可及第三方通知：https://github.com/xmichelo/Beeftext/blob/1f24a1c70fb6302e66af83c318cf16e09371a7d0/LICENSE 。对应版本源码：https://github.com/xmichelo/Beeftext/tree/v16.0 。",
+  "faq": "所有应用都支持展开吗？部分游戏、受保护窗口和特殊编辑器可能不兼容，先在目标输入框测试。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 创建一个文本组合，为它设置不易误触的缩写和完整内容；在记事本中测试触发，再按用途分组整理；涉及密码或敏感资料时不要存为普通明文片段。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://beeftext.org/",
+  "documentationUrl": "https://github.com/xmichelo/Beeftext/blob/1f24a1c70fb6302e66af83c318cf16e09371a7d0/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/xmichelo/Beeftext/1f24a1c70fb6302e66af83c318cf16e09371a7d0/Beeftext/Resources/Sources/BeeftextLogo.svg",
+    "sha256": "3ddb1138f7aa87ef72decc423ca763af6398a8972d41b16a457180a1573b6b37",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/xmichelo/Beeftext/blob/1f24a1c70fb6302e66af83c318cf16e09371a7d0/Beeftext/Resources/Sources/BeeftextLogo.svg ；原始许可与通知：https://github.com/xmichelo/Beeftext/blob/1f24a1c70fb6302e66af83c318cf16e09371a7d0/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "beeftext",
+          "architecture": "64bit"
+        }
+      }
+    }
+  ]
+}

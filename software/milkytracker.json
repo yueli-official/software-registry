@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "milkytracker",
+  "kind": "package",
+  "name": "MilkyTracker",
+  "category": "media",
+  "summary": "免费复古 Tracker 音乐制作工具，适合用采样和音符制作模块音乐。",
+  "description": "采用音轨、音符行和 Pattern 的编辑方式，支持采样及模块文件工作流，适合学习 Tracker 编曲或整理相关作品。\n\n许可：GPL-3.0（Milkyplay 等组件另有许可）。许可及第三方通知：https://github.com/milkytracker/MilkyTracker/blob/dbda84a744d53951d05bddaf8060406972fe1027/COPYING 。对应版本源码：https://github.com/milkytracker/MilkyTracker/tree/v1.05.01 。",
+  "faq": "能直接当普通音乐播放器使用吗？它主要是 Tracker 编曲工具，常规音乐收藏播放更适合专门的播放器。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux 压缩包：完整解压，按官方说明安装运行依赖，再启动其中的图形应用。\n2. 打开官方示例或新建模块；导入有使用权的采样，在音轨中输入短音符片段并播放；调整 Pattern 顺序，保存工程后再导出或分享。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/milkytracker/MilkyTracker",
+  "documentationUrl": "https://github.com/milkytracker/MilkyTracker/blob/dbda84a744d53951d05bddaf8060406972fe1027/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/milkytracker/MilkyTracker/dbda84a744d53951d05bddaf8060406972fe1027/resources/pictures/milkytracker.png",
+    "sha256": "1d21c0d4806ffd461e6826e3e9b21c5d2612a6c4bbb283f94cda53f709b261f8",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/milkytracker/MilkyTracker/blob/dbda84a744d53951d05bddaf8060406972fe1027/resources/pictures/milkytracker.png ；原始许可与通知：https://github.com/milkytracker/MilkyTracker/blob/dbda84a744d53951d05bddaf8060406972fe1027/COPYING"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "milkytracker",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "milkytracker",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "milkytracker/MilkyTracker",
+          "assetPattern": "milkytracker-{version}-Universal-Ventura.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "milkytracker/MilkyTracker",
+          "assetPattern": "milkytracker-{version}-Linux.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

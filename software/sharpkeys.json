@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sharpkeys",
+  "kind": "package",
+  "name": "SharpKeys",
+  "category": "system",
+  "summary": "通过图形界面重映射 Windows 键盘按键。",
+  "description": "管理系统的扫描码映射，适合将不常用键改为其他键或禁用个别按键。它不是宏录制器，也不用于任意组合键脚本。\n\n许可：MS-PL。许可及第三方通知：https://github.com/randyrants/sharpkeys/blob/c0f750a2f487f0ee0563a7adf5123795031ba5a7/license.md 。对应版本源码：https://github.com/randyrants/sharpkeys/tree/v3.9.4 。",
+  "faq": "可以给快捷键组合录制宏吗？不能，它主要处理单键到单键的系统扫描码映射。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 记录当前映射，添加需要替换的原按键与目标按键；写入设置后按官方要求注销或重启；测试结果，需要恢复时删除对应映射并再次应用。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/randyrants/sharpkeys",
+  "documentationUrl": "https://github.com/randyrants/sharpkeys/blob/c0f750a2f487f0ee0563a7adf5123795031ba5a7/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/randyrants/sharpkeys/c0f750a2f487f0ee0563a7adf5123795031ba5a7/SharpKeys/App.ico",
+    "sha256": "967a1596b2649fe466fd0ec9f190098141dcd43d9530a8119b8d2feea24546e6",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/randyrants/sharpkeys/blob/c0f750a2f487f0ee0563a7adf5123795031ba5a7/SharpKeys/App.ico ；原始许可与通知：https://github.com/randyrants/sharpkeys/blob/c0f750a2f487f0ee0563a7adf5123795031ba5a7/license.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sharpkeys",
+          "architecture": "universal"
+        }
+      }
+    }
+  ]
+}

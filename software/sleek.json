@@ -1,0 +1,102 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "sleek",
+  "kind": "package",
+  "name": "sleek",
+  "category": "productivity",
+  "summary": "免费 todo.txt 待办管理工具，用简洁界面整理任务。",
+  "description": "以本地 todo.txt 文件维护事项，可使用完成状态、优先级和项目等信息组织工作，适合偏好纯文本保存任务的用户。\n\n许可：MIT。许可及第三方通知：https://github.com/ransome1/sleek/blob/83abefe1d2b44d5f750aee2339266099596f7045/LICENSE 。对应版本源码：https://github.com/ransome1/sleek/tree/v2.0.29 。",
+  "faq": "必须注册账号吗？本地任务管理不要求账号，使用其他同步服务时需遵守该服务条件。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 新建或打开 todo.txt 文件，添加具体待办；按需要设置优先级、项目或分类，完成后标记状态；定期备份任务文件，跨设备同步时注意冲突。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/ransome1/sleek",
+  "documentationUrl": "https://github.com/ransome1/sleek/blob/83abefe1d2b44d5f750aee2339266099596f7045/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/ransome1/sleek/83abefe1d2b44d5f750aee2339266099596f7045/resources/icon.iconset/icon_512x512%402x.png",
+    "sha256": "4bd28a01a29531cb5d7b22e48f33877a6727235a2b798421ce11bc9d8d697fb4",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/ransome1/sleek/blob/83abefe1d2b44d5f750aee2339266099596f7045/resources/icon.iconset/icon_512x512%402x.png ；原始许可与通知：https://github.com/ransome1/sleek/blob/83abefe1d2b44d5f750aee2339266099596f7045/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sleek",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "sleek",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ransome1/sleek",
+          "assetPattern": "sleek-{version}-mac-x64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ransome1/sleek",
+          "assetPattern": "sleek-{version}-mac-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ransome1/sleek",
+          "assetPattern": "sleek-{version}-linux-amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "ransome1/sleek",
+          "assetPattern": "sleek-{version}-linux-arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

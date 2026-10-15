@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "wincompose",
+  "kind": "package",
+  "name": "WinCompose",
+  "category": "productivity",
+  "summary": "用组合键输入特殊符号、重音字符和其他文字。",
+  "description": "设置一个 Compose 触发键后，通过连续按键输入不便直接键入的字符，适合多语言写作及日常符号输入。\n\n许可：官方许可与通知。许可及第三方通知：https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/COPYING 。对应版本源码：https://github.com/samhocevar/wincompose/tree/v0.9.11 。",
+  "faq": "会替换系统输入法吗？主要提供组合字符输入，可与系统输入法配合，但快捷键冲突时需要调整。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 完整解压并启动，在设置中确认 Compose 键；先按官方组合表在记事本输入一个常用符号；测试与现有快捷键是否冲突，再调整设置或维护自己的组合。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/samhocevar/wincompose",
+  "documentationUrl": "https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/samhocevar/wincompose/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/web/icon.png",
+    "sha256": "87b6343ff4d34bce28faa560f88b04d5b1e043ea6801d07a429b2a33a1c97c84",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/web/icon.png ；原始许可与通知：https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/COPYING"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/samhocevar/wincompose/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/web/shot1.png",
+      "sha256": "28806cadeaee6bec4b1f024e7aaad973278e5f6020e559e9593e6460efeb4f43",
+      "mime": "image/png",
+      "caption": "WinCompose 官方组合字符输入示例",
+      "sourcePage": "https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/samhocevar/wincompose/blob/cd81b47f2202fe2e3f3da1bf69a6c2cab679e40f/COPYING",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "wincompose",
+          "architecture": "universal"
+        }
+      }
+    }
+  ]
+}

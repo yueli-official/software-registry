@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "captura",
+  "kind": "package",
+  "name": "Captura",
+  "category": "capture",
+  "summary": "免费录制屏幕、窗口、摄像头及音频的 Windows 工具。",
+  "description": "支持区域选择、声音输入以及鼠标和按键显示，可用于录制操作演示。项目已停止维护，使用前应确认当前系统和编码器兼容性。\n\n许可：MIT。许可及第三方通知：https://github.com/MathewSachin/Captura/blob/eb5141efaf2b160deaeab0f69d7788ce60259697/LICENSE.md 。对应版本源码：https://github.com/MathewSachin/Captura/tree/v8.0.0 。",
+  "faq": "为什么提示缺少 FFmpeg？部分录像编码方式需要另配 FFmpeg，程序界面中的相关设置可指定其所在目录。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n此 Windows 发行包为 x86，也可在支持 32 位应用的 64 位 Windows 上运行。\n2. 完整解压后启动 Captura，系统需具备 .NET Framework 4.6.1；选择录制范围、音频输入和输出目录；使用 FFmpeg 编码时先配置可用的 FFmpeg 路径，试录十秒并检查声音与画面。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://mathewsachin.github.io/Captura/",
+  "documentationUrl": "https://github.com/MathewSachin/Captura/blob/eb5141efaf2b160deaeab0f69d7788ce60259697/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/MathewSachin/Captura/eb5141efaf2b160deaeab0f69d7788ce60259697/src/Captura/Images/Logo.png",
+    "sha256": "91141546a8cefc36a8f003703758a4d6e3f33f6c2a5c0df83c0348409636c896",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/MathewSachin/Captura/blob/eb5141efaf2b160deaeab0f69d7788ce60259697/src/Captura/Images/Logo.png ；原始许可与通知：https://github.com/MathewSachin/Captura/blob/eb5141efaf2b160deaeab0f69d7788ce60259697/LICENSE.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "captura",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}

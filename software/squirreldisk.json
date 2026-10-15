@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "squirreldisk",
+  "kind": "package",
+  "name": "SquirrelDisk",
+  "category": "files",
+  "summary": "用直观图表查看磁盘空间被哪些目录和文件占用。",
+  "description": "扫描选定目录，以可视化结果帮助寻找大文件和占用较多的资料，适合清理前先了解磁盘内容。\n\n许可：AGPL-3.0。许可及第三方通知：https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/LICENSE 。对应版本源码：https://github.com/adileo/squirreldisk/tree/v2.5.1 。",
+  "faq": "扫描结果能直接判断文件可以删除吗？不能，体积大不代表无用，系统与应用文件需要单独确认。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux AppImage：赋予可执行权限后启动；系统需具备对应的 AppImage/FUSE 运行条件，具体兼容性见官方说明。\n2. 选择有权限访问的目录并等待扫描；沿图表查看较大文件夹，核对文件路径与用途；通过系统文件管理器处理确认不需要的文件，重要资料先备份。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://www.squirreldisk.com/",
+  "documentationUrl": "https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/adileo/squirreldisk/71e82a7a369b838c741eda7448e9a215d2cd8980/assets/icon/icon-512.png",
+    "sha256": "703a8d81b3560f4ef639042da79a19401be6e4ecf398044d2f47c02eb5a1bb81",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/assets/icon/icon-512.png ；原始许可与通知：https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/adileo/squirreldisk/71e82a7a369b838c741eda7448e9a215d2cd8980/screenshots/explore.png",
+      "sha256": "53c0f176333282d85ba6170373fa908461f70f0e4c0f407ef6ac2b2c09fb29d8",
+      "mime": "image/png",
+      "caption": "SquirrelDisk 官方磁盘空间分析示例",
+      "sourcePage": "https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/adileo/squirreldisk/blob/71e82a7a369b838c741eda7448e9a215d2cd8980/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "squirreldisk",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "adileo/squirreldisk",
+          "assetPattern": "SquirrelDisk-macOS.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "adileo/squirreldisk",
+          "assetPattern": "SquirrelDisk-x86_64.AppImage",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

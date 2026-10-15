@@ -1,0 +1,37 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gopher360",
+  "kind": "package",
+  "name": "Gopher360",
+  "category": "games",
+  "summary": "用手柄控制 Windows 鼠标和键盘的免费小工具。",
+  "description": "可将兼容手柄的摇杆与按钮映射为鼠标移动、点击和部分按键，适合在客厅或远离键盘时进行基础桌面操作。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/Tylemagne/Gopher360/blob/df61439be3cd24638061a4db0e2b070fc29023af/LICENSE 。对应版本源码：https://github.com/Tylemagne/Gopher360/tree/v0.989 。",
+  "faq": "所有手柄都能直接使用吗？兼容性取决于设备及驱动，优先按官方支持范围选择并测试。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n此 Windows 发行包为 x86，也可在支持 32 位应用的 64 位 Windows 上运行。\n2. 先连接并确认 Windows 能识别手柄，再启动程序；按官方按键表测试移动、点击与滚动；需要调整映射时先保留配置副本，停止使用时退出程序。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/Tylemagne/Gopher360",
+  "documentationUrl": "https://github.com/Tylemagne/Gopher360/blob/df61439be3cd24638061a4db0e2b070fc29023af/README.md",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><rect x=\"4\" y=\"4\" width=\"120\" height=\"120\" rx=\"24\" fill=\"#24495d\"/><text x=\"64\" y=\"79\" text-anchor=\"middle\" fill=\"#ffffff\" font-family=\"Arial,sans-serif\" font-size=\"38\" font-weight=\"700\">G360</text></svg>",
+    "sha256": "89378aa59834cec2629754c0b01bbe4fd66c8a86d1a90724af3a78be4eab2608",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "名称排版标识，非官方图标；项目固定版本未提供可用的独立产品图标资源。官方项目：https://github.com/Tylemagne/Gopher360 ；原始许可与通知：https://github.com/Tylemagne/Gopher360/blob/df61439be3cd24638061a4db0e2b070fc29023af/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "gopher360",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}

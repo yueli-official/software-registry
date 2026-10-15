@@ -1,0 +1,100 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "exifcleaner",
+  "kind": "package",
+  "name": "ExifCleaner",
+  "category": "security",
+  "summary": "批量移除照片、视频等文件中的可识别元数据。",
+  "description": "以图形界面调用元数据处理能力，帮助清理拍摄设备、位置或其他文件属性。不同格式可处理的信息不同，适合在分享文件前检查隐私。\n\n许可：MIT。许可及第三方通知：https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/LICENSE 。对应版本源码：https://github.com/szTheory/exifcleaner/tree/v4.5.0 。",
+  "faq": "清理后就完全匿名了吗？不能保证，画面中的人脸、地址、文字和文件名仍可能暴露信息。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 先复制少量文件，将副本拖入窗口；等待处理完成并查看状态；检查图片能否正常打开，并用文件属性或元数据查看工具确认需要移除的信息。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://exifcleaner.com",
+  "documentationUrl": "https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/szTheory/exifcleaner/c100554eebf495e7c35b9ac3854fa21dc9d63f68/build/icon.png",
+    "sha256": "7fd16e623627397ea7f86e4c04d9ea540941dbf0ab14dae1f44b10ee10d8744a",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/build/icon.png ；原始许可与通知：https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/szTheory/exifcleaner/c100554eebf495e7c35b9ac3854fa21dc9d63f68/static/screenshot.png",
+      "sha256": "a442ea53bd50001ee7b7a537a2f86cd181cafa4308bb601ba7642b0beb1f41ce",
+      "mime": "image/png",
+      "caption": "ExifCleaner 官方批量清理界面示例",
+      "sourcePage": "https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/szTheory/exifcleaner/blob/c100554eebf495e7c35b9ac3854fa21dc9d63f68/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "exifcleaner",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "exifcleaner",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "szTheory/exifcleaner",
+          "assetPattern": "ExifCleaner-{version}.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "szTheory/exifcleaner",
+          "assetPattern": "ExifCleaner-{version}-arm64.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "szTheory/exifcleaner",
+          "assetPattern": "exifcleaner_{version}_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

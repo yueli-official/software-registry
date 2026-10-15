@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "win-memory-cleaner",
+  "kind": "package",
+  "name": "Windows Memory Cleaner",
+  "category": "system",
+  "summary": "免费 Windows 内存查看与手动整理工具。",
+  "description": "显示内存使用情况，并通过 Windows 提供的能力处理部分内存区域。适合了解内存占用及在明确需要时手动操作，不应将释放内存数值等同于性能提升。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/LICENSE 。对应版本源码：https://github.com/IgorMundstein/WinMemoryCleaner/tree/3.0.8 。",
+  "faq": "清理后电脑一定更快吗？不一定，缓存重新加载可能增加开销；频繁清理不能替代排查实际占用来源。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先查看当前内存占用与可用区域说明；关闭不用的应用后再决定是否需要手动整理；只测试自己理解的选项，观察应用响应，初次使用不要启用自动清理。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/IgorMundstein/WinMemoryCleaner",
+  "documentationUrl": "https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/IgorMundstein/WinMemoryCleaner/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/docs/assets/images/win-memory-cleaner.png",
+    "sha256": "ad27d2999d67d887566a5986aec517fab746b02cbe233a667086473351a47498",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/docs/assets/images/win-memory-cleaner.png ；原始许可与通知：https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/LICENSE"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/IgorMundstein/WinMemoryCleaner/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/docs/assets/images/main-window.png",
+      "sha256": "49b5fd7b08143d7f58275f3fd45d52d6aac578eb67a70bdf50e07f72dc060692",
+      "mime": "image/png",
+      "caption": "Windows Memory Cleaner 官方设置界面示例",
+      "sourcePage": "https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/IgorMundstein/WinMemoryCleaner/blob/e10f6ddf4d90f9ff85a04162d0c9429bc1dcab57/LICENSE",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "winmemorycleaner",
+          "architecture": "universal"
+        }
+      }
+    }
+  ]
+}

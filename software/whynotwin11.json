@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "whynotwin11",
+  "kind": "package",
+  "name": "WhyNotWin11",
+  "category": "system",
+  "summary": "免费检查电脑是否满足 Windows 11 升级条件。",
+  "description": "以列表展示 CPU、TPM、安全启动、存储等兼容性检查结果，帮助了解哪些条件可能阻碍升级。它是社区检查工具，不是微软官方升级程序。\n\n许可：LGPL-3.0。许可及第三方通知：https://github.com/rcmaehl/WhyNotWin11/blob/464def4cea5780fa7f2c05ebd5fa928ffd7b1d26/LICENSE 。对应版本源码：https://github.com/rcmaehl/WhyNotWin11/tree/2.7.0 。",
+  "faq": "能直接绕过硬件限制安装系统吗？不能，这里提供的是检查工具；检查通过也不能保证所有驱动和应用兼容。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 启动后等待检查完成，查看不满足或需要确认的项目；与设备厂商及微软的要求说明核对；需要修改固件设置时先了解恢复方法，重要文件提前备份。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/rcmaehl/WhyNotWin11",
+  "documentationUrl": "https://github.com/rcmaehl/WhyNotWin11/blob/464def4cea5780fa7f2c05ebd5fa928ffd7b1d26/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rcmaehl/WhyNotWin11/464def4cea5780fa7f2c05ebd5fa928ffd7b1d26/Assets/WhyNotWin11.ico",
+    "sha256": "a0d567b8a855b33c5233951fbc1547c93b48c85512ee8bcc4756e7622724147a",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/rcmaehl/WhyNotWin11/blob/464def4cea5780fa7f2c05ebd5fa928ffd7b1d26/Assets/WhyNotWin11.ico ；原始许可与通知：https://github.com/rcmaehl/WhyNotWin11/blob/464def4cea5780fa7f2c05ebd5fa928ffd7b1d26/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "whynotwin11",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "whynotwin11",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}

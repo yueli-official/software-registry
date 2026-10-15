@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "weylus",
+  "kind": "package",
+  "name": "Weylus",
+  "category": "network",
+  "summary": "把手机或平板变为电脑触控与手写输入设备。",
+  "description": "通过浏览器连接电脑端，提供画面显示与输入转发，适合在可信局域网中尝试触控或数位笔操作。不同系统的手写与输入支持存在差异。\n\n许可：AGPL-3.0-or-later。许可及第三方通知：https://github.com/H-M-H/Weylus/blob/10a279b5ad203132b696f88b9596f91559e8e785/LICENSE 。对应版本源码：https://github.com/H-M-H/Weylus/tree/v0.11.4 。",
+  "faq": "笔压和多点触控在所有系统都一样吗？不一样，Linux 的支持与其他系统不同，应先查看对应系统的官方说明。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 在可信网络启动电脑端并设置访问码；用平板浏览器打开电脑端显示的连接地址；选择共享画面并测试输入，按官方系统说明配置所需权限，使用结束后关闭服务。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/H-M-H/Weylus",
+  "documentationUrl": "https://github.com/H-M-H/Weylus/blob/10a279b5ad203132b696f88b9596f91559e8e785/Readme.md",
+  "icon": {
+    "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><rect x=\"4\" y=\"4\" width=\"120\" height=\"120\" rx=\"24\" fill=\"#24495d\"/><text x=\"64\" y=\"79\" text-anchor=\"middle\" fill=\"#ffffff\" font-family=\"Arial,sans-serif\" font-size=\"38\" font-weight=\"700\">W</text></svg>",
+    "sha256": "48b9d48a7076f28563f07e155074dfd3e9e5fd06e002482081267b21920da664",
+    "mime": "image/svg+xml",
+    "sourceKind": "generated-name-mark",
+    "provenance": "名称排版标识，非官方图标；项目固定版本未提供可用的独立产品图标资源。官方项目：https://github.com/H-M-H/Weylus ；原始许可与通知：https://github.com/H-M-H/Weylus/blob/10a279b5ad203132b696f88b9596f91559e8e785/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "weylus",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "H-M-H/Weylus",
+          "assetPattern": "macOS.zip",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "H-M-H/Weylus",
+          "assetPattern": "Weylus_{version}_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

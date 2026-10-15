@@ -1,0 +1,87 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rpi-imager",
+  "kind": "package",
+  "name": "Raspberry Pi Imager",
+  "category": "utilities",
+  "summary": "免费为树莓派存储卡选择系统、配置并写入镜像。",
+  "description": "提供图形界面选择设备、操作系统和存储卡，可设置部分首次启动选项。写入操作会覆盖选定目标盘，适合制作树莓派启动卡。\n\n许可：官方许可与通知。许可及第三方通知：https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/license.txt 。对应版本源码：https://github.com/raspberrypi/rpi-imager/tree/v2.0.12 。",
+  "faq": "会清除存储卡吗？会，写入会覆盖目标设备，先备份并再次核对所选磁盘。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\nLinux：选择适合架构与发行版的 DEB，通过系统软件安装器安装并满足依赖。\n2. 连接目标存储卡，打开图形版 Imager；选择树莓派型号、系统镜像和正确的存储设备，按需要填写首次启动设置；核对盘符与容量后写入，并等待校验完成再安全移除。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://www.raspberrypi.org/software",
+  "documentationUrl": "https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/raspberrypi/rpi-imager/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/src/linux/icon/rpi-imager.svg",
+    "sha256": "5ef45ade3239f9710ee3f4d5e0c65d03b40621898f2ff35ecfdf6025b223a753",
+    "mime": "image/svg+xml",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/src/linux/icon/rpi-imager.svg ；原始许可与通知：https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/license.txt"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/raspberrypi/rpi-imager/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/screenshot.png",
+      "sha256": "e6b21b815564f7336de6f983b0d8cd9aeff864c4101f792f1a1e2d58e66cda78",
+      "mime": "image/png",
+      "caption": "Raspberry Pi Imager 官方图形界面示例（2.0.7）",
+      "sourcePage": "https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/README.md",
+      "licenseEvidence": "官方项目所用界面示例，保留项目与原作者出处；许可与原始通知：https://github.com/raspberrypi/rpi-imager/blob/84b03d96cd4c390ebe475a4b5db5735e5535e9a6/license.txt",
+      "provenance": "官方界面示例，历史界面与当前版本可能不同；已实际预览，不作为本地运行该应用的证明。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "raspberry-pi-imager",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "raspberrypi/rpi-imager",
+          "assetPattern": "rpi-imager-v{version}.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "raspberrypi/rpi-imager",
+          "assetPattern": "rpi-imager_{version}-1_amd64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "raspberrypi/rpi-imager",
+          "assetPattern": "rpi-imager_{version}-1_arm64.deb",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

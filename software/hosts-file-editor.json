@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "hosts-file-editor",
+  "kind": "package",
+  "name": "Hosts File Editor",
+  "category": "network",
+  "summary": "通过图形界面查看、编辑和管理 Windows hosts 规则。",
+  "description": "将主机名与 IP 的对应记录整理为列表，便于临时测试和维护本机解析规则。修改会影响本机访问，应只添加确认需要的记录。\n\n许可：GPL-3.0。许可及第三方通知：https://github.com/scottlerch/HostsFileEditor/blob/bb7bf2198b8c04ed3dd0a57ec83b59d03a98d0e5/License.md 。对应版本源码：https://github.com/scottlerch/HostsFileEditor/tree/v1.5.2 。",
+  "faq": "能替代 DNS 服务或代理吗？不能，它只管理本机指定域名的静态映射，也不会提供网络代理。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\n2. 先备份现有 hosts 文件；在列表中添加或修改确切的主机名与 IP，按提示保存；验证访问结果，遇到问题时禁用新增规则或恢复备份。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://hostsfileeditor.com",
+  "documentationUrl": "https://github.com/scottlerch/HostsFileEditor/blob/bb7bf2198b8c04ed3dd0a57ec83b59d03a98d0e5/Readme.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/scottlerch/HostsFileEditor/bb7bf2198b8c04ed3dd0a57ec83b59d03a98d0e5/HostsFileEditor.WinUI/Assets/Square44x44Logo.targetsize-256.png",
+    "sha256": "fc4e9f61dbe44cfb91ae0eff53a8b2e41cdf46354846657fd001e95cf941a799",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品标识，图案未改动；原图：https://github.com/scottlerch/HostsFileEditor/blob/bb7bf2198b8c04ed3dd0a57ec83b59d03a98d0e5/HostsFileEditor.WinUI/Assets/Square44x44Logo.targetsize-256.png ；原始许可与通知：https://github.com/scottlerch/HostsFileEditor/blob/bb7bf2198b8c04ed3dd0a57ec83b59d03a98d0e5/License.md"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "hosts-file-editor",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "hosts-file-editor",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ]
+}

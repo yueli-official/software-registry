@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "qmplay2",
+  "kind": "package",
+  "name": "QMPlay2",
+  "category": "media",
+  "summary": "免费开源音视频播放器，提供本地播放和丰富的播放设置。",
+  "description": "支持常见媒体格式、播放列表与字幕等功能，可按设备情况调整音频输出和解码选项，适合日常桌面播放。\n\n许可：LGPL-3.0。许可及第三方通知：https://github.com/zaps166/QMPlay2/blob/70e6b82805144f7fb78c45551ff0eec48c72435d/LICENSE 。对应版本源码：https://github.com/zaps166/QMPlay2/tree/26.08.02 。",
+  "faq": "是否需要额外买解码包？程序免费提供，常用播放能力取决于官方发行包和系统条件，不需要购买应用授权。\n软件本体收费吗？此条目提供免费可用的官方版本；可选的第三方账户、在线服务和素材授权按提供方条件使用。",
+  "usageInstructions": "1. Windows：选择适合处理器的官方包。压缩包先完整解压，包内若为安装器再按向导安装；便携程序直接启动并保留同目录资源。\nmacOS：按处理器选择官方包，打开 DMG 或解压 ZIP，将应用放入应用程序目录；需要系统权限时按官方说明授予所需权限。\n2. 安装或完整解压对应系统包，打开一个本地视频；检查字幕、音轨、画面比例和播放列表；先保留默认解码设置，遇到兼容性问题再逐项调整。\n3. 遇到系统或运行库兼容问题，先查看对应版本的官方说明；保留自己的配置和重要文件备份。",
+  "homepage": "https://github.com/zaps166/QMPlay2",
+  "documentationUrl": "https://github.com/zaps166/QMPlay2/blob/70e6b82805144f7fb78c45551ff0eec48c72435d/README.md",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/zaps166/QMPlay2/70e6b82805144f7fb78c45551ff0eec48c72435d/src/gui/Icons/hicolor/256x256/apps/QMPlay2.png",
+    "sha256": "f9a8d55521e1b2d232a171cee7313238029f73c77fd211bab5a794f894bb2875",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本产品图标，图案未改动；原图：https://github.com/zaps166/QMPlay2/blob/70e6b82805144f7fb78c45551ff0eec48c72435d/src/gui/Icons/hicolor/256x256/apps/QMPlay2.png ；原始许可与通知：https://github.com/zaps166/QMPlay2/blob/70e6b82805144f7fb78c45551ff0eec48c72435d/LICENSE"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qmplay2",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "qmplay2",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "zaps166/QMPlay2",
+          "assetPattern": "QMPlay2-macOS-{version}.dmg",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ]
+}
