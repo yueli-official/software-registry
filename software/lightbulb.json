@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "lightbulb",
+  "kind": "package",
+  "name": "LightBulb",
+  "category": "system",
+  "homepage": "https://github.com/Tyrrrz/LightBulb",
+  "documentationUrl": "https://github.com/Tyrrrz/LightBulb/wiki",
+  "summary": "免费开源的 Windows 屏幕色温调节工具，可按时间自动切换冷暖色调。",
+  "description": "LightBulb 根据时间平滑调整屏幕伽马和色温，支持手动设置日夜时段，或根据位置计算日出、日落时间。可为需要准确显示颜色的应用设置例外，也能通过快捷键临时调整。适合希望在夜间使用暖色屏幕的 Windows 用户。\n\n软件许可：MIT。官方源码与原始通知：https://github.com/Tyrrrz/LightBulb/tree/2.7.2 。保留原包内的许可、署名和第三方通知。",
+  "usageInstructions": "1. 根据 Windows 的处理器架构选择 x64、x86 或 ARM64 官方 ZIP，完整解压，保留同目录文件后启动 LightBulb。\n2. 打开设置，设定白天、夜间的色温和过渡时段；不想提供位置信息时，可以手动设置日出、日落时间。\n3. 先使用较温和的调整值，观察屏幕颜色与房间照明是否合适，再按需调整。\n4. 修图、设计或核对颜色时，临时暂停调节，或将对应应用加入例外列表；确认习惯后再启用开机启动。",
+  "faq": "收费吗？程序免费开源，捐赠为自愿支持。\n为什么屏幕变黄了？这是夜间暖色设置的效果，可调高色温或暂时暂停。\n可以代替显示器校色吗？不能；需要准确颜色时应暂停色温调整。\n必须联网或定位吗？不必须，可以手动配置日夜时间；位置只用于计算当地日出、日落。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Tyrrrz/LightBulb/a23b129a7c0bb461907f22358107fafa145c3432/favicon.png",
+    "sha256": "d5014c47dfdca13e13c260d7f6007a5f36df41ce298fe5cb754a2b95dd262764",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本应用标识，原图案保留；项目与原始许可：https://github.com/Tyrrrz/LightBulb/blob/a23b129a7c0bb461907f22358107fafa145c3432/License.txt ；图形出处：https://github.com/Tyrrrz/LightBulb/blob/a23b129a7c0bb461907f22358107fafa145c3432/favicon.png"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Tyrrrz/LightBulb/a23b129a7c0bb461907f22358107fafa145c3432/.assets/dashboard.png",
+      "sha256": "148fff59712e205ba9b130e1f0a907f57a7db8fab1cc94a261fe412e7abf1f44",
+      "mime": "image/png",
+      "caption": "LightBulb 官方色温时间计划界面示例（2.4.5）",
+      "sourcePage": "https://github.com/Tyrrrz/LightBulb/blob/a23b129a7c0bb461907f22358107fafa145c3432/ReadMe.md",
+      "licenseEvidence": "官方项目介绍所用软件界面示例，保留项目、原作者及出处；项目许可：https://github.com/Tyrrrz/LightBulb/blob/a23b129a7c0bb461907f22358107fafa145c3432/License.txt",
+      "provenance": "官方界面演示，实际预览后使用；不代表本站实测，示例图片内容属于原作者。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lightbulb",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lightbulb",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "lightbulb",
+          "architecture": "arm64"
+        }
+      }
+    }
+  ]
+}

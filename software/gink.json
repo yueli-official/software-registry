@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "gink",
+  "kind": "package",
+  "name": "gInk",
+  "category": "office",
+  "homepage": "https://github.com/geovens/gInk",
+  "documentationUrl": "https://github.com/geovens/gInk#how-to-use",
+  "summary": "免费轻量的 Windows 屏幕标注工具，适合演示、讲解和临时画线批注。",
+  "description": "gInk 是免费开源的屏幕标注工具，可在当前桌面上使用多支画笔绘制线条，通过橡皮擦、清空和截图功能整理讲解内容。鼠标穿透模式便于在标注过程中继续操作其他窗口，适合线上讲解、会议演示和制作简单操作说明。\n\n软件许可：MIT。官方源码与原始通知：https://github.com/geovens/gInk/tree/v1.1.1 。保留原包内的许可、署名和第三方通知。",
+  "usageInstructions": "1. 下载官方 ZIP 并完整解压，运行 gInk.exe。该发行版为 x86 程序，依赖 .NET Framework 3.5；系统提示缺少组件时，可在 Windows“启用或关闭 Windows 功能”中启用该组件。\n2. 从通知区域打开标注工具栏，选择画笔和颜色，在屏幕上画线或做标记。\n3. 需要操作下方窗口时切换鼠标穿透模式；使用橡皮擦删除局部标记，或用清空按钮移除全部标注。\n4. 通过截图按钮保存讲解画面，确认截图内容后再分享；退出工具可关闭标注层。",
+  "faq": "需要购买授权吗？gInk 免费开源，不是付费软件的试用包。\n为什么打不开？先检查官方要求的 .NET Framework 3.5 是否已启用，并确认已经完整解压。\n多显示器或缩放下画笔位置不准怎么办？可按官方说明，在程序属性的兼容性设置中尝试将高 DPI 缩放替代设为“应用程序”，再重新启动。\n它会修改被标注的原文件吗？屏幕标注绘制在覆盖层上；需要留存时使用截图，并妥善保管原文件。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/geovens/gInk/14a81ee96413891b734a7e24cf22ebec413898de/bin/icon_red.ico",
+    "sha256": "38e5634e3348d07e26319d5daddaf7b58c259017b5daa0f0c3d6b259c7a8d726",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本应用标识，原图案保留；项目与原始许可：https://github.com/geovens/gInk/blob/14a81ee96413891b734a7e24cf22ebec413898de/license.txt ；图形出处：https://github.com/geovens/gInk/blob/14a81ee96413891b734a7e24cf22ebec413898de/bin/icon_red.ico"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/geovens/gInk/14a81ee96413891b734a7e24cf22ebec413898de/screenshot2.jpg",
+      "sha256": "0eb088a25080356f9a5f3778bb85516a14f10dd487b8d79f2e9f688d351bd766",
+      "mime": "image/jpeg",
+      "caption": "gInk 官方画笔与工具栏操作示例",
+      "sourcePage": "https://github.com/geovens/gInk/blob/14a81ee96413891b734a7e24cf22ebec413898de/readme.md",
+      "licenseEvidence": "官方项目介绍所用软件界面示例，保留项目、原作者及出处；项目许可：https://github.com/geovens/gInk/blob/14a81ee96413891b734a7e24cf22ebec413898de/license.txt",
+      "provenance": "官方界面演示，实际预览后使用；不代表本站实测，示例图片内容属于原作者。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "gink",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}

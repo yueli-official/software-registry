@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "photodemon",
+  "kind": "package",
+  "name": "PhotoDemon",
+  "category": "graphics",
+  "homepage": "https://photodemon.org/",
+  "documentationUrl": "https://photodemon.org/about/",
+  "summary": "支持中文的免费便携图片编辑器，可处理图层、调整照片并批量转换图片。",
+  "description": "PhotoDemon 是免费开源的 Windows 图片编辑器，提供图层、选区、色彩调整、滤镜和批量处理等功能。程序无需安装，解压即可使用，支持多种图片格式与中文界面，适合日常修图、裁剪缩放和图片格式转换。\n\n软件许可：BSD-2-Clause（主程序；第三方组件保留各自许可）。官方源码与原始通知：https://github.com/tannerhelland/PhotoDemon/tree/v2025.12 。保留原包内的许可、署名和第三方通知。",
+  "usageInstructions": "1. 下载官方 ZIP 并完整解压到有写入权限的目录，运行 PhotoDemon.exe；不要只从压缩包中拖出单个程序。该发行包为 x86 程序，也可在支持 x86 应用的 64 位 Windows 上运行。\n2. 首次启动按提示选择中文；打开图片，按需要裁剪、调整尺寸或修改亮度与色彩。\n3. 需要组合多张图片时使用图层，先保存可继续编辑的工程；导出 JPEG、PNG 等图片时确认尺寸、质量及透明度。\n4. 批量处理先用少量副本测试，输出到独立目录，保留唯一原件。移动便携目录时保留插件、资源和许可文件。",
+  "faq": "需要付费吗？软件免费开源，不是限时试用。\n需要安装吗？不需要，完整解压官方便携包后启动即可。\n有中文吗？官方提供多语言界面，包括中文，可在语言设置中切换。\n能直接覆盖原图吗？保存时可能覆盖文件，建议先保留原件并使用另存为或独立输出目录。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/tannerhelland/PhotoDemon/7c39e83783361c436292570aeda54da75a2d9c8c/Resources/Assets/pd_icons_new.ico",
+    "sha256": "4033761268e8f88434b25feaba7bc01969ec3b36cac505a2fb1e64f9f8c92de6",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方固定版本应用标识，原图案保留；项目与原始许可：https://github.com/tannerhelland/PhotoDemon/blob/7c39e83783361c436292570aeda54da75a2d9c8c/LICENSE.md ；图形出处：https://github.com/tannerhelland/PhotoDemon/blob/7c39e83783361c436292570aeda54da75a2d9c8c/Resources/Assets/pd_icons_new.ico"
+  },
+  "screenshots": [
+    {
+      "url": "https://photodemon.org/media/images/photodemon_9.0.png",
+      "sha256": "68f7c86b2da2bec43a6dac0c07b4224410ff4b421fd5d90be145776c3dcb56d1",
+      "mime": "image/png",
+      "caption": "PhotoDemon 官方界面示例（9.0）",
+      "sourcePage": "https://github.com/tannerhelland/PhotoDemon/blob/7c39e83783361c436292570aeda54da75a2d9c8c/README.md",
+      "licenseEvidence": "官方项目介绍所用软件界面示例，保留项目、原作者及出处；项目许可：https://github.com/tannerhelland/PhotoDemon/blob/7c39e83783361c436292570aeda54da75a2d9c8c/LICENSE.md",
+      "provenance": "官方界面演示，实际预览后使用；不代表本站实测，示例图片内容属于原作者。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "photodemon",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}
