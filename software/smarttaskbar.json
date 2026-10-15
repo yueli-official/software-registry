@@ -12,11 +12,11 @@
   "homepage": "https://github.com/Oliviaophia/SmartTaskbar",
   "documentationUrl": "https://github.com/Oliviaophia/SmartTaskbar/blob/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/README.md",
   "icon": {
-    "url": "https://raw.githubusercontent.com/Oliviaophia/SmartTaskbar/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/logo/Logo-Blue.png",
-    "sha256": "0d36a64cf80b7ad01f8a0d58fdf0a4a9829b01424b18eadbad3a76773ca4b93d",
+    "url": "https://raw.githubusercontent.com/Oliviaophia/SmartTaskbar/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/logo/logo_blue.png",
+    "sha256": "d00d38ba6d4f779cffd69dd0be4746f7d4d6e38f7cd8465e98f6afce715847c6",
     "mime": "image/png",
     "sourceKind": "official",
-    "provenance": "官方固定版本产品图标，图案未改动；原图：https://github.com/Oliviaophia/SmartTaskbar/blob/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/logo/Logo-Blue.png ；原始许可与通知：https://github.com/Oliviaophia/SmartTaskbar/blob/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/LICENSE"
+    "provenance": "官方固定版本蓝色产品图标，图案未改动；原图：https://github.com/Oliviaophia/SmartTaskbar/blob/a907a2b8a412c5f7fb6f0ba26519913af6c6530f/logo/logo_blue.png ；许可与通知：https://github.com/Oliviaophia/SmartTaskbar/tree/a907a2b8a412c5f7fb6f0ba26519913af6c6530f"
   },
   "screenshots": [],
   "packages": [
