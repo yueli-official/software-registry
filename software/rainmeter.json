@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "rainmeter",
+  "kind": "package",
+  "name": "Rainmeter",
+  "category": "system",
+  "homepage": "https://www.rainmeter.net/",
+  "documentationUrl": "https://docs.rainmeter.net/manual/",
+  "summary": "免费 Windows 桌面组件工具，在桌面显示时钟、日历和系统信息。",
+  "description": "Rainmeter 是免费开源的 Windows 桌面美化工具，通过可移动的皮肤组件显示时间、系统资源和其他信息。适合希望整理桌面布局、添加时钟或资源监视器的用户。程序与皮肤分别维护，下载安装程序并不包含所有网上展示的桌面主题。\n\n项目许可：GPL-2.0。官方源代码及原始许可：https://github.com/rainmeter/rainmeter/tree/v4.5.28.3936 。使用与再分发时保留原包中的许可、署名和第三方通知。",
+  "usageInstructions": "1. 根据系统选择 64 位或 32 位，下载官方安装程序，按向导安装；需要便携运行时使用安装程序提供的便携安装选项。\n2. 启动后通过系统托盘图标打开管理窗口，在皮肤列表加载自带 illustro 组件，拖动组件调整桌面位置。\n3. 对组件点击右键可调整透明度、位置和交互方式；不需要的组件可卸载显示，程序仍保留在托盘。\n4. 额外皮肤优先从可信作者处获取，先确认系统兼容性及包含的插件，再通过皮肤安装器导入。",
+  "faq": "软件收费吗？Rainmeter 本身免费开源；第三方作者的皮肤可能另有价格和许可。\n能把任意视频设为动态壁纸吗？它主要用于桌面皮肤组件，不是视频壁纸播放器。\n皮肤不显示怎么办？先在管理窗口重新加载皮肤，检查路径、插件和其要求的系统版本。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/rainmeter/rainmeter/0f77bcb460a09568cdaa192e56789e98037536f8/Application/Rainmeter.ico",
+    "sha256": "bcba065cdbcae251544f1d910320e18f3592d5d49471ce0c2b4566360e52d0c6",
+    "mime": "image/x-icon",
+    "sourceKind": "official",
+    "provenance": "官方仓库固定提交中的应用图标，项目许可 GPL-2.0；保留软件身份与原始来源：https://github.com/rainmeter/rainmeter/blob/0f77bcb460a09568cdaa192e56789e98037536f8/Application/Rainmeter.ico"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rainmeter",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "rainmeter",
+          "architecture": "32bit"
+        }
+      }
+    }
+  ]
+}

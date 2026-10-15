@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "pdfsam",
+  "kind": "package",
+  "name": "PDFsam Basic",
+  "category": "office",
+  "homepage": "https://pdfsam.org/pdfsam-basic/",
+  "documentationUrl": "https://pdfsam.org/documentation/",
+  "summary": "免费的 PDF 合并、拆分、旋转和页面提取工具，可在本机处理文件。",
+  "description": "PDFsam Basic 是免费开源的桌面 PDF 工具，提供合并、拆分、旋转、交替混合和提取页面等功能。适合整理扫描件、合并资料或拆出需要的页码，文件处理在本机完成。这里选用免费 Basic 版；PDFsam 的其他商业产品和高级编辑功能不包含在 Basic 版中。\n\n项目许可：AGPL-3.0。官方源代码及原始许可：https://github.com/torakiki/pdfsam/tree/v6.0.6 。使用与再分发时保留原包中的许可、署名和第三方通知。",
+  "usageInstructions": "1. Windows 下载官方 ZIP 并完整解压，运行包内 PDFsam 启动程序；Mac 选择 Intel 或 Apple Silicon ZIP，完整解压后使用应用；Debian/Ubuntu 安装官方 DEB。保留随包运行环境，无需单独安装 Java。\n2. 打开软件选择“合并”“拆分”“旋转”或“提取”等任务，将自己的 PDF 文件添加到列表。\n3. 合并时调整文件顺序；拆分或提取时填写所需页码，选择另一个输出目录，然后执行任务。\n4. 完成后打开输出文件，检查页数、顺序和方向。需要处理加密文件时使用自己有权访问的文件与密码。",
+  "faq": "这是免费版还是试用版？这是免费开源的 PDFsam Basic，不是商业版的限时试用。\n需要上传 PDF 到网站吗？基本处理在本机完成。\n能直接修改 PDF 里的文字吗？Basic 侧重页面整理，不提供完整文字编辑或 OCR。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/torakiki/pdfsam/4e4dd4dc5b14a1d328837c2b549fbe0b43cec83f/pdfsam-basic/src/main/resources/images/basic/256x256.png",
+    "sha256": "ed9439879baf9589f552c372a6e21eae2a55892dbc8b0a26e283fdde5d66b1eb",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方仓库固定提交中的应用图标，项目许可 AGPL-3.0；保留软件身份与原始来源：https://github.com/torakiki/pdfsam/blob/4e4dd4dc5b14a1d328837c2b549fbe0b43cec83f/pdfsam-basic/src/main/resources/images/basic/256x256.png"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "pdfsam",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "torakiki/pdfsam",
+          "assetPattern": "pdfsam-basic-{version}-macos-x64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "torakiki/pdfsam",
+          "assetPattern": "pdfsam-basic-{version}-macos-arm64.zip",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "torakiki/pdfsam",
+          "assetPattern": "pdfsam-basic_{version}-1_amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

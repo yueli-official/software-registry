@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "super-productivity",
+  "kind": "package",
+  "name": "Super Productivity",
+  "category": "productivity",
+  "homepage": "https://super-productivity.com/",
+  "documentationUrl": "https://github.com/super-productivity/super-productivity/wiki",
+  "summary": "免费待办与专注计时工具，把每日任务、时间安排和实际用时放在一起。",
+  "description": "Super Productivity 是免费开源的待办事项与时间管理应用，适合安排学习、工作和个人计划。可以按项目整理任务、规划今天要做的事，并用专注计时和时间记录回顾投入。数据优先保存在本机，可按需配置同步；基本任务管理不需要购买订阅。\n\n项目许可：MIT。官方源代码及原始许可：https://github.com/super-productivity/super-productivity/tree/v19.2.0 。使用与再分发时保留原包中的许可、署名和第三方通知。",
+  "usageInstructions": "1. Windows 选择与电脑架构对应的官方便携 EXE，保存到固定目录后运行；Mac 下载通用 DMG，复制到应用程序目录；Debian/Ubuntu 安装官方 DEB。\n2. 首次打开后从设置中选择语言，新建项目，添加待办任务和预计耗时，把今天要完成的任务放入今日计划。\n3. 开始任务时启动计时，需要集中精力时启用专注或番茄钟；完成后勾选任务，在统计中查看实际投入。\n4. 定期导出数据备份。需要多设备同步时再按官方说明配置同步服务，先备份本地数据。",
+  "faq": "需要付费账号吗？基本待办、计时和本地管理免费，不需要购买订阅。\n可以离线使用吗？本地任务和计时可离线使用，同步及外部服务需要联网。\n它是开发工具吗？普通学习、工作和生活计划即可使用，外部项目系统集成是可选功能。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/super-productivity/super-productivity/13d6f7f24f3f25942d9cb9959030dc4f8b318cb1/build/icons/256x256.png",
+    "sha256": "8f11d2edd78c7d1eff561a8e71c06aa855bed9832e92647dfdcf79517a3f7754",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方仓库固定提交中的应用图标，项目许可 MIT；保留软件身份与原始来源：https://github.com/super-productivity/super-productivity/blob/13d6f7f24f3f25942d9cb9959030dc4f8b318cb1/build/icons/256x256.png"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "super-productivity",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "super-productivity",
+          "architecture": "arm64"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "universal",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "super-productivity/super-productivity",
+          "assetPattern": "superProductivity-universal.dmg",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "super-productivity/super-productivity",
+          "assetPattern": "superProductivity-amd64.deb",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}

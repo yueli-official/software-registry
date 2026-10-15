@@ -1,0 +1,75 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "windynamicdesktop",
+  "kind": "package",
+  "name": "WinDynamicDesktop",
+  "category": "system",
+  "homepage": "https://github.com/t1m0thyj/WinDynamicDesktop",
+  "documentationUrl": "https://github.com/t1m0thyj/WinDynamicDesktop/wiki",
+  "summary": "让 Windows 壁纸随日出、日落和一天中的时间自动变化。",
+  "description": "WinDynamicDesktop 是免费开源的 Windows 壁纸工具，根据位置与时间在一组主题图片之间切换，呈现早晨、白天、傍晚和夜晚的变化。支持选择主题、设置时间计划和导入主题文件，适合希望桌面随时间变化的普通用户。主题图片与软件本身分别授权。\n\n项目许可：MPL-2.0。官方源代码及原始许可：https://github.com/t1m0thyj/WinDynamicDesktop/tree/v5.7.0 。使用与再分发时保留原包中的许可、署名和第三方通知。",
+  "usageInstructions": "1. 下载适合电脑的 x64、x86 或 ARM64 官方便携 EXE，放入固定目录运行；不要把快捷方式当作程序原文件移动。\n2. 首次运行选择主题，按提示下载所需图片；在时间设置中选择自己的城市或手动填写日出、日落时间。\n3. 应用主题后程序驻留托盘，按一天中的时间切换壁纸。需要随登录启动时在设置中启用对应选项。\n4. 自定义主题通过主题窗口导入，保留图片作者及其使用许可；关闭或退出程序可暂停自动切换。",
+  "faq": "需要付费吗？程序免费开源，某些第三方主题可能有独立收费或授权要求。\n没有网络能用吗？已下载的主题可按时间切换，首次下载主题需要联网。\n这是视频动态壁纸吗？不是，主要按时间切换主题中的静态图片。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/t1m0thyj/WinDynamicDesktop/c80febc08f48980010fff88d9e12cf151cefb4aa/uwp/Images/Square44x44Logo.altform-unplated_targetsize-256.png",
+    "sha256": "4742672a9186b1f33cc0042af382cf4aa432cb23f47dea73730422f10e4c3915",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方仓库固定提交中的应用图标，项目许可 MPL-2.0；保留软件身份与原始来源：https://github.com/t1m0thyj/WinDynamicDesktop/blob/c80febc08f48980010fff88d9e12cf151cefb4aa/uwp/Images/Square44x44Logo.altform-unplated_targetsize-256.png"
+  },
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/t1m0thyj/WinDynamicDesktop/c80febc08f48980010fff88d9e12cf151cefb4aa/images/configure_schedule.png",
+      "sha256": "e436d98618254c0cd4eddad029040079c2b9f2a2216cb089be94e950010f5c69",
+      "mime": "image/png",
+      "caption": "WinDynamicDesktop 官方时间计划设置界面",
+      "sourcePage": "https://github.com/t1m0thyj/WinDynamicDesktop/blob/c80febc08f48980010fff88d9e12cf151cefb4aa/images/configure_schedule.png",
+      "licenseEvidence": "官方仓库 MPL-2.0 项目内的界面说明图片，保留项目与原图来源；未包含主题照片。许可：https://github.com/t1m0thyj/WinDynamicDesktop/blob/c80febc08f48980010fff88d9e12cf151cefb4aa/LICENSE",
+      "provenance": "官方说明中的时间配置窗口，实际预览后使用；不是个人资料或第三方壁纸作品。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windynamicdesktop",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "386",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "windynamicdesktop",
+          "architecture": "32bit"
+        }
+      }
+    },
+    {
+      "platform": "windows",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "t1m0thyj/WinDynamicDesktop",
+          "assetPattern": "WinDynamicDesktop_{version}_arm64_Portable.exe",
+          "tagPrefix": "v",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}
