@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "krokiet",
+  "kind": "package",
+  "name": "Krokiet",
+  "category": "system",
+  "homepage": "https://github.com/qarmin/czkawka",
+  "documentationUrl": "https://github.com/qarmin/czkawka/blob/master/krokiet/README.md",
+  "summary": "免费中文文件清理工具，用图形界面查找重复文件、相似照片和空文件夹。",
+  "description": "Krokiet 是 Czkawka 项目的新一代图形界面文件整理工具，免费开源，支持中文。可扫描重复文件、相似图片、大文件、空文件与空文件夹，帮助整理照片和磁盘资料；扫描结果由用户预览和选择后处理。基础文件扫描无需云端账号，文件分析在本机完成。Krokiet 与同项目旧版 GTK 界面采用不同发行包，下载时选择 Krokiet。\n\n软件许可：GPL-3.0-only。对应官方源码与原始通知：https://github.com/qarmin/czkawka/tree/12.0.2 。保留原包内的许可与第三方通知。 图标 © 2020–2026 Rafał Mikrut（qarmin），CC BY 4.0：https://creativecommons.org/licenses/by/4.0/ 。图案未改动；原图出处：https://github.com/qarmin/czkawka/blob/12.0.2/krokiet/icons/krokiet_logo.png 。",
+  "usageInstructions": "1. 按系统选择官方 ZIP 并完整解压：Windows 运行 krokiet.exe；Apple Silicon Mac 使用 ARM64 包；Linux 选择 x86_64 或 ARM64 包，为程序添加可执行权限后启动。保留同目录的运行库及许可文件。\n2. 在设置中选择中文，先将一个测试文件夹加入扫描范围，选择重复文件、相似图片或空文件夹等扫描类型。\n3. 开始扫描后查看分组、路径、体积及图片预览；只勾选确认不需要的文件，重复文件组中保留所需原件。\n4. 备份重要资料后再使用移动或删除功能。普通扫描不要求额外安装 FFmpeg；需要相似视频分析时再按官方说明配置 FFmpeg。",
+  "faq": "这是命令行工具吗？不是，这里提供 Krokiet 图形界面。\n与 Czkawka 有什么关系？两者属于同一项目，Krokiet 是新的图形前端，官方建议新用户使用它。\n需要付费或上传文件吗？程序免费开源，扫描在本机完成，无需购买账号或上传个人文件。\nIntel Mac 能用这个 Mac 包吗？当前官方 Mac 成品为 Apple Silicon ARM64，不是 Intel 包。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/qarmin/czkawka/f9be31f586f9473a91b9fe3785b7ba76ddaecf44/krokiet/icons/krokiet_logo.png",
+    "sha256": "f053476acb6ade7f81e613cbdcbc945f21dae0870f18a97d77685f009238affb",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本应用标识；作者 qarmin，保留项目与图形许可及出处：https://github.com/qarmin/czkawka/blob/f9be31f586f9473a91b9fe3785b7ba76ddaecf44/krokiet/icons/krokiet_logo.png；图形采用 CC BY 4.0，未修改原图。"
+  },
+  "screenshots": [],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "krokiet",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "qarmin/czkawka",
+          "assetPattern": "mac_krokiet_all_backends_arm64.zip",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "qarmin/czkawka",
+          "assetPattern": "linux_krokiet_all_backends_x86_64.zip",
+          "tagTemplate": "{version}"
+        }
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "qarmin/czkawka",
+          "assetPattern": "linux_krokiet_all_backends_arm64.zip",
+          "tagTemplate": "{version}"
+        }
+      }
+    }
+  ]
+}

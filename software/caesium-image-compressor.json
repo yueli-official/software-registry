@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/software.schema.json",
+  "schemaVersion": 1,
+  "id": "caesium-image-compressor",
+  "kind": "package",
+  "name": "Caesium Image Compressor",
+  "category": "graphics",
+  "homepage": "https://saerasoft.com/caesium",
+  "documentationUrl": "https://github.com/Lymphatus/caesium-image-compressor#installation",
+  "summary": "支持中文的免费批量图片压缩工具，可预览压缩前后的效果与体积。",
+  "description": "Caesium Image Compressor 是免费开源的桌面图片压缩工具，支持批量处理 JPEG、PNG、WebP 等图片，调整质量、分辨率和输出位置，并对比压缩前后的效果。适合给照片、网页配图或聊天附件减小体积，处理过程在本机完成，支持简体中文界面。压缩效果取决于图片内容与参数，有损压缩会改变画质。\n\n软件许可：GPL-3.0。对应官方源码与原始通知：https://github.com/Lymphatus/caesium-image-compressor/tree/v2.8.5 。保留原包内的许可与第三方通知。",
+  "usageInstructions": "1. Windows 下载官方便携 ZIP，完整解压后运行 Caesium 程序；Mac 下载官方 DMG，将应用复制到应用程序目录。当前 Mac 原包为 Intel x64，Apple Silicon 设备需要 Rosetta 兼容环境。\n2. 在设置中选择中文，添加需要处理的图片或文件夹；先用少量副本试压缩，避免直接覆盖唯一原件。\n3. 在压缩设置中选择质量或目标体积，按需要调整尺寸；指定单独的输出目录，通过预览对比文字、边缘和细节。\n4. 开始压缩后查看节省的体积和输出文件。需要保留拍摄信息时检查元数据选项；需要尽量保持原像素内容时查看对应格式的无损选项。",
+  "faq": "软件收费吗？桌面版免费开源，不是限时试用。\n照片会上传吗？桌面应用的图片压缩在本机完成，不需要上传到网页。\n压缩一定无损吗？不是，有损质量设置会改变图像；请先预览，保留原件。\n有 Linux 成品吗？当前官方正式发行附件提供 Windows 和 Mac 原包；Linux 请参考官方编译说明。",
+  "icon": {
+    "url": "https://raw.githubusercontent.com/Lymphatus/caesium-image-compressor/bc4f6bbb4bbe128bb09345454592affa5d6eb79b/resources/icons/logo.png",
+    "sha256": "20e87618d095ab61000701b5fc9add759a5db7c2d6d8d4f687f983996764b445",
+    "mime": "image/png",
+    "sourceKind": "official",
+    "provenance": "官方固定版本应用标识；作者 Lymphatus，保留项目与图形许可及出处：https://github.com/Lymphatus/caesium-image-compressor/blob/bc4f6bbb4bbe128bb09345454592affa5d6eb79b/resources/icons/logo.png；沿用项目GPL-3.0许可。"
+  },
+  "screenshots": [
+    {
+      "url": "https://github.com/user-attachments/assets/e5a6510a-58c5-4349-8563-f4e3ee84d5a0",
+      "sha256": "d1a5475cce417850040cc0e2632d6632a46006796406ec13b8f2b3e4c84f5739",
+      "mime": "image/png",
+      "sourcePage": "https://github.com/Lymphatus/caesium-image-compressor/blob/bc4f6bbb4bbe128bb09345454592affa5d6eb79b/README.md",
+      "caption": "Caesium 官方批量图片压缩界面",
+      "licenseEvidence": "官方固定版本 README 引用的界面示例；保留原作者 Lymphatus、项目和原始图形来源。项目 GPL-3.0：https://github.com/Lymphatus/caesium-image-compressor/blob/bc4f6bbb4bbe128bb09345454592affa5d6eb79b/LICENSE",
+      "provenance": "官方项目演示截图，实际预览后用于介绍；保留原图，不作为第三方实测。",
+      "reviewed": true
+    }
+  ],
+  "packages": [
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "scoop",
+        "options": {
+          "bucket": "extras",
+          "app": "caesium-image-compressor",
+          "architecture": "64bit"
+        }
+      }
+    },
+    {
+      "platform": "macos",
+      "architecture": "amd64",
+      "channel": "stable",
+      "source": {
+        "driver": "github-release",
+        "options": {
+          "repository": "Lymphatus/caesium-image-compressor",
+          "assetPattern": "caesium-image-compressor-{version}-macos.dmg",
+          "tagTemplate": "v{version}"
+        }
+      }
+    }
+  ]
+}
